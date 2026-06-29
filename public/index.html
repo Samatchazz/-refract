@@ -1,0 +1,1073 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>REFRACT</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600&family=Roboto+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:        #F8FAFC;
+      --surface:   #FFFFFF;
+      --panel:     #FFFFFF;
+      --border:    #E2E8F0;
+      --border2:   #CBD5E1;
+      --accent:    #0EA5E9;
+      --accent-dk: #0284C7;
+      --accent-bg: #F0F9FF;
+      --text:      #0F172A;
+      --muted:     #64748B;
+      --dim:       #94A3B8;
+      --s1:        #0EA5E9;
+      --s1-bg:     #F0F9FF;
+      --s1-br:     #BAE6FD;
+      --s2:        #8B5CF6;
+      --s2-bg:     #F5F3FF;
+      --s2-br:     #DDD6FE;
+      --s3:        #14B8A6;
+      --s3-bg:     #F0FDFA;
+      --s3-br:     #99F6E4;
+      --amber-bg:  rgba(234,179,8,0.12);
+      --amber:     #854D0E;
+      --ok:        #22C55E;
+    }
+
+    html, body { height: 100%; overflow: hidden; }
+    body {
+      font-family: 'DM Sans', 'Sarabun', sans-serif;
+      font-size: 15px;
+      line-height: 1.6;
+      background: var(--bg);
+      color: var(--text);
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* ─── HEADER ─────────────────────────────────────────── */
+    header {
+      height: 52px;
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      box-shadow: 0 1px 3px rgba(15,23,42,0.04), 0 1px 2px rgba(15,23,42,0.03);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 18px;
+      flex-shrink: 0;
+      gap: 10px;
+    }
+    .logo {
+      font-family: 'Plus Jakarta Sans', 'Sarabun', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      color: var(--accent);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-shrink: 0;
+      text-transform: uppercase;
+    }
+    .logo-dot {
+      display: inline-block;
+      width: 7px; height: 7px;
+      background: var(--accent);
+      border-radius: 9999px;
+      font-size: 0;
+      flex-shrink: 0;
+    }
+
+    /* ─── STEP INDICATOR ─────────────────────────────────── */
+    .step-bar {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      flex: 1;
+      justify-content: center;
+    }
+    .si-step { display: flex; align-items: center; gap: 5px; }
+    .si-dot {
+      width: 7px; height: 7px;
+      border-radius: 9999px;
+      background: var(--border2);
+      transition: background 0.2s;
+      flex-shrink: 0;
+    }
+    .si-label {
+      font-family: 'DM Sans', 'Sarabun', sans-serif;
+      font-size: 0.6rem;
+      font-weight: 500;
+      color: var(--dim);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+    .si-line { width: 14px; height: 1px; background: var(--border); flex-shrink: 0; }
+
+    /* Step 1 active (default) */
+    .si-s1 .si-dot   { background: var(--accent); }
+    .si-s1 .si-label { color: var(--accent); }
+
+    /* Step 2 active */
+    body:has(#section-select.show):not(:has(#loading-gen.show)):not(:has(#output-grid.show)) .si-s1 .si-dot   { background: var(--border2); }
+    body:has(#section-select.show):not(:has(#loading-gen.show)):not(:has(#output-grid.show)) .si-s1 .si-label { color: var(--dim); }
+    body:has(#section-select.show):not(:has(#loading-gen.show)):not(:has(#output-grid.show)) .si-s2 .si-dot   { background: var(--accent); }
+    body:has(#section-select.show):not(:has(#loading-gen.show)):not(:has(#output-grid.show)) .si-s2 .si-label { color: var(--accent); }
+
+    /* Step 3 active */
+    body:has(#loading-gen.show) .si-s2 .si-dot,
+    body:has(#output-grid.show) .si-s2 .si-dot   { background: var(--border2); }
+    body:has(#loading-gen.show) .si-s2 .si-label,
+    body:has(#output-grid.show) .si-s2 .si-label { color: var(--dim); }
+    body:has(#loading-gen.show) .si-s3 .si-dot,
+    body:has(#output-grid.show) .si-s3 .si-dot   { background: var(--accent); }
+    body:has(#loading-gen.show) .si-s3 .si-label,
+    body:has(#output-grid.show) .si-s3 .si-label { color: var(--accent); }
+
+    #profile-badge {
+      font-family: 'DM Sans', 'Sarabun', sans-serif;
+      font-size: 0.62rem; font-weight: 600;
+      letter-spacing: 0.06em;
+      padding: 3px 10px; border-radius: 9999px;
+      display: none; flex-shrink: 0;
+      text-transform: uppercase;
+    }
+    #profile-badge.show { display: inline-block; }
+    .pb-cold   { background:#EFF6FF; color:#2563EB; border:1px solid #BFDBFE; }
+    .pb-crunch { background:#FFF7ED; color:#C2410C; border:1px solid #FED7AA; }
+    .pb-cream  { background:var(--s2-bg); color:var(--s2); border:1px solid var(--s2-br); }
+    .pb-sweet  { background:var(--s1-bg); color:var(--s1); border:1px solid var(--s1-br); }
+
+    /* ─── SCREENS ─────────────────────────────────────────── */
+    .screen {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      background: var(--bg);
+    }
+
+    /* Default visibility */
+    #screen-draft   { /* visible */ }
+    #section-select { display: none; }
+    #screen-results { display: none; }
+
+    /* Step 2: analysis complete */
+    body:has(#section-select.show) #screen-draft   { display: none; }
+    body:has(#section-select.show) #section-select { display: flex; flex-direction: column; }
+
+    /* Step 3: generation in progress — overrides step 2 (later in cascade) */
+    body:has(#loading-gen.show) #screen-draft   { display: none; }
+    body:has(#loading-gen.show) #section-select { display: none; }
+    body:has(#loading-gen.show) #screen-results { display: flex; flex-direction: column; }
+
+    /* Step 3: results ready */
+    body:has(#output-grid.show) #screen-draft   { display: none; }
+    body:has(#output-grid.show) #section-select { display: none; }
+    body:has(#output-grid.show) #screen-results { display: flex; flex-direction: column; }
+
+    /* ─── SCREEN CHROME ──────────────────────────────────── */
+    .screen-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 16px 0;
+      flex-shrink: 0;
+    }
+    .screen-hint {
+      font-family: 'DM Sans', 'Sarabun', sans-serif;
+      font-size: 0.68rem;
+      font-weight: 500;
+      color: var(--dim);
+      letter-spacing: 0.04em;
+    }
+    .btn-back-step {
+      background: transparent;
+      border: none;
+      color: var(--muted);
+      border-radius: 8px;
+      padding: 5px 12px;
+      font-size: 0.82rem;
+      font-weight: 500;
+      font-family: 'DM Sans', 'Sarabun', sans-serif;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+    .btn-back-step:hover { background: #F1F5F9; color: var(--text); }
+
+    .screen-body {
+      flex: 1;
+      overflow-y: auto;
+      padding: 14px 16px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    /* ─── FORM CARDS ─────────────────────────────────────── */
+    .fl {
+      font-family: 'DM Sans', 'Sarabun', sans-serif;
+      font-size: 0.68rem; font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      margin-bottom: 8px;
+    }
+    .fgap {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 14px;
+      flex-shrink: 0;
+      box-shadow: 0 1px 3px rgba(15,23,42,0.04), 0 1px 2px rgba(15,23,42,0.03);
+    }
+
+    textarea {
+      width: 100%;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      color: var(--text);
+      font-family: 'Roboto Mono', monospace;
+      font-size: 0.82rem;
+      line-height: 1.5;
+      padding: 10px 13px;
+      resize: none;
+      outline: none;
+      transition: border-color 0.15s, box-shadow 0.15s;
+    }
+    textarea:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(14,165,233,0.12);
+    }
+    textarea:disabled { opacity: 0.5; cursor: not-allowed; }
+    #ta-draft   { min-height: 110px; }
+    #ta-context { min-height: 60px; }
+
+    #btn-analyze {
+      width: 100%; padding: 11px 20px;
+      background: var(--accent); border: none; border-radius: 8px;
+      color: #FFFFFF;
+      font-family: 'DM Sans', 'Sarabun', sans-serif; font-size: 0.9rem; font-weight: 600;
+      cursor: pointer; letter-spacing: 0.01em;
+      transition: background 0.15s, transform 0.1s;
+      flex-shrink: 0;
+    }
+    #btn-analyze:hover:not(:disabled) { background: var(--accent-dk); }
+    #btn-analyze:active:not(:disabled) { background: #0369A1; transform: scale(0.98); }
+    #btn-analyze:disabled { opacity: 0.4; cursor: not-allowed; }
+
+    #loading-pre {
+      display: none; align-items: center; gap: 8px;
+      padding: 4px 2px;
+      color: var(--muted); font-size: 0.82rem;
+      font-family: 'DM Sans', 'Sarabun', sans-serif;
+      flex-shrink: 0;
+    }
+    #loading-pre.show { display: flex; }
+
+    .spin {
+      width: 13px; height: 13px;
+      border: 2px solid var(--border); border-top-color: var(--accent);
+      border-radius: 50%; flex-shrink: 0;
+      animation: spin 0.75s linear infinite;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    .hr { display: none; }
+
+    /* ─── WORD CHIPS ─────────────────────────────────────── */
+    .row-between {
+      display: flex; justify-content: space-between; align-items: center;
+      margin-bottom: 10px;
+    }
+    #words-counter {
+      font-family: 'DM Sans', 'Sarabun', sans-serif; font-size: 0.68rem; font-weight: 500;
+      color: var(--muted); letter-spacing: 0.04em;
+    }
+    #words-counter.full { color: var(--ok); }
+
+    .chips { display: flex; flex-wrap: wrap; gap: 6px; }
+    .chip {
+      padding: 5px 14px;
+      background: var(--surface); border: 1px solid var(--border); border-radius: 8px;
+      font-size: 0.8rem; font-weight: 500; color: var(--muted);
+      font-family: 'DM Sans', 'Sarabun', sans-serif;
+      cursor: pointer; user-select: none; transition: all 0.14s;
+    }
+    .chip:hover:not(.chip-off) { background: #F1F5F9; color: var(--text); border-color: var(--border2); }
+    .chip.chip-on  { background: var(--accent); color: #FFFFFF; border-color: transparent; }
+    .chip.chip-off { opacity: 0.3; cursor: default; pointer-events: none; }
+
+    #btn-reroll {
+      background: var(--surface); border: 1px solid var(--border); color: var(--muted);
+      border-radius: 8px; padding: 4px 12px; font-size: 0.8rem;
+      cursor: pointer; font-family: 'DM Sans', 'Sarabun', sans-serif;
+      transition: all 0.15s; font-weight: 500;
+    }
+    #btn-reroll:hover:not(:disabled) { background: #F1F5F9; color: var(--text); border-color: var(--border2); }
+    #btn-reroll:disabled { opacity: 0.4; cursor: default; }
+
+    /* ─── TWIST OPTIONS ──────────────────────────────────── */
+    .twist-group { margin-bottom: 10px; border: 1px solid var(--border); border-radius: 12px; padding: 12px 14px; background: var(--surface); box-shadow: 0 1px 3px rgba(15,23,42,0.04); }
+    .twist-group:last-child { margin-bottom: 0; }
+    .twist-group[data-style-key="style1"] { border-color: var(--s1-br); background: var(--s1-bg); }
+    .twist-group[data-style-key="style2"] { border-color: var(--s2-br); background: var(--s2-bg); }
+    .twist-group[data-style-key="style3"] { border-color: var(--s3-br); background: var(--s3-bg); }
+    .tg-label {
+      font-family: 'Plus Jakarta Sans', 'Sarabun', sans-serif; font-size: 0.68rem; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 6px;
+    }
+    .tg-s1 { color: var(--s1); }
+    .tg-s2 { color: var(--s2); }
+    .tg-s3 { color: var(--s3); }
+    .tg-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px; }
+    .btn-tg-reroll {
+      background: var(--surface); border: 1px solid var(--border2); color: var(--muted);
+      border-radius: 8px; padding: 4px 14px; font-size: 0.8rem;
+      cursor: pointer; font-family: 'DM Sans', 'Sarabun', sans-serif;
+      transition: all 0.14s; line-height: 1.6; font-weight: 500;
+    }
+    .btn-tg-reroll:hover { background: #F1F5F9; color: var(--text); }
+    .btn-tg-reroll:disabled { opacity: 0.4; cursor: default; }
+
+    .twist-group[data-style-key="style1"] .btn-tg-reroll { background:var(--s1-bg); border-color:var(--s1-br); color:var(--s1); }
+    .twist-group[data-style-key="style1"] .btn-tg-reroll:hover { background:var(--s1); border-color:var(--s1); color:#FFFFFF; }
+    .twist-group[data-style-key="style2"] .btn-tg-reroll { background:var(--s2-bg); border-color:var(--s2-br); color:var(--s2); }
+    .twist-group[data-style-key="style2"] .btn-tg-reroll:hover { background:var(--s2); border-color:var(--s2); color:#FFFFFF; }
+    .twist-group[data-style-key="style3"] .btn-tg-reroll { background:var(--s3-bg); border-color:var(--s3-br); color:var(--s3); }
+    .twist-group[data-style-key="style3"] .btn-tg-reroll:hover { background:var(--s3); border-color:var(--s3); color:#FFFFFF; }
+
+    .twist-opt {
+      display: flex; align-items: flex-start; gap: 8px;
+      padding: 8px 12px;
+      background: var(--surface); border: 1px solid var(--border); border-radius: 8px;
+      margin-bottom: 5px; cursor: pointer; transition: all 0.14s;
+    }
+    .twist-opt:last-child { margin-bottom: 0; }
+    .twist-opt:hover { border-color: var(--border2); background: var(--bg); }
+    .twist-opt.twist-on { border: 1.5px solid var(--accent); background: var(--accent-bg); }
+    .radio-dot {
+      width: 12px; height: 12px;
+      border: 1.5px solid var(--border2); border-radius: 50%;
+      margin-top: 3px; flex-shrink: 0; position: relative; transition: all 0.14s;
+    }
+    .twist-on .radio-dot { border-color: var(--accent); }
+    .twist-on .radio-dot::after {
+      content: ''; position: absolute; inset: 2px; background: var(--accent); border-radius: 50%;
+    }
+    .twist-text { font-size: 0.82rem; line-height: 1.55; color: var(--muted); font-family: 'DM Sans', 'Sarabun', sans-serif; }
+    .twist-on .twist-text { color: var(--text); }
+
+    #btn-generate {
+      width: 100%; padding: 11px 20px;
+      background: transparent; border: 1px solid var(--accent); border-radius: 8px;
+      color: var(--accent);
+      font-family: 'DM Sans', 'Sarabun', sans-serif; font-size: 0.9rem; font-weight: 600;
+      cursor: pointer; letter-spacing: 0.01em;
+      transition: all 0.15s; flex-shrink: 0;
+    }
+    #btn-generate:hover:not(:disabled) { background: var(--accent-bg); }
+    #btn-generate:disabled { opacity: 0.4; cursor: not-allowed; }
+
+
+    /* ─── SCREEN 3: RESULTS ──────────────────────────────── */
+    .result-body {
+      flex: 1; overflow-y: auto;
+      padding: 16px 16px 20px;
+      display: flex; flex-direction: column; gap: 14px;
+    }
+
+    #placeholder {
+      flex: 1; display: flex; flex-direction: column;
+      align-items: center; justify-content: center; gap: 14px;
+      min-height: 220px;
+    }
+    .ph-ring {
+      width: 72px; height: 72px;
+      border: 1.5px solid var(--border2); border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Plus Jakarta Sans', 'Sarabun', sans-serif; font-size: 1.5rem; font-weight: 800;
+      color: var(--dim); margin-bottom: 6px;
+    }
+    .ph-big { font-family:'Roboto Mono',monospace; font-size:0.62rem; letter-spacing:0.2em; color:var(--dim); }
+    .ph-sm  { font-size: 0.85rem; color: var(--dim); font-family:'DM Sans','Sarabun',sans-serif; }
+
+    /* loading skeletons */
+    #loading-gen { display: none; flex-direction: column; gap: 14px; }
+    #loading-gen.show { display: flex; }
+    .skel-card {
+      background: var(--surface); border: 1px solid var(--border); border-radius: 12px;
+      padding: 16px 18px;
+      box-shadow: 0 1px 3px rgba(15,23,42,0.04), 0 1px 2px rgba(15,23,42,0.03);
+    }
+    .sk-s1 { border-top: 3px solid var(--s1-br); }
+    .sk-s2 { border-top: 3px solid var(--s2-br); }
+    .sk-s3 { border-top: 3px solid var(--s3-br); }
+    .skel-top { display:flex; align-items:center; gap:10px; margin-bottom:12px; }
+    .skel-lbl { font-size:0.78rem; color:var(--muted); font-family:'DM Sans','Sarabun',sans-serif; font-weight:500; }
+    .skel-bar { height:7px; background:#E2E8F0; border-radius:4px; overflow:hidden; margin-bottom:7px; }
+    .skel-bar::after {
+      content:''; display:block; height:100%; width:45%; border-radius:4px;
+      animation: sweep 1.3s ease-in-out infinite;
+    }
+    .sk-s1 .skel-bar::after { background: linear-gradient(90deg,transparent,var(--s1),transparent); }
+    .sk-s2 .skel-bar::after { background: linear-gradient(90deg,transparent,var(--s2),transparent); }
+    .sk-s3 .skel-bar::after { background: linear-gradient(90deg,transparent,var(--s3),transparent); }
+    @keyframes sweep { 0%{transform:translateX(-200%)} 100%{transform:translateX(400%)} }
+    .skel-line { height:11px; background:#E2E8F0; border-radius:3px; margin-bottom:6px; }
+    .skel-line.half { width:60%; }
+
+    /* output cards */
+    #output-grid { display:none; flex-direction:column; gap:14px; }
+    #output-grid.show { display:flex; }
+    .out-card { background:var(--surface); border:1px solid var(--border); border-radius:12px; overflow:hidden; box-shadow: 0 1px 3px rgba(15,23,42,0.04), 0 1px 2px rgba(15,23,42,0.03); transition: box-shadow 0.2s; }
+    .out-card:hover { box-shadow: 0 4px 8px -2px rgba(15,23,42,0.06), 0 2px 4px -2px rgba(15,23,42,0.04); }
+    .s1-card { border-top: 3px solid var(--s1); }
+    .s2-card { border-top: 3px solid var(--s2); }
+    .s3-card { border-top: 3px solid var(--s3); }
+    .out-head {
+      display:flex; align-items:center; justify-content:space-between;
+      padding:12px 16px; border-bottom:1px solid var(--border);
+    }
+    .out-badge {
+      font-family:'DM Sans','Sarabun',sans-serif; font-size:0.65rem; font-weight:600;
+      letter-spacing:0.06em; padding:3px 10px; border-radius:4px;
+      text-transform: uppercase;
+    }
+    .ob-s1 { background:var(--s1-bg); color:var(--s1); border:1px solid var(--s1-br); }
+    .ob-s2 { background:var(--s2-bg); color:var(--s2); border:1px solid var(--s2-br); }
+    .ob-s3 { background:var(--s3-bg); color:var(--s3); border:1px solid var(--s3-br); }
+    .out-actions { display:flex; gap:6px; }
+    .btn-copy {
+      background:var(--surface); border:1px solid var(--border); color:var(--muted);
+      border-radius:8px; padding:4px 12px;
+      font-family:'DM Sans','Sarabun',sans-serif; font-size:0.78rem; font-weight:500;
+      cursor:pointer; transition:all 0.14s;
+    }
+    .btn-copy:hover { border-color:var(--border2); color:var(--text); background:var(--bg); }
+    .out-body {
+      padding:16px 18px; font-size:0.9rem; line-height:1.9;
+      color:var(--text); white-space:pre-wrap; word-break:break-word;
+      font-family:'DM Sans','Sarabun',sans-serif;
+    }
+    .out-body mark { background:var(--amber-bg); color:var(--amber); border-radius:3px; padding:0 3px; }
+
+    /* ─── LOG PANEL ──────────────────────────────────────── */
+    .log-toggle {
+      display: flex; align-items: center; gap: 7px;
+      padding: 8px 18px; border-top: 1px solid var(--border);
+      cursor: pointer;
+      font-family: 'Roboto Mono', monospace; font-size: 0.6rem;
+      letter-spacing: 0.08em; color: var(--dim); text-transform: uppercase;
+      transition: all 0.14s; user-select: none;
+    }
+    .log-toggle:hover { color: var(--muted); background: var(--bg); }
+    .log-toggle.open  { color: var(--accent); border-bottom: 1px solid var(--border); }
+    .log-toggle-arrow { transition: transform 0.2s; }
+    .log-toggle.open .log-toggle-arrow { transform: rotate(90deg); }
+    .log-panel {
+      display: none; padding: 14px 18px 16px;
+      background: var(--bg);
+      font-family: 'Roboto Mono', monospace; font-size: 0.68rem; line-height: 1.7;
+    }
+    .log-panel.open { display: block; }
+    .log-row { display: flex; gap: 10px; margin-bottom: 10px; }
+    .log-row:last-child { margin-bottom: 0; }
+    .log-key { flex-shrink: 0; width: 68px; color: var(--dim); letter-spacing: 0.06em; padding-top: 1px; }
+    .log-val { color: var(--muted); flex: 1; word-break: break-word; }
+    .log-val.accent { color: var(--accent); }
+    .log-tag {
+      display: inline-block; background: var(--surface);
+      border: 1px solid var(--border); border-radius: 4px;
+      padding: 1px 8px; margin: 1px 3px 1px 0;
+      font-size: 0.65rem; color: var(--muted);
+    }
+    .log-ex {
+      background: var(--surface); border: 1px solid var(--border); border-radius: 8px;
+      padding: 8px 10px; margin-bottom: 5px; font-size: 0.65rem;
+    }
+    .log-ex:last-child { margin-bottom: 0; }
+    .log-ex-label { color: var(--dim); margin-bottom: 3px; letter-spacing: 0.06em; }
+    .log-ex-draft { color: var(--muted); margin-bottom: 4px; }
+    .log-ex-output { color: var(--text); }
+    .log-ex-text {
+      display: -webkit-box; -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical; overflow: hidden;
+    }
+
+    /* ─── TOAST ──────────────────────────────────────────── */
+    #toast {
+      position:fixed; bottom:20px; right:20px;
+      background:#0F172A; border:1px solid #1E293B;
+      color:#F8FAFC; padding:8px 16px; border-radius:8px;
+      font-size:0.78rem; font-family:'DM Sans','Sarabun',sans-serif; font-weight:500;
+      opacity:0; transform:translateY(6px); transition:all 0.18s;
+      pointer-events:none; z-index:9999;
+      box-shadow: 0 4px 8px -2px rgba(15,23,42,0.2);
+    }
+    #toast.show  { opacity:1; transform:translateY(0); }
+    #toast.t-ok  { background:#166534; border-color:#15803D; color:#DCFCE7; }
+    #toast.t-err { background:#991B1B; border-color:#B91C1C; color:#FEE2E2; }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">REFRACT<span class="logo-dot">.</span></div>
+  <div class="step-bar">
+    <div class="si-step si-s1">
+      <div class="si-dot"></div>
+      <span class="si-label">Draft</span>
+    </div>
+    <div class="si-line"></div>
+    <div class="si-step si-s2">
+      <div class="si-dot"></div>
+      <span class="si-label">เลือก</span>
+    </div>
+    <div class="si-line"></div>
+    <div class="si-step si-s3">
+      <div class="si-dot"></div>
+      <span class="si-label">ผลลัพธ์</span>
+    </div>
+  </div>
+  <span id="profile-badge"></span>
+</header>
+
+<!-- ── SCREEN 1: DRAFT ──────────────────────────────────── -->
+<div id="screen-draft" class="screen">
+  <div class="screen-body">
+
+    <div class="fgap">
+      <div class="fl">Draft จากทีม</div>
+      <textarea id="ta-draft" placeholder="วาง draft ที่นี่..."></textarea>
+    </div>
+
+    <div class="fgap">
+      <div class="fl" style="display:flex;gap:6px;align-items:center;">
+        Context
+        <span style="opacity:0.4;font-size:0.55rem;text-transform:none;letter-spacing:0;font-family:sans-serif;">optional</span>
+      </div>
+      <textarea id="ta-context" placeholder="ชื่อร้าน, โปรโมชัน, หรือรายละเอียดเพิ่มเติม..."></textarea>
+    </div>
+
+    <button id="btn-analyze" onclick="runPre()">→ วิเคราะห์</button>
+
+    <div id="loading-pre">
+      <div class="spin"></div>
+      <span>กำลังวิเคราะห์ขนม...</span>
+    </div>
+
+  </div>
+
+</div>
+
+<!-- ── SCREEN 2: SELECTION (this IS #section-select) ───── -->
+<div id="section-select" class="screen">
+  <div class="screen-top">
+    <button class="btn-back-step" onclick="document.getElementById('section-select').classList.remove('show')">← แก้ไข draft</button>
+    <span class="screen-hint">เลือกคำ + twist ให้ครบ 3 สไตล์</span>
+  </div>
+  <div class="screen-body">
+
+    <div class="fgap">
+      <div class="fl" style="margin-bottom:10px;">สไตล์</div>
+      <div id="twist-container"></div>
+    </div>
+
+    <button id="btn-generate" onclick="runGenerate()" disabled>✦ Generate →</button>
+
+  </div>
+</div>
+
+<!-- ── SCREEN 3: RESULTS ────────────────────────────────── -->
+<div id="screen-results" class="screen">
+  <div class="screen-top">
+    <button class="btn-back-step" onclick="setPanel('idle')">← กลับเลือก</button>
+    <span class="screen-hint">ผลลัพธ์ทั้ง 3 สไตล์</span>
+  </div>
+  <div class="result-body">
+
+    <div id="placeholder">
+      <div class="ph-ring">R</div>
+      <div class="ph-big">── REFRACT ──</div>
+      <div class="ph-sm">กรอก draft แล้วกด วิเคราะห์</div>
+    </div>
+
+    <div id="loading-gen">
+      <div class="skel-card sk-s1">
+        <div class="skel-top">
+          <span class="out-badge ob-s1">Style 1</span>
+          <span class="skel-lbl">กำลังสร้าง...</span>
+          <div class="spin" style="margin-left:auto;border-top-color:var(--s1);"></div>
+        </div>
+        <div class="skel-bar"></div>
+        <div class="skel-line"></div>
+        <div class="skel-line half"></div>
+      </div>
+      <div class="skel-card sk-s2">
+        <div class="skel-top">
+          <span class="out-badge ob-s2">Style 2</span>
+          <span class="skel-lbl">กำลังสร้าง...</span>
+          <div class="spin" style="margin-left:auto;border-top-color:var(--s2);"></div>
+        </div>
+        <div class="skel-bar"></div>
+        <div class="skel-line"></div>
+        <div class="skel-line half"></div>
+      </div>
+      <div class="skel-card sk-s3">
+        <div class="skel-top">
+          <span class="out-badge ob-s3">Style 3</span>
+          <span class="skel-lbl">กำลังสร้าง...</span>
+          <div class="spin" style="margin-left:auto;border-top-color:var(--s3);"></div>
+        </div>
+        <div class="skel-bar"></div>
+        <div class="skel-line"></div>
+        <div class="skel-line half"></div>
+      </div>
+    </div>
+
+    <div id="output-grid">
+      <div class="out-card s1-card">
+        <div class="out-head">
+          <span class="out-badge ob-s1">Style 1</span>
+          <div class="out-actions">
+            <button class="btn-copy" onclick="copyCard('style1')">Copy</button>
+          </div>
+        </div>
+        <div class="out-body" id="body-s1"></div>
+        <div class="log-toggle" id="log-toggle-s1" onclick="toggleLog('s1')">
+          <span class="log-toggle-arrow">▶</span> LOG
+        </div>
+        <div class="log-panel" id="log-panel-s1"></div>
+      </div>
+
+      <div class="out-card s2-card">
+        <div class="out-head">
+          <span class="out-badge ob-s2">Style 2</span>
+          <div class="out-actions">
+            <button class="btn-copy" onclick="copyCard('style2')">Copy</button>
+          </div>
+        </div>
+        <div class="out-body" id="body-s2"></div>
+        <div class="log-toggle" id="log-toggle-s2" onclick="toggleLog('s2')">
+          <span class="log-toggle-arrow">▶</span> LOG
+        </div>
+        <div class="log-panel" id="log-panel-s2"></div>
+      </div>
+
+      <div class="out-card s3-card">
+        <div class="out-head">
+          <span class="out-badge ob-s3">Style 3</span>
+          <div class="out-actions">
+            <button class="btn-copy" onclick="copyCard('style3')">Copy</button>
+          </div>
+        </div>
+        <div class="out-body" id="body-s3"></div>
+        <div class="log-toggle" id="log-toggle-s3" onclick="toggleLog('s3')">
+          <span class="log-toggle-arrow">▶</span> LOG
+        </div>
+        <div class="log-panel" id="log-panel-s3"></div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div id="toast"></div>
+
+<script>
+  // bypass ngrok browser-warning interstitial for API fetch calls
+  (function(){
+    var _f = window.fetch.bind(window);
+    window.fetch = function(url, opts) {
+      opts = opts || {};
+      opts.headers = Object.assign({ 'ngrok-skip-browser-warning': 'true' }, opts.headers || {});
+      return _f(url, opts);
+    };
+  })();
+
+  // ── State ────────────────────────────────────────────────────
+  let selectedWordsByStyle = { style1: [], style2: [], style3: [] };
+  let selectedTwists  = { style1: null, style2: null, style3: null };
+  let lastResult      = null;
+  let currentProfile  = 'sweet';
+
+  var GROUPS = [
+    { key: 'style1', label: 'Style 1', cls: 'tg-s1' },
+    { key: 'style2', label: 'Style 2', cls: 'tg-s2' },
+    { key: 'style3', label: 'Style 3', cls: 'tg-s3' },
+  ];
+
+  // ── Toast ────────────────────────────────────────────────────
+  let _tt;
+  function toast(msg, type, dur) {
+    dur = dur || 2200;
+    const el = document.getElementById('toast');
+    el.textContent = msg;
+    el.className = 'show' + (type ? ' t-' + type : '');
+    clearTimeout(_tt);
+    _tt = setTimeout(function(){ el.className = ''; }, dur);
+  }
+
+  // ── Escape ───────────────────────────────────────────────────
+  function esc(str) {
+    return String(str)
+      .replace(/&/g,'&amp;').replace(/</g,'&lt;')
+      .replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+  }
+
+  function highlightWords(text, words) {
+    if (!words || !words.length) return esc(text);
+    var result = esc(text);
+    words.forEach(function(w) {
+      var safe = w.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
+      result = result.replace(new RegExp(safe, 'g'), '<mark>' + esc(w) + '</mark>');
+    });
+    return result;
+  }
+
+  // ── UI helpers ───────────────────────────────────────────────
+  function lockInputs(locked) {
+    document.getElementById('ta-draft').disabled   = locked;
+    document.getElementById('ta-context').disabled = locked;
+  }
+
+  function setPanel(state) { // idle | loading | done
+    document.getElementById('placeholder').style.display =
+      state === 'idle' ? '' : 'none';
+    document.getElementById('loading-gen').className =
+      state === 'loading' ? 'show' : '';
+    document.getElementById('output-grid').className =
+      state === 'done' ? 'show' : '';
+  }
+
+  function showProfile(profile) {
+    var el = document.getElementById('profile-badge');
+    el.className = 'show pb-' + profile;
+    el.textContent = profile.toUpperCase();
+  }
+
+  // ── Word chips (per style) ────────────────────────────────────
+  function renderChipsIntoContainer(styleKey, container, words) {
+    selectedWordsByStyle[styleKey] = [];
+    container.innerHTML = '';
+    words.forEach(function(w) {
+      var el = document.createElement('span');
+      el.className = 'chip';
+      el.textContent = w;
+      el.dataset.word = w;
+      el.onclick = function() { toggleChipForStyle(styleKey, w, el); };
+      container.appendChild(el);
+    });
+    refreshStyleCounter(styleKey);
+    refreshGenBtn();
+  }
+
+  function toggleChipForStyle(styleKey, word, el) {
+    if (el.classList.contains('chip-on')) {
+      el.className = 'chip';
+      selectedWordsByStyle[styleKey] = selectedWordsByStyle[styleKey].filter(function(w){ return w !== word; });
+    } else {
+      if (selectedWordsByStyle[styleKey].length >= 2) return;
+      el.className = 'chip chip-on';
+      selectedWordsByStyle[styleKey].push(word);
+    }
+    var row = document.getElementById('chips-' + styleKey);
+    if (row) {
+      row.querySelectorAll('.chip, .chip-on, .chip-off').forEach(function(c) {
+        if (!c.classList.contains('chip-on')) {
+          c.className = selectedWordsByStyle[styleKey].length >= 2 ? 'chip chip-off' : 'chip';
+        }
+      });
+    }
+    refreshStyleCounter(styleKey);
+    refreshGenBtn();
+  }
+
+  function refreshStyleCounter(styleKey) {
+    var el = document.getElementById('counter-' + styleKey);
+    if (!el) return;
+    var count = selectedWordsByStyle[styleKey].length;
+    el.textContent = 'เลือก ' + count;
+    el.style.color = count >= 1 ? 'var(--ok)' : 'var(--muted)';
+  }
+
+  // ── Twist options ─────────────────────────────────────────────
+  function renderGroup(g, items, words) {
+    var grp = document.createElement('div');
+    grp.className = 'twist-group';
+    grp.dataset.styleKey = g.key;
+
+    var header = document.createElement('div');
+    header.className = 'tg-header';
+    var lbl = document.createElement('div');
+    lbl.className = 'tg-label ' + g.cls;
+    lbl.textContent = g.label;
+    header.appendChild(lbl);
+    grp.appendChild(header);
+
+    // Words section
+    var wordsHdr = document.createElement('div');
+    wordsHdr.className = 'row-between';
+    wordsHdr.style.marginBottom = '6px';
+    wordsHdr.innerHTML = '<div class="fl" style="margin-bottom:0;">คำ <span style="color:var(--dim);font-size:0.75rem;font-family:\'IBM Plex Mono\',monospace;">(เลือก 1–2)</span></div>';
+    var wordsRight = document.createElement('div');
+    wordsRight.style.cssText = 'display:flex;gap:6px;align-items:center;';
+    var counter = document.createElement('span');
+    counter.id = 'counter-' + g.key;
+    counter.style.cssText = 'font-family:"IBM Plex Mono",monospace;font-size:0.65rem;letter-spacing:0.08em;color:var(--muted);';
+    counter.textContent = 'เลือก 0';
+    wordsRight.appendChild(counter);
+    var rerollWordsBtn = document.createElement('button');
+    rerollWordsBtn.className = 'btn-tg-reroll';
+    rerollWordsBtn.textContent = '↻';
+    rerollWordsBtn.title = 'สุ่มคำใหม่';
+    rerollWordsBtn.onclick = function() { rerollWordsForStyle(g.key, rerollWordsBtn); };
+    wordsRight.appendChild(rerollWordsBtn);
+    wordsHdr.appendChild(wordsRight);
+    grp.appendChild(wordsHdr);
+
+    var chipsRow = document.createElement('div');
+    chipsRow.className = 'chips';
+    chipsRow.id = 'chips-' + g.key;
+    chipsRow.style.marginBottom = '10px';
+    grp.appendChild(chipsRow);
+    renderChipsIntoContainer(g.key, chipsRow, words || []);
+
+    // Twist sub-header
+    var twistHdr = document.createElement('div');
+    twistHdr.className = 'tg-header';
+    twistHdr.style.marginTop = '4px';
+    var twistLbl = document.createElement('div');
+    twistLbl.className = 'fl';
+    twistLbl.style.marginBottom = '0';
+    twistLbl.textContent = 'Plot Twist';
+    twistHdr.appendChild(twistLbl);
+    var twistBtn = document.createElement('button');
+    twistBtn.className = 'btn-tg-reroll';
+    twistBtn.textContent = '↻';
+    twistBtn.title = 'สุ่ม twist ใหม่';
+    twistBtn.onclick = function() { rerollTwist(g.key, twistBtn); };
+    twistHdr.appendChild(twistBtn);
+    grp.appendChild(twistHdr);
+
+    items.forEach(function(text) {
+      var opt = document.createElement('div');
+      opt.className = 'twist-opt';
+      opt.dataset.styleKey = g.key;
+      opt.innerHTML = '<div class="radio-dot"></div><div class="twist-text">' + esc(text) + '</div>';
+      opt.onclick = function(){ pickTwist(g.key, text, opt); };
+      grp.appendChild(opt);
+    });
+
+    return grp;
+  }
+
+  function renderTwists(opts, wordOpts) {
+    selectedTwists = { style1: null, style2: null, style3: null };
+    selectedWordsByStyle = { style1: [], style2: [], style3: [] };
+    var container = document.getElementById('twist-container');
+    container.innerHTML = '';
+    GROUPS.forEach(function(g) {
+      var items = opts[g.key] || [];
+      if (!items.length) return;
+      var words = wordOpts && wordOpts[g.key] ? wordOpts[g.key] : [];
+      container.appendChild(renderGroup(g, items, words));
+    });
+  }
+
+  async function rerollTwist(styleKey, btn) {
+    btn.disabled = true;
+    btn.textContent = '...';
+    selectedTwists[styleKey] = null;
+    refreshGenBtn();
+
+    try {
+      var r = await fetch('/api/twist', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ styleKey: styleKey }),
+      });
+      var data = await r.json();
+      if (!r.ok) throw new Error(data.error || r.statusText);
+
+      var grp = document.querySelector('.twist-group[data-style-key="' + styleKey + '"]');
+      if (!grp) return;
+      grp.querySelectorAll('.twist-opt').forEach(function(o) { o.remove(); });
+      (data.twists || []).forEach(function(text) {
+        var opt = document.createElement('div');
+        opt.className = 'twist-opt';
+        opt.dataset.styleKey = styleKey;
+        opt.innerHTML = '<div class="radio-dot"></div><div class="twist-text">' + esc(text) + '</div>';
+        opt.onclick = function() { pickTwist(styleKey, text, opt); };
+        grp.appendChild(opt);
+      });
+    } catch(e) {
+      toast('สุ่ม twist ใหม่ไม่สำเร็จ', 'err');
+    } finally {
+      btn.disabled = false;
+      btn.textContent = '↻';
+    }
+  }
+
+  async function rerollWordsForStyle(styleKey, btn) {
+    btn.disabled = true;
+    btn.textContent = '...';
+    try {
+      var r = await fetch('/api/words?profile=' + currentProfile);
+      var data = await r.json();
+      var container = document.getElementById('chips-' + styleKey);
+      if (container) renderChipsIntoContainer(styleKey, container, data.randomWords || []);
+    } catch(e) {
+      toast('สุ่มคำใหม่ไม่สำเร็จ', 'err');
+    } finally {
+      btn.disabled = false;
+      btn.textContent = '↻';
+    }
+  }
+
+  function pickTwist(styleKey, text, el) {
+    document.querySelectorAll('.twist-opt[data-style-key="' + styleKey + '"]').forEach(function(o){
+      o.classList.remove('twist-on');
+    });
+    el.classList.add('twist-on');
+    selectedTwists[styleKey] = text;
+    refreshGenBtn();
+  }
+
+  function refreshGenBtn() {
+    var twistsReady = selectedTwists.style1 && selectedTwists.style2 && selectedTwists.style3;
+    var wordsReady  = selectedWordsByStyle.style1.length >= 1 &&
+                      selectedWordsByStyle.style2.length >= 1 &&
+                      selectedWordsByStyle.style3.length >= 1;
+    document.getElementById('btn-generate').disabled = !(wordsReady && twistsReady);
+  }
+
+  // ── /api/rewrite/pre ─────────────────────────────────────────
+  async function runPre() {
+    var draft = document.getElementById('ta-draft').value.trim();
+    if (!draft) { toast('กรอก draft ก่อนนะ', 'err'); return; }
+
+    document.getElementById('section-select').classList.remove('show');
+    setPanel('idle');
+    lockInputs(true);
+    document.getElementById('btn-analyze').disabled = true;
+    document.getElementById('loading-pre').classList.add('show');
+
+    try {
+      var res = await fetch('/api/rewrite/pre', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          draft: draft,
+          context: document.getElementById('ta-context').value.trim(),
+        }),
+      });
+      var data = await res.json();
+      if (!res.ok) throw new Error(data.error || res.statusText);
+
+      currentProfile = data.profile || 'sweet';
+      showProfile(currentProfile);
+      renderTwists(data.twistOptions || {}, data.wordOptions || {});
+      document.getElementById('section-select').classList.add('show');
+    } catch (e) {
+      toast(e.message, 'err', 4000);
+    } finally {
+      lockInputs(false);
+      document.getElementById('btn-analyze').disabled = false;
+      document.getElementById('loading-pre').classList.remove('show');
+    }
+  }
+
+  // ── /api/rewrite/generate ─────────────────────────────────────
+  async function runGenerate() {
+    var draft   = document.getElementById('ta-draft').value.trim();
+    var context = document.getElementById('ta-context').value.trim();
+
+    ['s1','s2','s3'].forEach(function(k) {
+      var p = document.getElementById('log-panel-' + k);
+      var t = document.getElementById('log-toggle-' + k);
+      if (p) { p.innerHTML = ''; p.classList.remove('open'); }
+      if (t) t.classList.remove('open');
+    });
+
+    setPanel('loading');
+    document.getElementById('btn-generate').disabled = true;
+
+    try {
+      var res = await fetch('/api/rewrite/generate', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          draft: draft, context: context,
+          selectedWordsByStyle: selectedWordsByStyle,
+          twistByStyle: selectedTwists,
+        }),
+      });
+      var data = await res.json();
+      if (!res.ok) throw new Error(data.error || res.statusText);
+
+      lastResult = data;
+      var wbs = data.selectedWordsByStyle || {};
+      document.getElementById('body-s1').innerHTML = highlightWords(data.style1 || '', wbs.style1 || []);
+      document.getElementById('body-s2').innerHTML = highlightWords(data.style2 || '', wbs.style2 || []);
+      document.getElementById('body-s3').innerHTML = highlightWords(data.style3 || '', wbs.style3 || []);
+      setPanel('done');
+      if (data.logs) renderLogs(data.logs);
+    } catch (e) {
+      toast(e.message, 'err', 4000);
+      setPanel('idle');
+    } finally {
+      document.getElementById('btn-generate').disabled = false;
+    }
+  }
+
+  // ── Log panels ───────────────────────────────────────────────
+  function toggleLog(key) {
+    var toggle = document.getElementById('log-toggle-' + key);
+    var panel  = document.getElementById('log-panel-' + key);
+    var isOpen = panel.classList.contains('open');
+    panel.classList.toggle('open', !isOpen);
+    toggle.classList.toggle('open', !isOpen);
+  }
+
+  function esc(str) {
+    return String(str || '')
+      .replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+  }
+
+  function renderLogs(logs) {
+    ['s1','s2','s3'].forEach(function(k) {
+      var styleKey = 'style' + k.slice(1);
+      var log = logs && logs[styleKey];
+      var panel = document.getElementById('log-panel-' + k);
+      if (!panel || !log) return;
+      var html = '';
+      html += '<div class="log-row"><div class="log-key">SOURCE</div><div class="log-val accent">' + esc(log.source) + '</div></div>';
+      html += '<div class="log-row"><div class="log-key">TWIST</div><div class="log-val">' + esc(log.twist) + '</div></div>';
+      html += '<div class="log-row"><div class="log-key">WORDS</div><div class="log-val">';
+      (log.words || []).forEach(function(w) { html += '<span class="log-tag">' + esc(w) + '</span>'; });
+      html += '</div></div>';
+      html += '<div class="log-row"><div class="log-key">RULES</div><div class="log-val">';
+      (log.rules || []).forEach(function(r) { html += '<span class="log-tag">' + esc(r) + '</span>'; });
+      html += '</div></div>';
+      panel.innerHTML = html;
+    });
+  }
+
+  // ── Copy ─────────────────────────────────────────────────────
+  function copyCard(writerLabel) {
+    if (!lastResult) return;
+    var text = lastResult[writerLabel] || '';
+    navigator.clipboard.writeText(text).then(function(){ toast('Copied!', 'ok'); });
+  }
+
+  // ── Init ─────────────────────────────────────────────────────
+</script>
+</body>
+</html>

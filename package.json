@@ -1,0 +1,15 @@
+{
+  "name": "dessert-rewriter",
+  "version": "1.0.0",
+  "description": "Thai dessert content rewriter powered by Claude",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.105.0",
+    "dotenv": "^16.4.5",
+    "express": "^4.18.2",
+    "mammoth": "^1.12.0"
+  }
+}
