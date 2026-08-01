@@ -1,0 +1,72 @@
+[
+  {
+    "claim": "The '50 million creators / 2 million professional / 46.7 million amateur' split that underpins Goldman Sachs's creator population model originates in a bottom-up total-addressable-market estimate published on the blog of SignalFire, a venture capital firm with portfolio exposure to creator-economy startups.",
+    "stance": "refutes",
+    "stance_target": "The treatment of the 50 million global creators figure as an independent or measured population count",
+    "evidence_type": "statistical",
+    "scope_conditions": "Global; SignalFire creator economy guide; explicitly framed as a TAM analysis for investment purposes, not a demographic measurement; no survey, sample, or data collection methodology disclosed",
+    "quoted_support": "Here's our bottom's up TAM (total addressable market) analysis, which adds up to 50 million creators: Professional Individual Creators (~2M+) – Making content full-time ... Amateur Individual Creators (~46.7M) – Monetizing content creation part-time",
+    "numbers": ["50 million creators", "~2 million professional", "~46.7 million amateur"],
+    "entities": ["SignalFire", "Goldman Sachs", "Zippia"],
+    "time_period": "Originally published circa 2020-2021",
+    "region": "Global",
+    "confidence": "high",
+    "source_note_id": "creator-economy-guide-trends-tools-monetization"
+  },
+  {
+    "claim": "SignalFire's creator definition is self-identification — more than 50 million people around the world consider themselves creators — which counts intent rather than earned income and is the definitional root of every downstream population estimate including Goldman Sachs's.",
+    "stance": "supports",
+    "stance_target": "The claim that creator population estimates diverge because of definitional choice rather than measurement quality",
+    "evidence_type": "statistical",
+    "scope_conditions": "Global; SignalFire creator economy guide",
+    "quoted_support": "More than 50 million people around the world consider themselves creators, despite the creator economy only being born a decade ago.",
+    "numbers": ["50 million self-identified creators"],
+    "entities": ["SignalFire"],
+    "time_period": "circa 2020-2021",
+    "region": "Global",
+    "confidence": "high",
+    "source_note_id": "creator-economy-guide-trends-tools-monetization"
+  },
+  {
+    "claim": "SignalFire's estimate of 2 million people able to make a full-time career from content creation was carried forward unchanged by Goldman Sachs as its 2022 professional creator count and remained at 2.0 million in Goldman's 2025 estimate, meaning the figure has not been re-measured for roughly five years.",
+    "stance": "refutes",
+    "stance_target": "The claim that institutional creator-economy estimates reflect current measurement",
+    "evidence_type": "statistical",
+    "scope_conditions": "Global; comparison between SignalFire's circa-2020 TAM figure and Goldman Sachs's March 2025 exhibit showing 2.0m professionals in both 2022 and 2025",
+    "quoted_support": "Luckily, a ton of companies have been built to support creators, especially the 2 million people able to make a full-time career out of it",
+    "numbers": ["2 million professional creators (SignalFire, ~2020)", "2.0 million (Goldman, 2022)", "2.0 million (Goldman, 2025)"],
+    "entities": ["SignalFire", "Goldman Sachs", "Zippia"],
+    "time_period": "2020-2025",
+    "region": "Global",
+    "confidence": "high",
+    "source_note_id": "creator-economy-guide-trends-tools-monetization"
+  },
+  {
+    "claim": "SignalFire notes that the long tail of amateur influencers at 50 million and growing creates intensifying competition for a limited pool of brand deals, forcing creators toward alternative income sources.",
+    "stance": "supports",
+    "stance_target": "The claim that creator entry mechanically degrades per-creator earning opportunity",
+    "evidence_type": "expert-opinion",
+    "scope_conditions": "Global; venture-capital analysis, not empirical measurement",
+    "quoted_support": "With the long tail of amateur influencers at 50 million and growing rapidly, there is a lot more competition for brand deals amongst influencers, which forces them to seek alternative ways of generating an income.",
+    "numbers": ["50 million amateur influencers"],
+    "entities": ["SignalFire"],
+    "time_period": "circa 2020-2021",
+    "region": "Global",
+    "confidence": "medium",
+    "source_note_id": "creator-economy-guide-trends-tools-monetization"
+  },
+  {
+    "claim": "SignalFire reports that Patreon added 30,000 new creators in a two-month span during the COVID-19 period, and that the largest direct-monetization platforms each had under 500,000 creators at that time.",
+    "stance": "supports",
+    "stance_target": "The claim that direct-subscription platforms host far fewer creators than aggregate population estimates imply",
+    "evidence_type": "statistical",
+    "scope_conditions": "Patreon and comparable subscription platforms; circa 2020 during COVID-19 lockdowns",
+    "quoted_support": "For example, Patreon added 30K new creators on their platform in the past 2 months. ... Given that the largest platforms in this space have under 500K creators",
+    "numbers": ["30,000 new Patreon creators in 2 months", "under 500,000 creators on largest subscription platforms", "5% typical standalone platform take rate"],
+    "entities": ["SignalFire", "Patreon"],
+    "time_period": "circa 2020",
+    "region": "Global",
+    "confidence": "medium",
+    "source_note_id": "creator-economy-guide-trends-tools-monetization"
+  }
+]

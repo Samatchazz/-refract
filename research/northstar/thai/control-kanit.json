@@ -1,0 +1,772 @@
+[
+  {
+    "lineHeightRatio": 1,
+    "worst": -18,
+    "detail": [
+      {
+        "id": "h-1",
+        "lineCount": 2,
+        "usedWidthPx": 700,
+        "widthOverridden": false,
+        "measuredLineSpacingPx": 64,
+        "effectiveLineHeightRatio": 1,
+        "lines": [
+          {
+            "text": "สร้างตัวตนที่เป็นของคุณ ",
+            "ascent": 62,
+            "descent": 17
+          },
+          {
+            "text": "ไม่ใช่ของเทรนด์",
+            "ascent": 51,
+            "descent": 1
+          }
+        ],
+        "gaps": [
+          -4
+        ],
+        "minGap": -4,
+        "collides": true,
+        "requiredLineHeightPx": 68
+      },
+      {
+        "id": "h-2",
+        "lineCount": 2,
+        "usedWidthPx": 700,
+        "widthOverridden": false,
+        "measuredLineSpacingPx": 64,
+        "effectiveLineHeightRatio": 1,
+        "lines": [
+          {
+            "text": "เทรนด์มาแล้วก็ไป ตัวตน",
+            "ascent": 55,
+            "descent": 1
+          },
+          {
+            "text": "อยู่ต่อ",
+            "ascent": 49,
+            "descent": 17
+          }
+        ],
+        "gaps": [
+          14
+        ],
+        "minGap": 14,
+        "collides": false,
+        "requiredLineHeightPx": 50
+      },
+      {
+        "id": "h-3",
+        "lineCount": 2,
+        "usedWidthPx": 700,
+        "widthOverridden": false,
+        "measuredLineSpacingPx": 64,
+        "effectiveLineHeightRatio": 1,
+        "lines": [
+          {
+            "text": "คุณคือครีเอเตอร์ที่รู้ว่าตัว",
+            "ascent": 62,
+            "descent": 17
+          },
+          {
+            "text": "เองคือใคร",
+            "ascent": 51,
+            "descent": 1
+          }
+        ],
+        "gaps": [
+          -4
+        ],
+        "minGap": -4,
+        "collides": true,
+        "requiredLineHeightPx": 68
+      },
+      {
+        "id": "stress",
+        "lineCount": 2,
+        "usedWidthPx": 700,
+        "widthOverridden": false,
+        "measuredLineSpacingPx": 64,
+        "effectiveLineHeightRatio": 1,
+        "lines": [
+          {
+            "text": "เปี่ยม ปุ๋ย หญิง ปฏิญาณ ",
+            "ascent": 62,
+            "descent": 17
+          },
+          {
+            "text": "ฟื้นฟู เรื่อง ที่ กุ๊กกิ๊ก",
+            "ascent": 65,
+            "descent": 17
+          }
+        ],
+        "gaps": [
+          -18
+        ],
+        "minGap": -18,
+        "collides": true,
+        "requiredLineHeightPx": 82
+      }
+    ]
+  },
+  {
+    "lineHeightRatio": 1.1,
+    "worst": -11.59,
+    "detail": [
+      {
+        "id": "h-1",
+        "lineCount": 2,
+        "usedWidthPx": 700,
+        "widthOverridden": false,
+        "measuredLineSpacingPx": 70.41,
+        "effectiveLineHeightRatio": 1.1,
+        "lines": [
+          {
+            "text": "สร้างตัวตนที่เป็นของคุณ ",
+            "ascent": 62,
+            "descent": 17
+          },
+          {
+            "text": "ไม่ใช่ของเทรนด์",
+            "ascent": 51,
+            "descent": 1
+          }
+        ],
+        "gaps": [
+          2.41
+        ],
+        "minGap": 2.41,
+        "collides": false,
+        "requiredLineHeightPx": 68
+      },
+      {
+        "id": "h-2",
+        "lineCount": 2,
+        "usedWidthPx": 700,
+        "widthOverridden": false,
+        "measuredLineSpacingPx": 70.41,
+        "effectiveLineHeightRatio": 1.1,
+        "lines": [
+          {
+            "text": "เทรนด์มาแล้วก็ไป ตัวตน",
+            "ascent": 55,
+            "descent": 1
+          },
+          {
+            "text": "อยู่ต่อ",
+            "ascent": 49,
+            "descent": 17
+          }
+        ],
+        "gaps": [
+          20.41
+        ],
+        "minGap": 20.41,
+        "collides": false,
+        "requiredLineHeightPx": 50
+      },
+      {
+        "id": "h-3",
+        "lineCount": 2,
+        "usedWidthPx": 700,
+        "widthOverridden": false,
+        "measuredLineSpacingPx": 70.41,
+        "effectiveLineHeightRatio": 1.1,
+        "lines": [
+          {
+            "text": "คุณคือครีเอเตอร์ที่รู้ว่าตัว",
+            "ascent": 62,
+            "descent": 17
+          },
+          {
+            "text": "เองคือใคร",
+            "ascent": 51,
+            "descent": 1
+          }
+        ],
+        "gaps": [
+          2.41
+        ],
+        "minGap": 2.41,
+        "collides": false,
+        "requiredLineHeightPx": 68
+      },
+      {
+        "id": "stress",
+        "lineCount": 2,
+        "usedWidthPx": 700,
+        "widthOverridden": false,
+        "measuredLineSpacingPx": 70.41,
+        "effectiveLineHeightRatio": 1.1,
+        "lines": [
+          {
+            "text": "เปี่ยม ปุ๋ย หญิง ปฏิญาณ ",
+            "ascent": 62,
+            "descent": 17
+          },
+          {
+            "text": "ฟื้นฟู เรื่อง ที่ กุ๊กกิ๊ก",
+            "ascent": 65,
+            "descent": 17
+          }
+        ],
+        "gaps": [
+          -11.59
+        ],
+        "minGap": -11.59,
+        "collides": true,
+        "requiredLineHeightPx": 82
+      }
+    ]
+  },
+  {
+    "lineHeightRatio": 1.2,
+    "worst": -5.2,
+    "detail": [
+      {
+        "id": "h-1",
+        "lineCount": 2,
+        "usedWidthPx": 700,
+        "widthOverridden": false,
+        "measuredLineSpacingPx": 76.8,
+        "effectiveLineHeightRatio": 1.2,
+        "lines": [
+          {
+            "text": "สร้างตัวตนที่เป็นของคุณ ",
+            "ascent": 62,
+            "descent": 17
+          },
+          {
+            "text": "ไม่ใช่ของเทรนด์",
+            "ascent": 51,
+            "descent": 1
+          }
+        ],
+        "gaps": [
+          8.8
+        ],
+        "minGap": 8.8,
+        "collides": false,
+        "requiredLineHeightPx": 68
+      },
+      {
+        "id": "h-2",
+        "lineCount": 2,
+        "usedWidthPx": 700,
+        "widthOverridden": false,
+        "measuredLineSpacingPx": 76.8,
+        "effectiveLineHeightRatio": 1.2,
+        "lines": [
+          {
+            "text": "เทรนด์มาแล้วก็ไป ตัวตน",
+            "ascent": 55,
+            "descent": 1
+          },
+          {
+            "text": "อยู่ต่อ",
+            "ascent": 49,
+            "descent": 17
+          }
+        ],
+        "gaps": [
+          26.8
+        ],
+        "minGap": 26.8,
+        "collides": false,
+        "requiredLineHeightPx": 50
+      },
+      {
+        "id": "h-3",
+        "lineCount": 2,
+        "usedWidthPx": 700,
+        "widthOverridden": false,
+        "measuredLineSpacingPx": 76.8,
+        "effectiveLineHeightRatio": 1.2,
+        "lines": [
+          {
+            "text": "คุณคือครีเอเตอร์ที่รู้ว่าตัว",
+            "ascent": 62,
+            "descent": 17
+          },
+          {
+            "text": "เองคือใคร",
+            "ascent": 51,
+            "descent": 1
+          }
+        ],
+        "gaps": [
+          8.8
+        ],
+        "minGap": 8.8,
+        "collides": false,
+        "requiredLineHeightPx": 68
+      },
+      {
+        "id": "stress",
+        "lineCount": 2,
+        "usedWidthPx": 700,
+        "widthOverridden": false,
+        "measuredLineSpacingPx": 76.8,
+        "effectiveLineHeightRatio": 1.2,
+        "lines": [
+          {
+            "text": "เปี่ยม ปุ๋ย หญิง ปฏิญาณ ",
+            "ascent": 62,
+            "descent": 17
+          },
+          {
+            "text": "ฟื้นฟู เรื่อง ที่ กุ๊กกิ๊ก",
+            "ascent": 65,
+            "descent": 17
+          }
+        ],
+        "gaps": [
+          -5.2
+        ],
+        "minGap": -5.2,
+        "collides": true,
+        "requiredLineHeightPx": 82
+      }
+    ]
+  },
+  {
+    "lineHeightRatio": 1.25,
+    "worst": -2,
+    "detail": [
+      {
+        "id": "h-1",
+        "lineCount": 2,
+        "usedWidthPx": 700,
+        "widthOverridden": false,
+        "measuredLineSpacingPx": 80,
+        "effectiveLineHeightRatio": 1.25,
+        "lines": [
+          {
+            "text": "สร้างตัวตนที่เป็นของคุณ ",
+            "ascent": 62,
+            "descent": 17
+          },
+          {
+            "text": "ไม่ใช่ของเทรนด์",
+            "ascent": 51,
+            "descent": 1
+          }
+        ],
+        "gaps": [
+          12
+        ],
+        "minGap": 12,
+        "collides": false,
+        "requiredLineHeightPx": 68
+      },
+      {
+        "id": "h-2",
+        "lineCount": 2,
+        "usedWidthPx": 700,
+        "widthOverridden": false,
+        "measuredLineSpacingPx": 80,
+        "effectiveLineHeightRatio": 1.25,
+        "lines": [
+          {
+            "text": "เทรนด์มาแล้วก็ไป ตัวตน",
+            "ascent": 55,
+            "descent": 1
+          },
+          {
+            "text": "อยู่ต่อ",
+            "ascent": 49,
+            "descent": 17
+          }
+        ],
+        "gaps": [
+          30
+        ],
+        "minGap": 30,
+        "collides": false,
+        "requiredLineHeightPx": 50
+      },
+      {
+        "id": "h-3",
+        "lineCount": 2,
+        "usedWidthPx": 700,
+        "widthOverridden": false,
+        "measuredLineSpacingPx": 80,
+        "effectiveLineHeightRatio": 1.25,
+        "lines": [
+          {
+            "text": "คุณคือครีเอเตอร์ที่รู้ว่าตัว",
+            "ascent": 62,
+            "descent": 17
+          },
+          {
+            "text": "เองคือใคร",
+            "ascent": 51,
+            "descent": 1
+          }
+        ],
+        "gaps": [
+          12
+        ],
+        "minGap": 12,
+        "collides": false,
+        "requiredLineHeightPx": 68
+      },
+      {
+        "id": "stress",
+        "lineCount": 2,
+        "usedWidthPx": 700,
+        "widthOverridden": false,
+        "measuredLineSpacingPx": 80,
+        "effectiveLineHeightRatio": 1.25,
+        "lines": [
+          {
+            "text": "เปี่ยม ปุ๋ย หญิง ปฏิญาณ ",
+            "ascent": 62,
+            "descent": 17
+          },
+          {
+            "text": "ฟื้นฟู เรื่อง ที่ กุ๊กกิ๊ก",
+            "ascent": 65,
+            "descent": 17
+          }
+        ],
+        "gaps": [
+          -2
+        ],
+        "minGap": -2,
+        "collides": true,
+        "requiredLineHeightPx": 82
+      }
+    ]
+  },
+  {
+    "lineHeightRatio": 1.3,
+    "worst": 1.2,
+    "detail": [
+      {
+        "id": "h-1",
+        "lineCount": 2,
+        "usedWidthPx": 700,
+        "widthOverridden": false,
+        "measuredLineSpacingPx": 83.2,
+        "effectiveLineHeightRatio": 1.3,
+        "lines": [
+          {
+            "text": "สร้างตัวตนที่เป็นของคุณ ",
+            "ascent": 62,
+            "descent": 17
+          },
+          {
+            "text": "ไม่ใช่ของเทรนด์",
+            "ascent": 51,
+            "descent": 1
+          }
+        ],
+        "gaps": [
+          15.2
+        ],
+        "minGap": 15.2,
+        "collides": false,
+        "requiredLineHeightPx": 68
+      },
+      {
+        "id": "h-2",
+        "lineCount": 2,
+        "usedWidthPx": 700,
+        "widthOverridden": false,
+        "measuredLineSpacingPx": 83.2,
+        "effectiveLineHeightRatio": 1.3,
+        "lines": [
+          {
+            "text": "เทรนด์มาแล้วก็ไป ตัวตน",
+            "ascent": 55,
+            "descent": 1
+          },
+          {
+            "text": "อยู่ต่อ",
+            "ascent": 49,
+            "descent": 17
+          }
+        ],
+        "gaps": [
+          33.2
+        ],
+        "minGap": 33.2,
+        "collides": false,
+        "requiredLineHeightPx": 50
+      },
+      {
+        "id": "h-3",
+        "lineCount": 2,
+        "usedWidthPx": 700,
+        "widthOverridden": false,
+        "measuredLineSpacingPx": 83.2,
+        "effectiveLineHeightRatio": 1.3,
+        "lines": [
+          {
+            "text": "คุณคือครีเอเตอร์ที่รู้ว่าตัว",
+            "ascent": 62,
+            "descent": 17
+          },
+          {
+            "text": "เองคือใคร",
+            "ascent": 51,
+            "descent": 1
+          }
+        ],
+        "gaps": [
+          15.2
+        ],
+        "minGap": 15.2,
+        "collides": false,
+        "requiredLineHeightPx": 68
+      },
+      {
+        "id": "stress",
+        "lineCount": 2,
+        "usedWidthPx": 700,
+        "widthOverridden": false,
+        "measuredLineSpacingPx": 83.2,
+        "effectiveLineHeightRatio": 1.3,
+        "lines": [
+          {
+            "text": "เปี่ยม ปุ๋ย หญิง ปฏิญาณ ",
+            "ascent": 62,
+            "descent": 17
+          },
+          {
+            "text": "ฟื้นฟู เรื่อง ที่ กุ๊กกิ๊ก",
+            "ascent": 65,
+            "descent": 17
+          }
+        ],
+        "gaps": [
+          1.2
+        ],
+        "minGap": 1.2,
+        "collides": false,
+        "requiredLineHeightPx": 82
+      }
+    ]
+  },
+  {
+    "lineHeightRatio": 1.4,
+    "worst": 7.59,
+    "detail": [
+      {
+        "id": "h-1",
+        "lineCount": 2,
+        "usedWidthPx": 700,
+        "widthOverridden": false,
+        "measuredLineSpacingPx": 89.59,
+        "effectiveLineHeightRatio": 1.4,
+        "lines": [
+          {
+            "text": "สร้างตัวตนที่เป็นของคุณ ",
+            "ascent": 62,
+            "descent": 17
+          },
+          {
+            "text": "ไม่ใช่ของเทรนด์",
+            "ascent": 51,
+            "descent": 1
+          }
+        ],
+        "gaps": [
+          21.59
+        ],
+        "minGap": 21.59,
+        "collides": false,
+        "requiredLineHeightPx": 68
+      },
+      {
+        "id": "h-2",
+        "lineCount": 2,
+        "usedWidthPx": 700,
+        "widthOverridden": false,
+        "measuredLineSpacingPx": 89.59,
+        "effectiveLineHeightRatio": 1.4,
+        "lines": [
+          {
+            "text": "เทรนด์มาแล้วก็ไป ตัวตน",
+            "ascent": 55,
+            "descent": 1
+          },
+          {
+            "text": "อยู่ต่อ",
+            "ascent": 49,
+            "descent": 17
+          }
+        ],
+        "gaps": [
+          39.59
+        ],
+        "minGap": 39.59,
+        "collides": false,
+        "requiredLineHeightPx": 50
+      },
+      {
+        "id": "h-3",
+        "lineCount": 2,
+        "usedWidthPx": 700,
+        "widthOverridden": false,
+        "measuredLineSpacingPx": 89.59,
+        "effectiveLineHeightRatio": 1.4,
+        "lines": [
+          {
+            "text": "คุณคือครีเอเตอร์ที่รู้ว่าตัว",
+            "ascent": 62,
+            "descent": 17
+          },
+          {
+            "text": "เองคือใคร",
+            "ascent": 51,
+            "descent": 1
+          }
+        ],
+        "gaps": [
+          21.59
+        ],
+        "minGap": 21.59,
+        "collides": false,
+        "requiredLineHeightPx": 68
+      },
+      {
+        "id": "stress",
+        "lineCount": 2,
+        "usedWidthPx": 700,
+        "widthOverridden": false,
+        "measuredLineSpacingPx": 89.59,
+        "effectiveLineHeightRatio": 1.4,
+        "lines": [
+          {
+            "text": "เปี่ยม ปุ๋ย หญิง ปฏิญาณ ",
+            "ascent": 62,
+            "descent": 17
+          },
+          {
+            "text": "ฟื้นฟู เรื่อง ที่ กุ๊กกิ๊ก",
+            "ascent": 65,
+            "descent": 17
+          }
+        ],
+        "gaps": [
+          7.59
+        ],
+        "minGap": 7.59,
+        "collides": false,
+        "requiredLineHeightPx": 82
+      }
+    ]
+  },
+  {
+    "lineHeightRatio": 1.5,
+    "worst": 14,
+    "detail": [
+      {
+        "id": "h-1",
+        "lineCount": 2,
+        "usedWidthPx": 700,
+        "widthOverridden": false,
+        "measuredLineSpacingPx": 96,
+        "effectiveLineHeightRatio": 1.5,
+        "lines": [
+          {
+            "text": "สร้างตัวตนที่เป็นของคุณ ",
+            "ascent": 62,
+            "descent": 17
+          },
+          {
+            "text": "ไม่ใช่ของเทรนด์",
+            "ascent": 51,
+            "descent": 1
+          }
+        ],
+        "gaps": [
+          28
+        ],
+        "minGap": 28,
+        "collides": false,
+        "requiredLineHeightPx": 68
+      },
+      {
+        "id": "h-2",
+        "lineCount": 2,
+        "usedWidthPx": 700,
+        "widthOverridden": false,
+        "measuredLineSpacingPx": 96,
+        "effectiveLineHeightRatio": 1.5,
+        "lines": [
+          {
+            "text": "เทรนด์มาแล้วก็ไป ตัวตน",
+            "ascent": 55,
+            "descent": 1
+          },
+          {
+            "text": "อยู่ต่อ",
+            "ascent": 49,
+            "descent": 17
+          }
+        ],
+        "gaps": [
+          46
+        ],
+        "minGap": 46,
+        "collides": false,
+        "requiredLineHeightPx": 50
+      },
+      {
+        "id": "h-3",
+        "lineCount": 2,
+        "usedWidthPx": 700,
+        "widthOverridden": false,
+        "measuredLineSpacingPx": 96,
+        "effectiveLineHeightRatio": 1.5,
+        "lines": [
+          {
+            "text": "คุณคือครีเอเตอร์ที่รู้ว่าตัว",
+            "ascent": 62,
+            "descent": 17
+          },
+          {
+            "text": "เองคือใคร",
+            "ascent": 51,
+            "descent": 1
+          }
+        ],
+        "gaps": [
+          28
+        ],
+        "minGap": 28,
+        "collides": false,
+        "requiredLineHeightPx": 68
+      },
+      {
+        "id": "stress",
+        "lineCount": 2,
+        "usedWidthPx": 700,
+        "widthOverridden": false,
+        "measuredLineSpacingPx": 96,
+        "effectiveLineHeightRatio": 1.5,
+        "lines": [
+          {
+            "text": "เปี่ยม ปุ๋ย หญิง ปฏิญาณ ",
+            "ascent": 62,
+            "descent": 17
+          },
+          {
+            "text": "ฟื้นฟู เรื่อง ที่ กุ๊กกิ๊ก",
+            "ascent": 65,
+            "descent": 17
+          }
+        ],
+        "gaps": [
+          14
+        ],
+        "minGap": 14,
+        "collides": false,
+        "requiredLineHeightPx": 82
+      }
+    ]
+  }
+]

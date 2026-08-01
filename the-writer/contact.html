@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — The Writer</title>
+  <meta name="description" content="Start a conversation. It stays between us — NDA before the first call." />
+  <link rel="stylesheet" href="/src/styles/main.css" />
+  <script type="module" src="/src/js/app.js"></script>
+</head>
+<body data-barba="wrapper">
+
+  <div class="poster" aria-hidden="true"></div>
+  <canvas id="gl" aria-hidden="true"></canvas>
+
+  <header class="header">
+    <a class="logo" href="/" data-nav>The <span class="it">Writer</span></a>
+    <div class="header-center">
+      <button class="label" data-read-open>Read a sample</button>
+    </div>
+    <button class="burger" aria-label="Menu" aria-expanded="false" data-menu-toggle>
+      <span></span><span></span>
+    </button>
+  </header>
+
+  <div class="site">
+    <main data-barba="container" data-barba-namespace="contact" data-gl-page="contact">
+
+      <section class="page-head container" data-gl-window>
+        <span class="label js-in-view" data-typewriter>Contact — it stays between us</span>
+        <h1 class="page-title">Tell us the story<br /><span class="it">you can't tell yet.</span></h1>
+      </section>
+
+      <section class="page-body container">
+        <div class="prose js-in-view appear-fade-up">
+          <p><strong>One email starts it.</strong> Tell us what you're making — a book, a speech,
+          a year of essays — and where it currently hurts. We reply within two working days
+          with an honest read on fit, timeline and cost.</p>
+          <p>Prefer to stay anonymous until we've signed? Common, and welcome.
+          Write from a throwaway address; we'll send the NDA first and ask your name second.</p>
+        </div>
+        <div class="contact-block">
+          <a class="footer-email js-in-view appear-fade-up" style="--iv-delay:.1s" href="mailto:hello@thewriter.studio">hello@<span class="it">thewriter</span>.studio</a>
+          <span class="label js-in-view" data-typewriter>Replies within two working days — NDA first, names second</span>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <a class="footer-email" href="mailto:hello@thewriter.studio">hello@<span class="it">thewriter</span>.studio</a>
+        <div class="footer-grid">
+          <div class="footer-col">
+            <span class="label" data-typewriter>Navigate</span>
+            <a href="/work.html" data-nav>Work</a>
+            <a href="/craft.html" data-nav>Craft</a>
+            <a href="/about.html" data-nav>About</a>
+            <a href="/contact.html" data-nav>Contact</a>
+          </div>
+          <div class="footer-col">
+            <span class="label" data-typewriter>Elsewhere</span>
+            <a href="#" rel="noopener">LinkedIn</a>
+            <a href="#" rel="noopener">Substack</a>
+          </div>
+          <div class="footer-col">
+            <span class="label" data-typewriter>Discretion</span>
+            <span style="color:var(--c-muted)">NDA by default. No client lists.</span>
+            <span style="color:var(--c-muted)">© 2026 The Writer</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <div class="menu-overlay" role="dialog" aria-modal="true" aria-label="Menu">
+    <nav class="menu-nav">
+      <div class="menu-item"><a href="/work.html" data-nav><span class="menu-index">01</span>Work</a></div>
+      <div class="menu-item"><a href="/craft.html" data-nav><span class="menu-index">02</span>Craft</a></div>
+      <div class="menu-item"><a href="/about.html" data-nav><span class="menu-index">03</span>About</a></div>
+      <div class="menu-item"><a href="/contact.html" data-nav><span class="menu-index">04</span>Contact</a></div>
+    </nav>
+    <div class="menu-meta">
+      <a class="label" href="mailto:hello@thewriter.studio">hello@thewriter.studio</a>
+      <button class="label" data-read-open>Read a sample</button>
+    </div>
+  </div>
+
+  <div class="read-overlay" role="dialog" aria-modal="true" aria-label="Sample excerpts">
+    <button class="read-close label" data-read-close>Close — esc</button>
+    <div class="read-inner" data-read-content></div>
+  </div>
+
+  <div class="transition-veil" aria-hidden="true"></div>
+  <div class="loader" aria-hidden="true">
+    <div class="loader-mark">The <span class="it">Writer</span></div>
+    <div class="loader-bar"><i></i></div>
+    <div class="loader-pct">0%</div>
+  </div>
+
+</body>
+</html>

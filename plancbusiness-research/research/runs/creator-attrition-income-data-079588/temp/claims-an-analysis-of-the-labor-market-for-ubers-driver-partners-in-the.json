@@ -1,0 +1,58 @@
+[
+  {
+    "claim": "Among 11,267 US UberBLACK/uberX driver-partners who made their first trip between January and June 2013 and had made at least four trips, 11% became inactive (no trip for 6+ months) within one month of starting; 70% remained active after six months; more than 50% remained active a full year after starting.",
+    "stance": "neutral",
+    "stance_target": "gig-economy attrition-curve shape as a methodological analogue for creator survival",
+    "evidence_type": "empirical",
+    "scope_conditions": "United States, UberBLACK and uberX driver-partners who started Jan-June 2013",
+    "quoted_support": "Within a month of becoming an active Uber driver-partner, 11 percent of drivers became inactive, defined as not using the service over the next 6 months. After half a year, 70 percent of those who started using Uber in the first half of 2013 were still actively using the system, and more than half of those who started in the first half of 2013 remained active a year after starting.",
+    "numbers": ["n=11,267", "11% inactive within 1 month", "70% active at 6 months", ">50% active at 1 year"],
+    "entities": ["Uber"],
+    "time_period": "January-June 2013 start cohort, tracked through 2014",
+    "region": "United States",
+    "confidence": "high",
+    "source_note_id": "an-analysis-of-the-labor-market-for-ubers-driver-partners-in-the"
+  },
+  {
+    "claim": "Uber driver-partner earnings-per-hour show a quadratic relationship with tenure on the platform, peaking at approximately 14 months of accumulated seniority.",
+    "stance": "neutral",
+    "stance_target": "tenure-earnings relationship in gig work as an analogue to creator time-to-income questions",
+    "evidence_type": "empirical",
+    "scope_conditions": "United States, Uber driver-partners, 2013-2014 cohort",
+    "quoted_support": "There is a quadratic relationship between earnings and accumulated seniority using the Uber platform, with earnings peaking after about 14 months.",
+    "numbers": ["peak earnings at ~14 months tenure"],
+    "entities": ["Uber"],
+    "time_period": "2013-2014",
+    "region": "United States",
+    "confidence": "medium-high",
+    "source_note_id": "an-analysis-of-the-labor-market-for-ubers-driver-partners-in-the"
+  },
+  {
+    "claim": "The paper selects October 2014 for its earnings-per-hour tables specifically because it falls 'after Uber's summer fare cuts,' but does not analyze the fare cut itself as a treatment or test its effect on driver attrition -- it is incidental context for sample-period selection, not a natural experiment on an income shock.",
+    "stance": "refutes",
+    "stance_target": "claim that this paper contains a causal income-cut-to-attrition natural experiment",
+    "evidence_type": "theoretical",
+    "scope_conditions": "methodological caveat, United States, Uber, 2014",
+    "quoted_support": "The tables report earnings per hour for Uber's driver-partners by amount of time spent driving per week in the six largest markets where Uber operates, and for the 20 BSG markets as a whole...which we selected as a month after Uber's summer fare cuts and before the holiday season to represent more normal market conditions.",
+    "numbers": ["October 2014"],
+    "entities": ["Uber"],
+    "time_period": "2014",
+    "region": "United States",
+    "confidence": "high",
+    "source_note_id": "an-analysis-of-the-labor-market-for-ubers-driver-partners-in-the"
+  },
+  {
+    "claim": "This paper's authorship carries a substantial conflict of interest -- Hall was an Uber employee and shareholder while writing it, and Krueger was a paid Uber consultant during the initial draft -- and a subsequent peer-reviewed comment (Berg & Johnston 2019, ILR Review, 'Too Good to Be True?') argues this produced selective framing of driver pay and satisfaction figures.",
+    "stance": "neutral",
+    "stance_target": "reliability/bias caveat on Hall & Krueger's descriptive attrition and earnings figures",
+    "evidence_type": "expert-opinion",
+    "scope_conditions": "United States, Hall & Krueger 2018/w22843",
+    "quoted_support": "Jonathan Hall was an employee and shareholder of Uber Technologies during the writing of this paper, and Krueger acknowledged working as a consultant to Uber in December 2014 and January 2015 when the initial draft was written.",
+    "numbers": [],
+    "entities": ["Jonathan Hall", "Alan Krueger", "Uber", "Janine Berg", "Hannah Johnston"],
+    "time_period": "2014-2019",
+    "region": "United States",
+    "confidence": "medium",
+    "source_note_id": "an-analysis-of-the-labor-market-for-ubers-driver-partners-in-the"
+  }
+]

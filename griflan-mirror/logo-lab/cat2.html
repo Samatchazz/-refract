@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<title>Plan C — Living Logo (จากไฟล์โลโก้จริง)</title>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  :root { --bg:#0f1613; --ivory:#f2efde; --gold:#f0b32e; }
+  body { background:var(--bg); color:var(--ivory); font-family:sans-serif;
+    min-height:100vh; display:flex; flex-direction:column; align-items:center; padding:26px 14px; }
+  h1 { font-size:17px; color:var(--gold); margin-bottom:4px; }
+  p.hint { font-size:12px; color:rgba(242,239,222,.5); margin-bottom:18px; text-align:center; }
+  .stage { width:min(760px,95vw); aspect-ratio:2/1; position:relative;
+    border:1px dashed rgba(242,239,222,.15); border-radius:12px; overflow:hidden; }
+  .cat-wrap { position:absolute; inset:0; transform:translateY(-110%);
+    transition:transform 1.1s cubic-bezier(.34,1.4,.4,1); }
+  .cat-wrap.entered { transform:translateY(0); }
+  .cat-wrap svg { position:absolute; inset:0; width:100%; height:100%; }
+
+  /* ---- breathing (ทั้งตัวเบาๆ) ---- */
+  .cat { animation:breathe 4s ease-in-out infinite; transform-origin:50% 78%; }
+  @keyframes breathe { 0%,100%{transform:scaleY(1)} 50%{transform:scaleY(1.012)} }
+  .cat.squash { animation:squash .45s cubic-bezier(.3,1.6,.4,1) !important; }
+  @keyframes squash { 0%{transform:scaleY(1)} 30%{transform:scaleY(.94) scaleX(1.02)} 65%{transform:scaleY(1.03)} 100%{transform:scaleY(1)} }
+
+  /* ---- tail: rotate รอบจุดยึดเท่านั้น ---- */
+  .tail { transform-origin:1205px 1145px; animation:sway 4.5s ease-in-out infinite;
+    transition:transform .5s cubic-bezier(.34,1.5,.5,1); }
+  @keyframes sway { 0%,100%{transform:rotate(0)} 50%{transform:rotate(-5deg)} }
+  .alert .tail { animation:none; transform:rotate(-13deg); }
+  .flick .tail { animation:flick .6s cubic-bezier(.3,1.6,.4,1); }
+  @keyframes flick { 0%{transform:rotate(0)} 35%{transform:rotate(-30deg)} 70%{transform:rotate(7deg)} 100%{transform:rotate(0)} }
+
+  /* ---- eyes ---- */
+  .pupil { transition:transform .1s linear; }
+  .eye-open { transition:transform .12s; transform-box:fill-box; transform-origin:50% 50%; }
+  .alert .eye-open { transform:scale(1.15); }
+  .lid-shape { opacity:0; }
+  .blink .eye-open, .sleep .eye-open { opacity:0; }
+  .blink .lid-shape, .sleep .lid-shape { opacity:1; }
+
+  /* ---- zzz ---- */
+  .zzz text { opacity:0; fill:currentColor; font-family:Georgia,serif; font-weight:bold; }
+  .zzz.on text { animation:zfloat 3s linear infinite; }
+  .zzz.on text:nth-child(2){ animation-delay:1s; }
+  .zzz.on text:nth-child(3){ animation-delay:2s; }
+  @keyframes zfloat { 0%{opacity:0; transform:translate(0,0)} 20%{opacity:.85}
+    80%{opacity:0; transform:translate(50px,-110px)} 100%{opacity:0} }
+
+  /* ---- egg wave ---- */
+  .wave { transform:translateX(-120%); }
+  .egging .wave { animation:wavesweep .8s cubic-bezier(.5,0,.3,1) forwards; }
+  @keyframes wavesweep { to { transform:translateX(120%);} }
+
+  .row { display:flex; gap:8px; flex-wrap:wrap; justify-content:center; margin-top:18px; }
+  button { background:transparent; border:1px solid rgba(240,179,46,.55); color:var(--gold);
+    border-radius:99px; padding:7px 15px; font-size:13px; cursor:pointer; }
+  button:hover { background:var(--gold); color:var(--bg); }
+</style>
+</head>
+<body>
+<h1>Plan C — Living Logo (เรนเดอร์จากไฟล์โลโก้จริง ไม่ได้วาดใหม่)</h1>
+<p class="hint">ตัว-หัว-ตัวอักษร = พิกเซลจากโลโก้เป๊ะๆ · ตา+หาง = เวกเตอร์ซ้อนทับเพื่อขยับ · ขยับเมาส์ให้ตากลอก</p>
+
+<div class="stage">
+  <div class="cat-wrap" id="wrap">
+    <svg viewBox="0 0 2048 1024" id="svg">
+      <g class="cat" id="cat">
+        <!-- ลำตัว/หัว/ตัวอักษร: raster จากโลโก้จริง (ลบตากับหางออกแล้ว tint สีได้) -->
+        <image id="bodyImg" x="0" y="-512" width="2048" height="2048" />
+        <!-- หาง: พิกเซลตัว C จริงจากไฟล์โลโก้ ตัดมาเป็นเลเยอร์แยก หมุนรอบโคน -->
+        <g class="tail" id="tail">
+          <image id="tailImg" x="0" y="-512" width="2048" height="2048" />
+        </g>
+        <!-- ตา -->
+        <g id="eyes"></g>
+        <!-- egg wave -->
+        <rect class="wave" x="150" y="0" width="1750" height="1024" fill="var(--gold)" opacity=".25"/>
+      </g>
+      <g class="zzz" id="zzz" style="color:#f2efde">
+        <text x="620" y="240" font-size="60">z</text>
+        <text x="680" y="190" font-size="85">z</text>
+        <text x="760" y="130" font-size="115">z</text>
+      </g>
+    </svg>
+  </div>
+</div>
+
+<div class="row">
+  <button onclick="catAPI.begin()">begin()</button>
+  <button onmouseenter="catAPI.hover(true)" onmouseleave="catAPI.hover(false)">hover</button>
+  <button onclick="catAPI.click()">click()</button>
+  <button onclick="catAPI.egg()">egg() สี</button>
+  <button onclick="catAPI.sleep()">sleep</button>
+</div>
+
+<script>
+(() => {
+  /* พิกัดทั้งหมดอ้างอิงภาพโลโก้ 2048×2048 (งานจริงอยู่แถว y 500–1300) → viewBox 2048×1024 เลื่อน y -512 */
+  const IMG = 'assets/logo-closed.png';
+  const Y = -512; // offset ที่ใช้กับพิกัด 2048
+  const cat = document.getElementById('cat');
+  const wrap = document.getElementById('wrap');
+  const zzz = document.getElementById('zzz');
+  const svg = document.getElementById('svg');
+  const NS = 'http://www.w3.org/2000/svg';
+
+  /* ---------- zones (พิกัดในภาพ 2048) — จูนได้ ---------- */
+  const EYE_ZONE = { x: 240, y: 758, w: 350, h: 112 };      // แถบเส้นตาหลับเดิม (วัดจากพิกเซลจริง — ลบทิ้ง)
+  const TAIL_CUT_X = 1165;                                   // ขวาของเส้นนี้ = ตัว C (แยกเป็นเลเยอร์หาง)
+  const TAIL_ROOT = { x: 1265, y: 1150 };                    // โคนหาง = ปลายล่างซ้ายของ C (จุดหมุน)
+  const EYES = [ { cx: 335, cy: 815 }, { cx: 495, cy: 815 } ];   // วัดจากพิกเซลเส้นตาของไฟล์ master จริง
+  const EYE_R = { rx: 48, ry: 62 };                               // วงรีขาวล้วน ขนาดตามสัดส่วนหัวของ master
+
+  const coats = ['#f2efde', '#151312', '#e8923a', '#e6d7ba', '#8b93a1'];
+  let ci = 0;
+
+  /* ---------- raster: โหลดโลโก้ → ลบตา/หาง → ทำ mask → tint ---------- */
+  const img = new Image();
+  img.src = IMG;
+  let bodyMask = null, tailMask = null;
+  function toAlphaMask(c) {
+    const x = c.getContext('2d', { willReadFrequently: true });
+    const d = x.getImageData(0, 0, c.width, c.height);
+    const p = d.data;
+    for (let i = 0; i < p.length; i += 4) {
+      const lum = (p[i] + p[i+1] + p[i+2]) / 3;
+      p[i+3] = 255 - lum;           // ยิ่งดำยิ่งทึบ
+      p[i] = p[i+1] = p[i+2] = 255; // สีจริงมาจากขั้น tint
+    }
+    x.putImageData(d, 0, 0);
+    return c;
+  }
+  img.onload = () => {
+    const W = 2048;
+    // ── เลเยอร์ตัว: ทุกอย่างซ้ายเส้นตัด + ลบแถบตา ──
+    const cb = document.createElement('canvas'); cb.width = W; cb.height = W;
+    const xb = cb.getContext('2d', { willReadFrequently: true });
+    xb.drawImage(img, 0, 0, W, W);
+    xb.fillStyle = '#000';
+    xb.fillRect(EYE_ZONE.x, EYE_ZONE.y, EYE_ZONE.w, EYE_ZONE.h); // ถมตาให้หัว solid
+    xb.fillStyle = '#fff';
+    xb.fillRect(TAIL_CUT_X, 0, W - TAIL_CUT_X, W);               // ลบฝั่งหาง
+    bodyMask = toAlphaMask(cb);
+    // ── เลเยอร์หาง: เฉพาะฝั่งขวาเส้นตัด = ตัว C จริงทั้งก้อน ──
+    const ct = document.createElement('canvas'); ct.width = W; ct.height = W;
+    const xt = ct.getContext('2d', { willReadFrequently: true });
+    xt.drawImage(img, 0, 0, W, W);
+    xt.fillStyle = '#fff';
+    xt.fillRect(0, 0, TAIL_CUT_X, W);                            // ลบฝั่งตัว
+    tailMask = toAlphaMask(ct);
+    applyCoat(0);
+    // จุดหมุนหาง = โคน C
+    document.querySelector('.tail').style.transformOrigin =
+      `${TAIL_ROOT.x}px ${TAIL_ROOT.y + Y}px`;
+    drawEyes();
+    setTimeout(() => catAPI.begin(), 350);
+  };
+
+  function tint(mask, coat) {
+    const c = document.createElement('canvas'); c.width = mask.width; c.height = mask.height;
+    const x = c.getContext('2d');
+    x.drawImage(mask, 0, 0);
+    x.globalCompositeOperation = 'source-in';
+    x.fillStyle = coat;
+    x.fillRect(0, 0, c.width, c.height);
+    return c.toDataURL();
+  }
+  function applyCoat(i) {
+    if (!bodyMask) return;
+    const coat = coats[i % coats.length];
+    document.getElementById('bodyImg').setAttribute('href', tint(bodyMask, coat));
+    document.getElementById('tailImg').setAttribute('href', tint(tailMask, coat));
+    document.querySelectorAll('.coat-fill').forEach(el => el.setAttribute('fill', coat));
+    zzz.style.color = coat;
+  }
+
+  /* ---------- eyes ---------- */
+  function drawEyes() {
+    const g = document.getElementById('eyes');
+    g.innerHTML = EYES.map((e, i) => `
+      <g class="eye" transform="translate(${e.cx} ${e.cy + Y})">
+        <g class="eye-open">
+          <g class="track">
+            <ellipse rx="${EYE_R.rx}" ry="${EYE_R.ry}" fill="#ffffff"/>
+          </g>
+        </g>
+        <path class="lid-shape" d="M ${-EYE_R.rx} 6 Q 0 ${EYE_R.ry * 0.65} ${EYE_R.rx} 6"
+          stroke="#ffffff" stroke-width="12" fill="none" stroke-linecap="round"/>
+      </g>`).join('');
+  }
+
+  /* ---------- eye tracking ---------- */
+  let tx = 0, ty = 0, cx2 = 0, cy2 = 0;
+  addEventListener('mousemove', e => {
+    tx = (e.clientX / innerWidth - .5) * 2;
+    ty = (e.clientY / innerHeight - .5) * 2;
+    wake();
+  });
+  (function loop() {
+    // spring ease — ไล่ตามแบบ snappy ขึ้น (0.09→0.14) ให้ตอบสนองไวเหมือนยูนิคอร์น
+    cx2 += (tx - cx2) * .14; cy2 += (ty - cy2) * .14;
+    const clamp = v => Math.max(-1, Math.min(1, v));
+    const dx = clamp(cx2) * 54, dy = clamp(cy2) * 30;      // ระยะกวาดจริง (safe < 70/35 ที่วัดได้)
+    // ตายืดตามทิศที่มอง — รายละเอียดที่ทำให้รู้สึกมีชีวิต
+    const sx = 1 + Math.abs(clamp(cx2)) * 0.08, sy = 1 + Math.abs(clamp(cy2)) * 0.05;
+    document.querySelectorAll('.track').forEach(p =>
+      p.setAttribute('transform', `translate(${dx} ${dy}) scale(${sx} ${sy})`));
+    requestAnimationFrame(loop);
+  })();
+
+  /* ---------- blink / twitch / sleep ---------- */
+  let sleeping = false, idleTimer;
+  function blink() {
+    if (!sleeping) { cat.classList.add('blink'); setTimeout(() => cat.classList.remove('blink'), 140); }
+    setTimeout(blink, 2800 + Math.random() * 3800);
+  }
+  setTimeout(blink, 2000);
+  function wake() {
+    if (sleeping) { sleeping = false; cat.classList.remove('sleep'); zzz.classList.remove('on'); }
+    clearTimeout(idleTimer);
+    idleTimer = setTimeout(() => catAPI.sleep(true), 20000);
+  }
+
+  window.catAPI = {
+    begin() { wrap.classList.remove('entered'); void wrap.offsetWidth; wrap.classList.add('entered'); },
+    hover(on) { cat.classList.toggle('alert', on); },
+    click() {
+      cat.classList.remove('flick', 'squash'); void cat.offsetWidth;
+      cat.classList.add('flick', 'squash');
+      setTimeout(() => cat.classList.remove('flick', 'squash'), 650);
+    },
+    egg() {
+      cat.classList.remove('egging'); void cat.offsetWidth;
+      cat.classList.add('egging');
+      setTimeout(() => { ci++; applyCoat(ci); }, 380);
+      setTimeout(() => cat.classList.remove('egging'), 850);
+    },
+    sleep(force) {
+      sleeping = force === undefined ? !sleeping : force;
+      cat.classList.toggle('sleep', sleeping);
+      zzz.classList.toggle('on', sleeping);
+    },
+    variant(n) { ci = n; applyCoat(n); },
+    /* จูนตำแหน่ง: catAPI.tune({ROOT:{x,y}, EYES:[{cx,cy},…]}) */
+    tune(o) {
+      if (o.ROOT) { Object.assign(TAIL_ROOT, o.ROOT);
+        document.querySelector('.tail').style.transformOrigin = `${TAIL_ROOT.x}px ${TAIL_ROOT.y + Y}px`; }
+      if (o.EYES) { o.EYES.forEach((e,i)=>Object.assign(EYES[i],e)); drawEyes(); }
+    },
+  };
+})();
+</script>
+</body>
+</html>

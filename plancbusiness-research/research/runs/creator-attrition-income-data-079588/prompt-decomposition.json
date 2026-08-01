@@ -1,0 +1,120 @@
+{
+  "sub_questions": [
+    "What are the measured attrition rates of content creators over time — what share stop creating, and how soon after starting?",
+    "What are the measured survival rates of channels/accounts (as distinct from persons) over time — cohort persistence, dormancy, upload-cessation curves?",
+    "What is the income distribution across creators — specifically the median versus the mean, and the shape/skew of the distribution (top-decile share, Gini, share earning zero)?",
+    "What share of creators earns a living wage, and how is that threshold operationally defined in each study (and in each country's terms)?",
+    "How long does it take from starting to first meaningful income — time to monetization eligibility, time to first payout, time to a defined income floor?",
+    "What reasons do creators themselves give for quitting, as documented in surveys or exit studies, and with what instrument and sample?",
+    "Which of the above findings rest on US/Western samples only, and therefore may not generalize to Southeast Asia?",
+    "What quantitative evidence, if any, exists specifically for Southeast Asian creator populations (Indonesia, Philippines, Vietnam, Thailand, Malaysia, Singapore, and the rest of ASEAN)?",
+    "How do measured platform telemetry findings differ from self-reported survey findings on the same quantities, and by how much?"
+  ],
+  "entities": [
+    {
+      "name": "content creators (persons)",
+      "type": "category",
+      "required_fields": ["attrition rate", "income distribution", "living-wage share", "time to first income", "quit reasons", "sample size", "year", "platform", "country"],
+      "scope_note": "Broad reading: video creators, livestreamers, short-form creators, writers/newsletter authors, podcasters, influencers, and UGC/affiliate creators. NOT narrowed to full-time professionals."
+    },
+    {
+      "name": "channels / accounts (as a unit of analysis distinct from persons)",
+      "type": "category",
+      "required_fields": ["survival curve", "dormancy rate", "cohort year", "sample size", "platform", "country"],
+      "scope_note": "Channel-level survival has a different denominator from person-level attrition. Both must be reported and the difference stated."
+    },
+    {
+      "name": "YouTube",
+      "type": "platform",
+      "required_fields": ["attrition/survival", "income distribution", "time to monetization", "sample size", "year", "country"]
+    },
+    {
+      "name": "TikTok",
+      "type": "platform",
+      "required_fields": ["attrition/survival", "income distribution", "time to monetization", "sample size", "year", "country"]
+    },
+    {
+      "name": "Twitch / live streaming",
+      "type": "platform",
+      "required_fields": ["attrition/survival", "income distribution", "time to monetization", "sample size", "year", "country"]
+    },
+    {
+      "name": "Instagram / Facebook (Meta)",
+      "type": "platform",
+      "required_fields": ["attrition/survival", "income distribution", "sample size", "year", "country"]
+    },
+    {
+      "name": "Patreon / Substack / direct-support platforms",
+      "type": "platform",
+      "required_fields": ["income distribution", "median vs mean", "survival", "sample size", "year", "country"]
+    },
+    {
+      "name": "OnlyFans / subscription-content platforms",
+      "type": "platform",
+      "required_fields": ["income distribution", "median vs mean", "sample size", "year", "country"]
+    },
+    {
+      "name": "United States / Western economies",
+      "type": "region",
+      "required_fields": ["which findings are drawn from these samples", "living-wage threshold used"]
+    },
+    {
+      "name": "Southeast Asia",
+      "type": "region",
+      "required_fields": ["existing quantitative findings", "living-wage/median-income baseline", "transferability assessment"],
+      "scope_note": "Full ASEAN scope: Indonesia, Philippines, Vietnam, Thailand, Malaysia, Singapore, Myanmar, Cambodia, Laos, Brunei, Timor-Leste. Must not be collapsed to a single country."
+    },
+    {
+      "name": "living wage",
+      "type": "concept",
+      "required_fields": ["operational definition per study", "country-specific threshold", "PPP adjustment if any"]
+    },
+    {
+      "name": "meaningful income",
+      "type": "concept",
+      "required_fields": ["operational definition per study — monetization eligibility, first payout, or an income floor"]
+    }
+  ],
+  "required_formats": [
+    "Every reported figure must carry four metadata fields: sample size, year, platform, and country",
+    "Tabular presentation of figures (the four-field metadata requirement is table-shaped; prose alone cannot carry it legibly)",
+    "Explicit per-finding geographic-scope flag marking US/Western-only results",
+    "Median AND mean reported side by side wherever income is discussed"
+  ],
+  "required_sections": [],
+  "required_section_headings": [
+    "## 1. Attrition and Survival Rates of Creators and Channels",
+    "## 2. Income Distribution Across Creators: Median vs Mean and the Living-Wage Share",
+    "## 3. Time from Starting to First Meaningful Income",
+    "## 4. Documented Reasons Creators Give for Quitting",
+    "## 5. Geographic Scope: Which Findings Are US/Western-Only, and What Is Known for Southeast Asia",
+    "## 6. Evidence Quality and Measurement Caveats"
+  ],
+  "time_horizons": [
+    "no forward horizon requested — the query is retrospective",
+    "evidence recency window: 2018-2026 is load-bearing (YouTube's 2018 Partner Program threshold change and TikTok's 2023 Creator Rewards change break comparability with earlier cohorts); pre-2018 figures usable only when explicitly period-labelled"
+  ],
+  "time_periods": [],
+  "scope_conditions": [
+    "QUANTITATIVE ONLY — 'Cover only measurable findings'. Qualitative theorizing, opinion, and unquantified commentary are out of scope except as labelled context for a number.",
+    "Content creation framed AS AN OCCUPATION — income-generating activity. Cover BOTH readings: full-time professional creators AND part-time/side-income creators seeking earnings. Do not silently narrow to full-time.",
+    "Unit-of-analysis discipline: creator-level (person) and channel-level (account) findings are distinct and must not be conflated.",
+    "Any figure lacking one of the four required metadata fields (sample size, year, platform, country) must be explicitly annotated as incomplete rather than presented as if complete.",
+    "Multi-platform coverage required — do not let YouTube stand in for 'creators' generally."
+  ],
+  "pipeline_tier": "full",
+  "response_format": "structured",
+  "citation_style": "wikilink",
+  "levers": {
+    "register": "survey",
+    "register_confidence": "high",
+    "domain_notes": "Sourcing order: academic APIs first (Semantic Scholar, OpenAlex, arXiv cs.CY/econ.GN, SSRN, NBER) for platform-labour and creator-economy panel studies — this literature is real and citation-ranked, and web search returns mostly vendor marketing in its place. Then platform-disclosed and administrative data (YouTube/TikTok transparency and payout disclosures, Patreon/Substack public payout data, national statistical agencies, tax-authority self-employment data). Then gray literature for Southeast Asia specifically: ADB, World Bank, ILO, national statistics offices (BPS Indonesia, PSA Philippines, NSO Thailand), and regional platform reports — SEA quantitative evidence is thin on the clear web and lives here. Vendor surveys (Influencer Marketing Hub, NeoReach, Linktree, Adobe, Kajabi) MAY be cited but MUST be labelled as self-selected vendor surveys with sample size stated, and must never outrank telemetry or peer-reviewed panel data on the same quantity. Evidence norms for this topic: measured platform telemetry and administrative records > peer-reviewed longitudinal panels > cross-sectional academic surveys > self-selected vendor surveys > press-cited round numbers with no traceable methodology (exclude these last entirely). Survivorship bias is the dominant failure mode — any sample recruited from active creators systematically overstates income and understates attrition, and this must be flagged wherever it applies. Recency window: 2018-2026, with 2021-2026 preferred; monetization-threshold changes make older cohorts non-comparable.",
+    "inference_depth": "deep",
+    "rationale": {
+      "register": "The query says 'Cover only measurable findings' and 'Report every figure with sample size, year, platform, and country' — explicitly enumerative and coverage-shaped. No verdict, recommendation, or comparative judgement is requested. Strong survey signal.",
+      "inference_depth": "Two of the required deliverables likely have no direct answer on the clear web: the living-wage share (requires combining an income distribution with a country-specific threshold) and Southeast Asian creator statistics (gray literature, national statistics offices, non-English sources). Inference over absences — stating clearly which figures do not exist — is part of the deliverable.",
+      "tier": "Multi-domain quantitative synthesis across a contested literature where telemetry and survey evidence systematically disagree, plus an explicit transferability assessment. Requires adversarial review to avoid laundering vendor survey numbers as measurements.",
+      "response_format": "Coverage across four measurable domains plus a geographic audit, with a four-field metadata requirement per figure. Scannability and completeness matter more than argumentative density — but the survivorship-bias and survey-vs-telemetry tensions still need adversarial depth, hence full tier with structured format."
+    }
+  }
+}

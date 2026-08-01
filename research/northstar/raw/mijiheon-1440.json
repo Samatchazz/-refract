@@ -1,0 +1,419 @@
+{
+  "slug": "mijiheon",
+  "url": "https://mijiheon.com",
+  "name": "MIJIHEON",
+  "country": "Korea",
+  "viewport": {
+    "width": 1440,
+    "height": 900
+  },
+  "ok": false,
+  "httpStatus": 200,
+  "finalUrl": "https://mijiheon.com/",
+  "consentDismissed": [],
+  "scrollInfo": {
+    "contentHeight": 900,
+    "docScrollHeight": 900,
+    "maxElementBottom": 900,
+    "innerScrollerHeight": 0,
+    "virtualScroll": false
+  },
+  "document": {
+    "scrollHeight": 900,
+    "vhMultiple": 1,
+    "textNodeCount": 7,
+    "canvasCount": 1,
+    "elementCount": 50,
+    "title": "미지헌",
+    "lang": "ko",
+    "contentHeight": 900,
+    "scrollMode": "native"
+  },
+  "container": {
+    "dominantPairs": [
+      {
+        "width": 1,
+        "left": -1,
+        "count": 2,
+        "sample": {
+          "tag": "h2",
+          "cls": "visually-hidden"
+        }
+      },
+      {
+        "width": 175,
+        "left": 794,
+        "count": 1,
+        "sample": {
+          "tag": "p",
+          "cls": "drag__3d__text lang__common lang__kor"
+        }
+      }
+    ],
+    "containerChain": {
+      "chain": [
+        {
+          "tag": "h2",
+          "cls": "visually-hidden",
+          "width": 1,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "-1px / -1px",
+          "display": "block"
+        },
+        {
+          "tag": "section",
+          "cls": "main__contents__wr",
+          "width": 1440,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "block"
+        },
+        {
+          "tag": "main",
+          "cls": "",
+          "width": 1440,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "block"
+        }
+      ],
+      "constrained": null
+    },
+    "grids": [],
+    "bodyPaddingInline": "0px / 0px",
+    "bodyMaxWidth": "none",
+    "htmlPaddingInline": "0px / 0px"
+  },
+  "leftEdgeTest": {
+    "layout": {
+      "n": 0,
+      "mean": null,
+      "stdDev": null,
+      "distinctExact": null,
+      "distinctClustered2px": null,
+      "clusters": [],
+      "values": []
+    },
+    "rect": {
+      "n": 0,
+      "mean": null,
+      "stdDev": null,
+      "distinctExact": null,
+      "distinctClustered2px": null,
+      "clusters": [],
+      "values": []
+    },
+    "headings": {
+      "n": 0,
+      "mean": null,
+      "stdDev": null,
+      "distinctExact": null,
+      "distinctClustered2px": null,
+      "clusters": [],
+      "values": []
+    },
+    "sectionDiscovery": "body-children"
+  },
+  "sections": [],
+  "verticalRhythm": {
+    "sectionCount": 0,
+    "near100vhCount": 0,
+    "near100vhPct": null,
+    "strictGcdOfSpacing": 2,
+    "baseUnitEstimate80pct": 2,
+    "spacingHistogram": [
+      {
+        "value": 10,
+        "count": 4
+      },
+      {
+        "value": 4,
+        "count": 4
+      }
+    ],
+    "spacingSampleSize": 8
+  },
+  "typeScale": {
+    "distinctFontSizeCount": 3,
+    "distinctFontSizeCount_used2plus": 2,
+    "distinctSizes": [
+      {
+        "size": 22,
+        "count": 1
+      },
+      {
+        "size": 18,
+        "count": 4
+      },
+      {
+        "size": 12,
+        "count": 2
+      }
+    ],
+    "scaleSizesDesc": [
+      18,
+      12
+    ],
+    "consecutiveRatios": [
+      1.5
+    ],
+    "roles": {
+      "h1": null,
+      "biggestText": {
+        "tag": "p",
+        "fontSize": 22,
+        "fontWeight": "400",
+        "lineHeightPx": "normal",
+        "lineHeightRatio": null,
+        "letterSpacing": "0px",
+        "letterSpacingEm": 0,
+        "fontFamily": "Hahmlet",
+        "fontFamilyFull": "Hahmlet, Pretendard, dotum, sans-serif",
+        "textTransform": "none",
+        "color": "rgb(255, 252, 235)",
+        "widthPx": 174.59,
+        "text": "옥패를 당겨 주세요"
+      },
+      "h2All": [
+        {
+          "tag": "h2",
+          "fontSize": 12,
+          "fontWeight": "700",
+          "lineHeightPx": "normal",
+          "lineHeightRatio": null,
+          "letterSpacing": "0px",
+          "letterSpacingEm": 0,
+          "fontFamily": "Hahmlet",
+          "fontFamilyFull": "Hahmlet, Pretendard, dotum, sans-serif",
+          "textTransform": "none",
+          "color": "rgb(255, 252, 235)",
+          "widthPx": 1,
+          "text": "인트로"
+        },
+        {
+          "tag": "h2",
+          "fontSize": 12,
+          "fontWeight": "700",
+          "lineHeightPx": "normal",
+          "lineHeightRatio": null,
+          "letterSpacing": "0px",
+          "letterSpacingEm": 0,
+          "fontFamily": "Hahmlet",
+          "fontFamilyFull": "Hahmlet, Pretendard, dotum, sans-serif",
+          "textTransform": "none",
+          "color": "rgb(255, 252, 235)",
+          "widthPx": 1,
+          "text": "인트로 영상"
+        }
+      ],
+      "h3": null,
+      "body": null,
+      "small": {
+        "tag": "h2",
+        "fontSize": 12,
+        "fontWeight": "700",
+        "lineHeightPx": "normal",
+        "lineHeightRatio": null,
+        "letterSpacing": "0px",
+        "letterSpacingEm": 0,
+        "fontFamily": "Hahmlet",
+        "fontFamilyFull": "Hahmlet, Pretendard, dotum, sans-serif",
+        "textTransform": "none",
+        "color": "rgb(255, 252, 235)",
+        "widthPx": 1,
+        "text": "인트로 영상"
+      },
+      "mono": null
+    },
+    "readingMeasure": null,
+    "readingMeasureAlternates": [],
+    "distinctFontFamilyCount": 4,
+    "fontFamilies": [
+      {
+        "family": "Hahmlet",
+        "count": 4
+      },
+      {
+        "family": "Tenor Sans",
+        "count": 1
+      },
+      {
+        "family": "Noto Serif JP",
+        "count": 1
+      },
+      {
+        "family": "Noto Serif SC",
+        "count": 1
+      }
+    ]
+  },
+  "color": {
+    "textColors": [
+      {
+        "value": "rgb(255,228,181)",
+        "count": 4
+      },
+      {
+        "value": "rgb(255,252,235)",
+        "count": 3
+      }
+    ],
+    "backgroundColors": [
+      {
+        "value": "rgb(17,17,17)",
+        "count": 1
+      }
+    ],
+    "distinctTextColorCount": 2,
+    "distinctBgColorCount": 1
+  },
+  "persistent": {
+    "fixedOrSticky": [
+      {
+        "tag": "section",
+        "cls": "main__contents__wr",
+        "position": "fixed",
+        "rect": {
+          "top": 0,
+          "left": 0,
+          "width": 1440,
+          "height": 900
+        },
+        "zIndex": "2",
+        "text": "인트로 옥패를 당겨 주세요 Please pull the jade pendant. 玉佩 (ぎょくはい)を引いてく",
+        "opacity": "1"
+      },
+      {
+        "tag": "section",
+        "cls": "main__contents__wr",
+        "position": "fixed",
+        "rect": {
+          "top": 0,
+          "left": 0,
+          "width": 1440,
+          "height": 900
+        },
+        "zIndex": "1",
+        "text": "인트로 영상",
+        "opacity": "0"
+      }
+    ]
+  },
+  "nav": {
+    "tag": "nav",
+    "cls": "intro__lang__box",
+    "height": 26,
+    "top": 135,
+    "position": "absolute",
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "backdropFilter": "none",
+    "borderBottom": "0px rgb(255, 252, 235)",
+    "paddingBlock": "0px / 0px",
+    "transform": "matrix(1, 0, 0, 1, -202.852, 0)",
+    "opacity": "1",
+    "mixBlendMode": "normal",
+    "color": "rgb(255, 252, 235)"
+  },
+  "navState": {
+    "at0": {
+      "nav": {
+        "height": 26,
+        "top": 135,
+        "position": "absolute",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "backdropFilter": "none",
+        "borderBottom": "0px rgb(255, 252, 235)",
+        "paddingBlock": "0px / 0px",
+        "transform": "matrix(1, 0, 0, 1, -202.852, 0)",
+        "opacity": "1",
+        "color": "rgb(255, 252, 235)"
+      },
+      "fixedOrSticky": [
+        {
+          "tag": "section",
+          "cls": "main__contents__wr",
+          "position": "fixed",
+          "rect": {
+            "top": 0,
+            "left": 0,
+            "width": 1440,
+            "height": 900
+          },
+          "text": "인트로 옥패를 당겨 주세요 Please pull the jade pendant. 玉佩 (ぎょくはい)を引いてく",
+          "opacity": "1"
+        },
+        {
+          "tag": "section",
+          "cls": "main__contents__wr",
+          "position": "fixed",
+          "rect": {
+            "top": 0,
+            "left": 0,
+            "width": 1440,
+            "height": 900
+          },
+          "text": "인트로 영상",
+          "opacity": "0"
+        }
+      ]
+    },
+    "at2000": {
+      "nav": {
+        "height": 26,
+        "top": 135,
+        "position": "absolute",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "backdropFilter": "none",
+        "borderBottom": "0px rgb(255, 252, 235)",
+        "paddingBlock": "0px / 0px",
+        "transform": "matrix(1, 0, 0, 1, -202.852, 0)",
+        "opacity": "1",
+        "color": "rgb(255, 252, 235)"
+      },
+      "fixedOrSticky": [
+        {
+          "tag": "section",
+          "cls": "main__contents__wr",
+          "position": "fixed",
+          "rect": {
+            "top": 0,
+            "left": 0,
+            "width": 1440,
+            "height": 900
+          },
+          "text": "인트로 옥패를 당겨 주세요 Please pull the jade pendant. 玉佩 (ぎょくはい)を引いてく",
+          "opacity": "1"
+        },
+        {
+          "tag": "section",
+          "cls": "main__contents__wr",
+          "position": "fixed",
+          "rect": {
+            "top": 0,
+            "left": 0,
+            "width": 1440,
+            "height": 900
+          },
+          "text": "인트로 영상",
+          "opacity": "0"
+        }
+      ]
+    },
+    "changed": false,
+    "diff": {}
+  },
+  "shots": [
+    "mijiheon-1440-full.jpg",
+    "mijiheon-1440-scroll000.jpg",
+    "mijiheon-1440-scroll025.jpg",
+    "mijiheon-1440-scroll050.jpg",
+    "mijiheon-1440-scroll075.jpg",
+    "mijiheon-1440-scroll100.jpg"
+  ],
+  "fullPageShotRepresentative": true,
+  "notMeasurable": "only 7 rendered text nodes (1 canvas element(s)) — WebGL/canvas-driven, no DOM grid to learn from",
+  "pageErrors": []
+}

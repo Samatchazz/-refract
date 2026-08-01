@@ -1,0 +1,70 @@
+/* ============================================================
+   hero.css — §2 hero. Light section (--c-bg-light from body).
+   The sacred stroke is ink here (local --stroke-color override) so the
+   hand reads on a light ground; neon --c-accent stays interaction-only.
+   ============================================================ */
+.hero {
+  --stroke-color: var(--c-text-dark);   /* hand stroke = ink on this light section */
+  min-height: 100vh; padding: calc(var(--nav-h) + 4vh) var(--container-pad) 8vh;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  text-align: center; gap: clamp(28px, 6vh, 64px);
+}
+
+.hero-line {
+  margin: 0; font-family: var(--f-display); font-weight: 600;
+  font-size: var(--fs-hero); line-height: var(--lh-tight-th);
+  display: flex; flex-wrap: nowrap; align-items: baseline; justify-content: center;
+  gap: 0; white-space: nowrap;
+  letter-spacing: var(--ls-display); color: var(--c-text-dark);
+}
+.hero-left  { display: inline-flex; }
+.hero-right { display: inline-flex; align-items: baseline; }
+.hero-line .hw-word { display: inline-block; }
+
+/* Idiology masked-reveal lines, laid out inline for the single-row hero */
+.hero-line [data-text-reveal] .line { display: inline-block; overflow: hidden; vertical-align: top; }
+.hero-line [data-text-reveal] .line-inner { display: inline-block; }
+
+/* ขีด rides the Anuphan variable weight axis for the beat-3 twitch */
+#word-kheed { font-variation-settings: 'wght' 600; will-change: font-variation-settings; }
+
+/* the gap that opens in beat 2, holds the hand dash (sacred stroke) */
+.hero-dash {
+  position: relative; display: inline-block; width: 0; height: .5em; align-self: center;
+  flex: 0 0 auto; overflow: visible;
+}
+.hero-dash .hw-stroke { position: absolute; left: 0; top: 0; width: 100%; height: 100%; }
+
+/* trailing shuffle word (Mali) with animated container width */
+.hero-shuffle-box {
+  position: relative; display: inline-block; overflow: visible;
+  vertical-align: baseline; will-change: width;
+}
+.hero-shuffle {
+  display: inline-block; font-family: var(--f-accent); color: var(--c-text-dark);
+  font-size: 1.35em; transform-origin: 50% 70%; white-space: nowrap;
+}
+/* sparkle ticks (hand-drawn ink, no gloss — polish belongs to the AI voice) */
+.hero-spark { position: absolute; pointer-events: none; color: var(--c-text-dark); overflow: visible; }
+
+.hero-cta {
+  font-family: var(--f-display); font-weight: 500; font-size: clamp(1rem, 2.6vw, 1.25rem);
+  color: var(--c-text-light); background: var(--c-bg-dark);
+  padding: .8em 1.7em; border-radius: 999px; border: 1px solid var(--c-bg-dark);
+  transition: transform var(--dur-fast) var(--ease-out-expo),
+              background var(--dur-fast) var(--ease-out-expo),
+              color var(--dur-fast) var(--ease-out-expo),
+              border-color var(--dur-fast) var(--ease-out-expo);
+}
+.hero-cta:hover {              /* interaction = the only place neon aqua appears */
+  transform: translateY(-2px);
+  background: var(--c-accent); color: var(--c-bg-dark); border-color: var(--c-accent);
+}
+
+/* mobile: two lines, dash shortens (brief §2) */
+@media (max-width: 767px) {
+  .hero-line { flex-wrap: wrap; white-space: normal; }
+  .hero-left { flex-basis: 100%; justify-content: center; }
+  .hero-right { flex-basis: 100%; justify-content: center; }
+  .hero-dash { order: 0; }
+}

@@ -1,0 +1,643 @@
+<title>PlanC — เลือก North Star</title>
+
+<style>
+/*<!--FONTS-->*/
+
+/* ---- tokens ---------------------------------------------------------------
+   Neutral is biased toward the teal accent rather than a pure grey, so the
+   ground reads as chosen. Coral appears only as a state marker, never as text —
+   the same rule the PlanC build already follows. */
+:root{
+  --paper:#EDF1F0;
+  --paper-2:#E3E9E7;
+  --card:#F7FAF9;
+  --ink:#0F1513;
+  --dim:#5C6D69;
+  --faint:#8A9A96;
+  --accent:#0A6558;
+  --accent-soft:#0a65581a;
+  --warn:#B8442C;
+  --rule:#0f15131f;
+  --rule-2:#0f15130f;
+  --shadow:0 1px 2px #0f151310, 0 8px 24px #0f15130a;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --paper:#0B100F;
+    --paper-2:#111817;
+    --card:#131B19;
+    --ink:#DCE4E1;
+    --dim:#8A9C97;
+    --faint:#63736F;
+    --accent:#4CC9B4;
+    --accent-soft:#4cc9b41f;
+    --warn:#F0836B;
+    --rule:#dce4e124;
+    --rule-2:#dce4e112;
+    --shadow:0 1px 2px #0000004d, 0 8px 24px #00000033;
+  }
+}
+:root[data-theme="light"]{
+  --paper:#EDF1F0; --paper-2:#E3E9E7; --card:#F7FAF9; --ink:#0F1513;
+  --dim:#5C6D69; --faint:#8A9A96; --accent:#0A6558; --accent-soft:#0a65581a;
+  --warn:#B8442C; --rule:#0f15131f; --rule-2:#0f15130f;
+  --shadow:0 1px 2px #0f151310, 0 8px 24px #0f15130a;
+}
+:root[data-theme="dark"]{
+  --paper:#0B100F; --paper-2:#111817; --card:#131B19; --ink:#DCE4E1;
+  --dim:#8A9C97; --faint:#63736F; --accent:#4CC9B4; --accent-soft:#4cc9b41f;
+  --warn:#F0836B; --rule:#dce4e124; --rule-2:#dce4e112;
+  --shadow:0 1px 2px #0000004d, 0 8px 24px #00000033;
+}
+
+*{box-sizing:border-box}
+
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:Anuphan,"Segoe UI","Leelawadee UI",system-ui,sans-serif;
+  font-size:16px;
+  line-height:1.62;
+  -webkit-font-smoothing:antialiased;
+}
+
+/* ---- the rail -------------------------------------------------------------
+   One shared left edge running the whole page. This is the thing the research
+   is actually about, so the page obeys it rather than describing it. */
+.page{
+  --rail-x:clamp(20px,7vw,132px);
+  position:relative;
+  max-width:1180px;
+  margin-inline:auto;
+  padding:clamp(28px,5vw,64px) clamp(20px,5vw,56px) 96px;
+}
+.page::before{
+  content:"";
+  position:absolute;
+  left:var(--rail-x);
+  top:0; bottom:0;
+  width:1px;
+  background:linear-gradient(to bottom,transparent 0,var(--rule) 60px,var(--rule) calc(100% - 160px),transparent 100%);
+  pointer-events:none;
+}
+.band{padding-left:var(--rail-x)}
+
+/* ---- type -----------------------------------------------------------------
+   Headings are set at line-height 1.30 — the measured Thai collision floor.
+   Numbers are monospaced and tabular everywhere they are compared. */
+h1,h2,h3,.display{
+  font-family:Kanit,"Segoe UI","Leelawadee UI",system-ui,sans-serif;
+  font-weight:700;
+  line-height:1.30;
+  letter-spacing:-0.005em;
+  text-wrap:balance;
+  margin:0;
+}
+h1{font-size:clamp(28px,4.4vw,46px)}
+h2{font-size:clamp(21px,2.6vw,29px)}
+h3{font-size:clamp(17px,1.7vw,20px)}
+p{margin:0;max-width:64ch}
+.mono,.num,td.num,.stat b{
+  font-family:ui-monospace,"Cascadia Mono","SF Mono",Menlo,Consolas,monospace;
+  font-variant-numeric:tabular-nums;
+  font-feature-settings:"tnum" 1;
+}
+
+.eyebrow{
+  font-family:ui-monospace,"Cascadia Mono","SF Mono",Menlo,Consolas,monospace;
+  font-size:11px;
+  letter-spacing:0.14em;
+  text-transform:uppercase;
+  color:var(--accent);
+}
+.dim{color:var(--dim)}
+.small{font-size:14px}
+
+/* Section markers hang outside the rail, in the margin. */
+section.step{position:relative;margin-top:clamp(52px,7vw,88px)}
+section.step > .marker{
+  position:absolute;
+  left:0;
+  top:2px;
+  width:calc(var(--rail-x) - 14px);
+  text-align:right;
+  font-family:ui-monospace,"Cascadia Mono","SF Mono",Menlo,Consolas,monospace;
+  font-variant-numeric:tabular-nums;
+  font-size:12px;
+  color:var(--faint);
+  letter-spacing:0.06em;
+}
+@media (max-width:720px){
+  .page::before{display:none}
+  .band{padding-left:0}
+  section.step > .marker{position:static;width:auto;text-align:left;display:block;margin-bottom:6px}
+}
+
+.lede{font-size:clamp(16px,1.6vw,18px);color:var(--dim);max-width:62ch;margin-top:14px}
+.stack{display:flex;flex-direction:column;gap:14px}
+.stack-lg{display:flex;flex-direction:column;gap:26px}
+
+hr.rule{border:0;border-top:1px solid var(--rule);margin:0}
+
+/* ---- comparison controls -------------------------------------------------- */
+.scrollbar{
+  display:flex;align-items:center;gap:10px;flex-wrap:wrap;
+  margin:22px 0 14px;
+}
+.segbtn{
+  font-family:ui-monospace,"Cascadia Mono","SF Mono",Menlo,Consolas,monospace;
+  font-size:12px;
+  padding:6px 12px;
+  border:1px solid var(--rule);
+  background:transparent;
+  color:var(--dim);
+  border-radius:2px;
+  cursor:pointer;
+}
+.segbtn[aria-pressed="true"]{
+  background:var(--accent);
+  border-color:var(--accent);
+  color:var(--paper);
+}
+.segbtn:focus-visible,.card:focus-visible,.opt:focus-visible,.btn:focus-visible,summary:focus-visible{
+  outline:2px solid var(--accent);
+  outline-offset:2px;
+}
+
+/* ---- candidate cards ------------------------------------------------------ */
+.cards{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+  align-items:stretch; /* equal heights so the three select buttons line up */
+}
+@media (max-width:960px){.cards{grid-template-columns:1fr}}
+
+.card{
+  position:relative;
+  display:flex;flex-direction:column;
+  background:var(--card);
+  border:1px solid var(--rule);
+  border-radius:3px;
+  padding:0 0 18px;
+  cursor:pointer;
+  text-align:left;
+  font:inherit;
+  color:inherit;
+  overflow:hidden;
+  box-shadow:var(--shadow);
+}
+.card[aria-pressed="true"]{
+  border-color:var(--accent);
+  box-shadow:0 0 0 1px var(--accent), var(--shadow);
+}
+.card[aria-pressed="true"]::after{
+  content:"";
+  position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--accent);
+}
+.card .shotwrap{
+  position:relative;
+  aspect-ratio:470/294;
+  background:var(--paper-2);
+  border-bottom:1px solid var(--rule);
+}
+.card .shotwrap img{
+  position:absolute;inset:0;
+  width:100%;height:100%;
+  object-fit:cover;
+  display:block;
+  opacity:0;
+  transition:opacity .18s ease;
+}
+.card .shotwrap img.on{opacity:1}
+.card .body{padding:16px 18px 0;display:flex;flex-direction:column;gap:10px}
+.card h3{margin:0}
+.card .kind{font-size:13.5px;color:var(--dim);line-height:1.5}
+.card .url{font-size:11.5px;color:var(--faint);word-break:normal;overflow-wrap:anywhere}
+.card .tradeoff{margin-bottom:16px}
+
+.stats{display:flex;flex-direction:column;gap:0;margin-top:4px}
+.stat{
+  display:flex;align-items:baseline;justify-content:space-between;gap:10px;
+  padding:6px 0;
+  border-top:1px solid var(--rule-2);
+  font-size:13px;
+}
+.stat span{color:var(--dim)}
+.stat b{font-weight:600;font-size:13px}
+.stat b.good{color:var(--accent)}
+.stat b.warn{color:var(--warn)}
+
+.tradeoff{display:flex;flex-direction:column;gap:7px;margin-top:6px;font-size:13.5px;line-height:1.5}
+.tradeoff div{display:flex;gap:8px}
+.tradeoff .k{
+  flex:0 0 auto;
+  font-family:ui-monospace,"Cascadia Mono","SF Mono",Menlo,Consolas,monospace;
+  font-size:11px;letter-spacing:.08em;text-transform:uppercase;
+  padding-top:3px;
+}
+.tradeoff .plus .k{color:var(--accent)}
+.tradeoff .minus .k{color:var(--warn)}
+
+.pick{
+  margin:auto 18px 0; /* margin-top:auto pins it to the bottom of every card */
+  padding:9px;
+  text-align:center;
+  border:1px solid var(--rule);
+  border-radius:2px;
+  font-size:13px;
+  color:var(--dim);
+  font-family:ui-monospace,"Cascadia Mono","SF Mono",Menlo,Consolas,monospace;
+}
+.card[aria-pressed="true"] .pick{background:var(--accent);border-color:var(--accent);color:var(--paper)}
+
+.reco{
+  display:inline-block;
+  font-family:ui-monospace,"Cascadia Mono","SF Mono",Menlo,Consolas,monospace;
+  font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--accent);
+  border:1px solid var(--accent);
+  border-radius:2px;
+  padding:1px 6px;
+  vertical-align:2px;
+  margin-left:8px;
+}
+
+/* ---- plain option rows (decisions 2 and 3) -------------------------------- */
+.opts{display:flex;flex-direction:column;gap:10px;margin-top:18px;max-width:820px}
+.opt{
+  display:flex;gap:14px;align-items:flex-start;
+  padding:14px 16px;
+  background:var(--card);
+  border:1px solid var(--rule);
+  border-radius:3px;
+  cursor:pointer;text-align:left;font:inherit;color:inherit;
+}
+.opt[aria-pressed="true"]{border-color:var(--accent);box-shadow:inset 3px 0 0 var(--accent)}
+.opt .dot{
+  flex:0 0 auto;width:13px;height:13px;margin-top:6px;
+  border:1px solid var(--faint);border-radius:50%;
+}
+.opt[aria-pressed="true"] .dot{border-color:var(--accent);background:var(--accent);box-shadow:inset 0 0 0 2.5px var(--card)}
+.opt .t{display:flex;flex-direction:column;gap:3px}
+.opt .t strong{font-weight:600}
+.opt .t span{font-size:13.5px;color:var(--dim);line-height:1.5}
+
+/* ---- summary -------------------------------------------------------------- */
+.summary{
+  background:var(--paper-2);
+  border:1px solid var(--rule);
+  border-left:3px solid var(--accent);
+  border-radius:3px;
+  padding:22px 24px;
+  margin-top:20px;
+  max-width:820px;
+}
+.summary ol{margin:14px 0 0;padding-left:20px;display:flex;flex-direction:column;gap:9px}
+.summary li{padding-left:4px}
+.summary .val{font-weight:600}
+.summary .unset{color:var(--faint);font-style:italic}
+.btn{
+  margin-top:20px;
+  font-family:ui-monospace,"Cascadia Mono","SF Mono",Menlo,Consolas,monospace;
+  font-size:12.5px;letter-spacing:.04em;
+  padding:10px 18px;
+  background:var(--accent);color:var(--paper);
+  border:0;border-radius:2px;cursor:pointer;
+}
+.btn[disabled]{background:transparent;color:var(--faint);border:1px solid var(--rule);cursor:not-allowed}
+
+/* ---- table ---------------------------------------------------------------- */
+details{margin-top:22px;border-top:1px solid var(--rule);padding-top:16px}
+summary{cursor:pointer;font-size:14px;color:var(--dim);list-style:none}
+summary::-webkit-details-marker{display:none}
+summary::before{content:"▸ ";color:var(--accent)}
+details[open] summary::before{content:"▾ "}
+.tablewrap{overflow-x:auto;margin-top:16px;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;font-size:12.5px;min-width:660px;width:100%}
+th,td{padding:6px 12px 6px 0;text-align:left;border-bottom:1px solid var(--rule-2);white-space:nowrap}
+th{
+  font-family:ui-monospace,"Cascadia Mono","SF Mono",Menlo,Consolas,monospace;
+  font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--faint);
+  font-weight:500;border-bottom:1px solid var(--rule);
+}
+td.num{text-align:right;padding-right:18px}
+tr.hi td{background:var(--accent-soft)}
+td.name{white-space:normal;min-width:160px}
+
+.note{font-size:13px;color:var(--dim);line-height:1.6;max-width:66ch}
+.k-list{display:flex;flex-wrap:wrap;gap:6px 18px;margin-top:10px;font-size:13px;color:var(--dim)}
+
+@media (prefers-reduced-motion:reduce){
+  *{transition:none !important;animation:none !important}
+}
+</style>
+
+<div class="page">
+
+  <header class="band">
+    <div class="eyebrow">PlanC · การตัดสินใจก่อนแก้โครงเว็บ</div>
+    <h1 style="margin-top:14px">เลือกต้นแบบโครงสร้าง<br>แล้วเราจะเอาตัวเลขของมันมาใช้</h1>
+    <p class="lede">
+      เว็บตอนนี้เป็น 14 โมดูลที่แต่ละอันดีแต่ไม่มีโครงกลางร่วมกัน — ขอบซ้ายไม่ตรงกัน
+      ขนาดตัวอักษรตั้งเองทีละที่ ระยะห่างไม่เท่ากัน วิธีแก้คือเลือกเว็บที่มีโครงดีอยู่แล้ว 1 เว็บ
+      แล้ววัดตัวเลขจริงของมันมาแทนค่าที่เดาไว้
+    </p>
+    <p class="lede" style="margin-top:12px">
+      <strong style="color:var(--ink)">เอาสัดส่วน ไม่ได้เอาหน้าตา</strong> — ความกว้าง จำนวนคอลัมน์ ระยะห่าง
+      อัตราส่วนขนาดตัวอักษร ระยะบรรทัด ส่วนสี ฟอนต์ เนื้อหา ภาพ เอฟเฟกต์ ยังเป็นของเราทั้งหมด
+      ไม่ได้ลอกโค้ดหรือ HTML สักบรรทัด
+    </p>
+    <div class="k-list mono">
+      <span>วัดจริง <b class="num">34</b> เว็บ จากที่ลอง <b class="num">39</b></span>
+      <span>2 ขนาดจอ · 1440×900 · 390×844</span>
+      <span>เบราว์เซอร์จริง เลื่อนจนสุดหน้าก่อนวัด</span>
+    </div>
+  </header>
+
+  <!-- ================= 1 ================= -->
+  <section class="step">
+    <div class="marker">01</div>
+    <div class="band">
+      <div class="eyebrow">ต้องเลือก</div>
+      <h2 style="margin-top:10px">เอาเว็บไหนเป็นต้นแบบสัดส่วน</h2>
+      <p class="lede">
+        สามตัวนี้ผ่านเกณฑ์วัดหมดแล้ว — ต่างกันที่ <strong style="color:var(--ink)">จะยอมแลกอะไร</strong>
+        รูปคือช่วงกลางหน้าของแต่ละเว็บ ไม่ใช่หน้าแรก เพราะระบบมันโชว์ตัวตรงกลาง
+      </p>
+
+      <div class="scrollbar">
+        <span class="eyebrow" style="color:var(--faint)">ตำแหน่ง scroll</span>
+        <button class="segbtn" data-scroll="scroll025" aria-pressed="false" type="button">25%</button>
+        <button class="segbtn" data-scroll="scroll050" aria-pressed="true" type="button">50%</button>
+        <button class="segbtn" data-scroll="scroll075" aria-pressed="false" type="button">75%</button>
+      </div>
+
+      <div class="cards">
+        <!--CARDS-->
+      </div>
+
+      <div class="opts" style="max-width:none;margin-top:18px">
+        <button class="opt" data-group="star" data-value="hybrid" aria-pressed="false" type="button">
+          <span class="dot"></span>
+          <span class="t">
+            <strong>ผสม — โครงกริดจาก Klim + ระบบสองภาษาจาก OFF-BEAT<span class="reco">แนะนำ</span></strong>
+            <span>
+              สองเรื่องนี้ไม่ทับกัน Klim ให้เส้นขอบซ้ายเดียวกับสเกลตัวอักษรที่รัดกุม
+              OFF-BEAT ให้วิธีวางไทยกับอังกฤษคนละลำดับ และระยะบรรทัดเนื้อหาที่รองรับไทยได้เลย
+              ได้ข้อดีทั้งคู่โดยไม่ต้องยอมเสียอะไรมาก
+            </span>
+          </span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 2 ================= -->
+  <section class="step">
+    <div class="marker">02</div>
+    <div class="band">
+      <div class="eyebrow">ต้องเลือก · ไม่เกี่ยวกับข้อ 01</div>
+      <h2 style="margin-top:10px">หน้าเว็บควรยาวแค่ไหน</h2>
+      <p class="lede">
+        brief เดิมตั้งไว้ราว 10 เท่าความสูงจอ แต่เอกสารยาวที่เทียบได้จริงวัดออกมา
+        <strong style="color:var(--ink)">28–33 เท่า</strong> — คือประมาณสามเท่าของที่เราตั้ง
+        ความยาวคือสิ่งที่ทำให้หน้าเว็บรู้สึกเป็น "เอกสาร" ไม่ใช่ "หน้า landing"
+      </p>
+      <div class="k-list mono" style="margin-top:14px">
+        <span>EXAT <b class="num">33.4</b>×</span>
+        <span>Plan AZ <b class="num">32.2</b>×</span>
+        <span>Klim <b class="num">30.5</b>×</span>
+        <span>Sakazuki <b class="num">28.2</b>×</span>
+        <span style="color:var(--warn)">เป้าเดิมของเรา <b class="num">~10</b>×</span>
+      </div>
+      <div class="opts">
+        <button class="opt" data-group="len" data-value="measure" aria-pressed="false" type="button">
+          <span class="dot"></span>
+          <span class="t">
+            <strong>ยังไม่ตัดสิน — ให้วัด copy ไทยจริงก่อน<span class="reco">แนะนำ</span></strong>
+            <span>เอาเนื้อหาไทยที่มีอยู่จริงมาวัดว่ารวมแล้วกี่จอ แล้วค่อยตั้งเป้าจากข้อมูล ไม่ใช่จากความรู้สึก ใช้เวลาไม่นาน</span>
+          </span>
+        </button>
+        <button class="opt" data-group="len" data-value="keep" aria-pressed="false" type="button">
+          <span class="dot"></span>
+          <span class="t">
+            <strong>คงเป้าเดิม ~10 เท่าจอ</strong>
+            <span>ถ้าเชื่อว่าเนื้อหาเราสั้นกว่าเว็บอ้างอิงจริง ๆ และไม่อยากยืดให้เยิ่นเย้อ</span>
+          </span>
+        </button>
+        <button class="opt" data-group="len" data-value="grow" aria-pressed="false" type="button">
+          <span class="dot"></span>
+          <span class="t">
+            <strong>ขยายเป็น ~20–30 เท่าจอ ให้เท่ากลุ่มอ้างอิง</strong>
+            <span>ต้องเพิ่มเนื้อหาจริง ไม่ใช่เพิ่มระยะห่าง — แปลว่ามีงานเขียน copy เพิ่ม</span>
+          </span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 3 ================= -->
+  <section class="step">
+    <div class="marker">03</div>
+    <div class="band">
+      <div class="eyebrow">ต้องเลือก · ไม่เกี่ยวกับข้อ 01</div>
+      <h2 style="margin-top:10px">กฎ "ห้าม section สูงเท่าจอพอดี"</h2>
+      <p class="lede">
+        brief เดิมห้ามเด็ดขาด เพราะกลัวอ่านเป็นสไลด์ แต่วัดแล้วพบว่า
+        <strong style="color:var(--ink)">16 จาก 34 เว็บมีอย่างน้อยหนึ่ง section ที่สูงเท่าจอพอดี</strong>
+        รวมทั้งเว็บที่ได้ Site of the Day ที่ทำให้อ่านเป็นสไลด์คือตอนที่ section ส่วนใหญ่สูงเท่าจอ
+        ไม่ใช่ตอนที่มีหนึ่งหรือสองอัน
+      </p>
+      <div class="opts">
+        <button class="opt" data-group="vh" data-value="quota" aria-pressed="false" type="button">
+          <span class="dot"></span>
+          <span class="t">
+            <strong>เปลี่ยนเป็นโควตา — ได้ไม่เกิน 3 จาก 8 และเฉพาะจุดที่ตั้งใจ<span class="reco">แนะนำ</span></strong>
+            <span>ตรงกับที่วัดมา เว็บที่มี 5 section ขึ้นไปไม่มีเจ้าไหนเกิน 2 อัน · ของเราคือ word wall สองจุด กับหน้าปิด</span>
+          </span>
+        </button>
+        <button class="opt" data-group="vh" data-value="ban" aria-pressed="false" type="button">
+          <span class="dot"></span>
+          <span class="t">
+            <strong>คงข้อห้ามเดิม ห้ามทุก section</strong>
+            <span>ปลอดภัยกว่า แต่จะทำให้ word wall กับหน้าปิดเสียจังหวะ "ปิดม่าน" ที่ตั้งใจไว้</span>
+          </span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= สรุป ================= -->
+  <section class="step">
+    <div class="marker">↳</div>
+    <div class="band">
+      <h2>สรุปที่เลือก</h2>
+      <div class="summary">
+        <ol>
+          <li>ต้นแบบสัดส่วน — <span class="val unset" id="s-star">ยังไม่ได้เลือก</span></li>
+          <li>ความยาวหน้า — <span class="val unset" id="s-len">ยังไม่ได้เลือก</span></li>
+          <li>กฎ 100vh — <span class="val unset" id="s-vh">ยังไม่ได้เลือก</span></li>
+        </ol>
+        <button class="btn" id="copy" type="button" disabled>เลือกให้ครบ 3 ข้อก่อน</button>
+        <p class="note" style="margin-top:14px">
+          กดปุ่มแล้ววางกลับมาในแชทได้เลย ผมจะเอาไปแทนค่าที่เดาไว้ใน <span class="mono">SITE-SKELETON.md</span>
+          แล้ว refactor ทั้ง 14 โมดูลให้ใช้ชุดตัวเลขเดียวกัน — ไม่รื้อ ไม่เขียน component ใหม่
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= ตารางเต็ม ================= -->
+  <section class="step">
+    <div class="marker">†</div>
+    <div class="band">
+      <details>
+        <summary>ดูตัวเลขทั้ง 34 เว็บที่วัดได้ (ไม่จำเป็นต่อการตัดสินใจ)</summary>
+        <p class="note" style="margin-top:14px">
+          เรียงตามหลักฐานความเป็นระบบ — จำนวนขอบซ้ายก่อน แล้วจำนวนขนาดตัวอักษร
+          การเรียงนี้เป็นสูตรคำนวณ ไม่ใช่คำแนะนำ · <span class="mono">σ</span> คือความกระจายของขอบซ้าย ยิ่งน้อยยิ่งตรงกัน
+          · แถวที่ไฮไลต์คือสามตัวที่แนะนำ
+        </p>
+        <div class="tablewrap">
+          <table>
+            <thead>
+              <tr>
+                <th>เว็บ</th><th>ประเทศ</th>
+                <th style="text-align:right">ขอบซ้าย (σ)</th>
+                <th style="text-align:right">ขนาดตัวอักษร</th>
+                <th style="text-align:right">ความยาว</th>
+                <th style="text-align:right">=จอพอดี</th>
+                <th style="text-align:right">ไทยต้องบวก</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!--ROWS-->
+            </tbody>
+          </table>
+        </div>
+        <p class="note" style="margin-top:16px">
+          อีก 5 เว็บวัดไม่ได้ — igloo.inc · jungheonlee.com · shining.302chanwoo.com ·
+          imnotabot.sangyoungbae.com · mijiheon.com ทั้งหมดวาดตัวหนังสือลงใน WebGL
+          ไม่มีโครงหน้าให้อ่าน
+        </p>
+      </details>
+
+      <p class="note" style="margin-top:26px">
+        รายละเอียดเต็มพร้อมสกรีนช็อตความละเอียดจริงอยู่ในโปรเจกต์ที่
+        <span class="mono">research/northstar/</span> — <span class="mono">CANDIDATES.md</span>,
+        <span class="mono">THAI-STRESS.md</span>, <span class="mono">measurements.json</span> และ
+        <span class="mono">shots/</span> 305 รูป
+      </p>
+    </div>
+  </section>
+
+</div>
+
+<script>
+(function () {
+  var state = { star: null, len: null, vh: null };
+
+  var LABEL = {
+    star: {
+      klim: 'Klim — Söhne (klim.co.nz) · เอาโครงกริดทั้งชุด',
+      exat: 'EXAT (exat.hottype.co) · เอาโครงหน้าที่ใกล้เนื้อหาเราที่สุด',
+      offbeat: 'Studio OFF-BEAT (offbeat.kr) · เอาระบบสองภาษากับสเกลตัวอักษร',
+      hybrid: 'ผสม — กริดจาก Klim + ระบบสองภาษาจาก OFF-BEAT'
+    },
+    len: {
+      measure: 'ยังไม่ตัดสิน ให้วัด copy ไทยจริงก่อนแล้วค่อยตั้งเป้า',
+      keep: 'คงเป้าเดิม ~10 เท่าความสูงจอ',
+      grow: 'ขยายเป็น ~20–30 เท่าความสูงจอ (ต้องเพิ่มเนื้อหาจริง)'
+    },
+    vh: {
+      quota: 'เปลี่ยนเป็นโควตา ไม่เกิน 3 จาก 8 เฉพาะจุดที่ตั้งใจ',
+      ban: 'คงข้อห้ามเดิม ห้ามทุก section สูงเท่าจอพอดี'
+    }
+  };
+
+  function setPressed(nodes, matchFn) {
+    for (var i = 0; i < nodes.length; i++) {
+      nodes[i].setAttribute('aria-pressed', matchFn(nodes[i]) ? 'true' : 'false');
+    }
+  }
+
+  function choose(group, value) {
+    state[group] = value;
+    var all = document.querySelectorAll('[data-group="' + group + '"]');
+    setPressed(all, function (n) { return n.getAttribute('data-value') === value; });
+    render();
+  }
+
+  function render() {
+    var keys = ['star', 'len', 'vh'];
+    for (var i = 0; i < keys.length; i++) {
+      var k = keys[i];
+      var el = document.getElementById('s-' + k);
+      if (state[k]) {
+        el.textContent = LABEL[k][state[k]];
+        el.className = 'val';
+      } else {
+        el.textContent = 'ยังไม่ได้เลือก';
+        el.className = 'val unset';
+      }
+    }
+    var done = state.star && state.len && state.vh;
+    var btn = document.getElementById('copy');
+    btn.disabled = !done;
+    btn.textContent = done ? 'คัดลอกสรุป แล้ววางกลับในแชท' : 'เลือกให้ครบ 3 ข้อก่อน';
+  }
+
+  var groups = document.querySelectorAll('[data-group]');
+  for (var i = 0; i < groups.length; i++) {
+    (function (node) {
+      node.addEventListener('click', function () {
+        choose(node.getAttribute('data-group'), node.getAttribute('data-value'));
+      });
+    })(groups[i]);
+  }
+
+  // synced scroll-position toggle across all three candidate cards
+  var segs = document.querySelectorAll('.segbtn');
+  function showScroll(which) {
+    setPressed(segs, function (n) { return n.getAttribute('data-scroll') === which; });
+    var imgs = document.querySelectorAll('.shotwrap img');
+    for (var j = 0; j < imgs.length; j++) {
+      imgs[j].className = imgs[j].getAttribute('data-scroll') === which ? 'on' : '';
+    }
+  }
+  for (var s = 0; s < segs.length; s++) {
+    (function (node) {
+      node.addEventListener('click', function () { showScroll(node.getAttribute('data-scroll')); });
+    })(segs[s]);
+  }
+  showScroll('scroll050');
+
+  document.getElementById('copy').addEventListener('click', function () {
+    var text =
+      'เลือก north star แล้ว:\n' +
+      '1. ต้นแบบสัดส่วน — ' + LABEL.star[state.star] + '\n' +
+      '2. ความยาวหน้า — ' + LABEL.len[state.len] + '\n' +
+      '3. กฎ 100vh — ' + LABEL.vh[state.vh] + '\n\n' +
+      'เอาไปแก้ SITE-SKELETON.md แล้ว refactor ทั้ง 14 โมดูลได้เลย';
+    var btn = document.getElementById('copy');
+    function done() { btn.textContent = 'คัดลอกแล้ว ✓'; setTimeout(render, 2200); }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(done, fallback);
+    } else { fallback(); }
+    function fallback() {
+      var ta = document.createElement('textarea');
+      ta.value = text;
+      ta.style.position = 'fixed';
+      ta.style.opacity = '0';
+      document.body.appendChild(ta);
+      ta.select();
+      try { document.execCommand('copy'); done(); } catch (e) { btn.textContent = 'คัดลอกไม่ได้ — เลือกข้อความเอง'; }
+      document.body.removeChild(ta);
+    }
+  });
+
+  render();
+})();
+</script>

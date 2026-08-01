@@ -1,0 +1,216 @@
+/* ————————————————————————————————————————————
+   HUMAN-WRITE — motion.css
+   ALL animation lives here: view transitions, scroll-driven
+   animations, hovers, the hero rotator. Deleting this file must
+   leave a complete, attractive, functional static site (spec §1).
+   Every rule is gated behind prefers-reduced-motion: no-preference.
+   ———————————————————————————————————————————— */
+
+/* ═══ 1. Cross-document view transitions (spec §2.1–2.2) ═══ */
+@media (prefers-reduced-motion: no-preference) {
+  @view-transition { navigation: auto; }
+
+  /* the --vt enrollment pattern: any element joins by inline custom prop */
+  [style*='--vt'] { view-transition-name: var(--vt); }
+
+  /* --order tiers → view-transition-class, so pseudo groups can be staged
+     (VT pseudos hang off :root, so element-side custom props can't reach
+     them; classes carry the tier across instead) */
+  [style*='--order: 1'] { view-transition-class: tier1; }
+  [style*='--order: 2'] { view-transition-class: tier2; }
+  [style*='--order: 3'] { view-transition-class: tier3; }
+
+  /* ═══ 2. Default transition: old out, new in (spec §4.2) ═══ */
+  ::view-transition-old(root) {
+    animation: vt-fade-out var(--duration) var(--ease-in) both;
+  }
+  ::view-transition-new(root) {
+    animation: vt-fade-up var(--duration) var(--ease) both;
+  }
+  @keyframes vt-fade-out { to { opacity: 0; translate: 0 -24px; } }
+  @keyframes vt-fade-up { from { opacity: 0; translate: 0 32px; } }
+
+  /* ═══ 3. Staged choreography on card-morph navigations (spec §4.3)
+     tiers: 0 outgoing root · 1 non-clicked cards · 2 morphing image ·
+     3 incoming root. .vt-stage is set by app.js when the trigger link
+     carries a --vt name. ═══ */
+  ::view-transition-group(*) {
+    animation-duration: var(--duration);
+    animation-timing-function: var(--ease);
+  }
+  html.vt-stage::view-transition-new(root) {
+    animation-delay: calc(var(--duration) * 3);
+  }
+  /* unpaired tier-1 snapshots (cards with no counterpart) exit/enter */
+  ::view-transition-old(.tier1):only-child {
+    animation: vt-fade-out var(--duration) var(--ease-in) both;
+  }
+  ::view-transition-new(.tier1):only-child {
+    animation: vt-fade-up var(--duration) var(--ease) both;
+  }
+  html.vt-stage::view-transition-group(.tier1),
+  html.vt-stage::view-transition-old(.tier1):only-child,
+  html.vt-stage::view-transition-new(.tier1):only-child {
+    animation-delay: calc(var(--duration) * 1);
+  }
+  html.vt-stage::view-transition-group(.tier2) {
+    animation-delay: calc(var(--duration) * 2);
+  }
+  html.vt-stage::view-transition-group(.tier3) {
+    animation-delay: calc(var(--duration) * 3);
+  }
+
+  /* ═══ 4. Crossfade fallback when View Transitions are unsupported
+     (swup toggles html.is-animating; spec §2.3) ═══ */
+  html:not(.has-vt) #main {
+    transition: opacity 0.25s ease;
+    opacity: 1;
+  }
+  html:not(.has-vt).is-animating #main { opacity: 0; }
+
+  /* ═══ 5. Hero word rotator (spec §6.1): 5 words + looped duplicate,
+     3s per word, steps of -1lh ═══ */
+  .rotator-track {
+    animation: rotate-words 15s var(--ease) infinite;
+  }
+  @keyframes rotate-words {
+    0%, 17%   { translate: 0 0; }
+    20%, 37%  { translate: 0 -1lh; }
+    40%, 57%  { translate: 0 -2lh; }
+    60%, 77%  { translate: 0 -3lh; }
+    80%, 97%  { translate: 0 -4lh; }
+    100%      { translate: 0 -5lh; }
+  }
+
+  /* ═══ 6. Card hovers (spec §6.2) — hover AND focus ═══ */
+  .work-card a {
+    transition: translate 0.45s var(--ease), box-shadow 0.45s var(--ease);
+  }
+  .work-card a:hover,
+  .work-card a:focus-visible {
+    translate: 0 -4px;
+    box-shadow: 0 16px 32px -14px rgb(35 32 28 / 0.3);
+  }
+  .work-card__bg { transition: scale 0.45s var(--ease); }
+  .work-card a:hover .work-card__bg,
+  .work-card a:focus-visible .work-card__bg { scale: 1.04; }
+  .work-card__cutout {
+    transition: translate 0.45s var(--ease), scale 0.45s var(--ease);
+  }
+  .work-card a:hover .work-card__cutout,
+  .work-card a:focus-visible .work-card__cutout {
+    translate: 0 -8px;
+    scale: 1.04;
+  }
+  /* flipped cutouts keep their mirror through the pop */
+  .work-card a:hover .work-card__cutout[style*='scaleX'],
+  .work-card a:focus-visible .work-card__cutout[style*='scaleX'] {
+    scale: -1.04 1.04;
+  }
+
+  /* clip-path morph — featured card only (spec §6.2 [DECIDED]) */
+  .work-card--featured .work-card__bg {
+    clip-path: inset(0 round var(--radius));
+    transition: clip-path 0.5s var(--ease), scale 0.45s var(--ease);
+  }
+  .work-card--featured a:hover .work-card__bg,
+  .work-card--featured a:focus-visible .work-card__bg {
+    clip-path: inset(2% 4% round 32px);
+  }
+
+  /* small link/button feel */
+  .button { transition: background-color 0.25s ease, translate 0.3s var(--ease); }
+  .button:hover { translate: 0 -2px; }
+  .roster-row a { transition: background-color 0.25s ease; }
+  .roster-row a:hover { background-color: var(--c-accent-soft); }
+
+  /* marquee — reduced variant: constant speed (overridden by the
+     scroll-linked version where SDA is supported; spec §5.3) */
+  .marquee__track { animation: marquee-loop 24s linear infinite; }
+  @keyframes marquee-loop { to { translate: -50% 0; } }
+}
+
+/* ═══ 7. Scroll-driven animations (spec §5) — two-tier fallback:
+   no support ⇒ these rules never apply and content is simply visible ═══ */
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+
+    /* reveal-on-enter; fill both keeps elements hidden until their
+       entry range starts (spec §5.1) */
+    .sda-reveal {
+      animation: sda-reveal linear both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 60%;
+    }
+    /* sibling stagger by range shift — 8% per tier, max 4 tiers */
+    .sda-d1 { animation-range: entry 8% entry 68%; }
+    .sda-d2 { animation-range: entry 16% entry 76%; }
+    .sda-d3 { animation-range: entry 24% entry 84%; }
+    @keyframes sda-reveal { from { opacity: 0; translate: 0 40px; } }
+
+    /* parallax — scrubs both directions across the cover range (§5.2) */
+    .sda-parallax .fill {
+      scale: 1.15;
+      animation: sda-parallax linear both;
+      animation-timeline: view();
+      animation-range: cover;
+    }
+    @keyframes sda-parallax {
+      from { translate: 0 -6%; }
+      to { translate: 0 6%; }
+    }
+
+    /* scroll-linked marquee (§5.3) — strip moves only as you scroll */
+    .marquee__track {
+      animation: marquee-scroll linear both;
+      animation-timeline: view();
+      animation-range: cover;
+    }
+    @keyframes marquee-scroll {
+      from { translate: 0 0; }
+      to { translate: -50% 0; }
+    }
+
+    /* reading progress bar on case pages (§5.3) */
+    .progress {
+      display: block;
+      position: fixed;
+      inset: 0 0 auto 0;
+      height: 3px;
+      z-index: 60;
+      background: var(--c-accent);
+      transform-origin: 0 50%;
+      animation: progress-grow linear both;
+      animation-timeline: scroll(root);
+    }
+    @keyframes progress-grow {
+      from { transform: scaleX(0); }
+      to { transform: scaleX(1); }
+    }
+
+    /* hand-drawn doodles draw themselves on reveal (brief §1) */
+    .squiggle svg path,
+    .doodle-arrow path,
+    .circled-num svg path {
+      stroke-dasharray: 1;
+      animation: sda-draw linear both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 90%;
+    }
+    @keyframes sda-draw {
+      from { stroke-dashoffset: 1; }
+      to { stroke-dashoffset: 0; }
+    }
+  }
+}
+
+/* ═══ 8. Reduced motion: kill any UA-default view-transition animation
+   swup's native mode might still trigger — zero movement, instant swap ═══ */
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-group(*),
+  ::view-transition-image-pair(*),
+  ::view-transition-old(*),
+  ::view-transition-new(*) {
+    animation: none !important;
+  }
+}

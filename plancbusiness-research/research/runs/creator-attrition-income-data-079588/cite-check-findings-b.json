@@ -1,0 +1,47 @@
+[
+  {
+    "verdict": "wrong-source",
+    "severity": "critical",
+    "sentence": "Törhönen's structural model of 377 creators finds intrinsic motivation predicting intention to continue at p=0.000 while extrinsic motivation as a block fails at p=0.052 [[fame-and-fortune-or-just-fun]] [[play-playbour-or-labour-the-relationships-between-perception-of]].",
+    "cited_note_id": "play-playbour-or-labour-the-relationships-between-perception-of",
+    "correct_note_id": "fame-and-fortune-or-just-fun",
+    "evidence": "play-playbour-or-labour is the N=382 HICSS-52 ANOVA study on work/play perception with no PLS-SEM/structural model, no N=377 sample, and no p=0.000/p=0.052 figures; those exact numbers (N=377, PLS-SEM model, intrinsic-motivation constructs p=0.000/0.001/0.038, extrinsic-motivation second-order construct p=0.052, H4 rejected) belong to the companion Internet Research paper 'fame-and-fortune-or-just-fun', which is already co-cited in the sentence.",
+    "suggested_fix": "Drop play-playbour-or-labour-the-relationships-between-perception-of as a citation for this sentence; fame-and-fortune-or-just-fun alone fully supports every number in it."
+  },
+  {
+    "verdict": "wrong-source",
+    "severity": "critical",
+    "sentence": "Three caveats travel with all of it: the sub-base of \"creators who use TikTok as a source of income\" — the actual denominator behind each percentage — is disclosed for no country except Myanmar; Indonesia's minimum-wage benchmark is a single blended national figure of $216 a month, erasing province-level variation; and the sample is self-selected active TikTok users recruited through the platform's own vendor [[tiktoks-socio-economic-impact-in-southeast-asia-a-summary-of-the-report-kadence]].",
+    "cited_note_id": "tiktoks-socio-economic-impact-in-southeast-asia-a-summary-of-the-report-kadence",
+    "correct_note_id": "the-tiktok-effect",
+    "evidence": "The cited note is Kadence's short public-facing marketing summary of the report, whose body contains only three unquantified bullet points about education/wellness findings — no Myanmar sub-base footnote, no $216/month figure, and no methodology detail on sample recruitment. All three caveats (Myanmar-only disclosed sub-base, the USD 216/month Indonesia benchmark cited to 'ASEAN Briefing', and the self-selected TikTok-recruited survey design) are documented instead in the-tiktok-effect note, the primary 36-page report.",
+    "suggested_fix": "Swap the citation to the-tiktok-effect, which contains the footnote data and methodology addendum these three caveats are drawn from."
+  },
+  {
+    "verdict": "partially-supported",
+    "severity": "major",
+    "sentence": "| Employment counterfactual | Informal work over 70% of non-agricultural employment in Indonesia and the Philippines, over 60% Vietnam, 38% Thailand; 71% of Indonesian e-commerce sellers social/chat only, 26% blended, 3% platform only | US salaried norm | [[adbi-working-paper-series]] to 2018; [[technologies]] 2023 |",
+    "cited_note_id": "technologies",
+    "correct_note_id": null,
+    "evidence": "The 71%/26%/3% Indonesian e-commerce-seller-channel figures are correctly drawn from this World Bank/Australian Government 'Beyond Unicorns' report, but the report was published July 2021 using SAKERNAS 2019, SUSENAS 2019 and a Digital Economy Household Survey fielded Feb-Mar 2020; the string '2023' does not appear anywhere in the note and does not match the report's publication date or underlying data years.",
+    "suggested_fix": "Change the citation year for the technologies note from '2023' to '2021' (publication year) or '2019-2020' (underlying survey years)."
+  },
+  {
+    "verdict": "partially-supported",
+    "severity": "major",
+    "sentence": "Two Vietnamese-language pieces presented as local creator-income coverage paraphrase US survey data benchmarked to US living wages [[báo-cáo-thu-nhập-nhà-sáng-tạo-nội-dung-2025]].",
+    "cited_note_id": "báo-cáo-thu-nhập-nhà-sáng-tạo-nội-dung-2025",
+    "correct_note_id": null,
+    "evidence": "The cited note documents exactly one Vietnamese-language piece (a REVU.net blog post paraphrasing NeoReach's global creator-earnings survey, benchmarked to a $44,000/year US living wage). It gives no evidence of a second such piece, so the sentence's 'Two Vietnamese-language pieces' is not established by this citation alone.",
+    "suggested_fix": "Either add a citation to a second Vietnamese-language note documenting a comparable piece, or soften 'Two Vietnamese-language pieces' to 'At least one Vietnamese-language piece' to match what this source shows."
+  },
+  {
+    "verdict": "partially-supported",
+    "severity": "major",
+    "sentence": "Persistence models find structural access to monetization infrastructure to be the significant predictor of continuation [[who-reaps-all-the-superchats-a-large-scale-analysis-of-income]] [[vol0123456789]], and regional evidence finds Southeast Asian creators with systematically worse structural access [[httpsdoiorg10117720563051241234693]] [[httpsdoiorg10117720563051231180628]].",
+    "cited_note_id": "httpsdoiorg10117720563051241234693",
+    "correct_note_id": null,
+    "evidence": "This note's non-Western fieldwork is India, Ireland and Turkey — its own summary states explicitly this is 'NOT Southeast Asia' — so it cannot itself evidence 'Southeast Asian creators' having worse structural access; the geographic RPM/monetization gap it documents (India vs. US/developed-country ad rates, Turkish production houses) is a South Asian/European data point, not a Southeast Asian one.",
+    "suggested_fix": "Drop this citation from the Southeast Asia clause (the Rieder et al. linking-infrastructure note already supplies genuine Indonesia/Thailand data for that point), or reword to 'creators outside the West' / 'South and Southeast Asian creators' to match what this source actually samples."
+  }
+]

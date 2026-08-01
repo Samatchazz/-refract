@@ -1,0 +1,44 @@
+[
+  {
+    "claim": "Across 112 in-depth interviews with workers on seven US platforms, workers dependent on platform income for basic expenses reported lower satisfaction, less autonomy AND lower earnings than those earning supplementally.",
+    "stance": "supports",
+    "stance_target": "Whether a person needs platform income to live is the dominant predictor of platform-work outcomes — implying creator-income surveys dominated by supplemental hobbyists will systematically overstate how well full-time-dependent creators do.",
+    "evidence_type": "empirical",
+    "scope_conditions": "ABSTRACT ONLY — Springer paywall; body not retrieved. 112 interviews across Airbnb, TaskRabbit, Turo, Uber, Lyft, Postmates and Favor, recruited mainly in the Boston, USA area with $30-40 payments and a minimum-five-transactions screen. NO content creators in the sample — this is a framework transfer, not direct creator evidence. US-only; does not generalize to Southeast Asia.",
+    "quoted_support": "We find that the extent to which workers are dependent on platform income to pay basic expenses rather than working for supplemental income explains the variation in outcomes, with supplemental earners being more satisfied and higher-earning. This suggests platforms are free-riding on conventional employers.",
+    "numbers": ["112 interviews", "7 platforms", "$30-40 per interview", "minimum 5 transactions"],
+    "entities": ["Juliet Schor", "Airbnb", "TaskRabbit", "Turo", "Uber", "Lyft", "Postmates", "Favor", "Boston College"],
+    "time_period": "Published Theory and Society 49:833-861, 7 August 2020; fieldwork mid-to-late 2010s",
+    "region": "United States, predominantly Boston metro. US-ONLY — flag as non-generalizable to Southeast Asia.",
+    "confidence": "medium",
+    "source_note_id": "dependence-and-precarity-in-the-platform-economy-theory-and-society-springer-nat"
+  },
+  {
+    "claim": "Platform-work outcomes were heterogeneous across and within platforms rather than uniformly precarious, which the authors attribute to platform labour being weakly institutionalized.",
+    "stance": "refutes",
+    "stance_target": "Blanket claims that all platform/creator work is uniformly precarious, or that a single average figure characterizes platform-worker earnings.",
+    "evidence_type": "empirical",
+    "scope_conditions": "ABSTRACT ONLY. 112 US interviews, 7 platforms, no content-creation platforms included.",
+    "quoted_support": "On the basis of 112 in-depth interviews with workers on seven platforms (Airbnb, TaskRabbit, Turo, Uber, Lyft, Postmates, and Favor) we find heterogeneity of experiences across and within platforms.",
+    "numbers": ["112 interviews", "7 platforms"],
+    "entities": ["Airbnb", "TaskRabbit", "Uber", "Lyft"],
+    "time_period": "2020 publication",
+    "region": "United States",
+    "confidence": "medium",
+    "source_note_id": "dependence-and-precarity-in-the-platform-economy-theory-and-society-springer-nat"
+  },
+  {
+    "claim": "A Pew Research Center survey of US gig-labour platforms found 42% of workers were aged 18-29 and a further 39% were aged 30-49.",
+    "stance": "neutral",
+    "stance_target": "Age composition baseline for platform work, against which creator-population age skews can be compared.",
+    "evidence_type": "statistical",
+    "scope_conditions": "Cited secondhand in a footnote; original is PEW Research Center (2016), 'Gig Work, Online Selling and Home Sharing'. Gig-platform workers, not content creators. US only, 2016 — outside the 2018-2026 preferred recency window.",
+    "quoted_support": "A Pew survey of gig labor platforms found that 42% were aged 18-29 and another 39% were in the 30-49 year old range (PEW Research Center 2016).",
+    "numbers": ["42% aged 18-29", "39% aged 30-49", "81% combined under 50"],
+    "entities": ["Pew Research Center"],
+    "time_period": "2016",
+    "region": "United States — US-ONLY, flag as non-generalizable",
+    "confidence": "medium",
+    "source_note_id": "dependence-and-precarity-in-the-platform-economy-theory-and-society-springer-nat"
+  }
+]

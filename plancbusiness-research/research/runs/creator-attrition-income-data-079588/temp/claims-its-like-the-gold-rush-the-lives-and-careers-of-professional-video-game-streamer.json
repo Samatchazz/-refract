@@ -1,0 +1,30 @@
+[
+  {
+    "claim": "The canonical academic study of professional Twitch streamers' careers was conducted with negotiated research access from Twitch itself, an undisclosed-until-the-footnote conflict of interest for a paper about whether streaming is a viable career.",
+    "stance": "refutes",
+    "stance_target": "That the foundational qualitative literature on streamer careers is independent of the platform whose career prospects it evaluates.",
+    "evidence_type": "empirical",
+    "scope_conditions": "Johnson & Woodcock, Information, Communication & Society 22(3):336-351, accepted September 2017. Disclosure appears in the article's disclosure statement. Funded by the UK 'Digital Economy Crucible' programme. Authors at University of York and LSE. ABSTRACT ONLY retrieved — full text is behind the Taylor & Francis paywall.",
+    "quoted_support": "In accordance with Taylor & Francis policy and our ethical obligation as researchers, we are reporting that the researchers have an ongoing professional relationship with Twitch through which research access has been negotiated, that may be affected by the research reported in the enclosed paper.",
+    "numbers": ["published 2019, Vol 22 No 3, pp. 336-351", "13,131 views"],
+    "entities": ["Twitch", "Mark R. Johnson", "Jamie Woodcock", "Taylor & Francis", "University of York", "LSE"],
+    "time_period": "Research 2016-2017; published 2019",
+    "region": "United Kingdom-based researchers; streamer sample nationality not stated in the abstract. WESTERN.",
+    "confidence": "high",
+    "source_note_id": "its-like-the-gold-rush-the-lives-and-careers-of-professional-video-game-streamer"
+  },
+  {
+    "claim": "The most-cited study of Twitch streaming careers reports no sample size, no income figures and no survival rates in its abstract — it is purely qualitative interview work, yet is routinely cited by quantitative papers as the authority for claims about streaming's time demands.",
+    "stance": "neutral",
+    "stance_target": "Bounds what the streamer-careers literature can support; the quantitative claim that streaming demands large time investment traces back to a qualitative interview study rather than to measurement.",
+    "evidence_type": "empirical",
+    "scope_conditions": "Based on the article abstract and disclosure sections only; the full text may report a sample size. Wollborn, Dornekott & Holder (2023) cite this paper as their authority for 'the large amount of time that needs to be invested into building and maintaining a professional streaming career.'",
+    "quoted_support": "Drawing on original interview data with professional and aspiring-professional game broadcasters ('streamers'), we examine the pasts, presents, and anticipated futures of streamers: how professional streamers began streaming, the everyday labour practices of streaming, and their concerns and hopes about the future of their chosen career.",
+    "numbers": ["no sample size stated in abstract", "pp. 336-351"],
+    "entities": ["Twitch", "Johnson", "Woodcock"],
+    "time_period": "2017-2019",
+    "region": "United Kingdom",
+    "confidence": "medium",
+    "source_note_id": "its-like-the-gold-rush-the-lives-and-careers-of-professional-video-game-streamer"
+  }
+]

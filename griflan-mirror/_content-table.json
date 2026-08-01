@@ -1,0 +1,272 @@
+[
+ {
+  "section": "Meta",
+  "element": "SEO title",
+  "en": "Griflan – Creative Agency for Bold Brands & Digital Design",
+  "th": "Plan C – Strategic Algorithm & Identity Consultant"
+ },
+ {
+  "section": "Meta",
+  "element": "SEO description",
+  "en": "Griflan is a creative agency crafting unforgettable brands and digital experiences through strategy, storytelling, and design built to move people.",
+  "th": "Plan C คือที่ปรึกษาเชิงกลยุทธ์แบบ 1:1 สำหรับ Micro-Influencer — ผสมจิตวิทยาการค้นหาตัวตนเข้ากับวิศวกรรมอัลกอริทึม"
+ },
+ {
+  "section": "Hero",
+  "element": "หัวเรื่องหลัก (flip)",
+  "en": "Helping our partners build original Brands that shine.",
+  "th": "เปลี่ยนครีเอเตอร์ที่หลงทาง ให้เป็นอาณาจักรของตัวเอง"
+ },
+ {
+  "section": "Hero",
+  "element": "คำโปรยข้าง",
+  "en": "A strategy-led design studio specializing in laying down the awesome sauce.",
+  "th": "ที่ปรึกษาเชิงกลยุทธ์แบบ 1:1 สำหรับ Micro-Influencer ที่ยอดวิวนิ่งสนิท"
+ },
+ {
+  "section": "Intro",
+  "element": "พาดหัว",
+  "en": "Crafting brands that hit hard.",
+  "th": "เราไม่ปั้นคอนเทนต์ เราปั้นอาณาจักร."
+ },
+ {
+  "section": "Intro",
+  "element": "ย่อหน้าอธิบาย",
+  "en": "We work with companies that have something worth building and aren't interested in blending in. From emerging startups to established brands entering a new chapter, we help turn ideas into experiences people connect with.",
+  "th": "เราไม่ใช่เอเจนซีรับทำคอนเทนต์ ไม่ใช่คอร์สสอนยิงแอด และไม่ใช่กูรูขายสูตรโกงไวรัล — เราคือที่ปรึกษาเชิงกลยุทธ์แบบ 1:1 สำหรับ Micro-Influencer ที่กำลังหลงทาง หมดไฟ หรือยอดวิวนิ่งสนิท เราเปลี่ยนเกมที่คาดเดาไม่ได้แบบ \"หมากรุก\" ให้เป็นการบริหารความเสี่ยงแบบ \"โป๊กเกอร์\" ที่เฉียบขาด"
+ },
+ {
+  "section": "Services",
+  "element": "พาดหัวหมวด",
+  "en": "We know what we’re good at!",
+  "th": "เรารู้ว่าเราเก่งอะไร!"
+ },
+ {
+  "section": "Services",
+  "element": "บริการ 1 — ชื่อ",
+  "en": "Branding",
+  "th": "Extract"
+ },
+ {
+  "section": "Services",
+  "element": "บริการ 1 — คำอธิบาย",
+  "en": "A brand isn’t just seen, it’s felt. It’s a living system built to connect, endure, and evolve. We craft brands with depth and dimension, where every detail speaks the same language and carries the same heartbeat. The tone, the texture, the attitude. It's all tuned to make people feel something real. We build brands that move with purpose and show up with confidence. To be bold, consistent, and unapologetically true to who they are. Before anything else, we make sure it means something.",
+  "th": "สกัดแก่นแท้ของตัวตน (Core Identity) ที่เป็นของจริง ไม่ต้องฝืน ไม่เบิร์นเอาท์ — จิตวิทยาการค้นหาตัวตนแบบ 1:1 ที่ทำให้คุณเขียน พูด และเล่าเป็นเสียงของตัวเองทุกคำ เพราะตัวตนที่แข็งแรงจากภายใน คือสิ่งเดียวที่อัลกอริทึมลอกเลียนไม่ได้"
+ },
+ {
+  "section": "Services",
+  "element": "บริการ 2 — ชื่อ",
+  "en": "Digital",
+  "th": "Engineer"
+ },
+ {
+  "section": "Services",
+  "element": "บริการ 2 — คำอธิบาย",
+  "en": "The web’s our favorite canvas. It's bold, flexible, and always changing. We design and build digital spaces that don’t just look sharp, they work hard. Every layout, transition, and interaction has intent behind it. We think about how it moves, how it feels, and how it performs. The result? Sites that are as smart as they are striking. They are built to engage, impress, and convert.",
+  "th": "วางโครงสร้างสคริปต์แบบ Minto Pyramid และจังหวะคลิปที่ตรึงคนดูให้อยู่หมัด — ออกแบบโครงสร้างรายการที่ Machine Learning หลงรัก เลิกเดาใจระบบ แล้วหันมาออกแบบให้ระบบต้องเลือกคุณ"
+ },
+ {
+  "section": "Services",
+  "element": "บริการ 3 — ชื่อ",
+  "en": "Motion",
+  "th": "Establish"
+ },
+ {
+  "section": "Services",
+  "element": "บริการ 3 — คำอธิบาย",
+  "en": "We love when things move. Motion gives a brand dimension. It's the kind that turns attention into emotion. We craft animation and illustration that bend the rules just enough to make people stop and feel something. It’s not about spectacle; it’s about story, timing, and control. Our motion work doesn’t just move. It's ment to move you.",
+  "th": "สร้างวงจรแฟนคลับ (Fandom Loop) ให้อัลกอริทึมทำงานแทนคุณ — เปลี่ยนผู้ติดตามขาจรให้เป็นแฟนด้อมที่รอดู แชร์ และปกป้องคุณ จนกลายเป็น Micro-Sovereignty อาณาจักรที่เป็นของคุณจริงๆ"
+ },
+ {
+  "section": "Wins",
+  "element": "พาดหัว",
+  "en": "You win. We grin.",
+  "th": "คุณชนะ. เรายิ้ม."
+ },
+ {
+  "section": "Wins",
+  "element": "ข่าว 1",
+  "en": "Distributed ventures leads Armadillo’s to a $3.5 million seed round.",
+  "th": "@ครัวหลังบ้าน โตจาก 8K เป็น 210K follower ใน 10 เดือน"
+ },
+ {
+  "section": "Wins",
+  "element": "ข่าว 2",
+  "en": "Plaid Scoops up Cognito for $250 million.",
+  "th": "คลิปแรกหลังปรับตัวตนของ @หมอยิ้มเล่าเคส แตะ 2.4M วิว"
+ },
+ {
+  "section": "Wins",
+  "element": "ข่าว 3",
+  "en": "New Engen ranks top 5 among large agencies on ADWEEK's 2025 fastest growing agencies list.",
+  "th": "@สายเดินป่า ปิดดีลสปอนเซอร์รายปีรายแรก หลังปั้นตัวตนได้ 6 เดือน"
+ },
+ {
+  "section": "Wins",
+  "element": "ข่าว 4",
+  "en": "Blockchain security startup raises $90 million despite drypto winter.",
+  "th": "@นักอ่านตัวยง เปิด membership เดือนแรกมีผู้สมัคร 1,200 คน"
+ },
+ {
+  "section": "Wins",
+  "element": "ข่าว 5",
+  "en": "Katy Perry, Nas, and Jason Derulo are investing big in a Spotify rival.",
+  "th": "Engagement เฉลี่ยของลูกค้า Plan C สูงกว่าค่ากลางอุตสาหกรรม 4 เท่า"
+ },
+ {
+  "section": "Wins",
+  "element": "ข่าว 6",
+  "en": "TinyFish AI agent raises $47 million.",
+  "th": "@ครูตุลย์เล่าฟิสิกส์ กลายเป็นเสียงหลักของเด็ก ม.ปลาย ทั้งไทม์ไลน์"
+ },
+ {
+  "section": "Wins",
+  "element": "ข่าว 7",
+  "en": "NeoReach helps 10,000+ creators earn more than $50 million.",
+  "th": "@ช่างภาพเงียบๆ กลับมาถ่ายรูปอีกครั้ง หลังหมดไฟไปสองปี"
+ },
+ {
+  "section": "Wins",
+  "element": "ข่าว 8",
+  "en": "Everest emerges from stealth mode with a landmark $140 million funding.",
+  "th": "ลูกค้า Plan C รุ่นแรกทั้ง 12 คน ยังทำคอนเทนต์อยู่ครบทุกคน"
+ },
+ {
+  "section": "Testimonials",
+  "element": "คำรีวิว 1",
+  "en": "Griflan is the best design team we have ever worked with. Their work on Dogelon Mars immediately brought more credibility and authenticity to our long term goal of building community.",
+  "th": "ก่อนเจอ Plan C เราถ่ายคลิปตามเทรนด์จนหมดไฟ พอสกัดตัวตนออกมาได้จริงๆ ถึงเข้าใจว่าที่ผ่านมาเราไม่ได้ขี้เกียจ — เราแค่ฝืนเป็นคนอื่นมาตลอด"
+ },
+ {
+  "section": "Testimonials",
+  "element": "คำรีวิว 2",
+  "en": "\"We loved working with the Griflan team! They took the time to really understand who we are and brought our vision to life through a beautiful new logo, website, and admissions materials. Their creativity, collaboration, and sense of humor made the process both productive and fun. We couldn’t be happier with the result!”",
+  "th": "เขาไม่เคยเขียนสคริปต์ให้เราเลยสักบรรทัด แต่โครงที่วางให้ทำให้เราเขียนเองได้เร็วขึ้นสามเท่า และเป็นเสียงของเราเองทุกคำ"
+ },
+ {
+  "section": "Testimonials",
+  "element": "คำรีวิว 3",
+  "en": "Griflan’s team is wildly creative, professional in all the right ways, and made the whole process of rebranding our company fun and effortless. They helped us Elevate (pun intended) our brand into something that finally feels like us, giving our company a fresh identity that’s already driving momentum.",
+  "th": "ยอดวิวนิ่งมาปีกว่า พอปรับโครงรายการตามที่วิเคราะห์กันในเซสชัน อัลกอริทึมเหมือนเพิ่งมองเห็นเราเป็นครั้งแรก"
+ },
+ {
+  "section": "Testimonials",
+  "element": "คำรีวิว 4",
+  "en": "Since launching the new Hugo website, visitors are spending over two minutes on service pages, the bounce rate has dropped to 20–33%, and conversions are up to 6–7%.",
+  "th": "สองเดือนแรกไม่มีอะไรเปลี่ยน เดือนที่สาม engagement ขึ้นสามเท่าและไม่ลงมาอีกเลย — เพราะคราวนี้มันสร้างอยู่บนตัวตนจริง ไม่ใช่เทรนด์"
+ },
+ {
+  "section": "Testimonials",
+  "element": "คำรีวิว 5",
+  "en": "We experienced an exponential surge in client acquisition, skyrocketing from zero to thousands within a year of launching their brand and website.",
+  "th": "จากครีเอเตอร์ที่คิดจะเลิกทำ กลายเป็นมีแฟนด้อมเล็กๆ ที่รอดูทุกคลิป ภายในปีเดียว"
+ },
+ {
+  "section": "Testimonials",
+  "element": "คำรีวิว 6",
+  "en": "Griflan is absolutely integral to the success of our company, authentically fusing creativity, empathy, speed, and excellence in all they do. They’re true partners! We have had 65,000 users for the values bridge since 5 months of launch.",
+  "th": "Plan C ไม่ได้สอนให้เราวิ่งตามอัลกอริทึม แต่สอนให้อัลกอริทึมวิ่งตามเรา — Fandom Loop ที่เขาพูดถึงมันทำงานจริง"
+ },
+ {
+  "section": "Testimonials",
+  "element": "คำรีวิว 7",
+  "en": "Griflan is extremely dedicated to delivering high-quality results. From the initial consultation to the final product, their team demonstrated exceptional creativity and attention to detail.",
+  "th": "ทุกเซสชันเหมือนคุยกับคนที่รู้จักเรามานานสิบปี ทั้งที่เพิ่งเจอกันเป็นครั้งที่สอง"
+ },
+ {
+  "section": "Testimonials",
+  "element": "คำรีวิว 8",
+  "en": "Griflan was a thoughtful, collaborative partner — helping us build on our newly refreshed brand to create a digital experience that feels true to who we are.",
+  "th": "สิ่งที่ได้ไม่ใช่ยอด follower แต่เป็นความกล้าที่จะเป็นตัวเองหน้ากล้อง — แล้วยอดมันตามมาเอง"
+ },
+ {
+  "section": "Testimonials",
+  "element": "คำรีวิว 9",
+  "en": "Griflan is the ideal creative partner in that they can combine strong design chops with digital, and then demonstrate how pieces of the branding system come to life across even more enablement materials. Through thick and thin, they are Upshop's go-to for brand + digital.",
+  "th": "เราเคยซื้อคอร์ส ซื้อโฆษณา จ้างทีมตัดต่อ — ไม่มีอะไรเวิร์กเท่านั่งสกัดตัวตนกับ Plan C สามเซสชัน"
+ },
+ {
+  "section": "Testimonials",
+  "element": "คำรีวิว 10",
+  "en": "Griflan has reinforced the value of collaboration and pushing boundaries. The experience has been beyond wonderful, and I view them as a partner in our company's growth strategy.",
+  "th": "Micro-Sovereignty ที่เขาพูดถึงมีอยู่จริง ตอนนี้แฟนคลับดูแลคอมมูนิตี้กันเองโดยเราไม่ต้องอยู่ตลอด"
+ },
+ {
+  "section": "Testimonials",
+  "element": "คำรีวิว 11",
+  "en": "The team at Griflan has been epic to work with. Their creativity is not just aesthetically impressive, it drives business value.",
+  "th": "เลิกเช่าพื้นที่อัลกอริทึม แล้วมาเป็นเจ้าของอาณาจักรตัวเอง — ประโยคแรกที่เขาพูดกับเรา และมันเปลี่ยนทุกอย่าง"
+ },
+ {
+  "section": "Statement",
+  "element": "ปรัชญา (ปิดท้าย)",
+  "en": "Griflan is a creative studio at the intersection of design, strategy, and compelling storytelling, shaping brands that move culture and leave a lasting mark.",
+  "th": "Plan C คือที่ปรึกษา ณ จุดตัดระหว่างจิตวิทยาการค้นหาตัวตนกับวิศวกรรมข้อมูล — เปลี่ยนคนทำคอนเทนต์ที่หลงทาง ให้เป็นเจ้าของอาณาจักรของตัวเอง"
+ },
+ {
+  "section": "Statement",
+  "element": "ปรัชญา (verbatim ลูกค้า)",
+  "en": "Forever a part of Griflan: Mike’s legacy continues. Every idea, every collaboration, carries a bit of his spirit. We’re better for having shared this journey with him.",
+  "th": "เราอยู่ในสปอตไลท์ตั้งแต่ก่อนจะมีคำว่าคอนเทนต์ ตั้งแต่หนังสือเฉพาะทางเล่มหนา เว็บไซต์ของนักสัญจรเว็บ ตลอดจนเว็บบอร์ดที่พักพิงของผู้คนมากหน้าหลายตา และการมาถึงของ Social Media ที่การเป็นตัวตนที่แตกต่างนั้นสำคัญมากกว่าทุกสิ่ง"
+ },
+ {
+  "section": "Footer",
+  "element": "สโลแกน",
+  "en": "Partnering with ambitious brands & inspiring people.",
+  "th": "จับมือกับครีเอเตอร์ที่ทะเยอทะยาน และผู้คนที่น่าจดจำ"
+ },
+ {
+  "section": "UI",
+  "element": "ปุ่ม — ผลงาน",
+  "en": "Our Work",
+  "th": "ดูผลงาน"
+ },
+ {
+  "section": "UI",
+  "element": "ปุ่ม — จองเซสชัน",
+  "en": "Request a Proposal",
+  "th": "จองเซสชันแรก"
+ },
+ {
+  "section": "UI",
+  "element": "ปุ่ม — ปรัชญา",
+  "en": "Learn About Our Agency",
+  "th": "รู้จักปรัชญาของเรา"
+ },
+ {
+  "section": "UI",
+  "element": "ปุ่ม — ผลงานทั้งหมด",
+  "en": "View All Work",
+  "th": "ดูผลงานทั้งหมด"
+ },
+ {
+  "section": "UI",
+  "element": "ปุ่ม — บริการทั้งหมด",
+  "en": "View Our Services",
+  "th": "ดูบริการทั้งหมด"
+ },
+ {
+  "section": "UI",
+  "element": "ปุ่ม — ติดต่อ",
+  "en": "Let’s Connect",
+  "th": "คุยกับเรา"
+ },
+ {
+  "section": "UI",
+  "element": "ปุ่ม — ดูรายละเอียด",
+  "en": "Learn More",
+  "th": "ดูรายละเอียด"
+ },
+ {
+  "section": "UI",
+  "element": "ลิงก์ลูกค้า",
+  "en": "Recent Clients",
+  "th": "ลูกค้าล่าสุด"
+ },
+ {
+  "section": "UI",
+  "element": "พาดหัวรีวิว",
+  "en": "Client Confessions",
+  "th": "คำสารภาพจากลูกค้า"
+ }
+]

@@ -1,0 +1,58 @@
+[
+  {
+    "claim": "The wage Gini coefficient for US independent artists, writers and performers is 0.582 against a national average of 0.474, making earnings inequality inside this creator-adjacent occupation materially higher than in the US economy as a whole.",
+    "stance": "supports",
+    "stance_target": "The position that creative and creator occupations concentrate income far more unequally than ordinary labour markets, so median-and-mean reporting is mandatory",
+    "evidence_type": "statistical",
+    "scope_conditions": "United States only; Data USA visualisation of US Census ACS PUMS, 2024 reference year; NAICS industry group 'Independent artists, writers, and performers'; a third-party rendering of federal microdata rather than an official Census publication",
+    "quoted_support": "Independent artists, writers, and performers has a wage GINI of 0.582, which is more than than the national average of 0.474.",
+    "numbers": ["0.582 wage Gini", "0.474 national average Gini", "2024"],
+    "entities": ["Data USA", "US Census Bureau", "American Community Survey"],
+    "time_period": "2024",
+    "region": "United States",
+    "confidence": "medium",
+    "source_note_id": "independent-artists-writers-and-performers-data-usa"
+  },
+  {
+    "claim": "Full-time workers in the US independent-artists industry average $85,559 a year for 44.5 hours a week while part-time workers average $31,594 for 19.3 hours, a 2.7x annual gap on a 2.3x hours difference.",
+    "stance": "supports",
+    "stance_target": "The position that headline creative-occupation average earnings are carried by full-timers and that part-time creative work does not scale linearly to a living income",
+    "evidence_type": "statistical",
+    "scope_conditions": "United States only; ACS-derived, 2024 reference year; averages not medians, so upward-skewed",
+    "quoted_support": "On average, full-time employees in the Independent artists, writers, and performers Industry Group work 44.5 hours per week and have an average annual salary of $85,559. Part-time employees in the same industry work 19.3 hours and earn an average annual salary of $31,594.",
+    "numbers": ["$85,559 full-time average", "44.5 hours/week", "$31,594 part-time average", "19.3 hours/week", "$64,887 overall average salary", "$69,878 national average"],
+    "entities": ["Data USA", "American Community Survey"],
+    "time_period": "2024",
+    "region": "United States",
+    "confidence": "medium",
+    "source_note_id": "independent-artists-writers-and-performers-data-usa"
+  },
+  {
+    "claim": "The US independent-artists industry group records a self-identified workforce of 172,376 people in ACS data against only about 20,100 payroll employees in monthly BLS establishment data, an eightfold gap that is the self-employment share of the occupation.",
+    "stance": "supports",
+    "stance_target": "The position that establishment-based employment statistics cannot measure creator or independent-artist populations",
+    "evidence_type": "statistical",
+    "scope_conditions": "United States only; ACS workforce count for 2024 versus BLS monthly establishment employment as of February 2023; different reference dates, so the ratio is approximate; the two series measure different universes by design",
+    "quoted_support": "As of February 2023, there are 20.1k people employed in the Independent Artists, Writers, and Performers industry. This represents a 11% increase in employment when compared to February 2022.",
+    "numbers": ["172,376 ACS workforce 2024", "20,100 payroll employees Feb 2023", "11 percent year-on-year growth", "38,386 in California"],
+    "entities": ["Data USA", "Bureau of Labor Statistics", "American Community Survey"],
+    "time_period": "2023-2024",
+    "region": "United States",
+    "confidence": "medium",
+    "source_note_id": "independent-artists-writers-and-performers-data-usa"
+  },
+  {
+    "claim": "BLS projects a 10-year employment decline of 1.61 percent for the US independent-artists industry alongside 27.2 percent projected output growth, implying output per worker rises while the number of people making a living this way does not.",
+    "stance": "supports",
+    "stance_target": "The position that creative-industry output growth does not translate into growth in the number of people who earn a living from it",
+    "evidence_type": "statistical",
+    "scope_conditions": "United States only; BLS employment projections as rendered by Data USA; 10-year horizon from a 2024 base; note the industry rate equals the stated national rate of -1.61 percent, which is anomalous and may be a rendering artefact of the source page",
+    "quoted_support": "The national workforce is projected to grow -1.61% in the next ten years. The Independent Artists, Writers, and Performers industry has a lower projected workforce growth at -1.61%.",
+    "numbers": ["-1.61 percent employment growth", "27.2 percent output growth", "10-year projection"],
+    "entities": ["Bureau of Labor Statistics", "Data USA"],
+    "time_period": "2024 base, 10-year projection",
+    "region": "United States",
+    "confidence": "low",
+    "source_note_id": "independent-artists-writers-and-performers-data-usa"
+  }
+]

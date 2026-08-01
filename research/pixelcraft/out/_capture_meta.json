@@ -1,0 +1,14 @@
+{
+  "startedAt": "2026-08-01T05:21:28.794Z",
+  "playwright": "1.62.1",
+  "flags": [
+    "--headful"
+  ],
+  "captures": [],
+  "notCaptured": [],
+  "warnings": [],
+  "browserUsed": "installed Chrome",
+  "chromium": "150.0.7871.187",
+  "fatalError": "Could not resolve the demo URL from the preview page (ThemeForest may be blocking headless).\n  See out/_preview_probe.json, then follow BRIEF §2.1a — do NOT guess a URL.",
+  "finishedAt": "2026-08-01T05:21:37.493Z"
+}

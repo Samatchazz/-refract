@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Human-Write — Type Lab (weight system)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anuphan:wght@200;400;600;700&family=Kanit:wght@300;500;700;900&family=Noto+Sans+Thai:wght@200;500;900&family=Bai+Jamjuree:wght@300;600;700&family=Trirong:wght@300;600;700&family=IBM+Plex+Sans+Thai:wght@300;600;700&family=Inter:wght@300;600&display=swap" rel="stylesheet">
+<style>
+  :root{ --ink:#14112B; --muted:#7a7d92; --line:rgba(20,17,43,.12); --card:#fff; --bg:#EDE7DD; --stroke:#14112B; }
+  *{box-sizing:border-box;margin:0}
+  body{background:var(--bg);color:var(--ink);font-family:'Anuphan',sans-serif;padding:40px clamp(16px,4vw,56px);line-height:1.5}
+  header{max-width:960px;margin:0 auto 30px}
+  h1{font-family:'Kanit',sans-serif;font-weight:900;font-size:clamp(1.7rem,4vw,2.8rem);letter-spacing:-.01em}
+  .sub{color:#5a5d70;margin-top:8px;max-width:64ch}
+  .grid{display:grid;gap:20px;grid-template-columns:repeat(auto-fill,minmax(360px,1fr));max-width:1500px;margin:0 auto}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:22px 22px 26px;box-shadow:0 12px 32px rgba(20,17,43,.06)}
+  .tag{font-family:'Inter',sans-serif;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);display:flex;justify-content:space-between;gap:8px;border-bottom:1px solid var(--line);padding-bottom:8px;margin-bottom:18px}
+  .tag b{color:var(--ink);font-weight:600}
+  /* the hand now lives in the STROKE, not the font */
+  .logo{position:relative;display:inline-block;font-size:2rem;line-height:1}
+  .logo svg{position:absolute;left:-2%;bottom:-8px;width:104%;height:12px;overflow:visible}
+  .logo path{fill:none;stroke:var(--stroke);stroke-width:3;stroke-linecap:round;vector-effect:non-scaling-stroke}
+  .pct{font-size:1.5rem;margin-left:10px}
+  .hero{font-size:clamp(1.45rem,2.3vw,2rem);line-height:1.26;margin:16px 0 4px}
+  .accentword{font-size:1.15em}
+  .body{color:#2b2740;font-size:1.05rem;margin-top:12px}
+  .ai{font-family:'Inter',sans-serif;color:var(--muted);font-size:.92rem;margin-top:14px;letter-spacing:-.01em}
+  /* ---- weight systems (heavy = company/logo, mid = accent, light/thin = AI) ---- */
+  .w1{--fam:'Anuphan'} .w1 .logo,.w1 .hero,.w1 .accentword{font-family:var(--fam);font-weight:700}
+  .w1 .body{font-family:var(--fam);font-weight:400} .w1 .ai-th{font-family:var(--fam);font-weight:200}
+
+  .w2{--fam:'Kanit'} .w2 .logo,.w2 .hero{font-family:var(--fam);font-weight:900;letter-spacing:-.01em}
+  .w2 .accentword{font-family:var(--fam);font-weight:900} .w2 .body{font-family:var(--fam);font-weight:300} .w2 .ai-th{font-family:var(--fam);font-weight:300}
+
+  .w3 .logo,.w3 .hero{font-family:'Kanit';font-weight:700} .w3 .accentword{font-family:'Kanit';font-weight:700}
+  .w3 .body{font-family:'Anuphan';font-weight:400} .w3 .ai-th{font-family:'Anuphan';font-weight:200}
+
+  .w4{--fam:'Noto Sans Thai'} .w4 .logo,.w4 .hero,.w4 .accentword{font-family:var(--fam);font-weight:900}
+  .w4 .body{font-family:var(--fam);font-weight:500} .w4 .ai-th{font-family:var(--fam);font-weight:200}
+
+  .w5{--fam:'Bai Jamjuree'} .w5 .logo,.w5 .hero,.w5 .accentword{font-family:var(--fam);font-weight:700}
+  .w5 .body{font-family:var(--fam);font-weight:300} .w5 .ai-th{font-family:var(--fam);font-weight:300}
+
+  .w6 .logo,.w6 .hero,.w6 .accentword{font-family:'Trirong';font-weight:700} /* serif display */
+  .w6 .body{font-family:'Anuphan';font-weight:400} .w6 .ai-th{font-family:'Anuphan';font-weight:200}
+
+  .note{max-width:960px;margin:34px auto 0;padding:20px;border:1px dashed var(--line);border-radius:8px;background:#fff;color:#3a3750}
+  .note b{color:var(--ink)}
+</style>
+</head>
+<body>
+<header>
+  <h1>Human-Write — Type Lab · ระบบน้ำหนัก</h1>
+  <p class="sub">ฟอนต์จริงจังทั้งคู่ — คอนทราสต์มาจาก <b>น้ำหนัก</b> ไม่ใช่ลายมือ. โลโก้/หัว = หนักสุด · บอดี้ = ปกติ · เสียง AI = บางเย็น. "มือคน" ย้ายไปอยู่ที่ <b>เส้นขีดใต้</b> (SVG). เลือกคู่ที่ใช่แล้วบอกเลข W1–W6</p>
+</header>
+
+<div class="grid">
+  <div class="card w1">
+    <div class="tag"><span>W1 · <b>Anuphan</b> 700/400/200</span><span>ครอบครัวเดียว</span></div>
+    <span class="logo">Human-Write<svg viewBox="0 0 300 12" preserveAspectRatio="none"><path d="M4,7 C60,2 110,10 160,5 C210,1 250,9 296,4"/></svg></span><span class="pct">0.1%</span>
+    <p class="hero">เราขีด — ให้คุณเขียนตัวตน <span class="accentword">แตกต่าง</span></p>
+    <p class="body">เราเชื่อว่าการเขียนบ่งบอกตัวตน — ประโยคธรรมดาของคนธรรมดา ถูกอ่านนับล้าน</p>
+    <p class="ai"><span class="ai-th">Ai-Write · 9,000,000</span></p>
+  </div>
+
+  <div class="card w2">
+    <div class="tag"><span>W2 · <b>Kanit</b> 900/300</span><span>ดราม่าหนัก↔บาง</span></div>
+    <span class="logo">Human-Write<svg viewBox="0 0 300 12" preserveAspectRatio="none"><path d="M4,7 C60,2 110,10 160,5 C210,1 250,9 296,4"/></svg></span><span class="pct">0.1%</span>
+    <p class="hero">เราขีด — ให้คุณเขียนตัวตน <span class="accentword">แตกต่าง</span></p>
+    <p class="body">เราเชื่อว่าการเขียนบ่งบอกตัวตน — ประโยคธรรมดาของคนธรรมดา ถูกอ่านนับล้าน</p>
+    <p class="ai"><span class="ai-th">Ai-Write · 9,000,000</span></p>
+  </div>
+
+  <div class="card w3">
+    <div class="tag"><span>W3 · <b>Kanit</b> 700 + <b>Anuphan</b></span><span>สองฟอนต์จริงจัง</span></div>
+    <span class="logo">Human-Write<svg viewBox="0 0 300 12" preserveAspectRatio="none"><path d="M4,7 C60,2 110,10 160,5 C210,1 250,9 296,4"/></svg></span><span class="pct">0.1%</span>
+    <p class="hero">เราขีด — ให้คุณเขียนตัวตน <span class="accentword">แตกต่าง</span></p>
+    <p class="body">เราเชื่อว่าการเขียนบ่งบอกตัวตน — ประโยคธรรมดาของคนธรรมดา ถูกอ่านนับล้าน</p>
+    <p class="ai"><span class="ai-th">Ai-Write · 9,000,000</span></p>
+  </div>
+
+  <div class="card w4">
+    <div class="tag"><span>W4 · <b>Noto Sans Thai</b> 900/200</span><span>นิวทรัลพรีเมียม</span></div>
+    <span class="logo">Human-Write<svg viewBox="0 0 300 12" preserveAspectRatio="none"><path d="M4,7 C60,2 110,10 160,5 C210,1 250,9 296,4"/></svg></span><span class="pct">0.1%</span>
+    <p class="hero">เราขีด — ให้คุณเขียนตัวตน <span class="accentword">แตกต่าง</span></p>
+    <p class="body">เราเชื่อว่าการเขียนบ่งบอกตัวตน — ประโยคธรรมดาของคนธรรมดา ถูกอ่านนับล้าน</p>
+    <p class="ai"><span class="ai-th">Ai-Write · 9,000,000</span></p>
+  </div>
+
+  <div class="card w5">
+    <div class="tag"><span>W5 · <b>Bai Jamjuree</b> 700/300</span><span>techy คม</span></div>
+    <span class="logo">Human-Write<svg viewBox="0 0 300 12" preserveAspectRatio="none"><path d="M4,7 C60,2 110,10 160,5 C210,1 250,9 296,4"/></svg></span><span class="pct">0.1%</span>
+    <p class="hero">เราขีด — ให้คุณเขียนตัวตน <span class="accentword">แตกต่าง</span></p>
+    <p class="body">เราเชื่อว่าการเขียนบ่งบอกตัวตน — ประโยคธรรมดาของคนธรรมดา ถูกอ่านนับล้าน</p>
+    <p class="ai"><span class="ai-th">Ai-Write · 9,000,000</span></p>
+  </div>
+
+  <div class="card w6">
+    <div class="tag"><span>W6 · <b>Trirong</b> (serif) + Anuphan</span><span>editorial หรู</span></div>
+    <span class="logo">Human-Write<svg viewBox="0 0 300 12" preserveAspectRatio="none"><path d="M4,7 C60,2 110,10 160,5 C210,1 250,9 296,4"/></svg></span><span class="pct">0.1%</span>
+    <p class="hero">เราขีด — ให้คุณเขียนตัวตน <span class="accentword">แตกต่าง</span></p>
+    <p class="body">เราเชื่อว่าการเขียนบ่งบอกตัวตน — ประโยคธรรมดาของคนธรรมดา ถูกอ่านนับล้าน</p>
+    <p class="ai"><span class="ai-th">Ai-Write · 9,000,000</span></p>
+  </div>
+</div>
+
+<div class="note">
+  <b>สังเกต:</b> ทุกคู่ "มือคน" มาจาก <b>เส้นขีดใต้โลโก้</b> (เส้น SVG เดียวกับที่จะใช้ทั้งเว็บ — ขีดฆ่าเลข, dash ใน hero, ขีดใต้คลอสทุกยุค) ไม่ใช่จากฟอนต์.
+  ถ้าจะให้คำ shuffle (แตกต่าง/โดดเด่น/ถูกจำ/เป็นตัวคุณ) เด่น ใช้ <b>น้ำหนักหนัก + ขนาดใหญ่ขึ้น</b> แทนการเปลี่ยนเป็นลายมือ.
+  <b>ผมเชียร์ W2 (Kanit 900/300)</b> — หนัก↔บางดราม่าชัด เข้ากับธีม "ระบบเย็น vs คนอุ่น"; รองมา W3.
+</div>
+</body>
+</html>

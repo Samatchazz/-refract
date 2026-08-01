@@ -1,0 +1,689 @@
+{
+  "slug": "synthetictheatre",
+  "url": "https://synthetictheatre.com",
+  "name": "Synthetic Theatre",
+  "country": "UK",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "ok": true,
+  "httpStatus": 200,
+  "finalUrl": "https://www.synthetictheatre.com/",
+  "consentDismissed": [],
+  "scrollInfo": {
+    "contentHeight": 939,
+    "docScrollHeight": 844,
+    "maxElementBottom": 939,
+    "innerScrollerHeight": 0,
+    "virtualScroll": false
+  },
+  "document": {
+    "scrollHeight": 844,
+    "vhMultiple": 1.11,
+    "textNodeCount": 96,
+    "canvasCount": 1,
+    "elementCount": 716,
+    "title": "Synthetic Theatre",
+    "lang": "en",
+    "contentHeight": 939,
+    "scrollMode": "native"
+  },
+  "container": {
+    "dominantPairs": [
+      {
+        "width": 189,
+        "left": 52,
+        "count": 2,
+        "sample": {
+          "tag": "span",
+          "cls": "relative block transition-transform duration-[350ms] ease-ou"
+        }
+      },
+      {
+        "width": 160,
+        "left": 176,
+        "count": 2,
+        "sample": {
+          "tag": "span",
+          "cls": "relative block transition-transform duration-[350ms] ease-ou"
+        }
+      },
+      {
+        "width": 189,
+        "left": 99,
+        "count": 2,
+        "sample": {
+          "tag": "span",
+          "cls": "relative block transition-transform duration-[350ms] ease-ou"
+        }
+      },
+      {
+        "width": 150,
+        "left": 119,
+        "count": 2,
+        "sample": {
+          "tag": "span",
+          "cls": "relative block transition-transform duration-[350ms] ease-ou"
+        }
+      },
+      {
+        "width": 1,
+        "left": 345,
+        "count": 1,
+        "sample": {
+          "tag": "span",
+          "cls": "sr-only"
+        }
+      },
+      {
+        "width": 132,
+        "left": 0,
+        "count": 1,
+        "sample": {
+          "tag": "span",
+          "cls": ""
+        }
+      }
+    ],
+    "containerChain": {
+      "chain": [
+        {
+          "tag": "span",
+          "cls": "relative block transition-transform duration-[350ms] ease-ou",
+          "width": 189.39,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "block"
+        },
+        {
+          "tag": "span",
+          "cls": "relative block overflow-hidden",
+          "width": 189.39,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "block"
+        },
+        {
+          "tag": "a",
+          "cls": "button group !h-[60px] !px-32 !text-24",
+          "width": 255.39,
+          "maxWidth": "none",
+          "paddingInline": "32px / 32px",
+          "marginInline": "0px / 0px",
+          "display": "inline-flex"
+        },
+        {
+          "tag": "li",
+          "cls": "text-white",
+          "width": 350,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "list-item"
+        },
+        {
+          "tag": "ul",
+          "cls": "flex flex-col flex-none mt-auto py-24 px-20 gap-y-24",
+          "width": 390,
+          "maxWidth": "none",
+          "paddingInline": "20px / 20px",
+          "marginInline": "0px / 0px",
+          "display": "flex"
+        },
+        {
+          "tag": "nav",
+          "cls": "fixed -z-10 inset-0 w-full flex md:hidden flex-col pt-header",
+          "width": 390,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "flex"
+        },
+        {
+          "tag": "header",
+          "cls": "fixed top-12 md:top-20 left-20 right-20 z-20 flex",
+          "width": 350,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "flex"
+        },
+        {
+          "tag": "div",
+          "cls": "app relative type-base __variable_58ac9d __variable_bcdb04 f",
+          "width": 390,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "block"
+        }
+      ],
+      "constrained": null
+    },
+    "grids": [],
+    "bodyPaddingInline": "0px / 0px",
+    "bodyMaxWidth": "none",
+    "htmlPaddingInline": "0px / 0px"
+  },
+  "leftEdgeTest": {
+    "layout": {
+      "n": 1,
+      "mean": 345,
+      "stdDev": 0,
+      "distinctExact": 1,
+      "distinctClustered2px": 1,
+      "clusters": [
+        {
+          "at": 345,
+          "count": 1
+        }
+      ],
+      "values": [
+        345
+      ]
+    },
+    "rect": {
+      "n": 1,
+      "mean": 345.5,
+      "stdDev": 0,
+      "distinctExact": 1,
+      "distinctClustered2px": 1,
+      "clusters": [
+        {
+          "at": 345.5,
+          "count": 1
+        }
+      ],
+      "values": [
+        345.5
+      ]
+    },
+    "headings": {
+      "n": 1,
+      "mean": 19,
+      "stdDev": 0,
+      "distinctExact": 1,
+      "distinctClustered2px": 1,
+      "clusters": [
+        {
+          "at": 19,
+          "count": 1
+        }
+      ],
+      "values": [
+        19
+      ]
+    },
+    "sectionDiscovery": "body-children"
+  },
+  "sections": [
+    {
+      "index": 0,
+      "tag": "div",
+      "id": "__next",
+      "cls": "",
+      "height": 844,
+      "vhFraction": 1,
+      "paddingBlockStart": "0px",
+      "paddingBlockEnd": "0px",
+      "marginBlockStart": "0px",
+      "marginBlockEnd": "0px",
+      "firstText": {
+        "layoutLeft": 345,
+        "rectLeft": 345.5,
+        "tag": "span",
+        "fontSize": "13px",
+        "text": "Open navigation"
+      },
+      "heading": {
+        "layoutLeft": 19,
+        "rectLeft": 19,
+        "tag": "div",
+        "fontSize": "72px",
+        "text": "F"
+      }
+    }
+  ],
+  "verticalRhythm": {
+    "sectionCount": 1,
+    "near100vhCount": 1,
+    "near100vhPct": 100,
+    "strictGcdOfSpacing": 4,
+    "baseUnitEstimate80pct": 4,
+    "spacingHistogram": [
+      {
+        "value": 8,
+        "count": 8
+      },
+      {
+        "value": 32,
+        "count": 7
+      },
+      {
+        "value": 20,
+        "count": 6
+      },
+      {
+        "value": 24,
+        "count": 3
+      },
+      {
+        "value": 80,
+        "count": 2
+      },
+      {
+        "value": 40,
+        "count": 2
+      },
+      {
+        "value": 12,
+        "count": 2
+      },
+      {
+        "value": 16,
+        "count": 2
+      },
+      {
+        "value": 4,
+        "count": 2
+      }
+    ],
+    "spacingSampleSize": 34
+  },
+  "typeScale": {
+    "distinctFontSizeCount": 5,
+    "distinctFontSizeCount_used2plus": 4,
+    "distinctSizes": [
+      {
+        "size": 72,
+        "count": 12
+      },
+      {
+        "size": 32,
+        "count": 1
+      },
+      {
+        "size": 24,
+        "count": 6
+      },
+      {
+        "size": 13,
+        "count": 7
+      },
+      {
+        "size": 11,
+        "count": 6
+      }
+    ],
+    "scaleSizesDesc": [
+      72,
+      24,
+      13,
+      11
+    ],
+    "consecutiveRatios": [
+      3,
+      1.85,
+      1.18
+    ],
+    "roles": {
+      "h1": null,
+      "biggestText": {
+        "tag": "div",
+        "fontSize": 72,
+        "fontWeight": "400",
+        "lineHeightPx": 43.2,
+        "lineHeightRatio": 0.6,
+        "letterSpacing": "0px",
+        "letterSpacingEm": 0,
+        "fontFamily": "__PPNeueBit_58ac9d",
+        "fontFamilyFull": "__PPNeueBit_58ac9d, __PPNeueBit_Fallback_58ac9d, monospace",
+        "textTransform": "uppercase",
+        "color": "rgb(211, 213, 196)",
+        "widthPx": 30.85,
+        "text": "F"
+      },
+      "h2All": [],
+      "h3": null,
+      "body": null,
+      "small": {
+        "tag": "div",
+        "fontSize": 11,
+        "fontWeight": "400",
+        "lineHeightPx": 13.75,
+        "lineHeightRatio": 1.25,
+        "letterSpacing": "-0.22px",
+        "letterSpacingEm": -0.02,
+        "fontFamily": "__PPSupplyMono_bcdb04",
+        "fontFamilyFull": "__PPSupplyMono_bcdb04, __PPSupplyMono_Fallback_bcdb04, ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe",
+        "textTransform": "uppercase",
+        "color": "rgb(211, 213, 196)",
+        "widthPx": 38.75,
+        "text": "Floral"
+      },
+      "mono": {
+        "tag": "span",
+        "fontSize": 13,
+        "fontWeight": "400",
+        "lineHeightPx": 16.25,
+        "lineHeightRatio": 1.25,
+        "letterSpacing": "0px",
+        "letterSpacingEm": 0,
+        "fontFamily": "__PPSupplyMono_bcdb04",
+        "fontFamilyFull": "__PPSupplyMono_bcdb04, __PPSupplyMono_Fallback_bcdb04, ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe",
+        "textTransform": "uppercase",
+        "color": "rgb(211, 213, 196)",
+        "widthPx": 1,
+        "text": "Open navigation"
+      }
+    },
+    "readingMeasure": null,
+    "readingMeasureAlternates": [],
+    "distinctFontFamilyCount": 2,
+    "fontFamilies": [
+      {
+        "family": "__PPSupplyMono_bcdb04",
+        "count": 19
+      },
+      {
+        "family": "__PPNeueBit_58ac9d",
+        "count": 13
+      }
+    ]
+  },
+  "color": {
+    "textColors": [
+      {
+        "value": "rgb(211,213,196)",
+        "count": 27
+      },
+      {
+        "value": "rgb(119,119,100)",
+        "count": 4
+      },
+      {
+        "value": "rgb(255,255,255)",
+        "count": 1
+      }
+    ],
+    "backgroundColors": [
+      {
+        "value": "rgb(0,0,0)",
+        "count": 28
+      },
+      {
+        "value": "rgb(20,19,20)",
+        "count": 8
+      },
+      {
+        "value": "rgb(211,213,196)",
+        "count": 4
+      }
+    ],
+    "distinctTextColorCount": 3,
+    "distinctBgColorCount": 3
+  },
+  "persistent": {
+    "fixedOrSticky": [
+      {
+        "tag": "header",
+        "cls": "fixed top-12 md:top-20 left-20 right-20 z-20 flex",
+        "position": "fixed",
+        "rect": {
+          "top": 12,
+          "left": 20,
+          "width": 350,
+          "height": 48
+        },
+        "zIndex": "20",
+        "text": "001/Screening001/Screening002/Archive002/Archive003/Manifest",
+        "opacity": "1"
+      },
+      {
+        "tag": "nav",
+        "cls": "fixed -z-10 inset-0 w-full flex md:hidden flex-col pt-header",
+        "position": "fixed",
+        "rect": {
+          "top": 0,
+          "left": 0,
+          "width": 390,
+          "height": 844
+        },
+        "zIndex": "-10",
+        "text": "001/Screening001/Screening002/Archive002/Archive003/Manifest",
+        "opacity": "0"
+      },
+      {
+        "tag": "svg",
+        "cls": "[object SVGAnimatedString]",
+        "position": "fixed",
+        "rect": {
+          "top": 0,
+          "left": 0,
+          "width": 390,
+          "height": 844
+        },
+        "zIndex": "50",
+        "text": "",
+        "opacity": "1"
+      },
+      {
+        "tag": "div",
+        "cls": "fixed z-50 top-0 right-0 left-0 bottom-0 pointer-events-none",
+        "position": "fixed",
+        "rect": {
+          "top": -0.03,
+          "left": -0.07,
+          "width": 390.15,
+          "height": 844.07
+        },
+        "zIndex": "50",
+        "text": "",
+        "opacity": "1"
+      },
+      {
+        "tag": "div",
+        "cls": "fixed top-[-10rem] right-[-10rem] left-[-10rem] bottom-[-10r",
+        "position": "fixed",
+        "rect": {
+          "top": -140.05,
+          "left": -90.08,
+          "width": 590.18,
+          "height": 1044.1
+        },
+        "zIndex": "auto",
+        "text": "",
+        "opacity": "1"
+      }
+    ]
+  },
+  "nav": {
+    "tag": "header",
+    "cls": "fixed top-12 md:top-20 left-20 right-20 z-20 flex",
+    "height": 48,
+    "top": 12,
+    "position": "fixed",
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "backdropFilter": "none",
+    "borderBottom": "0px rgb(211, 213, 196)",
+    "paddingBlock": "0px / 0px",
+    "transform": "none",
+    "opacity": "1",
+    "mixBlendMode": "normal",
+    "color": "rgb(211, 213, 196)"
+  },
+  "navState": {
+    "at0": {
+      "nav": {
+        "height": 48,
+        "top": 12,
+        "position": "fixed",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "backdropFilter": "none",
+        "borderBottom": "0px rgb(211, 213, 196)",
+        "paddingBlock": "0px / 0px",
+        "transform": "none",
+        "opacity": "1",
+        "color": "rgb(211, 213, 196)"
+      },
+      "fixedOrSticky": [
+        {
+          "tag": "header",
+          "cls": "fixed top-12 md:top-20 left-20 right-20 z-20 flex",
+          "position": "fixed",
+          "rect": {
+            "top": 12,
+            "left": 20,
+            "width": 350,
+            "height": 48
+          },
+          "text": "001/Screening001/Screening002/Archive002/Archive003/Manifest",
+          "opacity": "1"
+        },
+        {
+          "tag": "nav",
+          "cls": "fixed -z-10 inset-0 w-full flex md:hidden flex-col pt-header",
+          "position": "fixed",
+          "rect": {
+            "top": 0,
+            "left": 0,
+            "width": 390,
+            "height": 844
+          },
+          "text": "001/Screening001/Screening002/Archive002/Archive003/Manifest",
+          "opacity": "0"
+        },
+        {
+          "tag": "svg",
+          "cls": "[object SVGAnimatedString]",
+          "position": "fixed",
+          "rect": {
+            "top": 0,
+            "left": 0,
+            "width": 390,
+            "height": 844
+          },
+          "text": "",
+          "opacity": "1"
+        },
+        {
+          "tag": "div",
+          "cls": "fixed z-50 top-0 right-0 left-0 bottom-0 pointer-events-none",
+          "position": "fixed",
+          "rect": {
+            "top": -0.03,
+            "left": -0.07,
+            "width": 390.15,
+            "height": 844.07
+          },
+          "text": "",
+          "opacity": "1"
+        },
+        {
+          "tag": "div",
+          "cls": "fixed top-[-10rem] right-[-10rem] left-[-10rem] bottom-[-10r",
+          "position": "fixed",
+          "rect": {
+            "top": -40.04,
+            "left": -50.1,
+            "width": 590.18,
+            "height": 1044.1
+          },
+          "text": "",
+          "opacity": "1"
+        }
+      ]
+    },
+    "at2000": {
+      "nav": {
+        "height": 48,
+        "top": 12,
+        "position": "fixed",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "backdropFilter": "none",
+        "borderBottom": "0px rgb(211, 213, 196)",
+        "paddingBlock": "0px / 0px",
+        "transform": "none",
+        "opacity": "1",
+        "color": "rgb(211, 213, 196)"
+      },
+      "fixedOrSticky": [
+        {
+          "tag": "header",
+          "cls": "fixed top-12 md:top-20 left-20 right-20 z-20 flex",
+          "position": "fixed",
+          "rect": {
+            "top": 12,
+            "left": 20,
+            "width": 350,
+            "height": 48
+          },
+          "text": "001/Screening001/Screening002/Archive002/Archive003/Manifest",
+          "opacity": "1"
+        },
+        {
+          "tag": "nav",
+          "cls": "fixed -z-10 inset-0 w-full flex md:hidden flex-col pt-header",
+          "position": "fixed",
+          "rect": {
+            "top": 0,
+            "left": 0,
+            "width": 390,
+            "height": 844
+          },
+          "text": "001/Screening001/Screening002/Archive002/Archive003/Manifest",
+          "opacity": "0"
+        },
+        {
+          "tag": "svg",
+          "cls": "[object SVGAnimatedString]",
+          "position": "fixed",
+          "rect": {
+            "top": 0,
+            "left": 0,
+            "width": 390,
+            "height": 844
+          },
+          "text": "",
+          "opacity": "1"
+        },
+        {
+          "tag": "div",
+          "cls": "fixed z-50 top-0 right-0 left-0 bottom-0 pointer-events-none",
+          "position": "fixed",
+          "rect": {
+            "top": -0.03,
+            "left": -0.07,
+            "width": 390.15,
+            "height": 844.07
+          },
+          "text": "",
+          "opacity": "1"
+        },
+        {
+          "tag": "div",
+          "cls": "fixed top-[-10rem] right-[-10rem] left-[-10rem] bottom-[-10r",
+          "position": "fixed",
+          "rect": {
+            "top": -120.05,
+            "left": -110.09,
+            "width": 590.18,
+            "height": 1044.1
+          },
+          "text": "",
+          "opacity": "1"
+        }
+      ]
+    },
+    "changed": false,
+    "diff": {}
+  },
+  "shots": [
+    "synthetictheatre-390-full.jpg"
+  ],
+  "fullPageShotRepresentative": true,
+  "pageErrors": []
+}

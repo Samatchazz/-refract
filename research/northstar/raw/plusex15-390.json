@@ -1,0 +1,893 @@
+{
+  "slug": "plusex15",
+  "url": "https://15th.plus-ex.com",
+  "name": "PLUS-EX 15th",
+  "country": "Korea",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "ok": true,
+  "httpStatus": 200,
+  "finalUrl": "https://15th.plus-ex.com/",
+  "consentDismissed": [],
+  "scrollInfo": {
+    "contentHeight": 57434,
+    "docScrollHeight": 844,
+    "maxElementBottom": 57434,
+    "innerScrollerHeight": 57434,
+    "virtualScroll": true
+  },
+  "document": {
+    "scrollHeight": 844,
+    "vhMultiple": 68.05,
+    "textNodeCount": 797,
+    "canvasCount": 1,
+    "elementCount": 2344,
+    "title": "15th Anniversary",
+    "lang": "ko",
+    "contentHeight": 57434,
+    "scrollMode": "virtual (transformed wrapper / JS scroller)"
+  },
+  "container": {
+    "dominantPairs": [
+      {
+        "width": 358,
+        "left": 16,
+        "count": 7,
+        "sample": {
+          "tag": "div",
+          "cls": "sc-fhfEft dwujYq sub-title animate"
+        }
+      },
+      {
+        "width": 318,
+        "left": 56,
+        "count": 4,
+        "sample": {
+          "tag": "div",
+          "cls": "sc-dpDFRI bhJoHe"
+        }
+      },
+      {
+        "width": 352,
+        "left": 19,
+        "count": 2,
+        "sample": {
+          "tag": "div",
+          "cls": "sc-gJUwzu hHGMax sub-title animate"
+        }
+      },
+      {
+        "width": 265,
+        "left": 16,
+        "count": 2,
+        "sample": {
+          "tag": "div",
+          "cls": "sc-fgcRbO krGirj project-title"
+        }
+      },
+      {
+        "width": 225,
+        "left": 16,
+        "count": 1,
+        "sample": {
+          "tag": "div",
+          "cls": "sc-jJLAfE dNBaeM"
+        }
+      },
+      {
+        "width": 205,
+        "left": 26,
+        "count": 1,
+        "sample": {
+          "tag": "div",
+          "cls": "sc-hwkwBN jEOyCX"
+        }
+      }
+    ],
+    "containerChain": {
+      "chain": [
+        {
+          "tag": "div",
+          "cls": "sc-fhfEft dwujYq sub-title animate",
+          "width": 358,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "block"
+        },
+        {
+          "tag": "div",
+          "cls": "sc-dClGHI OaYUt",
+          "width": 358,
+          "maxWidth": "390px",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "block"
+        },
+        {
+          "tag": "div",
+          "cls": "sc-bAehkN HbtxR title-start is-mobile stagger-animation",
+          "width": 358,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "flex"
+        },
+        {
+          "tag": "div",
+          "cls": "sc-bjMIFn keBuWS",
+          "width": 390,
+          "maxWidth": "none",
+          "paddingInline": "16px / 16px",
+          "marginInline": "0px / 0px",
+          "display": "flex"
+        },
+        {
+          "tag": "div",
+          "cls": "",
+          "width": 390,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "block"
+        },
+        {
+          "tag": "div",
+          "cls": "bg-dark",
+          "width": 390,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "block"
+        },
+        {
+          "tag": "div",
+          "cls": "App",
+          "width": 390,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "block"
+        },
+        {
+          "tag": "div",
+          "cls": "",
+          "width": 390,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "block"
+        }
+      ],
+      "constrained": {
+        "tag": "div",
+        "cls": "sc-dClGHI OaYUt",
+        "width": 358,
+        "maxWidth": "390px",
+        "paddingInline": "0px / 0px",
+        "marginInline": "0px / 0px",
+        "display": "block"
+      }
+    },
+    "grids": [
+      {
+        "columns": 3,
+        "columnGap": "8px",
+        "rowGap": "8px",
+        "width": 259.61,
+        "template": "81.2031px 81.2031px 81.2031px",
+        "count": 4
+      },
+      {
+        "columns": 2,
+        "columnGap": "16px",
+        "rowGap": "16px",
+        "width": 390,
+        "template": "187px 187px",
+        "count": 1
+      },
+      {
+        "columns": 2,
+        "columnGap": "normal",
+        "rowGap": "normal",
+        "width": 358,
+        "template": "179px 179px",
+        "count": 1
+      },
+      {
+        "columns": 2,
+        "columnGap": "9px",
+        "rowGap": "9px",
+        "width": 217.31,
+        "template": "104.156px 104.156px",
+        "count": 1
+      }
+    ],
+    "bodyPaddingInline": "0px / 0px",
+    "bodyMaxWidth": "none",
+    "htmlPaddingInline": "0px / 0px"
+  },
+  "leftEdgeTest": {
+    "layout": {
+      "n": 10,
+      "mean": 195,
+      "stdDev": 0,
+      "distinctExact": 1,
+      "distinctClustered2px": 1,
+      "clusters": [
+        {
+          "at": 195,
+          "count": 10
+        }
+      ],
+      "values": [
+        195,
+        195,
+        195,
+        195,
+        195,
+        195,
+        195,
+        195,
+        195,
+        195
+      ]
+    },
+    "rect": {
+      "n": 10,
+      "mean": 195,
+      "stdDev": 0,
+      "distinctExact": 1,
+      "distinctClustered2px": 1,
+      "clusters": [
+        {
+          "at": 195,
+          "count": 10
+        }
+      ],
+      "values": [
+        195,
+        195,
+        195,
+        195,
+        195,
+        195,
+        195,
+        195,
+        195,
+        195
+      ]
+    },
+    "headings": {
+      "n": 10,
+      "mean": 195,
+      "stdDev": 0,
+      "distinctExact": 1,
+      "distinctClustered2px": 1,
+      "clusters": [
+        {
+          "at": 195,
+          "count": 10
+        }
+      ],
+      "values": [
+        195,
+        195,
+        195,
+        195,
+        195,
+        195,
+        195,
+        195,
+        195,
+        195
+      ]
+    },
+    "sectionDiscovery": "tall-children-of-wrapper"
+  },
+  "sections": [
+    {
+      "index": 0,
+      "tag": "div",
+      "id": null,
+      "cls": "sc-fRGMHx kFDzWs",
+      "height": 549.94,
+      "vhFraction": 0.65,
+      "paddingBlockStart": "0px",
+      "paddingBlockEnd": "0px",
+      "marginBlockStart": "0px",
+      "marginBlockEnd": "0px",
+      "firstText": {
+        "layoutLeft": 195,
+        "rectLeft": 195,
+        "tag": "div",
+        "fontSize": "14px",
+        "text": "E-Commerce"
+      },
+      "heading": {
+        "layoutLeft": 195,
+        "rectLeft": 195,
+        "tag": "div",
+        "fontSize": "14px",
+        "text": "E-Commerce"
+      }
+    },
+    {
+      "index": 1,
+      "tag": "div",
+      "id": null,
+      "cls": "sc-fRGMHx kFDzWs",
+      "height": 153.19,
+      "vhFraction": 0.18,
+      "paddingBlockStart": "0px",
+      "paddingBlockEnd": "0px",
+      "marginBlockStart": "0px",
+      "marginBlockEnd": "0px",
+      "firstText": {
+        "layoutLeft": 195,
+        "rectLeft": 195,
+        "tag": "div",
+        "fontSize": "14px",
+        "text": "Fashion"
+      },
+      "heading": {
+        "layoutLeft": 195,
+        "rectLeft": 195,
+        "tag": "div",
+        "fontSize": "14px",
+        "text": "Fashion"
+      }
+    },
+    {
+      "index": 2,
+      "tag": "div",
+      "id": null,
+      "cls": "sc-fRGMHx kFDzWs",
+      "height": 351.56,
+      "vhFraction": 0.42,
+      "paddingBlockStart": "0px",
+      "paddingBlockEnd": "0px",
+      "marginBlockStart": "0px",
+      "marginBlockEnd": "0px",
+      "firstText": {
+        "layoutLeft": 195,
+        "rectLeft": 195,
+        "tag": "div",
+        "fontSize": "14px",
+        "text": "Cosmetic"
+      },
+      "heading": {
+        "layoutLeft": 195,
+        "rectLeft": 195,
+        "tag": "div",
+        "fontSize": "14px",
+        "text": "Cosmetic"
+      }
+    },
+    {
+      "index": 3,
+      "tag": "div",
+      "id": null,
+      "cls": "sc-fRGMHx kFDzWs",
+      "height": 252.38,
+      "vhFraction": 0.3,
+      "paddingBlockStart": "0px",
+      "paddingBlockEnd": "0px",
+      "marginBlockStart": "0px",
+      "marginBlockEnd": "0px",
+      "firstText": {
+        "layoutLeft": 195,
+        "rectLeft": 195,
+        "tag": "div",
+        "fontSize": "14px",
+        "text": "Finance & Insurance"
+      },
+      "heading": {
+        "layoutLeft": 195,
+        "rectLeft": 195,
+        "tag": "div",
+        "fontSize": "14px",
+        "text": "Finance & Insurance"
+      }
+    },
+    {
+      "index": 4,
+      "tag": "div",
+      "id": null,
+      "cls": "sc-fRGMHx kFDzWs",
+      "height": 301.97,
+      "vhFraction": 0.36,
+      "paddingBlockStart": "0px",
+      "paddingBlockEnd": "0px",
+      "marginBlockStart": "0px",
+      "marginBlockEnd": "0px",
+      "firstText": {
+        "layoutLeft": 195,
+        "rectLeft": 195,
+        "tag": "div",
+        "fontSize": "14px",
+        "text": "Lifestyle & Care"
+      },
+      "heading": {
+        "layoutLeft": 195,
+        "rectLeft": 195,
+        "tag": "div",
+        "fontSize": "14px",
+        "text": "Lifestyle & Care"
+      }
+    },
+    {
+      "index": 5,
+      "tag": "div",
+      "id": null,
+      "cls": "sc-fRGMHx kFDzWs",
+      "height": 351.56,
+      "vhFraction": 0.42,
+      "paddingBlockStart": "0px",
+      "paddingBlockEnd": "0px",
+      "marginBlockStart": "0px",
+      "marginBlockEnd": "0px",
+      "firstText": {
+        "layoutLeft": 195,
+        "rectLeft": 195,
+        "tag": "div",
+        "fontSize": "14px",
+        "text": "Entertainment & Broadcast"
+      },
+      "heading": {
+        "layoutLeft": 195,
+        "rectLeft": 195,
+        "tag": "div",
+        "fontSize": "14px",
+        "text": "Entertainment & Broadcast"
+      }
+    },
+    {
+      "index": 6,
+      "tag": "div",
+      "id": null,
+      "cls": "sc-fRGMHx kFDzWs",
+      "height": 153.19,
+      "vhFraction": 0.18,
+      "paddingBlockStart": "0px",
+      "paddingBlockEnd": "0px",
+      "marginBlockStart": "0px",
+      "marginBlockEnd": "0px",
+      "firstText": {
+        "layoutLeft": 195,
+        "rectLeft": 195,
+        "tag": "div",
+        "fontSize": "14px",
+        "text": "Productivity"
+      },
+      "heading": {
+        "layoutLeft": 195,
+        "rectLeft": 195,
+        "tag": "div",
+        "fontSize": "14px",
+        "text": "Productivity"
+      }
+    },
+    {
+      "index": 7,
+      "tag": "div",
+      "id": null,
+      "cls": "sc-fRGMHx kFDzWs",
+      "height": 301.97,
+      "vhFraction": 0.36,
+      "paddingBlockStart": "0px",
+      "paddingBlockEnd": "0px",
+      "marginBlockStart": "0px",
+      "marginBlockEnd": "0px",
+      "firstText": {
+        "layoutLeft": 195,
+        "rectLeft": 195,
+        "tag": "div",
+        "fontSize": "14px",
+        "text": "Spatial"
+      },
+      "heading": {
+        "layoutLeft": 195,
+        "rectLeft": 195,
+        "tag": "div",
+        "fontSize": "14px",
+        "text": "Spatial"
+      }
+    },
+    {
+      "index": 8,
+      "tag": "div",
+      "id": null,
+      "cls": "sc-fRGMHx kFDzWs",
+      "height": 202.78,
+      "vhFraction": 0.24,
+      "paddingBlockStart": "0px",
+      "paddingBlockEnd": "0px",
+      "marginBlockStart": "0px",
+      "marginBlockEnd": "0px",
+      "firstText": {
+        "layoutLeft": 195,
+        "rectLeft": 195,
+        "tag": "div",
+        "fontSize": "14px",
+        "text": "Metaverse"
+      },
+      "heading": {
+        "layoutLeft": 195,
+        "rectLeft": 195,
+        "tag": "div",
+        "fontSize": "14px",
+        "text": "Metaverse"
+      }
+    },
+    {
+      "index": 9,
+      "tag": "div",
+      "id": null,
+      "cls": "sc-fRGMHx kFDzWs",
+      "height": 153.19,
+      "vhFraction": 0.18,
+      "paddingBlockStart": "0px",
+      "paddingBlockEnd": "0px",
+      "marginBlockStart": "0px",
+      "marginBlockEnd": "0px",
+      "firstText": {
+        "layoutLeft": 195,
+        "rectLeft": 195,
+        "tag": "div",
+        "fontSize": "14px",
+        "text": "Technology"
+      },
+      "heading": {
+        "layoutLeft": 195,
+        "rectLeft": 195,
+        "tag": "div",
+        "fontSize": "14px",
+        "text": "Technology"
+      }
+    }
+  ],
+  "verticalRhythm": {
+    "sectionCount": 10,
+    "near100vhCount": 0,
+    "near100vhPct": 0,
+    "strictGcdOfSpacing": 1,
+    "baseUnitEstimate80pct": 2,
+    "spacingHistogram": [
+      {
+        "value": 8,
+        "count": 233
+      },
+      {
+        "value": 16,
+        "count": 194
+      },
+      {
+        "value": 10,
+        "count": 183
+      },
+      {
+        "value": 20,
+        "count": 48
+      },
+      {
+        "value": 180,
+        "count": 24
+      },
+      {
+        "value": 4,
+        "count": 17
+      },
+      {
+        "value": 120,
+        "count": 11
+      },
+      {
+        "value": 24,
+        "count": 11
+      },
+      {
+        "value": 195,
+        "count": 11
+      },
+      {
+        "value": 253,
+        "count": 10
+      },
+      {
+        "value": 117,
+        "count": 8
+      },
+      {
+        "value": 30,
+        "count": 8
+      },
+      {
+        "value": 80,
+        "count": 7
+      },
+      {
+        "value": 40,
+        "count": 5
+      }
+    ],
+    "spacingSampleSize": 857
+  },
+  "typeScale": {
+    "distinctFontSizeCount": 11,
+    "distinctFontSizeCount_used2plus": 11,
+    "distinctSizes": [
+      {
+        "size": 206.7,
+        "count": 8
+      },
+      {
+        "size": 80,
+        "count": 75
+      },
+      {
+        "size": 54.6,
+        "count": 34
+      },
+      {
+        "size": 50.7,
+        "count": 12
+      },
+      {
+        "size": 30,
+        "count": 81
+      },
+      {
+        "size": 28,
+        "count": 11
+      },
+      {
+        "size": 19,
+        "count": 7
+      },
+      {
+        "size": 16,
+        "count": 7
+      },
+      {
+        "size": 14,
+        "count": 343
+      },
+      {
+        "size": 12,
+        "count": 87
+      },
+      {
+        "size": 10,
+        "count": 3
+      }
+    ],
+    "scaleSizesDesc": [
+      206.7,
+      80,
+      54.6,
+      50.7,
+      30,
+      28,
+      19,
+      16,
+      14,
+      12,
+      10
+    ],
+    "consecutiveRatios": [
+      2.58,
+      1.47,
+      1.08,
+      1.69,
+      1.07,
+      1.47,
+      1.19,
+      1.14,
+      1.17,
+      1.2
+    ],
+    "roles": {
+      "h1": null,
+      "biggestText": {
+        "tag": "div",
+        "fontSize": 206.7,
+        "fontWeight": "700",
+        "lineHeightPx": 165.36,
+        "lineHeightRatio": 0.8,
+        "letterSpacing": "-6.201px",
+        "letterSpacingEm": -0.03,
+        "fontFamily": "neue-haas-grotesk-display",
+        "fontFamilyFull": "neue-haas-grotesk-display, sans-serif",
+        "textTransform": "none",
+        "color": "rgb(255, 255, 255)",
+        "widthPx": 134.97,
+        "text": "5"
+      },
+      "h2All": [],
+      "h3": null,
+      "body": null,
+      "small": {
+        "tag": "div",
+        "fontSize": 10,
+        "fontWeight": "550",
+        "lineHeightPx": 10,
+        "lineHeightRatio": 1,
+        "letterSpacing": "1px",
+        "letterSpacingEm": 0.1,
+        "fontFamily": "neue-haas-grotesk-display",
+        "fontFamilyFull": "neue-haas-grotesk-display, sans-serif",
+        "textTransform": "uppercase",
+        "color": "rgb(0, 0, 0)",
+        "widthPx": 358,
+        "text": "NEW TOUCHPOINTS"
+      },
+      "mono": null
+    },
+    "readingMeasure": null,
+    "readingMeasureAlternates": [],
+    "distinctFontFamilyCount": 2,
+    "fontFamilies": [
+      {
+        "family": "neue-haas-grotesk-display",
+        "count": 530
+      },
+      {
+        "family": "neue-haas-grotesk-text",
+        "count": 138
+      }
+    ]
+  },
+  "color": {
+    "textColors": [
+      {
+        "value": "rgb(0,0,0)",
+        "count": 289
+      },
+      {
+        "value": "rgb(255,255,255)",
+        "count": 154
+      },
+      {
+        "value": "rgb(76,76,76)",
+        "count": 115
+      },
+      {
+        "value": "rgb(187,187,187)",
+        "count": 46
+      },
+      {
+        "value": "rgba(0,0,0,0)",
+        "count": 35
+      },
+      {
+        "value": "rgb(77,77,77)",
+        "count": 12
+      },
+      {
+        "value": "rgb(202,202,202)",
+        "count": 11
+      },
+      {
+        "value": "rgb(128,128,128)",
+        "count": 6
+      }
+    ],
+    "backgroundColors": [
+      {
+        "value": "rgb(255,255,255)",
+        "count": 78
+      },
+      {
+        "value": "rgb(0,0,0)",
+        "count": 43
+      },
+      {
+        "value": "rgb(76,76,76)",
+        "count": 11
+      }
+    ],
+    "distinctTextColorCount": 8,
+    "distinctBgColorCount": 3
+  },
+  "persistent": {
+    "fixedOrSticky": [
+      {
+        "tag": "div",
+        "cls": "",
+        "position": "fixed",
+        "rect": {
+          "top": 0,
+          "left": 0,
+          "width": 390,
+          "height": 844
+        },
+        "zIndex": "-1",
+        "text": "",
+        "opacity": "1"
+      },
+      {
+        "tag": "div",
+        "cls": "manifesto-hidden",
+        "position": "fixed",
+        "rect": {
+          "top": 0,
+          "left": 0,
+          "width": 390,
+          "height": 844
+        },
+        "zIndex": "10",
+        "text": "It aligns values,emotions, and interactionsinto a cohesive w",
+        "opacity": "0"
+      },
+      {
+        "tag": "div",
+        "cls": "manifesto-hidden",
+        "position": "fixed",
+        "rect": {
+          "top": 0,
+          "left": 0,
+          "width": 390,
+          "height": 844
+        },
+        "zIndex": "10",
+        "text": "They shape not just looks,but how it works and feels.Narrati",
+        "opacity": "0"
+      },
+      {
+        "tag": "div",
+        "cls": "manifesto-hidden",
+        "position": "fixed",
+        "rect": {
+          "top": 0,
+          "left": 0,
+          "width": 390,
+          "height": 844
+        },
+        "zIndex": "10",
+        "text": "Design moveswhen knowledge moves.Design moveswhen knowledgem",
+        "opacity": "0"
+      },
+      {
+        "tag": "div",
+        "cls": "sc-gFqXPY enIkku award-pin hideall",
+        "position": "fixed",
+        "rect": {
+          "top": 171.31,
+          "left": 0,
+          "width": 390,
+          "height": 501.36
+        },
+        "zIndex": "10",
+        "text": "312315142020 - 21EpisodeCafe DelaluzPlus XPlus X WebsiteANOR",
+        "opacity": "0"
+      },
+      {
+        "tag": "div",
+        "cls": "sc-kSaXSp jJMoGc project-list-pin-image",
+        "position": "fixed",
+        "rect": {
+          "top": 0,
+          "left": 203,
+          "width": 171,
+          "height": 844
+        },
+        "zIndex": "1000",
+        "text": "",
+        "opacity": "0"
+      }
+    ]
+  },
+  "nav": null,
+  "navState": {
+    "at0": null,
+    "at2000": null
+  },
+  "shots": [
+    "plusex15-390-full.jpg"
+  ],
+  "fullPageShotRepresentative": false,
+  "pageErrors": []
+}

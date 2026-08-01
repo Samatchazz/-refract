@@ -1,0 +1,72 @@
+[
+  {
+    "claim": "Of 133 countries that responded to an ILO review, only 40 have ever measured digital platform employment, the majority in Europe and Central Asia, and no international statistical standard will exist before 2028.",
+    "stance": "supports",
+    "stance_target": "The position that the absence of Southeast Asian quantitative evidence on platform and creator work is a structural measurement gap, not a search failure, and that any figure claiming regional coverage should be treated as an estimate rather than a measurement",
+    "evidence_type": "statistical",
+    "scope_conditions": "Global; ILO country review conducted in preparation for the 22nd International Conference of Labour Statisticians; published February 2026; 17 of the 40 measuring countries participated in a single Eurostat pilot",
+    "quoted_support": "Of the 133 countries that responded, only 40 countries reported having undertaken such measurement. The majority were in Europe and Central Asia, including 17 European Union and European Free Trade Association (EFTA) countries that participated in a Eurostat pilot survey.",
+    "numbers": ["133 countries responded", "40 countries measured", "17 EU/EFTA in one pilot", "22nd ICLS in 2028", "21st ICLS 2023 mandate"],
+    "entities": ["ILO", "ICLS", "Eurostat", "Uma Rani", "Michael Frosch", "Morgan Williams"],
+    "time_period": "review for the 22nd ICLS, published February 2026",
+    "region": "Global",
+    "confidence": "high",
+    "source_note_id": "ilo-brief"
+  },
+  {
+    "claim": "The number of active digital labour platforms fell from 777 in 2021 to at least 653 in October 2025, and the ILO states that platform mortality is high enough to require re-verification every few months.",
+    "stance": "supports",
+    "stance_target": "The position that attrition in the platform economy operates at the firm level as well as the worker level, so a creator's or worker's income stream can end because the platform itself disappears",
+    "evidence_type": "statistical",
+    "scope_conditions": "Global; Crunchbase database covering 98 countries, verified October 2025 but not updated for new platforms since October 2023; the 2021 figure covered online web-based, taxi and delivery only, so the comparison is not exactly like-for-like; Crunchbase relies partly on self-reporting so developing-country platforms are undercounted",
+    "quoted_support": "As the mortality rate of these platforms are quite high, we verify its functioning every few months and the latest verification has been done in October 2025",
+    "numbers": ["653 active platforms October 2025", "777 platforms 2021", "204 online web-based", "136 freelance", "42 microtask", "25 competitive programming", "195 delivery", "50 taxi", "98 countries covered"],
+    "entities": ["ILO", "Crunchbase"],
+    "time_period": "2021 to October 2025",
+    "region": "Global",
+    "confidence": "medium",
+    "source_note_id": "ilo-brief"
+  },
+  {
+    "claim": "Some national statistical offices fold content creation into their platform-work statistics while others exclude it entirely, so headline platform-worker counts silently contain or omit creators depending on the country.",
+    "stance": "refutes",
+    "stance_target": "The assumption that national platform-work statistics measure a consistent population that can be compared across countries or used as a creator proxy",
+    "evidence_type": "empirical",
+    "scope_conditions": "Global; ILO comparison of national definitions as of February 2026; Singapore's Ministry of Manpower definition explicitly covers 'creative work' alongside ride-hailing and delivery; the Philippines Statistics Authority definition is hours-and-contract based",
+    "quoted_support": "some countries focus exclusively on labour services (both web-based and location-based), while others adopt a much broader approach that also encompasses e-commerce, rental services and content-creation activities mediated by platforms.",
+    "numbers": [],
+    "entities": ["ILO", "Philippines Statistics Authority", "Eurostat", "Australian Bureau of Statistics", "Singapore Ministry of Manpower", "Statistics Canada"],
+    "time_period": "February 2026",
+    "region": "Global",
+    "confidence": "high",
+    "source_note_id": "ilo-brief"
+  },
+  {
+    "claim": "The measured prevalence of platform work swings by a factor of three to nine depending only on the reference period chosen, falling from 5.7 per cent of Norway's working-age population over a year to 1.5 per cent over a month.",
+    "stance": "supports",
+    "stance_target": "The position that platform and creator participation figures are highly sensitive to recall window, so headline participation rates are not comparable unless the reference period is stated",
+    "evidence_type": "statistical",
+    "scope_conditions": "Norway, Denmark, Switzerland, Singapore, United States, Chile; national labour force surveys compiled by the ILO, February 2026; broad-scope definitions include e-commerce and online rentals; all reported countries are high-income and none are in Southeast Asia except Singapore",
+    "quoted_support": "estimates in other countries range from 0.9 per cent (Switzerland) to 5.4 per cent (Denmark) when using the past year as the reference period. The per cent of workers engaged on these platforms declines when the reference period is for the last month, dropping to between 0.6 per cent (Denmark) and 1.5 per cent (Norway).",
+    "numbers": ["5.7 percent Norway past year", "1.5 percent Norway past month", "5.4 percent Denmark past year", "0.6 percent Denmark past month", "0.9 percent Switzerland", "0.2 to 2.8 percent narrow definition past year", "1 percent US to 3.1 percent Chile past week"],
+    "entities": ["ILO", "Norway", "Denmark", "Switzerland", "Singapore", "United States", "Chile"],
+    "time_period": "compiled February 2026",
+    "region": "High-income countries; Singapore is the only Southeast Asian case",
+    "confidence": "high",
+    "source_note_id": "ilo-brief"
+  },
+  {
+    "claim": "Most platforms do not publicly disclose the number of active workers using their services, which is the root reason no direct measurement of platform attrition exists.",
+    "stance": "supports",
+    "stance_target": "The position that creator and platform-worker survival rates must be inferred from proxies because the platforms that hold the telemetry do not release it",
+    "evidence_type": "empirical",
+    "scope_conditions": "Global; ILO statement as of February 2026; applies to external contractors mediated by platforms rather than directly-employed platform staff",
+    "quoted_support": "Estimating the number of workers in this latter category is particularly difficult due to a lack of data, as most platforms do not publicly disclose the number of active workers utilising their services.",
+    "numbers": ["749 of 777 platforms (96 per cent) had directly-hired employee data in ILO 2021"],
+    "entities": ["ILO", "OECD", "Eurostat"],
+    "time_period": "February 2026",
+    "region": "Global",
+    "confidence": "high",
+    "source_note_id": "ilo-brief"
+  }
+]

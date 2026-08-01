@@ -1,0 +1,72 @@
+[
+  {
+    "claim": "The living wage in developing Asia is USD 254.28 per month anchored on the absolute poverty line and USD 414.88 per month anchored on the moderate poverty line, so a Southeast Asian creator clears a living wage at roughly one order of magnitude less income than US-benchmarked creator studies assume.",
+    "stance": "refutes",
+    "stance_target": "The practice of applying US or Western living-wage thresholds when reporting what share of creators 'earn a living' in Southeast Asian markets",
+    "evidence_type": "statistical",
+    "scope_conditions": "Developing Asia (Bangladesh, Cambodia, India, Indonesia, Malaysia, Nepal, Pakistan, Philippines, Sri Lanka, Thailand, Viet Nam); estimates published 2019; anchored on 2011-PPP World Bank poverty lines of USD 1.90 and USD 3.20 per day",
+    "quoted_support": "Living wage rates for developing Asia were estimated at USD 254.28 per month for Option 1 (i.e., anchored on the absolute poverty line) and USD 414.88 per month for Option 2 (i.e., anchored on the moderate poverty line).",
+    "numbers": ["USD 254.28/month Option 1", "USD 414.88/month Option 2", "USD 1.90/day absolute poverty line", "USD 3.20/day moderate poverty line", "+10% for savings", "family of four", "48 hours/week cap"],
+    "entities": ["Asian Development Bank Institute", "Sameer Khatiwada", "John Paul Flaminiano", "World Bank", "Anker (2006)"],
+    "time_period": "Published April 2019, thresholds based on World Bank 2018 poverty lines",
+    "region": "Developing Asia, including Indonesia, Philippines, Thailand, Viet Nam, Malaysia, Cambodia",
+    "confidence": "high",
+    "source_note_id": "adbi-working-paper-series"
+  },
+  {
+    "claim": "Living-wage attainment in developing Asia varies from 4% to 78% by sector, showing that 'what share earns a living wage' is a sector-and-country question rather than a universal benchmark.",
+    "stance": "supports",
+    "stance_target": "The claim that living-wage attainment rates must be reported with sector, country and year, because the same threshold produces wildly different pass rates across contexts",
+    "evidence_type": "statistical",
+    "scope_conditions": "Authors' calculations on national Labour Force Survey microdata; Bangladesh 2010 (HIES), India 2012, Indonesia 2014, Nepal 2008, Pakistan 2013, Philippines 2013, Sri Lanka 2014, Thailand 2010, Viet Nam 2013; wage workers only, excludes self-employed",
+    "quoted_support": "Only 28% of wage workers in agriculture earn at least the Option 1 living wage ... About 78% of wage workers in government services earn at least living wage Option 1, and 63% earn at least living wage Option 2. In business services, 73% of wage workers earn at least Option 1, and 53% earn at least Option 2.",
+    "numbers": ["agriculture 28% Option 1", "agriculture 4% Option 2", "government services 78% / 63%", "business services 73% / 53%", "services ~40% of total employment", "9 countries", "data years 2008-2014"],
+    "entities": ["Asian Development Bank Institute", "Indonesia", "Philippines", "Thailand", "Viet Nam"],
+    "time_period": "Survey microdata 2008-2014, published 2019",
+    "region": "Developing Asia",
+    "confidence": "high",
+    "source_note_id": "adbi-working-paper-series"
+  },
+  {
+    "claim": "Informal employment is the majority condition in most Southeast Asian labour markets -- over 70% of non-agricultural employment in Indonesia and the Philippines, over 60% in Viet Nam, 38% in Thailand -- so creator self-employment is not an anomalous departure from a formal-job norm the way it is in the US.",
+    "stance": "refutes",
+    "stance_target": "The Western framing that treats creator work as uniquely precarious relative to a baseline of formal salaried employment",
+    "evidence_type": "statistical",
+    "scope_conditions": "ILO statistics, latest available as of 2018; PRC figure from 2015 covering only six urban cities; Bangladesh from 2010 LFS; Cambodia from 2006; non-agricultural employment only",
+    "quoted_support": "Informality is also well over 70% in Pakistan, Indonesia, and the Philippines. In addition, over 60% of workers in non-agriculture sectors in Viet Nam and Sri Lanka are informal. Among the sample of ten economies in developing Asia, only Thailand (38%) and the PRC (33%) have less than half of their respective non-agriculture workforces in informal employment.",
+    "numbers": ["Bangladesh 87%", "India 85%", "Cambodia 85%", "Indonesia >70%", "Philippines >70%", "Pakistan >70%", "Viet Nam >60%", "Sri Lanka >60%", "Thailand 38%", "PRC 33%", "10 economies"],
+    "entities": ["ILO", "Indonesia", "Philippines", "Viet Nam", "Thailand", "Cambodia"],
+    "time_period": "Latest available as of 2018 (ranging 2006-2018 by country)",
+    "region": "Developing Asia including Southeast Asia",
+    "confidence": "high",
+    "source_note_id": "adbi-working-paper-series"
+  },
+  {
+    "claim": "Informal-sector workers in developing Asia earn between one-fifth and two-thirds of formal-sector wages, and in none of eight economies studied did informal average wages reach two-thirds of formal wages -- setting the realistic income counterfactual for a Southeast Asian creator who quits.",
+    "stance": "supports",
+    "stance_target": "The claim that the opportunity cost of creator work differs fundamentally between Southeast Asia and the US, altering the rational quit threshold",
+    "evidence_type": "statistical",
+    "scope_conditions": "Eight developing Asian economies; compiled from country studies of various years (Infran 2008 Pakistan, Guifu and Shigeyuki 2009 PRC, Viet 2010 Viet Nam, Gunatilaka 2008 Sri Lanka, ADB 2011 Indonesia, Dasgupta et al. 2015 Thailand, Unni 2005 India); Indonesian figures from 2009 Yogyakarta and Banten only",
+    "quoted_support": "In the sample of eight developing Asian economies, none of the average wages of workers in the informal sector even reached two-thirds of what their counterparts earned in the formal sector.",
+    "numbers": ["Bangladesh informal = ~1/5 of formal", "India and Thailand informal < 1/2 of formal", "8 economies", "none above 2/3"],
+    "entities": ["ILO", "Bangladesh", "India", "Thailand", "Indonesia", "Viet Nam"],
+    "time_period": "Country studies 2005-2015",
+    "region": "Developing Asia",
+    "confidence": "medium",
+    "source_note_id": "adbi-working-paper-series"
+  },
+  {
+    "claim": "Average household size in Southeast Asian countries ranges from 3.8 (Thailand, Viet Nam) to 4.6 (Philippines), and the ADB living wage assumes one earner supports a family of four at 48 hours per week -- so per-creator income thresholds implicitly encode a dependency assumption that single-earner creator studies rarely state.",
+    "stance": "neutral",
+    "stance_target": "Making explicit the household assumptions buried in any 'living wage' creator statistic",
+    "evidence_type": "statistical",
+    "scope_conditions": "Various country Household Income and Expenditure Surveys; work hours from latest-year household surveys, Indonesia 2013, Malaysia 2014, Philippines 2014, Thailand 2014, Viet Nam 2014",
+    "quoted_support": "This paper assumes an average family size of four. By multiplying the cost of basic living by 4, this implicitly assumes that the living wage should be enough to support a family of four, consisting of two adults and two children",
+    "numbers": ["Thailand 3.8", "Viet Nam 3.8", "Indonesia 4.5", "Philippines 4.6", "Cambodia 4.6", "Malaysia 4.2", "Pakistan 6.7", "Indonesia 37 hrs worked vs 40 statutory", "Philippines 40.8 vs 48", "Thailand 44.9 vs 48", "Viet Nam 43 vs 48"],
+    "entities": ["ILO Working Conditions Laws Database", "Thailand", "Viet Nam", "Indonesia", "Philippines", "Malaysia"],
+    "time_period": "Household survey data 2006-2015",
+    "region": "Developing Asia",
+    "confidence": "high",
+    "source_note_id": "adbi-working-paper-series"
+  }
+]

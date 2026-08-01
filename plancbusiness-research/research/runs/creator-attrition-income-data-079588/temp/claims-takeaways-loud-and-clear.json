@@ -1,0 +1,44 @@
+[
+  {
+    "claim": "Eight in ten artists who crossed the $100,000 Spotify-royalty threshold in 2022 have remained above that threshold every year since (through 2025) -- a genuine platform-disclosed cohort-retention figure, defined by earnings tier rather than by activity/survival.",
+    "stance": "supports",
+    "stance_target": "genuine platform-disclosed creator cohort-retention figures exist, but only in earnings-tier form, not participation/survival form",
+    "evidence_type": "statistical",
+    "scope_conditions": "Spotify-royalty-earning recording artists only; 2022 cohort tracked through 2025 (annual official transparency report, not an SEC filing)",
+    "quoted_support": "Eight in ten artists who crossed the $100K threshold in 2022 have remained above it every year since.",
+    "numbers": ["80% (eight in ten)", "$100,000 threshold", "2022 cohort", "3-year retention window (2022-2025)"],
+    "entities": ["Spotify", "Loud & Clear"],
+    "time_period": "2022-2025",
+    "region": "global",
+    "confidence": "high",
+    "source_note_id": "takeaways-loud-and-clear"
+  },
+  {
+    "claim": "Artists added to Spotify's 'Fresh Finds' emerging-artist playlist have, on average, more than doubled their royalties in the year after being added compared to the year before, and this pattern has held for every annual cohort since at least 2020.",
+    "stance": "neutral",
+    "stance_target": "cohort-level earnings growth (not survival) has been consistently disclosed by Spotify across multiple annual cohorts",
+    "evidence_type": "statistical",
+    "scope_conditions": "Spotify Fresh Finds playlist artists, cohorts from 2020 onward",
+    "quoted_support": "Fresh Finds artists collectively more than double their royalties in the year after being added, compared to the year before. That pattern has held for every annual cohort since at least 2020.",
+    "numbers": ["100%+ royalty growth year-over-year", "cohorts since 2020"],
+    "entities": ["Spotify", "Fresh Finds"],
+    "time_period": "2020-2025",
+    "region": "global",
+    "confidence": "medium",
+    "source_note_id": "takeaways-loud-and-clear"
+  },
+  {
+    "claim": "In 2025, 13,800+ artists generated at least $100,000 in Spotify royalties (up ~1,400 year-over-year), 1,500+ generated over $1 million, and 80+ generated over $10 million annually from Spotify alone; the 100,000th-highest-earning artist made about $7,300 in 2025 versus about $350 in 2015.",
+    "stance": "neutral",
+    "stance_target": "scale and distribution of the Spotify artist-earnings pyramid, as headline counts rather than retention figures",
+    "evidence_type": "statistical",
+    "scope_conditions": "global Spotify royalty payouts, 2015 vs 2025",
+    "quoted_support": "In 2025, there were more than 13,800 artists who generated at least $100,000 a year from Spotify alone... In 2025, the 100,000th highest-earning artist generated more than $7,300 in royalties from Spotify alone. In 2015, the artist in that same position generated about $350.",
+    "numbers": ["13,800+ artists at $100K+ (2025)", "1,500+ at $1M+", "80+ at $10M+", "$7,300 for 100,000th artist (2025)", "$350 for 100,000th artist (2015)"],
+    "entities": ["Spotify"],
+    "time_period": "2015-2025",
+    "region": "global",
+    "confidence": "high",
+    "source_note_id": "takeaways-loud-and-clear"
+  }
+]

@@ -1,0 +1,914 @@
+{
+  "slug": "funtech",
+  "url": "https://ci.funtech.inc/en",
+  "name": "FUNTECH Brand Identity",
+  "country": "Japan",
+  "viewport": {
+    "width": 1440,
+    "height": 900
+  },
+  "ok": true,
+  "httpStatus": 200,
+  "finalUrl": "https://ci.funtech.inc/en",
+  "consentDismissed": [],
+  "scrollInfo": {
+    "contentHeight": 4169,
+    "docScrollHeight": 900,
+    "maxElementBottom": 4169,
+    "innerScrollerHeight": 2682,
+    "virtualScroll": true
+  },
+  "document": {
+    "scrollHeight": 900,
+    "vhMultiple": 4.63,
+    "textNodeCount": 195,
+    "canvasCount": 3,
+    "elementCount": 807,
+    "title": "FUNTECH BRAND IDENTITY",
+    "lang": "en",
+    "contentHeight": 4169,
+    "scrollMode": "virtual (transformed wrapper / JS scroller)"
+  },
+  "container": {
+    "dominantPairs": [
+      {
+        "width": 10662,
+        "left": -285,
+        "count": 7,
+        "sample": {
+          "tag": "span",
+          "cls": "font-black whitespace-nowrap leading-none"
+        }
+      },
+      {
+        "width": 10662,
+        "left": 10669,
+        "count": 7,
+        "sample": {
+          "tag": "span",
+          "cls": "font-black whitespace-nowrap leading-none"
+        }
+      },
+      {
+        "width": 148,
+        "left": 43,
+        "count": 1,
+        "sample": {
+          "tag": "span",
+          "cls": "min-w-0 truncate text-foreground transition-colors transitio"
+        }
+      },
+      {
+        "width": 196,
+        "left": 410,
+        "count": 1,
+        "sample": {
+          "tag": "span",
+          "cls": "min-w-0 truncate text-foreground transition-colors transitio"
+        }
+      }
+    ],
+    "containerChain": {
+      "chain": [
+        {
+          "tag": "span",
+          "cls": "font-black whitespace-nowrap leading-none",
+          "width": 10661.6,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "block"
+        },
+        {
+          "tag": "div",
+          "cls": "",
+          "width": 21242.07,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "flex"
+        },
+        {
+          "tag": "div",
+          "cls": "",
+          "width": 2008.16,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "block"
+        },
+        {
+          "tag": "div",
+          "cls": "w-full",
+          "width": 2008.16,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "block"
+        },
+        {
+          "tag": "div",
+          "cls": "w-[140%]",
+          "width": 2008.16,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "block"
+        },
+        {
+          "tag": "div",
+          "cls": "absolute inset-0 flex flex-col items-center justify-center g",
+          "width": 1425,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "flex"
+        },
+        {
+          "tag": "div",
+          "cls": "pointer-events-none absolute inset-0 isolate overflow-hidden",
+          "width": 1425,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "block"
+        },
+        {
+          "tag": "div",
+          "cls": "fixed inset-0 z-[9999] isolate overflow-hidden bg-black text",
+          "width": 1425,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "block"
+        }
+      ],
+      "constrained": null
+    },
+    "grids": [
+      {
+        "columns": 3,
+        "columnGap": "12px",
+        "rowGap": "normal",
+        "width": 1385,
+        "template": "450.5px 460px 450.5px",
+        "count": 2
+      },
+      {
+        "columns": 4,
+        "columnGap": "12px",
+        "rowGap": "12px",
+        "width": 1323.84,
+        "template": "335.75px 335.75px 335.75px 335.75px",
+        "count": 1
+      }
+    ],
+    "bodyPaddingInline": "0px / 0px",
+    "bodyMaxWidth": "none",
+    "htmlPaddingInline": "0px / 0px"
+  },
+  "leftEdgeTest": {
+    "layout": {
+      "n": 14,
+      "mean": 506.07,
+      "stdDev": 385.57,
+      "distinctExact": 4,
+      "distinctClustered2px": 4,
+      "clusters": [
+        {
+          "at": 34,
+          "count": 4
+        },
+        {
+          "at": 382,
+          "count": 4
+        },
+        {
+          "at": 730,
+          "count": 3
+        },
+        {
+          "at": 1077,
+          "count": 3
+        }
+      ],
+      "values": [
+        34,
+        382,
+        730,
+        1077,
+        34,
+        382,
+        730,
+        1077,
+        34,
+        382,
+        730,
+        1077,
+        34,
+        382
+      ]
+    },
+    "rect": {
+      "n": 14,
+      "mean": 514.33,
+      "stdDev": 370.19,
+      "distinctExact": 4,
+      "distinctClustered2px": 4,
+      "clusters": [
+        {
+          "at": 61.26,
+          "count": 4
+        },
+        {
+          "at": 395.1,
+          "count": 4
+        },
+        {
+          "at": 728.94,
+          "count": 3
+        },
+        {
+          "at": 1062.78,
+          "count": 3
+        }
+      ],
+      "values": [
+        61.26,
+        395.1,
+        728.94,
+        1062.78,
+        61.26,
+        395.1,
+        728.94,
+        1062.78,
+        61.26,
+        395.1,
+        728.94,
+        1062.78,
+        61.26,
+        395.1
+      ]
+    },
+    "headings": {
+      "n": 14,
+      "mean": 506.07,
+      "stdDev": 385.57,
+      "distinctExact": 4,
+      "distinctClustered2px": 4,
+      "clusters": [
+        {
+          "at": 34,
+          "count": 4
+        },
+        {
+          "at": 382,
+          "count": 4
+        },
+        {
+          "at": 730,
+          "count": 3
+        },
+        {
+          "at": 1077,
+          "count": 3
+        }
+      ],
+      "values": [
+        34,
+        382,
+        730,
+        1077,
+        34,
+        382,
+        730,
+        1077,
+        34,
+        382,
+        730,
+        1077,
+        34,
+        382
+      ]
+    },
+    "sectionDiscovery": "tall-children-of-wrapper"
+  },
+  "sections": [
+    {
+      "index": 0,
+      "tag": "div",
+      "id": null,
+      "cls": "min-w-0 w-full",
+      "height": 226.42,
+      "vhFraction": 0.25,
+      "paddingBlockStart": "0px",
+      "paddingBlockEnd": "0px",
+      "marginBlockStart": "0px",
+      "marginBlockEnd": "0px",
+      "firstText": {
+        "layoutLeft": 34,
+        "rectLeft": 61.26,
+        "tag": "span",
+        "fontSize": "16px",
+        "text": "01."
+      },
+      "heading": {
+        "layoutLeft": 34,
+        "rectLeft": 61.26,
+        "tag": "span",
+        "fontSize": "16px",
+        "text": "01."
+      }
+    },
+    {
+      "index": 1,
+      "tag": "div",
+      "id": null,
+      "cls": "min-w-0 w-full",
+      "height": 226.42,
+      "vhFraction": 0.25,
+      "paddingBlockStart": "0px",
+      "paddingBlockEnd": "0px",
+      "marginBlockStart": "0px",
+      "marginBlockEnd": "0px",
+      "firstText": {
+        "layoutLeft": 382,
+        "rectLeft": 395.1,
+        "tag": "span",
+        "fontSize": "16px",
+        "text": "02."
+      },
+      "heading": {
+        "layoutLeft": 382,
+        "rectLeft": 395.1,
+        "tag": "span",
+        "fontSize": "16px",
+        "text": "02."
+      }
+    },
+    {
+      "index": 2,
+      "tag": "div",
+      "id": null,
+      "cls": "min-w-0 w-full",
+      "height": 226.42,
+      "vhFraction": 0.25,
+      "paddingBlockStart": "0px",
+      "paddingBlockEnd": "0px",
+      "marginBlockStart": "0px",
+      "marginBlockEnd": "0px",
+      "firstText": {
+        "layoutLeft": 730,
+        "rectLeft": 728.94,
+        "tag": "span",
+        "fontSize": "16px",
+        "text": "03."
+      },
+      "heading": {
+        "layoutLeft": 730,
+        "rectLeft": 728.94,
+        "tag": "span",
+        "fontSize": "16px",
+        "text": "03."
+      }
+    },
+    {
+      "index": 3,
+      "tag": "div",
+      "id": null,
+      "cls": "min-w-0 w-full",
+      "height": 226.42,
+      "vhFraction": 0.25,
+      "paddingBlockStart": "0px",
+      "paddingBlockEnd": "0px",
+      "marginBlockStart": "0px",
+      "marginBlockEnd": "0px",
+      "firstText": {
+        "layoutLeft": 1077,
+        "rectLeft": 1062.78,
+        "tag": "span",
+        "fontSize": "16px",
+        "text": "04."
+      },
+      "heading": {
+        "layoutLeft": 1077,
+        "rectLeft": 1062.78,
+        "tag": "span",
+        "fontSize": "16px",
+        "text": "04."
+      }
+    },
+    {
+      "index": 4,
+      "tag": "div",
+      "id": null,
+      "cls": "min-w-0 w-full",
+      "height": 226.43,
+      "vhFraction": 0.25,
+      "paddingBlockStart": "0px",
+      "paddingBlockEnd": "0px",
+      "marginBlockStart": "0px",
+      "marginBlockEnd": "0px",
+      "firstText": {
+        "layoutLeft": 34,
+        "rectLeft": 61.26,
+        "tag": "span",
+        "fontSize": "16px",
+        "text": "05."
+      },
+      "heading": {
+        "layoutLeft": 34,
+        "rectLeft": 61.26,
+        "tag": "span",
+        "fontSize": "16px",
+        "text": "05."
+      }
+    },
+    {
+      "index": 5,
+      "tag": "div",
+      "id": null,
+      "cls": "min-w-0 w-full",
+      "height": 226.43,
+      "vhFraction": 0.25,
+      "paddingBlockStart": "0px",
+      "paddingBlockEnd": "0px",
+      "marginBlockStart": "0px",
+      "marginBlockEnd": "0px",
+      "firstText": {
+        "layoutLeft": 382,
+        "rectLeft": 395.1,
+        "tag": "span",
+        "fontSize": "16px",
+        "text": "06."
+      },
+      "heading": {
+        "layoutLeft": 382,
+        "rectLeft": 395.1,
+        "tag": "span",
+        "fontSize": "16px",
+        "text": "06."
+      }
+    },
+    {
+      "index": 6,
+      "tag": "div",
+      "id": null,
+      "cls": "min-w-0 w-full",
+      "height": 226.43,
+      "vhFraction": 0.25,
+      "paddingBlockStart": "0px",
+      "paddingBlockEnd": "0px",
+      "marginBlockStart": "0px",
+      "marginBlockEnd": "0px",
+      "firstText": {
+        "layoutLeft": 730,
+        "rectLeft": 728.94,
+        "tag": "span",
+        "fontSize": "16px",
+        "text": "07."
+      },
+      "heading": {
+        "layoutLeft": 730,
+        "rectLeft": 728.94,
+        "tag": "span",
+        "fontSize": "16px",
+        "text": "07."
+      }
+    },
+    {
+      "index": 7,
+      "tag": "div",
+      "id": null,
+      "cls": "min-w-0 w-full",
+      "height": 226.43,
+      "vhFraction": 0.25,
+      "paddingBlockStart": "0px",
+      "paddingBlockEnd": "0px",
+      "marginBlockStart": "0px",
+      "marginBlockEnd": "0px",
+      "firstText": {
+        "layoutLeft": 1077,
+        "rectLeft": 1062.78,
+        "tag": "span",
+        "fontSize": "16px",
+        "text": "08."
+      },
+      "heading": {
+        "layoutLeft": 1077,
+        "rectLeft": 1062.78,
+        "tag": "span",
+        "fontSize": "16px",
+        "text": "08."
+      }
+    },
+    {
+      "index": 8,
+      "tag": "div",
+      "id": null,
+      "cls": "min-w-0 w-full",
+      "height": 226.42,
+      "vhFraction": 0.25,
+      "paddingBlockStart": "0px",
+      "paddingBlockEnd": "0px",
+      "marginBlockStart": "0px",
+      "marginBlockEnd": "0px",
+      "firstText": {
+        "layoutLeft": 34,
+        "rectLeft": 61.26,
+        "tag": "span",
+        "fontSize": "16px",
+        "text": "09."
+      },
+      "heading": {
+        "layoutLeft": 34,
+        "rectLeft": 61.26,
+        "tag": "span",
+        "fontSize": "16px",
+        "text": "09."
+      }
+    },
+    {
+      "index": 9,
+      "tag": "div",
+      "id": null,
+      "cls": "min-w-0 w-full",
+      "height": 226.42,
+      "vhFraction": 0.25,
+      "paddingBlockStart": "0px",
+      "paddingBlockEnd": "0px",
+      "marginBlockStart": "0px",
+      "marginBlockEnd": "0px",
+      "firstText": {
+        "layoutLeft": 382,
+        "rectLeft": 395.1,
+        "tag": "span",
+        "fontSize": "16px",
+        "text": "10."
+      },
+      "heading": {
+        "layoutLeft": 382,
+        "rectLeft": 395.1,
+        "tag": "span",
+        "fontSize": "16px",
+        "text": "10."
+      }
+    },
+    {
+      "index": 10,
+      "tag": "div",
+      "id": null,
+      "cls": "min-w-0 w-full",
+      "height": 226.42,
+      "vhFraction": 0.25,
+      "paddingBlockStart": "0px",
+      "paddingBlockEnd": "0px",
+      "marginBlockStart": "0px",
+      "marginBlockEnd": "0px",
+      "firstText": {
+        "layoutLeft": 730,
+        "rectLeft": 728.94,
+        "tag": "span",
+        "fontSize": "16px",
+        "text": "11."
+      },
+      "heading": {
+        "layoutLeft": 730,
+        "rectLeft": 728.94,
+        "tag": "span",
+        "fontSize": "16px",
+        "text": "11."
+      }
+    },
+    {
+      "index": 11,
+      "tag": "div",
+      "id": null,
+      "cls": "min-w-0 w-full",
+      "height": 226.42,
+      "vhFraction": 0.25,
+      "paddingBlockStart": "0px",
+      "paddingBlockEnd": "0px",
+      "marginBlockStart": "0px",
+      "marginBlockEnd": "0px",
+      "firstText": {
+        "layoutLeft": 1077,
+        "rectLeft": 1062.78,
+        "tag": "span",
+        "fontSize": "16px",
+        "text": "12."
+      },
+      "heading": {
+        "layoutLeft": 1077,
+        "rectLeft": 1062.78,
+        "tag": "span",
+        "fontSize": "16px",
+        "text": "12."
+      }
+    },
+    {
+      "index": 12,
+      "tag": "div",
+      "id": null,
+      "cls": "min-w-0 w-full",
+      "height": 226.42,
+      "vhFraction": 0.25,
+      "paddingBlockStart": "0px",
+      "paddingBlockEnd": "0px",
+      "marginBlockStart": "0px",
+      "marginBlockEnd": "0px",
+      "firstText": {
+        "layoutLeft": 34,
+        "rectLeft": 61.26,
+        "tag": "span",
+        "fontSize": "16px",
+        "text": "13."
+      },
+      "heading": {
+        "layoutLeft": 34,
+        "rectLeft": 61.26,
+        "tag": "span",
+        "fontSize": "16px",
+        "text": "13."
+      }
+    },
+    {
+      "index": 13,
+      "tag": "div",
+      "id": null,
+      "cls": "min-w-0 w-full",
+      "height": 226.42,
+      "vhFraction": 0.25,
+      "paddingBlockStart": "0px",
+      "paddingBlockEnd": "0px",
+      "marginBlockStart": "0px",
+      "marginBlockEnd": "0px",
+      "firstText": {
+        "layoutLeft": 382,
+        "rectLeft": 395.1,
+        "tag": "span",
+        "fontSize": "16px",
+        "text": "14."
+      },
+      "heading": {
+        "layoutLeft": 382,
+        "rectLeft": 395.1,
+        "tag": "span",
+        "fontSize": "16px",
+        "text": "14."
+      }
+    }
+  ],
+  "verticalRhythm": {
+    "sectionCount": 14,
+    "near100vhCount": 0,
+    "near100vhPct": 0,
+    "strictGcdOfSpacing": 2,
+    "baseUnitEstimate80pct": 4,
+    "spacingHistogram": [
+      {
+        "value": 8,
+        "count": 48
+      },
+      {
+        "value": 16,
+        "count": 15
+      },
+      {
+        "value": 4,
+        "count": 12
+      },
+      {
+        "value": 12,
+        "count": 9
+      },
+      {
+        "value": 6,
+        "count": 3
+      },
+      {
+        "value": 24,
+        "count": 2
+      },
+      {
+        "value": 56,
+        "count": 1
+      }
+    ],
+    "spacingSampleSize": 90
+  },
+  "typeScale": {
+    "distinctFontSizeCount": 9,
+    "distinctFontSizeCount_used2plus": 9,
+    "distinctSizes": [
+      {
+        "size": 313.5,
+        "count": 14
+      },
+      {
+        "size": 265.98,
+        "count": 12
+      },
+      {
+        "size": 24,
+        "count": 2
+      },
+      {
+        "size": 18,
+        "count": 3
+      },
+      {
+        "size": 16,
+        "count": 28
+      },
+      {
+        "size": 15,
+        "count": 9
+      },
+      {
+        "size": 14,
+        "count": 57
+      },
+      {
+        "size": 13,
+        "count": 2
+      },
+      {
+        "size": 12,
+        "count": 28
+      }
+    ],
+    "scaleSizesDesc": [
+      313.5,
+      265.98,
+      24,
+      18,
+      16,
+      15,
+      14,
+      13,
+      12
+    ],
+    "consecutiveRatios": [
+      1.18,
+      11.08,
+      1.33,
+      1.13,
+      1.07,
+      1.07,
+      1.08,
+      1.08
+    ],
+    "roles": {
+      "h1": null,
+      "biggestText": {
+        "tag": "span",
+        "fontSize": 313.5,
+        "fontWeight": "900",
+        "lineHeightPx": 313.5,
+        "lineHeightRatio": 1,
+        "letterSpacing": "0px",
+        "letterSpacingEm": 0,
+        "fontFamily": "elevon",
+        "fontFamilyFull": "elevon, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, \"Noto Sans\", \"Apple Color ",
+        "textTransform": "none",
+        "color": "rgb(242, 238, 235)",
+        "widthPx": 10661.6,
+        "text": "FUNTECHBRANDIDENTITYFUNTECHBRANDIDENTITY"
+      },
+      "h2All": [],
+      "h3": null,
+      "body": null,
+      "small": {
+        "tag": "span",
+        "fontSize": 12,
+        "fontWeight": "600",
+        "lineHeightPx": 12,
+        "lineHeightRatio": 1,
+        "letterSpacing": "0px",
+        "letterSpacingEm": 0,
+        "fontFamily": "proxima-nova",
+        "fontFamilyFull": "proxima-nova, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, \"Noto Sans\", \"Apple ",
+        "textTransform": "none",
+        "color": "rgb(242, 238, 235)",
+        "widthPx": 34.81,
+        "text": "HOME"
+      },
+      "mono": null
+    },
+    "readingMeasure": null,
+    "readingMeasureAlternates": [],
+    "distinctFontFamilyCount": 2,
+    "fontFamilies": [
+      {
+        "family": "elevon",
+        "count": 85
+      },
+      {
+        "family": "proxima-nova",
+        "count": 70
+      }
+    ]
+  },
+  "color": {
+    "textColors": [
+      {
+        "value": "rgb(255,72,27)",
+        "count": 85
+      },
+      {
+        "value": "rgb(242,238,235)",
+        "count": 66
+      },
+      {
+        "value": "oklab(0.9513710.003027920.00511611/0.5)",
+        "count": 2
+      },
+      {
+        "value": "rgb(28,29,30)",
+        "count": 2
+      }
+    ],
+    "backgroundColors": [
+      {
+        "value": "rgb(255,72,27)",
+        "count": 37
+      },
+      {
+        "value": "oklab(0.9513710.003027920.00511611/0.1)",
+        "count": 14
+      },
+      {
+        "value": "rgb(28,29,30)",
+        "count": 13
+      },
+      {
+        "value": "oklab(0.9999940.00004556780.0000200868/0.15)",
+        "count": 6
+      },
+      {
+        "value": "rgb(242,238,235)",
+        "count": 2
+      },
+      {
+        "value": "rgb(0,0,0)",
+        "count": 2
+      }
+    ],
+    "distinctTextColorCount": 4,
+    "distinctBgColorCount": 6
+  },
+  "persistent": {
+    "fixedOrSticky": [
+      {
+        "tag": "div",
+        "cls": "fixed inset-0 z-[9000] bg-background transition-opacity will",
+        "position": "fixed",
+        "rect": {
+          "top": 0,
+          "left": 0,
+          "width": 1425,
+          "height": 900
+        },
+        "zIndex": "9000",
+        "text": "",
+        "opacity": "0"
+      },
+      {
+        "tag": "div",
+        "cls": "fixed inset-0 z-[9999] isolate overflow-hidden bg-black text",
+        "position": "fixed",
+        "rect": {
+          "top": 0,
+          "left": 0,
+          "width": 1425,
+          "height": 900
+        },
+        "zIndex": "9999",
+        "text": "FUNTECHBRANDIDENTITYFUNTECHBRANDIDENTITYFUNTECHBRANDIDENTITY",
+        "opacity": "1"
+      }
+    ]
+  },
+  "nav": null,
+  "navState": {
+    "at0": null,
+    "at2000": null
+  },
+  "shots": [
+    "funtech-1440-full.jpg",
+    "funtech-1440-scroll000.jpg",
+    "funtech-1440-scroll010.jpg",
+    "funtech-1440-scroll020.jpg",
+    "funtech-1440-scroll030.jpg",
+    "funtech-1440-scroll040.jpg",
+    "funtech-1440-scroll050.jpg",
+    "funtech-1440-scroll060.jpg",
+    "funtech-1440-scroll070.jpg",
+    "funtech-1440-scroll080.jpg",
+    "funtech-1440-scroll090.jpg",
+    "funtech-1440-scroll100.jpg"
+  ],
+  "fullPageShotRepresentative": false,
+  "pageErrors": []
+}

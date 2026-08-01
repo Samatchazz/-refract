@@ -1,0 +1,44 @@
+[
+ {
+  "claim": "The Vero Southeast Asia influencer study, the region's only multi-country creator-side survey in this corpus, is based on a sample of fewer than 150 influencers spread across five countries, meaning each country cell contains roughly 30 respondents.",
+  "stance": "supports",
+  "stance_target": "The position that Southeast Asian creator-economy percentages circulating in trade press rest on samples far too small to support the country-level comparisons drawn from them",
+  "evidence_type": "empirical",
+  "scope_conditions": "Sample size disclosed only in NetInfluencer's trade-press write-up, not in Vero's own white paper; countries are Indonesia, Philippines, Singapore, Thailand, Vietnam; published c. late 2024",
+  "quoted_support": "The report, based on a survey of nearly 150 influencers in Indonesia, the Philippines, Singapore, Thailand, and Vietnam across ages, experiences, niches, and follower bases, reveals that brand sponsorships now constitute 90% of influencer income in the region.",
+  "numbers": ["nearly 150 influencers", "5 countries", "~30 per country", "90% of influencer income from brand sponsorships"],
+  "entities": ["Vero", "NetInfluencer", "Indonesia", "Philippines", "Singapore", "Thailand", "Vietnam"],
+  "time_period": "c. 2024, reported for 2025",
+  "region": "Southeast Asia (5 countries)",
+  "confidence": "high",
+  "source_note_id": "southeast-asian-influencer-market-set-for-double-digit-growth-through-2027"
+ },
+ {
+  "claim": "Southeast Asia's influencer marketing segment is reported to be growing at a 10.83% compound annual growth rate against a global influencer advertising market projected to reach USD 480 billion by 2027.",
+  "stance": "neutral",
+  "stance_target": "The position that SEA creator-economy reporting measures market size and brand spend while leaving creator headcount, survival, and earnings distribution unmeasured",
+  "evidence_type": "statistical",
+  "scope_conditions": "Projection, not measurement; attributed to Vero; no model, base year, or methodology disclosed; through 2027",
+  "quoted_support": "The Southeast Asian influencer marketing segment is growing at a 10.83% compound annual growth rate as the global market heads toward $480 billion by 2027, according to new research from Vero.",
+  "numbers": ["10.83% CAGR", "USD 480 billion by 2027", "72% increase in sponsored content requests", "USD 426.7 million Thailand UGC market by 2028"],
+  "entities": ["Vero", "Grand View Research", "Thailand"],
+  "time_period": "2024-2028 projections",
+  "region": "Southeast Asia / global",
+  "confidence": "low",
+  "source_note_id": "southeast-asian-influencer-market-set-for-double-digit-growth-through-2027"
+ },
+ {
+  "claim": "Instagram is the most-active platform for 78% of Southeast Asian influencers while 81% maintain a TikTok presence, with AI (36%) and social commerce (33%) named as the leading disruptive forces.",
+  "stance": "neutral",
+  "stance_target": "The position that SEA creator platform mix differs from the single-platform Western datasets on which attrition and income findings are built",
+  "evidence_type": "statistical",
+  "scope_conditions": "N of nearly 150 across 5 SEA countries; self-reported; c. 2024",
+  "quoted_support": "Instagram leads as the primary platform choice, with 78% of Southeast Asian influencers reporting it as their most active channel. [...] The research shows 81% of regional influencers maintain a presence on the platform.",
+  "numbers": ["78% Instagram most active", "81% TikTok presence", "34% storytelling", "36% AI", "33% social commerce"],
+  "entities": ["Instagram", "TikTok", "Vero"],
+  "time_period": "c. 2024, projecting 2025",
+  "region": "Southeast Asia (5 countries)",
+  "confidence": "medium",
+  "source_note_id": "southeast-asian-influencer-market-set-for-double-digit-growth-through-2027"
+ }
+]

@@ -1,0 +1,58 @@
+[
+  {
+    "claim": "A vendor survey (MYCreator Pulse Report 2026, commissioned by VoxEureka, fielded by Vase.ai) of n=489 Malaysian content creators across five follower tiers found only 34% have filed income tax and intend to continue doing so.",
+    "stance": "supports",
+    "stance_target": "income distribution / formalization among Southeast Asian creators",
+    "evidence_type": "statistical",
+    "scope_conditions": "Malaysia, all follower tiers, fielded online 11-21 May 2026 by Vase.ai, n=489",
+    "quoted_support": "Only 34 per cent of the content creators polled have filed income tax and intend to continue doing so.",
+    "numbers": ["n=489", "34%"],
+    "entities": ["Malaysia", "VoxEureka", "Vase.ai", "MYCreator Pulse Report 2026"],
+    "time_period": "May 2026 fielding",
+    "region": "Malaysia",
+    "confidence": "medium",
+    "source_note_id": "nothing-comes-free-study-finds-only-34pc-of-malaysian-content-creators-file-inco"
+  },
+  {
+    "claim": "In the same Malaysian creator survey, in-kind compensation (free products/gifts) constitutes 46% of overall income sources, exceeding direct cash payments at 43%, and 70% of creators cite free products/gifts as their main form of compensation.",
+    "stance": "supports",
+    "stance_target": "income distribution and composition among Southeast Asian creators",
+    "evidence_type": "statistical",
+    "scope_conditions": "Malaysia, n=489, 2026",
+    "quoted_support": "The report also said free products accounted for 46 per cent of a content creator's overall income sources, higher than direct cash payments, which stood at 43 per cent.",
+    "numbers": ["46% in-kind income share", "43% cash income share", "70% citing gifts as main compensation"],
+    "entities": ["Malaysia", "MYCreator Pulse Report 2026"],
+    "time_period": "2026",
+    "region": "Malaysia",
+    "confidence": "medium",
+    "source_note_id": "nothing-comes-free-study-finds-only-34pc-of-malaysian-content-creators-file-inco"
+  },
+  {
+    "claim": "The Malaysian creator survey found a steep tax-compliance gradient by audience size: among creators with fewer than 3,000 followers (nano tier), one in four were entirely unaware in-kind income is taxable and only 18% had filed taxes; among creators with over 100,000 followers, 91% were aware and 83% had filed -- roughly a 4.6x gap in filing rates between smallest and largest creators.",
+    "stance": "supports",
+    "stance_target": "income distribution and formalization disparities by creator scale in Southeast Asia",
+    "evidence_type": "statistical",
+    "scope_conditions": "Malaysia, n=489, tier-stratified, 2026",
+    "quoted_support": "Among creators with fewer than 3,000 followers, one in four were entirely unaware that in-kind income is taxable and only 18 per cent have filed. Among those with more than 100,000 followers, 91 per cent are fully aware and 83 per cent have filed.",
+    "numbers": ["25% unaware (nano tier)", "18% filed (nano tier)", "91% aware (>100k tier)", "83% filed (>100k tier)"],
+    "entities": ["Malaysia", "nano-tier creators", "MYCreator Pulse Report 2026"],
+    "time_period": "2026",
+    "region": "Malaysia",
+    "confidence": "medium",
+    "source_note_id": "nothing-comes-free-study-finds-only-34pc-of-malaysian-content-creators-file-inco"
+  },
+  {
+    "claim": "68% of surveyed Malaysian content creators have not registered a formal business entity despite actively earning from content creation, and 29% track their income only through spreadsheets, bank statements, or memory rather than formal bookkeeping.",
+    "stance": "supports",
+    "stance_target": "informality / lack of measurement infrastructure among Southeast Asian creators, relevant to why income data is hard to measure at all",
+    "evidence_type": "statistical",
+    "scope_conditions": "Malaysia, n=489, 2026",
+    "quoted_support": "Overall, 68 per cent of respondents polled have not registered a formal business entity despite actively earning from content creation. The report also found that 29 per cent lacked formal business practices and tracked their income only through spreadsheets, bank statements or memory.",
+    "numbers": ["68% no formal business entity", "29% no formal bookkeeping"],
+    "entities": ["Malaysia", "MYCreator Pulse Report 2026"],
+    "time_period": "2026",
+    "region": "Malaysia",
+    "confidence": "medium",
+    "source_note_id": "nothing-comes-free-study-finds-only-34pc-of-malaysian-content-creators-file-inco"
+  }
+]

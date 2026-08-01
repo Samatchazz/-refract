@@ -1,0 +1,949 @@
+{
+  "slug": "normalisboring",
+  "url": "https://normalisboring.es",
+  "name": "Normal is Boring",
+  "country": "Spain",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "ok": true,
+  "httpStatus": 200,
+  "finalUrl": "https://normalisboring.es/",
+  "consentDismissed": [
+    "Rechazar todo"
+  ],
+  "scrollInfo": {
+    "contentHeight": 11474,
+    "docScrollHeight": 844,
+    "maxElementBottom": 11474,
+    "innerScrollerHeight": 11474,
+    "virtualScroll": true
+  },
+  "document": {
+    "scrollHeight": 844,
+    "vhMultiple": 13.59,
+    "textNodeCount": 841,
+    "canvasCount": 0,
+    "elementCount": 1902,
+    "title": "Home - Normal is Boring",
+    "lang": "es",
+    "contentHeight": 11474,
+    "scrollMode": "virtual (transformed wrapper / JS scroller)"
+  },
+  "container": {
+    "dominantPairs": [
+      {
+        "width": 361,
+        "left": 14,
+        "count": 11,
+        "sample": {
+          "tag": "div",
+          "cls": ""
+        }
+      },
+      {
+        "width": 365,
+        "left": 0,
+        "count": 4,
+        "sample": {
+          "tag": "span",
+          "cls": ""
+        }
+      },
+      {
+        "width": 332,
+        "left": 29,
+        "count": 3,
+        "sample": {
+          "tag": "div",
+          "cls": "mod-scroll__terms__term__text__single"
+        }
+      },
+      {
+        "width": 365,
+        "left": 13,
+        "count": 2,
+        "sample": {
+          "tag": "p",
+          "cls": ""
+        }
+      },
+      {
+        "width": 194,
+        "left": 99,
+        "count": 2,
+        "sample": {
+          "tag": "span",
+          "cls": ""
+        }
+      },
+      {
+        "width": 138,
+        "left": 13,
+        "count": 1,
+        "sample": {
+          "tag": "div",
+          "cls": "mod-scroll__intro__copyright t-subtitulo f-izmir"
+        }
+      }
+    ],
+    "containerChain": {
+      "chain": [
+        {
+          "tag": "div",
+          "cls": "",
+          "width": 361.34,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "block"
+        },
+        {
+          "tag": "p",
+          "cls": "",
+          "width": 361.34,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "block"
+        },
+        {
+          "tag": "div",
+          "cls": "mod-scroll__images-text__text",
+          "width": 361.34,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "block"
+        },
+        {
+          "tag": "div",
+          "cls": "wrapper",
+          "width": 390,
+          "maxWidth": "none",
+          "paddingInline": "12.5px / 12.5px",
+          "marginInline": "0px / 0px",
+          "display": "flex"
+        },
+        {
+          "tag": "div",
+          "cls": "mod-scroll__images-text bg-black c-white ",
+          "width": 390,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "block"
+        },
+        {
+          "tag": "section",
+          "cls": "mod-scroll",
+          "width": 390,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "block"
+        },
+        {
+          "tag": "main",
+          "cls": "",
+          "width": 390,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "block"
+        },
+        {
+          "tag": "div",
+          "cls": "",
+          "width": 390,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "block"
+        }
+      ],
+      "constrained": null
+    },
+    "grids": [
+      {
+        "columns": 2,
+        "columnGap": "12.5px",
+        "rowGap": "0px",
+        "width": 365,
+        "template": "199.609px 152.484px",
+        "count": 1
+      }
+    ],
+    "bodyPaddingInline": "0px / 0px",
+    "bodyMaxWidth": "none",
+    "htmlPaddingInline": "0px / 0px"
+  },
+  "leftEdgeTest": {
+    "layout": {
+      "n": 5,
+      "mean": 88.6,
+      "stdDev": 95.98,
+      "distinctExact": 3,
+      "distinctClustered2px": 3,
+      "clusters": [
+        {
+          "at": 13,
+          "count": 3
+        },
+        {
+          "at": 162,
+          "count": 1
+        },
+        {
+          "at": 242,
+          "count": 1
+        }
+      ],
+      "values": [
+        13,
+        162,
+        13,
+        13,
+        242
+      ]
+    },
+    "rect": {
+      "n": 5,
+      "mean": 88.1,
+      "stdDev": 95.99,
+      "distinctExact": 3,
+      "distinctClustered2px": 3,
+      "clusters": [
+        {
+          "at": 12.5,
+          "count": 3
+        },
+        {
+          "at": 161.5,
+          "count": 1
+        },
+        {
+          "at": 241.52,
+          "count": 1
+        }
+      ],
+      "values": [
+        12.5,
+        161.5,
+        12.5,
+        12.5,
+        241.52
+      ]
+    },
+    "headings": {
+      "n": 5,
+      "mean": 67.8,
+      "stdDev": 87.81,
+      "distinctExact": 4,
+      "distinctClustered2px": 4,
+      "clusters": [
+        {
+          "at": 13,
+          "count": 2
+        },
+        {
+          "at": 28,
+          "count": 1
+        },
+        {
+          "at": 43,
+          "count": 1
+        },
+        {
+          "at": 242,
+          "count": 1
+        }
+      ],
+      "values": [
+        28,
+        43,
+        13,
+        13,
+        242
+      ]
+    },
+    "sectionDiscovery": "semantic-siblings"
+  },
+  "sections": [
+    {
+      "index": 0,
+      "tag": "section",
+      "id": null,
+      "cls": "mod-scroll",
+      "height": 9303.88,
+      "vhFraction": 11.02,
+      "paddingBlockStart": "0px",
+      "paddingBlockEnd": "0px",
+      "marginBlockStart": "0px",
+      "marginBlockEnd": "0px",
+      "firstText": {
+        "layoutLeft": 13,
+        "rectLeft": 12.5,
+        "tag": "div",
+        "fontSize": "10.8333px",
+        "text": "Normal is boring ©2025"
+      },
+      "heading": {
+        "layoutLeft": 28,
+        "rectLeft": 27.58,
+        "tag": "span",
+        "fontSize": "50px",
+        "text": "ELEGANCIA"
+      }
+    },
+    {
+      "index": 1,
+      "tag": "section",
+      "id": null,
+      "cls": "mod-title wrapper mod-title--chapter bg-beige c-black pt-md pb-sm anim",
+      "height": 243.17,
+      "vhFraction": 0.29,
+      "paddingBlockStart": "66.6667px",
+      "paddingBlockEnd": "41.6667px",
+      "marginBlockStart": "0px",
+      "marginBlockEnd": "0px",
+      "firstText": {
+        "layoutLeft": 162,
+        "rectLeft": 161.5,
+        "tag": "div",
+        "fontSize": "16.6667px",
+        "text": "(Contacta)"
+      },
+      "heading": {
+        "layoutLeft": 43,
+        "rectLeft": 42.61,
+        "tag": "div",
+        "fontSize": "48.3333px",
+        "text": "D"
+      }
+    },
+    {
+      "index": 2,
+      "tag": "section",
+      "id": null,
+      "cls": "mod-title wrapper mod-title--lines  bg-beige c-black none pb-md no-ani",
+      "height": 176.67,
+      "vhFraction": 0.21,
+      "paddingBlockStart": "0px",
+      "paddingBlockEnd": "66.6667px",
+      "marginBlockStart": "0px",
+      "marginBlockEnd": "0px",
+      "firstText": {
+        "layoutLeft": 13,
+        "rectLeft": 12.5,
+        "tag": "div",
+        "fontSize": "36.6667px",
+        "text": "Exclusividad En"
+      },
+      "heading": {
+        "layoutLeft": 13,
+        "rectLeft": 12.5,
+        "tag": "div",
+        "fontSize": "36.6667px",
+        "text": "Exclusividad En"
+      }
+    },
+    {
+      "index": 3,
+      "tag": "section",
+      "id": null,
+      "cls": "mod-content wrapper mod-content--cols bg-beige c-black none pb-md no-a",
+      "height": 295.03,
+      "vhFraction": 0.35,
+      "paddingBlockStart": "0px",
+      "paddingBlockEnd": "66.6667px",
+      "marginBlockStart": "0px",
+      "marginBlockEnd": "0px",
+      "firstText": {
+        "layoutLeft": 13,
+        "rectLeft": 12.5,
+        "tag": "p",
+        "fontSize": "16.6667px",
+        "text": "En Normal is Boring, nuestra prioridad es ofrece"
+      },
+      "heading": {
+        "layoutLeft": 13,
+        "rectLeft": 12.5,
+        "tag": "p",
+        "fontSize": "16.6667px",
+        "text": "En Normal is Boring, nuestra prioridad es ofrece"
+      }
+    },
+    {
+      "index": 4,
+      "tag": "section",
+      "id": null,
+      "cls": "mod-footer wrapper bg-beige c-black pt-xs pb-xs",
+      "height": 950.55,
+      "vhFraction": 1.13,
+      "paddingBlockStart": "16.6667px",
+      "paddingBlockEnd": "16.6667px",
+      "marginBlockStart": "0px",
+      "marginBlockEnd": "0px",
+      "firstText": {
+        "layoutLeft": 242,
+        "rectLeft": 241.52,
+        "tag": "div",
+        "fontSize": "23.3333px",
+        "text": "I"
+      },
+      "heading": {
+        "layoutLeft": 242,
+        "rectLeft": 241.52,
+        "tag": "div",
+        "fontSize": "23.3333px",
+        "text": "I"
+      }
+    }
+  ],
+  "verticalRhythm": {
+    "sectionCount": 5,
+    "near100vhCount": 0,
+    "near100vhPct": 0,
+    "strictGcdOfSpacing": 1,
+    "baseUnitEstimate80pct": null,
+    "spacingHistogram": [
+      {
+        "value": 13,
+        "count": 55
+      },
+      {
+        "value": 7,
+        "count": 13
+      },
+      {
+        "value": 16,
+        "count": 12
+      },
+      {
+        "value": 17,
+        "count": 8
+      },
+      {
+        "value": 40,
+        "count": 6
+      },
+      {
+        "value": 37,
+        "count": 6
+      },
+      {
+        "value": 67,
+        "count": 6
+      },
+      {
+        "value": 50,
+        "count": 3
+      },
+      {
+        "value": 18,
+        "count": 3
+      },
+      {
+        "value": 20,
+        "count": 3
+      },
+      {
+        "value": 34,
+        "count": 2
+      },
+      {
+        "value": 94,
+        "count": 2
+      },
+      {
+        "value": 71,
+        "count": 1
+      },
+      {
+        "value": 23,
+        "count": 1
+      }
+    ],
+    "spacingSampleSize": 127
+  },
+  "typeScale": {
+    "distinctFontSizeCount": 13,
+    "distinctFontSizeCount_used2plus": 12,
+    "distinctSizes": [
+      {
+        "size": 50,
+        "count": 3
+      },
+      {
+        "size": 48.33,
+        "count": 17
+      },
+      {
+        "size": 36.67,
+        "count": 10
+      },
+      {
+        "size": 35.2,
+        "count": 3
+      },
+      {
+        "size": 29.17,
+        "count": 94
+      },
+      {
+        "size": 27.5,
+        "count": 31
+      },
+      {
+        "size": 24.17,
+        "count": 36
+      },
+      {
+        "size": 23.33,
+        "count": 79
+      },
+      {
+        "size": 16.67,
+        "count": 9
+      },
+      {
+        "size": 13.33,
+        "count": 21
+      },
+      {
+        "size": 12.5,
+        "count": 21
+      },
+      {
+        "size": 11,
+        "count": 2
+      },
+      {
+        "size": 10.83,
+        "count": 1
+      }
+    ],
+    "scaleSizesDesc": [
+      50,
+      48.33,
+      36.67,
+      35.2,
+      29.17,
+      27.5,
+      24.17,
+      23.33,
+      16.67,
+      13.33,
+      12.5,
+      11
+    ],
+    "consecutiveRatios": [
+      1.03,
+      1.32,
+      1.04,
+      1.21,
+      1.06,
+      1.14,
+      1.04,
+      1.4,
+      1.25,
+      1.07,
+      1.14
+    ],
+    "roles": {
+      "h1": null,
+      "biggestText": {
+        "tag": "span",
+        "fontSize": 50,
+        "fontWeight": "400",
+        "lineHeightPx": 42.5,
+        "lineHeightRatio": 0.85,
+        "letterSpacing": "0px",
+        "letterSpacingEm": 0,
+        "fontFamily": "Editorialnew-Ultralight",
+        "fontFamilyFull": "Editorialnew-Ultralight, sans-serif",
+        "textTransform": "none",
+        "color": "rgb(0, 0, 0)",
+        "widthPx": 276.45,
+        "text": "ELEGANCIA"
+      },
+      "h2All": [],
+      "h3": null,
+      "body": {
+        "tag": "p",
+        "fontSize": 12.5,
+        "fontWeight": "400",
+        "lineHeightPx": 15.83,
+        "lineHeightRatio": 1.27,
+        "letterSpacing": "0px",
+        "letterSpacingEm": 0,
+        "fontFamily": "Izmir-Regular",
+        "fontFamilyFull": "Izmir-Regular, sans-serif",
+        "textTransform": "none",
+        "color": "rgb(0, 0, 0)",
+        "widthPx": 365,
+        "text": "Cada vivienda debe ser única y especial, al igual que las pe"
+      },
+      "small": {
+        "tag": "div",
+        "fontSize": 10.83,
+        "fontWeight": "400",
+        "lineHeightPx": 14.17,
+        "lineHeightRatio": 1.31,
+        "letterSpacing": "0px",
+        "letterSpacingEm": 0,
+        "fontFamily": "Izmir-Regular",
+        "fontFamilyFull": "Izmir-Regular, sans-serif",
+        "textTransform": "uppercase",
+        "color": "rgb(0, 0, 0)",
+        "widthPx": 137.64,
+        "text": "Normal is boring ©2025"
+      },
+      "mono": null
+    },
+    "readingMeasure": {
+      "columnWidthPx": 365,
+      "widthOf100Chars": 646.18,
+      "measureCh_spec": 56.49,
+      "measureCh_zeroWidth": 44.66,
+      "maxWidthDeclared": "none",
+      "canvasFont": "12.5px Izmir-Regular, sans-serif"
+    },
+    "readingMeasureAlternates": [
+      {
+        "tag": "p",
+        "fontSize": 12.5,
+        "fontWeight": "400",
+        "lineHeightPx": 15.83,
+        "lineHeightRatio": 1.27,
+        "letterSpacing": "0px",
+        "letterSpacingEm": 0,
+        "fontFamily": "Izmir-Regular",
+        "fontFamilyFull": "Izmir-Regular, sans-serif",
+        "textTransform": "none",
+        "color": "rgb(0, 0, 0)",
+        "widthPx": 365,
+        "text": "Cada vivienda debe ser única y especial, al igual que las pe"
+      },
+      {
+        "tag": "p",
+        "fontSize": 16.67,
+        "fontWeight": "400",
+        "lineHeightPx": 21.67,
+        "lineHeightRatio": 1.3,
+        "letterSpacing": "0px",
+        "letterSpacingEm": 0,
+        "fontFamily": "Izmir-Regular",
+        "fontFamilyFull": "Izmir-Regular, sans-serif",
+        "textTransform": "none",
+        "color": "rgb(0, 0, 0)",
+        "widthPx": 364.61,
+        "text": "En Normal is Boring, nuestra prioridad es ofrecerte un servi"
+      },
+      {
+        "tag": "div",
+        "fontSize": 12.5,
+        "fontWeight": "400",
+        "lineHeightPx": 15.83,
+        "lineHeightRatio": 1.27,
+        "letterSpacing": "0px",
+        "letterSpacingEm": 0,
+        "fontFamily": "Izmir-Regular",
+        "fontFamilyFull": "Izmir-Regular, sans-serif",
+        "textTransform": "none",
+        "color": "rgb(0, 0, 0)",
+        "widthPx": 331.66,
+        "text": "Una arquitectura sobria y silenciosa y una sensibilidad esté"
+      }
+    ],
+    "distinctFontFamilyCount": 6,
+    "fontFamilies": [
+      {
+        "family": "Juana-Medium",
+        "count": 96
+      },
+      {
+        "family": "Izmir-Regular",
+        "count": 95
+      },
+      {
+        "family": "Juana-Regular",
+        "count": 91
+      },
+      {
+        "family": "Editorialnew-Ultralight",
+        "count": 41
+      },
+      {
+        "family": "Editorialnew-UltralightItalic",
+        "count": 3
+      },
+      {
+        "family": "Editorialnew-Regular",
+        "count": 1
+      }
+    ]
+  },
+  "color": {
+    "textColors": [
+      {
+        "value": "rgb(0,0,0)",
+        "count": 290
+      },
+      {
+        "value": "rgb(255,255,255)",
+        "count": 37
+      }
+    ],
+    "backgroundColors": [
+      {
+        "value": "rgb(236,228,218)",
+        "count": 12
+      },
+      {
+        "value": "rgb(0,0,0)",
+        "count": 6
+      },
+      {
+        "value": "rgb(255,255,255)",
+        "count": 5
+      },
+      {
+        "value": "rgb(199,215,233)",
+        "count": 4
+      },
+      {
+        "value": "rgb(112,112,112)",
+        "count": 4
+      },
+      {
+        "value": "rgb(219,92,89)",
+        "count": 1
+      }
+    ],
+    "distinctTextColorCount": 2,
+    "distinctBgColorCount": 6
+  },
+  "persistent": {
+    "fixedOrSticky": [
+      {
+        "tag": "div",
+        "cls": "",
+        "position": "fixed",
+        "rect": {
+          "top": 333.83,
+          "left": 336.92,
+          "width": 53.08,
+          "height": 176.34
+        },
+        "zIndex": "99999",
+        "text": "",
+        "opacity": "1"
+      },
+      {
+        "tag": "div",
+        "cls": "header wrapper",
+        "position": "fixed",
+        "rect": {
+          "top": 0,
+          "left": 0,
+          "width": 390,
+          "height": 844
+        },
+        "zIndex": "10",
+        "text": "NormalNormal is boring® Menú 100%",
+        "opacity": "1"
+      },
+      {
+        "tag": "div",
+        "cls": "transition",
+        "position": "fixed",
+        "rect": {
+          "top": 844,
+          "left": 0,
+          "width": 390,
+          "height": 844
+        },
+        "zIndex": "1000000",
+        "text": "",
+        "opacity": "1"
+      },
+      {
+        "tag": "div",
+        "cls": "",
+        "position": "fixed",
+        "rect": {
+          "top": 0,
+          "left": 0,
+          "width": 390,
+          "height": 841.45
+        },
+        "zIndex": "auto",
+        "text": "ConócenosConócenosProyectosProyectosContactoContactoDisponib",
+        "opacity": "1"
+      }
+    ]
+  },
+  "nav": {
+    "tag": "header",
+    "cls": "",
+    "height": 0,
+    "top": 0,
+    "position": "relative",
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "backdropFilter": "none",
+    "borderBottom": "0px rgb(0, 0, 0)",
+    "paddingBlock": "0px / 0px",
+    "transform": "none",
+    "opacity": "1",
+    "mixBlendMode": "normal",
+    "color": "rgb(0, 0, 0)"
+  },
+  "navState": {
+    "at0": {
+      "nav": {
+        "height": 0,
+        "top": 0,
+        "position": "relative",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "backdropFilter": "none",
+        "borderBottom": "0px rgb(0, 0, 0)",
+        "paddingBlock": "0px / 0px",
+        "transform": "none",
+        "opacity": "1",
+        "color": "rgb(0, 0, 0)"
+      },
+      "fixedOrSticky": [
+        {
+          "tag": "div",
+          "cls": "",
+          "position": "fixed",
+          "rect": {
+            "top": 333.83,
+            "left": 336.92,
+            "width": 53.08,
+            "height": 176.34
+          },
+          "text": "",
+          "opacity": "1"
+        },
+        {
+          "tag": "div",
+          "cls": "header wrapper",
+          "position": "fixed",
+          "rect": {
+            "top": 0,
+            "left": 0,
+            "width": 390,
+            "height": 844
+          },
+          "text": "NormalNormal is boring® Menú 100%",
+          "opacity": "1"
+        },
+        {
+          "tag": "div",
+          "cls": "transition",
+          "position": "fixed",
+          "rect": {
+            "top": 844,
+            "left": 0,
+            "width": 390,
+            "height": 844
+          },
+          "text": "",
+          "opacity": "1"
+        },
+        {
+          "tag": "div",
+          "cls": "",
+          "position": "fixed",
+          "rect": {
+            "top": 0,
+            "left": 0,
+            "width": 390,
+            "height": 841.45
+          },
+          "text": "ConócenosConócenosProyectosProyectosContactoContactoDisponib",
+          "opacity": "1"
+        }
+      ]
+    },
+    "at2000": {
+      "nav": {
+        "height": 0,
+        "top": 0,
+        "position": "relative",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "backdropFilter": "none",
+        "borderBottom": "0px rgb(0, 0, 0)",
+        "paddingBlock": "0px / 0px",
+        "transform": "none",
+        "opacity": "1",
+        "color": "rgb(0, 0, 0)"
+      },
+      "fixedOrSticky": [
+        {
+          "tag": "div",
+          "cls": "",
+          "position": "fixed",
+          "rect": {
+            "top": 333.83,
+            "left": 336.92,
+            "width": 53.08,
+            "height": 176.34
+          },
+          "text": "",
+          "opacity": "1"
+        },
+        {
+          "tag": "div",
+          "cls": "header wrapper",
+          "position": "fixed",
+          "rect": {
+            "top": 0,
+            "left": 0,
+            "width": 390,
+            "height": 844
+          },
+          "text": "NormalNormal is boring® Menú 100%",
+          "opacity": "1"
+        },
+        {
+          "tag": "div",
+          "cls": "transition",
+          "position": "fixed",
+          "rect": {
+            "top": 844,
+            "left": 0,
+            "width": 390,
+            "height": 844
+          },
+          "text": "",
+          "opacity": "1"
+        },
+        {
+          "tag": "div",
+          "cls": "",
+          "position": "fixed",
+          "rect": {
+            "top": 0,
+            "left": 0,
+            "width": 390,
+            "height": 841.45
+          },
+          "text": "ConócenosConócenosProyectosProyectosContactoContactoDisponib",
+          "opacity": "1"
+        }
+      ]
+    },
+    "changed": false,
+    "diff": {}
+  },
+  "shots": [
+    "normalisboring-390-full.jpg"
+  ],
+  "fullPageShotRepresentative": false,
+  "pageErrors": []
+}

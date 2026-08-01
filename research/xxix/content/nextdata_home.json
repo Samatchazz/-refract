@@ -1,0 +1,3720 @@
+{
+  "props": {
+    "pageProps": {
+      "homePage": {
+        "_createdAt": "2020-04-08T21:21:46Z",
+        "_id": "32b5eea6-a0cb-4e5b-b6b4-3625607014e0",
+        "_rev": "ksqVftetkW10ajYwSohno5",
+        "_type": "page",
+        "_updatedAt": "2025-11-12T15:35:46Z",
+        "footerModule": {
+          "_createdAt": "2020-04-14T18:00:24Z",
+          "_id": "4b4430ce-27a7-4b9b-b7db-d383a9499d27",
+          "_rev": "JFEBaZ5t6vWxoxgbeGeksF",
+          "_type": "footerModule",
+          "_updatedAt": "2024-11-18T14:21:52Z",
+          "image": {
+            "alt": null,
+            "controls": null,
+            "dimensions": {
+              "height": null,
+              "width": null
+            },
+            "extension": null,
+            "mimeType": null,
+            "url": null,
+            "vimeo": null
+          },
+          "locations": [
+            {
+              "_key": "26450c654057",
+              "_type": "locationItem",
+              "city": "EST",
+              "neighborhood": "New York City",
+              "timezone": [
+                "America/New_York"
+              ]
+            },
+            {
+              "_key": "384ac6902b19",
+              "_type": "locationItem",
+              "city": "CT",
+              "neighborhood": "Chicago",
+              "timezone": [
+                "America/Chicago"
+              ]
+            },
+            {
+              "_key": "6c58f5b8f096",
+              "_type": "locationItem",
+              "city": "CET",
+              "neighborhood": "Berlin",
+              "timezone": [
+                "Europe/Berlin"
+              ]
+            }
+          ],
+          "name": "Footer - Home",
+          "socialLinks": [
+            {
+              "_key": "cf6d78ad416b",
+              "_type": "linkItem",
+              "label": "Email studio@xxix.co",
+              "path": {
+                "_type": "pathField",
+                "url": "mailto:studio@xxix.co"
+              }
+            },
+            {
+              "_key": "4299fdb949e4",
+              "_type": "linkItem",
+              "label": "Instagram @xxix_co",
+              "path": {
+                "_type": "pathField",
+                "url": "https://www.instagram.com/xxix_co"
+              }
+            },
+            {
+              "_key": "ab58881564fc",
+              "_type": "linkItem",
+              "label": "Substack @garden3d",
+              "path": {
+                "_type": "pathField",
+                "url": "https://garden3d.substack.com/"
+              }
+            }
+          ],
+          "styles": {
+            "_type": "styleItem",
+            "bgColor": "#000000",
+            "fontColor": "light",
+            "fontHoverColor": "yellow",
+            "positions": [
+              {
+                "_key": "eb2f4a987d3f",
+                "_type": "positionItem",
+                "breakpoint": "small",
+                "hide": false
+              },
+              {
+                "_key": "17db83ed1af5",
+                "_type": "positionItem",
+                "breakpoint": "large",
+                "colEnd": 12,
+                "colStart": 1,
+                "hide": false,
+                "offsetY": 680
+              },
+              {
+                "_key": "6c6fb68d7aea",
+                "_type": "positionItem",
+                "breakpoint": "xLarge",
+                "colEnd": 11,
+                "colStart": 2,
+                "offsetY": 690
+              }
+            ],
+            "width": "100%"
+          },
+          "title": {
+            "_type": "copyItem",
+            "copy": "Twenty Nine",
+            "font": "sans-serif"
+          }
+        },
+        "heroModule": {
+          "_createdAt": "2020-04-08T21:26:06Z",
+          "_id": "0d479de3-fe14-4d75-a193-3e18adec17b5",
+          "_rev": "aWbHA3HU3CIWQq7NNaMzHz",
+          "_type": "masterModule",
+          "_updatedAt": "2025-02-10T18:03:10Z",
+          "name": "Master - Home - Intro ",
+          "styles": {
+            "_type": "styleItem",
+            "bgColor": "#FFFFFF",
+            "fontColor": "dark",
+            "fontHoverColor": "red",
+            "positions": [
+              {
+                "_key": "8eb010e4f7a2",
+                "_type": "positionItem",
+                "breakpoint": "small"
+              },
+              {
+                "_key": "31fb3b50b7dd",
+                "_type": "positionItem",
+                "breakpoint": "large",
+                "colEnd": 6,
+                "colStart": 1,
+                "offsetX": 0,
+                "offsetY": 5
+              }
+            ],
+            "width": "75%"
+          },
+          "submodules": [
+            {
+              "_createdAt": "2020-04-25T13:30:36Z",
+              "_id": "b575468e-f63e-4047-9c06-d96bcddbeece",
+              "_rev": "JQhnGuYtqpXy3SF5k0OVOg",
+              "_type": "textSubmodule",
+              "_updatedAt": "2024-11-13T20:53:16Z",
+              "body": "<h1>Twenty Nine is a people-first brand, product, and web studio<br><br></h1>",
+              "font": "sans-serif",
+              "name": "Text - Home -  Intro",
+              "sidenotes": []
+            },
+            {
+              "_createdAt": "2020-08-17T20:59:15Z",
+              "_id": "d5f02ba2-5b62-45fe-b25d-9c64aa7e8d57",
+              "_rev": "IhvBm2Y79SiNm66GbBAjni",
+              "_type": "textSubmodule",
+              "_updatedAt": "2020-08-27T19:49:35Z",
+              "font": "sans-serif",
+              "name": "Text - Home -  Intro Spacer",
+              "sidenotes": []
+            },
+            {
+              "_createdAt": "2020-08-17T20:57:09Z",
+              "_id": "98506d0c-7e94-4866-91f7-e0dbf890eb5b",
+              "_rev": "rmSQAywSRjYVoD1z72A1xF",
+              "_type": "textSubmodule",
+              "_updatedAt": "2024-11-13T21:01:54Z",
+              "body": "#### ⬤ Start a project → [studio@xxix.co](mailto:studio@xxix.co)",
+              "font": "sans-serif",
+              "name": "Text - Home -  Intro CTA",
+              "sidenotes": []
+            }
+          ]
+        },
+        "meta": {
+          "_type": "metaItem",
+          "description": "Twenty Nine is a design and technology studio that puts people at the center of its practice. Part of the garden3d.net family. NYC-born and headquartered, now operating globally.\n\n✎ studio@xxix.co | ✺ @xxix_co",
+          "image": "https://cdn.sanity.io/images/zgsxfzr2/production/38bda5ec800b75f65ff718017d46f29c8793a879-1200x630.png",
+          "title": "● XXIX | A people-first product design and brand studio"
+        },
+        "modules": [
+          {
+            "_createdAt": "2025-01-17T16:39:21Z",
+            "_id": "bc6c65c7-1e6b-4073-99bf-e54a3f39f262",
+            "_rev": "GSRP7R7XZ3fAvuzymbTDlS",
+            "_type": "masterModule",
+            "_updatedAt": "2025-02-10T17:36:25Z",
+            "image": {
+              "alt": null,
+              "controls": null,
+              "dimensions": {
+                "height": null,
+                "width": null
+              },
+              "extension": null,
+              "mimeType": null,
+              "url": null,
+              "vimeo": null
+            },
+            "name": "Master - Client List",
+            "styles": {
+              "_type": "styleItem",
+              "bgColor": "#F8E71C",
+              "fontColor": "dark",
+              "positions": [
+                {
+                  "_key": "d6400f7bac0b",
+                  "_type": "positionItem",
+                  "breakpoint": "large",
+                  "colEnd": 10,
+                  "colStart": 5,
+                  "offsetY": 270
+                }
+              ],
+              "width": "75%"
+            },
+            "submodules": [
+              {
+                "_createdAt": "2025-01-17T16:41:22Z",
+                "_id": "97bc80f2-acea-4c3c-aba8-6d4ff26c42c7",
+                "_rev": "8zg1Xoz2U4YsREvqQJUvcT",
+                "_type": "textSubmodule",
+                "_updatedAt": "2025-01-21T17:17:54Z",
+                "body": "<h4>Our clients include –</h4>\n<h3><br>Air Company, Brooklyn Museum, Dropbox, Etsy, Figma, Google, Hinge, IBM, Ironman, Light Phone, Mailchimp, Mac Miller, Magic Leap, MIT, Mozilla, Pinterest, Pratt Institute, Salt & Stone, Stripe</h3>\n<h4><br><a href=\"/work\">⬤ View our work</a></h4>",
+                "font": "sans-serif",
+                "name": "Text - Client List "
+              }
+            ]
+          },
+          {
+            "_createdAt": "2025-04-23T19:58:27Z",
+            "_id": "aae94614-32b8-4588-8541-559463edfdee",
+            "_rev": "6Xi4H2Yj2FpJVTEj2HOE6h",
+            "_type": "mediaModule",
+            "_updatedAt": "2025-04-24T15:43:49Z",
+            "alt": "The Williamstown Theatre Festival Programs & Events page",
+            "captions": [
+              {
+                "_key": "8543f8d988ff",
+                "_type": "caption",
+                "content": [
+                  {
+                    "_key": "d92660b73e3b",
+                    "_type": "block",
+                    "children": [
+                      {
+                        "_key": "13b18806bd8f",
+                        "_type": "span",
+                        "marks": [],
+                        "text": "⬤ WILLIAMSTOWN THEATRE FESTIVAL\nWebsite Design and Development"
+                      }
+                    ],
+                    "markDefs": [],
+                    "style": "normal_primaryXS"
+                  }
+                ],
+                "fontColor": "dark",
+                "position": "top-left"
+              }
+            ],
+            "image": {
+              "alt": null,
+              "controls": null,
+              "dimensions": {
+                "height": null,
+                "width": null
+              },
+              "extension": null,
+              "mimeType": null,
+              "url": null,
+              "vimeo": null
+            },
+            "media": {
+              "alt": null,
+              "controls": null,
+              "dimensions": {
+                "height": null,
+                "width": null
+              },
+              "extension": "mp4",
+              "mimeType": "video/mp4",
+              "url": "https://cdn.sanity.io/files/zgsxfzr2/production/146228848dfd813eb2c15f267f1512b5c86a2728.mp4",
+              "vimeo": null
+            },
+            "path": {
+              "_type": "pathField",
+              "preventAnimatedTransition": true,
+              "url": "/work/williamstowntheatrefestival"
+            },
+            "poster": null,
+            "styles": {
+              "_type": "styleItem",
+              "bgColor": "#000000",
+              "fontColor": "dark",
+              "width": "100%"
+            },
+            "submodules": null,
+            "title": "Video - Home - WTF"
+          },
+          {
+            "_createdAt": "2025-04-28T18:38:39Z",
+            "_id": "3b9bdfbd-8280-4c1e-bdfe-db7b409b5d67",
+            "_rev": "LNsiCAnja6OMnTvzsgzAMM",
+            "_type": "imageModule",
+            "_updatedAt": "2025-04-29T18:12:06Z",
+            "aspectRatio": "square",
+            "captions": [
+              {
+                "_key": "2c114b873582",
+                "_type": "caption",
+                "content": [
+                  {
+                    "_key": "5426866ed626",
+                    "_type": "block",
+                    "children": [
+                      {
+                        "_key": "b2ba742b21b6",
+                        "_type": "span",
+                        "marks": [],
+                        "text": "⬤ OH, TO BE KNOWN BY MY COMPUTER!\nA pattern for designing intelligent products"
+                      }
+                    ],
+                    "markDefs": [],
+                    "style": "normal_primaryXS"
+                  }
+                ],
+                "fontColor": "dark",
+                "position": "bottom-left"
+              }
+            ],
+            "disableShadow": true,
+            "image": {
+              "alt": null,
+              "controls": null,
+              "dimensions": {
+                "height": 1921,
+                "width": 1921
+              },
+              "extension": "png",
+              "mimeType": "image/png",
+              "url": "https://cdn.sanity.io/images/zgsxfzr2/production/8392554c7d3ceadf6a83268693d17e853da7c857-1921x1921.png",
+              "vimeo": null
+            },
+            "name": "Image - Home - Oh to be Known by my Computer",
+            "path": {
+              "_type": "pathField",
+              "preventAnimatedTransition": true,
+              "url": "https://garden3d.substack.com/p/oh-to-be-known-by-my-computer"
+            },
+            "styles": {
+              "_type": "styleItem",
+              "width": "75%"
+            },
+            "submodules": null
+          },
+          {
+            "_createdAt": "2020-10-30T00:55:08Z",
+            "_id": "f97ebde8-b573-460f-8615-a6ff7c6325a0",
+            "_rev": "aWbHA3HU3CIWQq7NNaJsnx",
+            "_type": "masterModule",
+            "_updatedAt": "2025-02-10T17:36:37Z",
+            "image": {
+              "alt": null,
+              "controls": null,
+              "dimensions": {
+                "height": null,
+                "width": null
+              },
+              "extension": null,
+              "mimeType": null,
+              "url": null,
+              "vimeo": null
+            },
+            "name": "Master - Studio - Jobs",
+            "styles": {
+              "_type": "styleItem",
+              "bgColor": "#F8E71C",
+              "fontColor": "dark",
+              "positions": [
+                {
+                  "_key": "326950288edf",
+                  "_type": "positionItem",
+                  "breakpoint": "small"
+                },
+                {
+                  "_key": "c90a38b99bc5",
+                  "_type": "positionItem",
+                  "breakpoint": "large",
+                  "colEnd": 4,
+                  "colStart": 1,
+                  "offsetX": 0,
+                  "offsetY": 180
+                }
+              ],
+              "width": "75%"
+            },
+            "submodules": [
+              {
+                "_createdAt": "2021-09-27T10:10:59Z",
+                "_id": "8b1dde8a-b246-4b1d-b243-962ac47863cc",
+                "_rev": "rnb16y4e0BKBgYGF3FOx7Z",
+                "_type": "textSubmodule",
+                "_updatedAt": "2025-01-17T16:52:34Z",
+                "body": "<h2>WORK WITH US</h2>\n<h4><br><span>We think of our studio as a refuge for creative people. We provide free health insurance, generous time off, freedom to work when and where you choose, share company profits, make everything happening in the studio transparent, and even offset our carbon footprint.</span></h4>\n<h3><br><a href=\"/jobs\">⬤ OPEN POSITIONS</a></h3>",
+                "font": "sans-serif",
+                "name": "Text - Jobs - Open positions",
+                "sidenotes": []
+              }
+            ]
+          },
+          {
+            "_createdAt": "2023-05-08T18:28:43Z",
+            "_id": "fed0e84d-e908-411f-9eb9-417f8071b2fa",
+            "_rev": "uAad7rAIwHFvAN91EMbzkA",
+            "_type": "imageModule",
+            "_updatedAt": "2025-03-12T19:04:07Z",
+            "captions": [
+              {
+                "_key": "e8a48bac244d",
+                "_type": "caption",
+                "caption": {
+                  "_type": "copyItem",
+                  "copy": "⬤ 2023 <br>SUSTAINABILITY REPORT<br>Article ↗\n",
+                  "font": "sans-serif"
+                },
+                "content": [
+                  {
+                    "_key": "f08239956802",
+                    "_type": "block",
+                    "children": [
+                      {
+                        "_key": "9c96564891c00",
+                        "_type": "span",
+                        "marks": [],
+                        "text": "⬤ 2024 REPORT\nSustainability"
+                      }
+                    ],
+                    "markDefs": [],
+                    "style": "normal_primaryXS"
+                  }
+                ],
+                "fontColor": "dark",
+                "position": "bottom-left"
+              }
+            ],
+            "disableShadow": true,
+            "image": {
+              "alt": null,
+              "controls": null,
+              "dimensions": {
+                "height": 517,
+                "width": 897
+              },
+              "extension": "png",
+              "mimeType": "image/png",
+              "url": "https://cdn.sanity.io/images/zgsxfzr2/production/39785940c535cf89f66368c1b570e06b62dd5a20-897x517.png",
+              "vimeo": null
+            },
+            "name": "Image - Home - Sustainability Report",
+            "path": {
+              "_type": "pathField",
+              "url": "https://garden3d.substack.com/p/garden3d-2023-sustainability-report"
+            },
+            "styles": {
+              "_type": "styleItem",
+              "positions": [
+                {
+                  "_key": "ef9c4b36f0cd",
+                  "_type": "positionItem",
+                  "breakpoint": "large",
+                  "colEnd": 10,
+                  "colStart": 5,
+                  "offsetX": 80,
+                  "offsetY": 300
+                },
+                {
+                  "_key": "dc6083b56c8c",
+                  "_type": "positionItem",
+                  "breakpoint": "small",
+                  "colEnd": 12,
+                  "colStart": 3
+                }
+              ],
+              "width": "100%"
+            },
+            "submodules": null
+          },
+          {
+            "_createdAt": "2025-03-12T18:54:42Z",
+            "_id": "191b0ee9-ed6e-4b86-9093-a4d61f4bf7f1",
+            "_rev": "W23eECVG96istt7BpsBb3U",
+            "_type": "mediaModule",
+            "_updatedAt": "2025-04-28T20:19:55Z",
+            "captions": [
+              {
+                "_key": "80d69257d42f",
+                "_type": "caption",
+                "content": [
+                  {
+                    "_key": "9e218b56263f",
+                    "_type": "block",
+                    "children": [
+                      {
+                        "_key": "23912f5f5bcd0",
+                        "_type": "span",
+                        "marks": [],
+                        "text": "⬤ MAC MILLER\nWebsite Design and Development"
+                      }
+                    ],
+                    "markDefs": [],
+                    "style": "normal_primaryXS"
+                  }
+                ],
+                "fontColor": "dark",
+                "position": "bottom-left"
+              }
+            ],
+            "image": {
+              "alt": null,
+              "controls": null,
+              "dimensions": {
+                "height": null,
+                "width": null
+              },
+              "extension": null,
+              "mimeType": null,
+              "url": null,
+              "vimeo": null
+            },
+            "media": {
+              "alt": null,
+              "controls": null,
+              "dimensions": {
+                "height": null,
+                "width": null
+              },
+              "extension": "mp4",
+              "mimeType": "video/mp4",
+              "url": "https://cdn.sanity.io/files/zgsxfzr2/production/5547b065b49a113c4de3ddcf528258374c67d316.mp4",
+              "vimeo": null
+            },
+            "path": {
+              "_type": "pathField",
+              "preventAnimatedTransition": true,
+              "url": "/work/mac-miller-swimming"
+            },
+            "poster": null,
+            "styles": {
+              "_type": "styleItem",
+              "width": "100%"
+            },
+            "submodules": null,
+            "title": "Video - Home - Mac Miller"
+          },
+          {
+            "_createdAt": "2025-03-12T18:45:56Z",
+            "_id": "a6674aa6-f4ba-4092-ba77-943f5caa58c0",
+            "_rev": "uAad7rAIwHFvAN91EMo9P7",
+            "_type": "mediaModule",
+            "_updatedAt": "2025-03-12T19:24:35Z",
+            "captions": [
+              {
+                "_key": "82a350fad9fc",
+                "_type": "caption",
+                "content": [
+                  {
+                    "_key": "b956512f7225",
+                    "_type": "block",
+                    "children": [
+                      {
+                        "_key": "f5d9f52161310",
+                        "_type": "span",
+                        "marks": [],
+                        "text": "⬤ APLOS\nWebsite Design for Ecommerce"
+                      }
+                    ],
+                    "markDefs": [],
+                    "style": "normal_primaryXS"
+                  }
+                ],
+                "fontColor": "dark",
+                "position": "bottom-left"
+              }
+            ],
+            "image": {
+              "alt": null,
+              "controls": null,
+              "dimensions": {
+                "height": null,
+                "width": null
+              },
+              "extension": null,
+              "mimeType": null,
+              "url": null,
+              "vimeo": null
+            },
+            "media": {
+              "alt": null,
+              "controls": null,
+              "dimensions": {
+                "height": null,
+                "width": null
+              },
+              "extension": "mp4",
+              "mimeType": "video/mp4",
+              "url": "https://cdn.sanity.io/files/zgsxfzr2/production/8df10eb6c850f2d89c9a687b79eec991c4e74d89.mp4",
+              "vimeo": null
+            },
+            "path": {
+              "_type": "pathField",
+              "preventAnimatedTransition": true,
+              "url": "/work/aplos"
+            },
+            "poster": null,
+            "styles": {
+              "_type": "styleItem",
+              "width": "75%"
+            },
+            "submodules": null,
+            "title": "Video - Home - Aplos"
+          },
+          {
+            "_createdAt": "2025-03-12T19:05:49Z",
+            "_id": "d32a9da8-6b14-488d-aaaf-83b7b7cd23c1",
+            "_rev": "enzJUxuhdsmP5s3sZzQ2Kb",
+            "_type": "mediaModule",
+            "_updatedAt": "2025-03-12T19:05:49Z",
+            "captions": [
+              {
+                "_key": "e34582211efd",
+                "_type": "caption",
+                "content": [
+                  {
+                    "_key": "36784d3f8fb1",
+                    "_type": "block",
+                    "children": [
+                      {
+                        "_key": "bec74f1bc3aa0",
+                        "_type": "span",
+                        "marks": [],
+                        "text": "⬤ PRESQ\nWebsite Design and Development for Ecommerce"
+                      }
+                    ],
+                    "markDefs": [],
+                    "style": "normal_primaryXS"
+                  }
+                ],
+                "fontColor": "dark",
+                "position": "top-left"
+              }
+            ],
+            "image": {
+              "alt": null,
+              "controls": null,
+              "dimensions": {
+                "height": null,
+                "width": null
+              },
+              "extension": null,
+              "mimeType": null,
+              "url": null,
+              "vimeo": null
+            },
+            "media": {
+              "alt": null,
+              "controls": null,
+              "dimensions": {
+                "height": null,
+                "width": null
+              },
+              "extension": "mp4",
+              "mimeType": "video/mp4",
+              "url": "https://cdn.sanity.io/files/zgsxfzr2/production/ebe0b8e770b3e02b976f790a6dd8a1ecb1296d73.mp4",
+              "vimeo": null
+            },
+            "path": {
+              "_type": "pathField",
+              "preventAnimatedTransition": true,
+              "url": "/work/presq"
+            },
+            "poster": null,
+            "styles": {
+              "_type": "styleItem",
+              "width": "100%"
+            },
+            "submodules": null,
+            "title": "Video - Home - Presq"
+          },
+          {
+            "_createdAt": "2023-11-20T22:46:44Z",
+            "_id": "705217f0-5b4c-489b-bf4e-9ab34ade4a20",
+            "_rev": "rnb16y4e0BKBgYGF3FvIyN",
+            "_type": "imageModule",
+            "_updatedAt": "2025-01-17T18:58:19Z",
+            "captions": [
+              {
+                "_key": "de47fc0beea6",
+                "_type": "caption",
+                "caption": {
+                  "_type": "copyItem",
+                  "copy": "⬤ INDEX NYC<br>\n<a href=\"https://www.index-space.org\">Shared Work and<br> Community Space &#8599;<br>",
+                  "font": "sans-serif"
+                },
+                "content": [
+                  {
+                    "_key": "e55dc1f90cd2",
+                    "_type": "block",
+                    "children": [
+                      {
+                        "_key": "e8bc58907bad0",
+                        "_type": "span",
+                        "marks": [],
+                        "text": "⬤ INDEX NYC\nShared Work and Community Space"
+                      }
+                    ],
+                    "markDefs": [
+                      {
+                        "_key": "699811ff489b",
+                        "_type": "link",
+                        "path": {
+                          "_type": "pathField",
+                          "preventAnimatedTransition": true,
+                          "url": "https://www.index-space.org"
+                        }
+                      }
+                    ],
+                    "style": "normal_primaryXS"
+                  }
+                ],
+                "fontColor": "dark",
+                "position": "top-left"
+              }
+            ],
+            "image": {
+              "alt": "The entrance to Index Space",
+              "controls": null,
+              "dimensions": {
+                "height": 1800,
+                "width": 1440
+              },
+              "extension": "png",
+              "mimeType": "image/png",
+              "url": "https://cdn.sanity.io/images/zgsxfzr2/production/3af3adc89c4fcc1abe6ac342debe5fc19b824ad7-1440x1800.png",
+              "vimeo": null
+            },
+            "name": "Image - Home - Index interior",
+            "path": {
+              "_type": "pathField",
+              "preventAnimatedTransition": true,
+              "url": "/work/index"
+            },
+            "styles": {
+              "_type": "styleItem",
+              "positions": [
+                {
+                  "_key": "5da1d0e198ce",
+                  "_type": "positionItem",
+                  "breakpoint": "large",
+                  "colEnd": 9,
+                  "colStart": 6,
+                  "offsetX": -20,
+                  "offsetY": 70
+                },
+                {
+                  "_key": "6cde74b37f1b",
+                  "_type": "positionItem",
+                  "breakpoint": "small",
+                  "colEnd": 12,
+                  "colStart": 3,
+                  "offsetY": 35
+                }
+              ],
+              "width": "100%"
+            },
+            "submodules": null
+          },
+          {
+            "_createdAt": "2021-10-20T10:49:59Z",
+            "_id": "0ec476d2-2d84-456d-ad4b-2912376a278e",
+            "_rev": "Zt6OvEh5471EDKrxE7foZM",
+            "_type": "imageModule",
+            "_updatedAt": "2025-04-28T18:46:58Z",
+            "captions": [
+              {
+                "_key": "37070f09eaf5",
+                "_type": "caption",
+                "caption": {
+                  "_type": "copyItem",
+                  "copy": "⬤ AIR COMPANY<br>Website and Art Direction",
+                  "font": "sans-serif"
+                },
+                "content": [
+                  {
+                    "_key": "0e8899b14859",
+                    "_type": "block",
+                    "children": [
+                      {
+                        "_key": "0a69e5648b640",
+                        "_type": "span",
+                        "marks": [],
+                        "text": "⬤ AIR COMPANY\nWebsite Design and \nArt Direction for Ecommerce"
+                      }
+                    ],
+                    "markDefs": [],
+                    "style": "normal_primaryXS"
+                  }
+                ],
+                "fontColor": "dark",
+                "position": "top-left"
+              }
+            ],
+            "disableShadow": true,
+            "image": {
+              "alt": "Image of liquid",
+              "controls": null,
+              "dimensions": {
+                "height": 1995,
+                "width": 1397
+              },
+              "extension": "png",
+              "mimeType": "image/png",
+              "url": "https://cdn.sanity.io/images/zgsxfzr2/production/279304f94866c9ed72be659b184d88eae9dafb9b-1397x1995.png",
+              "vimeo": null
+            },
+            "name": "Image - Home - Air Bottle",
+            "path": {
+              "_type": "pathField",
+              "preventAnimatedTransition": false,
+              "url": "/work/air-company"
+            },
+            "styles": {
+              "_type": "styleItem",
+              "fontColor": "light",
+              "fontHoverColor": "white",
+              "positions": [
+                {
+                  "_key": "ef9d6501bdc3",
+                  "_type": "positionItem",
+                  "breakpoint": "small",
+                  "colEnd": 12,
+                  "colStart": 2,
+                  "offsetY": 60
+                },
+                {
+                  "_key": "ab7a838b7ea7",
+                  "_type": "positionItem",
+                  "breakpoint": "large",
+                  "colEnd": 8,
+                  "colStart": 2,
+                  "offsetY": 365
+                },
+                {
+                  "_key": "e2240faa091b",
+                  "_type": "positionItem",
+                  "breakpoint": "xLarge",
+                  "colEnd": 9,
+                  "colStart": 3,
+                  "offsetY": 365
+                }
+              ],
+              "width": "75%"
+            },
+            "submodules": null
+          },
+          {
+            "_createdAt": "2025-03-12T19:02:49Z",
+            "_id": "503419e5-c203-4607-bd3b-b82acf3ba5e5",
+            "_rev": "uAad7rAIwHFvAN91EMrQy0",
+            "_type": "mediaModule",
+            "_updatedAt": "2025-03-12T19:40:01Z",
+            "captions": [
+              {
+                "_key": "6fff017627cb",
+                "_type": "caption",
+                "content": [
+                  {
+                    "_key": "5f1e1b8254cf",
+                    "_type": "block",
+                    "children": [
+                      {
+                        "_key": "af881d3584000",
+                        "_type": "span",
+                        "marks": [],
+                        "text": "⬤ SALT & STONE\nCampaign and Packaging"
+                      }
+                    ],
+                    "markDefs": [],
+                    "style": "normal_primaryXS"
+                  }
+                ],
+                "fontColor": "light",
+                "position": "bottom-left"
+              }
+            ],
+            "image": {
+              "alt": null,
+              "controls": null,
+              "dimensions": {
+                "height": null,
+                "width": null
+              },
+              "extension": null,
+              "mimeType": null,
+              "url": null,
+              "vimeo": null
+            },
+            "media": {
+              "alt": null,
+              "controls": null,
+              "dimensions": {
+                "height": null,
+                "width": null
+              },
+              "extension": "mp4",
+              "mimeType": "video/mp4",
+              "url": "https://cdn.sanity.io/files/zgsxfzr2/production/5169a042ae2f139fb601eb49f4161aa3bf416bb2.mp4",
+              "vimeo": null
+            },
+            "path": {
+              "_type": "pathField",
+              "preventAnimatedTransition": true,
+              "url": "/work/salt-and-stone"
+            },
+            "poster": null,
+            "styles": {
+              "_type": "styleItem",
+              "width": "75%"
+            },
+            "submodules": null,
+            "title": "Video - Home - Salt & Stone"
+          },
+          {
+            "_createdAt": "2021-10-11T12:34:36Z",
+            "_id": "6718c21f-793c-4f89-a8cf-573009e1bc7e",
+            "_rev": "enzJUxuhdsmP5s3sZzYIJX",
+            "_type": "imageModule",
+            "_updatedAt": "2025-03-12T19:25:52Z",
+            "captions": [
+              {
+                "_key": "e3b7b59f30d7",
+                "_type": "caption",
+                "content": [
+                  {
+                    "_key": "e65e6b61413e",
+                    "_type": "block",
+                    "children": [
+                      {
+                        "_key": "f1f3dd79eb370",
+                        "_type": "span",
+                        "marks": [],
+                        "text": "⬤ Pratt SoA\nWebsite Design and Development"
+                      }
+                    ],
+                    "markDefs": [],
+                    "style": "normal_primaryXS"
+                  }
+                ],
+                "fontColor": "dark",
+                "position": "bottom-left"
+              }
+            ],
+            "disableShadow": true,
+            "image": {
+              "alt": "Image of cactus",
+              "controls": null,
+              "dimensions": {
+                "height": 1227,
+                "width": 823
+              },
+              "extension": "png",
+              "mimeType": "image/png",
+              "url": "https://cdn.sanity.io/images/zgsxfzr2/production/9f6d555abadaa8dd8f9496cd1b2a67700f2de052-823x1227.png",
+              "vimeo": null
+            },
+            "name": "Image - Home - Pratt Cactus",
+            "path": {
+              "_type": "pathField",
+              "preventAnimatedTransition": false,
+              "url": "/work/pratt-soa"
+            },
+            "styles": {
+              "_type": "styleItem",
+              "fontColor": "light",
+              "fontHoverColor": "white",
+              "positions": [
+                {
+                  "_key": "ef9d6501bdc3",
+                  "_type": "positionItem",
+                  "breakpoint": "small",
+                  "colEnd": 7,
+                  "colStart": 1,
+                  "hide": true,
+                  "offsetX": 100,
+                  "offsetY": 180
+                },
+                {
+                  "_key": "ab7a838b7ea7",
+                  "_type": "positionItem",
+                  "breakpoint": "large",
+                  "colEnd": 11,
+                  "colStart": 8,
+                  "offsetX": 35,
+                  "offsetY": 570
+                }
+              ],
+              "width": "75%"
+            },
+            "submodules": null
+          },
+          {
+            "_createdAt": "2025-11-12T15:20:50Z",
+            "_id": "81fcfdc0-104d-4329-8fef-618bed3363c4",
+            "_rev": "ksqVftetkW10ajYwSohtyW",
+            "_type": "mediaModule",
+            "_updatedAt": "2025-11-12T15:36:31Z",
+            "captions": [
+              {
+                "_key": "f7a0d91f45c5",
+                "_type": "caption",
+                "content": [
+                  {
+                    "_key": "ff2a67314f5d",
+                    "_type": "block",
+                    "children": [
+                      {
+                        "_key": "636db56fd57f",
+                        "_type": "span",
+                        "marks": [],
+                        "text": "⬤ THEA\nProduct Design and Art Direction"
+                      }
+                    ],
+                    "markDefs": [],
+                    "style": "normal_primaryXS"
+                  }
+                ],
+                "fontColor": "light",
+                "position": "top-left"
+              }
+            ],
+            "image": {
+              "alt": null,
+              "controls": null,
+              "dimensions": {
+                "height": null,
+                "width": null
+              },
+              "extension": null,
+              "mimeType": null,
+              "url": null,
+              "vimeo": null
+            },
+            "media": {
+              "alt": null,
+              "controls": null,
+              "dimensions": {
+                "height": null,
+                "width": null
+              },
+              "extension": "mp4",
+              "mimeType": "video/mp4",
+              "url": "https://cdn.sanity.io/files/zgsxfzr2/production/bd50c872a82fa0b27f62721b8db7a13e440b9f68.mp4",
+              "vimeo": null
+            },
+            "name": "Video - Home - Thea",
+            "path": {
+              "_type": "pathField",
+              "preventAnimatedTransition": false,
+              "url": "/work/thea"
+            },
+            "poster": null,
+            "styles": {
+              "_type": "styleItem",
+              "fontColor": "light",
+              "fontHoverColor": "offwhite",
+              "width": "75%"
+            },
+            "submodules": null,
+            "title": "Video - Home - Thea"
+          },
+          {
+            "_createdAt": "2023-07-10T04:58:12Z",
+            "_id": "a221d5f9-22b1-4a50-bd00-d2487ef88a43",
+            "_rev": "enzJUxuhdsmP5s3sZzYBmf",
+            "_type": "imageModule",
+            "_updatedAt": "2025-03-12T19:25:15Z",
+            "aspectRatio": "square",
+            "captions": [
+              {
+                "_key": "513ad5e6f5b7",
+                "_type": "caption",
+                "caption": {
+                  "_type": "copyItem",
+                  "copy": "⬤ APLÓS<br>\nWebsite",
+                  "font": "sans-serif"
+                },
+                "content": [
+                  {
+                    "_key": "d5ea22f12991",
+                    "_type": "block",
+                    "children": [
+                      {
+                        "_key": "1b2439e06d6e0",
+                        "_type": "span",
+                        "marks": [],
+                        "text": "⬤ APLÓS\nWebsite and procedural design tooling"
+                      }
+                    ],
+                    "markDefs": [],
+                    "style": "normal_primaryXS"
+                  }
+                ],
+                "fontColor": "light",
+                "position": "top-left"
+              }
+            ],
+            "disableShadow": false,
+            "image": {
+              "alt": "Organic shape shifting between positions",
+              "controls": null,
+              "dimensions": {
+                "height": 1080,
+                "width": 1080
+              },
+              "extension": "gif",
+              "mimeType": "image/gif",
+              "url": "https://cdn.sanity.io/images/zgsxfzr2/production/098da5712d44b623bdc11f2fa7192bb237d0e865-1080x1080.gif",
+              "vimeo": null
+            },
+            "name": "Image – Home – Aplós",
+            "path": {
+              "_type": "pathField",
+              "url": "/work/aplos"
+            },
+            "styles": {
+              "_type": "styleItem",
+              "bgColor": "Black",
+              "fontColor": "light",
+              "fontHoverColor": "white",
+              "positions": [
+                {
+                  "_key": "b391c7f09bcc",
+                  "_type": "positionItem",
+                  "breakpoint": "large",
+                  "colEnd": 11,
+                  "colStart": 8,
+                  "offsetX": 40,
+                  "offsetY": 390
+                },
+                {
+                  "_key": "ee6a43c97526",
+                  "_type": "positionItem",
+                  "breakpoint": "small",
+                  "offsetX": 50
+                }
+              ],
+              "width": "75%"
+            },
+            "submodules": null
+          },
+          {
+            "_createdAt": "2024-11-27T14:08:40Z",
+            "_id": "6a2ebeeb-24f4-4cfd-b9b7-4c51c69073c0",
+            "_rev": "NBv5peUca0J8E41fbFfo5f",
+            "_type": "mediaModule",
+            "_updatedAt": "2025-01-20T18:12:13Z",
+            "captions": [
+              {
+                "_key": "3fc70dda75f3",
+                "_type": "caption",
+                "content": [
+                  {
+                    "_key": "0d54d55f9dc2",
+                    "_type": "block",
+                    "children": [
+                      {
+                        "_key": "a9c421483d07",
+                        "_type": "span",
+                        "marks": [],
+                        "text": "⬤ ARENA\nBrand Design and Strategy"
+                      }
+                    ],
+                    "markDefs": [],
+                    "style": "normal_primaryXS"
+                  }
+                ],
+                "fontColor": "dark",
+                "position": "top-left"
+              }
+            ],
+            "image": {
+              "alt": null,
+              "controls": null,
+              "dimensions": {
+                "height": null,
+                "width": null
+              },
+              "extension": null,
+              "mimeType": null,
+              "url": null,
+              "vimeo": null
+            },
+            "media": {
+              "alt": null,
+              "controls": null,
+              "dimensions": {
+                "height": null,
+                "width": null
+              },
+              "extension": "mp4",
+              "mimeType": "video/mp4",
+              "url": "https://cdn.sanity.io/files/zgsxfzr2/production/3cebc5a7c9fcb0ad6fc99c92ff8547023f348ebd.mp4",
+              "vimeo": null
+            },
+            "name": "Arena",
+            "path": {
+              "_type": "pathField",
+              "preventAnimatedTransition": false,
+              "url": "/work/arena"
+            },
+            "poster": null,
+            "styles": {
+              "_type": "styleItem",
+              "positions": [
+                {
+                  "_key": "7daa84aec6c4",
+                  "_type": "positionItem",
+                  "breakpoint": "large",
+                  "colEnd": 4,
+                  "colStart": 1,
+                  "offsetY": 335
+                }
+              ],
+              "width": "100%"
+            },
+            "submodules": null,
+            "title": "Image - Home - Arena"
+          },
+          {
+            "_createdAt": "2025-04-28T19:25:57Z",
+            "_id": "79fd0652-bf53-4262-b282-94c6368cb43d",
+            "_rev": "Zt6OvEh5471EDKrxE7o9Lw",
+            "_type": "imageModule",
+            "_updatedAt": "2025-04-28T20:07:19Z",
+            "captions": [
+              {
+                "_key": "f8cc83bfe890",
+                "_type": "caption",
+                "content": [
+                  {
+                    "_key": "1bf69f0df97a",
+                    "_type": "block",
+                    "children": [
+                      {
+                        "_key": "fa08c0adaa78",
+                        "_type": "span",
+                        "marks": [],
+                        "text": "⬤ CAPABILITIES\nProduct Design"
+                      }
+                    ],
+                    "markDefs": [],
+                    "style": "normal_primaryXS"
+                  }
+                ],
+                "position": "bottom-left"
+              }
+            ],
+            "disableShadow": false,
+            "image": {
+              "alt": null,
+              "controls": null,
+              "dimensions": {
+                "height": 1540,
+                "width": 1232
+              },
+              "extension": "jpg",
+              "mimeType": "image/jpeg",
+              "url": "https://cdn.sanity.io/images/zgsxfzr2/production/89abbdf7209bb1589b2fbffb23f3d01780be0996-1232x1540.jpg",
+              "vimeo": null
+            },
+            "name": "Image - Home - Product Design",
+            "path": {
+              "_type": "pathField",
+              "preventAnimatedTransition": true,
+              "url": "/capabilities/digital-product"
+            },
+            "styles": {
+              "_type": "styleItem",
+              "width": "75%"
+            },
+            "submodules": null
+          },
+          {
+            "_createdAt": "2025-03-12T18:56:28Z",
+            "_id": "552606bb-ff34-4805-b23e-136e999f47a7",
+            "_rev": "0q3uKZxnfB1z4qeWa5ktgN",
+            "_type": "mediaModule",
+            "_updatedAt": "2025-03-12T18:56:28Z",
+            "captions": [
+              {
+                "_key": "a668a0256df2",
+                "_type": "caption",
+                "content": [
+                  {
+                    "_key": "98e8ba112ceb",
+                    "_type": "block",
+                    "children": [
+                      {
+                        "_key": "66f33445e1960",
+                        "_type": "span",
+                        "marks": [],
+                        "text": "⬤ WORKMADE\nProduct Design and Strategy"
+                      }
+                    ],
+                    "markDefs": [],
+                    "style": "normal_primaryXS"
+                  }
+                ],
+                "fontColor": "dark",
+                "position": "top-left"
+              }
+            ],
+            "image": {
+              "alt": null,
+              "controls": null,
+              "dimensions": {
+                "height": null,
+                "width": null
+              },
+              "extension": null,
+              "mimeType": null,
+              "url": null,
+              "vimeo": null
+            },
+            "media": {
+              "alt": null,
+              "controls": null,
+              "dimensions": {
+                "height": null,
+                "width": null
+              },
+              "extension": "mp4",
+              "mimeType": "video/mp4",
+              "url": "https://cdn.sanity.io/files/zgsxfzr2/production/cf4f8e76152ed2532b992e5b396bc9a1b9527efe.mp4",
+              "vimeo": null
+            },
+            "path": {
+              "_type": "pathField",
+              "preventAnimatedTransition": true,
+              "url": "/work/workmade"
+            },
+            "poster": null,
+            "styles": {
+              "_type": "styleItem",
+              "width": "100%"
+            },
+            "submodules": null,
+            "title": "Video - Home - Workmade"
+          },
+          {
+            "_createdAt": "2020-07-08T16:46:17Z",
+            "_id": "099a2bb3-749b-4b3a-b511-188b549ac7f5",
+            "_rev": "Zt6OvEh5471EDKrxE7fX7B",
+            "_type": "imageModule",
+            "_updatedAt": "2025-04-28T18:42:34Z",
+            "captions": [
+              {
+                "_key": "b8bd6b114e07",
+                "_type": "caption",
+                "content": [
+                  {
+                    "_key": "932084b3ce81",
+                    "_type": "block",
+                    "children": [
+                      {
+                        "_key": "3d7b44ae3d7f0",
+                        "_type": "span",
+                        "marks": [],
+                        "text": "⬤ EXPANSIVE BRANDS\nCentering humanity when building brands"
+                      }
+                    ],
+                    "markDefs": [],
+                    "style": "normal_primaryXS"
+                  }
+                ],
+                "fontColor": "dark",
+                "position": "top-left"
+              }
+            ],
+            "disableShadow": true,
+            "image": {
+              "alt": "Image of a rock",
+              "controls": null,
+              "dimensions": {
+                "height": 718,
+                "width": 840
+              },
+              "extension": "png",
+              "mimeType": "image/png",
+              "url": "https://cdn.sanity.io/images/zgsxfzr2/production/de2195a10dda4a9c0b55fe0af71c6c79cbfc7cbc-840x718.png",
+              "vimeo": null
+            },
+            "name": "Image - Home - Rock & Expansive Brands",
+            "path": {
+              "_type": "pathField",
+              "preventAnimatedTransition": false,
+              "url": "https://garden3d.substack.com/p/expansive-brands"
+            },
+            "styles": {
+              "_type": "styleItem",
+              "fontColor": "light",
+              "fontHoverColor": "white",
+              "positions": [
+                {
+                  "_key": "ef9d6501bdc3",
+                  "_type": "positionItem",
+                  "breakpoint": "small",
+                  "colEnd": 12,
+                  "colStart": 1,
+                  "offsetX": -100,
+                  "offsetY": 110
+                },
+                {
+                  "_key": "ab7a838b7ea7",
+                  "_type": "positionItem",
+                  "breakpoint": "large",
+                  "colEnd": 6,
+                  "colStart": 2,
+                  "offsetX": 0,
+                  "offsetY": 440
+                }
+              ],
+              "width": "75%"
+            },
+            "submodules": null
+          },
+          {
+            "_createdAt": "2020-04-27T20:40:32Z",
+            "_id": "0b3caf9a-14fb-4181-b5ea-20cd975af935",
+            "_rev": "WtYxJJbUoQRASM5XcaGt8m",
+            "_type": "emailSignupModule",
+            "_updatedAt": "2024-05-06T16:33:38Z",
+            "cta": "Subscribe →",
+            "image": {
+              "alt": null,
+              "controls": null,
+              "dimensions": {
+                "height": null,
+                "width": null
+              },
+              "extension": null,
+              "mimeType": null,
+              "url": null,
+              "vimeo": null
+            },
+            "name": "Email Signup",
+            "placeholder": "Get email updates",
+            "styles": {
+              "_type": "styleItem",
+              "bgColor": "#F8E71C",
+              "fontColor": "dark",
+              "fontHoverColor": "black",
+              "positions": [
+                {
+                  "_key": "14cdbef37c5c",
+                  "_type": "positionItem",
+                  "breakpoint": "small",
+                  "offsetY": 20
+                },
+                {
+                  "_key": "3714f151fb55",
+                  "_type": "positionItem",
+                  "breakpoint": "large",
+                  "colEnd": 12,
+                  "colStart": 8,
+                  "offsetY": 135
+                }
+              ],
+              "width": "100%"
+            },
+            "submodules": null
+          },
+          {
+            "_createdAt": "2022-08-10T10:50:01Z",
+            "_id": "e76d06c1-8d24-40bb-93a3-50a3bed878ae",
+            "_rev": "uAad7rAIwHFvAN91EMpds9",
+            "_type": "imageModule",
+            "_updatedAt": "2025-03-12T19:31:28Z",
+            "captions": [
+              {
+                "_key": "8d4827e9bf00",
+                "_type": "caption",
+                "caption": {
+                  "_type": "copyItem",
+                  "copy": "⬤ MODERN LIFE<br>\n<span>Brand, Website and Art Direction</span>",
+                  "font": "sans-serif"
+                },
+                "content": [
+                  {
+                    "_key": "c81778395796",
+                    "_type": "block",
+                    "children": [
+                      {
+                        "_key": "8602439a748c0",
+                        "_type": "span",
+                        "marks": [],
+                        "text": "⬤ MODERN LIFE\nBrand, Website and Art Direction"
+                      }
+                    ],
+                    "markDefs": [],
+                    "style": "normal_primaryXS"
+                  }
+                ],
+                "fontColor": "light",
+                "position": "top-left"
+              }
+            ],
+            "disableShadow": false,
+            "image": {
+              "alt": "Modern Life logo",
+              "controls": null,
+              "dimensions": {
+                "height": 1106,
+                "width": 960
+              },
+              "extension": "webp",
+              "mimeType": "image/webp",
+              "url": "https://cdn.sanity.io/images/zgsxfzr2/production/481cd7db79e021e71fe332225c4264648f97444e-960x1106.webp",
+              "vimeo": null
+            },
+            "name": "Image - Home - Modern Life",
+            "path": {
+              "_type": "pathField",
+              "preventAnimatedTransition": false,
+              "url": "/work/modern-life"
+            },
+            "styles": {
+              "_type": "styleItem",
+              "positions": [
+                {
+                  "_key": "58cf76e9c1d7",
+                  "_type": "positionItem",
+                  "breakpoint": "large",
+                  "colEnd": 6,
+                  "colStart": 2,
+                  "offsetX": -20,
+                  "offsetY": 110
+                },
+                {
+                  "_key": "b60677e38872",
+                  "_type": "positionItem",
+                  "breakpoint": "small",
+                  "colEnd": 12,
+                  "colStart": 3,
+                  "offsetY": 50
+                }
+              ],
+              "width": "100%"
+            },
+            "submodules": null
+          },
+          {
+            "_createdAt": "2022-06-02T12:54:32Z",
+            "_id": "7563ed3a-fb16-4b02-973c-a299b2263b07",
+            "_rev": "tKbVuq75FFT57xIYFXuwSs",
+            "_type": "imageModule",
+            "_updatedAt": "2025-04-28T20:22:19Z",
+            "captions": [
+              {
+                "_key": "f8ed74b1d60d",
+                "_type": "caption",
+                "caption": {
+                  "_type": "copyItem",
+                  "copy": "⬤ FIREFLY<br>\n<span>Brand and website</span>",
+                  "font": "sans-serif"
+                },
+                "content": [
+                  {
+                    "_key": "28fd4a2c8b5a",
+                    "_type": "block",
+                    "children": [
+                      {
+                        "_key": "9b375d06865a0",
+                        "_type": "span",
+                        "marks": [],
+                        "text": "⬤ FIREFLY HEALTH\nBrand, Website and Art Direction"
+                      }
+                    ],
+                    "markDefs": [],
+                    "style": "normal_primaryXS"
+                  }
+                ],
+                "fontColor": "dark",
+                "position": "bottom-left"
+              }
+            ],
+            "disableShadow": true,
+            "image": {
+              "alt": "Firefly illustration",
+              "controls": null,
+              "dimensions": {
+                "height": 2160,
+                "width": 1920
+              },
+              "extension": "webp",
+              "mimeType": "image/webp",
+              "url": "https://cdn.sanity.io/images/zgsxfzr2/production/8f2bde96a97ca7b931d1ecaeaffcc2555dc933dd-1920x2160.webp",
+              "vimeo": null
+            },
+            "name": "Image - Home - Firefly Health",
+            "path": {
+              "_type": "pathField",
+              "preventAnimatedTransition": false,
+              "url": "/work/firefly-health"
+            },
+            "styles": {
+              "_type": "styleItem",
+              "fontColor": "dark",
+              "fontHoverColor": "white",
+              "positions": [
+                {
+                  "_key": "f78467aec5d7",
+                  "_type": "positionItem",
+                  "breakpoint": "small",
+                  "colEnd": 12,
+                  "colStart": 1,
+                  "offsetY": 30
+                },
+                {
+                  "_key": "526cc3840d4d",
+                  "_type": "positionItem",
+                  "breakpoint": "large",
+                  "colEnd": 11,
+                  "colStart": 8,
+                  "offsetX": 50,
+                  "offsetY": 160
+                }
+              ],
+              "width": "75%"
+            },
+            "submodules": null
+          },
+          {
+            "_createdAt": "2021-10-22T10:28:09Z",
+            "_id": "1f862a33-23a8-47fe-94c5-fcc0974b0389",
+            "_rev": "enzJUxuhdsmP5s3sZzQiu9",
+            "_type": "imageModule",
+            "_updatedAt": "2025-03-12T19:12:51Z",
+            "captions": [
+              {
+                "_key": "33e8838aa1f1",
+                "_type": "caption",
+                "caption": {
+                  "_type": "copyItem",
+                  "copy": "⬤ 2023 DEI REPORT<br>\nArticle ↗",
+                  "font": "sans-serif"
+                },
+                "content": [
+                  {
+                    "_key": "06109ec8f1c2",
+                    "_type": "block",
+                    "children": [
+                      {
+                        "_key": "b6240e76c0b40",
+                        "_type": "span",
+                        "marks": [],
+                        "text": "⬤ 2024 REPORT\nDiversity, Equity, and Inclusion"
+                      }
+                    ],
+                    "markDefs": [],
+                    "style": "normal_primaryXS"
+                  }
+                ],
+                "fontColor": "dark",
+                "position": "bottom-left"
+              }
+            ],
+            "disableShadow": true,
+            "image": {
+              "alt": "Earth",
+              "controls": null,
+              "dimensions": {
+                "height": 958,
+                "width": 954
+              },
+              "extension": "png",
+              "mimeType": "image/png",
+              "url": "https://cdn.sanity.io/images/zgsxfzr2/production/a7efe413ac3e03485263838797bc977b76662b96-954x958.png",
+              "vimeo": null
+            },
+            "name": "Image - Home - Earth Masked",
+            "path": {
+              "_type": "pathField",
+              "url": "https://garden3d.substack.com/p/garden3d-dei-report-2023"
+            },
+            "styles": {
+              "_type": "styleItem",
+              "fontColor": "light",
+              "fontHoverColor": "white",
+              "positions": [
+                {
+                  "_key": "385b6935c211",
+                  "_type": "positionItem",
+                  "breakpoint": "small",
+                  "colEnd": 8,
+                  "colStart": 1,
+                  "offsetX": 0,
+                  "offsetY": -20
+                },
+                {
+                  "_key": "e71182decb6c",
+                  "_type": "positionItem",
+                  "breakpoint": "large",
+                  "colEnd": 12,
+                  "colStart": 9,
+                  "offsetX": 50,
+                  "offsetY": 480
+                },
+                {
+                  "_key": "a4101448832b",
+                  "_type": "positionItem",
+                  "breakpoint": "xLarge",
+                  "colEnd": 12,
+                  "colStart": 9,
+                  "offsetY": 270
+                }
+              ],
+              "width": "100%"
+            },
+            "submodules": null
+          },
+          {
+            "_createdAt": "2025-03-12T18:59:06Z",
+            "_id": "504a30fd-0d7f-488b-9fd3-1999e6dcaa52",
+            "_rev": "0q3uKZxnfB1z4qeWa5tTpX",
+            "_type": "mediaModule",
+            "_updatedAt": "2025-03-12T19:26:56Z",
+            "captions": [
+              {
+                "_key": "e3799981518e",
+                "_type": "caption",
+                "content": [
+                  {
+                    "_key": "df36c21a5d84",
+                    "_type": "block",
+                    "children": [
+                      {
+                        "_key": "98fb13a7eca30",
+                        "_type": "span",
+                        "marks": [],
+                        "text": "⬤ MODERN LIFE\nBrand, Website and Art Direction"
+                      }
+                    ],
+                    "markDefs": [],
+                    "style": "normal_primaryXS"
+                  }
+                ],
+                "fontColor": "light",
+                "position": "top-left"
+              }
+            ],
+            "image": {
+              "alt": null,
+              "controls": null,
+              "dimensions": {
+                "height": null,
+                "width": null
+              },
+              "extension": null,
+              "mimeType": null,
+              "url": null,
+              "vimeo": null
+            },
+            "media": {
+              "alt": null,
+              "controls": null,
+              "dimensions": {
+                "height": null,
+                "width": null
+              },
+              "extension": "mp4",
+              "mimeType": "video/mp4",
+              "url": "https://cdn.sanity.io/files/zgsxfzr2/production/36291f62dc042fca057dd039ddb10ae8e2737e26.mp4",
+              "vimeo": null
+            },
+            "path": {
+              "_type": "pathField",
+              "preventAnimatedTransition": true,
+              "url": "/work/modern-life"
+            },
+            "poster": null,
+            "styles": {
+              "_type": "styleItem",
+              "width": "75%"
+            },
+            "submodules": null,
+            "title": "Video - Home - Modern Life"
+          }
+        ],
+        "name": "Home Index",
+        "projectCategoryTags": [
+          {
+            "_id": "456900d5-b683-468a-b422-deeb1a6c92a5",
+            "_type": "projectCategory",
+            "slug": "web",
+            "title": "Web"
+          },
+          {
+            "_id": "51d4d2ca-4510-4c0b-a658-932b0d9e32a4",
+            "_type": "projectCategory",
+            "slug": "strategy",
+            "title": "Strategy"
+          },
+          {
+            "_id": "70b0c0ef-e0ba-4880-ad39-84bce317d055",
+            "_type": "projectCategory",
+            "slug": "product",
+            "title": "Product"
+          },
+          {
+            "_id": "ff15efdf-ff46-43c0-8b1c-3c6a8af40680",
+            "_type": "projectCategory",
+            "slug": "brand",
+            "title": "Brand"
+          }
+        ],
+        "slug": {
+          "_type": "slug",
+          "current": "home"
+        }
+      },
+      "preview": false,
+      "initialState": {
+        "global": {
+          "navigation": [],
+          "status": "IDLE"
+        },
+        "modules": {
+          "killPageModules": "",
+          "emailSignUpModule": {
+            "subscribed": null,
+            "userEmail": ""
+          },
+          "status": {
+            "emailSignUpModule": "IDLE"
+          },
+          "error": {}
+        },
+        "pages": {
+          "homePage": {
+            "_createdAt": "2020-04-08T21:21:46Z",
+            "_id": "32b5eea6-a0cb-4e5b-b6b4-3625607014e0",
+            "_rev": "ksqVftetkW10ajYwSohno5",
+            "_type": "page",
+            "_updatedAt": "2025-11-12T15:35:46Z",
+            "footerModule": {
+              "_createdAt": "2020-04-14T18:00:24Z",
+              "_id": "4b4430ce-27a7-4b9b-b7db-d383a9499d27",
+              "_rev": "JFEBaZ5t6vWxoxgbeGeksF",
+              "_type": "footerModule",
+              "_updatedAt": "2024-11-18T14:21:52Z",
+              "image": {
+                "alt": null,
+                "controls": null,
+                "dimensions": {
+                  "height": null,
+                  "width": null
+                },
+                "extension": null,
+                "mimeType": null,
+                "url": null,
+                "vimeo": null
+              },
+              "locations": [
+                {
+                  "_key": "26450c654057",
+                  "_type": "locationItem",
+                  "city": "EST",
+                  "neighborhood": "New York City",
+                  "timezone": [
+                    "America/New_York"
+                  ]
+                },
+                {
+                  "_key": "384ac6902b19",
+                  "_type": "locationItem",
+                  "city": "CT",
+                  "neighborhood": "Chicago",
+                  "timezone": [
+                    "America/Chicago"
+                  ]
+                },
+                {
+                  "_key": "6c58f5b8f096",
+                  "_type": "locationItem",
+                  "city": "CET",
+                  "neighborhood": "Berlin",
+                  "timezone": [
+                    "Europe/Berlin"
+                  ]
+                }
+              ],
+              "name": "Footer - Home",
+              "socialLinks": [
+                {
+                  "_key": "cf6d78ad416b",
+                  "_type": "linkItem",
+                  "label": "Email studio@xxix.co",
+                  "path": {
+                    "_type": "pathField",
+                    "url": "mailto:studio@xxix.co"
+                  }
+                },
+                {
+                  "_key": "4299fdb949e4",
+                  "_type": "linkItem",
+                  "label": "Instagram @xxix_co",
+                  "path": {
+                    "_type": "pathField",
+                    "url": "https://www.instagram.com/xxix_co"
+                  }
+                },
+                {
+                  "_key": "ab58881564fc",
+                  "_type": "linkItem",
+                  "label": "Substack @garden3d",
+                  "path": {
+                    "_type": "pathField",
+                    "url": "https://garden3d.substack.com/"
+                  }
+                }
+              ],
+              "styles": {
+                "_type": "styleItem",
+                "bgColor": "#000000",
+                "fontColor": "light",
+                "fontHoverColor": "yellow",
+                "positions": [
+                  {
+                    "_key": "eb2f4a987d3f",
+                    "_type": "positionItem",
+                    "breakpoint": "small",
+                    "hide": false
+                  },
+                  {
+                    "_key": "17db83ed1af5",
+                    "_type": "positionItem",
+                    "breakpoint": "large",
+                    "colEnd": 12,
+                    "colStart": 1,
+                    "hide": false,
+                    "offsetY": 680
+                  },
+                  {
+                    "_key": "6c6fb68d7aea",
+                    "_type": "positionItem",
+                    "breakpoint": "xLarge",
+                    "colEnd": 11,
+                    "colStart": 2,
+                    "offsetY": 690
+                  }
+                ],
+                "width": "100%"
+              },
+              "title": {
+                "_type": "copyItem",
+                "copy": "Twenty Nine",
+                "font": "sans-serif"
+              }
+            },
+            "heroModule": {
+              "_createdAt": "2020-04-08T21:26:06Z",
+              "_id": "0d479de3-fe14-4d75-a193-3e18adec17b5",
+              "_rev": "aWbHA3HU3CIWQq7NNaMzHz",
+              "_type": "masterModule",
+              "_updatedAt": "2025-02-10T18:03:10Z",
+              "name": "Master - Home - Intro ",
+              "styles": {
+                "_type": "styleItem",
+                "bgColor": "#FFFFFF",
+                "fontColor": "dark",
+                "fontHoverColor": "red",
+                "positions": [
+                  {
+                    "_key": "8eb010e4f7a2",
+                    "_type": "positionItem",
+                    "breakpoint": "small"
+                  },
+                  {
+                    "_key": "31fb3b50b7dd",
+                    "_type": "positionItem",
+                    "breakpoint": "large",
+                    "colEnd": 6,
+                    "colStart": 1,
+                    "offsetX": 0,
+                    "offsetY": 5
+                  }
+                ],
+                "width": "75%"
+              },
+              "submodules": [
+                {
+                  "_createdAt": "2020-04-25T13:30:36Z",
+                  "_id": "b575468e-f63e-4047-9c06-d96bcddbeece",
+                  "_rev": "JQhnGuYtqpXy3SF5k0OVOg",
+                  "_type": "textSubmodule",
+                  "_updatedAt": "2024-11-13T20:53:16Z",
+                  "body": "<h1>Twenty Nine is a people-first brand, product, and web studio<br><br></h1>",
+                  "font": "sans-serif",
+                  "name": "Text - Home -  Intro",
+                  "sidenotes": []
+                },
+                {
+                  "_createdAt": "2020-08-17T20:59:15Z",
+                  "_id": "d5f02ba2-5b62-45fe-b25d-9c64aa7e8d57",
+                  "_rev": "IhvBm2Y79SiNm66GbBAjni",
+                  "_type": "textSubmodule",
+                  "_updatedAt": "2020-08-27T19:49:35Z",
+                  "font": "sans-serif",
+                  "name": "Text - Home -  Intro Spacer",
+                  "sidenotes": []
+                },
+                {
+                  "_createdAt": "2020-08-17T20:57:09Z",
+                  "_id": "98506d0c-7e94-4866-91f7-e0dbf890eb5b",
+                  "_rev": "rmSQAywSRjYVoD1z72A1xF",
+                  "_type": "textSubmodule",
+                  "_updatedAt": "2024-11-13T21:01:54Z",
+                  "body": "#### ⬤ Start a project → [studio@xxix.co](mailto:studio@xxix.co)",
+                  "font": "sans-serif",
+                  "name": "Text - Home -  Intro CTA",
+                  "sidenotes": []
+                }
+              ]
+            },
+            "meta": {
+              "_type": "metaItem",
+              "description": "Twenty Nine is a design and technology studio that puts people at the center of its practice. Part of the garden3d.net family. NYC-born and headquartered, now operating globally.\n\n✎ studio@xxix.co | ✺ @xxix_co",
+              "image": "https://cdn.sanity.io/images/zgsxfzr2/production/38bda5ec800b75f65ff718017d46f29c8793a879-1200x630.png",
+              "title": "● XXIX | A people-first product design and brand studio"
+            },
+            "modules": [
+              {
+                "_createdAt": "2025-01-17T16:39:21Z",
+                "_id": "bc6c65c7-1e6b-4073-99bf-e54a3f39f262",
+                "_rev": "GSRP7R7XZ3fAvuzymbTDlS",
+                "_type": "masterModule",
+                "_updatedAt": "2025-02-10T17:36:25Z",
+                "image": {
+                  "alt": null,
+                  "controls": null,
+                  "dimensions": {
+                    "height": null,
+                    "width": null
+                  },
+                  "extension": null,
+                  "mimeType": null,
+                  "url": null,
+                  "vimeo": null
+                },
+                "name": "Master - Client List",
+                "styles": {
+                  "_type": "styleItem",
+                  "bgColor": "#F8E71C",
+                  "fontColor": "dark",
+                  "positions": [
+                    {
+                      "_key": "d6400f7bac0b",
+                      "_type": "positionItem",
+                      "breakpoint": "large",
+                      "colEnd": 10,
+                      "colStart": 5,
+                      "offsetY": 270
+                    }
+                  ],
+                  "width": "75%"
+                },
+                "submodules": [
+                  {
+                    "_createdAt": "2025-01-17T16:41:22Z",
+                    "_id": "97bc80f2-acea-4c3c-aba8-6d4ff26c42c7",
+                    "_rev": "8zg1Xoz2U4YsREvqQJUvcT",
+                    "_type": "textSubmodule",
+                    "_updatedAt": "2025-01-21T17:17:54Z",
+                    "body": "<h4>Our clients include –</h4>\n<h3><br>Air Company, Brooklyn Museum, Dropbox, Etsy, Figma, Google, Hinge, IBM, Ironman, Light Phone, Mailchimp, Mac Miller, Magic Leap, MIT, Mozilla, Pinterest, Pratt Institute, Salt & Stone, Stripe</h3>\n<h4><br><a href=\"/work\">⬤ View our work</a></h4>",
+                    "font": "sans-serif",
+                    "name": "Text - Client List "
+                  }
+                ]
+              },
+              {
+                "_createdAt": "2025-04-23T19:58:27Z",
+                "_id": "aae94614-32b8-4588-8541-559463edfdee",
+                "_rev": "6Xi4H2Yj2FpJVTEj2HOE6h",
+                "_type": "mediaModule",
+                "_updatedAt": "2025-04-24T15:43:49Z",
+                "alt": "The Williamstown Theatre Festival Programs & Events page",
+                "captions": [
+                  {
+                    "_key": "8543f8d988ff",
+                    "_type": "caption",
+                    "content": [
+                      {
+                        "_key": "d92660b73e3b",
+                        "_type": "block",
+                        "children": [
+                          {
+                            "_key": "13b18806bd8f",
+                            "_type": "span",
+                            "marks": [],
+                            "text": "⬤ WILLIAMSTOWN THEATRE FESTIVAL\nWebsite Design and Development"
+                          }
+                        ],
+                        "markDefs": [],
+                        "style": "normal_primaryXS"
+                      }
+                    ],
+                    "fontColor": "dark",
+                    "position": "top-left"
+                  }
+                ],
+                "image": {
+                  "alt": null,
+                  "controls": null,
+                  "dimensions": {
+                    "height": null,
+                    "width": null
+                  },
+                  "extension": null,
+                  "mimeType": null,
+                  "url": null,
+                  "vimeo": null
+                },
+                "media": {
+                  "alt": null,
+                  "controls": null,
+                  "dimensions": {
+                    "height": null,
+                    "width": null
+                  },
+                  "extension": "mp4",
+                  "mimeType": "video/mp4",
+                  "url": "https://cdn.sanity.io/files/zgsxfzr2/production/146228848dfd813eb2c15f267f1512b5c86a2728.mp4",
+                  "vimeo": null
+                },
+                "path": {
+                  "_type": "pathField",
+                  "preventAnimatedTransition": true,
+                  "url": "/work/williamstowntheatrefestival"
+                },
+                "poster": null,
+                "styles": {
+                  "_type": "styleItem",
+                  "bgColor": "#000000",
+                  "fontColor": "dark",
+                  "width": "100%"
+                },
+                "submodules": null,
+                "title": "Video - Home - WTF"
+              },
+              {
+                "_createdAt": "2025-04-28T18:38:39Z",
+                "_id": "3b9bdfbd-8280-4c1e-bdfe-db7b409b5d67",
+                "_rev": "LNsiCAnja6OMnTvzsgzAMM",
+                "_type": "imageModule",
+                "_updatedAt": "2025-04-29T18:12:06Z",
+                "aspectRatio": "square",
+                "captions": [
+                  {
+                    "_key": "2c114b873582",
+                    "_type": "caption",
+                    "content": [
+                      {
+                        "_key": "5426866ed626",
+                        "_type": "block",
+                        "children": [
+                          {
+                            "_key": "b2ba742b21b6",
+                            "_type": "span",
+                            "marks": [],
+                            "text": "⬤ OH, TO BE KNOWN BY MY COMPUTER!\nA pattern for designing intelligent products"
+                          }
+                        ],
+                        "markDefs": [],
+                        "style": "normal_primaryXS"
+                      }
+                    ],
+                    "fontColor": "dark",
+                    "position": "bottom-left"
+                  }
+                ],
+                "disableShadow": true,
+                "image": {
+                  "alt": null,
+                  "controls": null,
+                  "dimensions": {
+                    "height": 1921,
+                    "width": 1921
+                  },
+                  "extension": "png",
+                  "mimeType": "image/png",
+                  "url": "https://cdn.sanity.io/images/zgsxfzr2/production/8392554c7d3ceadf6a83268693d17e853da7c857-1921x1921.png",
+                  "vimeo": null
+                },
+                "name": "Image - Home - Oh to be Known by my Computer",
+                "path": {
+                  "_type": "pathField",
+                  "preventAnimatedTransition": true,
+                  "url": "https://garden3d.substack.com/p/oh-to-be-known-by-my-computer"
+                },
+                "styles": {
+                  "_type": "styleItem",
+                  "width": "75%"
+                },
+                "submodules": null
+              },
+              {
+                "_createdAt": "2020-10-30T00:55:08Z",
+                "_id": "f97ebde8-b573-460f-8615-a6ff7c6325a0",
+                "_rev": "aWbHA3HU3CIWQq7NNaJsnx",
+                "_type": "masterModule",
+                "_updatedAt": "2025-02-10T17:36:37Z",
+                "image": {
+                  "alt": null,
+                  "controls": null,
+                  "dimensions": {
+                    "height": null,
+                    "width": null
+                  },
+                  "extension": null,
+                  "mimeType": null,
+                  "url": null,
+                  "vimeo": null
+                },
+                "name": "Master - Studio - Jobs",
+                "styles": {
+                  "_type": "styleItem",
+                  "bgColor": "#F8E71C",
+                  "fontColor": "dark",
+                  "positions": [
+                    {
+                      "_key": "326950288edf",
+                      "_type": "positionItem",
+                      "breakpoint": "small"
+                    },
+                    {
+                      "_key": "c90a38b99bc5",
+                      "_type": "positionItem",
+                      "breakpoint": "large",
+                      "colEnd": 4,
+                      "colStart": 1,
+                      "offsetX": 0,
+                      "offsetY": 180
+                    }
+                  ],
+                  "width": "75%"
+                },
+                "submodules": [
+                  {
+                    "_createdAt": "2021-09-27T10:10:59Z",
+                    "_id": "8b1dde8a-b246-4b1d-b243-962ac47863cc",
+                    "_rev": "rnb16y4e0BKBgYGF3FOx7Z",
+                    "_type": "textSubmodule",
+                    "_updatedAt": "2025-01-17T16:52:34Z",
+                    "body": "<h2>WORK WITH US</h2>\n<h4><br><span>We think of our studio as a refuge for creative people. We provide free health insurance, generous time off, freedom to work when and where you choose, share company profits, make everything happening in the studio transparent, and even offset our carbon footprint.</span></h4>\n<h3><br><a href=\"/jobs\">⬤ OPEN POSITIONS</a></h3>",
+                    "font": "sans-serif",
+                    "name": "Text - Jobs - Open positions",
+                    "sidenotes": []
+                  }
+                ]
+              },
+              {
+                "_createdAt": "2023-05-08T18:28:43Z",
+                "_id": "fed0e84d-e908-411f-9eb9-417f8071b2fa",
+                "_rev": "uAad7rAIwHFvAN91EMbzkA",
+                "_type": "imageModule",
+                "_updatedAt": "2025-03-12T19:04:07Z",
+                "captions": [
+                  {
+                    "_key": "e8a48bac244d",
+                    "_type": "caption",
+                    "caption": {
+                      "_type": "copyItem",
+                      "copy": "⬤ 2023 <br>SUSTAINABILITY REPORT<br>Article ↗\n",
+                      "font": "sans-serif"
+                    },
+                    "content": [
+                      {
+                        "_key": "f08239956802",
+                        "_type": "block",
+                        "children": [
+                          {
+                            "_key": "9c96564891c00",
+                            "_type": "span",
+                            "marks": [],
+                            "text": "⬤ 2024 REPORT\nSustainability"
+                          }
+                        ],
+                        "markDefs": [],
+                        "style": "normal_primaryXS"
+                      }
+                    ],
+                    "fontColor": "dark",
+                    "position": "bottom-left"
+                  }
+                ],
+                "disableShadow": true,
+                "image": {
+                  "alt": null,
+                  "controls": null,
+                  "dimensions": {
+                    "height": 517,
+                    "width": 897
+                  },
+                  "extension": "png",
+                  "mimeType": "image/png",
+                  "url": "https://cdn.sanity.io/images/zgsxfzr2/production/39785940c535cf89f66368c1b570e06b62dd5a20-897x517.png",
+                  "vimeo": null
+                },
+                "name": "Image - Home - Sustainability Report",
+                "path": {
+                  "_type": "pathField",
+                  "url": "https://garden3d.substack.com/p/garden3d-2023-sustainability-report"
+                },
+                "styles": {
+                  "_type": "styleItem",
+                  "positions": [
+                    {
+                      "_key": "ef9c4b36f0cd",
+                      "_type": "positionItem",
+                      "breakpoint": "large",
+                      "colEnd": 10,
+                      "colStart": 5,
+                      "offsetX": 80,
+                      "offsetY": 300
+                    },
+                    {
+                      "_key": "dc6083b56c8c",
+                      "_type": "positionItem",
+                      "breakpoint": "small",
+                      "colEnd": 12,
+                      "colStart": 3
+                    }
+                  ],
+                  "width": "100%"
+                },
+                "submodules": null
+              },
+              {
+                "_createdAt": "2025-03-12T18:54:42Z",
+                "_id": "191b0ee9-ed6e-4b86-9093-a4d61f4bf7f1",
+                "_rev": "W23eECVG96istt7BpsBb3U",
+                "_type": "mediaModule",
+                "_updatedAt": "2025-04-28T20:19:55Z",
+                "captions": [
+                  {
+                    "_key": "80d69257d42f",
+                    "_type": "caption",
+                    "content": [
+                      {
+                        "_key": "9e218b56263f",
+                        "_type": "block",
+                        "children": [
+                          {
+                            "_key": "23912f5f5bcd0",
+                            "_type": "span",
+                            "marks": [],
+                            "text": "⬤ MAC MILLER\nWebsite Design and Development"
+                          }
+                        ],
+                        "markDefs": [],
+                        "style": "normal_primaryXS"
+                      }
+                    ],
+                    "fontColor": "dark",
+                    "position": "bottom-left"
+                  }
+                ],
+                "image": {
+                  "alt": null,
+                  "controls": null,
+                  "dimensions": {
+                    "height": null,
+                    "width": null
+                  },
+                  "extension": null,
+                  "mimeType": null,
+                  "url": null,
+                  "vimeo": null
+                },
+                "media": {
+                  "alt": null,
+                  "controls": null,
+                  "dimensions": {
+                    "height": null,
+                    "width": null
+                  },
+                  "extension": "mp4",
+                  "mimeType": "video/mp4",
+                  "url": "https://cdn.sanity.io/files/zgsxfzr2/production/5547b065b49a113c4de3ddcf528258374c67d316.mp4",
+                  "vimeo": null
+                },
+                "path": {
+                  "_type": "pathField",
+                  "preventAnimatedTransition": true,
+                  "url": "/work/mac-miller-swimming"
+                },
+                "poster": null,
+                "styles": {
+                  "_type": "styleItem",
+                  "width": "100%"
+                },
+                "submodules": null,
+                "title": "Video - Home - Mac Miller"
+              },
+              {
+                "_createdAt": "2025-03-12T18:45:56Z",
+                "_id": "a6674aa6-f4ba-4092-ba77-943f5caa58c0",
+                "_rev": "uAad7rAIwHFvAN91EMo9P7",
+                "_type": "mediaModule",
+                "_updatedAt": "2025-03-12T19:24:35Z",
+                "captions": [
+                  {
+                    "_key": "82a350fad9fc",
+                    "_type": "caption",
+                    "content": [
+                      {
+                        "_key": "b956512f7225",
+                        "_type": "block",
+                        "children": [
+                          {
+                            "_key": "f5d9f52161310",
+                            "_type": "span",
+                            "marks": [],
+                            "text": "⬤ APLOS\nWebsite Design for Ecommerce"
+                          }
+                        ],
+                        "markDefs": [],
+                        "style": "normal_primaryXS"
+                      }
+                    ],
+                    "fontColor": "dark",
+                    "position": "bottom-left"
+                  }
+                ],
+                "image": {
+                  "alt": null,
+                  "controls": null,
+                  "dimensions": {
+                    "height": null,
+                    "width": null
+                  },
+                  "extension": null,
+                  "mimeType": null,
+                  "url": null,
+                  "vimeo": null
+                },
+                "media": {
+                  "alt": null,
+                  "controls": null,
+                  "dimensions": {
+                    "height": null,
+                    "width": null
+                  },
+                  "extension": "mp4",
+                  "mimeType": "video/mp4",
+                  "url": "https://cdn.sanity.io/files/zgsxfzr2/production/8df10eb6c850f2d89c9a687b79eec991c4e74d89.mp4",
+                  "vimeo": null
+                },
+                "path": {
+                  "_type": "pathField",
+                  "preventAnimatedTransition": true,
+                  "url": "/work/aplos"
+                },
+                "poster": null,
+                "styles": {
+                  "_type": "styleItem",
+                  "width": "75%"
+                },
+                "submodules": null,
+                "title": "Video - Home - Aplos"
+              },
+              {
+                "_createdAt": "2025-03-12T19:05:49Z",
+                "_id": "d32a9da8-6b14-488d-aaaf-83b7b7cd23c1",
+                "_rev": "enzJUxuhdsmP5s3sZzQ2Kb",
+                "_type": "mediaModule",
+                "_updatedAt": "2025-03-12T19:05:49Z",
+                "captions": [
+                  {
+                    "_key": "e34582211efd",
+                    "_type": "caption",
+                    "content": [
+                      {
+                        "_key": "36784d3f8fb1",
+                        "_type": "block",
+                        "children": [
+                          {
+                            "_key": "bec74f1bc3aa0",
+                            "_type": "span",
+                            "marks": [],
+                            "text": "⬤ PRESQ\nWebsite Design and Development for Ecommerce"
+                          }
+                        ],
+                        "markDefs": [],
+                        "style": "normal_primaryXS"
+                      }
+                    ],
+                    "fontColor": "dark",
+                    "position": "top-left"
+                  }
+                ],
+                "image": {
+                  "alt": null,
+                  "controls": null,
+                  "dimensions": {
+                    "height": null,
+                    "width": null
+                  },
+                  "extension": null,
+                  "mimeType": null,
+                  "url": null,
+                  "vimeo": null
+                },
+                "media": {
+                  "alt": null,
+                  "controls": null,
+                  "dimensions": {
+                    "height": null,
+                    "width": null
+                  },
+                  "extension": "mp4",
+                  "mimeType": "video/mp4",
+                  "url": "https://cdn.sanity.io/files/zgsxfzr2/production/ebe0b8e770b3e02b976f790a6dd8a1ecb1296d73.mp4",
+                  "vimeo": null
+                },
+                "path": {
+                  "_type": "pathField",
+                  "preventAnimatedTransition": true,
+                  "url": "/work/presq"
+                },
+                "poster": null,
+                "styles": {
+                  "_type": "styleItem",
+                  "width": "100%"
+                },
+                "submodules": null,
+                "title": "Video - Home - Presq"
+              },
+              {
+                "_createdAt": "2023-11-20T22:46:44Z",
+                "_id": "705217f0-5b4c-489b-bf4e-9ab34ade4a20",
+                "_rev": "rnb16y4e0BKBgYGF3FvIyN",
+                "_type": "imageModule",
+                "_updatedAt": "2025-01-17T18:58:19Z",
+                "captions": [
+                  {
+                    "_key": "de47fc0beea6",
+                    "_type": "caption",
+                    "caption": {
+                      "_type": "copyItem",
+                      "copy": "⬤ INDEX NYC<br>\n<a href=\"https://www.index-space.org\">Shared Work and<br> Community Space &#8599;<br>",
+                      "font": "sans-serif"
+                    },
+                    "content": [
+                      {
+                        "_key": "e55dc1f90cd2",
+                        "_type": "block",
+                        "children": [
+                          {
+                            "_key": "e8bc58907bad0",
+                            "_type": "span",
+                            "marks": [],
+                            "text": "⬤ INDEX NYC\nShared Work and Community Space"
+                          }
+                        ],
+                        "markDefs": [
+                          {
+                            "_key": "699811ff489b",
+                            "_type": "link",
+                            "path": {
+                              "_type": "pathField",
+                              "preventAnimatedTransition": true,
+                              "url": "https://www.index-space.org"
+                            }
+                          }
+                        ],
+                        "style": "normal_primaryXS"
+                      }
+                    ],
+                    "fontColor": "dark",
+                    "position": "top-left"
+                  }
+                ],
+                "image": {
+                  "alt": "The entrance to Index Space",
+                  "controls": null,
+                  "dimensions": {
+                    "height": 1800,
+                    "width": 1440
+                  },
+                  "extension": "png",
+                  "mimeType": "image/png",
+                  "url": "https://cdn.sanity.io/images/zgsxfzr2/production/3af3adc89c4fcc1abe6ac342debe5fc19b824ad7-1440x1800.png",
+                  "vimeo": null
+                },
+                "name": "Image - Home - Index interior",
+                "path": {
+                  "_type": "pathField",
+                  "preventAnimatedTransition": true,
+                  "url": "/work/index"
+                },
+                "styles": {
+                  "_type": "styleItem",
+                  "positions": [
+                    {
+                      "_key": "5da1d0e198ce",
+                      "_type": "positionItem",
+                      "breakpoint": "large",
+                      "colEnd": 9,
+                      "colStart": 6,
+                      "offsetX": -20,
+                      "offsetY": 70
+                    },
+                    {
+                      "_key": "6cde74b37f1b",
+                      "_type": "positionItem",
+                      "breakpoint": "small",
+                      "colEnd": 12,
+                      "colStart": 3,
+                      "offsetY": 35
+                    }
+                  ],
+                  "width": "100%"
+                },
+                "submodules": null
+              },
+              {
+                "_createdAt": "2021-10-20T10:49:59Z",
+                "_id": "0ec476d2-2d84-456d-ad4b-2912376a278e",
+                "_rev": "Zt6OvEh5471EDKrxE7foZM",
+                "_type": "imageModule",
+                "_updatedAt": "2025-04-28T18:46:58Z",
+                "captions": [
+                  {
+                    "_key": "37070f09eaf5",
+                    "_type": "caption",
+                    "caption": {
+                      "_type": "copyItem",
+                      "copy": "⬤ AIR COMPANY<br>Website and Art Direction",
+                      "font": "sans-serif"
+                    },
+                    "content": [
+                      {
+                        "_key": "0e8899b14859",
+                        "_type": "block",
+                        "children": [
+                          {
+                            "_key": "0a69e5648b640",
+                            "_type": "span",
+                            "marks": [],
+                            "text": "⬤ AIR COMPANY\nWebsite Design and \nArt Direction for Ecommerce"
+                          }
+                        ],
+                        "markDefs": [],
+                        "style": "normal_primaryXS"
+                      }
+                    ],
+                    "fontColor": "dark",
+                    "position": "top-left"
+                  }
+                ],
+                "disableShadow": true,
+                "image": {
+                  "alt": "Image of liquid",
+                  "controls": null,
+                  "dimensions": {
+                    "height": 1995,
+                    "width": 1397
+                  },
+                  "extension": "png",
+                  "mimeType": "image/png",
+                  "url": "https://cdn.sanity.io/images/zgsxfzr2/production/279304f94866c9ed72be659b184d88eae9dafb9b-1397x1995.png",
+                  "vimeo": null
+                },
+                "name": "Image - Home - Air Bottle",
+                "path": {
+                  "_type": "pathField",
+                  "preventAnimatedTransition": false,
+                  "url": "/work/air-company"
+                },
+                "styles": {
+                  "_type": "styleItem",
+                  "fontColor": "light",
+                  "fontHoverColor": "white",
+                  "positions": [
+                    {
+                      "_key": "ef9d6501bdc3",
+                      "_type": "positionItem",
+                      "breakpoint": "small",
+                      "colEnd": 12,
+                      "colStart": 2,
+                      "offsetY": 60
+                    },
+                    {
+                      "_key": "ab7a838b7ea7",
+                      "_type": "positionItem",
+                      "breakpoint": "large",
+                      "colEnd": 8,
+                      "colStart": 2,
+                      "offsetY": 365
+                    },
+                    {
+                      "_key": "e2240faa091b",
+                      "_type": "positionItem",
+                      "breakpoint": "xLarge",
+                      "colEnd": 9,
+                      "colStart": 3,
+                      "offsetY": 365
+                    }
+                  ],
+                  "width": "75%"
+                },
+                "submodules": null
+              },
+              {
+                "_createdAt": "2025-03-12T19:02:49Z",
+                "_id": "503419e5-c203-4607-bd3b-b82acf3ba5e5",
+                "_rev": "uAad7rAIwHFvAN91EMrQy0",
+                "_type": "mediaModule",
+                "_updatedAt": "2025-03-12T19:40:01Z",
+                "captions": [
+                  {
+                    "_key": "6fff017627cb",
+                    "_type": "caption",
+                    "content": [
+                      {
+                        "_key": "5f1e1b8254cf",
+                        "_type": "block",
+                        "children": [
+                          {
+                            "_key": "af881d3584000",
+                            "_type": "span",
+                            "marks": [],
+                            "text": "⬤ SALT & STONE\nCampaign and Packaging"
+                          }
+                        ],
+                        "markDefs": [],
+                        "style": "normal_primaryXS"
+                      }
+                    ],
+                    "fontColor": "light",
+                    "position": "bottom-left"
+                  }
+                ],
+                "image": {
+                  "alt": null,
+                  "controls": null,
+                  "dimensions": {
+                    "height": null,
+                    "width": null
+                  },
+                  "extension": null,
+                  "mimeType": null,
+                  "url": null,
+                  "vimeo": null
+                },
+                "media": {
+                  "alt": null,
+                  "controls": null,
+                  "dimensions": {
+                    "height": null,
+                    "width": null
+                  },
+                  "extension": "mp4",
+                  "mimeType": "video/mp4",
+                  "url": "https://cdn.sanity.io/files/zgsxfzr2/production/5169a042ae2f139fb601eb49f4161aa3bf416bb2.mp4",
+                  "vimeo": null
+                },
+                "path": {
+                  "_type": "pathField",
+                  "preventAnimatedTransition": true,
+                  "url": "/work/salt-and-stone"
+                },
+                "poster": null,
+                "styles": {
+                  "_type": "styleItem",
+                  "width": "75%"
+                },
+                "submodules": null,
+                "title": "Video - Home - Salt & Stone"
+              },
+              {
+                "_createdAt": "2021-10-11T12:34:36Z",
+                "_id": "6718c21f-793c-4f89-a8cf-573009e1bc7e",
+                "_rev": "enzJUxuhdsmP5s3sZzYIJX",
+                "_type": "imageModule",
+                "_updatedAt": "2025-03-12T19:25:52Z",
+                "captions": [
+                  {
+                    "_key": "e3b7b59f30d7",
+                    "_type": "caption",
+                    "content": [
+                      {
+                        "_key": "e65e6b61413e",
+                        "_type": "block",
+                        "children": [
+                          {
+                            "_key": "f1f3dd79eb370",
+                            "_type": "span",
+                            "marks": [],
+                            "text": "⬤ Pratt SoA\nWebsite Design and Development"
+                          }
+                        ],
+                        "markDefs": [],
+                        "style": "normal_primaryXS"
+                      }
+                    ],
+                    "fontColor": "dark",
+                    "position": "bottom-left"
+                  }
+                ],
+                "disableShadow": true,
+                "image": {
+                  "alt": "Image of cactus",
+                  "controls": null,
+                  "dimensions": {
+                    "height": 1227,
+                    "width": 823
+                  },
+                  "extension": "png",
+                  "mimeType": "image/png",
+                  "url": "https://cdn.sanity.io/images/zgsxfzr2/production/9f6d555abadaa8dd8f9496cd1b2a67700f2de052-823x1227.png",
+                  "vimeo": null
+                },
+                "name": "Image - Home - Pratt Cactus",
+                "path": {
+                  "_type": "pathField",
+                  "preventAnimatedTransition": false,
+                  "url": "/work/pratt-soa"
+                },
+                "styles": {
+                  "_type": "styleItem",
+                  "fontColor": "light",
+                  "fontHoverColor": "white",
+                  "positions": [
+                    {
+                      "_key": "ef9d6501bdc3",
+                      "_type": "positionItem",
+                      "breakpoint": "small",
+                      "colEnd": 7,
+                      "colStart": 1,
+                      "hide": true,
+                      "offsetX": 100,
+                      "offsetY": 180
+                    },
+                    {
+                      "_key": "ab7a838b7ea7",
+                      "_type": "positionItem",
+                      "breakpoint": "large",
+                      "colEnd": 11,
+                      "colStart": 8,
+                      "offsetX": 35,
+                      "offsetY": 570
+                    }
+                  ],
+                  "width": "75%"
+                },
+                "submodules": null
+              },
+              {
+                "_createdAt": "2025-11-12T15:20:50Z",
+                "_id": "81fcfdc0-104d-4329-8fef-618bed3363c4",
+                "_rev": "ksqVftetkW10ajYwSohtyW",
+                "_type": "mediaModule",
+                "_updatedAt": "2025-11-12T15:36:31Z",
+                "captions": [
+                  {
+                    "_key": "f7a0d91f45c5",
+                    "_type": "caption",
+                    "content": [
+                      {
+                        "_key": "ff2a67314f5d",
+                        "_type": "block",
+                        "children": [
+                          {
+                            "_key": "636db56fd57f",
+                            "_type": "span",
+                            "marks": [],
+                            "text": "⬤ THEA\nProduct Design and Art Direction"
+                          }
+                        ],
+                        "markDefs": [],
+                        "style": "normal_primaryXS"
+                      }
+                    ],
+                    "fontColor": "light",
+                    "position": "top-left"
+                  }
+                ],
+                "image": {
+                  "alt": null,
+                  "controls": null,
+                  "dimensions": {
+                    "height": null,
+                    "width": null
+                  },
+                  "extension": null,
+                  "mimeType": null,
+                  "url": null,
+                  "vimeo": null
+                },
+                "media": {
+                  "alt": null,
+                  "controls": null,
+                  "dimensions": {
+                    "height": null,
+                    "width": null
+                  },
+                  "extension": "mp4",
+                  "mimeType": "video/mp4",
+                  "url": "https://cdn.sanity.io/files/zgsxfzr2/production/bd50c872a82fa0b27f62721b8db7a13e440b9f68.mp4",
+                  "vimeo": null
+                },
+                "name": "Video - Home - Thea",
+                "path": {
+                  "_type": "pathField",
+                  "preventAnimatedTransition": false,
+                  "url": "/work/thea"
+                },
+                "poster": null,
+                "styles": {
+                  "_type": "styleItem",
+                  "fontColor": "light",
+                  "fontHoverColor": "offwhite",
+                  "width": "75%"
+                },
+                "submodules": null,
+                "title": "Video - Home - Thea"
+              },
+              {
+                "_createdAt": "2023-07-10T04:58:12Z",
+                "_id": "a221d5f9-22b1-4a50-bd00-d2487ef88a43",
+                "_rev": "enzJUxuhdsmP5s3sZzYBmf",
+                "_type": "imageModule",
+                "_updatedAt": "2025-03-12T19:25:15Z",
+                "aspectRatio": "square",
+                "captions": [
+                  {
+                    "_key": "513ad5e6f5b7",
+                    "_type": "caption",
+                    "caption": {
+                      "_type": "copyItem",
+                      "copy": "⬤ APLÓS<br>\nWebsite",
+                      "font": "sans-serif"
+                    },
+                    "content": [
+                      {
+                        "_key": "d5ea22f12991",
+                        "_type": "block",
+                        "children": [
+                          {
+                            "_key": "1b2439e06d6e0",
+                            "_type": "span",
+                            "marks": [],
+                            "text": "⬤ APLÓS\nWebsite and procedural design tooling"
+                          }
+                        ],
+                        "markDefs": [],
+                        "style": "normal_primaryXS"
+                      }
+                    ],
+                    "fontColor": "light",
+                    "position": "top-left"
+                  }
+                ],
+                "disableShadow": false,
+                "image": {
+                  "alt": "Organic shape shifting between positions",
+                  "controls": null,
+                  "dimensions": {
+                    "height": 1080,
+                    "width": 1080
+                  },
+                  "extension": "gif",
+                  "mimeType": "image/gif",
+                  "url": "https://cdn.sanity.io/images/zgsxfzr2/production/098da5712d44b623bdc11f2fa7192bb237d0e865-1080x1080.gif",
+                  "vimeo": null
+                },
+                "name": "Image – Home – Aplós",
+                "path": {
+                  "_type": "pathField",
+                  "url": "/work/aplos"
+                },
+                "styles": {
+                  "_type": "styleItem",
+                  "bgColor": "Black",
+                  "fontColor": "light",
+                  "fontHoverColor": "white",
+                  "positions": [
+                    {
+                      "_key": "b391c7f09bcc",
+                      "_type": "positionItem",
+                      "breakpoint": "large",
+                      "colEnd": 11,
+                      "colStart": 8,
+                      "offsetX": 40,
+                      "offsetY": 390
+                    },
+                    {
+                      "_key": "ee6a43c97526",
+                      "_type": "positionItem",
+                      "breakpoint": "small",
+                      "offsetX": 50
+                    }
+                  ],
+                  "width": "75%"
+                },
+                "submodules": null
+              },
+              {
+                "_createdAt": "2024-11-27T14:08:40Z",
+                "_id": "6a2ebeeb-24f4-4cfd-b9b7-4c51c69073c0",
+                "_rev": "NBv5peUca0J8E41fbFfo5f",
+                "_type": "mediaModule",
+                "_updatedAt": "2025-01-20T18:12:13Z",
+                "captions": [
+                  {
+                    "_key": "3fc70dda75f3",
+                    "_type": "caption",
+                    "content": [
+                      {
+                        "_key": "0d54d55f9dc2",
+                        "_type": "block",
+                        "children": [
+                          {
+                            "_key": "a9c421483d07",
+                            "_type": "span",
+                            "marks": [],
+                            "text": "⬤ ARENA\nBrand Design and Strategy"
+                          }
+                        ],
+                        "markDefs": [],
+                        "style": "normal_primaryXS"
+                      }
+                    ],
+                    "fontColor": "dark",
+                    "position": "top-left"
+                  }
+                ],
+                "image": {
+                  "alt": null,
+                  "controls": null,
+                  "dimensions": {
+                    "height": null,
+                    "width": null
+                  },
+                  "extension": null,
+                  "mimeType": null,
+                  "url": null,
+                  "vimeo": null
+                },
+                "media": {
+                  "alt": null,
+                  "controls": null,
+                  "dimensions": {
+                    "height": null,
+                    "width": null
+                  },
+                  "extension": "mp4",
+                  "mimeType": "video/mp4",
+                  "url": "https://cdn.sanity.io/files/zgsxfzr2/production/3cebc5a7c9fcb0ad6fc99c92ff8547023f348ebd.mp4",
+                  "vimeo": null
+                },
+                "name": "Arena",
+                "path": {
+                  "_type": "pathField",
+                  "preventAnimatedTransition": false,
+                  "url": "/work/arena"
+                },
+                "poster": null,
+                "styles": {
+                  "_type": "styleItem",
+                  "positions": [
+                    {
+                      "_key": "7daa84aec6c4",
+                      "_type": "positionItem",
+                      "breakpoint": "large",
+                      "colEnd": 4,
+                      "colStart": 1,
+                      "offsetY": 335
+                    }
+                  ],
+                  "width": "100%"
+                },
+                "submodules": null,
+                "title": "Image - Home - Arena"
+              },
+              {
+                "_createdAt": "2025-04-28T19:25:57Z",
+                "_id": "79fd0652-bf53-4262-b282-94c6368cb43d",
+                "_rev": "Zt6OvEh5471EDKrxE7o9Lw",
+                "_type": "imageModule",
+                "_updatedAt": "2025-04-28T20:07:19Z",
+                "captions": [
+                  {
+                    "_key": "f8cc83bfe890",
+                    "_type": "caption",
+                    "content": [
+                      {
+                        "_key": "1bf69f0df97a",
+                        "_type": "block",
+                        "children": [
+                          {
+                            "_key": "fa08c0adaa78",
+                            "_type": "span",
+                            "marks": [],
+                            "text": "⬤ CAPABILITIES\nProduct Design"
+                          }
+                        ],
+                        "markDefs": [],
+                        "style": "normal_primaryXS"
+                      }
+                    ],
+                    "position": "bottom-left"
+                  }
+                ],
+                "disableShadow": false,
+                "image": {
+                  "alt": null,
+                  "controls": null,
+                  "dimensions": {
+                    "height": 1540,
+                    "width": 1232
+                  },
+                  "extension": "jpg",
+                  "mimeType": "image/jpeg",
+                  "url": "https://cdn.sanity.io/images/zgsxfzr2/production/89abbdf7209bb1589b2fbffb23f3d01780be0996-1232x1540.jpg",
+                  "vimeo": null
+                },
+                "name": "Image - Home - Product Design",
+                "path": {
+                  "_type": "pathField",
+                  "preventAnimatedTransition": true,
+                  "url": "/capabilities/digital-product"
+                },
+                "styles": {
+                  "_type": "styleItem",
+                  "width": "75%"
+                },
+                "submodules": null
+              },
+              {
+                "_createdAt": "2025-03-12T18:56:28Z",
+                "_id": "552606bb-ff34-4805-b23e-136e999f47a7",
+                "_rev": "0q3uKZxnfB1z4qeWa5ktgN",
+                "_type": "mediaModule",
+                "_updatedAt": "2025-03-12T18:56:28Z",
+                "captions": [
+                  {
+                    "_key": "a668a0256df2",
+                    "_type": "caption",
+                    "content": [
+                      {
+                        "_key": "98e8ba112ceb",
+                        "_type": "block",
+                        "children": [
+                          {
+                            "_key": "66f33445e1960",
+                            "_type": "span",
+                            "marks": [],
+                            "text": "⬤ WORKMADE\nProduct Design and Strategy"
+                          }
+                        ],
+                        "markDefs": [],
+                        "style": "normal_primaryXS"
+                      }
+                    ],
+                    "fontColor": "dark",
+                    "position": "top-left"
+                  }
+                ],
+                "image": {
+                  "alt": null,
+                  "controls": null,
+                  "dimensions": {
+                    "height": null,
+                    "width": null
+                  },
+                  "extension": null,
+                  "mimeType": null,
+                  "url": null,
+                  "vimeo": null
+                },
+                "media": {
+                  "alt": null,
+                  "controls": null,
+                  "dimensions": {
+                    "height": null,
+                    "width": null
+                  },
+                  "extension": "mp4",
+                  "mimeType": "video/mp4",
+                  "url": "https://cdn.sanity.io/files/zgsxfzr2/production/cf4f8e76152ed2532b992e5b396bc9a1b9527efe.mp4",
+                  "vimeo": null
+                },
+                "path": {
+                  "_type": "pathField",
+                  "preventAnimatedTransition": true,
+                  "url": "/work/workmade"
+                },
+                "poster": null,
+                "styles": {
+                  "_type": "styleItem",
+                  "width": "100%"
+                },
+                "submodules": null,
+                "title": "Video - Home - Workmade"
+              },
+              {
+                "_createdAt": "2020-07-08T16:46:17Z",
+                "_id": "099a2bb3-749b-4b3a-b511-188b549ac7f5",
+                "_rev": "Zt6OvEh5471EDKrxE7fX7B",
+                "_type": "imageModule",
+                "_updatedAt": "2025-04-28T18:42:34Z",
+                "captions": [
+                  {
+                    "_key": "b8bd6b114e07",
+                    "_type": "caption",
+                    "content": [
+                      {
+                        "_key": "932084b3ce81",
+                        "_type": "block",
+                        "children": [
+                          {
+                            "_key": "3d7b44ae3d7f0",
+                            "_type": "span",
+                            "marks": [],
+                            "text": "⬤ EXPANSIVE BRANDS\nCentering humanity when building brands"
+                          }
+                        ],
+                        "markDefs": [],
+                        "style": "normal_primaryXS"
+                      }
+                    ],
+                    "fontColor": "dark",
+                    "position": "top-left"
+                  }
+                ],
+                "disableShadow": true,
+                "image": {
+                  "alt": "Image of a rock",
+                  "controls": null,
+                  "dimensions": {
+                    "height": 718,
+                    "width": 840
+                  },
+                  "extension": "png",
+                  "mimeType": "image/png",
+                  "url": "https://cdn.sanity.io/images/zgsxfzr2/production/de2195a10dda4a9c0b55fe0af71c6c79cbfc7cbc-840x718.png",
+                  "vimeo": null
+                },
+                "name": "Image - Home - Rock & Expansive Brands",
+                "path": {
+                  "_type": "pathField",
+                  "preventAnimatedTransition": false,
+                  "url": "https://garden3d.substack.com/p/expansive-brands"
+                },
+                "styles": {
+                  "_type": "styleItem",
+                  "fontColor": "light",
+                  "fontHoverColor": "white",
+                  "positions": [
+                    {
+                      "_key": "ef9d6501bdc3",
+                      "_type": "positionItem",
+                      "breakpoint": "small",
+                      "colEnd": 12,
+                      "colStart": 1,
+                      "offsetX": -100,
+                      "offsetY": 110
+                    },
+                    {
+                      "_key": "ab7a838b7ea7",
+                      "_type": "positionItem",
+                      "breakpoint": "large",
+                      "colEnd": 6,
+                      "colStart": 2,
+                      "offsetX": 0,
+                      "offsetY": 440
+                    }
+                  ],
+                  "width": "75%"
+                },
+                "submodules": null
+              },
+              {
+                "_createdAt": "2020-04-27T20:40:32Z",
+                "_id": "0b3caf9a-14fb-4181-b5ea-20cd975af935",
+                "_rev": "WtYxJJbUoQRASM5XcaGt8m",
+                "_type": "emailSignupModule",
+                "_updatedAt": "2024-05-06T16:33:38Z",
+                "cta": "Subscribe →",
+                "image": {
+                  "alt": null,
+                  "controls": null,
+                  "dimensions": {
+                    "height": null,
+                    "width": null
+                  },
+                  "extension": null,
+                  "mimeType": null,
+                  "url": null,
+                  "vimeo": null
+                },
+                "name": "Email Signup",
+                "placeholder": "Get email updates",
+                "styles": {
+                  "_type": "styleItem",
+                  "bgColor": "#F8E71C",
+                  "fontColor": "dark",
+                  "fontHoverColor": "black",
+                  "positions": [
+                    {
+                      "_key": "14cdbef37c5c",
+                      "_type": "positionItem",
+                      "breakpoint": "small",
+                      "offsetY": 20
+                    },
+                    {
+                      "_key": "3714f151fb55",
+                      "_type": "positionItem",
+                      "breakpoint": "large",
+                      "colEnd": 12,
+                      "colStart": 8,
+                      "offsetY": 135
+                    }
+                  ],
+                  "width": "100%"
+                },
+                "submodules": null
+              },
+              {
+                "_createdAt": "2022-08-10T10:50:01Z",
+                "_id": "e76d06c1-8d24-40bb-93a3-50a3bed878ae",
+                "_rev": "uAad7rAIwHFvAN91EMpds9",
+                "_type": "imageModule",
+                "_updatedAt": "2025-03-12T19:31:28Z",
+                "captions": [
+                  {
+                    "_key": "8d4827e9bf00",
+                    "_type": "caption",
+                    "caption": {
+                      "_type": "copyItem",
+                      "copy": "⬤ MODERN LIFE<br>\n<span>Brand, Website and Art Direction</span>",
+                      "font": "sans-serif"
+                    },
+                    "content": [
+                      {
+                        "_key": "c81778395796",
+                        "_type": "block",
+                        "children": [
+                          {
+                            "_key": "8602439a748c0",
+                            "_type": "span",
+                            "marks": [],
+                            "text": "⬤ MODERN LIFE\nBrand, Website and Art Direction"
+                          }
+                        ],
+                        "markDefs": [],
+                        "style": "normal_primaryXS"
+                      }
+                    ],
+                    "fontColor": "light",
+                    "position": "top-left"
+                  }
+                ],
+                "disableShadow": false,
+                "image": {
+                  "alt": "Modern Life logo",
+                  "controls": null,
+                  "dimensions": {
+                    "height": 1106,
+                    "width": 960
+                  },
+                  "extension": "webp",
+                  "mimeType": "image/webp",
+                  "url": "https://cdn.sanity.io/images/zgsxfzr2/production/481cd7db79e021e71fe332225c4264648f97444e-960x1106.webp",
+                  "vimeo": null
+                },
+                "name": "Image - Home - Modern Life",
+                "path": {
+                  "_type": "pathField",
+                  "preventAnimatedTransition": false,
+                  "url": "/work/modern-life"
+                },
+                "styles": {
+                  "_type": "styleItem",
+                  "positions": [
+                    {
+                      "_key": "58cf76e9c1d7",
+                      "_type": "positionItem",
+                      "breakpoint": "large",
+                      "colEnd": 6,
+                      "colStart": 2,
+                      "offsetX": -20,
+                      "offsetY": 110
+                    },
+                    {
+                      "_key": "b60677e38872",
+                      "_type": "positionItem",
+                      "breakpoint": "small",
+                      "colEnd": 12,
+                      "colStart": 3,
+                      "offsetY": 50
+                    }
+                  ],
+                  "width": "100%"
+                },
+                "submodules": null
+              },
+              {
+                "_createdAt": "2022-06-02T12:54:32Z",
+                "_id": "7563ed3a-fb16-4b02-973c-a299b2263b07",
+                "_rev": "tKbVuq75FFT57xIYFXuwSs",
+                "_type": "imageModule",
+                "_updatedAt": "2025-04-28T20:22:19Z",
+                "captions": [
+                  {
+                    "_key": "f8ed74b1d60d",
+                    "_type": "caption",
+                    "caption": {
+                      "_type": "copyItem",
+                      "copy": "⬤ FIREFLY<br>\n<span>Brand and website</span>",
+                      "font": "sans-serif"
+                    },
+                    "content": [
+                      {
+                        "_key": "28fd4a2c8b5a",
+                        "_type": "block",
+                        "children": [
+                          {
+                            "_key": "9b375d06865a0",
+                            "_type": "span",
+                            "marks": [],
+                            "text": "⬤ FIREFLY HEALTH\nBrand, Website and Art Direction"
+                          }
+                        ],
+                        "markDefs": [],
+                        "style": "normal_primaryXS"
+                      }
+                    ],
+                    "fontColor": "dark",
+                    "position": "bottom-left"
+                  }
+                ],
+                "disableShadow": true,
+                "image": {
+                  "alt": "Firefly illustration",
+                  "controls": null,
+                  "dimensions": {
+                    "height": 2160,
+                    "width": 1920
+                  },
+                  "extension": "webp",
+                  "mimeType": "image/webp",
+                  "url": "https://cdn.sanity.io/images/zgsxfzr2/production/8f2bde96a97ca7b931d1ecaeaffcc2555dc933dd-1920x2160.webp",
+                  "vimeo": null
+                },
+                "name": "Image - Home - Firefly Health",
+                "path": {
+                  "_type": "pathField",
+                  "preventAnimatedTransition": false,
+                  "url": "/work/firefly-health"
+                },
+                "styles": {
+                  "_type": "styleItem",
+                  "fontColor": "dark",
+                  "fontHoverColor": "white",
+                  "positions": [
+                    {
+                      "_key": "f78467aec5d7",
+                      "_type": "positionItem",
+                      "breakpoint": "small",
+                      "colEnd": 12,
+                      "colStart": 1,
+                      "offsetY": 30
+                    },
+                    {
+                      "_key": "526cc3840d4d",
+                      "_type": "positionItem",
+                      "breakpoint": "large",
+                      "colEnd": 11,
+                      "colStart": 8,
+                      "offsetX": 50,
+                      "offsetY": 160
+                    }
+                  ],
+                  "width": "75%"
+                },
+                "submodules": null
+              },
+              {
+                "_createdAt": "2021-10-22T10:28:09Z",
+                "_id": "1f862a33-23a8-47fe-94c5-fcc0974b0389",
+                "_rev": "enzJUxuhdsmP5s3sZzQiu9",
+                "_type": "imageModule",
+                "_updatedAt": "2025-03-12T19:12:51Z",
+                "captions": [
+                  {
+                    "_key": "33e8838aa1f1",
+                    "_type": "caption",
+                    "caption": {
+                      "_type": "copyItem",
+                      "copy": "⬤ 2023 DEI REPORT<br>\nArticle ↗",
+                      "font": "sans-serif"
+                    },
+                    "content": [
+                      {
+                        "_key": "06109ec8f1c2",
+                        "_type": "block",
+                        "children": [
+                          {
+                            "_key": "b6240e76c0b40",
+                            "_type": "span",
+                            "marks": [],
+                            "text": "⬤ 2024 REPORT\nDiversity, Equity, and Inclusion"
+                          }
+                        ],
+                        "markDefs": [],
+                        "style": "normal_primaryXS"
+                      }
+                    ],
+                    "fontColor": "dark",
+                    "position": "bottom-left"
+                  }
+                ],
+                "disableShadow": true,
+                "image": {
+                  "alt": "Earth",
+                  "controls": null,
+                  "dimensions": {
+                    "height": 958,
+                    "width": 954
+                  },
+                  "extension": "png",
+                  "mimeType": "image/png",
+                  "url": "https://cdn.sanity.io/images/zgsxfzr2/production/a7efe413ac3e03485263838797bc977b76662b96-954x958.png",
+                  "vimeo": null
+                },
+                "name": "Image - Home - Earth Masked",
+                "path": {
+                  "_type": "pathField",
+                  "url": "https://garden3d.substack.com/p/garden3d-dei-report-2023"
+                },
+                "styles": {
+                  "_type": "styleItem",
+                  "fontColor": "light",
+                  "fontHoverColor": "white",
+                  "positions": [
+                    {
+                      "_key": "385b6935c211",
+                      "_type": "positionItem",
+                      "breakpoint": "small",
+                      "colEnd": 8,
+                      "colStart": 1,
+                      "offsetX": 0,
+                      "offsetY": -20
+                    },
+                    {
+                      "_key": "e71182decb6c",
+                      "_type": "positionItem",
+                      "breakpoint": "large",
+                      "colEnd": 12,
+                      "colStart": 9,
+                      "offsetX": 50,
+                      "offsetY": 480
+                    },
+                    {
+                      "_key": "a4101448832b",
+                      "_type": "positionItem",
+                      "breakpoint": "xLarge",
+                      "colEnd": 12,
+                      "colStart": 9,
+                      "offsetY": 270
+                    }
+                  ],
+                  "width": "100%"
+                },
+                "submodules": null
+              },
+              {
+                "_createdAt": "2025-03-12T18:59:06Z",
+                "_id": "504a30fd-0d7f-488b-9fd3-1999e6dcaa52",
+                "_rev": "0q3uKZxnfB1z4qeWa5tTpX",
+                "_type": "mediaModule",
+                "_updatedAt": "2025-03-12T19:26:56Z",
+                "captions": [
+                  {
+                    "_key": "e3799981518e",
+                    "_type": "caption",
+                    "content": [
+                      {
+                        "_key": "df36c21a5d84",
+                        "_type": "block",
+                        "children": [
+                          {
+                            "_key": "98fb13a7eca30",
+                            "_type": "span",
+                            "marks": [],
+                            "text": "⬤ MODERN LIFE\nBrand, Website and Art Direction"
+                          }
+                        ],
+                        "markDefs": [],
+                        "style": "normal_primaryXS"
+                      }
+                    ],
+                    "fontColor": "light",
+                    "position": "top-left"
+                  }
+                ],
+                "image": {
+                  "alt": null,
+                  "controls": null,
+                  "dimensions": {
+                    "height": null,
+                    "width": null
+                  },
+                  "extension": null,
+                  "mimeType": null,
+                  "url": null,
+                  "vimeo": null
+                },
+                "media": {
+                  "alt": null,
+                  "controls": null,
+                  "dimensions": {
+                    "height": null,
+                    "width": null
+                  },
+                  "extension": "mp4",
+                  "mimeType": "video/mp4",
+                  "url": "https://cdn.sanity.io/files/zgsxfzr2/production/36291f62dc042fca057dd039ddb10ae8e2737e26.mp4",
+                  "vimeo": null
+                },
+                "path": {
+                  "_type": "pathField",
+                  "preventAnimatedTransition": true,
+                  "url": "/work/modern-life"
+                },
+                "poster": null,
+                "styles": {
+                  "_type": "styleItem",
+                  "width": "75%"
+                },
+                "submodules": null,
+                "title": "Video - Home - Modern Life"
+              }
+            ],
+            "name": "Home Index",
+            "projectCategoryTags": [
+              {
+                "_id": "456900d5-b683-468a-b422-deeb1a6c92a5",
+                "_type": "projectCategory",
+                "slug": "web",
+                "title": "Web"
+              },
+              {
+                "_id": "51d4d2ca-4510-4c0b-a658-932b0d9e32a4",
+                "_type": "projectCategory",
+                "slug": "strategy",
+                "title": "Strategy"
+              },
+              {
+                "_id": "70b0c0ef-e0ba-4880-ad39-84bce317d055",
+                "_type": "projectCategory",
+                "slug": "product",
+                "title": "Product"
+              },
+              {
+                "_id": "ff15efdf-ff46-43c0-8b1c-3c6a8af40680",
+                "_type": "projectCategory",
+                "slug": "brand",
+                "title": "Brand"
+              }
+            ],
+            "slug": {
+              "_type": "slug",
+              "current": "home"
+            }
+          },
+          "genericPages": {},
+          "detailPages": {},
+          "capabilityPages": {}
+        }
+      }
+    },
+    "__N_SSG": true
+  },
+  "page": "/",
+  "query": {},
+  "buildId": "lHdfwMT6D2QzeKATZXRXL",
+  "isFallback": false,
+  "gsp": true,
+  "scriptLoader": []
+}

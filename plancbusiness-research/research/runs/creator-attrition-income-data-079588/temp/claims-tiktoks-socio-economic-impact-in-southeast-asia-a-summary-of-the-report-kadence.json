@@ -1,0 +1,44 @@
+[
+  {
+    "claim": "Kadence International's own public methodology summary of 'The TikTok Effect' (June 2023, n=3,400+ TikTok users, 25 non-profits, 9 SEA markets) contains no numeric figure for either '8 million creators' or '63% earning above minimum wage' -- the two numbers TikTok Indonesia and Menekraf Harsya later attributed to this study.",
+    "stance": "refutes",
+    "stance_target": "the 8-million-creators/63%-above-UMR figure has a traceable, disclosed methodology",
+    "evidence_type": "empirical",
+    "scope_conditions": "This is the vendor's own summary page, the only publicly accessible methodology-adjacent document located for this study after repeated search attempts across multiple pipeline steps; the full PDF report itself was not locatable via search",
+    "quoted_support": "Most creators using TikTok as a source of income earn more than the minimum wage in their respective countries, contributing to economic growth.",
+    "numbers": ["3,400+ TikTok users surveyed", "25 non-profit organisations", "9 SEA markets", "325 million monthly active users in SEA (context figure, not income-related)"],
+    "entities": ["Kadence International", "TikTok", "Geetika Chhatwal"],
+    "time_period": "Survey fielded, report published June 2023",
+    "region": "Southeast Asia (9 markets, not broken out by country in this summary)",
+    "confidence": "high",
+    "source_note_id": "tiktoks-socio-economic-impact-in-southeast-asia-a-summary-of-the-report-kadence"
+  },
+  {
+    "claim": "The Kadence summary's only quantified findings concern education (91% of educators could promote learning, 92% could share knowledge internationally) and wellness (88% collaborated with NGOs, 91% found supportive community) -- not income, meaning even a generous reading cannot locate the 63% figure's origin in this document.",
+    "stance": "refutes",
+    "stance_target": "an income-specific percentage figure exists anywhere in the vendor's disclosed summary",
+    "evidence_type": "empirical",
+    "scope_conditions": "Vendor marketing/knowledge-page summary, not the underlying survey instrument or full technical report; no separate percentages given for the income-related claim",
+    "quoted_support": "Among surveyed educators, 91% were able to promote online learning to youth through TikTok, and 92% were able to share their knowledge internationally.",
+    "numbers": ["91%", "92%", "88%"],
+    "entities": ["Kadence International", "TikTok"],
+    "time_period": "June 2023",
+    "region": "Southeast Asia",
+    "confidence": "high",
+    "source_note_id": "tiktoks-socio-economic-impact-in-southeast-asia-a-summary-of-the-report-kadence"
+  },
+  {
+    "claim": "The study's stated methodology combined online surveys and offline interviews across a self-selected, non-representative recruitment (existing TikTok users and partner NGOs), which is a convenience/self-selected sample structurally biased toward TikTok-favorable and higher-engagement respondents, independent of whether the 8M/63% figures can be traced to it at all.",
+    "stance": "supports",
+    "stance_target": "survivorship/self-selection bias in platform-commissioned creator income studies",
+    "evidence_type": "empirical",
+    "scope_conditions": "Inferred from stated methodology description; the summary does not disclose a sampling frame, response rate, or recruitment channel in enough detail to fully assess bias magnitude",
+    "quoted_support": "In partnership with TikTok, Kadence International conducted a survey across nine Southeast Asian (SEA) markets to explore the platform's impact in the region. The study involved over 3,400 TikTok users and 25 non-profit organisations and utilised a mixed methodology of online surveys and offline interviews.",
+    "numbers": ["3,400+", "25", "9"],
+    "entities": ["Kadence International", "TikTok"],
+    "time_period": "June 2023",
+    "region": "Southeast Asia",
+    "confidence": "medium",
+    "source_note_id": "tiktoks-socio-economic-impact-in-southeast-asia-a-summary-of-the-report-kadence"
+  }
+]

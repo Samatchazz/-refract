@@ -1,0 +1,58 @@
+[
+  {
+    "claim": "On YouTube, an average of 85% of all views accrue to a small minority of just 3% of all channels.",
+    "stance": "neutral",
+    "stance_target": "concentration of success on YouTube",
+    "evidence_type": "statistical",
+    "scope_conditions": "Random sample of YouTube channel and video data spanning approximately 2007-2017 (the paper's 'past 10 years')",
+    "quoted_support": "It demonstrates stark contrasts between video genres in terms of channels, uploads and views, and that a vast majority of on average 85% of all views goes to a small minority of 3% of all channels.",
+    "numbers": ["85% of views", "3% of channels"],
+    "entities": ["YouTube", "Mathias Baertl"],
+    "time_period": "2007-2017 (10-year window ending ~2017)",
+    "region": "global (platform-wide)",
+    "confidence": "medium",
+    "source_note_id": "opus-4-youtube-channels-uploads-and-views-a-statistical-analysis-of-the-past-10"
+  },
+  {
+    "claim": "Older YouTube channels have a significantly higher probability of garnering a large viewership than younger channels.",
+    "stance": "refutes",
+    "stance_target": "tenure/channel-age is uncorrelated with success (contrasts with Rieder et al. 2020 finding of near-zero correlation between days-active and success)",
+    "evidence_type": "statistical",
+    "scope_conditions": "Abstract-level claim only; underlying statistical test (regression/correlation coefficient, n, p-value) not accessible in this record",
+    "quoted_support": "The analytical results give evidence that older channels have a significantly higher probability to garner a large viewership, but also show that there has always been a small chance for young channels to become successful quickly, depending on whether they choose their genre wisely.",
+    "numbers": [],
+    "entities": ["YouTube", "Mathias Baertl"],
+    "time_period": "2007-2017",
+    "region": "global (platform-wide)",
+    "confidence": "low",
+    "source_note_id": "opus-4-youtube-channels-uploads-and-views-a-statistical-analysis-of-the-past-10"
+  },
+  {
+    "claim": "Young YouTube channels retain a small but non-zero chance of rapid success, contingent on genre selection.",
+    "stance": "supports",
+    "stance_target": "output/strategy (e.g. genre choice) rather than tenure alone determines fast-track success",
+    "evidence_type": "statistical",
+    "scope_conditions": "Abstract-level claim; genre-specific breakdowns not visible without full text",
+    "quoted_support": "there has always been a small chance for young channels to become successful quickly, depending on whether they choose their genre wisely",
+    "numbers": [],
+    "entities": ["YouTube", "Mathias Baertl"],
+    "time_period": "2007-2017",
+    "region": "global (platform-wide)",
+    "confidence": "low",
+    "source_note_id": "opus-4-youtube-channels-uploads-and-views-a-statistical-analysis-of-the-past-10"
+  },
+  {
+    "claim": "The full text of Baertl (2018) is not accessible via SAGE eprint link, ResearchGate, or the Hochschule Offenburg OPUS institutional repository; all three routes return either a Cloudflare bot-detection block or an abstract-only metadata record.",
+    "stance": "neutral",
+    "stance_target": "accessibility of primary source for tenure-vs-success on YouTube",
+    "evidence_type": "empirical",
+    "scope_conditions": "As of this fetch attempt (2026)",
+    "quoted_support": "URL: http://journals.sagepub.com/eprint/JgZkgVfhjfigES85sW97/full",
+    "numbers": [],
+    "entities": ["SAGE Publishing", "ResearchGate", "Hochschule Offenburg OPUS"],
+    "time_period": "current",
+    "region": "n/a",
+    "confidence": "high",
+    "source_note_id": "opus-4-youtube-channels-uploads-and-views-a-statistical-analysis-of-the-past-10"
+  }
+]

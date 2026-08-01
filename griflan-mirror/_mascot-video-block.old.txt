@@ -1,0 +1,27 @@
+<script>(function(){
+  var tries=0;
+  var t=setInterval(function(){
+    var slot=document.querySelector(".rive-inline");
+    if(slot && !slot.dataset.plancVid){
+      slot.dataset.plancVid="1"; clearInterval(t);
+      var cv=slot.querySelector("canvas"); if(cv) cv.style.display="none";
+      var v=document.createElement("video");
+      v.src="/assets/video/planc-cat.mp4";
+      v.autoplay=true; v.loop=true; v.muted=true; v.playsInline=true;
+      v.setAttribute("playsinline",""); v.setAttribute("muted","");
+      v.style.cssText="position:absolute;left:50%;top:50%;width:340px;height:340px;"+
+        "transform:translate(-50%,-50%);pointer-events:none;object-fit:contain;"+
+        "max-width:none;max-height:none;"+
+        "filter:invert(1);mix-blend-mode:screen;z-index:3";
+      slot.style.overflow="visible";
+      slot.appendChild(v);
+      var kick=function(){ var q=v.play(); if(q&&q.catch) q.catch(function(){}); };
+      kick();
+      document.addEventListener("visibilitychange",function(){ if(!document.hidden) kick(); });
+      new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting) kick(); }); }).observe(v);
+      ["click","scroll","touchstart"].forEach(function(ev){ addEventListener(ev, kick, {once:true, passive:true}); });
+      window.__plancVid=v;
+    }
+    if(++tries>100) clearInterval(t);
+  },100);
+})();</script>

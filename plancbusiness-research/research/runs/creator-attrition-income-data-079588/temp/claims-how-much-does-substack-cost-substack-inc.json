@@ -1,0 +1,30 @@
+[
+  {
+    "claim": "Substack's own platform fee has remained constant at 10% of each paid-subscription transaction, with no disclosed change since it was introduced; the only dated fee change on Substack disclosed by the platform itself is a Stripe payment-processing 'Billing fee' for recurring subscriptions rising from 0.5% to 0.7%, effective July 2024, with creators who enabled payments before 10 July 2024 grandfathered at 0.5% until 30 June 2025.",
+    "stance": "refutes",
+    "stance_target": "the claim that Substack's payout economics have changed materially since 2020 in a way that would move the living-wage share",
+    "evidence_type": "empirical",
+    "scope_conditions": "Platform's own support-center disclosure, live page (fetched 2026); Substack's core 10% cut is stated as constant with no historical change log provided, so absence of change is based on current disclosure not a verified historical audit trail",
+    "quoted_support": "From Substack: 10% of each transaction. From Stripe: Credit cards A credit card fee (2.9% + $0.30 per transaction fee) and a Billing fee for recurring subscriptions (0.7% for recurring payments as of July 2024). ... Existing creators who have created a Substack and enabled payments on their publication prior to July 10, 2024 will keep the previous 0.5% billing fee pricing until June 30, 2025.",
+    "numbers": ["10% Substack cut", "2.9% + $0.30 Stripe credit card fee", "0.5% -> 0.7% Stripe recurring billing fee", "effective July 2024", "grandfathered until 30 June 2025"],
+    "entities": ["Substack", "Stripe"],
+    "time_period": "July 2024 - June 2025 transition; current as of 2026",
+    "region": "Global; non-credit-card fee examples given are for a US Stripe account",
+    "confidence": "high",
+    "source_note_id": "how-much-does-substack-cost-substack-inc"
+  },
+  {
+    "claim": "The magnitude of Substack's only disclosed fee change (0.5% to 0.7% billing fee, a 0.2-percentage-point shift on gross transaction value) is roughly two orders of magnitude smaller than TikTok's Creator Fund-to-Creator Rewards shift (10-40x per-view rate increase) or Twitch's Partner Plus split change (50% to 70%), and represents a marginal reduction in net payout rather than a redistribution of the underlying income distribution's shape.",
+    "stance": "supports",
+    "stance_target": "not all platform monetization changes since 2020 are comparable in magnitude -- some are redistributions within an unchanged distribution shape rather than structural breaks",
+    "evidence_type": "theoretical",
+    "scope_conditions": "Comparison synthesized by the analyst from Substack's own fee disclosure against the TikTok and Twitch figures already in the vault; not stated as a comparison by any single source",
+    "quoted_support": "A Billing fee for recurring subscriptions (0.7% for recurring payments as of July 2024)",
+    "numbers": ["0.2 percentage points"],
+    "entities": ["Substack", "Stripe", "TikTok", "Twitch"],
+    "time_period": "2020-2026",
+    "region": "Global",
+    "confidence": "medium",
+    "source_note_id": "how-much-does-substack-cost-substack-inc"
+  }
+]

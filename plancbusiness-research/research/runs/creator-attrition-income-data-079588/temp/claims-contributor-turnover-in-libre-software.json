@@ -1,0 +1,44 @@
+[
+  {
+    "claim": "Analyzing 21 large libre software projects' CVS commit logs, only 3 (14%) show a stable 'code god' pattern where the founding core-contributor group never gets replaced; the rest show either full generational turnover (~8 of 21) or a mixed founder-plus-newcomers composition pattern.",
+    "stance": "supports",
+    "stance_target": "open-source project-level core-contributor turnover is the norm, not the exception, across a substantial sample of large projects",
+    "evidence_type": "statistical",
+    "scope_conditions": "21 large libre software projects (GIMP, Mozilla, Evolution, GNOME/KDE/Apache/Mono/FreeBSD components), analyzed via CVS logs, projects starting as early as Dec 1993 through ~2005",
+    "quoted_support": "Projects that are still led by founding core groups have been the less frequent, with only 3 cases over 21 applications under consideration.",
+    "numbers": ["3 of 21 projects (14%) 'code god'", "8 of 21 'multiple generations'", "6 of 21 'composition'"],
+    "entities": ["GIMP", "Mozilla", "GNOME", "KDE", "Apache", "Mono", "FreeBSD"],
+    "time_period": "1993-2005",
+    "region": "global",
+    "confidence": "high",
+    "source_note_id": "contributor-turnover-in-libre-software"
+  },
+  {
+    "claim": "The unit of analysis in this study is the project-level 'core group' (top 20% most active committers per time interval, aggregated), not individual contributor tenure -- it measures whether the SAME people remain dominant, not what fraction of any given cohort of individuals survives.",
+    "stance": "neutral",
+    "stance_target": "methodological distinction between project-level core-group turnover studies and person-level cohort-survival studies",
+    "evidence_type": "theoretical",
+    "scope_conditions": "methodology section, applies to all 21 projects studied",
+    "quoted_support": "The most active 20% of all commiters (rounded by excess) for that interval is what we consider the \"core group\". Therefore, for each project we identify ten different core groups, one per interval.",
+    "numbers": ["10 intervals per project", "20% core-group threshold"],
+    "entities": [],
+    "time_period": "1993-2005",
+    "region": "global",
+    "confidence": "high",
+    "source_note_id": "contributor-turnover-in-libre-software"
+  },
+  {
+    "claim": "A prior Debian-specific study (cited as ref. 9) introduced a contributor half-life metric -- the time for a group of contributors to fall to half its initial population -- reporting a value of 7.5 years for the Debian project.",
+    "stance": "supports",
+    "stance_target": "the 7.5-year Debian contributor half-life is the field's standard reference figure for OSS volunteer survival, cited across multiple papers by the same author group",
+    "evidence_type": "statistical",
+    "scope_conditions": "Debian project, cited secondhand within this paper",
+    "quoted_support": "The authors propose a half-life parameter, defined as the time required for a certain group of contributors to fall to half of its initial population, which is of 7.5 years for the Debian project.",
+    "numbers": ["7.5 years half-life"],
+    "entities": ["Debian"],
+    "time_period": "pre-2006",
+    "region": "global",
+    "confidence": "high",
+    "source_note_id": "contributor-turnover-in-libre-software"
+  }
+]

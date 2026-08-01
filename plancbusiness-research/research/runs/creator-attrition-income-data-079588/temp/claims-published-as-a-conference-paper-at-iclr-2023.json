@@ -1,0 +1,44 @@
+[
+  {
+    "claim": "The formal modelling literature on creator platforms treats it as an established premise that most creators do not earn significant income while a small number of popular creators drive the majority of traffic.",
+    "stance": "supports",
+    "stance_target": "Extreme income concentration among creators is a settled assumption in the technical literature, not a contested claim",
+    "evidence_type": "theoretical",
+    "scope_conditions": "Stated as a modelling assumption in an ICLR 2023 theory paper, citing Cheng et al. 2008 on YouTube traffic; no sample size, year, or income figures are attached, and the underlying citation is from 2008",
+    "quoted_support": "Most creators do not earn significant income, but the majority of traffic is driven by only a few popular and high-earning creators (Cheng et al., 2008).",
+    "numbers": [],
+    "entities": ["YouTube", "Cheng et al. 2008", "ICLR", "Michael I. Jordan", "Sarah Dean"],
+    "time_period": "assumption stated 2023, underlying citation 2008",
+    "region": "Not stated",
+    "confidence": "low",
+    "source_note_id": "published-as-a-conference-paper-at-iclr-2023"
+  },
+  {
+    "claim": "YouTube creator income arrives through at least nine distinct channels spanning on-platform and off-platform sources, so no single platform payout figure can represent a creator's earnings.",
+    "stance": "supports",
+    "stance_target": "Platform-disclosed payout data is structurally incomplete as a measure of creator income",
+    "evidence_type": "theoretical",
+    "scope_conditions": "Taxonomy figure only, drawn from Ormen & Gregersen 2022; no volumes or shares assigned to any channel",
+    "quoted_support": "income streams direct user payment (Super Chat & Super Stickers) external (off-platform) webshops memberships YouTube Premium ad share merch sponsored content donation services (e.g., PayPal and Patreon) affiliate marketing (sponsored links) (YouTube Partner Programme)",
+    "numbers": ["9 revenue stream types"],
+    "entities": ["YouTube Partner Programme", "YouTube Premium", "Super Chat", "Patreon", "PayPal", "Ormen & Gregersen"],
+    "time_period": "2022-2023",
+    "region": "Not stated",
+    "confidence": "medium",
+    "source_note_id": "published-as-a-conference-paper-at-iclr-2023"
+  },
+  {
+    "claim": "Recommender-system architecture choices determine whether stable equilibria exist among competing creators at all, meaning creator exit pressure is partly a designed property of the platform rather than an emergent market outcome.",
+    "stance": "supports",
+    "stance_target": "Platform algorithm design is a causal input to creator attrition",
+    "evidence_type": "theoretical",
+    "scope_conditions": "Mathematical result about exposure games under matrix-factorization and two-tower recommender models; numerical audits run on MovieLens and LastFM simulated data, not on real creators",
+    "quoted_support": "We prove that seemingly innocuous algorithmic choices—e.g., non-negative vs. unconstrained factorization—significantly affect the existence and character of (Nash) equilibria in exposure games.",
+    "numbers": [],
+    "entities": ["MovieLens", "LastFM", "Nash equilibrium"],
+    "time_period": "2023",
+    "region": "Not applicable (simulation)",
+    "confidence": "medium",
+    "source_note_id": "published-as-a-conference-paper-at-iclr-2023"
+  }
+]

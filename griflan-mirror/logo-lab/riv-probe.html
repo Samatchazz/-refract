@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head><meta charset="utf-8"><title>riv probe</title>
+<style>body{background:#222;margin:0}canvas{width:420px;height:420px;display:block}</style>
+</head>
+<body>
+<canvas id="cv" width="840" height="840"></canvas>
+<script>
+/* hidden-tab rAF freeze workaround: drive Rive's render loop with timers */
+window.requestAnimationFrame = cb => setTimeout(() => cb(performance.now()), 50);
+window.cancelAnimationFrame = id => clearTimeout(id);
+</script>
+<script src="https://unpkg.com/@rive-app/canvas@2.21.6"></script>
+<script>
+window.__probe = { status: 'loading', samples: {} };
+function dominant(cv, label) {
+  const ctx = cv.getContext('2d');
+  const d = ctx.getImageData(0, 0, cv.width, cv.height).data;
+  const counts = {};
+  let opaque = 0;
+  for (let i = 0; i < d.length; i += 40) { // sample every 10th px
+    const a = d[i + 3];
+    if (a < 40) continue;
+    opaque++;
+    // quantize to 16-step buckets
+    const key = [d[i], d[i+1], d[i+2]].map(v => Math.round(v / 24) * 24).join(',');
+    counts[key] = (counts[key] || 0) + 1;
+  }
+  const top = Object.entries(counts).sort((a, b) => b[1] - a[1]).slice(0, 6)
+    .map(([rgb, n]) => ({ rgb, pct: Math.round(n / opaque * 100) }));
+  window.__probe.samples[label] = { opaquePx: opaque, top };
+}
+const r = new rive.Rive({
+  src: '/rive/griflan-logo.riv',
+  canvas: document.getElementById('cv'),
+  artboard: 'griflan-logo',
+  stateMachines: 'griflan-logo',
+  autoplay: true,
+  autoBind: true,
+  onLoad() {
+    r.resizeDrawingSurfaceToCanvas();
+    const inputs = r.stateMachineInputs('griflan-logo');
+    window.__probe.inputs = inputs.map(i => ({ name: i.name, type: i.type }));
+    const hover = inputs.find(i => i.name === 'hover');
+    const click = inputs.find(i => i.name === 'click');
+    const cv = document.getElementById('cv');
+    setTimeout(() => { dominant(cv, 'idle'); if (hover) hover.value = true; }, 1200);
+    setTimeout(() => { dominant(cv, 'hover'); }, 2600);
+    setTimeout(() => { if (click) click.fire(); }, 2700);
+    setTimeout(() => { dominant(cv, 'click_mid'); }, 3100);
+    setTimeout(() => { if (hover) hover.value = false; }, 3300);
+    setTimeout(() => { dominant(cv, 'after_out'); window.__probe.status = 'done'; }, 4600);
+  },
+  onLoadError(e) { window.__probe.status = 'error: ' + e; }
+});
+</script>
+</body>
+</html>

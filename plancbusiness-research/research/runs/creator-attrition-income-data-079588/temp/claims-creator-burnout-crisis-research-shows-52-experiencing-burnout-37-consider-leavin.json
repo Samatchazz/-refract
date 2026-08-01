@@ -1,0 +1,30 @@
+[
+  {
+    "claim": "Net Influencer's July 2025 article is a DERIVATIVE recirculation of the Billion Dollar Boy/Censuswide survey (n=1,000 creators, US+UK, July 2025), reproducing all headline figures (52% burnout, 37% considering leaving, causes 40/31/27, financial instability 55% by severity) without independent data collection.",
+    "stance": "neutral",
+    "stance_target": "provenance of the 52%/37% burnout-and-quit-intention figures",
+    "evidence_type": "empirical",
+    "scope_conditions": "This is a provenance-mapping finding: this article is NOT a second independent study. Counting it alongside the BDB release as corroboration would double-count one n=1,000 dataset. Same underlying scope as parent: intention not behavior, active creators only, US/UK only.",
+    "quoted_support": "\"According to the study, 52% of creators have experienced burnout as a direct result of their careers, with 37% actively considering leaving the profession entirely. The findings, based on surveys of 1,000 creators and 1,000 senior marketers across the U.S. and UK...\"",
+    "numbers": ["52%", "37%", "n=1,000 creators", "n=1,000 marketers"],
+    "entities": ["Billion Dollar Boy", "Net Influencer"],
+    "time_period": "July 2025",
+    "region": "US, UK",
+    "confidence": "high",
+    "source_note_id": "creator-burnout-crisis-research-shows-52-experiencing-burnout-37-consider-leavin"
+  },
+  {
+    "claim": "71% of US marketers now commit USD 1-3 million annually to creator marketing, per separate Billion Dollar Boy marketer research cited in this article.",
+    "stance": "neutral",
+    "stance_target": "scale of marketer investment in creator marketing (not a creator quitting/income claim)",
+    "evidence_type": "statistical",
+    "scope_conditions": "This is a marketer-side spending statistic from a different BDB research stream than the burnout survey; it does not measure creator income or attrition. US marketers only.",
+    "quoted_support": "\"This research emerges as U.S. marketers continue to invest heavily in creator marketing, with 71% now committing between $1 million and $3 million annually, according to Billion Dollar Boy.\"",
+    "numbers": ["71%", "$1-3 million annually"],
+    "entities": ["Billion Dollar Boy"],
+    "time_period": "2025",
+    "region": "US",
+    "confidence": "low",
+    "source_note_id": "creator-burnout-crisis-research-shows-52-experiencing-burnout-37-consider-leavin"
+  }
+]

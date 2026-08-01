@@ -1,0 +1,134 @@
+{
+  "critic_type": "instruction",
+  "structural_mirror_check": {
+    "result": "PASS",
+    "expected": [
+      "## 1. Attrition and Survival Rates of Creators and Channels",
+      "## 2. Income Distribution Across Creators: Median vs Mean and the Living-Wage Share",
+      "## 3. Time from Starting to First Meaningful Income",
+      "## 4. Documented Reasons Creators Give for Quitting",
+      "## 5. Geographic Scope: Which Findings Are US/Western-Only, and What Is Known for Southeast Asia",
+      "## 6. Evidence Quality and Measurement Caveats"
+    ],
+    "actual": [
+      "## 1. Attrition and Survival Rates of Creators and Channels",
+      "## 2. Income Distribution Across Creators: Median vs Mean and the Living-Wage Share",
+      "## 3. Time from Starting to First Meaningful Income",
+      "## 4. Documented Reasons Creators Give for Quitting",
+      "## 5. Geographic Scope: Which Findings Are US/Western-Only, and What Is Known for Southeast Asia",
+      "## 6. Evidence Quality and Measurement Caveats"
+    ],
+    "note": "All six required H2 headings present, verbatim, in order, with no extras. No orchestrator restructure needed."
+  },
+  "word_budget_note": "Draft is 6,001 words, at the ship-gate ceiling. Every finding below is scoped to a column addition, an inline clause, or a one-to-two sentence insert. Named displacement candidates, in order of least load on the query: (a) Section 1C 'Documented analogues' (Wikipedia newcomer survival + Debian maintainers, ~115 words) is about unpaid volunteer contributors, not content creation as an occupation, and is the weakest claim on the word budget; (b) the KPMG $210bn sentence in Section 6D (~35 words), which the draft itself says cannot be converted into a per-creator quantity; (c) the third and fourth rows of the Section 6C provenance table's 'Global press' line (~30 words).",
+  "findings": [
+    {
+      "severity": "critical",
+      "atomic_item": "OnlyFans / subscription-content platforms (required entity; required_fields: income distribution, median vs mean, sample size, year, country)",
+      "failure_mode": "missing",
+      "location": "Absent from the entire report. Zero occurrences of 'OnlyFans' or 'subscription'. Nearest relevant location: Section 6D, paragraph beginning 'Two sources here carry invented scholarly furniture'.",
+      "issue": "The decomposition names OnlyFans / subscription-content platforms as a required platform entity with a median-vs-mean requirement; the report never mentions the platform or the subscription-content category at all, and does not record it as an audited absence either.",
+      "requires_orchestrator_restructure": false,
+      "recommendation": "Add one to two sentences in Section 6D (which already houses the not-citable-source verdicts) recording OnlyFans as an audited absence with what was searched. The vault holds the material: [[average-onlyfans-income-2026-real-numbers-sirency]] is an OnlyFans management agency's marketing page stating a median of $145/month with no n, year, country or method, and [[onlyfans-creator-income-distribution-report-2026]] is an SEO/affiliate aggregator stating roughly $180/year for the same platform and year — an approximately 12x discrepancy in the same headline median, with the circulating top-decile-versus-top-1% share also mislabelled between them. State that no telemetry, administrative or peer-reviewed income distribution for subscription-content platforms was located, so no median/mean pair exists to report. Displace the KPMG $210bn sentence in the same subsection to stay net-zero."
+    },
+    {
+      "severity": "critical",
+      "atomic_item": "Instagram / Facebook (Meta) (required entity; required_fields: attrition/survival, income distribution, sample size, year, country)",
+      "failure_mode": "missing",
+      "location": "Absent from the entire report. Zero occurrences of 'Instagram' or 'Facebook'; the three 'meta' hits are the word 'metadata'. Nearest relevant location: Section 1B 'The absence, and who holds the missing data', or the Section 5A scope-flag table.",
+      "issue": "The prompt's scope condition forbids letting one platform stand in for creators generally, and the decomposition names Meta's platforms as a required entity; the report covers YouTube, Patreon, Twitch and (thinly) TikTok and never mentions Instagram or Facebook, so the largest creator population by headcount is silently outside the frame.",
+      "requires_orchestrator_restructure": false,
+      "recommendation": "Add one sentence to Section 1B stating the audited absence with its search basis: no Instagram or Facebook creator-level attrition, survival or income-distribution measurement with a disclosed sample size was located in the academic, telemetry or platform-disclosure sourcing passes, and Meta publishes no per-creator payout distribution — so every Instagram figure in circulation is vendor influencer-rate-card material. Under the deep-inference directive this absence must name what was searched, not merely assert nothing exists. Roughly 40 words; displace the Debian sentence in Section 1C."
+    },
+    {
+      "severity": "major",
+      "atomic_item": "TikTok (required entity; required_fields: attrition/survival, income distribution, time to monetization, sample size, year, country)",
+      "failure_mode": "under-covered",
+      "location": "Section 3 gate table (rows for YouTube eligibility and Twitch eligibility, lines beginning '| Eligibility'); TikTok otherwise appears only as the 63% Indonesia row in Section 2B, the Section 5C nine-country chart, and the 16 December 2023 Creativity Program boundary in Section 6B.",
+      "issue": "TikTok carries six required fields but the report gives it no attrition or survival figure, no median-versus-mean income pair, and — unlike YouTube and Twitch — no monetization-eligibility row in the Section 3 gate table, even though the decomposition flags TikTok's 2023 Creator Rewards change as load-bearing for comparability.",
+      "requires_orchestrator_restructure": false,
+      "recommendation": "Add one row to the Section 3 gate table for TikTok's Creator Rewards / Creativity Program eligibility (follower and 30-day-view thresholds, minimum video length, eligible-market restriction) sourced from the already-cited [[unlocking-even-more-opportunities-for-creators-with-the-creativity-program-beta]], with 'Platform rule' in the n column and the current date, matching the YouTube and Twitch rows' shape. Then add a half-clause to the Section 2A preamble or the Section 2B commentary noting that no TikTok income distribution with a stated median and mean exists in the record — the 63% row is a share above a threshold, not a distribution. About 45 words total; a row addition, not a paragraph."
+    },
+    {
+      "severity": "major",
+      "atomic_item": "Report every figure with sample size, year, platform, and country",
+      "failure_mode": "wrong-format",
+      "location": "Section 4A table, header row: '| Instrument | Prevalence | Quit intention | Top-ranked cause | n | Fielded | Country |'",
+      "issue": "The four-field rule requires platform on every figure, and this is the only figure table in the report with no Platform column — six burnout instruments and their prevalence, quit-intention and cause figures are reported with three of the four required fields.",
+      "requires_orchestrator_restructure": false,
+      "recommendation": "Add a Platform column to the Section 4A table with per-row values (Multi-platform for Censuswide/Billion Dollar Boy, Creators 4 Mental Health, Awin, Awin/ShareASale and Linktree; 'Not stated' for Vibely where the instrument does not disclose it). Six short cells, roughly 15 words, and it closes the single cleanest four-field breach in the report."
+    },
+    {
+      "severity": "major",
+      "atomic_item": "Report every figure with sample size, year, platform, and country",
+      "failure_mode": "wrong-format",
+      "location": "Section 2C, sentence beginning 'Off-platform income also concentrates upward, with 60.6% of YouTube channels above 10,000 subscribers'; Section 2C, sentence beginning 'The platform's own disclosure caps that correction'; Section 2D, sentences beginning '45.8% of 377 respondents' and 'US federal microdata puts the wage Gini'.",
+      "issue": "The lead paragraph asserts 'Every figure carries sample size, year, platform and country', but these prose figures carry two or three fields with no incompleteness annotation: 60.6% off-platform strategy (no n, no year, no country), 3.7 versus 2.2 sponsorship links (no n, no year, no country), the February 2018 99%/90% demonetization disclosure (no n, no country), 45.8%/46.1% reporting any income (no year, no platform), and the 0.582 wage Gini (no n, no year).",
+      "requires_orchestrator_restructure": false,
+      "recommendation": "Patch inline rather than by adding sentences: append the missing fields as parenthetical or comma clauses on each existing sentence — e.g. the Hua et al. n and 2022 study year on the 60.6% figure, the Wollborn top-2,000/top-10,000 sample size and 2019-2021 window on the link-count figure, 'sample size undisclosed by the platform' on the 99%/90% disclosure, the Törhönen 2019 fielding year and 'multi-platform' on the 45.8%/46.1% pair, and the ACS/Data USA year and person count on the Gini. Where a field is genuinely unavailable, the annotation ('sample size not disclosed') satisfies the scope condition and costs three words. Roughly 45 words net across five sentences."
+    },
+    {
+      "severity": "major",
+      "atomic_item": "Report every figure with sample size, year, platform, and country",
+      "failure_mode": "wrong-format",
+      "location": "Section 5B, sentences beginning 'The threshold itself is the largest', 'Revenue per thousand views differs by five to six times', 'And the counterfactual differs: informal employment exceeds 70%'; Section 6B, sentence beginning 'Reference period alone moves measured platform-work prevalence'; Section 6A, sentence beginning 'the clearest paired measurement concerns affiliate-link prevalence'; Section 4A, final sentence beginning 'For calibration outside the creator literature'; Section 4B, sentence beginning 'The one behavioural datapoint linking income insufficiency to conduct is UK-specific'.",
+      "issue": "A second cluster of prose figures runs without year and without sample size and is not annotated as incomplete: the ADBI $254.28/$414.88 living-wage thresholds (no year), the INR 30 versus $5 per-thousand-views comparison (no year, no n), the 70%/60%/38% informal-employment shares (no year), the 71% Indonesian social-commerce share (no n, no year), Norway's 5.7%/1.5% reference-period swing (no n, no year), the 36.7% versus 3.49% affiliate-link pair (year missing on both, n missing on the first), the 1,153-respondent Latin America survey (no year, no platform), and the 311 UK music trade-body members (no year, no platform).",
+      "requires_orchestrator_restructure": false,
+      "recommendation": "Same inline treatment: add the estimate or fielding year and, where available, the sample size as short appositives on each sentence. Highest priority are the ADBI living-wage thresholds and the informal-employment shares, since both are the comparison bar the whole Section 5 transferability argument rests on and a reader cannot date them. Roughly 40 words net; displace the Wikipedia sentence in Section 1C if the budget binds."
+    },
+    {
+      "severity": "major",
+      "atomic_item": "Median AND mean reported side by side wherever income is discussed",
+      "failure_mode": "wrong-format",
+      "location": "Section 2A table, Twitch leak row ('| under $28 | 75% under $120; 5% over $1,000 |') and UK IPO music creators row ('| £20,160 men / £13,057 women | 37% ≤£5,000; 62% ≤£20,000; 9% >£50,000 |'); Section 3 gate table, 'Income floor' row ('Channels at 1,000–10,000 subscribers average $295/year'); Section 2C, 'audio streaming royalties are 6% of the average UK music creator's income'.",
+      "issue": "The Mean column in two Section 2A rows contains percentile distributions rather than a mean, with no statement that the mean is unreported — so the required side-by-side pair is silently broken in exactly the table built to enforce it; and two means outside Section 2A ($295/year channel average, the 6% average-income share) appear with no median counterpart and no note of its absence.",
+      "requires_orchestrator_restructure": false,
+      "recommendation": "In the Twitch and UK IPO rows, prefix the Mean cell with 'mean not reported;' before the percentile figures, matching the explicit 'not reported' the Rieder and ACS rows already use. On the $295/year row and the 6% sentence, add 'mean; no median published' or equivalent. Four short insertions, roughly 20 words, and it makes the format compliance legible instead of assumed."
+    },
+    {
+      "severity": "major",
+      "atomic_item": "Explicitly flag which findings are US/Western-only and may not generalize to Southeast Asia",
+      "failure_mode": "under-covered",
+      "location": "Section 5A scope-flag table (rows from 'Patreon income and living-wage shares' through 'Podcast churn').",
+      "issue": "The decomposition requires per-finding geographic flagging as well as a dedicated section; the Section 5A table flags ten income, motivation and burnout findings but omits most of Section 1 — the query's first named quantity — including Regner's 82.6% never-pledged, the Twitch weekly-dropout hazards, the Pew 44%-silent figure, the Spotify $100k retention row and the Kässi / World Bank platform-activity ranges, none of which carry a transferability verdict anywhere.",
+      "requires_orchestrator_restructure": false,
+      "recommendation": "Add two rows to the Section 5A table covering the Section 1 attrition findings as groups rather than one row each — e.g. one row for 'Patreon campaign failure-at-entry and Twitch rank churn' (Western-skewed / no country composition; shapes may travel, levels do not) and one for 'Online-platform activity shares (Kässi, World Bank) and Spotify tier retention' (global aggregates with no country split; unusable as a SEA baseline). Two rows, roughly 40 words, and it makes the flag coverage span all four quantities the query names rather than three."
+    },
+    {
+      "severity": "minor",
+      "atomic_item": "the shape/skew of the distribution (top-decile share, Gini, share earning zero)",
+      "failure_mode": "under-covered",
+      "location": "Section 2B, final paragraph beginning 'These rows must not be averaged, ranged or ranked' — the sentence listing 'mean/median ratios, Gini, Pareto alpha ... hazard ratios' as the surviving shape statistics.",
+      "issue": "Sub-question 3 names three shape statistics; the report delivers Gini (0.582 versus 0.474) and share-earning-zero (25%, 31.7m of 36.1m, 82.6%) but never reports a top-decile or top-percentile income share, and the one concentration figure it does give — 3% of channels taking 85% of views — is a view share explicitly relabelled as not an income share.",
+      "requires_orchestrator_restructure": false,
+      "recommendation": "Add a top-share figure to the Section 2A table's Twitch row or to the paragraph following it, from the leak analysis already cited: the share of total leaked payout accruing to the top 1% (or top 1,000) of the ~4.0m earning accounts. If the vault's Twitch sources do not state a computable top-decile share, note that explicitly in the shape-statistics sentence — 'no published top-decile income share exists for any platform in this record' — so the omission reads as audited rather than skipped. Roughly 20 words."
+    },
+    {
+      "severity": "minor",
+      "atomic_item": "living wage (required entity; required_fields: operational definition per study, country-specific threshold, PPP adjustment if any)",
+      "failure_mode": "under-covered",
+      "location": "Section 5B, sentence beginning 'The living wage for developing Asia is estimated at $254.28 a month on the absolute poverty line and $414.88 on the moderate line'.",
+      "issue": "The report gives per-study thresholds and country-specific bars well, but never states whether the ADBI Asian figures or the Western benchmarks they are ranged against ($1,160/month, $50,000/year, $67,521 median household) are PPP-adjusted or nominal — and the 'roughly three to twenty-two times' gap the transferability argument turns on means something different under each.",
+      "requires_orchestrator_restructure": false,
+      "recommendation": "Add a short clause stating the basis — whether the ADBI thresholds are nominal USD or PPP-converted, and that the Western bars are nominal — plus a half-sentence noting that the multiple narrows substantially under PPP if the sources support it, or that no PPP-adjusted comparison exists in this record if they do not. Roughly 25 words on an existing sentence."
+    },
+    {
+      "severity": "minor",
+      "atomic_item": "Cover BOTH readings: full-time professional creators AND part-time/side-income creators seeking earnings. Do not silently narrow to full-time.",
+      "failure_mode": "under-covered",
+      "location": "Section 2A table, ACS artists row ('$70,170 full-time / $20,380 part-time'); Section 4A table, Linktree row ('13% of full-timers extremely/consistently stressed vs 9% part-time').",
+      "issue": "The report's denominators are correctly broad rather than professional-only, so the scope condition is not violated — but only two rows in the whole report disaggregate full-time from part-time, and the report never states what share of creators are part-time or side-income, which is the quantity that makes 'as an occupation' answerable in both readings.",
+      "requires_orchestrator_restructure": false,
+      "recommendation": "Add one clause to Section 2D or to the Section 2A commentary giving the full-time versus part-time split where a source states it (the Linktree n=9,576 report and the Goldman/SignalFire professional-share chain both carry one, the latter already dissected in Section 6C for its definitional instability), with the caveat that every such split comes from self-identification on a self-selected sample. Roughly 30 words; it also strengthens the Section 6C argument that the professional share is defined by self-description with no income threshold."
+    },
+    {
+      "severity": "minor",
+      "atomic_item": "Patreon / Substack / direct-support platforms (required entity; required_fields: income distribution, median vs mean, survival, sample size, year, country)",
+      "failure_mode": "under-covered",
+      "location": "Section 2A table — three Patreon rows (Regner, Strauss et al., Andres et al.); Section 1A table — Regner never-pledged row.",
+      "issue": "Patreon carries this entity alone across four rows; Substack and newsletter/writing creators are never mentioned, so the direct-support category is represented by a single platform and the query's occupational scope silently excludes writers.",
+      "requires_orchestrator_restructure": false,
+      "recommendation": "Add a short clause to the Section 2A commentary paragraph (the one beginning 'The three Patreon-adjacent medians differ because their inclusion floors differ') noting that Substack publishes only top-publication revenue counts and no distribution, so no median/mean pair for newsletter creators exists — an audited absence naming what was searched. About 25 words; do not add a table row for a platform with no distribution to report."
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+[
+  {
+    "claim": "A named Bilibili creator ('Have you watched movies', 1.029 million followers) publicly announced on January 12, 2023 that they would stop updating because they were 'unable to make ends meet financially.'",
+    "stance": "supports",
+    "stance_target": "income insufficiency as a documented, named, dated reason creators give for quitting",
+    "evidence_type": "anecdotal",
+    "scope_conditions": "China, Bilibili, Movie genre, January 2023",
+    "quoted_support": "on January 12, 2023, one account of the Movie genre, Have you watched movies, who has 1.029 million followers, announced that it would stop updating because it was 'unable to make ends meet financially'.",
+    "numbers": ["1,029,000 followers", "January 12, 2023"],
+    "entities": ["Bilibili", "Have you watched movies"],
+    "time_period": "January 2023",
+    "region": "China",
+    "confidence": "high",
+    "source_note_id": "stop-updating-a-textual-analysis-of-chinese-viewers"
+  },
+  {
+    "claim": "A named Bilibili creator ('Handsome King Wang', 3.833 million followers) announced on March 31, 2023 that he was stopping updates because content creation on Bilibili was 'not profitable, even leading to losses,' with burnout as a secondary stated reason.",
+    "stance": "supports",
+    "stance_target": "income insufficiency as a documented, named, dated reason creators give for quitting",
+    "evidence_type": "anecdotal",
+    "scope_conditions": "China, Bilibili, Game genre, March 2023",
+    "quoted_support": "The main reason is that creating vidoes on Bilibili is 'not profitable, even leading to losses'; and the account's operation is not sustainable given that it relied entirely on the early benefits gained from the rapid development of Bilibili. The second reason is that he was so tired of keeping updates so that he 'wanted to give himself a long break.'",
+    "numbers": ["3,833,000 followers", "March 31, 2023"],
+    "entities": ["Bilibili", "Handsome King Wang"],
+    "time_period": "March 2023",
+    "region": "China",
+    "confidence": "high",
+    "source_note_id": "stop-updating-a-textual-analysis-of-chinese-viewers"
+  },
+  {
+    "claim": "A wave of Bilibili creator 'stop updating' (停更) announcements from creators with fan bases ranging 10,000 to over 3 million in early 2023 became a top national trending topic: '#Vloggers are quitting Bilibili' reached #1 on Sina Weibo's Hot Search List on April 2, 2023, with 420 million views that day.",
+    "stance": "neutral",
+    "stance_target": "scale and public visibility of a documented creator-exit wave in China",
+    "evidence_type": "empirical",
+    "scope_conditions": "China, Bilibili, early 2023",
+    "quoted_support": "On 2 April 2023, the hashtag '#Vloggers are quitting Bilibili' appeared on the Sina Weibo Hot Search List and ranked first on it, reaching 420 million views on the same day.",
+    "numbers": ["fan bases 10,000 to 3,000,000+", "420,000,000 views in one day", "April 2, 2023"],
+    "entities": ["Bilibili", "Sina Weibo"],
+    "time_period": "early 2023",
+    "region": "China",
+    "confidence": "high",
+    "source_note_id": "stop-updating-a-textual-analysis-of-chinese-viewers"
+  },
+  {
+    "claim": "In a qualitative analysis of 1,176 viewer comments (collected August 2023) responding to a Bilibili creator's video explaining why he stopped updating, coded viewer sentiment repeatedly attributed creator exodus to Bilibili's weaker monetization capability relative to Douyin and Kuaishou, and to creator population growth outpacing viewer/revenue growth.",
+    "stance": "supports",
+    "stance_target": "income/monetization structure as a perceived driver of platform-level creator attrition (viewer-perception evidence, not creator self-report)",
+    "evidence_type": "empirical",
+    "scope_conditions": "China, Bilibili, comments dated to 2023",
+    "quoted_support": "There are many reasons, but one unavoidable factor is that there are too many content creators. It's been statistically proven that the number of content creators has increased tenfold over the past decade, and everyone wants to earn money through video streaming. But where are the viewers supposed to come from to support this growth?",
+    "numbers": ["n=1,176 comments", "creator count 'increased tenfold over the past decade' (uncited commenter claim, not independently verified)"],
+    "entities": ["Bilibili", "Douyin", "Kuaishou", "Zero-talent shooter"],
+    "time_period": "2023",
+    "region": "China",
+    "confidence": "medium",
+    "source_note_id": "stop-updating-a-textual-analysis-of-chinese-viewers"
+  }
+]

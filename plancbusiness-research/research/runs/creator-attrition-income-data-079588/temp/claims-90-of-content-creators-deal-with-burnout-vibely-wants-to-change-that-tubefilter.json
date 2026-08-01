@@ -1,0 +1,30 @@
+[
+  {
+    "claim": "A November 2021 Vibely/Ian Borthwick study of 150 content creators (45.3% with 100k-500k followers, 0.7% with 5M+) found that 90% had experienced burnout and 71% said it made them consider quitting content production altogether.",
+    "stance": "neutral",
+    "stance_target": "prevalence of self-reported creator burnout and quit consideration - the origin of the recirculated '90% of creators' figure",
+    "evidence_type": "statistical",
+    "scope_conditions": "SELF-SELECTED VENDOR SURVEY of n=150 using mixed qualitative methods, recruited by a startup (Vibely) simultaneously building and marketing an anti-burnout product - direct commercial conflict of interest, acknowledged even by the reporting outlet ('that advice isn't totally objective'). Sample skews toward mid-to-large established creators (100k-500k followers most common), not the long tail. No country, sampling frame, or confidence interval stated. Measures quit CONSIDERATION among still-active creators, not observed exit; cannot sample anyone who already quit. The 71% figure is nearly double BDB's 37% (n=1,000, 2025) four years later - the gap is more plausibly explained by sample size, follower-tier selection, and pandemic-era timing than by a real change in quit intention over time, so the two figures should not be treated as a comparable trend.",
+    "quoted_support": "\"A whopping 90% of creators told Vibely they had experienced burnout, and 71% said it had made them consider quitting content production altogether.\"",
+    "numbers": ["90%", "71%", "n=150", "45.3% with 100k-500k followers", "0.7% with 5M+ followers"],
+    "entities": ["Vibely", "Ian Borthwick"],
+    "time_period": "November 2021",
+    "region": "unstated",
+    "confidence": "low",
+    "source_note_id": "90-of-content-creators-deal-with-burnout-vibely-wants-to-change-that-tubefilter"
+  },
+  {
+    "claim": "Among the 150 surveyed creators, top burnout stressors were algorithm/platform changes (65%), need to make a living from content (59%), constant-production 'hamster wheel effect' (51%), follower-count anxiety (51%), harassment/bullying (42%), impostor syndrome (29%), and backlash risk (19%).",
+    "stance": "neutral",
+    "stance_target": "documented reasons creators give for burnout/quit consideration",
+    "evidence_type": "statistical",
+    "scope_conditions": "Same n=150 self-selected, vendor-conflicted sample as the headline 90%/71% figures; not comparable across studies without adjusting for follower-tier skew and method.",
+    "quoted_support": "\"A full 65% of respondents said that one of their top stressors is changes to platforms' algorithms... 59% of creators also cited the need to make a living off content as a top stressor.\"",
+    "numbers": ["65%", "59%", "51%", "51%", "42%", "29%", "19%"],
+    "entities": ["Vibely"],
+    "time_period": "November 2021",
+    "region": "unstated",
+    "confidence": "low",
+    "source_note_id": "90-of-content-creators-deal-with-burnout-vibely-wants-to-change-that-tubefilter"
+  }
+]

@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Idiology — Digital Agency</title>
+  <meta name="description" content="Ideas so good they should be illegal. A digital agency homepage.">
+  <script>document.documentElement.classList.add('js');</script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <!-- Fonts + Swiper CSS load async: first paint is the loader overlay, so nothing user-visible depends on them -->
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Unbounded:wght@200..900&display=swap">
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Unbounded:wght@200..900&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" media="print" onload="this.media='all'">
+  <noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  </noscript>
+  <link rel="stylesheet" href="assets/css/tokens.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/sections.css">
+  <link rel="stylesheet" href="assets/css/animations.css">
+</head>
+<body>
+
+  <!-- Loading overlay -->
+  <div class="loader" data-loader aria-hidden="true">
+    <span class="loader__dot"></span>
+  </div>
+
+  <!-- Page transition overlay (behind a flag in main.js) -->
+  <div class="page-transition" data-page-transition aria-hidden="true"></div>
+
+  <!-- Custom cursor -->
+  <div class="cursor-dot" data-cursor-dot aria-hidden="true"></div>
+  <div class="cursor-ring" data-cursor-ring aria-hidden="true"></div>
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header is-transparent" data-header>
+    <div class="container header__row">
+      <a class="header__logo" href="/">
+        <img class="header__logo-img header__logo-img--dark" src="assets/img/logo-dark.svg" width="150" height="50" alt="Idiology">
+      </a>
+      <nav class="header__nav" aria-label="Main">
+        <ul class="header__menu">
+          <li class="has-dropdown">
+            <a href="#home">Home</a>
+            <ul class="dropdown">
+              <li><a href="#home">Digital Agency</a></li>
+              <li><a href="#home">Creative Studio</a></li>
+              <li><a href="#home">Portfolio Showcase</a></li>
+            </ul>
+          </li>
+          <li class="has-dropdown">
+            <a href="#about">About</a>
+            <ul class="dropdown">
+              <li><a href="#about">Our Story</a></li>
+              <li><a href="#about">Team</a></li>
+              <li><a href="#about">Careers</a></li>
+            </ul>
+          </li>
+          <li><a href="#projects">Works</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="#footer">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header__actions">
+        <button class="header__search" aria-label="Search">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/></svg>
+        </button>
+      </div>
+      <button class="header__burger" data-burger aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile overlay menu -->
+  <div class="mobile-menu" data-mobile-menu aria-hidden="true">
+    <nav aria-label="Mobile">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Works</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#footer">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <main>
+
+    <!-- ============ 5.1 HERO ============ -->
+    <section class="hero" id="home">
+      <div class="hero__bg" aria-hidden="true">
+        <svg viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice">
+          <defs>
+            <radialGradient id="heroGrad" cx="50%" cy="50%" fx="0.44%" fy="50%" r=".5">
+              <animate attributeName="fx" dur="34s" values="0%;3%;0%" repeatCount="indefinite"/>
+              <stop offset="0%" stop-color="#00CAFF"/>
+              <stop offset="100%" stop-color="#00CAFF" stop-opacity="0"/>
+            </radialGradient>
+            <radialGradient id="heroGrad2" cx="50%" cy="50%" fx="0.44%" fy="50%" r=".5">
+              <animate attributeName="fx" dur="26s" values="0%;3%;0%" repeatCount="indefinite"/>
+              <stop offset="0%" stop-color="#4300FF"/>
+              <stop offset="100%" stop-color="#4300FF" stop-opacity="0"/>
+            </radialGradient>
+          </defs>
+          <rect x="13.744%" y="1.18473%" width="100%" height="100%"
+                fill="url(#heroGrad)" transform="rotate(334.41 50 50)">
+            <animate attributeName="x" dur="20s" values="25%;0%;25%" repeatCount="indefinite"/>
+            <animate attributeName="y" dur="21s" values="0%;25%;0%" repeatCount="indefinite"/>
+            <animateTransform attributeName="transform" type="rotate"
+                              from="0 50 50" to="360 50 50" dur="7s" repeatCount="indefinite"/>
+          </rect>
+          <rect x="40%" y="20%" width="100%" height="100%" opacity=".4"
+                fill="url(#heroGrad2)" transform="rotate(120 50 50)">
+            <animate attributeName="x" dur="26s" values="0%;25%;0%" repeatCount="indefinite"/>
+            <animate attributeName="y" dur="17s" values="25%;0%;25%" repeatCount="indefinite"/>
+            <animateTransform attributeName="transform" type="rotate"
+                              from="120 50 50" to="480 50 50" dur="9s" repeatCount="indefinite"/>
+          </rect>
+        </svg>
+      </div>
+
+      <div class="container hero__grid">
+        <div class="hero__left">
+          <h1 class="hero__title">
+            <span class="hero__intro" data-text-reveal data-duration="1" data-hero>Creativity Without the Pretentiousness</span>
+            <span class="hero__display" data-text-reveal data-duration="2" data-hero>Ideas So Good They Should Be <em class="accent">Illegal</em></span>
+          </h1>
+          <p class="hero__para" data-fade-up data-hero>We're the agency your competitors warned you about. We take brands from "who are they?" to "how do we beat them?" with design and strategy that refuse to blend in.</p>
+        </div>
+        <div class="hero__right">
+          <ul class="hero__list">
+            <li>$10M+ Spend in marketing</li>
+            <li>1st ambassador partner for marketing in USA</li>
+            <li>10+ passionate partners</li>
+          </ul>
+          <div class="hero__client-card">
+            <div class="hero__client-row">
+              <div class="hero__avatars">
+                <img src="assets/img/avatar-1.svg" width="44" height="44" alt="Client avatar">
+                <img src="assets/img/avatar-2.svg" width="44" height="44" alt="Client avatar">
+                <img src="assets/img/avatar-3.svg" width="44" height="44" alt="Client avatar">
+              </div>
+              <button class="hero__plus" aria-label="More clients">
+                <svg width="16" height="16" viewBox="0 0 16 16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M8 2v12M2 8h12"/></svg>
+              </button>
+            </div>
+            <p class="hero__client-note">We have 20k+ clients world wide</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 5.2 EXPAND BAND ============ -->
+    <section class="expand-band" data-expand-band>
+      <div class="expand-band__viewport">
+        <div class="expand-band__window" data-expand-target>
+          <div class="expand-band__bg" data-parallax-bg></div>
+          <div class="container expand-band__content">
+            <h2 class="h-display">Let's Make Something Remarkable Together</h2>
+            <p class="expand-band__sub">Your vision deserves world-class execution. Contact us now, and let's turn your ideas into unforgettable experiences.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 5.3 ABOUT / MANIFESTO ============ -->
+    <section class="about" id="about">
+      <div class="container about__grid">
+        <div class="about__body">
+          <h2 class="about__manifesto" data-text-reveal data-duration="1">Great brands don't happen by accident they're built with intention. We blend strategy, story and craft to turn ambition into identity. Every pixel earns its place. Every word pulls its weight. We build the brands that people remember.</h2>
+          <p class="about__para" data-fade-up data-delay=".85">We're a collective of strategists, designers, developers and storytellers who believe good enough never is. From first sketch to final launch we obsess over the details that turn a visitor into a believer — and a believer into a customer.</p>
+          <a class="link-btn" href="#" data-fade-up data-delay="1.05">
+            More About Us
+            <span class="link-btn__arrows" aria-hidden="true">
+              <svg class="arr arr--1" width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 8h11M9 3l5 5-5 5"/></svg>
+              <svg class="arr arr--2" width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 8h11M9 3l5 5-5 5"/></svg>
+            </span>
+          </a>
+          <div class="counters">
+            <div class="counter">
+              <div class="counter__value"><span data-counter data-to="12" data-append="+">0+</span></div>
+              <div class="counter__label">Years of experience</div>
+            </div>
+            <div class="counter">
+              <div class="counter__value"><span data-counter data-to="225" data-append="+">0+</span></div>
+              <div class="counter__label">Successfully projects</div>
+            </div>
+            <div class="counter">
+              <div class="counter__value"><span data-counter data-to="42" data-append="+">0+</span></div>
+              <div class="counter__label">International team members</div>
+            </div>
+            <div class="counter">
+              <div class="counter__value"><span data-counter data-to="98" data-append="%">0%</span></div>
+              <div class="counter__label">Clients satisfied &amp; retention</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 5.4 PROJECTS ============ -->
+    <section class="projects" id="projects">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="h-display" data-text-reveal data-duration="2">Work That <em class="accent">Speaks</em> Louder Than Words</h2>
+        </div>
+        <div class="projects__grid">
+          <div class="projects__col projects__col--left">
+            <article class="proj-card" data-block-reveal="right">
+              <a href="#">
+                <div class="proj-card__thumb"><img src="assets/img/project-1.svg" width="1200" height="900" alt="Kinetic Sandscapes project" loading="lazy" decoding="async"></div>
+                <div class="proj-card__meta">
+                  <h4>Kinetic Sandscapes</h4>
+                  <span>2025 — Branding</span>
+                </div>
+              </a>
+            </article>
+            <article class="proj-card proj-card--w66" data-block-reveal="right">
+              <a href="#">
+                <div class="proj-card__thumb"><img src="assets/img/project-2.svg" width="1200" height="900" alt="Brooklyn Brewery project" loading="lazy" decoding="async"></div>
+                <div class="proj-card__meta">
+                  <h4>Brooklyn Brewery</h4>
+                  <span>2025 — Photography</span>
+                </div>
+              </a>
+            </article>
+            <article class="proj-card" data-block-reveal="right">
+              <a href="#">
+                <div class="proj-card__thumb"><img src="assets/img/project-3.svg" width="1200" height="900" alt="Regenerative project" loading="lazy" decoding="async"></div>
+                <div class="proj-card__meta">
+                  <h4>Regenerative</h4>
+                  <span>2025 — Photography</span>
+                </div>
+              </a>
+            </article>
+          </div>
+          <div class="projects__col projects__col--right">
+            <div class="projects__more">
+              <a class="link-btn link-btn--light" href="#">
+                View More Works
+                <span class="link-btn__arrows" aria-hidden="true">
+                  <svg class="arr arr--1" width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 8h11M9 3l5 5-5 5"/></svg>
+                  <svg class="arr arr--2" width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 8h11M9 3l5 5-5 5"/></svg>
+                </span>
+              </a>
+            </div>
+            <article class="proj-card proj-card--w83 proj-card--right" data-block-reveal="right">
+              <a href="#">
+                <div class="proj-card__thumb"><img src="assets/img/project-4.svg" width="1200" height="900" alt="Hopscotch Payments project" loading="lazy" decoding="async"></div>
+                <div class="proj-card__meta">
+                  <h4>Hopscotch Payments</h4>
+                  <span>2025 — Development</span>
+                </div>
+              </a>
+            </article>
+            <article class="proj-card proj-card--w75 proj-card--left" data-block-reveal="right">
+              <a href="#">
+                <div class="proj-card__thumb"><img src="assets/img/project-5.svg" width="1200" height="900" alt="Stories Worthwhile project" loading="lazy" decoding="async"></div>
+                <div class="proj-card__meta">
+                  <h4>Stories Worthwhile</h4>
+                  <span>2025 — UI/UX Design</span>
+                </div>
+              </a>
+            </article>
+            <article class="proj-card proj-card--w83 proj-card--right" data-block-reveal="right">
+              <a href="#">
+                <div class="proj-card__thumb"><img src="assets/img/project-6.svg" width="1200" height="900" alt="Fintech Accelerator project" loading="lazy" decoding="async"></div>
+                <div class="proj-card__meta">
+                  <h4>Fintech Accelerator</h4>
+                  <span>2025 — App Development</span>
+                </div>
+              </a>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 5.5 SERVICES ============ -->
+    <section class="services" id="services">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="h-display services__head" data-text-reveal data-duration="2">Where Conventional Thinking <em class="accent">Ends</em></h2>
+        </div>
+        <div class="services__stack" data-svc-stack>
+
+          <article class="svc-card" style="--i:0">
+            <div class="svc-card__side">
+              <span class="svc-card__num">01</span>
+              <div class="svc-card__icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9.06 11.9l8.07-8.06a2.85 2.85 0 114.03 4.03l-8.06 8.07"/><path d="M7.07 14.94c-1.66 0-3 1.35-3 3.02 0 1.33-2.5 1.52-2 2.02 1.08 1.1 2.49 2.02 4 2.02 2.2 0 4-1.8 4-4.04a3.01 3.01 0 00-3-3.02z"/></svg>
+              </div>
+              <h4><a href="#">Brand Strategy</a></h4>
+            </div>
+            <div class="svc-card__body">
+              <p>We craft bold brand strategies that define your purpose, differentiate your presence, and build loyalty at every touchpoint.</p>
+              <ul class="svc-card__list">
+                <li>Brand audit &amp; research</li>
+                <li>Positioning &amp; messaging</li>
+                <li>Visual identity systems</li>
+                <li>Brand guidelines</li>
+              </ul>
+              <a class="link-btn" href="#">View Details
+                <span class="link-btn__arrows" aria-hidden="true">
+                  <svg class="arr arr--1" width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 8h11M9 3l5 5-5 5"/></svg>
+                  <svg class="arr arr--2" width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 8h11M9 3l5 5-5 5"/></svg>
+                </span>
+              </a>
+            </div>
+          </article>
+
+          <article class="svc-card" style="--i:1">
+            <div class="svc-card__side">
+              <span class="svc-card__num">02</span>
+              <div class="svc-card__icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 01-18 0"/><path d="M3 12h18"/></svg>
+              </div>
+              <h4><a href="#">Web Development</a></h4>
+            </div>
+            <div class="svc-card__body">
+              <p>From stunning landing pages to dynamic web apps, we code digital experiences that convert and connect seamlessly.</p>
+              <ul class="svc-card__list">
+                <li>Marketing sites &amp; landing pages</li>
+                <li>Web applications</li>
+                <li>CMS &amp; e-commerce</li>
+                <li>Performance &amp; SEO foundations</li>
+              </ul>
+              <a class="link-btn" href="#">View Details
+                <span class="link-btn__arrows" aria-hidden="true">
+                  <svg class="arr arr--1" width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 8h11M9 3l5 5-5 5"/></svg>
+                  <svg class="arr arr--2" width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 8h11M9 3l5 5-5 5"/></svg>
+                </span>
+              </a>
+            </div>
+          </article>
+
+          <article class="svc-card" style="--i:2">
+            <div class="svc-card__side">
+              <span class="svc-card__num">03</span>
+              <div class="svc-card__icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 10-8 10-8-10z"/></svg>
+              </div>
+              <h4><a href="#">UI/UX Design</a></h4>
+            </div>
+            <div class="svc-card__body">
+              <p>We design intuitive, elegant interfaces that enhance usability and keep your users coming back for more.</p>
+              <ul class="svc-card__list">
+                <li>UX research &amp; user flows</li>
+                <li>Wireframes &amp; prototypes</li>
+                <li>Interface design</li>
+                <li>Design systems</li>
+              </ul>
+              <a class="link-btn" href="#">View Details
+                <span class="link-btn__arrows" aria-hidden="true">
+                  <svg class="arr arr--1" width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 8h11M9 3l5 5-5 5"/></svg>
+                  <svg class="arr arr--2" width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 8h11M9 3l5 5-5 5"/></svg>
+                </span>
+              </a>
+            </div>
+          </article>
+
+          <article class="svc-card" style="--i:3">
+            <div class="svc-card__side">
+              <span class="svc-card__num">04</span>
+              <div class="svc-card__icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.7s6.5 7.3 6.5 12.05A6.5 6.5 0 0112 21.25a6.5 6.5 0 01-6.5-6.5C5.5 10 12 2.7 12 2.7z"/></svg>
+              </div>
+              <h4><a href="#">Digital Marketing</a></h4>
+            </div>
+            <div class="svc-card__body">
+              <p>We blend creativity with data to build campaigns that attract, engage, and convert across all digital platforms.</p>
+              <ul class="svc-card__list">
+                <li>Campaign strategy</li>
+                <li>Paid social &amp; search</li>
+                <li>Content &amp; email</li>
+                <li>Analytics &amp; optimization</li>
+              </ul>
+              <a class="link-btn" href="#">View Details
+                <span class="link-btn__arrows" aria-hidden="true">
+                  <svg class="arr arr--1" width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 8h11M9 3l5 5-5 5"/></svg>
+                  <svg class="arr arr--2" width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 8h11M9 3l5 5-5 5"/></svg>
+                </span>
+              </a>
+            </div>
+          </article>
+
+          <article class="svc-card" style="--i:4">
+            <div class="svc-card__side">
+              <span class="svc-card__num">05</span>
+              <div class="svc-card__icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8a2 2 0 012-2h2l2-2.5h6L17 6h2a2 2 0 012 2v10a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><circle cx="12" cy="13" r="4"/></svg>
+              </div>
+              <h4><a href="#">Media Production</a></h4>
+            </div>
+            <div class="svc-card__body">
+              <p>From storyboarding to final cut, we create cinematic visuals and content that bring your brand story to life.</p>
+              <ul class="svc-card__list">
+                <li>Storyboarding &amp; scripts</li>
+                <li>Photo &amp; video shoots</li>
+                <li>Motion graphics</li>
+                <li>Post-production</li>
+              </ul>
+              <a class="link-btn" href="#">View Details
+                <span class="link-btn__arrows" aria-hidden="true">
+                  <svg class="arr arr--1" width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 8h11M9 3l5 5-5 5"/></svg>
+                  <svg class="arr arr--2" width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 8h11M9 3l5 5-5 5"/></svg>
+                </span>
+              </a>
+            </div>
+          </article>
+
+          <article class="svc-card" style="--i:5">
+            <div class="svc-card__side">
+              <span class="svc-card__num">06</span>
+              <div class="svc-card__icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="9" r="6"/><circle cx="15" cy="15" r="6"/></svg>
+              </div>
+              <h4><a href="#">Strategy &amp; Consulting</a></h4>
+            </div>
+            <div class="svc-card__body">
+              <p>Need direction? We provide actionable insights, market positioning, and growth strategies tailored for your brand.</p>
+              <ul class="svc-card__list">
+                <li>Discovery workshops</li>
+                <li>Market positioning</li>
+                <li>Product roadmaps</li>
+                <li>Growth strategy</li>
+              </ul>
+              <a class="link-btn" href="#">View Details
+                <span class="link-btn__arrows" aria-hidden="true">
+                  <svg class="arr arr--1" width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 8h11M9 3l5 5-5 5"/></svg>
+                  <svg class="arr arr--2" width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 8h11M9 3l5 5-5 5"/></svg>
+                </span>
+              </a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 5.6 TESTIMONIALS ============ -->
+    <section class="testimonials">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="h-display" data-text-reveal data-duration="2">Creativity Without the <em class="accent">Pretentiousness</em></h2>
+        </div>
+        <div class="testimonials__slider" data-fade-up data-delay=".2">
+          <div class="testimonials__nav">
+            <button class="testimonials__arrow" data-testi-prev aria-label="Previous testimonial">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 8H3M7 3L2 8l5 5"/></svg>
+            </button>
+            <button class="testimonials__arrow" data-testi-next aria-label="Next testimonial">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 8h11M9 3l5 5-5 5"/></svg>
+            </button>
+          </div>
+          <div class="swiper" data-testi-swiper aria-roledescription="carousel">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide" role="group" aria-label="1 of 3">
+                <blockquote class="testi">
+                  <p class="testi__quote">"Working with this team was like finding the missing piece to our brand puzzle. They took our vague ideas and transformed them into a visual identity that feels unmistakably us. The website they built doesn't just look stunning it converts."</p>
+                  <footer class="testi__author">Jessica Doe</footer>
+                </blockquote>
+              </div>
+              <div class="swiper-slide" role="group" aria-label="2 of 3">
+                <blockquote class="testi">
+                  <p class="testi__quote">"Most agencies talk about innovation these folks actually deliver it. They challenged our assumptions, pushed us out of our comfort zone, and designed a campaign that made our competitors look outdated. The best part? They're ridiculously easy to work with."</p>
+                  <footer class="testi__author">John Doe</footer>
+                </blockquote>
+              </div>
+              <div class="swiper-slide" role="group" aria-label="3 of 3">
+                <blockquote class="testi">
+                  <p class="testi__quote">"We've hired four agencies over the years. This is the first time we've walked away thinking, Damn, that was worth every penny. From branding to web design, their attention to detail is obsessive in the best way."</p>
+                  <footer class="testi__author">Eric Smith</footer>
+                </blockquote>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 5.7 CLIENT LOGO MARQUEE ============ -->
+    <section class="clients">
+      <h3 class="clients__head" data-fade-up data-delay=".25">Trusted by great companies like</h3>
+      <div class="marquee" data-marquee>
+        <div class="marquee__track">
+          <div class="marquee__set">
+            <img src="assets/img/client-1.svg" height="32" alt="Northwind">
+            <img src="assets/img/client-2.svg" height="32" alt="Vertexon">
+            <img src="assets/img/client-3.svg" height="32" alt="Bluefin">
+            <img src="assets/img/client-4.svg" height="32" alt="Craftel">
+            <img src="assets/img/client-5.svg" height="32" alt="Monolith">
+            <img src="assets/img/client-6.svg" height="32" alt="Skylark">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 5.8 BLOG ============ -->
+    <section class="blog" id="blog">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="h-display" data-text-reveal data-duration="2">Breaking Creative <em class="accent">Boundaries</em> Daily</h2>
+        </div>
+        <div class="blog__grid">
+          <article class="blog-card" data-slug="transform-your-brand" data-block-reveal="left" data-reveal-delay=".12">
+            <a href="#blog/transform-your-brand">
+              <div class="blog-card__thumb"><img src="assets/img/blog-1.svg" width="1200" height="800" alt="" loading="lazy" decoding="async"></div>
+              <h4 class="blog-card__title"><span>Ready to transform your brand into something extraordinary</span></h4>
+              <time class="blog-card__date" datetime="2026-06-18">June 18, 2026</time>
+            </a>
+          </article>
+          <article class="blog-card" data-slug="world-class-execution" data-block-reveal="left" data-reveal-delay=".24">
+            <a href="#blog/world-class-execution">
+              <div class="blog-card__thumb"><img src="assets/img/blog-2.svg" width="1200" height="800" alt="" loading="lazy" decoding="async"></div>
+              <h4 class="blog-card__title"><span>Your vision deserves world-class execution</span></h4>
+              <time class="blog-card__date" datetime="2026-06-30">June 30, 2026</time>
+            </a>
+          </article>
+          <article class="blog-card" data-slug="dominate-your-market" data-block-reveal="left" data-reveal-delay=".36">
+            <a href="#blog/dominate-your-market">
+              <div class="blog-card__thumb"><img src="assets/img/blog-3.svg" width="1200" height="800" alt="" loading="lazy" decoding="async"></div>
+              <h4 class="blog-card__title"><span>Don't just compete—dominate. Partner with our creative team</span></h4>
+              <time class="blog-card__date" datetime="2026-07-03">July 3, 2026</time>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ 5.9 FOOTER ============ -->
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__col" data-fade-up data-delay="0">
+          <h5 class="footer__title">Contact</h5>
+          <p class="footer__address">1247 Vision Avenue, Suite 500<br>Brooklyn, NY 11201</p>
+          <p class="footer__contact">
+            <a href="mailto:hello@idiology.agency">hello@idiology.agency</a><br>
+            <a href="tel:+15550132400">+1 (555) 013-2400</a>
+          </p>
+        </div>
+        <div class="footer__col" data-fade-up data-delay=".1">
+          <h5 class="footer__title">Agency</h5>
+          <ul class="footer__links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#projects">Case Studies</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#blog">Blogs</a></li>
+            <li><a href="#footer">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer__col" data-fade-up data-delay=".2">
+          <h5 class="footer__title">Services</h5>
+          <ul class="footer__links">
+            <li><a href="#services">App Development</a></li>
+            <li><a href="#services">Web Development</a></li>
+            <li><a href="#services">UI/UX Design</a></li>
+            <li><a href="#services">Digital Marketing</a></li>
+          </ul>
+        </div>
+        <div class="footer__col" data-fade-up data-delay=".3">
+          <h5 class="footer__title">Social</h5>
+          <div class="footer__social">
+            <a href="#" aria-label="Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.25-1.5 1.55-1.5h1.65V3.6c-.3-.04-1.3-.12-2.45-.12-2.4 0-4.05 1.5-4.05 4.2v2.3H7.5V13h2.7v8h3.3z"/></svg></a>
+            <a href="#" aria-label="X"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 3h3.1l-6.8 7.8L21.8 21h-6.3l-4.9-6.4L5 21H1.9l7.3-8.3L2.4 3h6.4l4.4 5.8L17.5 3zm-1.1 16.2h1.7L6.9 4.7H5.1l11.3 14.5z"/></svg></a>
+            <a href="#" aria-label="LinkedIn"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5A2.49 2.49 0 002.5 6c0 1.37 1.1 2.5 2.46 2.5h.03A2.49 2.49 0 007.47 6a2.49 2.49 0 00-2.49-2.5zM3 9.75h4V21H3V9.75zM13.5 9.75c-2.1 0-3 1.15-3.5 1.96V9.75H6.9V21H10v-6.05c0-1.6.9-2.55 2.2-2.55 1.25 0 1.9.85 1.9 2.55V21h3.1v-6.6c0-3.15-1.7-4.65-3.7-4.65z"/></svg></a>
+            <a href="#" aria-label="Behance"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M8.2 5.3c.85 0 1.6.08 2.3.23.7.15 1.28.4 1.77.73.5.34.87.8 1.15 1.35.27.56.4 1.25.4 2.06 0 .9-.2 1.63-.6 2.23-.4.6-1 1.08-1.8 1.46 1.08.3 1.9.85 2.43 1.62.53.77.8 1.7.8 2.8 0 .88-.17 1.63-.5 2.27a4.4 4.4 0 01-1.36 1.56c-.57.4-1.22.7-1.95.9-.72.18-1.47.28-2.24.28H1V5.3h7.2zm-.43 6.05c.7 0 1.27-.16 1.72-.5.45-.32.67-.86.67-1.6 0-.42-.08-.76-.23-1.03a1.7 1.7 0 00-.6-.62 2.6 2.6 0 00-.88-.3 5.5 5.5 0 00-1.03-.1H4.3v4.15h3.47zm.2 6.4c.4 0 .77-.04 1.12-.12.36-.08.67-.2.93-.4.27-.18.48-.43.64-.75.16-.3.23-.7.23-1.2 0-.94-.26-1.6-.8-2-.53-.4-1.23-.6-2.1-.6H4.3v5.07h3.67zM16.8 8.3h6v1.46h-6V8.3zm3.05 2.1c.9 0 1.7.16 2.4.48.72.32 1.3.76 1.77 1.32.47.56.82 1.22 1.05 1.98.23.75.32 1.56.28 2.42h-8.6c0 .96.32 1.86.87 2.4.55.55 1.34.82 2.38.82.74 0 1.38-.18 1.92-.55.53-.37.86-.76.98-1.17h2.8c-.45 1.4-1.14 2.4-2.07 3.02a6.1 6.1 0 01-3.5.94c-.94 0-1.8-.15-2.55-.45a5.3 5.3 0 01-1.92-1.28 5.6 5.6 0 01-1.2-2 7.4 7.4 0 01-.43-2.55c0-.9.15-1.75.44-2.53a5.9 5.9 0 011.24-2.02 5.7 5.7 0 011.92-1.33c.75-.33 1.58-.5 2.5-.5h-.28zm2.26 5.1a3 3 0 00-.77-1.83c-.42-.42-1.03-.64-1.77-.64-.5 0-.9.08-1.24.25a2.6 2.6 0 00-.82.63c-.2.25-.36.52-.46.8-.1.28-.16.54-.17.8h5.23z"/></svg></a>
+            <a href="#" aria-label="Dribbble"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm6.6 4.62a8.5 8.5 0 011.94 5.3c-.28-.06-3.1-.63-5.94-.27-.06-.15-.12-.3-.19-.45-.18-.42-.37-.84-.58-1.25 3.15-1.28 4.57-3.12 4.77-3.33zM12 3.47c2.17 0 4.15.81 5.66 2.15-.17.24-1.45 1.97-4.48 3.11a44.2 44.2 0 00-3.2-5.02 8.7 8.7 0 012.02-.24zM8.32 4.29a53.1 53.1 0 013.18 4.96 33.9 33.9 0 01-7.8 1.03A8.57 8.57 0 018.32 4.3zM3.44 12.02v-.26c.32.01 4.51.07 8.77-1.21.24.48.47.96.69 1.45l-.34.1c-4.4 1.42-6.74 5.3-6.94 5.63a8.52 8.52 0 01-2.18-5.71zM12 20.56a8.5 8.5 0 01-5.24-1.8c.15-.31 1.88-3.65 6.68-5.32l.06-.02a35.5 35.5 0 011.83 6.5 8.44 8.44 0 01-3.33.64zm4.76-1.46a36.8 36.8 0 00-1.66-6.1c2.68-.43 5.03.27 5.32.36a8.55 8.55 0 01-3.66 5.74z"/></svg></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copy" data-text-reveal data-duration="1">All rights reserved — © <span data-year>2026</span> Idiology</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============ BLOG READER (expanding grid item overlay) ============ -->
+  <div class="reader" data-reader aria-hidden="true">
+    <div class="reader__panel" role="dialog" aria-modal="true" aria-labelledby="readerTitle">
+      <button class="reader__close" data-reader-close aria-label="Close article">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M2 2l12 12M14 2L2 14"/></svg>
+      </button>
+      <div class="reader__scroll" data-reader-scroll>
+        <div class="reader__hero" data-reader-hero><img src="" alt=""></div>
+        <div class="reader__body">
+          <p class="reader__meta" data-reader-meta></p>
+          <h2 class="reader__title" id="readerTitle" data-reader-title></h2>
+          <div class="reader__content" data-reader-content></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Article content — placeholder copy, edit freely (one template per blog card slug) -->
+  <template data-article-tpl="transform-your-brand" data-category="Branding" data-readtime="4 min read">
+    <p class="lede">Most brands don't need a bigger budget — they need a sharper point of view. Here's how a focused rebrand turns a forgettable company into the one everyone else gets benchmarked against.</p>
+    <p>Every transformation we run starts with the same uncomfortable question: if your logo disappeared tomorrow, would anyone recognize what's left? For most companies the honest answer is no. The colors are safe, the voice is borrowed, and the homepage promises "innovative solutions" — exactly like the three competitors one tab over.</p>
+    <h3>Start with the truth, not the trend</h3>
+    <p>Before a single pixel moves, we interview your customers, tear down your competitors, and map the words people actually use when they recommend you. That research becomes the brand's spine: one idea you can defend, repeated everywhere, without apology. Trends age in months. A position built on truth compounds for years.</p>
+    <blockquote>A brand isn't what you say about yourself. It's the shortcut people use to decide if you're worth their time.</blockquote>
+    <h3>Design the shortcut</h3>
+    <p>Then we build the system that makes the idea unmissable — identity, typography, motion, tone of voice — engineered so that a cropped photo or a two-second scroll is still unmistakably you. Consistency isn't the enemy of creativity; it's what makes the creative land.</p>
+    <p>The result: a brand your team is proud to ship, your customers can describe in one sentence, and your competitors quietly start imitating. That's what extraordinary looks like in practice.</p>
+  </template>
+
+  <template data-article-tpl="world-class-execution" data-category="Process" data-readtime="5 min read">
+    <p class="lede">Great ideas are cheap — the market pays for what actually ships. This is the process we use to close the gap between the deck everyone applauded and the product people use every day.</p>
+    <p>Most projects don't fail in the idea stage. They fail in the eleven weeks after: scope creeps, details get "simplified", and the launch is a paler photocopy of the vision. World-class execution is a discipline, not a mood — and it can be systematized.</p>
+    <h3>Sprint zero: kill the ambiguity</h3>
+    <p>We start every engagement with a one-week sprint that produces three things: a locked scope, a clickable prototype of the riskiest screen, and a definition of "done" everyone signs. It's the cheapest insurance in the industry — an hour of alignment here saves a month of rework later.</p>
+    <h3>Quality gates, not quality hopes</h3>
+    <p>Every build passes fixed checkpoints — design review against the prototype, performance budgets, accessibility audit, motion polish — before anyone says the word launch. Nothing relies on someone remembering to care; caring is scheduled.</p>
+    <blockquote>Vision is the destination. Execution is whether anyone ever gets there.</blockquote>
+    <p>The payoff is boring in the best way: launches that land on the date we said, looking the way the deck promised. Your vision deserves nothing less.</p>
+  </template>
+
+  <template data-article-tpl="dominate-your-market" data-category="Growth" data-readtime="3 min read">
+    <p class="lede">Competing means playing a game someone else designed. Dominating means changing what the game is about — and that's a creative decision before it's a marketing one.</p>
+    <p>In every crowded category there's a brand fighting for third place on features and price, and a brand that owns the conversation entirely. The difference is rarely product. It's positioning: the dominant brand picked a fight it could win and made everyone else look like context.</p>
+    <h3>Own a question, not a keyword</h3>
+    <p>We help you find the one question in your market where your answer is genuinely the best — then we build the campaigns, content and design language that make you the default answer to it. Traffic follows authority; authority follows focus.</p>
+    <blockquote>Nobody remembers who competed. Everybody remembers who defined the category.</blockquote>
+    <p>If you're ready to stop measuring yourself against competitors and start being the measurement, that's exactly the kind of fight our team likes picking. Let's talk.</p>
+  </template>
+
+  <script defer src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script type="module" src="assets/js/main.js"></script>
+</body>
+</html>

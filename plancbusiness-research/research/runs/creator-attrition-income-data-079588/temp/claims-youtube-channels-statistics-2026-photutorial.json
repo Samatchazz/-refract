@@ -1,0 +1,55 @@
+[
+  {
+    "claim": "An aggregator estimate puts the YouTube channel pyramid at roughly 115 million channels globally, about 10 million with 1,000+ subscribers, 687,909 with 100,000+, 74,969 with 1M+ and 17 with 100M+, implying that under 9% of channels ever reach the subscriber floor for monetization.",
+    "stance": "supports",
+    "stance_target": "The overwhelming majority of channels never reach the threshold at which any monetization is possible",
+    "evidence_type": "statistical",
+    "scope_conditions": "Photutorial, updated June 2026, author Matic Broz; an affiliate-monetized aggregator that compiles Social Blade, vidIQ, Sprout Social, DemandSage, Epidemic Sound and Forbes rather than collecting data; the page itself concedes YouTube publishes no channel census; the six-figure precision of 687,909 and 74,969 against a rounded 'about 115 million' denominator is false precision, and no country breakdown exists",
+    "quoted_support": "Channel-count estimates vary because many channels are inactive, empty, auto-generated, brand-owned, or used only for subscriptions/comments.",
+    "numbers": [
+      "about 115 million channels",
+      "about 10 million with 1,000+ subs (8.7%)",
+      "687,909 with 100,000+ (0.6%)",
+      "74,969 with 1M+ (0.065%)",
+      "2,882 with 10M+",
+      "85 with 50M+",
+      "17 with 100M+"
+    ],
+    "entities": [
+      "Photutorial",
+      "Matic Broz",
+      "Social Blade",
+      "vidIQ",
+      "YouTube"
+    ],
+    "time_period": "June 2026 update; originally published January 2024",
+    "region": "Global; no country composition",
+    "confidence": "low",
+    "source_note_id": "youtube-channels-statistics-2026-photutorial"
+  },
+  {
+    "claim": "Forbes' 2025 Top Creators ranking put MrBeast at an estimated $85 million, Dhar Mann at $56 million and Jake Paul at $50 million, figures orders of magnitude above any plausible median and drawn from diversified businesses rather than platform ad revenue.",
+    "stance": "supports",
+    "stance_target": "Mean creator income is dominated by an extreme right tail and is not a meaningful measure of typical earnings",
+    "evidence_type": "statistical",
+    "scope_conditions": "Forbes estimates as relayed by Photutorial, an aggregator, not read from the Forbes original; 2025; US creators; the aggregator explicitly notes these totals combine AdSense, sponsorships, consumer products, licensing, subscriptions, live events and platform deals",
+    "quoted_support": "Forbes ranked him No. 1 on its 2025 Top Creators list with estimated earnings of $85 million and 634 million followers across platforms.",
+    "numbers": [
+      "MrBeast $85M",
+      "Dhar Mann $56M",
+      "Jake Paul $50M",
+      "634 million followers"
+    ],
+    "entities": [
+      "Forbes",
+      "MrBeast",
+      "Dhar Mann",
+      "Jake Paul",
+      "Photutorial"
+    ],
+    "time_period": "2025",
+    "region": "United States",
+    "confidence": "low",
+    "source_note_id": "youtube-channels-statistics-2026-photutorial"
+  }
+]

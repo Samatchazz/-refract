@@ -1,0 +1,72 @@
+[
+  {
+    "claim": "Niconico Douga's paid-membership base peaked at 2.56 million in 2016 and fell by more than 1 million subscribers by 2021.",
+    "stance": "neutral",
+    "stance_target": "platform-scale creator/audience decline magnitude",
+    "evidence_type": "empirical",
+    "scope_conditions": "Japan, Niconico Douga platform, 2016-2021",
+    "quoted_support": "2016年には主な収益源である有料会員が256万にまで達していた。しかし、翌2017年には常に拡大を続けてきた有料会員数が減少に転じており...2021年までに100万以上も減少している。 (In 2016, paid members -- the main revenue source -- reached 2.56 million. But in 2017, the paid-member count, which had continuously grown, turned to decline...by 2021 it had fallen by over 1 million.)",
+    "numbers": ["2.56 million paid members (2016 peak)", "over 1,000,000 decline by 2021"],
+    "entities": ["Niconico Douga", "Dwango"],
+    "time_period": "2016-2021",
+    "region": "Japan",
+    "confidence": "high",
+    "source_note_id": "why-niconico-in-japan-lost-game-jikkyo-streamers-and-their-audience"
+  },
+  {
+    "claim": "Using Niconico's own quarterly video-post-count and view-count telemetry (2007 Q2-2021 Q2), video-posting-count began declining around 2011, roughly five years before total view-count began declining in 2016, indicating creator outflow preceded and likely caused viewer outflow rather than the reverse.",
+    "stance": "supports",
+    "stance_target": "income/monetization shortfall as a driver of platform-level creator exodus",
+    "evidence_type": "empirical",
+    "scope_conditions": "Japan, Niconico Douga, gaming video content category, 2007-2021",
+    "quoted_support": "動画投稿数の減少と再生数の減少には時差が生じており...動画投稿数の漸減≒段階的なクリエイターの流出が、即再生数減として現れたわけではないということであり、クリエイターの流出開始から視聴者の流出までは時差があったと言える。 (There is a time lag between the decline in video-posting count and the decline in view count...the gradual decline in posting count -- i.e. the gradual outflow of creators -- did not immediately appear as a decline in view count; there was a lag between the start of creator outflow and the start of viewer outflow.)",
+    "numbers": ["posting-count decline begins ~2011", "view-count decline begins 2016", "~5 year lag"],
+    "entities": ["Niconico Douga", "Niconico Chart (nicochart.jp)"],
+    "time_period": "2007-2021",
+    "region": "Japan",
+    "confidence": "medium-high",
+    "source_note_id": "why-niconico-in-japan-lost-game-jikkyo-streamers-and-their-audience"
+  },
+  {
+    "claim": "The authors attribute Niconico's platform-level creator outflow to insufficient revenue-sharing: its 2011 'Creator Incentive Program' failed to produce a YouTube-Partner-Program-scale top earner (no creator reaching HIKAKIN-level income emerged), which the paper identifies as the primary reason gaming-video creators migrated to YouTube once YouTuber careers gained visibility from 2014.",
+    "stance": "supports",
+    "stance_target": "income level as a causal driver of creator platform-switching/exit",
+    "evidence_type": "theoretical",
+    "scope_conditions": "Japan, Niconico vs YouTube, gaming-video-content creators, 2011-2021",
+    "quoted_support": "2011年に...ニコニコ動画が開始した「クリエイター奨励プログラム」だが...HIKAKIN氏に代表されるような大きな収益を得るクリエイターを生み出せていない。当然、YouTuberという存在が2014年頃から大きく話題になると、クリエイターがより稼げる可能性のあるYouTube等に移行しようとするのは必然であると考えられる。 (The 'Creator Incentive Program' Niconico launched in 2011...failed to produce creators earning large income like HIKAKIN. Naturally, once 'YouTuber' became a major topic around 2014, it was inevitable that creators would migrate to YouTube, where they could potentially earn more.)",
+    "numbers": ["Creator Incentive Program launched 2011", "YouTube Partner Program opened to general users April 2011", "YouTuber visibility surge ~2014"],
+    "entities": ["Niconico", "YouTube Partner Program", "HIKAKIN", "Dwango"],
+    "time_period": "2011-2021",
+    "region": "Japan",
+    "confidence": "medium",
+    "source_note_id": "why-niconico-in-japan-lost-game-jikkyo-streamers-and-their-audience"
+  },
+  {
+    "claim": "In an original Dynata-fielded survey of Japanese gaming-video viewers (screening n=3,328; main survey of lapsed Niconico viewers n=1,356, stratified by sex x age-decade 10s/20s/30s, fielded Aug 24-Sep 7 2021), 'creators/streamers moved to other services' was the top or joint-top reason for quitting Niconico viewership in every one of six demographic cells, ranging from 29% to 42%.",
+    "stance": "supports",
+    "stance_target": "creator outflow as the leading viewer-perceived cause of platform decline",
+    "evidence_type": "statistical",
+    "scope_conditions": "Japan, ages 10s-30s, gaming-video/live-stream viewers, survey fielded Aug-Sep 2021",
+    "quoted_support": "全性年代で理由として挙げられているのは、「投稿者・配信者の他サービスへの移動」...であり、ニコニコ動画の問題としてあげた点と合致する。 (Across all sex/age groups, the reason cited was 'creators/streamers moving to other services'...consistent with the problems already identified for Niconico.)",
+    "numbers": ["n=3,328 screening", "n=1,356 main survey", "35% men 10s", "35% men 20s", "33% men 30s", "42% women 10s", "29% women 20s", "29% women 30s"],
+    "entities": ["Dynata", "Niconico", "YouTube", "Twitch"],
+    "time_period": "August 24-September 7, 2021",
+    "region": "Japan",
+    "confidence": "high",
+    "source_note_id": "why-niconico-in-japan-lost-game-jikkyo-streamers-and-their-audience"
+  },
+  {
+    "claim": "This is a platform-level aggregate telemetry study (quarterly posting/view-count time series as a population-level creator-outflow proxy), not an individual-creator cohort survival curve or hazard model, and its reason data surveys viewers about why they stopped watching, not creators about why they stopped creating.",
+    "stance": "neutral",
+    "stance_target": "limits of what this source can establish about creator-level survival telemetry",
+    "evidence_type": "theoretical",
+    "scope_conditions": "methodological caveat, Japan, Niconico",
+    "quoted_support": "本研究では、ニコニコ動画からのゲーム実況ユーザーの流出要因の分析を通して、ゲーム動画コンテンツ市場におけるプラットフォーム間競争を考察する。 (This study considers inter-platform competition in the gaming video content market through an analysis of the factors behind the outflow of gaming-live-commentary users from Niconico.)",
+    "numbers": [],
+    "entities": ["Niconico"],
+    "time_period": "2007-2021",
+    "region": "Japan",
+    "confidence": "high",
+    "source_note_id": "why-niconico-in-japan-lost-game-jikkyo-streamers-and-their-audience"
+  }
+]

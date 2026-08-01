@@ -1,0 +1,89 @@
+{
+  "gaps": [
+    {
+      "type": "overturning",
+      "target_position": "1 (under 2% living-wage share / under 0.1% at US median)",
+      "search_queries": [
+        "streamer total income sponsorships tips merchandise versus platform payout ratio study",
+        "creator income off-platform brand deal share of total earnings survey OR telemetry",
+        "Twitch streamer sponsorship revenue not captured by subscriptions bits estimate academic",
+        "YouTuber total revenue AdSense versus sponsorship percentage breakdown dataset"
+      ],
+      "source_type": "academic",
+      "priority": "critical",
+      "rationale": "All four load-bearing telemetry sources for the sub-2% figure measure a single revenue channel only: Regner and Graphtreon measure Patreon pledges, Rieder measures Google AdSense payout, and the WSJ Twitch analysis explicitly excludes sponsorships, tips and publisher payments. If off-platform income (brand sponsorships, merch, courses, multi-platform stacking) is large relative to on-platform payout for the same individuals -- which the corpus's own SEA finding (90% of Indonesian influencer income is sponsorship, not platform revenue) suggests may also be true in the West -- then every 'under 2%' / 'under 0.1%' figure is a single-channel measurement mislabeled as total income, and the true living-wage share could be materially higher. No source in the corpus reconciles single-channel telemetry against total individual income for the same creators. This is the most consequential asymmetry in the run: the pipeline was rigorous about survey samples overstating income via selection bias but has not checked whether its own telemetry sources understate it via channel-scope, and the two errors point in opposite directions on the same headline number."
+    },
+    {
+      "type": "overturning",
+      "target_position": "1 (denominator = everyone who registers an account)",
+      "search_queries": [
+        "share of registered social media accounts never post content abandoned sign-up rate",
+        "YouTube channel created zero videos uploaded percentage inactive registration",
+        "online platform registration versus genuine work attempt distinction gig economy study"
+      ],
+      "source_type": "academic",
+      "priority": "critical",
+      "rationale": "Every headline share in the run divides by 'everyone who registered an account' (Regner's 139,366 Patreon campaigns, Rieder's 36.3M YouTube channels, Kassi's 163M online-labour accounts). None of these sources establishes what fraction of registrations represent a genuine occupational attempt versus an idle sign-up, a test account, a bot, or abandonment before any content was ever posted. Kassi et al. themselves report only 8.6% of 163M accounts 'ever worked' -- a number the corpus already uses as evidence of low activation, but it could equally be read as evidence that the denominator is inflated by non-attempts, which would mean the full-population attrition/living-wage figures overstate failure rather than understate it. This directly bears on whether the report's central 'under 2%' framing is too pessimistic in the same direction the off-platform-income gap above suggests the opposite. Finding or failing to find a source on account-registration intent would resolve which of the two errors dominates."
+    },
+    {
+      "type": "overturning",
+      "target_position": "3 (income does not predict continuation; structural access does)",
+      "search_queries": [
+        "income shock quasi-experiment creator platform exit hazard model natural experiment",
+        "monetization payout increase causal effect on channel discontinuation YouTube Twitch",
+        "gig platform earnings level predicts attrition regression discontinuity"
+      ],
+      "source_type": "academic",
+      "priority": "high",
+      "rationale": "Position 3 rests on three studies (Zhao Cox n=1,923 VTubers, Wollborn DiD n=18,467 Twitch newcomers, Torhonen x2 n=377/382) that are narrow in population (one fandom-wiki-derived VTuber sample, one platform, mostly Finnish respondents) despite being methodologically the strongest designs in the corpus. A labor-economics style natural experiment isolating income LEVEL (not just tier/affiliation category) as the treatment -- for instance around a payout-rate change or an RPM shock -- applied to a broader creator population would be the cleanest possible overturning source, and the corpus does not report having searched NBER, SSRN or econ.GN specifically for this design (the domain notes flag these as first-priority sourcing channels but the quit-driver locus fetched mostly HCI/communication venues)."
+    },
+    {
+      "type": "independent-verification",
+      "target_position": "5 (Indonesia 8M/63% is a marketing claim, not a national statistic)",
+      "search_queries": [
+        "TikTok ByteDance investor disclosure Indonesia creator earnings methodology",
+        "BPS Kemenparekraf 2026 sensus ekonomi kreator konten metodologi rilis",
+        "Kadence International TikTok Effect Indonesia 2023 full methodology appendix survey"
+      ],
+      "source_type": "government",
+      "priority": "high",
+      "rationale": "The provenance trace is high confidence but rests on absence (no methodology found) rather than a confirmed non-existence. A genuine methodology disclosure from TikTok/ByteDance (e.g. in an investor or regulatory filing), or a BPS/Kemenparekraf technical release ahead of the 2026 Economic Census, would either supply the missing sample frame and definition (strengthening the figure enough to cite with caveats) or confirm definitively that none exists (hardening position 5 rather than leaving it as an audited absence). Either outcome sharpens the draft's single most detailed case study."
+    },
+    {
+      "type": "strengthening",
+      "target_position": "2 (no platform-scale creator survival telemetry exists)",
+      "search_queries": [
+        "Douyin Bilibili Kuaishou creator retention cohort survival academic paper China",
+        "TikTok creator churn hazard model peer-reviewed longitudinal panel",
+        "streamer platform switching cohort survival curve academic Twitch YouTube China Japan"
+      ],
+      "source_type": "academic",
+      "priority": "high",
+      "rationale": "The absence claim was tested via five search angles plus an investor-filing sweep (Bilibili, Kuaishou, Roblox, Patreon, Spotify), but the corpus is thin on Chinese-language and East/Southeast Asian platforms specifically, and Chinese-platform creator-economy academic literature (Douyin, Bilibili, Kuaishou) is a distinct citation network from the Western one already searched. A single published cohort survival curve in Chinese-language venues would falsify the strongest and most load-bearing absence-claim in the run; confirming its continued absence there specifically (not just via investor filings) would let the report state the absence at higher confidence and note the search covered non-English literature."
+    },
+    {
+      "type": "overturning",
+      "target_position": "1 and 4 (recency of core telemetry figures)",
+      "search_queries": [
+        "TikTok Creator Rewards Program 2024 2025 payout rate per view compared to Creator Fund",
+        "YouTube Shorts revenue share creator earnings 2023 2024 2025 payout data",
+        "Twitch payout structure change 2022 2023 2024 subscription revenue split creators"
+      ],
+      "source_type": "industry",
+      "priority": "high",
+      "rationale": "Regner's Patreon data is 2013-2015 and the Twitch leak is 2021; both predate major payout-structure changes (TikTok's 2023-2024 Creator Fund-to-Creator Rewards transition, YouTube's 2023 Shorts revenue-sharing launch, Twitch's post-2022 tiered revenue splits). If any of these changes produced a documented, materially different payout distribution, the corpus's core living-wage and income-distribution figures would need explicit dating rather than being presented as current. The one legitimate hit found so far (top-10-tiktok-creator-fund-statistics note) was disqualified as fabricated, meaning this specific recency question remains genuinely open rather than resolved in either direction."
+    },
+    {
+      "type": "independent-verification",
+      "target_position": "6 (no SEA country meets the evidence-quality floor)",
+      "search_queries": [
+        "luan van thac si kinh te sang tao noi dung Viet Nam thu nhap",
+        "งานวิจัย นักสร้างคอนเทนต์ รายได้ สสว กรมการจ้างงาน",
+        "kajian pendapatan kreator konten Indonesia tesis universitas BPS"
+      ],
+      "source_type": "academic",
+      "priority": "high",
+      "rationale": "The SEA-floor conclusion is well-evidenced for institutional/government sources already searched, but the locus investigator's own note lists Thailand/Vietnam/Malaysia as searched 'despite local-language search' without listing specific queries used, and university thesis repositories (a named in-scope source type under deep inference depth) were not confirmed as checked. A single national-language academic thesis with creator-level income or attrition data anywhere in mainland Southeast Asia would upgrade position 6 from 'no evidence found' to 'sparse but present,' which changes the report's framing from an absolute absence to a threshold statement."
+    }
+  ]
+}

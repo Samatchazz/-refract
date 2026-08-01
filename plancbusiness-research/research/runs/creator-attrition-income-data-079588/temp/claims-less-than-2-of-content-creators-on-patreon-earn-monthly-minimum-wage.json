@@ -1,0 +1,72 @@
+[
+  {
+    "claim": "Digital Music News reported that of Patreon's 79,420 creators, only 1,393 — under 2% — earned the US federal monthly minimum wage of $1,160 in October 2017, and only 0.8% (635 creators) reached a $15/hour equivalent.",
+    "stance": "supports",
+    "stance_target": "The claim that only a low single-digit percentage of creators on direct-monetization platforms earn a living wage",
+    "evidence_type": "statistical",
+    "scope_conditions": "Patreon; earnings month October 2017; published 2 January 2018; derived from Graphtreon's scrape of publicly disclosed Patreon earnings, which covers roughly 80% of creators; US federal minimum wage benchmark",
+    "quoted_support": "According to the website, the platform now has 79,420 creators. Yet, only 1,393 creators (under 2%) earned the federal monthly minimum wage of $1,160 a month in October 2017. Even worse, if changed to $15 per hour, only 0.8%, or 635 creators, made that amount.",
+    "numbers": ["79,420 creators", "1,393 creators", "under 2%", "635 creators", "0.8%", "$1,160/month", "$15/hour", "October 2017"],
+    "entities": ["Patreon", "Graphtreon", "Digital Music News", "Brent Knepper"],
+    "time_period": "October 2017",
+    "region": "US wage benchmark applied to a global platform — US/Western-only threshold",
+    "confidence": "high",
+    "source_note_id": "less-than-2-of-content-creators-on-patreon-earn-monthly-minimum-wage"
+  },
+  {
+    "claim": "The vast majority of Patreon creators earned between $1 and $100 per month as of late 2017, placing the modal creator's platform income at roughly one to two percent of a minimum-wage income.",
+    "stance": "supports",
+    "stance_target": "The claim that median creator platform income is negligible rather than merely low",
+    "evidence_type": "statistical",
+    "scope_conditions": "Patreon; late 2017; Graphtreon distribution of publicly disclosed earnings",
+    "quoted_support": "In addition, Graphtreon found that the vast majority on the platform earned between $1 and $100 a month.",
+    "numbers": ["$1 to $100 per month", "79,420 creators"],
+    "entities": ["Patreon", "Graphtreon"],
+    "time_period": "October-December 2017",
+    "region": "Global",
+    "confidence": "high",
+    "source_note_id": "less-than-2-of-content-creators-on-patreon-earn-monthly-minimum-wage"
+  },
+  {
+    "claim": "Patreon reached 50,000 monthly active creators and roughly one million monthly active patrons in 2017, with estimated total creator earnings of $150 million for the year — meaning average annual earnings of about $3,000 per active creator against a median far below that.",
+    "stance": "supports",
+    "stance_target": "The claim that mean creator earnings badly misrepresent typical outcomes on skewed platforms",
+    "evidence_type": "statistical",
+    "scope_conditions": "Patreon 2017; note the tension between 50,000 monthly ACTIVE creators and the 79,420 total creator count used as the denominator for the minimum-wage statistic; the $3,000 mean is this analysis's arithmetic, not the source's",
+    "quoted_support": "the service reached 50,000 monthly active content creators last year. With the support of one million monthly active patrons, the company estimated that creators would earn $150 million last year.",
+    "numbers": ["50,000 monthly active creators", "1 million monthly active patrons", "$150 million total creator earnings 2017", "~$3,000 implied mean"],
+    "entities": ["Patreon", "Jack Conte"],
+    "time_period": "2017",
+    "region": "Global",
+    "confidence": "medium",
+    "source_note_id": "less-than-2-of-content-creators-on-patreon-earn-monthly-minimum-wage"
+  },
+  {
+    "claim": "Patreon's December 2017 service-fee change triggered mass patron cancellations and caused content creators to shut down their pages, a documented case of a unilateral platform policy change directly precipitating creator exits.",
+    "stance": "supports",
+    "stance_target": "The claim that platform policy changes are a documented cause of creator attrition independent of audience or skill",
+    "evidence_type": "historical",
+    "scope_conditions": "Patreon, December 2017; the proposed 2.9% plus 35-cent per-pledge fee was withdrawn after backlash; no quantified count of pages closed is given",
+    "quoted_support": "Following a huge wave of backlash on social media, users quickly bailed from the platform. Content creators shut down their pages after hundreds of patrons canceled their pledges.",
+    "numbers": ["2.9% plus $0.35 per pledge"],
+    "entities": ["Patreon", "Jack Conte"],
+    "time_period": "December 2017",
+    "region": "Global",
+    "confidence": "medium",
+    "source_note_id": "less-than-2-of-content-creators-on-patreon-earn-monthly-minimum-wage"
+  },
+  {
+    "claim": "Patreon's own 2016 claim that 7,960 creators earned over $100 a month against roughly 25,000 creators — nearly one third — was contradicted by the 2017 measured distribution, and the underlying blog post was subsequently deleted or moved.",
+    "stance": "refutes",
+    "stance_target": "Platform-published creator success statistics as reliable evidence",
+    "evidence_type": "historical",
+    "scope_conditions": "Patreon 2016 versus October 2017; the thresholds differ ($100/month vs $1,160/month) so the comparison shows dilution rather than direct contradiction",
+    "quoted_support": "The findings contradicted Patreon's 2016 announcement that 7,960 creators on the platform made over $100 a month. With around 25,000 creators, that would mean nearly one-third of creators made over $100. The post has since been deleted or moved.",
+    "numbers": ["7,960 creators over $100/month", "~25,000 creators in 2016", "nearly one-third"],
+    "entities": ["Patreon"],
+    "time_period": "2016-2017",
+    "region": "Global",
+    "confidence": "high",
+    "source_note_id": "less-than-2-of-content-creators-on-patreon-earn-monthly-minimum-wage"
+  }
+]

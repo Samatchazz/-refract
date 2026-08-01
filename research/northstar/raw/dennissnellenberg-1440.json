@@ -1,0 +1,1073 @@
+{
+  "slug": "dennissnellenberg",
+  "url": "https://dennissnellenberg.com",
+  "name": "Dennis Snellenberg",
+  "country": "Netherlands",
+  "viewport": {
+    "width": 1440,
+    "height": 900
+  },
+  "ok": true,
+  "httpStatus": 200,
+  "finalUrl": "https://dennissnellenberg.com/",
+  "consentDismissed": [],
+  "scrollInfo": {
+    "contentHeight": 4454,
+    "docScrollHeight": 900,
+    "maxElementBottom": 4454,
+    "innerScrollerHeight": 1345,
+    "virtualScroll": true
+  },
+  "document": {
+    "scrollHeight": 900,
+    "vhMultiple": 4.95,
+    "textNodeCount": 104,
+    "canvasCount": 0,
+    "elementCount": 493,
+    "title": "Dennis Snellenberg • Freelance Designer & Developer",
+    "lang": "en",
+    "contentHeight": 4454,
+    "scrollMode": "virtual (transformed wrapper / JS scroller)"
+  },
+  "container": {
+    "dominantPairs": [
+      {
+        "width": 262,
+        "left": 1005,
+        "count": 4,
+        "sample": {
+          "tag": "p",
+          "cls": ""
+        }
+      },
+      {
+        "width": 305,
+        "left": 1019,
+        "count": 1,
+        "sample": {
+          "tag": "h4",
+          "cls": ""
+        }
+      },
+      {
+        "width": 242,
+        "left": 958,
+        "count": 1,
+        "sample": {
+          "tag": "p",
+          "cls": ""
+        }
+      },
+      {
+        "width": 212,
+        "left": 273,
+        "count": 1,
+        "sample": {
+          "tag": "span",
+          "cls": "btn-text-inner change"
+        }
+      }
+    ],
+    "containerChain": {
+      "chain": [
+        {
+          "tag": "p",
+          "cls": "",
+          "width": 262.09,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "block"
+        },
+        {
+          "tag": "div",
+          "cls": "flex-col animate",
+          "width": 362.88,
+          "maxWidth": "none",
+          "paddingInline": "43.2px / 57.6px",
+          "marginInline": "0px / 0px",
+          "display": "block"
+        },
+        {
+          "tag": "a",
+          "cls": "row",
+          "width": 1209.63,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "flex"
+        },
+        {
+          "tag": "li",
+          "cls": "development interaction visible",
+          "width": 1209.63,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "list-item"
+        },
+        {
+          "tag": "ul",
+          "cls": "work-items mouse-pos-list-image-wrap",
+          "width": 1209.63,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "block"
+        },
+        {
+          "tag": "div",
+          "cls": "container",
+          "width": 1440,
+          "maxWidth": "1728px",
+          "paddingInline": "115.2px / 115.2px",
+          "marginInline": "0px / 0px",
+          "display": "block"
+        },
+        {
+          "tag": "section",
+          "cls": "section work-grid large-work-grid",
+          "width": 1440,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "block"
+        },
+        {
+          "tag": "div",
+          "cls": "main-wrap",
+          "width": 1440,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "block"
+        }
+      ],
+      "constrained": {
+        "tag": "div",
+        "cls": "container",
+        "width": 1440,
+        "maxWidth": "1728px",
+        "paddingInline": "115.2px / 115.2px",
+        "marginInline": "0px / 0px",
+        "display": "block"
+      }
+    },
+    "grids": [],
+    "bodyPaddingInline": "0px / 0px",
+    "bodyMaxWidth": "none",
+    "htmlPaddingInline": "0px / 0px"
+  },
+  "leftEdgeTest": {
+    "layout": {
+      "n": 5,
+      "mean": 282.8,
+      "stdDev": 211.86,
+      "distinctExact": 3,
+      "distinctClustered2px": 3,
+      "clusters": [
+        {
+          "at": 43,
+          "count": 1
+        },
+        {
+          "at": 230,
+          "count": 3
+        },
+        {
+          "at": 681,
+          "count": 1
+        }
+      ],
+      "values": [
+        43,
+        230,
+        230,
+        681,
+        230
+      ]
+    },
+    "rect": {
+      "n": 5,
+      "mean": 283,
+      "stdDev": 211.63,
+      "distinctExact": 3,
+      "distinctClustered2px": 3,
+      "clusters": [
+        {
+          "at": 43.19,
+          "count": 1
+        },
+        {
+          "at": 230.39,
+          "count": 3
+        },
+        {
+          "at": 680.64,
+          "count": 1
+        }
+      ],
+      "values": [
+        43.19,
+        230.39,
+        230.38,
+        680.64,
+        230.39
+      ]
+    },
+    "headings": {
+      "n": 5,
+      "mean": 274.2,
+      "stdDev": 222.05,
+      "distinctExact": 3,
+      "distinctClustered2px": 3,
+      "clusters": [
+        {
+          "at": 0,
+          "count": 1
+        },
+        {
+          "at": 230,
+          "count": 3
+        },
+        {
+          "at": 681,
+          "count": 1
+        }
+      ],
+      "values": [
+        0,
+        230,
+        230,
+        681,
+        230
+      ]
+    },
+    "sectionDiscovery": "tall-children-of-wrapper"
+  },
+  "sections": [
+    {
+      "index": 0,
+      "tag": "header",
+      "id": null,
+      "cls": "section home-header theme-dark",
+      "height": 1035,
+      "vhFraction": 1.15,
+      "paddingBlockStart": "189px",
+      "paddingBlockEnd": "189px",
+      "marginBlockStart": "0px",
+      "marginBlockEnd": "0px",
+      "firstText": {
+        "layoutLeft": 43,
+        "rectLeft": 43.19,
+        "tag": "span",
+        "fontSize": "17.28px",
+        "text": "Located"
+      },
+      "heading": {
+        "layoutLeft": 0,
+        "rectLeft": -1180.93,
+        "tag": "h1",
+        "fontSize": "216px",
+        "text": "Dennis Snellenberg"
+      }
+    },
+    {
+      "index": 1,
+      "tag": "section",
+      "id": null,
+      "cls": "section home-intro",
+      "height": 540.72,
+      "vhFraction": 0.6,
+      "paddingBlockStart": "189px",
+      "paddingBlockEnd": "124.74px",
+      "marginBlockStart": "0px",
+      "marginBlockEnd": "0px",
+      "firstText": {
+        "layoutLeft": 230,
+        "rectLeft": 230.39,
+        "tag": "span",
+        "fontSize": "33.12px",
+        "text": "Helping"
+      },
+      "heading": {
+        "layoutLeft": 230,
+        "rectLeft": 230.39,
+        "tag": "span",
+        "fontSize": "33.12px",
+        "text": "Helping"
+      }
+    },
+    {
+      "index": 2,
+      "tag": "section",
+      "id": null,
+      "cls": "section work-grid large-work-grid",
+      "height": 889.98,
+      "vhFraction": 0.99,
+      "paddingBlockStart": "0px",
+      "paddingBlockEnd": "0px",
+      "marginBlockStart": "0px",
+      "marginBlockEnd": "0px",
+      "firstText": {
+        "layoutLeft": 230,
+        "rectLeft": 230.38,
+        "tag": "h5",
+        "fontSize": "10.368px",
+        "text": "Recent work"
+      },
+      "heading": {
+        "layoutLeft": 230,
+        "rectLeft": 230.37,
+        "tag": "span",
+        "fontSize": "75.6px",
+        "text": "TWICE"
+      }
+    },
+    {
+      "index": 3,
+      "tag": "section",
+      "id": null,
+      "cls": "section center-grid-btn center-grid-btn-home",
+      "height": 167.94,
+      "vhFraction": 0.19,
+      "paddingBlockStart": "94.5px",
+      "paddingBlockEnd": "0px",
+      "marginBlockStart": "0px",
+      "marginBlockEnd": "0px",
+      "firstText": {
+        "layoutLeft": 681,
+        "rectLeft": 680.64,
+        "tag": "span",
+        "fontSize": "17.28px",
+        "text": "More work"
+      },
+      "heading": {
+        "layoutLeft": 681,
+        "rectLeft": 680.64,
+        "tag": "span",
+        "fontSize": "17.28px",
+        "text": "More work"
+      }
+    },
+    {
+      "index": 4,
+      "tag": "div",
+      "id": null,
+      "cls": "footer-wrap footer-footer-wrap theme-dark",
+      "height": 860.05,
+      "vhFraction": 0.96,
+      "paddingBlockStart": "0px",
+      "paddingBlockEnd": "0px",
+      "marginBlockStart": "0px",
+      "marginBlockEnd": "0px",
+      "firstText": {
+        "layoutLeft": 230,
+        "rectLeft": 230.39,
+        "tag": "span",
+        "fontSize": "88.2px",
+        "text": "Let’s work"
+      },
+      "heading": {
+        "layoutLeft": 230,
+        "rectLeft": 230.39,
+        "tag": "span",
+        "fontSize": "88.2px",
+        "text": "Let’s work"
+      }
+    }
+  ],
+  "verticalRhythm": {
+    "sectionCount": 5,
+    "near100vhCount": 1,
+    "near100vhPct": 20,
+    "strictGcdOfSpacing": 1,
+    "baseUnitEstimate80pct": null,
+    "spacingHistogram": [
+      {
+        "value": 18,
+        "count": 32
+      },
+      {
+        "value": 22,
+        "count": 29
+      },
+      {
+        "value": 43,
+        "count": 22
+      },
+      {
+        "value": 12,
+        "count": 16
+      },
+      {
+        "value": 115,
+        "count": 11
+      },
+      {
+        "value": 32,
+        "count": 9
+      },
+      {
+        "value": 17,
+        "count": 8
+      },
+      {
+        "value": 8,
+        "count": 8
+      },
+      {
+        "value": 54,
+        "count": 5
+      },
+      {
+        "value": 189,
+        "count": 4
+      },
+      {
+        "value": 230,
+        "count": 4
+      },
+      {
+        "value": 63,
+        "count": 4
+      },
+      {
+        "value": 58,
+        "count": 4
+      },
+      {
+        "value": 9,
+        "count": 3
+      }
+    ],
+    "spacingSampleSize": 185
+  },
+  "typeScale": {
+    "distinctFontSizeCount": 11,
+    "distinctFontSizeCount_used2plus": 9,
+    "distinctSizes": [
+      {
+        "size": 216,
+        "count": 4
+      },
+      {
+        "size": 88.2,
+        "count": 2
+      },
+      {
+        "size": 75.6,
+        "count": 4
+      },
+      {
+        "size": 60.48,
+        "count": 4
+      },
+      {
+        "size": 54,
+        "count": 8
+      },
+      {
+        "size": 46.8,
+        "count": 1
+      },
+      {
+        "size": 33.12,
+        "count": 26
+      },
+      {
+        "size": 17.28,
+        "count": 21
+      },
+      {
+        "size": 14.69,
+        "count": 10
+      },
+      {
+        "size": 12.1,
+        "count": 1
+      },
+      {
+        "size": 10.37,
+        "count": 6
+      }
+    ],
+    "scaleSizesDesc": [
+      216,
+      88.2,
+      75.6,
+      60.48,
+      54,
+      33.12,
+      17.28,
+      14.69,
+      10.37
+    ],
+    "consecutiveRatios": [
+      2.45,
+      1.17,
+      1.25,
+      1.12,
+      1.63,
+      1.92,
+      1.18,
+      1.42
+    ],
+    "roles": {
+      "h1": {
+        "tag": "h1",
+        "fontSize": 216,
+        "fontWeight": "450",
+        "lineHeightPx": 216,
+        "lineHeightRatio": 1,
+        "letterSpacing": "0px",
+        "letterSpacingEm": 0,
+        "fontFamily": "Dennis Sans",
+        "fontFamilyFull": "\"Dennis Sans\", sans-serif",
+        "textTransform": "none",
+        "color": "rgb(255, 255, 255)",
+        "widthPx": 2085.25,
+        "text": "Dennis Snellenberg"
+      },
+      "biggestText": {
+        "tag": "h1",
+        "fontSize": 216,
+        "fontWeight": "450",
+        "lineHeightPx": 216,
+        "lineHeightRatio": 1,
+        "letterSpacing": "0px",
+        "letterSpacingEm": 0,
+        "fontFamily": "Dennis Sans",
+        "fontFamilyFull": "\"Dennis Sans\", sans-serif",
+        "textTransform": "none",
+        "color": "rgb(255, 255, 255)",
+        "widthPx": 2085.25,
+        "text": "Dennis Snellenberg"
+      },
+      "h2All": [
+        {
+          "tag": "h2",
+          "fontSize": 54,
+          "fontWeight": "450",
+          "lineHeightPx": 57.51,
+          "lineHeightRatio": 1.07,
+          "letterSpacing": "0px",
+          "letterSpacingEm": 0,
+          "fontFamily": "Dennis Sans",
+          "fontFamilyFull": "\"Dennis Sans\", sans-serif",
+          "textTransform": "none",
+          "color": "rgb(255, 255, 255)",
+          "widthPx": 171.28,
+          "text": "Hello"
+        },
+        {
+          "tag": "h2",
+          "fontSize": 54,
+          "fontWeight": "450",
+          "lineHeightPx": 57.51,
+          "lineHeightRatio": 1.07,
+          "letterSpacing": "0px",
+          "letterSpacingEm": 0,
+          "fontFamily": "Dennis Sans",
+          "fontFamilyFull": "\"Dennis Sans\", sans-serif",
+          "textTransform": "none",
+          "color": "rgb(255, 255, 255)",
+          "widthPx": 234.67,
+          "text": "Bonjour"
+        },
+        {
+          "tag": "h2",
+          "fontSize": 54,
+          "fontWeight": "450",
+          "lineHeightPx": 57.51,
+          "lineHeightRatio": 1.07,
+          "letterSpacing": "0px",
+          "letterSpacingEm": 0,
+          "fontFamily": "Dennis Sans",
+          "fontFamilyFull": "\"Dennis Sans\", sans-serif",
+          "textTransform": "none",
+          "color": "rgb(255, 255, 255)",
+          "widthPx": 232.67,
+          "text": "स्वागत हे"
+        },
+        {
+          "tag": "h2",
+          "fontSize": 54,
+          "fontWeight": "450",
+          "lineHeightPx": 57.51,
+          "lineHeightRatio": 1.07,
+          "letterSpacing": "0px",
+          "letterSpacingEm": 0,
+          "fontFamily": "Dennis Sans",
+          "fontFamilyFull": "\"Dennis Sans\", sans-serif",
+          "textTransform": "none",
+          "color": "rgb(255, 255, 255)",
+          "widthPx": 160.91,
+          "text": "Ciao"
+        },
+        {
+          "tag": "h2",
+          "fontSize": 54,
+          "fontWeight": "450",
+          "lineHeightPx": 57.51,
+          "lineHeightRatio": 1.07,
+          "letterSpacing": "0px",
+          "letterSpacingEm": 0,
+          "fontFamily": "Dennis Sans",
+          "fontFamilyFull": "\"Dennis Sans\", sans-serif",
+          "textTransform": "none",
+          "color": "rgb(255, 255, 255)",
+          "widthPx": 134.23,
+          "text": "Olá"
+        },
+        {
+          "tag": "h2",
+          "fontSize": 46.8,
+          "fontWeight": "450",
+          "lineHeightPx": 49.84,
+          "lineHeightRatio": 1.07,
+          "letterSpacing": "0px",
+          "letterSpacingEm": 0,
+          "fontFamily": "Dennis Sans",
+          "fontFamilyFull": "\"Dennis Sans\", sans-serif",
+          "textTransform": "none",
+          "color": "rgb(255, 255, 255)",
+          "widthPx": 140.41,
+          "text": "おい"
+        },
+        {
+          "tag": "h2",
+          "fontSize": 54,
+          "fontWeight": "450",
+          "lineHeightPx": 57.51,
+          "lineHeightRatio": 1.07,
+          "letterSpacing": "0px",
+          "letterSpacingEm": 0,
+          "fontFamily": "Dennis Sans",
+          "fontFamilyFull": "\"Dennis Sans\", sans-serif",
+          "textTransform": "none",
+          "color": "rgb(255, 255, 255)",
+          "widthPx": 167.28,
+          "text": "Hallå"
+        },
+        {
+          "tag": "h2",
+          "fontSize": 54,
+          "fontWeight": "450",
+          "lineHeightPx": 57.51,
+          "lineHeightRatio": 1.07,
+          "letterSpacing": "0px",
+          "letterSpacingEm": 0,
+          "fontFamily": "Dennis Sans",
+          "fontFamilyFull": "\"Dennis Sans\", sans-serif",
+          "textTransform": "none",
+          "color": "rgb(255, 255, 255)",
+          "widthPx": 280.84,
+          "text": "Guten tag"
+        },
+        {
+          "tag": "h2",
+          "fontSize": 54,
+          "fontWeight": "450",
+          "lineHeightPx": 57.51,
+          "lineHeightRatio": 1.07,
+          "letterSpacing": "0px",
+          "letterSpacingEm": 0,
+          "fontFamily": "Dennis Sans",
+          "fontFamilyFull": "\"Dennis Sans\", sans-serif",
+          "textTransform": "none",
+          "color": "rgb(255, 255, 255)",
+          "widthPx": 169.5,
+          "text": "Hallo"
+        }
+      ],
+      "h3": null,
+      "body": {
+        "tag": "p",
+        "fontSize": 17.28,
+        "fontWeight": "450",
+        "lineHeightPx": 28.68,
+        "lineHeightRatio": 1.66,
+        "letterSpacing": "0px",
+        "letterSpacingEm": 0,
+        "fontFamily": "Dennis Sans",
+        "fontFamilyFull": "\"Dennis Sans\", sans-serif",
+        "textTransform": "none",
+        "color": "rgb(28, 29, 32)",
+        "widthPx": 241.91,
+        "text": "The combination of my passion for design, code & interaction"
+      },
+      "small": {
+        "tag": "h5",
+        "fontSize": 10.37,
+        "fontWeight": "450",
+        "lineHeightPx": 11.04,
+        "lineHeightRatio": 1.06,
+        "letterSpacing": "0.5184px",
+        "letterSpacingEm": 0.05,
+        "fontFamily": "Dennis Sans",
+        "fontFamilyFull": "\"Dennis Sans\", sans-serif",
+        "textTransform": "uppercase",
+        "color": "rgb(255, 255, 255)",
+        "widthPx": 64.63,
+        "text": "Navigation"
+      },
+      "mono": null
+    },
+    "readingMeasure": {
+      "columnWidthPx": 241.91,
+      "widthOf100Chars": 764.29,
+      "measureCh_spec": 31.65,
+      "measureCh_zeroWidth": 22.58,
+      "maxWidthDeclared": "241.92px",
+      "canvasFont": "450 17.28px \"Dennis Sans\", sans-serif"
+    },
+    "readingMeasureAlternates": [
+      {
+        "tag": "p",
+        "fontSize": 17.28,
+        "fontWeight": "450",
+        "lineHeightPx": 28.68,
+        "lineHeightRatio": 1.66,
+        "letterSpacing": "0px",
+        "letterSpacingEm": 0,
+        "fontFamily": "Dennis Sans",
+        "fontFamilyFull": "\"Dennis Sans\", sans-serif",
+        "textTransform": "none",
+        "color": "rgb(28, 29, 32)",
+        "widthPx": 241.91,
+        "text": "The combination of my passion for design, code & interaction"
+      }
+    ],
+    "distinctFontFamilyCount": 1,
+    "fontFamilies": [
+      {
+        "family": "Dennis Sans",
+        "count": 87
+      }
+    ]
+  },
+  "color": {
+    "textColors": [
+      {
+        "value": "rgb(255,255,255)",
+        "count": 51
+      },
+      {
+        "value": "rgb(28,29,32)",
+        "count": 36
+      }
+    ],
+    "backgroundColors": [
+      {
+        "value": "rgb(255,255,255)",
+        "count": 11
+      },
+      {
+        "value": "rgb(69,92,233)",
+        "count": 6
+      },
+      {
+        "value": "rgb(28,29,32)",
+        "count": 5
+      },
+      {
+        "value": "rgba(28,29,32,0.176)",
+        "count": 5
+      },
+      {
+        "value": "rgb(20,21,23)",
+        "count": 2
+      },
+      {
+        "value": "rgba(255,255,255,0.2)",
+        "count": 2
+      },
+      {
+        "value": "rgb(153,157,158)",
+        "count": 2
+      },
+      {
+        "value": "rgb(167,79,146)",
+        "count": 1
+      },
+      {
+        "value": "rgb(51,75,211)",
+        "count": 1
+      }
+    ],
+    "distinctTextColorCount": 2,
+    "distinctBgColorCount": 9
+  },
+  "persistent": {
+    "fixedOrSticky": [
+      {
+        "tag": "div",
+        "cls": "loading-container",
+        "position": "fixed",
+        "rect": {
+          "top": 0,
+          "left": 0,
+          "width": 1440,
+          "height": 900
+        },
+        "zIndex": "800",
+        "text": "Hello Bonjour स्वागत हे Ciao Olá おい Hallå Guten tag Hallo Ho",
+        "opacity": "1"
+      },
+      {
+        "tag": "main",
+        "cls": "main no-touch scrolled",
+        "position": "fixed",
+        "rect": {
+          "top": 0,
+          "left": 0,
+          "width": 1440,
+          "height": 900
+        },
+        "zIndex": "auto",
+        "text": "View Menu Navigation Home Work About Contact Socials Awwward",
+        "opacity": "1"
+      },
+      {
+        "tag": "div",
+        "cls": "btn btn-hamburger",
+        "position": "fixed",
+        "rect": {
+          "top": 28.8,
+          "left": 1332.01,
+          "width": 79.19,
+          "height": 79.19
+        },
+        "zIndex": "105",
+        "text": "Menu",
+        "opacity": "1"
+      },
+      {
+        "tag": "div",
+        "cls": "fixed-nav theme-dark",
+        "position": "fixed",
+        "rect": {
+          "top": 0,
+          "left": 1526.39,
+          "width": 540.39,
+          "height": 900.01
+        },
+        "zIndex": "100",
+        "text": "Navigation Home Work About Contact Socials Awwwards Instagra",
+        "opacity": "1"
+      },
+      {
+        "tag": "div",
+        "cls": "main-wrap",
+        "position": "fixed",
+        "rect": {
+          "top": 0,
+          "left": 0,
+          "width": 1440,
+          "height": 4454.44
+        },
+        "zIndex": "auto",
+        "text": "Located in the Netherlands Combined Shape ©Code by Dennis Sn",
+        "opacity": "1"
+      }
+    ]
+  },
+  "nav": {
+    "tag": "header",
+    "cls": "section home-header theme-dark",
+    "height": 1035,
+    "top": 0,
+    "position": "relative",
+    "backgroundColor": "rgb(153, 157, 158)",
+    "backdropFilter": "none",
+    "borderBottom": "0px rgb(28, 29, 32)",
+    "paddingBlock": "189px / 189px",
+    "transform": "matrix(1, 0, 0, 1, 0, 0)",
+    "opacity": "0",
+    "mixBlendMode": "normal",
+    "color": "rgb(28, 29, 32)"
+  },
+  "navState": {
+    "at0": {
+      "nav": {
+        "height": 1035,
+        "top": 0,
+        "position": "relative",
+        "backgroundColor": "rgb(153, 157, 158)",
+        "backdropFilter": "none",
+        "borderBottom": "0px rgb(28, 29, 32)",
+        "paddingBlock": "189px / 189px",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)",
+        "opacity": "0",
+        "color": "rgb(28, 29, 32)"
+      },
+      "fixedOrSticky": [
+        {
+          "tag": "div",
+          "cls": "loading-container",
+          "position": "fixed",
+          "rect": {
+            "top": 0,
+            "left": 0,
+            "width": 1440,
+            "height": 900
+          },
+          "text": "Hello Bonjour स्वागत हे Ciao Olá おい Hallå Guten tag Hallo Ho",
+          "opacity": "1"
+        },
+        {
+          "tag": "main",
+          "cls": "main no-touch scrolled",
+          "position": "fixed",
+          "rect": {
+            "top": 0,
+            "left": 0,
+            "width": 1440,
+            "height": 900
+          },
+          "text": "View Menu Navigation Home Work About Contact Socials Awwward",
+          "opacity": "1"
+        },
+        {
+          "tag": "div",
+          "cls": "btn btn-hamburger",
+          "position": "fixed",
+          "rect": {
+            "top": 28.8,
+            "left": 1332.01,
+            "width": 79.19,
+            "height": 79.19
+          },
+          "text": "Menu",
+          "opacity": "1"
+        },
+        {
+          "tag": "div",
+          "cls": "fixed-nav theme-dark",
+          "position": "fixed",
+          "rect": {
+            "top": 0,
+            "left": 1526.39,
+            "width": 540.39,
+            "height": 900.01
+          },
+          "text": "Navigation Home Work About Contact Socials Awwwards Instagra",
+          "opacity": "1"
+        },
+        {
+          "tag": "div",
+          "cls": "main-wrap",
+          "position": "fixed",
+          "rect": {
+            "top": 0,
+            "left": 0,
+            "width": 1440,
+            "height": 4454.44
+          },
+          "text": "Located in the Netherlands Combined Shape ©Code by Dennis Sn",
+          "opacity": "1"
+        }
+      ]
+    },
+    "at2000": {
+      "nav": {
+        "height": 1035,
+        "top": 0,
+        "position": "relative",
+        "backgroundColor": "rgb(153, 157, 158)",
+        "backdropFilter": "none",
+        "borderBottom": "0px rgb(28, 29, 32)",
+        "paddingBlock": "189px / 189px",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)",
+        "opacity": "0",
+        "color": "rgb(28, 29, 32)"
+      },
+      "fixedOrSticky": [
+        {
+          "tag": "div",
+          "cls": "loading-container",
+          "position": "fixed",
+          "rect": {
+            "top": 0,
+            "left": 0,
+            "width": 1440,
+            "height": 900
+          },
+          "text": "Hello Bonjour स्वागत हे Ciao Olá おい Hallå Guten tag Hallo Ho",
+          "opacity": "1"
+        },
+        {
+          "tag": "main",
+          "cls": "main no-touch scrolled",
+          "position": "fixed",
+          "rect": {
+            "top": 0,
+            "left": 0,
+            "width": 1440,
+            "height": 900
+          },
+          "text": "View Menu Navigation Home Work About Contact Socials Awwward",
+          "opacity": "1"
+        },
+        {
+          "tag": "div",
+          "cls": "btn btn-hamburger",
+          "position": "fixed",
+          "rect": {
+            "top": 28.8,
+            "left": 1332.01,
+            "width": 79.19,
+            "height": 79.19
+          },
+          "text": "Menu",
+          "opacity": "1"
+        },
+        {
+          "tag": "div",
+          "cls": "fixed-nav theme-dark",
+          "position": "fixed",
+          "rect": {
+            "top": 0,
+            "left": 1526.39,
+            "width": 540.39,
+            "height": 900.01
+          },
+          "text": "Navigation Home Work About Contact Socials Awwwards Instagra",
+          "opacity": "1"
+        },
+        {
+          "tag": "div",
+          "cls": "main-wrap",
+          "position": "fixed",
+          "rect": {
+            "top": 0,
+            "left": 0,
+            "width": 1440,
+            "height": 4454.44
+          },
+          "text": "Located in the Netherlands Combined Shape ©Code by Dennis Sn",
+          "opacity": "1"
+        }
+      ]
+    },
+    "changed": false,
+    "diff": {}
+  },
+  "shots": [
+    "dennissnellenberg-1440-full.jpg",
+    "dennissnellenberg-1440-scroll000.jpg",
+    "dennissnellenberg-1440-scroll010.jpg",
+    "dennissnellenberg-1440-scroll020.jpg",
+    "dennissnellenberg-1440-scroll030.jpg",
+    "dennissnellenberg-1440-scroll040.jpg",
+    "dennissnellenberg-1440-scroll050.jpg",
+    "dennissnellenberg-1440-scroll060.jpg",
+    "dennissnellenberg-1440-scroll070.jpg",
+    "dennissnellenberg-1440-scroll080.jpg",
+    "dennissnellenberg-1440-scroll090.jpg",
+    "dennissnellenberg-1440-scroll100.jpg"
+  ],
+  "fullPageShotRepresentative": false,
+  "pageErrors": []
+}

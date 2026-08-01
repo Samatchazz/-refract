@@ -1,0 +1,30 @@
+[
+  {
+    "claim": "Johnson (2021) conducted extensive interview-based research (reported elsewhere as 100 interviews conducted 2016-2017 across UK, US, Germany, Poland, per the closely related Woodcock & Johnson 2019 paper by the same author pair, listed in this paper's own reference list) on the 'off-camera' labour of professional and semi-professional Twitch/game streamers -- aesthetics work, networking, community-building, and maintenance activity -- but full text was not accessible to confirm whether quitting motivations are discussed.",
+    "stance": "neutral",
+    "stance_target": "existence of a rare qualitative/longitudinal instrument that might discuss creator quitting motivations",
+    "evidence_type": "theoretical",
+    "scope_conditions": "professional/semi-professional game live streamers, methodology and full findings not independently verified due to access limits",
+    "quoted_support": "\"Drawing on extensive interview data with professional and semi-professional live streamers, this paper explores off-stream labour, and the demands it makes on game broadcasters.\"",
+    "numbers": [],
+    "entities": ["Mark R. Johnson", "Games and Culture", "Twitch"],
+    "time_period": "2021 publication",
+    "region": "not specified in abstract",
+    "confidence": "low",
+    "source_note_id": "pdf-behind-the-streams-the-off-camera-labour-of-game-live-streaming"
+  },
+  {
+    "claim": "Full text of Johnson (2021) was not obtainable through any of three independent access attempts (ResearchGate, academia.edu preview, DOI/ACM-style landing pages), so no claims about its treatment of quitting or income-vs-motivation dynamics can be extracted with confidence.",
+    "stance": "neutral",
+    "stance_target": "access-limitation caveat for this source",
+    "evidence_type": "empirical",
+    "scope_conditions": "fetcher access attempt, 2026",
+    "quoted_support": "\"Loading Preview ... Sorry, preview is currently unavailable. You can download the paper by clicking the button above.\"",
+    "numbers": [],
+    "entities": ["academia.edu", "ResearchGate"],
+    "time_period": "N/A",
+    "region": "N/A",
+    "confidence": "high",
+    "source_note_id": "pdf-behind-the-streams-the-off-camera-labour-of-game-live-streaming"
+  }
+]

@@ -1,0 +1,58 @@
+[
+  {
+    "claim": "KPMG estimates aggregate annual content spend by 12 leading US-based media/platform companies reached $210 billion in 2024, up from $142 billion in 2020, a 10% CAGR -- but this is a total industry investment figure with no creator-count denominator, so it cannot be converted into a per-creator average.",
+    "stance": "neutral",
+    "stance_target": "Aggregate industry spend/payout figures without a creator-count denominator cannot be used to estimate average or median creator income",
+    "evidence_type": "empirical",
+    "scope_conditions": "12 named companies (Comcast, Netflix, Disney, Amazon, YouTube, Paramount, Meta, Warner Bros Discovery, Spotify, Fox, Apple, Sony), primarily US-based; fieldwork April-August 2025; KPMG's own analysis of public filings and third-party data, not a creator survey",
+    "quoted_support": "Annual content spend by top players now exceeds $200 billion, growing at a 10% compound annual growth rate (CAGR) since 2020... reaching an estimated $210B in 2024.",
+    "numbers": ["$210B 2024", "$202B 2023", "$196B 2022", "$173B 2021", "$142B 2020", "10% CAGR 2020-2024", "4% CAGR 2022-2024"],
+    "entities": ["KPMG", "Comcast", "Netflix", "Disney", "Amazon", "YouTube"],
+    "time_period": "2020-2024",
+    "region": "US-centric; 12 companies are 'primarily U.S.-based'; no Southeast Asia data",
+    "confidence": "high",
+    "source_note_id": "the-future-of"
+  },
+  {
+    "claim": "KPMG's methodology attributes $32 billion in 2024 content spend to YouTube, but this figure bundles five distinct cost categories -- ad spend paid to creators, YouTube affiliate spend, YouTube Premium licensing costs, Channel Membership payouts, and NFL Sunday Ticket rights -- meaning it is not a pure creator-payout figure and includes licensing/sports-rights costs unrelated to individual creator income.",
+    "stance": "refutes",
+    "stance_target": "The commonly cited $32B YouTube 'creator payout' figure should not be treated as money paid solely to individual creators",
+    "evidence_type": "empirical",
+    "scope_conditions": "YouTube, 2024, US-based analysis by KPMG using public filings and third-party reports; no recipient count given",
+    "quoted_support": "YouTube 32 [billion]... Identified 5 areas of YouTube content spend using a combination of public filings and third-party reports: 1) Ad spend paid to content creators 2) YouTube affiliate spend 3) YouTube Premium licensing costs 4) Channel Membership payout to creators 5) NFL Sunday Ticket rights",
+    "numbers": ["$32bn YouTube 2024 content spend (bundled figure)"],
+    "entities": ["YouTube", "KPMG", "NFL"],
+    "time_period": "2024",
+    "region": "US",
+    "confidence": "high",
+    "source_note_id": "the-future-of"
+  },
+  {
+    "claim": "KPMG describes the platform monetization model (used by YouTube, TikTok, etc.) as having low barriers to entry but resulting in high competition among creators for revenue-sharing based on content performance, in contrast to the traditional studio model's high upfront investment but limited/curated access for new entrants.",
+    "stance": "neutral",
+    "stance_target": "Structural description of why platform-based creator monetization is intensely competitive despite easy entry",
+    "evidence_type": "theoretical",
+    "scope_conditions": "General industry analysis, not creator-level measurement",
+    "quoted_support": "Low barriers of entry into the system, leading to the system being highly competitive... Revenue sharing from platform to content creators based on content performance",
+    "numbers": [],
+    "entities": ["YouTube", "TikTok", "Meta", "Spotify"],
+    "time_period": "2025 report",
+    "region": "Global platform description, US-centric analysis",
+    "confidence": "medium",
+    "source_note_id": "the-future-of"
+  },
+  {
+    "claim": "Talent fees make up 20-30% of total production costs for large-budget productions, per KPMG's analysis, a cost structure cited as a reason AI is unlikely to rapidly displace overall content spend.",
+    "stance": "neutral",
+    "stance_target": "Cost structure of high-budget content production (context for the platform/studio comparison, not creator-economy income directly)",
+    "evidence_type": "empirical",
+    "scope_conditions": "Large-budget film/TV productions; KPMG analysis, 2025",
+    "quoted_support": "For large-budget productions, talent fees still make up 20-30% of total production costs -- and an AI Tom Cruise is not the same as the real Tom Cruise.",
+    "numbers": ["20-30% talent fees of production cost"],
+    "entities": ["KPMG"],
+    "time_period": "2025",
+    "region": "US/Western productions",
+    "confidence": "medium",
+    "source_note_id": "the-future-of"
+  }
+]

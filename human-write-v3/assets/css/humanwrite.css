@@ -1,0 +1,80 @@
+/* ============================================================
+   humanwrite.css — Human-Write identity layer ON TOP of Idiology.
+   Only adds what the poured-in content needs; Idiology components
+   (header, hero grid, scroll-stack, testimonials, footer) are untouched.
+   ============================================================ */
+
+/* voices are now split by WEIGHT of one serious family (W1), not by script font */
+.font-ai   { font-family: var(--f-system); }               /* Inter — AI digits only */
+.font-body { font-family: var(--f-display); font-weight: var(--wt-body); }
+.font-hand { font-family: var(--f-accent); font-weight: var(--wt-company); } /* the heavy "voice" */
+
+/* header logo — heavy Anuphan; the "hand" is the stroke underline (added by JS) */
+.hw-logo { font-size: 1.5rem; font-weight: 700; letter-spacing: .2px; color: currentColor; }
+
+/* hero shuffle accent word — stands out by weight + size, not by handwriting */
+.hero__display em.accent[data-shuffle] { font-weight: 700; font-size: 1.12em; font-style: normal; }
+
+/* hero: ขีด rides Anuphan's weight axis; the dash slot holds the hand stroke */
+.hero-kheed { display: inline-block; font-variation-settings: 'wght' 700; will-change: font-variation-settings; }
+.hero__intro .hero-dash {
+  position: relative; display: inline-block; width: .85em; height: .5em;
+  vertical-align: middle; overflow: visible;
+}
+.hero__intro .hero-dash .hw-stroke { position: absolute; left: 0; top: 52%; transform: translateY(-50%); width: 100%; height: 100%; }
+
+/* splash eraser sprite — travels L→R over the logo as it wipes Ai-Write */
+.hw-splash__eraser { position: absolute; left: 50%; top: 50%; width: clamp(52px, 9vw, 90px); color: var(--c-text-muted-inv); pointer-events: none; }
+.hw-splash__eraser svg { width: 100%; height: auto; display: block; }
+
+/* ---------- SPLASH (lives in the .loader overlay, brief §1) ---------- */
+.loader.hw-splash {
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: clamp(4vh, 8vh, 10vh); padding: 8vh 5vw; text-align: center; color: var(--c-text-light);
+}
+.hw-splash__number {
+  position: relative; display: inline-block;
+  font-family: var(--f-system); font-weight: 600;
+  font-size: var(--fs-hero-xl); line-height: .95;
+  font-variant-numeric: tabular-nums; letter-spacing: -.02em; color: var(--c-text-light);
+}
+.hw-splash__cross { position: absolute; left: -3%; top: 40%; width: 106%; height: 42%; pointer-events: none; }
+.hw-splash__pct {
+  position: absolute; left: 50%; top: 46%; transform: translate(-50%,-50%) rotate(-4deg);
+  font-family: var(--f-accent); font-size: .32em; color: var(--c-text-light); opacity: 0; white-space: nowrap;
+}
+.hw-splash__cap { margin-top: .6em; min-height: 1.4em; font-size: clamp(.95rem, 2.4vw, 1.5rem); }
+.hw-splash__cap [data-splash-capa] { color: var(--c-text-muted-inv); opacity: 0; }
+.hw-splash__cap [data-splash-capb] { color: var(--c-text-light); opacity: 0; margin-inline-start: .4em; }
+.hw-splash__logo { position: relative; display: grid; place-items: center; min-height: clamp(3rem, 9vw, 6rem); }
+.hw-splash__ai, .hw-splash__human { grid-area: 1/1; font-size: clamp(2rem, 7vw, 4.6rem); }
+.hw-splash__ai { font-family: var(--f-system); font-weight: 600; color: var(--c-text-muted-inv); }
+.hw-splash__human { font-family: var(--f-accent); font-weight: 700; color: var(--c-text-light); opacity: 0; }
+.hw-splash__human .lh-ch { display: inline-block; opacity: 0; transform-origin: 50% 80%; white-space: pre; }
+/* skip button injected by JS */
+.hw-splash__skip {
+  position: fixed; right: 16px; bottom: 14px; z-index: 9991;
+  font-family: var(--f-system); font-size: .78rem; letter-spacing: .12em;
+  color: var(--c-text-muted-inv); background: transparent; border: 1px solid var(--c-border-dark);
+  border-radius: 999px; padding: 5px 14px; opacity: .8; cursor: pointer;
+}
+.hw-splash__skip:hover { color: var(--c-accent); border-color: var(--c-accent); opacity: 1; }
+
+/* ---------- shared hand stroke ---------- */
+.hw-stroke { overflow: visible; }
+.has-underline { position: relative; }
+.clause-stroke { position: absolute; left: -1%; bottom: -0.32em; width: 102%; height: .5em; pointer-events: none; }
+
+/* ---------- hero shuffle accent word (Mali) ---------- */
+.hero__display em.accent[data-shuffle] {
+  display: inline-block; will-change: opacity; white-space: nowrap;
+}
+
+/* (retro era-box styling lives in assets/css/eras.css) */
+
+/* reduced motion: stroke drawn, splash content visible */
+@media (prefers-reduced-motion: reduce) {
+  .hw-splash__pct, .hw-splash__human, .hw-splash__human .lh-ch,
+  .hw-splash__cap [data-splash-capa], .hw-splash__cap [data-splash-capb] { opacity: 1; }
+  .clause-stroke path { stroke-dashoffset: 0 !important; }
+}

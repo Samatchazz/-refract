@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Human-Write — เราขีด ให้คุณเขียนตัวตน</title>
+
+  <!-- Decide splash visibility BEFORE first paint (brief §1: once per session + reduced-motion bypass) -->
+  <script>
+    (function () {
+      /* .js gates Idiology's masked-reveal CSS before first paint (base.css) */
+      document.documentElement.classList.add('js');
+      var rm = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+        || new URLSearchParams(location.search).has('rm'); /* ?rm=1 = debug override for testing */
+      var seen = false;
+      try { seen = !!sessionStorage.getItem('hw-splash-seen'); } catch (e) {}
+      if (rm || seen) document.documentElement.classList.add('no-splash');
+      if (rm) document.documentElement.classList.add('hw-reduced');
+    })();
+  </script>
+
+  <!-- Fonts (brief §0): Anuphan variable (company voice), Mali (human hand), Inter (AI voice). NOT IBM Plex Sans Thai. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anuphan:wght@200..700&family=Mali:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/splash.css">
+  <link rel="stylesheet" href="css/hero.css">
+  <link rel="stylesheet" href="css/eras.css">
+</head>
+<body class="splash-lock">
+
+  <!-- ============================================================
+       §1 SPLASH — fullscreen, 3.0s, two layers in parallel
+       ============================================================ -->
+  <div id="splash" aria-hidden="true">
+    <div class="splash-top">
+      <div class="splash-number font-ai">
+        <span id="splash-count">0</span>
+        <span class="splash-cross"><!-- sacred stroke injected by js/splash.js --></span>
+        <span class="splash-percent font-hand">0.1%</span>
+      </div>
+      <p class="splash-caption">
+        <span class="cap-a">อินฟลูเอนเซอร์ในไทย</span>
+        <span class="cap-b font-hand">ที่ถูกเลือก</span>
+      </p>
+    </div>
+
+    <div class="splash-logo">
+      <span class="logo-ai font-ai" aria-hidden="true">
+        <span class="ai-ghost">Ai-Write</span>
+        <span class="ai-crisp">Ai-Write</span>
+      </span>
+      <span class="logo-human font-hand">Human-Write</span>
+      <!-- TODO: replace asset — eraser sketch line-art placeholder -->
+      <svg class="splash-eraser" viewBox="0 0 90 46" aria-hidden="true">
+        <rect x="5" y="8" width="80" height="30" rx="9" fill="var(--paper)" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
+        <path d="M30 9 L26 37 M34 9 L30 37" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+        <path d="M42 16 C50 14, 60 18, 74 15 M42 24 C52 22, 62 26, 74 23 M44 31 C52 29, 60 32, 70 30" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" fill="none" opacity=".55"/>
+      </svg>
+    </div>
+
+    <button id="splash-skip" type="button">ข้าม</button>
+    <div id="splash-black"></div>
+  </div>
+
+  <!-- nav — Human-Write logo takes its permanent place here (brief §2: new element, no cross-page morph) -->
+  <header class="nav">
+    <a class="nav-logo font-hand" href="#top">Human-Write</a>
+  </header>
+
+  <main id="top">
+
+    <!-- ============================================================
+         §2 HERO
+         ============================================================ -->
+    <section class="hero" id="hero">
+      <h1 class="hero-line" aria-label="เราขีด — ให้คุณเขียนตัวตนแตกต่าง">
+        <span class="hero-left" data-text-reveal data-hero aria-hidden="true"><!--
+          "เราขีด" is pre-split at a known word boundary (เรา|ขีด) so the
+          font-weight twitch can target ขีด deterministically. No combining
+          marks cross this boundary, so it is Thai-safe. Idiology's masked
+          line-reveal (js/idiology/textReveal.js) adds .w and lifts the line.
+       --><span class="hw-word">เรา</span><span class="hw-word" id="word-kheed">ขีด</span></span>
+        <span class="hero-dash" aria-hidden="true"><!-- sacred stroke injected by js/hero.js --></span>
+        <span class="hero-right" aria-hidden="true"><span id="hero-right-text" data-text-reveal data-hero>ให้คุณเขียนตัวตน</span><span class="hero-shuffle-box"><span class="hero-shuffle font-hand">แตกต่าง</span></span></span>
+      </h1>
+      <a class="hero-cta" href="#free-seat">จองที่นั่งฟรีของสัปดาห์นี้</a>
+    </section>
+
+    <!-- ============================================================
+         §3 ERA SECTION — "We've been here every era"
+         One centered retro box, theme swap per era, 5-tick strip.
+         No narrator captions: the in-box copy carries the story.
+         ============================================================ -->
+    <section class="eras" id="eras">
+      <div class="era-stage">
+        <div class="era-track">
+
+          <!-- Box 1 — the book era -->
+          <div class="era-slide">
+            <article class="era-box era-book">
+              <!-- QUESTION: era-label copy is not specified in the brief — Thai labels below are provisional. -->
+              <span class="era-label">ยุคหนังสือ</span>
+              <div class="book-page">
+                <div class="book-cols">
+                  <p class="book-copy"><span class="ph"><span class="u-clause">เราเชื่อว่าการเขียน</span>บ่งบอกตัวตน —</span> <span class="ph">เราเริ่มจากหนังสือเล่มหนา</span> <span class="ph">ตีพิมพ์เดือนละหลายแสนฉบับ</span> <span class="ph">ที่ทุกประโยคถูกตรวจสิบรอบก่อนถึงมือคนอ่าน</span></p>
+                </div>
+                <div class="book-pageno">127</div>
+                <!-- TODO: replace asset — "ผ่านการตรวจ" approval stamp placeholder -->
+                <svg class="stamp" viewBox="0 0 170 92" aria-hidden="true">
+                  <rect x="5" y="5" width="160" height="82" rx="12" fill="none" stroke="currentColor" stroke-width="4"/>
+                  <rect x="13" y="13" width="144" height="66" rx="8" fill="none" stroke="currentColor" stroke-width="1.5" opacity=".7"/>
+                  <text x="85" y="55" text-anchor="middle" font-size="24" fill="currentColor" font-weight="600">ผ่านการตรวจ</text>
+                </svg>
+              </div>
+            </article>
+          </div>
+
+          <!-- Box 2 — the 90s web era -->
+          <div class="era-slide">
+            <article class="era-box era-web90">
+              <span class="era-label">ยุคเว็บ 90s</span>
+              <div class="web-titlebar">
+                <span class="web-title">Human-Write - Netscape</span>
+                <span class="web-btns"><i></i><i></i><i></i></span>
+              </div>
+              <!-- TODO: placeholder chrome copy (URL) — confirm with client -->
+              <div class="web-addressbar"><span class="web-addr-label">Location:</span><span class="web-url">http://www.thaicities.co.th/soho/human-write/index.html</span></div>
+              <div class="web-body">
+                <!-- period-correct real <marquee>, actually scrolling (brief §3 box 2) -->
+                <!-- TODO: placeholder chrome copy (marquee) — confirm with client -->
+                <marquee class="web-marquee" scrollamount="4">~*~ Welcome to Human-Write Homepage ~*~ ยินดีต้อนรับ ~*~ Best viewed 800x600 ~*~</marquee>
+                <p class="web-copy"><span class="u-clause">เรายังเชื่อว่าการเขียน</span>บ่งบอกตัวตน — ในยุครุ่งเรืองที่เว็บไซต์นับแสนผุดขึ้น และเหล่านักสัญจรเว็บเข้าออกกันขวักไขว่ มีเพียงหลักสิบที่ยืนหยัดถึงวันนี้</p>
+                <hr class="web-rainbow">
+                <!-- TODO: placeholder chrome copy (link names) — confirm with client -->
+                <p class="web-links">
+                  <a class="web-link" data-visit href="#eras" onclick="return false">สมุดเยี่ยม</a>
+                  <a class="web-link" href="#eras" onclick="return false">ลิงก์เพื่อนบ้าน</a>
+                  <a class="web-link" href="#eras" onclick="return false">อีเมลถึงเรา</a>
+                </p>
+                <div class="web-counter-row">You are visitor No. <span class="hit-counter font-ai">000000</span></div>
+                <span class="web-cursor" aria-hidden="true">👆</span>
+              </div>
+            </article>
+          </div>
+
+          <!-- Box 3 — the webboard era -->
+          <div class="era-slide">
+            <article class="era-box era-board">
+              <span class="era-label">ยุคเว็บบอร์ด</span>
+              <div class="board-table">
+                <div class="board-header">
+                  <span class="board-title">กระทู้: การเขียนบ่งบอกตัวตน <span class="board-new">มาใหม่!</span></span>
+                  <span class="board-counts">อ่าน <b class="views-n">152,847</b> · ตอบ <b>486</b></span>
+                </div>
+                <div class="board-post">
+                  <div class="board-side">
+                    <!-- TODO: replace asset — pixel avatar placeholder -->
+                    <svg class="board-avatar" viewBox="0 0 10 10" aria-hidden="true" shape-rendering="crispEdges">
+                      <rect x="2" y="1" width="6" height="4" fill="#5a4632"/>
+                      <rect x="3" y="3" width="4" height="3" fill="#e8b88a"/>
+                      <rect x="3" y="4" width="1" height="1" fill="#222"/>
+                      <rect x="6" y="4" width="1" height="1" fill="#222"/>
+                      <rect x="2" y="6" width="6" height="3" fill="#3b6ea5"/>
+                    </svg>
+                    <span class="board-member">สมาชิกหมายเลข 000117</span>
+                  </div>
+                  <div class="board-main">
+                    <p class="board-copy"><span class="u-clause">เรายึดมั่นว่าการเขียน</span>บ่งบอกตัวตน — ในยุคเว็บบอร์ด ที่พักพิงของผู้คนมากหน้าหลายตา ประโยคธรรมดาของคนธรรมดา ถูกอ่านนับแสนนับล้าน</p>
+                    <div class="board-sig">~ Human-Write ~</div>
+                  </div>
+                </div>
+                <div class="board-footer">
+                  <button class="board-reply" type="button">ตอบกลับ</button>
+                  <span class="board-pages">หน้า <a>1</a> <a>2</a> <a>3</a></span>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- Box 4 — the chat era (MSN) -->
+          <div class="era-slide">
+            <article class="era-box era-msn">
+              <span class="era-label">ยุคแชต</span>
+              <div class="msn-titlebar"><span class="msn-title">Human-Write — Conversation</span><span class="msn-btns"><i></i><i></i><i></i></span></div>
+              <div class="msn-body">
+                <div class="msn-chatcol">
+                  <div class="msn-contact"><span class="dot on"></span> Human-Write <em>(ออนไลน์)</em></div>
+                  <div class="msn-pane">
+                    <!-- copy split into 4 bubbles along its natural phrase breaks (brief §3 box 4) -->
+                    <p class="msn-bubble"><span class="u-clause">เราไม่เลิกเชื่อว่าการเขียน</span>บ่งบอกตัวตน —</p>
+                    <p class="msn-bubble">แม้ในยุคที่แพลตฟอร์มเกิดเช้าตายเย็น</p>
+                    <p class="msn-bubble">เราเฝ้าดูที่พักพิงหายไปทีละแห่ง</p>
+                    <p class="msn-bubble">แต่ตัวตนย้ายบ้านได้เสมอ</p>
+                    <span class="msn-typing"><i></i><i></i><i></i></span>
+                  </div>
+                  <div class="msn-inputrow"><span class="msn-input"></span><button type="button" class="msn-send">Send</button></div>
+                </div>
+                <div class="msn-friends">
+                  <!-- TODO: placeholder contact names — confirm with client -->
+                  <div class="msn-friend is-us"><span class="dot on"></span>Human-Write</div>
+                  <div class="msn-friend"><span class="dot on"></span>mint~*</div>
+                  <div class="msn-friend"><span class="dot on"></span>beam_zaa</div>
+                  <div class="msn-friend"><span class="dot on"></span>nong.film</div>
+                  <div class="msn-friend"><span class="dot on"></span>jaded-writer</div>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- Box 5 — SNS (today) -->
+          <div class="era-slide">
+            <article class="era-box era-sns">
+              <span class="era-label">ยุค SNS</span>
+              <div class="sns-head">
+                <span class="sns-avatar font-hand">H</span>
+                <span class="sns-name">Human-Write <em class="sns-time">เมื่อสักครู่</em></span>
+              </div>
+              <p class="sns-caption"><span class="u-clause">เราเชื่อว่าการเขียนคือตัวตน</span> เพราะเรายังอยู่ตรงนี้</p>
+              <div class="sns-row font-ai">
+                <span class="sns-stat">♥ <b class="sns-hearts">12</b></span>
+                <span class="sns-stat">💬 <b class="sns-comments">3</b></span>
+                <span class="sns-stat">↗ <b class="sns-shares">1</b></span>
+              </div>
+              <div class="sns-notifs" aria-hidden="true">
+                <!-- TODO: placeholder handles — confirm with client -->
+                <span class="sns-notif">faifah.w ถูกใจโพสต์ของคุณ</span>
+                <span class="sns-notif">mos.writer ถูกใจโพสต์ของคุณ</span>
+                <span class="sns-notif">nlnw.jj ถูกใจโพสต์ของคุณ</span>
+                <span class="sns-notif">prim_pr ถูกใจโพสต์ของคุณ</span>
+                <span class="sns-notif">และอีก 1,024 คน ถูกใจโพสต์ของคุณ</span>
+              </div>
+            </article>
+          </div>
+
+        </div>
+        <div class="era-progress" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+      </div>
+    </section>
+
+    <!-- v3 placeholder: CTA scroll target only (brief §5 — Free Seat comes in v3) -->
+    <section id="free-seat" class="freeseat-placeholder">
+      <p class="placeholder-note">Free Seat · v3</p>
+    </section>
+
+  </main>
+
+  <!-- GSAP 3 core + free plugins (no Club plugins used; DrawSVG-equivalent = stroke-dashoffset) -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/CustomEase.min.js"></script>
+
+  <!-- global GSAP setup (Idiology §8.1) — register plugins before the ES modules evaluate -->
+  <script>
+    gsap.registerPlugin(ScrollTrigger, CustomEase);
+    ScrollTrigger.defaults({ toggleActions: 'play none none none' }); // play once, never reverse
+  </script>
+
+  <!-- ES-module architecture (mirrors Idiology): one entry imports the rest -->
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+[
+  {
+    "claim": "A vendor blog post (Editvideo.io CEO, July 2026) cites 'a 2023 Adobe study on the creator economy' finding 48% of creators have experienced burnout, rising significantly among full-time creators - but provides no sample size, methodology, or country, and the cited reference link (adobe.com/creatoreconomy) does not resolve to a verifiable report.",
+    "stance": "neutral",
+    "stance_target": "prevalence of self-reported creator burnout - a potential fourth independent instrument, unverified",
+    "evidence_type": "anecdotal",
+    "scope_conditions": "UNVERIFIED CITATION - flagged per run directive as an audited absence pending further search. No sample size, field dates, or country are stated in this secondary article, and the referenced Adobe report could not be located from this source alone. Should not be cited as a corroborating data point until the original Adobe report is located and its methodology confirmed.",
+    "quoted_support": "\"A 2023 Adobe study on the creator economy found that 48 percent of creators have experienced burnout — and that figure climbs significantly among full-time creators who depend on content production as their primary income source.\"",
+    "numbers": ["48%", "2023"],
+    "entities": ["Adobe"],
+    "time_period": "2023 (claimed)",
+    "region": "unstated",
+    "confidence": "low",
+    "source_note_id": "the-creator-economy-has-a-burnout-problem-heres-what-the-data-actually-shows-bit"
+  },
+  {
+    "claim": "A video-editing vendor serving 1,800 paying clients across the US, Canada, and Australia observed that creators most likely to churn shared three unmeasured behavioral traits: producing across multiple platforms simultaneously, self-editing in addition to scripting/filming, and lacking a consistent publishing schedule.",
+    "stance": "supports",
+    "stance_target": "documented reasons creators give for quitting/pausing content creation",
+    "evidence_type": "anecdotal",
+    "scope_conditions": "Pure anecdotal pattern-matching from a single vendor's client base (n=1,800, but no counts or percentages given for the attrition pattern itself); the vendor has a direct commercial interest in creators believing editing overload drives burnout, since the vendor sells outsourced editing as the remedy. No statistical comparison group, no formal survey instrument. US/Canada/Australia client base only.",
+    "quoted_support": "\"Across our 1,800 clients, the creators most likely to pause or churn shared three common traits: they were producing content across multiple platforms simultaneously, they were handling their own editing in addition to scripting and filming, and they had no consistent publishing schedule.\"",
+    "numbers": ["1,800 clients"],
+    "entities": ["Editvideo.io", "Usman Qamar"],
+    "time_period": "2026 (observed over unspecified prior period)",
+    "region": "US, Canada, Australia",
+    "confidence": "low",
+    "source_note_id": "the-creator-economy-has-a-burnout-problem-heres-what-the-data-actually-shows-bit"
+  }
+]

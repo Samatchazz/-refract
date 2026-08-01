@@ -1,0 +1,459 @@
+{
+  "slug": "aristidebenoist",
+  "url": "https://www.aristidebenoist.com",
+  "name": "Aristide Benoist",
+  "country": "France",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "ok": true,
+  "httpStatus": 200,
+  "finalUrl": "https://aristidebenoist.com/",
+  "consentDismissed": [],
+  "scrollInfo": {
+    "contentHeight": 1468,
+    "docScrollHeight": 1468,
+    "maxElementBottom": 1446,
+    "innerScrollerHeight": 0,
+    "virtualScroll": false
+  },
+  "document": {
+    "scrollHeight": 1468,
+    "vhMultiple": 1.74,
+    "textNodeCount": 27,
+    "canvasCount": 0,
+    "elementCount": 52,
+    "title": "Aristide Benoist — Independent developer",
+    "lang": "en",
+    "contentHeight": 1468,
+    "scrollMode": "native"
+  },
+  "container": {
+    "dominantPairs": [
+      {
+        "width": 334,
+        "left": 28,
+        "count": 2,
+        "sample": {
+          "tag": "div",
+          "cls": ""
+        }
+      },
+      {
+        "width": 247,
+        "left": 115,
+        "count": 2,
+        "sample": {
+          "tag": "p",
+          "cls": "ml mtm"
+        }
+      },
+      {
+        "width": 182,
+        "left": 208,
+        "count": 1,
+        "sample": {
+          "tag": "a",
+          "cls": ""
+        }
+      },
+      {
+        "width": 177,
+        "left": 213,
+        "count": 1,
+        "sample": {
+          "tag": "div",
+          "cls": ""
+        }
+      }
+    ],
+    "containerChain": {
+      "chain": [
+        {
+          "tag": "div",
+          "cls": "",
+          "width": 333.69,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "block"
+        },
+        {
+          "tag": "div",
+          "cls": "m",
+          "width": 390,
+          "maxWidth": "none",
+          "paddingInline": "28.1667px / 28.1667px",
+          "marginInline": "0px / 0px",
+          "display": "block"
+        },
+        {
+          "tag": "header",
+          "cls": "",
+          "width": 390,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "block"
+        },
+        {
+          "tag": "div",
+          "cls": "",
+          "width": 390,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "block"
+        },
+        {
+          "tag": "main",
+          "cls": "",
+          "width": 390,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "block"
+        }
+      ],
+      "constrained": null
+    },
+    "grids": [],
+    "bodyPaddingInline": "0px / 0px",
+    "bodyMaxWidth": "none",
+    "htmlPaddingInline": "0px / 0px"
+  },
+  "leftEdgeTest": {
+    "layout": {
+      "n": 1,
+      "mean": 0,
+      "stdDev": 0,
+      "distinctExact": 1,
+      "distinctClustered2px": 1,
+      "clusters": [
+        {
+          "at": 0,
+          "count": 1
+        }
+      ],
+      "values": [
+        0
+      ]
+    },
+    "rect": {
+      "n": 1,
+      "mean": 0,
+      "stdDev": 0,
+      "distinctExact": 1,
+      "distinctClustered2px": 1,
+      "clusters": [
+        {
+          "at": 0,
+          "count": 1
+        }
+      ],
+      "values": [
+        0
+      ]
+    },
+    "headings": {
+      "n": 1,
+      "mean": 24,
+      "stdDev": 0,
+      "distinctExact": 1,
+      "distinctClustered2px": 1,
+      "clusters": [
+        {
+          "at": 24,
+          "count": 1
+        }
+      ],
+      "values": [
+        24
+      ]
+    },
+    "sectionDiscovery": "body-children"
+  },
+  "sections": [
+    {
+      "index": 0,
+      "tag": "main",
+      "id": "app",
+      "cls": "",
+      "height": 1402.8,
+      "vhFraction": 1.66,
+      "paddingBlockStart": "0px",
+      "paddingBlockEnd": "0px",
+      "marginBlockStart": "0px",
+      "marginBlockEnd": "0px",
+      "firstText": {
+        "layoutLeft": 0,
+        "rectLeft": 0,
+        "tag": "a",
+        "fontSize": "46.0417px",
+        "text": "ARISTIDE"
+      },
+      "heading": {
+        "layoutLeft": 24,
+        "rectLeft": 23.83,
+        "tag": "h1",
+        "fontSize": "253.5px",
+        "text": "ESY6833098L"
+      }
+    }
+  ],
+  "verticalRhythm": {
+    "sectionCount": 1,
+    "near100vhCount": 0,
+    "near100vhPct": 0,
+    "strictGcdOfSpacing": 1,
+    "baseUnitEstimate80pct": null,
+    "spacingHistogram": [
+      {
+        "value": 22,
+        "count": 23
+      },
+      {
+        "value": 11,
+        "count": 14
+      },
+      {
+        "value": 28,
+        "count": 12
+      },
+      {
+        "value": 33,
+        "count": 4
+      },
+      {
+        "value": 87,
+        "count": 4
+      },
+      {
+        "value": 81,
+        "count": 3
+      },
+      {
+        "value": 43,
+        "count": 2
+      },
+      {
+        "value": 16,
+        "count": 1
+      }
+    ],
+    "spacingSampleSize": 63
+  },
+  "typeScale": {
+    "distinctFontSizeCount": 4,
+    "distinctFontSizeCount_used2plus": 2,
+    "distinctSizes": [
+      {
+        "size": 253.5,
+        "count": 1
+      },
+      {
+        "size": 46.04,
+        "count": 1
+      },
+      {
+        "size": 11.92,
+        "count": 13
+      },
+      {
+        "size": 9.75,
+        "count": 4
+      }
+    ],
+    "scaleSizesDesc": [
+      11.92,
+      9.75
+    ],
+    "consecutiveRatios": [
+      1.22
+    ],
+    "roles": {
+      "h1": {
+        "tag": "h1",
+        "fontSize": 253.5,
+        "fontWeight": "400",
+        "lineHeightPx": 189.37,
+        "lineHeightRatio": 0.75,
+        "letterSpacing": "-5.8305px",
+        "letterSpacingEm": -0.023,
+        "fontFamily": "TNY",
+        "fontFamilyFull": "TNY",
+        "textTransform": "none",
+        "color": "rgb(186, 196, 184)",
+        "widthPx": 338.02,
+        "text": "ESY6833098L"
+      },
+      "biggestText": {
+        "tag": "h1",
+        "fontSize": 253.5,
+        "fontWeight": "400",
+        "lineHeightPx": 189.37,
+        "lineHeightRatio": 0.75,
+        "letterSpacing": "-5.8305px",
+        "letterSpacingEm": -0.023,
+        "fontFamily": "TNY",
+        "fontFamilyFull": "TNY",
+        "textTransform": "none",
+        "color": "rgb(186, 196, 184)",
+        "widthPx": 338.02,
+        "text": "ESY6833098L"
+      },
+      "h2All": [
+        {
+          "tag": "h2",
+          "fontSize": 11.92,
+          "fontWeight": "400",
+          "lineHeightPx": 11.92,
+          "lineHeightRatio": 1,
+          "letterSpacing": "0px",
+          "letterSpacingEm": 0,
+          "fontFamily": "jws",
+          "fontFamilyFull": "jws",
+          "textTransform": "none",
+          "color": "rgb(186, 196, 184)",
+          "widthPx": 333.69,
+          "text": "CONTACT"
+        },
+        {
+          "tag": "h2",
+          "fontSize": 11.92,
+          "fontWeight": "400",
+          "lineHeightPx": 11.92,
+          "lineHeightRatio": 1,
+          "letterSpacing": "0px",
+          "letterSpacingEm": 0,
+          "fontFamily": "jws",
+          "fontFamilyFull": "jws",
+          "textTransform": "none",
+          "color": "rgb(186, 196, 184)",
+          "widthPx": 333.69,
+          "text": "CLIENT"
+        },
+        {
+          "tag": "h2",
+          "fontSize": 11.92,
+          "fontWeight": "400",
+          "lineHeightPx": 11.92,
+          "lineHeightRatio": 1,
+          "letterSpacing": "0px",
+          "letterSpacingEm": 0,
+          "fontFamily": "jws",
+          "fontFamilyFull": "jws",
+          "textTransform": "none",
+          "color": "rgb(186, 196, 184)",
+          "widthPx": 333.69,
+          "text": "AWARDS"
+        }
+      ],
+      "h3": null,
+      "body": null,
+      "small": {
+        "tag": "a",
+        "fontSize": 9.75,
+        "fontWeight": "400",
+        "lineHeightPx": 9.75,
+        "lineHeightRatio": 1,
+        "letterSpacing": "0px",
+        "letterSpacingEm": 0,
+        "fontFamily": "jws",
+        "fontFamilyFull": "jws",
+        "textTransform": "none",
+        "color": "rgb(186, 196, 184)",
+        "widthPx": 182.39,
+        "text": "INDEPENDENT DEVELOPERAVAILABLE APR. 2023 ↗"
+      },
+      "mono": null
+    },
+    "readingMeasure": null,
+    "readingMeasureAlternates": [],
+    "distinctFontFamilyCount": 2,
+    "fontFamilies": [
+      {
+        "family": "jws",
+        "count": 17
+      },
+      {
+        "family": "TNY",
+        "count": 2
+      }
+    ]
+  },
+  "color": {
+    "textColors": [
+      {
+        "value": "rgb(186,196,184)",
+        "count": 19
+      }
+    ],
+    "backgroundColors": [],
+    "distinctTextColorCount": 1,
+    "distinctBgColorCount": 0
+  },
+  "persistent": {
+    "fixedOrSticky": []
+  },
+  "nav": {
+    "tag": "header",
+    "cls": "",
+    "height": 568.73,
+    "top": 43.33,
+    "position": "static",
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "backdropFilter": "none",
+    "borderBottom": "0px rgb(186, 196, 184)",
+    "paddingBlock": "0px / 0px",
+    "transform": "none",
+    "opacity": "1",
+    "mixBlendMode": "normal",
+    "color": "rgb(186, 196, 184)"
+  },
+  "navState": {
+    "at0": {
+      "nav": {
+        "height": 568.73,
+        "top": 43.33,
+        "position": "static",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "backdropFilter": "none",
+        "borderBottom": "0px rgb(186, 196, 184)",
+        "paddingBlock": "0px / 0px",
+        "transform": "none",
+        "opacity": "1",
+        "color": "rgb(186, 196, 184)"
+      },
+      "fixedOrSticky": []
+    },
+    "at2000": {
+      "nav": {
+        "height": 568.73,
+        "top": -580.67,
+        "position": "static",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "backdropFilter": "none",
+        "borderBottom": "0px rgb(186, 196, 184)",
+        "paddingBlock": "0px / 0px",
+        "transform": "none",
+        "opacity": "1",
+        "color": "rgb(186, 196, 184)"
+      },
+      "fixedOrSticky": []
+    },
+    "changed": true,
+    "diff": {
+      "top": {
+        "at0": 43.33,
+        "at2000": -580.67
+      }
+    }
+  },
+  "shots": [
+    "aristidebenoist-390-full.jpg"
+  ],
+  "fullPageShotRepresentative": true,
+  "pageErrors": []
+}

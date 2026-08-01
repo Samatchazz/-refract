@@ -1,0 +1,48 @@
+[
+  {
+    "claim": "Across 50,000 independent YouTube channels with documented 2019-2026 trajectories, CreatorMap reports median upload frequency of 4.53 videos per month for breakout channels versus 2.74 for growing and 1.52 for stalling channels, and a median longest hiatus of 35 days versus 81 and 200 days.",
+    "stance": "supports",
+    "stance_target": "Sustained posting cadence rather than audience engagement rate separates growing creators from stalling ones",
+    "evidence_type": "statistical",
+    "scope_conditions": "Vendor study, May 2026; the sample is conditioned on channels that survived to have a measurable 2019-2026 trajectory, so it says nothing about channels that exited; up to 50 recent videos per channel; all correlations are weak (absolute r no greater than 0.26) and the article explicitly disclaims coverage of thumbnails, titles, topic selection and production value",
+    "quoted_support": "The longest gap between uploads correlates with subscriber growth at r = -0.26, the strongest correlation in our entire feature set. More plainly: channels that take long breaks grow the least.",
+    "numbers": [
+      "50,000+ channels",
+      "uploads per month 4.53 / 2.74 / 1.52",
+      "longest hiatus 35 / 81 / 200 days",
+      "r = -0.26 for hiatus",
+      "CV of gaps 0.94 / 1.21 / 1.58",
+      "description length 512 / 455 / 396 chars",
+      "duration 5.7 / 4.8 / 4.5 min",
+      "r = +0.08 for description length"
+    ],
+    "entities": [
+      "CreatorMap",
+      "YouTube Data API"
+    ],
+    "time_period": "2019-2026 trajectories, measured May 2026",
+    "region": "Global / unspecified",
+    "confidence": "low",
+    "source_note_id": "youtube-channel-growth-factors-data-study-of-50k-creators-creatormap-creatormap"
+  },
+  {
+    "claim": "The CreatorMap growth study reports a positive correlation of r = +0.21 between schedule irregularity and subscriber growth while simultaneously reporting that breakout channels have the lowest irregularity, a sign contradiction its own charts do not resolve.",
+    "stance": "refutes",
+    "stance_target": "The internal statistical coherence of CreatorMap's behavioural findings",
+    "evidence_type": "statistical",
+    "scope_conditions": "Same page, chart caption versus body text; the article also nominates three different variables as its 'strongest' predictor in three separate sections",
+    "quoted_support": "Schedule irregularity (CV of upload gaps) by growth outcome - lower = more consistent ... Correlation with growth: r = +0.21.",
+    "numbers": [
+      "r = +0.21 stated",
+      "Breakout CV 0.94 versus Stalling CV 1.58",
+      "three competing strongest-predictor claims"
+    ],
+    "entities": [
+      "CreatorMap"
+    ],
+    "time_period": "May 2026",
+    "region": "n/a",
+    "confidence": "high",
+    "source_note_id": "youtube-channel-growth-factors-data-study-of-50k-creators-creatormap-creatormap"
+  }
+]

@@ -1,0 +1,58 @@
+[
+  {
+    "claim": "Tubefilter reported Linktree's finding that the majority of creators who do secure brand deals are paid less than $100 per sponsored post, a stronger statement than TechCrunch's report of the same data, which said 12% of creators earn under $100 per collaboration.",
+    "stance": "neutral",
+    "stance_target": "The precision of the Linktree brand-deal payment figures as they circulated through press coverage",
+    "evidence_type": "statistical",
+    "scope_conditions": "Linktree survey n≈9,500 fielded 2021; the underlying report PDF does not contain either formulation, so the two outlets read different online materials or interpreted the same chart differently",
+    "quoted_support": "The majority of the surveyed creators have not engaged in any brand deals at all, and even among those who do, the majority take home less than $100 per paid post.",
+    "numbers": ["<$100 per paid post", "70% earn <10% of income from brand deals", "12% under $100 per collaboration (TechCrunch version)"],
+    "entities": ["Linktree", "Tubefilter", "TechCrunch"],
+    "time_period": "April 2022",
+    "region": "Undisclosed",
+    "confidence": "medium",
+    "source_note_id": "200-million-people-are-earning-money-from-digital-content-creation-tubefilter"
+  },
+  {
+    "claim": "Two-thirds of Linktree's surveyed creators self-identified as niche creators, and Tubefilter reported the niche earnings premium as only 2 percentage points more likely to earn six figures and 11 percentage points more likely to have posted branded content.",
+    "stance": "neutral",
+    "stance_target": "The claim that niche specialization materially improves creator income outcomes",
+    "evidence_type": "statistical",
+    "scope_conditions": "Linktree survey n≈9,500 fielded 2021; cross-sectional and uncontrolled for tenure or audience size; the underlying absolute rates are 7% versus 5% for six-figure income and 37% versus 26% for branded content",
+    "quoted_support": "the nouveau niche are 2% more likely to earn six figures per year, and they're 11% more likely to have posted at least one piece of branded content.",
+    "numbers": ["two-thirds identify as niche", "2 percentage point six-figure premium", "11 percentage point branded-content premium"],
+    "entities": ["Linktree", "Tubefilter"],
+    "time_period": "April 2022",
+    "region": "Undisclosed",
+    "confidence": "high",
+    "source_note_id": "200-million-people-are-earning-money-from-digital-content-creation-tubefilter"
+  },
+  {
+    "claim": "Tubefilter independently confirms that more than a third of Linktree's surveyed creators had been making content for a year or less and that 59% of those beginners had not turned on monetization at all.",
+    "stance": "supports",
+    "stance_target": "The claim that a large share of the active creator population is in its first year and unmonetized",
+    "evidence_type": "statistical",
+    "scope_conditions": "Linktree survey n≈9,500 fielded 2021; corroborates TechCrunch's 36% figure for the under-one-year tenure bucket",
+    "quoted_support": "More than a third of the creators Linktree analyzed have only been making content for a year or less, and among those \"beginner creators,\" only 6% have made more than 10,000 from their work. 59% of them haven't turned on monetization at all.",
+    "numbers": ["more than a third under one year", "6% of beginners over $10,000", "59% not monetized"],
+    "entities": ["Linktree", "Tubefilter"],
+    "time_period": "April 2022",
+    "region": "Undisclosed",
+    "confidence": "high",
+    "source_note_id": "200-million-people-are-earning-money-from-digital-content-creation-tubefilter"
+  },
+  {
+    "claim": "Tubefilter characterised Linktree's 200 million figure as people 'earning money from digital content creation', a materially stronger claim than Linktree's own definition, which requires only that a person produce and seek to monetize content.",
+    "stance": "refutes",
+    "stance_target": "The claim that 200 million people earn money from content creation",
+    "evidence_type": "statistical",
+    "scope_conditions": "Headline framing versus Linktree's stated definition; Linktree's own survey found 53% of creators earned $100 or less annually, which is inconsistent with 200 million people meaningfully earning money",
+    "quoted_support": "Linktree claims that the so-called creator economy — the global community of artists, thinkers, and doers who monetize their content on social media — now includes about 200 million moneymaking individuals.",
+    "numbers": ["200 million", "53% earning <=$100/year per Linktree's own survey"],
+    "entities": ["Linktree", "Tubefilter"],
+    "time_period": "April 2022",
+    "region": "Global",
+    "confidence": "high",
+    "source_note_id": "200-million-people-are-earning-money-from-digital-content-creation-tubefilter"
+  }
+]

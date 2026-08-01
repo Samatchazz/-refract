@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<title>Plan C — เลือกจุดขยับ (Pivot Picker)</title>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:#0f1613; color:#f2efde; font-family:sans-serif; padding:20px; }
+  h1 { font-size:17px; color:#f0b32e; margin-bottom:4px; }
+  p.hint { font-size:12.5px; color:rgba(242,239,222,.6); margin-bottom:14px; line-height:1.6; }
+  .wrap { position:relative; display:inline-block; border:1px dashed rgba(242,239,222,.2); border-radius:8px; }
+  canvas { display:block; cursor:crosshair; border-radius:8px; max-width:100%; height:auto; }
+  .wrap { max-width:min(1024px, 96vw); }
+  .readout { margin-top:14px; font-size:14px; background:rgba(240,179,46,.1);
+    border:1px solid rgba(240,179,46,.4); border-radius:8px; padding:12px 16px; display:inline-block; }
+  .readout b { color:#f0b32e; }
+  code { background:rgba(242,239,222,.1); padding:2px 7px; border-radius:4px; font-size:13px; }
+  .legend { margin-top:12px; font-size:12.5px; line-height:1.9; }
+  .sw { display:inline-block; width:11px; height:11px; border-radius:50%; margin-right:6px; vertical-align:middle; }
+  button { background:transparent; border:1px solid rgba(240,179,46,.5); color:#f0b32e;
+    border-radius:99px; padding:6px 14px; font-size:13px; cursor:pointer; margin-top:10px; }
+  button:hover { background:#f0b32e; color:#0f1613; }
+</style>
+</head>
+<body>
+<h1>เลือกจุดขยับ — คลิกบนโลโก้ตรงจุดที่คุณวงไว้</h1>
+<p class="hint">
+  ผมไม่อยากเดาพิกัดผิดอีก — <b>คลิกตรงจุดที่ต้องการ</b> แล้วบอกตัวเลขที่ขึ้นมาให้ผม (หรือ screenshot มาก็ได้)<br>
+  <span class="sw" style="background:#5eff9f"></span><b>เขียว</b> = จุดที่คุณคลิก (ลบ marker เก่าออกหมดแล้ว)
+</p>
+
+<div class="wrap"><canvas id="cv" width="1024" height="1024"></canvas></div>
+
+<div class="readout" id="out">คลิกบนโลโก้เพื่อดูพิกัด…</div><br>
+<button onclick="reset()">ล้างจุดที่คลิก</button>
+
+<script>
+const CV = document.getElementById('cv'), X = CV.getContext('2d');
+const OUT = document.getElementById('out');
+const SCALE = 1024 / 2048;               // แสดงครึ่งขนาดของไฟล์จริง (2048)
+const CUR_PIVOT = { x: 1265, y: 1150 };  // จุดหมุนหางปัจจุบัน (พิกัดไฟล์ 2048)
+const GUESS = { x0: 1230, y0: 1040, x1: 1550, y1: 1420 };  // โซนที่ผมเดาจากภาพที่วง
+let picked = null;
+const img = new Image();
+
+img.onload = draw;
+img.src = 'assets/logo-closed.png';
+
+function draw() {
+  X.clearRect(0, 0, 1024, 1024);
+  X.fillStyle = '#0f1613'; X.fillRect(0, 0, 1024, 1024);
+  // โลโก้ (invert เป็นครีมบนพื้นเข้ม ให้ตรงกับเว็บ)
+  const t = document.createElement('canvas'); t.width = t.height = 2048;
+  const tx = t.getContext('2d'); tx.drawImage(img, 0, 0, 2048, 2048);
+  const d = tx.getImageData(0, 0, 2048, 2048);
+  for (let i = 0; i < d.data.length; i += 4) {
+    const lum = (d.data[i] + d.data[i+1] + d.data[i+2]) / 3;
+    d.data[i] = 242; d.data[i+1] = 239; d.data[i+2] = 222; d.data[i+3] = 255 - lum;
+  }
+  tx.putImageData(d, 0, 0);
+  X.drawImage(t, 0, 0, 1024, 1024);
+
+  // เส้นกริดทุก 100px (พิกัดไฟล์)
+  X.strokeStyle = 'rgba(242,239,222,.08)'; X.lineWidth = 1;
+  X.fillStyle = 'rgba(242,239,222,.35)'; X.font = '10px sans-serif';
+  for (let g = 0; g <= 2048; g += 200) {
+    const s = g * SCALE;
+    X.beginPath(); X.moveTo(s, 0); X.lineTo(s, 1024); X.stroke();
+    X.beginPath(); X.moveTo(0, s); X.lineTo(1024, s); X.stroke();
+    X.fillText(g, s + 3, 12); X.fillText(g, 3, s + 12);
+  }
+
+  // marker เก่าถูกลบออกหมดแล้ว — เหลือแต่จุดที่คุณคลิก
+  if (picked) mark(picked.x, picked.y, '#5eff9f', 'จุดที่คุณเลือก');
+}
+
+function mark(ix, iy, color, label) {
+  const x = ix * SCALE, y = iy * SCALE;
+  X.strokeStyle = color; X.lineWidth = 2.5;
+  X.beginPath(); X.arc(x, y, 13, 0, 7); X.stroke();
+  X.beginPath(); X.moveTo(x - 22, y); X.lineTo(x + 22, y);
+  X.moveTo(x, y - 22); X.lineTo(x, y + 22); X.stroke();
+  X.fillStyle = color; X.font = 'bold 12px sans-serif';
+  X.fillText(label, x + 26, y - 6);
+  X.fillText(`(${Math.round(ix)}, ${Math.round(iy)})`, x + 26, y + 9);
+}
+
+CV.addEventListener('click', e => {
+  const r = CV.getBoundingClientRect();
+  const css2canvas = CV.width / r.width;          // เผื่อ canvas ถูก CSS ย่อ
+  picked = { x: (e.clientX - r.left) * css2canvas / SCALE,
+             y: (e.clientY - r.top) * css2canvas / SCALE };
+  draw();
+  const dx = Math.round(picked.x - CUR_PIVOT.x), dy = Math.round(picked.y - CUR_PIVOT.y);
+  OUT.innerHTML = `จุดที่คุณเลือก: <b>x = ${Math.round(picked.x)}, y = ${Math.round(picked.y)}</b>
+    &nbsp;(พิกัดไฟล์ 2048)<br>
+    ห่างจากจุดหมุนปัจจุบัน: <b>${dx > 0 ? '+' : ''}${dx}, ${dy > 0 ? '+' : ''}${dy}</b> px<br>
+    <span style="opacity:.75">ส่งตัวเลขนี้ให้ผม → <code>TAIL_ROOT = { x: ${Math.round(picked.x)}, y: ${Math.round(picked.y)} }</code></span>`;
+});
+
+function reset() { picked = null; draw(); OUT.textContent = 'คลิกบนโลโก้เพื่อดูพิกัด…'; }
+</script>
+</body>
+</html>

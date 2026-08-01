@@ -1,0 +1,58 @@
+[
+  {
+    "claim": "An Awin/ShareASale survey of over 300 micro-influencer affiliate partners (majority with 1,000-5,000 followers), published September 2024 across US/UK/France/Germany, found 73% admitted to suffering burnout 'at least some of the time' - down from an 87% figure Awin attributes to its own 2022 study.",
+    "stance": "neutral",
+    "stance_target": "prevalence of self-reported creator burnout - a third independent instrument, distinct from both Billion Dollar Boy and Vibely",
+    "evidence_type": "statistical",
+    "scope_conditions": "SELF-SELECTED VENDOR SURVEY (n>300) of Awin's own affiliate-partner base, skewed toward micro-influencers (over half have only 1,000-5,000 followers) - opposite tier from Vibely's mid-to-large sample. Multi-country (US, UK, France, Germany) but still Western-only; no Southeast Asia coverage. INTERNAL INCONSISTENCY FLAG: this same page's own reporting of the prior 2022 Awin wave headlines 78% (see note 78-of-influencers-admit-to-suffering-burnout) while this 2024 release describes the 2022 baseline as 87% - the two published Awin figures for the same 2022 study disagree, so any 87%-to-73% trend claim should be flagged as resting on an unresolved discrepancy. Measures burnout FREQUENCY among still-active creators; contains no year-one or quitting dimension.",
+    "quoted_support": "\"The results showed that 73% of respondents admitted to suffering from burnout at least some of the time, which shows a slight improvement from Awin's 2022 study, which was 87%.\"",
+    "numbers": ["73%", "87% (2022, per this article)", "78% (2022, per Awin's own contemporaneous headline)", "n>300"],
+    "entities": ["Awin", "ShareASale"],
+    "time_period": "September 2024 (survey), referencing 2022 baseline",
+    "region": "US, UK, France, Germany",
+    "confidence": "medium",
+    "source_note_id": "a-majority-of-content-creators-and-influencers-struggle-with-burnout-as-concerns"
+  },
+  {
+    "claim": "The widely-repeated internet claim that '73% of creators quit within their first year' is a corrupted restatement of this Awin figure, which actually measures burnout frequency among still-active affiliate creators and contains no year-one or quitting dimension whatsoever.",
+    "stance": "refutes",
+    "stance_target": "any claim that '73% of creators quit within their first year'",
+    "evidence_type": "empirical",
+    "scope_conditions": "Provenance-correction claim, critical for this batch's mandate. The 73% figure's true definition (burnout frequency 'at least some of the time', measured across a micro-influencer affiliate sample, no year-one framing) is incompatible with the recirculated claim about first-year quitting. Any downstream use of '73% quit in year one' should be traced back to this note and flagged as a misattribution.",
+    "quoted_support": "\"CRITICAL FOR PROVENANCE: the 73% here is burnout FREQUENCY among still-active affiliate creators. It contains no year-one dimension and measures no quitting whatsoever. The widely-repeated claim that '73% of creators quit within their first year' is this number with the outcome variable and the population both swapped.\" [note author's methodology audit]",
+    "numbers": ["73%"],
+    "entities": ["Awin"],
+    "time_period": "September 2024",
+    "region": "US, UK, France, Germany",
+    "confidence": "high",
+    "source_note_id": "a-majority-of-content-creators-and-influencers-struggle-with-burnout-as-concerns"
+  },
+  {
+    "claim": "Burnout by platform among Awin-surveyed creators: Instagram 88%, TikTok 81%, Facebook 67%; drivers included constant platform changes (70%), comparison to other creators (64%), lack of quality/creativity (55%), never switching off (43%), negative comments (43%).",
+    "stance": "neutral",
+    "stance_target": "documented reasons/platform-specific patterns in creator burnout",
+    "evidence_type": "statistical",
+    "scope_conditions": "Same n>300 self-selected Awin micro-influencer affiliate sample, US/UK/FR/DE only. Self-reported causes among active creators; not linked to any exit/attrition outcome.",
+    "quoted_support": "\"According to 88% of respondents, Instagram is still the leading platform driving burnout, followed by TikTok at 81% and Facebook at 67%. Constant platform changes remain the top reason driving creator anxiety at 70%.\"",
+    "numbers": ["88%", "81%", "67%", "70%", "64%", "55%", "43%"],
+    "entities": ["Awin"],
+    "time_period": "September 2024",
+    "region": "US, UK, France, Germany",
+    "confidence": "medium",
+    "source_note_id": "a-majority-of-content-creators-and-influencers-struggle-with-burnout-as-concerns"
+  },
+  {
+    "claim": "50% of Awin-surveyed creators cope with burnout by relying on alternative income streams; 36% schedule time off, with strong national variation (French 65%, German 55%, US 40%, UK 36%).",
+    "stance": "neutral",
+    "stance_target": "coping mechanisms for burnout / income diversification behavior among active creators",
+    "evidence_type": "statistical",
+    "scope_conditions": "Self-reported coping behavior among active creators in a self-selected affiliate-vendor sample; income diversification is a coping strategy, not evidence of departure from content creation. US/UK/FR/DE only.",
+    "quoted_support": "\"To cope with burnout, 50% of creators rely on alternative income streams, 49% create dedicated posting times or days, and 36% schedule vacations or days off... significantly more French (65%) and German creators (55%) consciously plan holidays compared to 40% of U.S. respondents and just 36% of those in the U.K.\"",
+    "numbers": ["50%", "49%", "36%", "65%", "55%", "40%"],
+    "entities": ["Awin"],
+    "time_period": "September 2024",
+    "region": "US, UK, France, Germany",
+    "confidence": "medium",
+    "source_note_id": "a-majority-of-content-creators-and-influencers-struggle-with-burnout-as-concerns"
+  }
+]

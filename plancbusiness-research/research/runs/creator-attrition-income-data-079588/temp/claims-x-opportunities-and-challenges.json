@@ -1,0 +1,72 @@
+[
+  {
+    "claim": "The ILO and the Oxford Internet Institute's Online Labour Observatory estimate that of 163 million registered platform accounts only 8.6 percent are active and just 2 percent have completed at least ten projects or earned at least US$1,000.",
+    "stance": "supports",
+    "stance_target": "The position that only a low-single-digit percentage of people who register to earn on a platform ever reach a meaningful cumulative income threshold",
+    "evidence_type": "statistical",
+    "scope_conditions": "Global; web-based online gig platforms (freelancing and microtask), explicitly NOT content-creation platforms; attributed to the Online Labour Observatory with no sample size or reference year stated in the citing text; published as ILO Working Paper 164 for Asia and the Pacific",
+    "quoted_support": "The Online Labour Observatory of the Oxford Internet Institute and the International Labour Organization (ILO) estimate there are 163 million registered user accounts, with 8.6 per cent of them \"active\" and 2 per cent having completed at least ten projects or earned at least US$1,000.",
+    "numbers": ["163 million registered user accounts", "8.6 per cent active", "2 per cent", "ten projects", "US$1,000"],
+    "entities": ["ILO", "Online Labour Observatory", "Oxford Internet Institute"],
+    "time_period": "not stated in source; underlying estimate traces to Kassi, Lehdonvirta and Stephany 2021",
+    "region": "Global",
+    "confidence": "high",
+    "source_note_id": "x-opportunities-and-challenges"
+  },
+  {
+    "claim": "No systematic measurement of platform-worker numbers exists across Asia and the Pacific, and most countries in the region do not collect the data at all.",
+    "stance": "supports",
+    "stance_target": "The position that Southeast Asian quantitative evidence on platform and creator work is structurally absent rather than merely unsearched, so Western figures cannot be validated against local baselines",
+    "evidence_type": "expert-opinion",
+    "scope_conditions": "Asia and the Pacific region; as of the paper's writing (ILO Working Paper 164); refers to enterprise surveys and labour force surveys",
+    "quoted_support": "There is no systematic data collection across the region on the number of workers carrying out work via digital labour platforms. To date, only a limited number of enterprise surveys or labour force surveys have systematically captured the number of digital platform workers.",
+    "numbers": [],
+    "entities": ["ILO", "Australia", "Indonesia", "Philippines", "Viet Nam"],
+    "time_period": "as of publication",
+    "region": "Asia and the Pacific",
+    "confidence": "high",
+    "source_note_id": "x-opportunities-and-challenges"
+  },
+  {
+    "claim": "Platform workers constitute 4 per cent of the employed population in the Philippines, against 2.4 per cent of the non-farm workforce in India and over 10 per cent of the workforce in China having ever participated.",
+    "stance": "neutral",
+    "stance_target": "The size of the platform-work population in Asian economies relative to the total labour force",
+    "evidence_type": "statistical",
+    "scope_conditions": "Philippines, China, India; China figures for 2015 and 2020; India figure 6.8 million gig workers; measures all digital labour platform work including ride-hailing and delivery, not content creation",
+    "quoted_support": "In the Philippines, data suggests that platform workers constitute 4 per cent of the employed population.",
+    "numbers": ["4 per cent (Philippines)", "50 million to 84 million China 2015-2020", "68 per cent growth", "6.5 per cent to over 10 per cent China workforce", "6.8 million India", "2.4 per cent non-farm", "1.3 per cent of all workers"],
+    "entities": ["Philippines", "China", "India", "ILO"],
+    "time_period": "2015-2022 depending on country",
+    "region": "Asia (Philippines, China, India)",
+    "confidence": "medium",
+    "source_note_id": "x-opportunities-and-challenges"
+  },
+  {
+    "claim": "ASEAN estimates 63 million registered workers in online freelancing services and roughly 40 million in on-demand digital services, a registration-based count with no active-worker adjustment.",
+    "stance": "neutral",
+    "stance_target": "The reliability of headline Southeast Asian platform-worker counts",
+    "evidence_type": "statistical",
+    "scope_conditions": "ASEAN member states; ASEAN Secretariat 2023; registered accounts, not active workers, so the 8.6 percent active adjustment in the same paragraph would imply a far smaller working population",
+    "quoted_support": "The Association of Southeast Asian Nations (ASEAN) estimates suggest that there are 63 million registered workers engaged in online freelancing services and roughly 40 million in on-demand digital services.",
+    "numbers": ["63 million registered online freelancers", "40 million on-demand digital services", "2023"],
+    "entities": ["ASEAN Secretariat"],
+    "time_period": "2023",
+    "region": "Southeast Asia (ASEAN)",
+    "confidence": "medium",
+    "source_note_id": "x-opportunities-and-challenges"
+  },
+  {
+    "claim": "Roughly 66 per cent of Asia-Pacific workers (1.3 billion people) depend on the informal economy, rising to 71 per cent in emerging economies versus 22 per cent in advanced economies, so the counterfactual against which platform or creator income should be judged is fundamentally different in Southeast Asia than in the West.",
+    "stance": "supports",
+    "stance_target": "The position that US and Western creator-income and living-wage benchmarks do not transfer to Southeast Asia",
+    "evidence_type": "statistical",
+    "scope_conditions": "Asia and the Pacific; ILO informality statistics; contrasted with advanced economies",
+    "quoted_support": "Almost 66 per cent, or 1.3 billion workers in Asia and the Pacific rely on the informal economy",
+    "numbers": ["66 per cent", "1.3 billion workers", "71 per cent emerging economies", "22 per cent advanced economies", "20 per cent youth NEET", "30.4 per cent young women", "13.7 per cent youth unemployment"],
+    "entities": ["ILO"],
+    "time_period": "2022-2023",
+    "region": "Asia and the Pacific",
+    "confidence": "high",
+    "source_note_id": "x-opportunities-and-challenges"
+  }
+]

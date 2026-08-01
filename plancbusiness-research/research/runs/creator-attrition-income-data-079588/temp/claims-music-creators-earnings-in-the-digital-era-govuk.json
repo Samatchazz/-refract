@@ -1,0 +1,72 @@
+[
+  {
+    "claim": "The UK IPO's 'Music creators' earnings in the digital era' report published an official errata correcting its Chapter 6 per-million-stream figures after discovering the original calculation omitted a 5% PRS/ICE administration fee.",
+    "stance": "neutral",
+    "stance_target": "Reliability of published creator-income figures and the need to trace corrections before citing",
+    "evidence_type": "empirical",
+    "scope_conditions": "UK, music streaming creators (songwriters and featured performers), 2020 streaming-rate figures underlying the errata; published by the Intellectual Property Office (IPO), a UK government body",
+    "quoted_support": "This calculation failed to take into account PRS/ICE administration fees, which would reduce revenues by 5%. Reduced by this amount, the true figure for a month (=four weeks) should therefore be £1,176... the annual figure if the same level of streams were sustained across a year would be £15,288.",
+    "numbers": ["original songwriter monthly figure GBP 1,238", "corrected GBP 1,176", "original annualised GBP 16,094", "corrected annualised GBP 15,288", "5% PRS/ICE fee"],
+    "entities": ["UK Intellectual Property Office", "PRS", "ICE", "Hesmondhalgh", "Osborne", "Sun", "Barr"],
+    "time_period": "2020 (streams basis); published 23 September 2021",
+    "region": "UK; Western-only, not generalizable to Southeast Asia",
+    "confidence": "high",
+    "source_note_id": "music-creators-earnings-in-the-digital-era-govuk"
+  },
+  {
+    "claim": "The report's errata also corrected a typing error in the featured-performer per-million-stream figure from GBP 1,210 to GBP 1,201, changing the annualised estimate from GBP 15,730 to GBP 15,613.",
+    "stance": "neutral",
+    "stance_target": "Reliability of published creator-income figures and the need to trace corrections before citing",
+    "evidence_type": "empirical",
+    "scope_conditions": "UK, featured performers on music streams, 2020 basis",
+    "quoted_support": "due to a typing error, our estimated figure for what a typical featured performer would earn from a million 2020 streams was stated as £1,210... The true estimated figure should be £1,201... and the annual estimated figure for a typical featured performer would be £15,613.",
+    "numbers": ["GBP 1,210 (original)", "GBP 1,201 (corrected)", "GBP 15,730 (original annual)", "GBP 15,613 (corrected annual)", "52% recording rights share", "21% average featured performer royalty rate"],
+    "entities": ["UK Intellectual Property Office"],
+    "time_period": "2020; published 23 September 2021",
+    "region": "UK; Western-only",
+    "confidence": "high",
+    "source_note_id": "music-creators-earnings-in-the-digital-era-govuk"
+  },
+  {
+    "claim": "Both errata-corrected annual estimates (GBP 15,288 for songwriters, GBP 15,613 for featured performers) sit below commonly cited living-wage benchmarks, meaning even the IPO's own recalculated per-million-stream earnings do not by themselves constitute a full living income for a typical creator earning from streams alone.",
+    "stance": "supports",
+    "stance_target": "Income from content/music creation frequently falls short of a living wage even for creators who reach meaningful scale (1 million streams/month)",
+    "evidence_type": "empirical",
+    "scope_conditions": "UK, music streaming creators only, assumes 1 million streams sustained every month for a year (an atypical, high-scale assumption)",
+    "quoted_support": "the annual figure if the same level of streams were sustained across a year would be £15,288.",
+    "numbers": ["GBP 15,288/year", "GBP 15,613/year"],
+    "entities": ["UK Intellectual Property Office"],
+    "time_period": "2020-2021",
+    "region": "UK",
+    "confidence": "medium",
+    "source_note_id": "music-creators-earnings-in-the-digital-era-govuk"
+  },
+  {
+    "claim": "The UK IPO published the raw survey microdata and survey instrument underlying the 224-page report, making the dataset re-analysable by third parties, which is unusual in creator-income research.",
+    "stance": "neutral",
+    "stance_target": "Data availability and reproducibility in creator-income research",
+    "evidence_type": "empirical",
+    "scope_conditions": "UK Creators' Earnings Survey; published alongside the main report on GOV.UK",
+    "quoted_support": "UK creators' earnings survey raw data, MS Excel Spreadsheet, 357 KB... UK creators' earnings survey tables, MS Excel Spreadsheet, 1.34 MB.",
+    "numbers": ["357 KB raw data file", "1.34 MB tables file", "224-page report"],
+    "entities": ["UK Intellectual Property Office"],
+    "time_period": "Published 23 September 2021",
+    "region": "UK",
+    "confidence": "high",
+    "source_note_id": "music-creators-earnings-in-the-digital-era-govuk"
+  },
+  {
+    "claim": "Any citation of the IPO report's Chapter 6 per-million-stream earnings figures that uses the original (pre-errata) numbers (GBP 1,238/GBP 1,210) is citing a known-incorrect figure.",
+    "stance": "neutral",
+    "stance_target": "Methodological correctness in citing this report",
+    "evidence_type": "empirical",
+    "scope_conditions": "UK IPO report, Chapter 6, 2020-basis streaming earnings estimates",
+    "quoted_support": "In addition, due to a typing error, our estimated figure for what a typical featured performer would earn from a million 2020 streams was stated as £1,210...",
+    "numbers": ["GBP 1,238", "GBP 1,210", "GBP 1,176", "GBP 1,201"],
+    "entities": ["UK Intellectual Property Office"],
+    "time_period": "2020-2021",
+    "region": "UK",
+    "confidence": "high",
+    "source_note_id": "music-creators-earnings-in-the-digital-era-govuk"
+  }
+]

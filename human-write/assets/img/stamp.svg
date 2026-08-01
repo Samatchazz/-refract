@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="100% Human-made — no AI">
+  <defs>
+    <path id="ring" d="M60 13a47 47 0 1 1 0 94 47 47 0 1 1 0-94" fill="none"/>
+  </defs>
+  <circle cx="60" cy="60" r="57.5" fill="none" stroke="#C4502F" stroke-width="3"/>
+  <circle cx="60" cy="60" r="37" fill="none" stroke="#C4502F" stroke-width="1.5" stroke-dasharray="3 4"/>
+  <text font-family="Georgia, 'Times New Roman', serif" font-size="11.5" letter-spacing="2.2" fill="#C4502F">
+    <textPath href="#ring">100% HUMAN-MADE &#183; NO AI &#183; BY HAND &#183;</textPath>
+  </text>
+  <text x="60" y="57" text-anchor="middle" font-family="Georgia, serif" font-size="14" fill="#C4502F">&#3617;&#3609;&#3640;&#3625;&#3618;&#3660;</text>
+  <text x="60" y="74" text-anchor="middle" font-family="Georgia, serif" font-size="14" fill="#C4502F">&#3607;&#3635;&#3648;&#3629;&#3591;</text>
+</svg>

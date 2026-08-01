@@ -1,0 +1,44 @@
+[
+  {
+    "claim": "Indonesian platform workers earned nearly 16 per cent more per month than other informal workers in 2019, but the premium falls to about 6 per cent once their longer hours (49 per week versus 38 for informal workers) are controlled for.",
+    "stance": "refutes",
+    "stance_target": "The claim that platform income in Southeast Asia delivers a substantial earnings premium over informal work",
+    "evidence_type": "statistical",
+    "scope_conditions": "Indonesia; 2019 reference year; sourced by the ILO from World Bank and Australian Government, 'Beyond Unicorns: Harnessing Digital Technologies for Inclusion in Indonesia' (2021); covers digital platform work broadly (largely ride-hailing and delivery), NOT content creation",
+    "quoted_support": "Monthly earnings for platform workers in 2019 were nearly 16 per cent higher than for other informal workers. This difference was due in part to the longer hours worked by platform workers: an average of 49 hours per week, compared with 39 hours for the average worker and 38 hours for an informal worker.",
+    "numbers": ["16 per cent higher monthly", "6 per cent higher hours-adjusted", "49 hours/week platform", "39 hours average worker", "38 hours informal worker", "2019"],
+    "entities": ["ILO", "World Bank", "Indonesia", "Beyond Unicorns"],
+    "time_period": "2019, published 2021, cited 2023",
+    "region": "Indonesia (Southeast Asia)",
+    "confidence": "high",
+    "source_note_id": "x-policy-issues-in-the-digital"
+  },
+  {
+    "claim": "Indonesia's informal (Non-Wage Recipient) social-security participation rose from 2.49 million to 3.55 million workers between 2020 and 2021, nearly 30 per cent, which is the closest administrative trace of platform-worker growth available for the country.",
+    "stance": "neutral",
+    "stance_target": "The measurability of Southeast Asian platform-worker populations from administrative records",
+    "evidence_type": "statistical",
+    "scope_conditions": "Indonesia; 2020-2021; BPJS Ketenagakerjaan Non-Wage Recipient (Informal) category, which contains platform workers but is not limited to them; sourced to a ministerial interview in The ASEAN, not a statistical release",
+    "quoted_support": "Participation in this segment saw a significant increase from 2020 to 2021, from 2.49 million to 3.55 million workers - a boost of nearly 30 per cent.",
+    "numbers": ["2.49 million (2020)", "3.55 million (2021)", "nearly 30 per cent"],
+    "entities": ["Indonesia", "Social Security Agency for Employment", "ILO"],
+    "time_period": "2020-2021",
+    "region": "Indonesia (Southeast Asia)",
+    "confidence": "medium",
+    "source_note_id": "x-policy-issues-in-the-digital"
+  },
+  {
+    "claim": "The Malaysian Employers Federation reported that platform work grew from about 500,000 to 4 million workers during the COVID-19 pandemic, an eightfold rise with no stated methodology.",
+    "stance": "neutral",
+    "stance_target": "The reliability of headline Southeast Asian platform-worker growth figures",
+    "evidence_type": "expert-opinion",
+    "scope_conditions": "Malaysia; COVID-19 pandemic period (circa 2020-2021); employer-federation estimate reported without sampling frame or method, so it is an order-of-magnitude assertion rather than a measurement; covers all digital platform work, not content creation",
+    "quoted_support": "the Malaysian Employers Federation noted that platforms absorbed labour from people who lost their jobs due to the pandemic, increasing in size from about 500,000 to 4 million workers.",
+    "numbers": ["500,000", "4 million", "circa 2020-2021"],
+    "entities": ["Malaysian Employers Federation", "Malaysia", "ILO"],
+    "time_period": "2020-2021",
+    "region": "Malaysia (Southeast Asia)",
+    "confidence": "low",
+    "source_note_id": "x-policy-issues-in-the-digital"
+  }
+]

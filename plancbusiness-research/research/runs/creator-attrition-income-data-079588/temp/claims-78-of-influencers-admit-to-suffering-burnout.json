@@ -1,0 +1,44 @@
+[
+  {
+    "claim": "An Awin (affiliate platform) survey of a self-selected group of its UK and US influencer partners, published August 2022, found 78% of influencers suffering burnout, with no disclosed sample size.",
+    "stance": "neutral",
+    "stance_target": "prevalence of self-reported creator burnout - a distinct instrument from the Billion Dollar Boy/Censuswide survey",
+    "evidence_type": "statistical",
+    "scope_conditions": "SELF-SELECTED VENDOR SURVEY of one affiliate network's own active partner base - not a random or representative sample of all creators, and n is undisclosed. UK and US only. Measures self-reported burnout among currently active affiliate creators; cannot capture anyone who has already left the platform or the profession. Note: Awin's own later (2024) press release restates this same 2022 wave as '87%', an internal inconsistency between two Awin-published figures for the same year that must be resolved before using either number in a trend comparison.",
+    "quoted_support": "\"A large group of UK and US influencers who are partnered with the global Awin platform were selected for this study. The results reveal an overwhelming majority of Awin's content creators are suffering from burnout.\"",
+    "numbers": ["78%", "sample size undisclosed"],
+    "entities": ["Awin"],
+    "time_period": "August 2022",
+    "region": "US, UK",
+    "confidence": "low",
+    "source_note_id": "78-of-influencers-admit-to-suffering-burnout"
+  },
+  {
+    "claim": "53% of Awin-surveyed influencers say their passion for content creation has decreased in the past year - the closest indicator in this dataset to a leading signal of eventual exit, though it is still a self-reported attitude rather than an observed departure.",
+    "stance": "neutral",
+    "stance_target": "leading indicators of creator attrition intention",
+    "evidence_type": "statistical",
+    "scope_conditions": "Self-reported attitude among active creators; does not measure actual exit. UK/US only, sample size undisclosed, vendor-run survey (Awin has a commercial interest in engaged affiliate creators).",
+    "quoted_support": "\"53% admit their passion for content creation has decreased in the past year.\"",
+    "numbers": ["53%"],
+    "entities": ["Awin"],
+    "time_period": "August 2022",
+    "region": "US, UK",
+    "confidence": "low",
+    "source_note_id": "78-of-influencers-admit-to-suffering-burnout"
+  },
+  {
+    "claim": "49% of Awin-surveyed influencers turned to alternative income streams because of burnout-related stress, and 72% cite constant platform changes as the leading anxiety driver.",
+    "stance": "neutral",
+    "stance_target": "documented reasons for creator stress and coping mechanisms",
+    "evidence_type": "statistical",
+    "scope_conditions": "Self-reported coping behavior among active affiliate creators; income diversification here is a stress-coping response, not evidence of exit from content creation. UK/US only, sample size undisclosed.",
+    "quoted_support": "\"49% [turned] to alternative income streams to alleviate the stress and anxiety... Constant platform changes are cited as the leading cause of anxiety at 72%.\"",
+    "numbers": ["49%", "72%", "71% Instagram burnout", "50% of Instagram users at significant burnout levels"],
+    "entities": ["Awin"],
+    "time_period": "August 2022",
+    "region": "US, UK",
+    "confidence": "low",
+    "source_note_id": "78-of-influencers-admit-to-suffering-burnout"
+  }
+]

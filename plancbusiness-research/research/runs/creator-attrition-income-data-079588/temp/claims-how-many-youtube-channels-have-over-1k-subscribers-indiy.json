@@ -1,0 +1,30 @@
+[
+  {
+    "claim": "As of 2022, 91.1% of YouTube channels had fewer than 1,000 subscribers, with only 10.1 million channels (8.86%) clearing the subscriber half of the Partner Program's ad-revenue threshold.",
+    "stance": "supports",
+    "stance_target": "The position that the overwhelming majority of people who start a channel never reach even the eligibility gate for platform income",
+    "evidence_type": "statistical",
+    "scope_conditions": "2022 data, global, all YouTube channels including inactive and abandoned ones; the post is a secondary aggregation crediting a single external source (timqueen.com/youtube-number-of-channels) with no method, sampling frame or confidence interval disclosed; no country disaggregation",
+    "quoted_support": "91.1% of YouTube Channels have under 1k Subscribers... In 2022 10.1 million YouTube channels have at least 1,000 subscribers... The exact percentage of YouTube channels with over 1,000 subscribers is 8.86%.",
+    "numbers": ["91.1% under 1,000 subs", "10.1 million channels with 1,000+", "8.86%", "2022"],
+    "entities": ["Indiy", "YouTube", "Tim Queen"],
+    "time_period": "2022",
+    "region": "Global",
+    "confidence": "low",
+    "source_note_id": "how-many-youtube-channels-have-over-1k-subscribers-indiy"
+  },
+  {
+    "claim": "Channels above 100,000 subscribers numbered 321,100 in 2022 (0.28% of all channels, about 1 in 350) and channels above one million numbered 32,300 (0.028%, about 1 in 3,600), giving an order-of-magnitude drop per subscriber decade.",
+    "stance": "supports",
+    "stance_target": "The position that the creator audience distribution is a steep power law in which career-viable audience sizes are reached by a fraction of a percent of participants",
+    "evidence_type": "statistical",
+    "scope_conditions": "2022 secondary aggregation crediting timqueen.com; global; no method disclosed; counts include channels of media companies and music labels, not only individual creators",
+    "quoted_support": "There are 321,100 YouTube channels with at least 100,000 subscribers. Which is 0.28% of all YouTube channels or around 1 in 350... Less than 33K YouTube channels have more than 1 million subscribers. 32,300. That is 0.028 percent of all YouTube channels or about 1 in 3,600 channels.",
+    "numbers": ["321,100 channels 100k+", "0.28%", "1 in 350", "32,300 channels 1M+", "0.028%", "1 in 3,600"],
+    "entities": ["Indiy", "YouTube", "Tim Queen"],
+    "time_period": "2022",
+    "region": "Global",
+    "confidence": "low",
+    "source_note_id": "how-many-youtube-channels-have-over-1k-subscribers-indiy"
+  }
+]

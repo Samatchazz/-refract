@@ -1,0 +1,1294 @@
+{
+  "slug": "tiktoksans",
+  "url": "https://www.tiktok.com/font",
+  "name": "TikTok Sans specimen",
+  "country": "USA/CN",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "ok": true,
+  "httpStatus": 200,
+  "finalUrl": "https://www.tiktok.com/font",
+  "networkIdleTimeout": true,
+  "consentDismissed": [],
+  "scrollInfo": {
+    "contentHeight": 8201,
+    "docScrollHeight": 8201,
+    "maxElementBottom": 8201,
+    "innerScrollerHeight": 1826,
+    "virtualScroll": false
+  },
+  "document": {
+    "scrollHeight": 8201,
+    "vhMultiple": 9.72,
+    "textNodeCount": 91,
+    "canvasCount": 0,
+    "elementCount": 247,
+    "title": "TikTok Sans || Open Source Font",
+    "lang": "en",
+    "contentHeight": 8201,
+    "scrollMode": "native"
+  },
+  "container": {
+    "dominantPairs": [
+      {
+        "width": 351,
+        "left": 20,
+        "count": 2,
+        "sample": {
+          "tag": "p",
+          "cls": ""
+        }
+      },
+      {
+        "width": 390,
+        "left": 0,
+        "count": 2,
+        "sample": {
+          "tag": "span",
+          "cls": "style-type-glyphs_pXmbH"
+        }
+      },
+      {
+        "width": 308,
+        "left": 42,
+        "count": 1,
+        "sample": {
+          "tag": "h2",
+          "cls": "intro-text-line_-cOxU"
+        }
+      },
+      {
+        "width": 351,
+        "left": 140,
+        "count": 1,
+        "sample": {
+          "tag": "video",
+          "cls": "style-type-video1_b4u73"
+        }
+      },
+      {
+        "width": 390,
+        "left": -30,
+        "count": 1,
+        "sample": {
+          "tag": "video",
+          "cls": "style-type-video2_tLtKj"
+        }
+      },
+      {
+        "width": 2776,
+        "left": -1263,
+        "count": 1,
+        "sample": {
+          "tag": "span",
+          "cls": "plot-twist-text_d0yf7"
+        }
+      }
+    ],
+    "containerChain": {
+      "chain": [
+        {
+          "tag": "p",
+          "cls": "",
+          "width": 351,
+          "maxWidth": "100%",
+          "paddingInline": "0px / 42px",
+          "marginInline": "0px / 0px",
+          "display": "block"
+        },
+        {
+          "tag": "li",
+          "cls": "style-type-top-row_mg1vT",
+          "width": 351,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "list-item"
+        },
+        {
+          "tag": "ul",
+          "cls": "style-type-inner-wrapper_-4Ywj",
+          "width": 351,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "block"
+        },
+        {
+          "tag": "div",
+          "cls": "style-type_8kDfS",
+          "width": 390,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "flex"
+        },
+        {
+          "tag": "main",
+          "cls": "page-home_A5kxC",
+          "width": 390,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "flex"
+        },
+        {
+          "tag": "div",
+          "cls": "",
+          "width": 390,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "block"
+        },
+        {
+          "tag": "div",
+          "cls": "layout-space_6GsJx layout-space-gap-none_CqhU4 layout-space-",
+          "width": 390,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "flex"
+        },
+        {
+          "tag": "div",
+          "cls": "layout-overlay_vyGl0",
+          "width": 390,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "flex"
+        }
+      ],
+      "constrained": {
+        "tag": "p",
+        "cls": "",
+        "width": 351,
+        "maxWidth": "100%",
+        "paddingInline": "0px / 42px",
+        "marginInline": "0px / 0px",
+        "display": "block"
+      }
+    },
+    "grids": [],
+    "bodyPaddingInline": "0px / 0px",
+    "bodyMaxWidth": "390px",
+    "htmlPaddingInline": "0px / 0px"
+  },
+  "leftEdgeTest": {
+    "layout": {
+      "n": 10,
+      "mean": -74.7,
+      "stdDev": 397.97,
+      "distinctExact": 10,
+      "distinctClustered2px": 10,
+      "clusters": [
+        {
+          "at": -1263,
+          "count": 1
+        },
+        {
+          "at": 0,
+          "count": 1
+        },
+        {
+          "at": 20,
+          "count": 1
+        },
+        {
+          "at": 39,
+          "count": 1
+        },
+        {
+          "at": 42,
+          "count": 1
+        },
+        {
+          "at": 48,
+          "count": 1
+        },
+        {
+          "at": 51,
+          "count": 1
+        },
+        {
+          "at": 80,
+          "count": 1
+        },
+        {
+          "at": 90,
+          "count": 1
+        },
+        {
+          "at": 146,
+          "count": 1
+        }
+      ],
+      "values": [
+        80,
+        42,
+        90,
+        -1263,
+        48,
+        146,
+        39,
+        51,
+        0,
+        20
+      ]
+    },
+    "rect": {
+      "n": 10,
+      "mean": 63.3,
+      "stdDev": 43.51,
+      "distinctExact": 10,
+      "distinctClustered2px": 9,
+      "clusters": [
+        {
+          "at": 0,
+          "count": 1
+        },
+        {
+          "at": 19.5,
+          "count": 1
+        },
+        {
+          "at": 39.87,
+          "count": 2
+        },
+        {
+          "at": 47.5,
+          "count": 1
+        },
+        {
+          "at": 51.25,
+          "count": 1
+        },
+        {
+          "at": 74.03,
+          "count": 1
+        },
+        {
+          "at": 89.67,
+          "count": 1
+        },
+        {
+          "at": 125,
+          "count": 1
+        },
+        {
+          "at": 146.31,
+          "count": 1
+        }
+      ],
+      "values": [
+        74.03,
+        40.74,
+        89.67,
+        125,
+        47.5,
+        146.31,
+        39,
+        51.25,
+        0,
+        19.5
+      ]
+    },
+    "headings": {
+      "n": 10,
+      "mean": 11,
+      "stdDev": 456.01,
+      "distinctExact": 10,
+      "distinctClustered2px": 9,
+      "clusters": [
+        {
+          "at": -1263,
+          "count": 1
+        },
+        {
+          "at": 0,
+          "count": 1
+        },
+        {
+          "at": 20,
+          "count": 1
+        },
+        {
+          "at": 41,
+          "count": 2
+        },
+        {
+          "at": 80,
+          "count": 1
+        },
+        {
+          "at": 106,
+          "count": 1
+        },
+        {
+          "at": 183,
+          "count": 1
+        },
+        {
+          "at": 342,
+          "count": 1
+        },
+        {
+          "at": 560,
+          "count": 1
+        }
+      ],
+      "values": [
+        80,
+        42,
+        560,
+        -1263,
+        342,
+        40,
+        183,
+        106,
+        0,
+        20
+      ]
+    },
+    "sectionDiscovery": "tall-children-of-wrapper"
+  },
+  "sections": [
+    {
+      "index": 0,
+      "tag": "div",
+      "id": null,
+      "cls": "header_hck-W",
+      "height": 725.83,
+      "vhFraction": 0.86,
+      "paddingBlockStart": "0px",
+      "paddingBlockEnd": "0px",
+      "marginBlockStart": "0px",
+      "marginBlockEnd": "0px",
+      "firstText": {
+        "layoutLeft": 80,
+        "rectLeft": 74.03,
+        "tag": "span",
+        "fontSize": "97.5px",
+        "text": "T"
+      },
+      "heading": {
+        "layoutLeft": 80,
+        "rectLeft": 74.03,
+        "tag": "span",
+        "fontSize": "97.5px",
+        "text": "T"
+      }
+    },
+    {
+      "index": 1,
+      "tag": "div",
+      "id": null,
+      "cls": "intro-text_VPjIn",
+      "height": 781.58,
+      "vhFraction": 0.93,
+      "paddingBlockStart": "0px",
+      "paddingBlockEnd": "0px",
+      "marginBlockStart": "0px",
+      "marginBlockEnd": "0px",
+      "firstText": {
+        "layoutLeft": 42,
+        "rectLeft": 40.74,
+        "tag": "h2",
+        "fontSize": "31.2px",
+        "text": "The font you've seen all"
+      },
+      "heading": {
+        "layoutLeft": 42,
+        "rectLeft": 40.74,
+        "tag": "h2",
+        "fontSize": "31.2px",
+        "text": "The font you've seen all"
+      }
+    },
+    {
+      "index": 2,
+      "tag": "div",
+      "id": null,
+      "cls": "style-type_8kDfS",
+      "height": 1189.56,
+      "vhFraction": 1.41,
+      "paddingBlockStart": "0px",
+      "paddingBlockEnd": "280px",
+      "marginBlockStart": "78px",
+      "marginBlockEnd": "210px",
+      "firstText": {
+        "layoutLeft": 90,
+        "rectLeft": 89.67,
+        "tag": "span",
+        "fontSize": "40px",
+        "text": "¢"
+      },
+      "heading": {
+        "layoutLeft": 560,
+        "rectLeft": 560,
+        "tag": "span",
+        "fontSize": "60px",
+        "text": "*"
+      }
+    },
+    {
+      "index": 3,
+      "tag": "div",
+      "id": null,
+      "cls": "plot-twist_KMmpA",
+      "height": 182,
+      "vhFraction": 0.22,
+      "paddingBlockStart": "0px",
+      "paddingBlockEnd": "0px",
+      "marginBlockStart": "154px",
+      "marginBlockEnd": "140px",
+      "firstText": {
+        "layoutLeft": -1263,
+        "rectLeft": 125,
+        "tag": "span",
+        "fontSize": "140px",
+        "text": "Aby33 — X#p!ufvou349p8tuøyeet1000%"
+      },
+      "heading": {
+        "layoutLeft": -1263,
+        "rectLeft": 125,
+        "tag": "span",
+        "fontSize": "140px",
+        "text": "Aby33 — X#p!ufvou349p8tuøyeet1000%"
+      }
+    },
+    {
+      "index": 4,
+      "tag": "div",
+      "id": null,
+      "cls": "video-content_erSp2",
+      "height": 967.44,
+      "vhFraction": 1.15,
+      "paddingBlockStart": "0px",
+      "paddingBlockEnd": "0px",
+      "marginBlockStart": "0px",
+      "marginBlockEnd": "112px",
+      "firstText": {
+        "layoutLeft": 48,
+        "rectLeft": 47.5,
+        "tag": "video",
+        "fontSize": "14px",
+        "text": "Your browser does not support the video tag."
+      },
+      "heading": {
+        "layoutLeft": 342,
+        "rectLeft": 289.59,
+        "tag": "span",
+        "fontSize": "97.5px",
+        "text": "©"
+      }
+    },
+    {
+      "index": 5,
+      "tag": "div",
+      "id": null,
+      "cls": "try-on_eZsy0",
+      "height": 560.94,
+      "vhFraction": 0.66,
+      "paddingBlockStart": "0px",
+      "paddingBlockEnd": "0px",
+      "marginBlockStart": "0px",
+      "marginBlockEnd": "280px",
+      "firstText": {
+        "layoutLeft": 146,
+        "rectLeft": 146.31,
+        "tag": "span",
+        "fontSize": "20px",
+        "text": "Light Italic"
+      },
+      "heading": {
+        "layoutLeft": 40,
+        "rectLeft": 39.5,
+        "tag": "div",
+        "fontSize": "56px",
+        "text": "doing my thing—making stuff happen"
+      }
+    },
+    {
+      "index": 6,
+      "tag": "div",
+      "id": null,
+      "cls": "reel_8uERT",
+      "height": 432,
+      "vhFraction": 0.51,
+      "paddingBlockStart": "0px",
+      "paddingBlockEnd": "252px",
+      "marginBlockStart": "0px",
+      "marginBlockEnd": "0px",
+      "firstText": {
+        "layoutLeft": 39,
+        "rectLeft": 39,
+        "tag": "video",
+        "fontSize": "14px",
+        "text": "Your browser does not support the video tag."
+      },
+      "heading": {
+        "layoutLeft": 183,
+        "rectLeft": 182.81,
+        "tag": "span",
+        "fontSize": "24px",
+        "text": "460+ languages"
+      }
+    },
+    {
+      "index": 7,
+      "tag": "div",
+      "id": null,
+      "cls": "carousel_K18jK",
+      "height": 701.39,
+      "vhFraction": 0.83,
+      "paddingBlockStart": "252px",
+      "paddingBlockEnd": "252px",
+      "marginBlockStart": "0px",
+      "marginBlockEnd": "0px",
+      "firstText": {
+        "layoutLeft": 51,
+        "rectLeft": 51.25,
+        "tag": "button",
+        "fontSize": "28px",
+        "text": "Spanish"
+      },
+      "heading": {
+        "layoutLeft": 106,
+        "rectLeft": 106.47,
+        "tag": "span",
+        "fontSize": "78px",
+        "text": "Crear"
+      }
+    },
+    {
+      "index": 8,
+      "tag": "div",
+      "id": null,
+      "cls": "ticker-feed_Q97-L",
+      "height": 619.3,
+      "vhFraction": 0.73,
+      "paddingBlockStart": "50px",
+      "paddingBlockEnd": "140px",
+      "marginBlockStart": "0px",
+      "marginBlockEnd": "0px",
+      "firstText": {
+        "layoutLeft": 0,
+        "rectLeft": 0,
+        "tag": "div",
+        "fontSize": "36px",
+        "text": "The official TikTok font now released * Instant "
+      },
+      "heading": {
+        "layoutLeft": 0,
+        "rectLeft": 0,
+        "tag": "div",
+        "fontSize": "36px",
+        "text": "The official TikTok font now released * Instant "
+      }
+    },
+    {
+      "index": 9,
+      "tag": "footer",
+      "id": null,
+      "cls": "footer_zNig-",
+      "height": 1067.34,
+      "vhFraction": 1.26,
+      "paddingBlockStart": "0px",
+      "paddingBlockEnd": "0px",
+      "marginBlockStart": "0px",
+      "marginBlockEnd": "0px",
+      "firstText": {
+        "layoutLeft": 20,
+        "rectLeft": 19.5,
+        "tag": "h2",
+        "fontSize": "21px",
+        "text": "Contributors"
+      },
+      "heading": {
+        "layoutLeft": 20,
+        "rectLeft": 19.5,
+        "tag": "h2",
+        "fontSize": "21px",
+        "text": "Contributors"
+      }
+    }
+  ],
+  "verticalRhythm": {
+    "sectionCount": 10,
+    "near100vhCount": 0,
+    "near100vhPct": 0,
+    "strictGcdOfSpacing": 1,
+    "baseUnitEstimate80pct": 2,
+    "spacingHistogram": [
+      {
+        "value": 10,
+        "count": 75
+      },
+      {
+        "value": 20,
+        "count": 19
+      },
+      {
+        "value": 14,
+        "count": 14
+      },
+      {
+        "value": 24,
+        "count": 6
+      },
+      {
+        "value": 8,
+        "count": 6
+      },
+      {
+        "value": 56,
+        "count": 4
+      },
+      {
+        "value": 28,
+        "count": 4
+      },
+      {
+        "value": 280,
+        "count": 3
+      },
+      {
+        "value": 252,
+        "count": 3
+      },
+      {
+        "value": 4,
+        "count": 3
+      },
+      {
+        "value": 21,
+        "count": 2
+      },
+      {
+        "value": 60,
+        "count": 2
+      },
+      {
+        "value": 210,
+        "count": 2
+      },
+      {
+        "value": 140,
+        "count": 2
+      }
+    ],
+    "spacingSampleSize": 168
+  },
+  "typeScale": {
+    "distinctFontSizeCount": 17,
+    "distinctFontSizeCount_used2plus": 11,
+    "distinctSizes": [
+      {
+        "size": 140,
+        "count": 1
+      },
+      {
+        "size": 97.5,
+        "count": 11
+      },
+      {
+        "size": 78,
+        "count": 3
+      },
+      {
+        "size": 60,
+        "count": 1
+      },
+      {
+        "size": 56,
+        "count": 1
+      },
+      {
+        "size": 48,
+        "count": 30
+      },
+      {
+        "size": 40,
+        "count": 1
+      },
+      {
+        "size": 36,
+        "count": 1
+      },
+      {
+        "size": 31.2,
+        "count": 3
+      },
+      {
+        "size": 30.8,
+        "count": 1
+      },
+      {
+        "size": 28,
+        "count": 14
+      },
+      {
+        "size": 24,
+        "count": 3
+      },
+      {
+        "size": 21,
+        "count": 2
+      },
+      {
+        "size": 20,
+        "count": 3
+      },
+      {
+        "size": 17,
+        "count": 2
+      },
+      {
+        "size": 14,
+        "count": 11
+      },
+      {
+        "size": 13,
+        "count": 3
+      }
+    ],
+    "scaleSizesDesc": [
+      97.5,
+      78,
+      48,
+      31.2,
+      28,
+      24,
+      21,
+      20,
+      17,
+      14,
+      13
+    ],
+    "consecutiveRatios": [
+      1.25,
+      1.63,
+      1.54,
+      1.11,
+      1.17,
+      1.14,
+      1.05,
+      1.18,
+      1.21,
+      1.08
+    ],
+    "roles": {
+      "h1": null,
+      "biggestText": {
+        "tag": "span",
+        "fontSize": 140,
+        "fontWeight": "1000",
+        "lineHeightPx": 182,
+        "lineHeightRatio": 1.3,
+        "letterSpacing": "0px",
+        "letterSpacingEm": 0,
+        "fontFamily": "TikTokSans",
+        "fontFamilyFull": "TikTokSans, sans-serif",
+        "textTransform": "none",
+        "color": "rgb(255, 255, 255)",
+        "widthPx": 2776.34,
+        "text": "Aby33 — X#p!ufvou349p8tuøyeet1000%"
+      },
+      "h2All": [
+        {
+          "tag": "h2",
+          "fontSize": 31.2,
+          "fontWeight": "100",
+          "lineHeightPx": 39,
+          "lineHeightRatio": 1.25,
+          "letterSpacing": "0px",
+          "letterSpacingEm": 0,
+          "fontFamily": "TikTokSans",
+          "fontFamilyFull": "TikTokSans, sans-serif",
+          "textTransform": "none",
+          "color": "rgb(255, 255, 255)",
+          "widthPx": 308.5,
+          "text": "The font you've seen all"
+        },
+        {
+          "tag": "h2",
+          "fontSize": 31.2,
+          "fontWeight": "100",
+          "lineHeightPx": 39,
+          "lineHeightRatio": 1.25,
+          "letterSpacing": "0px",
+          "letterSpacingEm": 0,
+          "fontFamily": "TikTokSans",
+          "fontFamilyFull": "TikTokSans, sans-serif",
+          "textTransform": "none",
+          "color": "rgb(255, 255, 255)",
+          "widthPx": 256.26,
+          "text": "over the app is now"
+        },
+        {
+          "tag": "h2",
+          "fontSize": 31.2,
+          "fontWeight": "100",
+          "lineHeightPx": 39,
+          "lineHeightRatio": 1.25,
+          "letterSpacing": "0px",
+          "letterSpacingEm": 0,
+          "fontFamily": "TikTokSans",
+          "fontFamilyFull": "TikTokSans, sans-serif",
+          "textTransform": "none",
+          "color": "rgb(255, 255, 255)",
+          "widthPx": 234,
+          "text": "free for everyone!"
+        },
+        {
+          "tag": "h2",
+          "fontSize": 21,
+          "fontWeight": "100",
+          "lineHeightPx": 27.3,
+          "lineHeightRatio": 1.3,
+          "letterSpacing": "0px",
+          "letterSpacingEm": 0,
+          "fontFamily": "TikTokSans",
+          "fontFamilyFull": "TikTokSans, sans-serif",
+          "textTransform": "none",
+          "color": "rgb(255, 255, 255)",
+          "widthPx": 351,
+          "text": "Contributors"
+        },
+        {
+          "tag": "h2",
+          "fontSize": 21,
+          "fontWeight": "100",
+          "lineHeightPx": 27.3,
+          "lineHeightRatio": 1.3,
+          "letterSpacing": "0px",
+          "letterSpacingEm": 0,
+          "fontFamily": "TikTokSans",
+          "fontFamilyFull": "TikTokSans, sans-serif",
+          "textTransform": "none",
+          "color": "rgb(255, 255, 255)",
+          "widthPx": 351,
+          "text": "Get the font"
+        }
+      ],
+      "h3": null,
+      "body": {
+        "tag": "span",
+        "fontSize": 14,
+        "fontWeight": "100",
+        "lineHeightPx": 18.2,
+        "lineHeightRatio": 1.3,
+        "letterSpacing": "0px",
+        "letterSpacingEm": 0,
+        "fontFamily": "TikTokSans",
+        "fontFamilyFull": "TikTokSans, sans-serif",
+        "textTransform": "none",
+        "color": "rgb(255, 255, 255)",
+        "widthPx": 331,
+        "text": "© — 2025 ///////////////////////////////////////////////////"
+      },
+      "small": {
+        "tag": "i",
+        "fontSize": 13,
+        "fontWeight": "100",
+        "lineHeightPx": 16.9,
+        "lineHeightRatio": 1.3,
+        "letterSpacing": "0px",
+        "letterSpacingEm": 0,
+        "fontFamily": "TikTok Sans",
+        "fontFamilyFull": "\"TikTok Sans\", TikTokSans, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif",
+        "textTransform": "none",
+        "color": "rgb(255, 255, 255)",
+        "widthPx": 131.42,
+        "text": "Exceptional vibes [ • ]"
+      },
+      "mono": null
+    },
+    "readingMeasure": {
+      "columnWidthPx": 331,
+      "widthOf100Chars": 678.06,
+      "measureCh_spec": 48.82,
+      "measureCh_zeroWidth": 37.65,
+      "maxWidthDeclared": "none",
+      "canvasFont": "100 14px TikTokSans, sans-serif"
+    },
+    "readingMeasureAlternates": [
+      {
+        "tag": "span",
+        "fontSize": 14,
+        "fontWeight": "100",
+        "lineHeightPx": 18.2,
+        "lineHeightRatio": 1.3,
+        "letterSpacing": "0px",
+        "letterSpacingEm": 0,
+        "fontFamily": "TikTokSans",
+        "fontFamilyFull": "TikTokSans, sans-serif",
+        "textTransform": "none",
+        "color": "rgb(255, 255, 255)",
+        "widthPx": 331,
+        "text": "© — 2025 ///////////////////////////////////////////////////"
+      }
+    ],
+    "distinctFontFamilyCount": 2,
+    "fontFamilies": [
+      {
+        "family": "TikTokSans",
+        "count": 79
+      },
+      {
+        "family": "TikTok Sans",
+        "count": 12
+      }
+    ]
+  },
+  "color": {
+    "textColors": [
+      {
+        "value": "rgb(255,255,255)",
+        "count": 74
+      },
+      {
+        "value": "rgb(102,102,102)",
+        "count": 13
+      },
+      {
+        "value": "rgb(0,0,0)",
+        "count": 3
+      },
+      {
+        "value": "rgb(204,204,204)",
+        "count": 1
+      }
+    ],
+    "backgroundColors": [
+      {
+        "value": "rgb(0,0,0)",
+        "count": 3
+      },
+      {
+        "value": "rgb(26,26,26)",
+        "count": 2
+      },
+      {
+        "value": "rgb(255,255,255)",
+        "count": 1
+      }
+    ],
+    "distinctTextColorCount": 4,
+    "distinctBgColorCount": 3
+  },
+  "persistent": {
+    "fixedOrSticky": [
+      {
+        "tag": "div",
+        "cls": "nav-font-button-wrapper_pjSpg ",
+        "position": "fixed",
+        "rect": {
+          "top": 20,
+          "left": 261.39,
+          "width": 104.61,
+          "height": 46.19
+        },
+        "zIndex": "auto",
+        "text": "Free Font",
+        "opacity": "1"
+      },
+      {
+        "tag": "div",
+        "cls": "plot-twist-container_DDTkk",
+        "position": "sticky",
+        "rect": {
+          "top": 3138.97,
+          "left": 0,
+          "width": 390,
+          "height": 182
+        },
+        "zIndex": "auto",
+        "text": "Aby33 — X#p!ufvou349p8tuøyeet1000%",
+        "opacity": "1"
+      },
+      {
+        "tag": "div",
+        "cls": "alphabet-scroller_lqqWd",
+        "position": "fixed",
+        "rect": {
+          "top": 730,
+          "left": 308,
+          "width": 50,
+          "height": 50
+        },
+        "zIndex": "auto",
+        "text": "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+        "opacity": "1"
+      },
+      {
+        "tag": "div",
+        "cls": "TUXToastProvider-topOutlet",
+        "position": "fixed",
+        "rect": {
+          "top": 0,
+          "left": 0,
+          "width": 390,
+          "height": 4
+        },
+        "zIndex": "3000",
+        "text": "",
+        "opacity": "1"
+      },
+      {
+        "tag": "div",
+        "cls": "TUXToastProvider-center-outlet",
+        "position": "fixed",
+        "rect": {
+          "top": 0,
+          "left": 0,
+          "width": 390,
+          "height": 844
+        },
+        "zIndex": "3000",
+        "text": "",
+        "opacity": "1"
+      },
+      {
+        "tag": "div",
+        "cls": "TUXToastProvider-bottomOutletContainer",
+        "position": "fixed",
+        "rect": {
+          "top": 836,
+          "left": 0,
+          "width": 390,
+          "height": 8
+        },
+        "zIndex": "3000",
+        "text": "",
+        "opacity": "1"
+      }
+    ]
+  },
+  "nav": {
+    "tag": "nav",
+    "cls": "nav_-Bm-Z",
+    "height": 89,
+    "top": 0,
+    "position": "absolute",
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "backdropFilter": "none",
+    "borderBottom": "0px rgb(0, 0, 0)",
+    "paddingBlock": "24px / 24px",
+    "transform": "none",
+    "opacity": "1",
+    "mixBlendMode": "normal",
+    "color": "rgb(0, 0, 0)"
+  },
+  "navState": {
+    "at0": {
+      "nav": {
+        "height": 89,
+        "top": 0,
+        "position": "absolute",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "backdropFilter": "none",
+        "borderBottom": "0px rgb(0, 0, 0)",
+        "paddingBlock": "24px / 24px",
+        "transform": "none",
+        "opacity": "1",
+        "color": "rgb(0, 0, 0)"
+      },
+      "fixedOrSticky": [
+        {
+          "tag": "div",
+          "cls": "nav-font-button-wrapper_pjSpg ",
+          "position": "fixed",
+          "rect": {
+            "top": 20,
+            "left": 261.39,
+            "width": 104.61,
+            "height": 46.19
+          },
+          "text": "Free Font",
+          "opacity": "1"
+        },
+        {
+          "tag": "div",
+          "cls": "plot-twist-container_DDTkk",
+          "position": "sticky",
+          "rect": {
+            "top": 3138.97,
+            "left": 0,
+            "width": 390,
+            "height": 182
+          },
+          "text": "Aby33 — X#p!ufvou349p8tuøyeet1000%",
+          "opacity": "1"
+        },
+        {
+          "tag": "div",
+          "cls": "alphabet-scroller_lqqWd",
+          "position": "fixed",
+          "rect": {
+            "top": 730,
+            "left": 308,
+            "width": 50,
+            "height": 50
+          },
+          "text": "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+          "opacity": "1"
+        },
+        {
+          "tag": "div",
+          "cls": "TUXToastProvider-topOutlet",
+          "position": "fixed",
+          "rect": {
+            "top": 0,
+            "left": 0,
+            "width": 390,
+            "height": 4
+          },
+          "text": "",
+          "opacity": "1"
+        },
+        {
+          "tag": "div",
+          "cls": "TUXToastProvider-center-outlet",
+          "position": "fixed",
+          "rect": {
+            "top": 0,
+            "left": 0,
+            "width": 390,
+            "height": 844
+          },
+          "text": "",
+          "opacity": "1"
+        },
+        {
+          "tag": "div",
+          "cls": "TUXToastProvider-bottomOutletContainer",
+          "position": "fixed",
+          "rect": {
+            "top": 836,
+            "left": 0,
+            "width": 390,
+            "height": 8
+          },
+          "text": "",
+          "opacity": "1"
+        }
+      ]
+    },
+    "at2000": {
+      "nav": {
+        "height": 89,
+        "top": -2035,
+        "position": "absolute",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "backdropFilter": "none",
+        "borderBottom": "0px rgb(0, 0, 0)",
+        "paddingBlock": "24px / 24px",
+        "transform": "none",
+        "opacity": "1",
+        "color": "rgb(0, 0, 0)"
+      },
+      "fixedOrSticky": [
+        {
+          "tag": "div",
+          "cls": "nav-font-button-wrapper_pjSpg nav-font-button-wrapper-scroll",
+          "position": "fixed",
+          "rect": {
+            "top": 20,
+            "left": 303.39,
+            "width": 62.61,
+            "height": 60.19
+          },
+          "text": "Free Font",
+          "opacity": "1"
+        },
+        {
+          "tag": "div",
+          "cls": "plot-twist-container_DDTkk",
+          "position": "sticky",
+          "rect": {
+            "top": 1103.97,
+            "left": 0,
+            "width": 390,
+            "height": 182
+          },
+          "text": "Aby33 — X#p!ufvou349p8tuøyeet1000%",
+          "opacity": "1"
+        },
+        {
+          "tag": "div",
+          "cls": "alphabet-scroller_lqqWd",
+          "position": "fixed",
+          "rect": {
+            "top": 730,
+            "left": 308,
+            "width": 50,
+            "height": 50
+          },
+          "text": "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+          "opacity": "1"
+        },
+        {
+          "tag": "div",
+          "cls": "TUXToastProvider-topOutlet",
+          "position": "fixed",
+          "rect": {
+            "top": 0,
+            "left": 0,
+            "width": 390,
+            "height": 4
+          },
+          "text": "",
+          "opacity": "1"
+        },
+        {
+          "tag": "div",
+          "cls": "TUXToastProvider-center-outlet",
+          "position": "fixed",
+          "rect": {
+            "top": 0,
+            "left": 0,
+            "width": 390,
+            "height": 844
+          },
+          "text": "",
+          "opacity": "1"
+        },
+        {
+          "tag": "div",
+          "cls": "TUXToastProvider-bottomOutletContainer",
+          "position": "fixed",
+          "rect": {
+            "top": 836,
+            "left": 0,
+            "width": 390,
+            "height": 8
+          },
+          "text": "",
+          "opacity": "1"
+        }
+      ]
+    },
+    "changed": true,
+    "diff": {
+      "top": {
+        "at0": 0,
+        "at2000": -2035
+      }
+    }
+  },
+  "shots": [
+    "tiktoksans-390-full.jpg"
+  ],
+  "fullPageShotRepresentative": true,
+  "pageErrors": [
+    "Error: Minified React error #418; visit https://react.dev/errors/418 for the full message or use the non-minified dev environment for full errors and additional",
+    "Error: Minified React error #418; visit https://react.dev/errors/418 for the full message or use the non-minified dev environment for full errors and additional",
+    "Error: Minified React error #418; visit https://react.dev/errors/418 for the full message or use the non-minified dev environment for full errors and additional",
+    "Error: Minified React error #423; visit https://react.dev/errors/423 for the full message or use the non-minified dev environment for full errors and additional"
+  ]
+}

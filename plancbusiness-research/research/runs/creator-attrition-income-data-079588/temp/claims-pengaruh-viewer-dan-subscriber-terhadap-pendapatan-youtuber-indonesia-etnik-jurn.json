@@ -1,0 +1,72 @@
+[
+  {
+    "claim": "A 2023 Indonesian academic study (Bachmid & Yuhertiana, UPN Veteran Jawa Timur) drew a purposive sample of n=98 Indonesian YouTube channels via Slovin's formula from a population of N=4,561 Indonesian channels registered on socialblade.com, using socialblade's public view/subscriber/revenue estimates for March 1-31, 2023.",
+    "stance": "neutral",
+    "stance_target": "methodology available for measuring Indonesian creator income at scale",
+    "evidence_type": "empirical",
+    "scope_conditions": "Indonesia, YouTube, top/socialblade-tracked channels only, March 2023",
+    "quoted_support": "Populasi pada penelitian ini sebesar 4,561 youtuber Indonesia berdasarkan data yang ada di situs socialblade.com dan sampel yang digunakan pada penelitian ini sebesar 98 youtuber Indonesia dengan menggunakan rumus slovin.",
+    "numbers": ["N=4,561 population", "n=98 sample"],
+    "entities": ["Indonesia", "YouTube", "socialblade.com", "UPN Veteran Jawa Timur"],
+    "time_period": "March 2023",
+    "region": "Indonesia",
+    "confidence": "high",
+    "source_note_id": "pengaruh-viewer-dan-subscriber-terhadap-pendapatan-youtuber-indonesia-etnik-jurn"
+  },
+  {
+    "claim": "Among the top-98 sampled Indonesian YouTube channels, mean monthly revenue was IDR 212,159,606 (roughly $13,700 USD), with the highest-earning channel (Klara Tania) at IDR 1,271,889,000 and the lowest in the sample (Kemas pake Z) at IDR 1,951,110 -- a roughly 650-fold gap within this already-elite subsample.",
+    "stance": "supports",
+    "stance_target": "income distribution across creators, extreme dispersion even among top-tier earners",
+    "evidence_type": "statistical",
+    "scope_conditions": "Indonesia, top-98 socialblade-tracked YouTube channels, March 2023",
+    "quoted_support": "youtuber Indonesia dengan jumlah Pendapatan terbanyak yaitu Klara Tania (urutan ke-90) dengan total pendapatan 1.271.889.000 dan youtuber Indonesia dengan pendapatan terendah yaitu Kemas pake Z (urutan ke-98) dengan total pendapatan 1.951.110, selain itu nilai rata – rata pada pendapatan sebesar 212.159.606",
+    "numbers": ["mean IDR 212,159,606/month", "max IDR 1,271,889,000", "min IDR 1,951,110 (within top-98)", "~650x ratio"],
+    "entities": ["Klara Tania", "Kemas pake Z", "Indonesia", "YouTube"],
+    "time_period": "March 2023",
+    "region": "Indonesia",
+    "confidence": "high",
+    "source_note_id": "pengaruh-viewer-dan-subscriber-terhadap-pendapatan-youtuber-indonesia-etnik-jurn"
+  },
+  {
+    "claim": "Views (viewers) have a statistically significant positive effect on Indonesian YouTuber income (path coefficient 0.968, p=0.001), while subscriber count does not (path coefficient 0.029, p=0.387, hypothesis rejected); the model's R-squared of 0.950 indicates views and subscribers jointly explain 95% of income variance in this top-98 sample, but subscribers alone are not a significant driver.",
+    "stance": "supports",
+    "stance_target": "mechanism of creator income -- views/watch-time, not raw subscriber count, drive ad revenue",
+    "evidence_type": "statistical",
+    "scope_conditions": "Indonesia, top-98 YouTube channels, PLS-SEM analysis, March 2023",
+    "quoted_support": "Nilai P – Value audiens (viewer) adalah 0.001 < 0.05 ... audiens (viewer) berpengaruh signifikan positif terhadap pendapatan youtuber Indonesia ... Nilai P – Value subscriber adalah 0.387 > 0.05 ... subscriber berpengaruh positif ... namun hipotesis kedua ditolak",
+    "numbers": ["R-squared=0.950", "viewer path coefficient=0.968, p=0.001", "subscriber path coefficient=0.029, p=0.387"],
+    "entities": ["Indonesia", "YouTube"],
+    "time_period": "March 2023",
+    "region": "Indonesia",
+    "confidence": "high",
+    "source_note_id": "pengaruh-viewer-dan-subscriber-terhadap-pendapatan-youtuber-indonesia-etnik-jurn"
+  },
+  {
+    "claim": "Per-1,000-view YouTube ad revenue (RPM) for Indonesian channels, per socialblade.com data cited in the study, ranges from IDR 3,682 to IDR 58,920 -- roughly a 16-fold spread depending on content category, audience geography, and ad format.",
+    "stance": "supports",
+    "stance_target": "income distribution mechanism -- extreme variance in per-view monetization rates even within one country",
+    "evidence_type": "statistical",
+    "scope_conditions": "Indonesia, YouTube, per socialblade.com estimates, 2023",
+    "quoted_support": "setiap 1.000 audiens (viewer) yang didapatkan dari video yang diunggah, maka youtuber tersebut mendapatkan penghasilan kisaran Rp3.682 sampai dengan Rp58.920 menurut data socialblade.com",
+    "numbers": ["IDR 3,682-58,920 RPM per 1,000 views", "~16x spread"],
+    "entities": ["Indonesia", "YouTube", "socialblade.com"],
+    "time_period": "2023",
+    "region": "Indonesia",
+    "confidence": "medium",
+    "source_note_id": "pengaruh-viewer-dan-subscriber-terhadap-pendapatan-youtuber-indonesia-etnik-jurn"
+  },
+  {
+    "claim": "The sample of top Indonesian YouTube channels includes several broadcaster/corporate-operated channels (Indosiar, Trans7, TransTV, RCTI, SCTV) alongside individual creators, meaning the income figures in this study are not purely representative of individual creator economics.",
+    "stance": "neutral",
+    "stance_target": "caveat on applying top-channel revenue data to individual-creator income questions",
+    "evidence_type": "empirical",
+    "scope_conditions": "Indonesia, top-98 YouTube channel sample, 2023",
+    "quoted_support": "terdapat beberapa youtuber Indonesia yang bergerak sebagai perusahaan seperti, Indosiar, Trans 7 Official, Trans TV Official, RCTI, dan SCTV. Youtuber Indonesia yang bergerak sebagai perusahaan tidak menempati posisi pertama berdasarkan subscriber, namun youtuber Indonesia yang menempati posisi pertama yaitu youtuber yang bergerak sebagai Individu.",
+    "numbers": [],
+    "entities": ["Indosiar", "Trans7", "TransTV", "RCTI", "SCTV", "Indonesia"],
+    "time_period": "2023",
+    "region": "Indonesia",
+    "confidence": "medium",
+    "source_note_id": "pengaruh-viewer-dan-subscriber-terhadap-pendapatan-youtuber-indonesia-etnik-jurn"
+  }
+]

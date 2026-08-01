@@ -1,0 +1,44 @@
+[
+ {
+  "claim": "A 2026 APAC industry report on Southeast Asian influencer marketing reports campaign-spend shares for six markets but contains no measure of creator income, creator headcount, creator survival, or creator exit.",
+  "stance": "supports",
+  "stance_target": "The position that the absence of Southeast Asian creator-side quantitative evidence is structural: the region's dominant information producers are brand-buyer-facing agencies who measure where advertising money goes, not what happens to creators",
+  "evidence_type": "empirical",
+  "scope_conditions": "Audited absence across full text of AnyMind Group's 16 April 2026 summary of its State of Influence in APAC 2026 report; six SEA markets; no sample sizes or methodology disclosed for any figure",
+  "quoted_support": "Influencer campaigns on TikTok surged from 28.35% in 2023 to 50.58% in 2025, highlighting the platform's growing role as the primary channel for product discovery.",
+  "numbers": ["TikTok campaign share 28.35% in 2023 to 50.58% in 2025", "0 creator-income figures", "0 attrition figures"],
+  "entities": ["AnyMind Group", "TikTok", "Southeast Asia"],
+  "time_period": "2023-2026",
+  "region": "Southeast Asia / APAC",
+  "confidence": "high",
+  "source_note_id": "the-new-rules-of-influencer-marketing-in-southeast-asia-anymind-group"
+ },
+ {
+  "claim": "Brand influencer spend concentrates on different platforms in each Southeast Asian market: Singapore Instagram 71%, Malaysia Instagram 48% and TikTok 44%, Thailand TikTok 66%, Philippines TikTok 64%, and Vietnam TikTok plus Facebook above 90%.",
+  "stance": "supports",
+  "stance_target": "The position that Southeast Asia is not a single creator market and that platform-specific Western findings on channel survival and payouts have no single SEA counterpart to be compared against",
+  "evidence_type": "statistical",
+  "scope_conditions": "Six SEA markets; 2026 report; shares of brand campaign investment or volume, not creator income; sample size and methodology not disclosed; vendor-generated from the firm's own campaign book",
+  "quoted_support": "Singapore Instagram remains the dominant platform for influencer campaign investment at 71% compared to the rest. [...] Vietnam Influencer marketing thrives on a multi-platform ecosystem dominated by TikTok and Facebook, which together account for more than 90% of influencer campaign activity.",
+  "numbers": ["Singapore Instagram 71%", "Malaysia Instagram 48% / TikTok 44%", "Malaysia Xiaohongshu >28% of Lifestyle & Home spend", "Indonesia 74% performance-designed campaigns", "Thailand TikTok 66%", "Philippines TikTok 64%", "Vietnam TikTok+Facebook >90%"],
+  "entities": ["AnyMind Group", "Singapore", "Malaysia", "Indonesia", "Thailand", "Philippines", "Vietnam", "Xiaohongshu"],
+  "time_period": "2026",
+  "region": "Southeast Asia (6 markets)",
+  "confidence": "low",
+  "source_note_id": "the-new-rules-of-influencer-marketing-in-southeast-asia-anymind-group"
+ },
+ {
+  "claim": "Southeast Asian influencer marketing is shifting to Cost Per Result pricing tied to measurable conversions, which transfers campaign performance risk from brands onto creators.",
+  "stance": "neutral",
+  "stance_target": "The position that structural changes in how SEA creators are paid are altering income volatility in ways no longitudinal dataset is tracking",
+  "evidence_type": "expert-opinion",
+  "scope_conditions": "Southeast Asia; 2026; vendor assertion with no supporting measurement",
+  "quoted_support": "This shift is reflected in the growing adoption of Cost Per Result (CPR) models, where influencer budgets are directly tied to specific campaign outcomes.",
+  "numbers": ["no quantification provided"],
+  "entities": ["AnyMind Group", "Southeast Asia"],
+  "time_period": "2026",
+  "region": "Southeast Asia",
+  "confidence": "low",
+  "source_note_id": "the-new-rules-of-influencer-marketing-in-southeast-asia-anymind-group"
+ }
+]

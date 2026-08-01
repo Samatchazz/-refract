@@ -1,0 +1,72 @@
+[
+  {
+    "claim": "In a 2017 survey of 377 video content creators across 30 countries, only 45.8% reported generating any income from content creation, implying 54.2% earned nothing.",
+    "stance": "supports",
+    "stance_target": "A majority of active content creators earn zero income — a finding that replicates across two independent samples from the same fieldwork wave.",
+    "evidence_type": "statistical",
+    "scope_conditions": "N=377, fielded 2017, distributed via Reddit, Twitter, Facebook, Twitch and YouTube direct messaging, and an email list of active creators; USD 65 prize-draw incentive. Finland 38.6%, USA 32.3%, remainder spread across 30 countries. Self-selected sample of currently-active creators, so it cannot observe anyone who already quit and the true zero-income rate over everyone who ever attempted creation is higher. Independently corroborated by the same team's separate N=382 sample, which found 46.1% earning income.",
+    "quoted_support": "Overall, the survey gathered data from 377 respondents from 30 different countries, of whom most were from Finland (38.6 per cent), and the USA (32.3 per cent). Almost 70 per cent of the respondents reported either having a full-time job or being students. Although the survey did not ask the participants to specify whether video content creation was considered as their full-time job, 45.8 per cent of the respondents reported generating income through their video content creation activities.",
+    "numbers": ["N=377", "30 countries", "45.8% with income", "54.2% without", "Finland 38.6%", "USA 32.3%", "~70% employed full-time or students", "USD 65 incentive"],
+    "entities": ["YouTube", "Twitch", "Reddit", "Tampere University", "University of Turku"],
+    "time_period": "2017 survey; published Internet Research 2019",
+    "region": "30 countries but Finland/USA-dominated (70.9% combined). WESTERN-SKEWED — no Southeast Asian breakout; the authors flag cross-cultural generalizability as an explicit limitation.",
+    "confidence": "high",
+    "source_note_id": "fame-and-fortune-or-just-fun"
+  },
+  {
+    "claim": "Extrinsic motivations — income, career development and reputation — had no statistically significant association with a creator's intention to continue creating content, while intrinsic motivations did.",
+    "stance": "supports",
+    "stance_target": "Creators persist because of enjoyment and social connection, not money; by implication, financially-motivated creators are the ones most likely to quit when income does not materialise.",
+    "evidence_type": "empirical",
+    "scope_conditions": "PLS-SEM on N=377, 2017. Second-order extrinsic construct p=0.052 (H4 rejected); intrinsic construct p=0.000 (H2 supported). Disaggregated: enjoyment p=0.001, social interaction p=0.000, skill development p=0.038 all positive on intention to continue; no extrinsic construct reached significance on that outcome. Model explains 37.9% of variance in intention to continue (40.9% disaggregated). NOTE: 'intention to continue' is a stated intention, not an observed continuation — this is not a measured attrition rate.",
+    "quoted_support": "Extrinsic motivations did not have significant associations with intention to continue video content creation (H4 rejected, p = 0.052). ... None of the items from extrinsic motivations correlated with the intention to continue video content creation.",
+    "numbers": ["p=0.052 (extrinsic, n.s.)", "p=0.000 (intrinsic)", "enjoyment p=0.001", "social interaction p=0.000", "skill development p=0.038", "R2 37.9% / 40.9%", "N=377"],
+    "entities": ["YouTube", "Twitch"],
+    "time_period": "2017",
+    "region": "Finland/USA-dominated, 30 countries",
+    "confidence": "high",
+    "source_note_id": "fame-and-fortune-or-just-fun"
+  },
+  {
+    "claim": "Income and career development significantly predicted how many hours per week creators invested (p=0.046 and p=0.048), but the full motivational model explained only 2.1% of the variance in weekly time invested.",
+    "stance": "refutes",
+    "stance_target": "That creator effort levels can be explained by motivation at all — the near-zero explanatory power suggests hours are driven by unmeasured constraints (available time, employment, life circumstance) rather than by what creators want.",
+    "evidence_type": "statistical",
+    "scope_conditions": "PLS-SEM, N=377, 2017. R-squared for average weekly time invested was 2.1% in the second-order model and 5.5% in the disaggregated model. Raw correlation between the income construct and average weekly hours was 0.151. Neither second-order intrinsic (p=0.310) nor extrinsic (p=0.154) motivation predicted weekly hours.",
+    "quoted_support": "The model accounted for 37.9 per cent of the variance for intention to continue video content creation, as well as for 2.1 per cent of variance in the average time invested weekly on content creation. ... From the individual constructs reflecting extrinsic motivations, both career development (p = 0.048) and income (p = 0.046) had a significant association with the average time invested weekly on content creation.",
+    "numbers": ["R2 2.1% (weekly hours)", "R2 5.5% disaggregated", "income p=0.046", "career development p=0.048", "correlation 0.151", "intrinsic p=0.310", "extrinsic p=0.154"],
+    "entities": ["YouTube", "Twitch"],
+    "time_period": "2017",
+    "region": "Finland/USA-dominated",
+    "confidence": "high",
+    "source_note_id": "fame-and-fortune-or-just-fun"
+  },
+  {
+    "claim": "Over 60% of surveyed creators rated their content creation above the midpoint of a seven-point work-play scale, classifying it as primarily play rather than work.",
+    "stance": "supports",
+    "stance_target": "Most people counted in creator populations do not regard content creation as an occupation, so occupational attrition and hobby lapse are being conflated in headline creator statistics.",
+    "evidence_type": "statistical",
+    "scope_conditions": "N=377, 2017, seven-point Likert self-assessment. Corroborated by the companion N=382 study, where the play-oriented group was 268 of 382 (70.2%).",
+    "quoted_support": "The respondents were also asked to assess their activity as constitutes work or play on a seven-point Likert scale, over 60 per cent of the respondents reported a value higher than 4, indicating the activity to be considered primarily as play.",
+    "numbers": ["over 60%", "7-point scale", "N=377"],
+    "entities": ["YouTube", "Twitch"],
+    "time_period": "2017",
+    "region": "Finland/USA-dominated",
+    "confidence": "high",
+    "source_note_id": "fame-and-fortune-or-just-fun"
+  },
+  {
+    "claim": "Twitch's own 2017 figures put 81.5% of its users as male, which the authors cite to justify the male skew of their creator sample.",
+    "stance": "neutral",
+    "stance_target": "Demographic baseline constraining the representativeness of streaming-platform creator research.",
+    "evidence_type": "statistical",
+    "scope_conditions": "Platform-disclosed figure (Twitch, 2017) cited secondhand. Refers to Twitch USERS (viewers plus streamers), not creators specifically.",
+    "quoted_support": "The demographic of this study is also predominantly male, which may limit the findings. This may be the result of the gender division on the largest video sharing platforms, where the users are predominantly male, for example Twitch reports that 81.5 per cent of Twitch users are male (Twitch, 2017).",
+    "numbers": ["81.5% male"],
+    "entities": ["Twitch"],
+    "time_period": "2017",
+    "region": "Global Twitch",
+    "confidence": "medium",
+    "source_note_id": "fame-and-fortune-or-just-fun"
+  }
+]

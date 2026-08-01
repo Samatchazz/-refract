@@ -1,0 +1,83 @@
+[
+  {
+    "verdict": "wrong-source",
+    "severity": "critical",
+    "sentence": "One vendor source claiming to be this telemetry is excluded: one post's title says 97,601 channels against its own body's 105,891 for what it presents as one 2019 cohort, no analyst or methodology is named, and its 8.8-year median lifespan is the age at death of channels that had already passed 10,000 subscribers [[youtube-channel-survival-rates-a-7-year-creator-study-creatormap]].",
+    "cited_note_id": "youtube-channel-survival-rates-a-7-year-creator-study-creatormap",
+    "correct_note_id": "youtube-channel-lifespan-half-life-study-of-97601-creators-creatormap-creatormap",
+    "evidence": "The cited note's body uses 97,601 consistently throughout (in title, headline, and every chart caption) with no instance of 105,891 anywhere, and contains no 8.8-year figure; the 105,891-vs-97,601 title/body mismatch and the 8.8-year median-lifespan claim belong to a different CreatorMap post ('YouTube Channel Lifespan: Half-Life Study of 97,601 Creators'), which the vault's own claims index records as the actual source of that discrepancy and figure.",
+    "suggested_fix": "Swap the citation to note youtube-channel-lifespan-half-life-study-of-97601-creators-creatormap-creatormap, which documents the 105,891-vs-97,601 internal inconsistency and the 8.8-year median lifespan figure."
+  },
+  {
+    "verdict": "partially-supported",
+    "severity": "major",
+    "sentence": "Four constraints travel with the October 2021 Twitch leak: 896,261 zero- or negative-revenue accounts were excluded before any percentile was computed, the unit is the account with production companies inside the top ranks, sponsorships and tips are excluded while the $100 payout floor censors the low tail, and no country composition is disclosed [[twitch-streamer-earnings-increase-for-top-gamers-data-from-hack-shows-wsj]] [[the-unbearable-lightness-of-streaming-superjoost-playlist]].",
+    "cited_note_id": "the-unbearable-lightness-of-streaming-superjoost-playlist",
+    "correct_note_id": "twitch-streamer-earnings-increase-for-top-gamers-data-from-hack-shows-wsj",
+    "evidence": "The van Dreunen SuperJoost Playlist note gives aggregate payout totals, the 25%-under-minimum-wage WaPo citation, the 3-women-in-top-100 fact, and revenue-mix percentages, but nowhere states the 896,261 zero-revenue exclusion, the $100 payout floor, that the unit is an account (with production companies among top ranks), or that country composition is undisclosed; all four of those specific constraints appear instead in the co-cited WSJ note's body.",
+    "suggested_fix": "Drop this note as a citation for the sentence (or restrict its citation to the parts it actually supports, e.g. general leak commentary); the four enumerated constraints should cite the WSJ note only."
+  },
+  {
+    "verdict": "unsupported",
+    "severity": "critical",
+    "sentence": "The much-repeated finding that 25% of the top 10,000 highest-paid streamers do not clear US minimum wage — the 8,000th-ranked account cumulating $29,396 since 2019, roughly $14,698 a year against a $15,080 federal minimum — therefore assumes US costs for a population of unknown nationality [[many-top-twitch-streamers-dont-make-minimum-wage-and-3-new-takeaways-from-the-tw]] [[twitch-responds-to-leak-revealing-earnings-of-top-streamers-and-more-dexerto]].",
+    "cited_note_id": "twitch-responds-to-leak-revealing-earnings-of-top-streamers-and-more-dexerto",
+    "correct_note_id": "many-top-twitch-streamers-dont-make-minimum-wage-and-3-new-takeaways-from-the-tw",
+    "evidence": "The Dexerto note's body covers only leak verification (mixed streamer responses), Twitch's official breach statement, the top-20 cumulative earnings table, and an internal Asmongold-figure inconsistency; it contains no mention of the 25% minimum-wage statistic, the 8,000th-ranked account, $29,396, $14,698, or $15,080 anywhere in its text.",
+    "suggested_fix": "Cite only many-top-twitch-streamers-dont-make-minimum-wage-and-3-new-takeaways-from-the-tw for this sentence's numeric claims; drop the Dexerto citation here or move it to a sentence about leak-verification reliability."
+  },
+  {
+    "verdict": "partially-supported",
+    "severity": "major",
+    "sentence": "Within-topic Patreon Gini rose from 0.30 in June 2013 to 0.60 by December 2020 across the complete transaction record, while cross-topic Gini fell from 0.80 to 0.72 [[quantifying-the-creator-economy-a-large-scale-analysis-of-patreon]]; VTuber between-creator Gini rose from 0.60 to 0.75 between 2018 and 2023 [[who-reaps-all-the-superchats-a-large-scale-analysis-of-income]]; and Pareto alpha fell across YouTube, Instagram, Facebook and Twitch between 2018 and 2024, n=104,719 [[rich-get-richer-platform-attention-and-earnings-inequality]].",
+    "cited_note_id": "quantifying-the-creator-economy-a-large-scale-analysis-of-patreon",
+    "correct_note_id": null,
+    "evidence": "The paper states the within-topic Gini coefficient 'has steadily and substantially increased from 0.30 in 2015 to 0.60 in December 2020' and the cross-topic Gini fell 'ever since mid-2015... from 0.80 to 0.72' -- both series are anchored to 2015 (Figure 13's axis begins at 2015), not June 2013, which is only the platform's launch date/full-dataset start, not the date the Gini was 0.30.",
+    "suggested_fix": "Change 'rose from 0.30 in June 2013' to 'rose from 0.30 in 2015' and likewise anchor the cross-topic Gini's starting point to mid-2015, not June 2013."
+  },
+  {
+    "verdict": "wrong-source",
+    "severity": "critical",
+    "sentence": "Törhönen's structural model of 377 creators finds intrinsic motivation predicting intention to continue at p=0.000 while extrinsic motivation as a block fails at p=0.052 [[fame-and-fortune-or-just-fun]] [[play-playbour-or-labour-the-relationships-between-perception-of]].",
+    "cited_note_id": "play-playbour-or-labour-the-relationships-between-perception-of",
+    "correct_note_id": "fame-and-fortune-or-just-fun",
+    "evidence": "play-playbour-or-labour is the N=382 HICSS-52 ANOVA study on work/play perception with no PLS-SEM/structural model, no N=377 sample, and no p=0.000/p=0.052 figures; those exact numbers (N=377, PLS-SEM model, intrinsic-motivation constructs p=0.000/0.001/0.038, extrinsic-motivation second-order construct p=0.052, H4 rejected) belong to the companion Internet Research paper 'fame-and-fortune-or-just-fun', which is already co-cited in the sentence.",
+    "suggested_fix": "Drop play-playbour-or-labour-the-relationships-between-perception-of as a citation for this sentence; fame-and-fortune-or-just-fun alone fully supports every number in it."
+  },
+  {
+    "verdict": "wrong-source",
+    "severity": "critical",
+    "sentence": "Three caveats travel with all of it: the sub-base of \"creators who use TikTok as a source of income\" — the actual denominator behind each percentage — is disclosed for no country except Myanmar; Indonesia's minimum-wage benchmark is a single blended national figure of $216 a month, erasing province-level variation; and the sample is self-selected active TikTok users recruited through the platform's own vendor [[tiktoks-socio-economic-impact-in-southeast-asia-a-summary-of-the-report-kadence]].",
+    "cited_note_id": "tiktoks-socio-economic-impact-in-southeast-asia-a-summary-of-the-report-kadence",
+    "correct_note_id": "the-tiktok-effect",
+    "evidence": "The cited note is Kadence's short public-facing marketing summary of the report, whose body contains only three unquantified bullet points about education/wellness findings — no Myanmar sub-base footnote, no $216/month figure, and no methodology detail on sample recruitment. All three caveats (Myanmar-only disclosed sub-base, the USD 216/month Indonesia benchmark cited to 'ASEAN Briefing', and the self-selected TikTok-recruited survey design) are documented instead in the-tiktok-effect note, the primary 36-page report.",
+    "suggested_fix": "Swap the citation to the-tiktok-effect, which contains the footnote data and methodology addendum these three caveats are drawn from."
+  },
+  {
+    "verdict": "partially-supported",
+    "severity": "major",
+    "sentence": "| Employment counterfactual | Informal work over 70% of non-agricultural employment in Indonesia and the Philippines, over 60% Vietnam, 38% Thailand; 71% of Indonesian e-commerce sellers social/chat only, 26% blended, 3% platform only | US salaried norm | [[adbi-working-paper-series]] to 2018; [[technologies]] 2023 |",
+    "cited_note_id": "technologies",
+    "correct_note_id": null,
+    "evidence": "The 71%/26%/3% Indonesian e-commerce-seller-channel figures are correctly drawn from this World Bank/Australian Government 'Beyond Unicorns' report, but the report was published July 2021 using SAKERNAS 2019, SUSENAS 2019 and a Digital Economy Household Survey fielded Feb-Mar 2020; the string '2023' does not appear anywhere in the note and does not match the report's publication date or underlying data years.",
+    "suggested_fix": "Change the citation year for the technologies note from '2023' to '2021' (publication year) or '2019-2020' (underlying survey years)."
+  },
+  {
+    "verdict": "partially-supported",
+    "severity": "major",
+    "sentence": "Two Vietnamese-language pieces presented as local creator-income coverage paraphrase US survey data benchmarked to US living wages [[báo-cáo-thu-nhập-nhà-sáng-tạo-nội-dung-2025]].",
+    "cited_note_id": "báo-cáo-thu-nhập-nhà-sáng-tạo-nội-dung-2025",
+    "correct_note_id": null,
+    "evidence": "The cited note documents exactly one Vietnamese-language piece (a REVU.net blog post paraphrasing NeoReach's global creator-earnings survey, benchmarked to a $44,000/year US living wage). It gives no evidence of a second such piece, so the sentence's 'Two Vietnamese-language pieces' is not established by this citation alone.",
+    "suggested_fix": "Either add a citation to a second Vietnamese-language note documenting a comparable piece, or soften 'Two Vietnamese-language pieces' to 'At least one Vietnamese-language piece' to match what this source shows."
+  },
+  {
+    "verdict": "partially-supported",
+    "severity": "major",
+    "sentence": "Persistence models find structural access to monetization infrastructure to be the significant predictor of continuation [[who-reaps-all-the-superchats-a-large-scale-analysis-of-income]] [[vol0123456789]], and regional evidence finds Southeast Asian creators with systematically worse structural access [[httpsdoiorg10117720563051241234693]] [[httpsdoiorg10117720563051231180628]].",
+    "cited_note_id": "httpsdoiorg10117720563051241234693",
+    "correct_note_id": null,
+    "evidence": "This note's non-Western fieldwork is India, Ireland and Turkey — its own summary states explicitly this is 'NOT Southeast Asia' — so it cannot itself evidence 'Southeast Asian creators' having worse structural access; the geographic RPM/monetization gap it documents (India vs. US/developed-country ad rates, Turkish production houses) is a South Asian/European data point, not a Southeast Asian one.",
+    "suggested_fix": "Drop this citation from the Southeast Asia clause (the Rieder et al. linking-infrastructure note already supplies genuine Indonesia/Thailand data for that point), or reword to 'creators outside the West' / 'South and Southeast Asian creators' to match what this source actually samples."
+  }
+]

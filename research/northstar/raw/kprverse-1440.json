@@ -1,0 +1,787 @@
+{
+  "slug": "kprverse",
+  "url": "https://kprverse.com",
+  "name": "KPRVERSE",
+  "country": "?",
+  "viewport": {
+    "width": 1440,
+    "height": 900
+  },
+  "ok": true,
+  "httpStatus": 200,
+  "finalUrl": "https://kprverse.com/",
+  "consentDismissed": [],
+  "scrollInfo": {
+    "contentHeight": 16416,
+    "docScrollHeight": 16416,
+    "maxElementBottom": 16416,
+    "innerScrollerHeight": 16416,
+    "virtualScroll": false
+  },
+  "document": {
+    "scrollHeight": 16416,
+    "vhMultiple": 18.24,
+    "textNodeCount": 142,
+    "canvasCount": 1,
+    "elementCount": 1924,
+    "title": "KPR | Story",
+    "lang": null,
+    "contentHeight": 16416,
+    "scrollMode": "native"
+  },
+  "container": {
+    "dominantPairs": [
+      {
+        "width": 110,
+        "left": 762,
+        "count": 2,
+        "sample": {
+          "tag": "div",
+          "cls": "spacer"
+        }
+      },
+      {
+        "width": 266,
+        "left": 119,
+        "count": 1,
+        "sample": {
+          "tag": "span",
+          "cls": ""
+        }
+      },
+      {
+        "width": 138,
+        "left": 27,
+        "count": 1,
+        "sample": {
+          "tag": "div",
+          "cls": "spacer"
+        }
+      },
+      {
+        "width": 96,
+        "left": 27,
+        "count": 1,
+        "sample": {
+          "tag": "div",
+          "cls": "animation"
+        }
+      }
+    ],
+    "containerChain": {
+      "chain": [
+        {
+          "tag": "div",
+          "cls": "spacer",
+          "width": 109.63,
+          "maxWidth": "100%",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "block"
+        },
+        {
+          "tag": "div",
+          "cls": "hacky-text relative",
+          "width": 109.63,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "block"
+        },
+        {
+          "tag": "span",
+          "cls": "content",
+          "width": 109.63,
+          "maxWidth": "100%",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "inline-block"
+        },
+        {
+          "tag": "span",
+          "cls": "link-hover disabled",
+          "width": 0,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "contents"
+        },
+        {
+          "tag": "div",
+          "cls": "dot-caption type-caption3",
+          "width": 123.13,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "block"
+        },
+        {
+          "tag": "div",
+          "cls": "head",
+          "width": 123.13,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "flex"
+        },
+        {
+          "tag": "div",
+          "cls": "item social",
+          "width": 359.25,
+          "maxWidth": "none",
+          "paddingInline": "27px / 27px",
+          "marginInline": "0px / 0px",
+          "display": "flex"
+        },
+        {
+          "tag": "div",
+          "cls": "section top flex-row",
+          "width": 1440,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "flex"
+        }
+      ],
+      "constrained": {
+        "tag": "div",
+        "cls": "spacer",
+        "width": 109.63,
+        "maxWidth": "100%",
+        "paddingInline": "0px / 0px",
+        "marginInline": "0px / 0px",
+        "display": "block"
+      }
+    },
+    "grids": [],
+    "bodyPaddingInline": "0px / 0px",
+    "bodyMaxWidth": "none",
+    "htmlPaddingInline": "0px / 0px"
+  },
+  "leftEdgeTest": {
+    "layout": {
+      "n": 0,
+      "mean": null,
+      "stdDev": null,
+      "distinctExact": null,
+      "distinctClustered2px": null,
+      "clusters": [],
+      "values": []
+    },
+    "rect": {
+      "n": 0,
+      "mean": null,
+      "stdDev": null,
+      "distinctExact": null,
+      "distinctClustered2px": null,
+      "clusters": [],
+      "values": []
+    },
+    "headings": {
+      "n": 0,
+      "mean": null,
+      "stdDev": null,
+      "distinctExact": null,
+      "distinctClustered2px": null,
+      "clusters": [],
+      "values": []
+    },
+    "sectionDiscovery": "body-children"
+  },
+  "sections": [],
+  "verticalRhythm": {
+    "sectionCount": 0,
+    "near100vhCount": 0,
+    "near100vhPct": null,
+    "strictGcdOfSpacing": 1,
+    "baseUnitEstimate80pct": null,
+    "spacingHistogram": [
+      {
+        "value": 9,
+        "count": 29
+      },
+      {
+        "value": 27,
+        "count": 16
+      },
+      {
+        "value": 20,
+        "count": 14
+      },
+      {
+        "value": 22,
+        "count": 6
+      },
+      {
+        "value": 16,
+        "count": 4
+      },
+      {
+        "value": 29,
+        "count": 2
+      },
+      {
+        "value": 71,
+        "count": 1
+      },
+      {
+        "value": 87,
+        "count": 1
+      },
+      {
+        "value": 153,
+        "count": 1
+      },
+      {
+        "value": 5,
+        "count": 1
+      }
+    ],
+    "spacingSampleSize": 75
+  },
+  "typeScale": {
+    "distinctFontSizeCount": 9,
+    "distinctFontSizeCount_used2plus": 8,
+    "distinctSizes": [
+      {
+        "size": 159.12,
+        "count": 3
+      },
+      {
+        "size": 135.9,
+        "count": 3
+      },
+      {
+        "size": 14,
+        "count": 1
+      },
+      {
+        "size": 13.5,
+        "count": 2
+      },
+      {
+        "size": 12.6,
+        "count": 19
+      },
+      {
+        "size": 11,
+        "count": 16
+      },
+      {
+        "size": 9.9,
+        "count": 5
+      },
+      {
+        "size": 9,
+        "count": 12
+      },
+      {
+        "size": 8.1,
+        "count": 6
+      }
+    ],
+    "scaleSizesDesc": [
+      159.12,
+      135.9,
+      13.5,
+      12.6,
+      11,
+      9.9,
+      9,
+      8.1
+    ],
+    "consecutiveRatios": [
+      1.17,
+      10.07,
+      1.07,
+      1.15,
+      1.11,
+      1.1,
+      1.11
+    ],
+    "roles": {
+      "h1": {
+        "tag": "h1",
+        "fontSize": 159.12,
+        "fontWeight": "350",
+        "lineHeightPx": 133.66,
+        "lineHeightRatio": 0.84,
+        "letterSpacing": "-12.7296px",
+        "letterSpacingEm": -0.08,
+        "fontFamily": "ABCWhytePlus",
+        "fontFamilyFull": "ABCWhytePlus",
+        "textTransform": "uppercase",
+        "color": "rgb(255, 255, 255)",
+        "widthPx": 386.98,
+        "text": "Keep"
+      },
+      "biggestText": {
+        "tag": "h1",
+        "fontSize": 159.12,
+        "fontWeight": "350",
+        "lineHeightPx": 133.66,
+        "lineHeightRatio": 0.84,
+        "letterSpacing": "-12.7296px",
+        "letterSpacingEm": -0.08,
+        "fontFamily": "ABCWhytePlus",
+        "fontFamilyFull": "ABCWhytePlus",
+        "textTransform": "uppercase",
+        "color": "rgb(255, 255, 255)",
+        "widthPx": 386.98,
+        "text": "Keep"
+      },
+      "h2All": [],
+      "h3": null,
+      "body": {
+        "tag": "span",
+        "fontSize": 13.5,
+        "fontWeight": "400",
+        "lineHeightPx": 17.55,
+        "lineHeightRatio": 1.3,
+        "letterSpacing": "-0.27px",
+        "letterSpacingEm": -0.02,
+        "fontFamily": "ABCWhytePlus",
+        "fontFamilyFull": "ABCWhytePlus",
+        "textTransform": "none",
+        "color": "rgb(255, 255, 255)",
+        "widthPx": 266.39,
+        "text": "KPR is a brand that focuses on collective narrative and empo"
+      },
+      "small": {
+        "tag": "div",
+        "fontSize": 8.1,
+        "fontWeight": "450",
+        "lineHeightPx": 8.91,
+        "lineHeightRatio": 1.1,
+        "letterSpacing": "-0.162px",
+        "letterSpacingEm": -0.02,
+        "fontFamily": "IBMPlexMono",
+        "fontFamilyFull": "IBMPlexMono",
+        "textTransform": "uppercase",
+        "color": "rgb(255, 255, 255)",
+        "widthPx": 65.78,
+        "text": "Privacy Policy"
+      },
+      "mono": {
+        "tag": "span",
+        "fontSize": 9.9,
+        "fontWeight": "400",
+        "lineHeightPx": 8.1,
+        "lineHeightRatio": 0.82,
+        "letterSpacing": "0px",
+        "letterSpacingEm": 0,
+        "fontFamily": "IBMPlexMono",
+        "fontFamilyFull": "IBMPlexMono, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"",
+        "textTransform": "uppercase",
+        "color": "rgb(255, 255, 255)",
+        "widthPx": 17.81,
+        "text": "01K"
+      }
+    },
+    "readingMeasure": {
+      "columnWidthPx": 266.39,
+      "widthOf100Chars": 652.18,
+      "measureCh_spec": 40.85,
+      "measureCh_zeroWidth": 29.28,
+      "maxWidthDeclared": "100%",
+      "canvasFont": "13.5px ABCWhytePlus"
+    },
+    "readingMeasureAlternates": [
+      {
+        "tag": "span",
+        "fontSize": 13.5,
+        "fontWeight": "400",
+        "lineHeightPx": 17.55,
+        "lineHeightRatio": 1.3,
+        "letterSpacing": "-0.27px",
+        "letterSpacingEm": -0.02,
+        "fontFamily": "ABCWhytePlus",
+        "fontFamilyFull": "ABCWhytePlus",
+        "textTransform": "none",
+        "color": "rgb(255, 255, 255)",
+        "widthPx": 266.39,
+        "text": "KPR is a brand that focuses on collective narrative and empo"
+      },
+      {
+        "tag": "span",
+        "fontSize": 13.5,
+        "fontWeight": "400",
+        "lineHeightPx": 17.55,
+        "lineHeightRatio": 1.3,
+        "letterSpacing": "-0.27px",
+        "letterSpacingEm": -0.02,
+        "fontFamily": "ABCWhytePlus",
+        "fontFamilyFull": "ABCWhytePlus",
+        "textTransform": "none",
+        "color": "rgb(255, 255, 255)",
+        "widthPx": 262.45,
+        "text": "KPR is a brand that focuses on collective narrative and empo"
+      }
+    ],
+    "distinctFontFamilyCount": 4,
+    "fontFamilies": [
+      {
+        "family": "IBMPlexMono",
+        "count": 56
+      },
+      {
+        "family": "ABCWhytePlus",
+        "count": 8
+      },
+      {
+        "family": "ui-monospace",
+        "count": 2
+      },
+      {
+        "family": "IBM Plex Mono",
+        "count": 1
+      }
+    ]
+  },
+  "color": {
+    "textColors": [
+      {
+        "value": "rgb(255,255,255)",
+        "count": 56
+      },
+      {
+        "value": "rgb(0,0,0)",
+        "count": 11
+      }
+    ],
+    "backgroundColors": [
+      {
+        "value": "rgb(255,255,255)",
+        "count": 32
+      },
+      {
+        "value": "rgb(0,0,0)",
+        "count": 15
+      },
+      {
+        "value": "rgba(255,255,255,0.2)",
+        "count": 5
+      },
+      {
+        "value": "rgba(0,0,0,0.1)",
+        "count": 2
+      }
+    ],
+    "distinctTextColorCount": 2,
+    "distinctBgColorCount": 4
+  },
+  "persistent": {
+    "fixedOrSticky": [
+      {
+        "tag": "div",
+        "cls": "",
+        "position": "fixed",
+        "rect": {
+          "top": 0,
+          "left": 0,
+          "width": 1440,
+          "height": 900
+        },
+        "zIndex": "auto",
+        "text": "KEEPERS Become a Keeper What path will you forge as you beco",
+        "opacity": "1"
+      },
+      {
+        "tag": "div",
+        "cls": "",
+        "position": "fixed",
+        "rect": {
+          "top": 0,
+          "left": 0,
+          "width": 1440,
+          "height": 900
+        },
+        "zIndex": "1",
+        "text": "KPR is a brand that focuses on collective narrative and empo",
+        "opacity": "1"
+      },
+      {
+        "tag": "div",
+        "cls": "smooth-wrapper enabled",
+        "position": "fixed",
+        "rect": {
+          "top": 0,
+          "left": 0,
+          "width": 1440,
+          "height": 900
+        },
+        "zIndex": "1",
+        "text": "ProjectPROJECTThe KeepTHE KEEPFactionsFACTIONSThe WorldTHE W",
+        "opacity": "1"
+      },
+      {
+        "tag": "div",
+        "cls": "",
+        "position": "fixed",
+        "rect": {
+          "top": 0,
+          "left": 0,
+          "width": 1,
+          "height": 900
+        },
+        "zIndex": "auto",
+        "text": "",
+        "opacity": "1"
+      },
+      {
+        "tag": "div",
+        "cls": "",
+        "position": "fixed",
+        "rect": {
+          "top": 0,
+          "left": 0,
+          "width": 1,
+          "height": 900
+        },
+        "zIndex": "auto",
+        "text": "",
+        "opacity": "1"
+      },
+      {
+        "tag": "div",
+        "cls": "",
+        "position": "fixed",
+        "rect": {
+          "top": 21,
+          "left": 1299,
+          "width": 120,
+          "height": 49
+        },
+        "zIndex": "9998",
+        "text": "SIGN IN",
+        "opacity": "1"
+      }
+    ]
+  },
+  "nav": {
+    "tag": "div",
+    "cls": "item nav",
+    "height": 315,
+    "top": 15390,
+    "position": "static",
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "backdropFilter": "none",
+    "borderBottom": "0px rgb(229, 231, 235)",
+    "paddingBlock": "27px / 27px",
+    "transform": "none",
+    "opacity": "1",
+    "mixBlendMode": "normal",
+    "color": "rgb(255, 255, 255)"
+  },
+  "navState": {
+    "at0": {
+      "nav": {
+        "height": 315,
+        "top": 15390,
+        "position": "static",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "backdropFilter": "none",
+        "borderBottom": "0px rgb(229, 231, 235)",
+        "paddingBlock": "27px / 27px",
+        "transform": "none",
+        "opacity": "1",
+        "color": "rgb(255, 255, 255)"
+      },
+      "fixedOrSticky": [
+        {
+          "tag": "div",
+          "cls": "",
+          "position": "fixed",
+          "rect": {
+            "top": 0,
+            "left": 0,
+            "width": 1440,
+            "height": 900
+          },
+          "text": "KEEPERS Become a Keeper What path will you forge as you beco",
+          "opacity": "1"
+        },
+        {
+          "tag": "div",
+          "cls": "",
+          "position": "fixed",
+          "rect": {
+            "top": 0,
+            "left": 0,
+            "width": 1440,
+            "height": 900
+          },
+          "text": "KPR is a brand that focuses on collective narrative and empo",
+          "opacity": "1"
+        },
+        {
+          "tag": "div",
+          "cls": "smooth-wrapper enabled",
+          "position": "fixed",
+          "rect": {
+            "top": 0,
+            "left": 0,
+            "width": 1440,
+            "height": 900
+          },
+          "text": "ProjectPROJECTThe KeepTHE KEEPFactionsFACTIONSThe WorldTHE W",
+          "opacity": "1"
+        },
+        {
+          "tag": "div",
+          "cls": "",
+          "position": "fixed",
+          "rect": {
+            "top": 0,
+            "left": 0,
+            "width": 1,
+            "height": 900
+          },
+          "text": "",
+          "opacity": "1"
+        },
+        {
+          "tag": "div",
+          "cls": "",
+          "position": "fixed",
+          "rect": {
+            "top": 0,
+            "left": 0,
+            "width": 1,
+            "height": 900
+          },
+          "text": "",
+          "opacity": "1"
+        },
+        {
+          "tag": "div",
+          "cls": "",
+          "position": "fixed",
+          "rect": {
+            "top": 21,
+            "left": 1299,
+            "width": 120,
+            "height": 49
+          },
+          "text": "SIGN IN",
+          "opacity": "1"
+        }
+      ]
+    },
+    "at2000": {
+      "nav": {
+        "height": 315,
+        "top": 13390,
+        "position": "static",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "backdropFilter": "none",
+        "borderBottom": "0px rgb(229, 231, 235)",
+        "paddingBlock": "27px / 27px",
+        "transform": "none",
+        "opacity": "1",
+        "color": "rgb(255, 255, 255)"
+      },
+      "fixedOrSticky": [
+        {
+          "tag": "div",
+          "cls": "",
+          "position": "fixed",
+          "rect": {
+            "top": 0,
+            "left": 0,
+            "width": 1440,
+            "height": 900
+          },
+          "text": "KEEPERS Become a Keeper What path will you forge as you beco",
+          "opacity": "1"
+        },
+        {
+          "tag": "div",
+          "cls": "",
+          "position": "fixed",
+          "rect": {
+            "top": 0,
+            "left": 0,
+            "width": 1440,
+            "height": 900
+          },
+          "text": "KPR is a brand that focuses on collective narrative and empo",
+          "opacity": "1"
+        },
+        {
+          "tag": "div",
+          "cls": "smooth-wrapper enabled",
+          "position": "fixed",
+          "rect": {
+            "top": 0,
+            "left": 0,
+            "width": 1440,
+            "height": 900
+          },
+          "text": "ProjectPROJECTThe KeepTHE KEEPFactionsFACTIONSThe WorldTHE W",
+          "opacity": "1"
+        },
+        {
+          "tag": "div",
+          "cls": "",
+          "position": "fixed",
+          "rect": {
+            "top": 0,
+            "left": 0,
+            "width": 1,
+            "height": 900
+          },
+          "text": "",
+          "opacity": "1"
+        },
+        {
+          "tag": "div",
+          "cls": "",
+          "position": "fixed",
+          "rect": {
+            "top": 0,
+            "left": 0,
+            "width": 1,
+            "height": 900
+          },
+          "text": "",
+          "opacity": "1"
+        },
+        {
+          "tag": "div",
+          "cls": "",
+          "position": "fixed",
+          "rect": {
+            "top": 21,
+            "left": 1299,
+            "width": 120,
+            "height": 49
+          },
+          "text": "SIGN IN",
+          "opacity": "1"
+        }
+      ]
+    },
+    "changed": true,
+    "diff": {
+      "top": {
+        "at0": 15390,
+        "at2000": 13390
+      }
+    }
+  },
+  "shots": [
+    "kprverse-1440-full.jpg",
+    "kprverse-1440-scroll000.jpg",
+    "kprverse-1440-scroll025.jpg",
+    "kprverse-1440-scroll050.jpg",
+    "kprverse-1440-scroll075.jpg",
+    "kprverse-1440-scroll100.jpg"
+  ],
+  "fullPageShotRepresentative": true,
+  "pageErrors": [
+    "TypeError: Cannot read properties of undefined (reading '0')",
+    "TypeError: Cannot read properties of undefined (reading '0')",
+    "TypeError: Cannot read properties of undefined (reading '0')"
+  ]
+}

@@ -1,0 +1,155 @@
+{
+  "slug": "imnotabot",
+  "url": "https://imnotabot.sangyoungbae.com",
+  "name": "I'm not a bot",
+  "country": "Korea",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "ok": false,
+  "httpStatus": 200,
+  "finalUrl": "https://imnotabot.sangyoungbae.com/",
+  "consentDismissed": [],
+  "scrollInfo": {
+    "contentHeight": 844,
+    "docScrollHeight": 844,
+    "maxElementBottom": 844,
+    "innerScrollerHeight": 0,
+    "virtualScroll": false
+  },
+  "document": {
+    "scrollHeight": 844,
+    "vhMultiple": 1,
+    "textNodeCount": 0,
+    "canvasCount": 0,
+    "elementCount": 123,
+    "title": "I'M NOT A BOT",
+    "lang": "en",
+    "contentHeight": 844,
+    "scrollMode": "native"
+  },
+  "container": {
+    "dominantPairs": [],
+    "containerChain": null,
+    "grids": [],
+    "bodyPaddingInline": "0px / 0px",
+    "bodyMaxWidth": "none",
+    "htmlPaddingInline": "0px / 0px"
+  },
+  "leftEdgeTest": {
+    "layout": {
+      "n": 0,
+      "mean": null,
+      "stdDev": null,
+      "distinctExact": null,
+      "distinctClustered2px": null,
+      "clusters": [],
+      "values": []
+    },
+    "rect": {
+      "n": 0,
+      "mean": null,
+      "stdDev": null,
+      "distinctExact": null,
+      "distinctClustered2px": null,
+      "clusters": [],
+      "values": []
+    },
+    "headings": {
+      "n": 0,
+      "mean": null,
+      "stdDev": null,
+      "distinctExact": null,
+      "distinctClustered2px": null,
+      "clusters": [],
+      "values": []
+    },
+    "sectionDiscovery": "body-children"
+  },
+  "sections": [
+    {
+      "index": 0,
+      "tag": "div",
+      "id": null,
+      "cls": "z-50 !fixed wh-full object-contain bg-black relative",
+      "height": 844,
+      "vhFraction": 1,
+      "paddingBlockStart": "0px",
+      "paddingBlockEnd": "0px",
+      "marginBlockStart": "0px",
+      "marginBlockEnd": "0px",
+      "firstText": null,
+      "heading": null
+    }
+  ],
+  "verticalRhythm": {
+    "sectionCount": 1,
+    "near100vhCount": 1,
+    "near100vhPct": 100,
+    "strictGcdOfSpacing": null,
+    "baseUnitEstimate80pct": null,
+    "spacingHistogram": [],
+    "spacingSampleSize": 0
+  },
+  "typeScale": {
+    "distinctFontSizeCount": 0,
+    "distinctFontSizeCount_used2plus": 0,
+    "distinctSizes": [],
+    "scaleSizesDesc": [],
+    "consecutiveRatios": [],
+    "roles": {
+      "h1": null,
+      "biggestText": null,
+      "h2All": [],
+      "h3": null,
+      "body": null,
+      "small": null,
+      "mono": null
+    },
+    "readingMeasure": null,
+    "readingMeasureAlternates": [],
+    "distinctFontFamilyCount": 0,
+    "fontFamilies": []
+  },
+  "color": {
+    "textColors": [],
+    "backgroundColors": [
+      {
+        "value": "rgb(0,0,0)",
+        "count": 1
+      }
+    ],
+    "distinctTextColorCount": 0,
+    "distinctBgColorCount": 1
+  },
+  "persistent": {
+    "fixedOrSticky": [
+      {
+        "tag": "div",
+        "cls": "z-50 !fixed wh-full object-contain bg-black relative",
+        "position": "fixed",
+        "rect": {
+          "top": 0,
+          "left": 0,
+          "width": 390,
+          "height": 844
+        },
+        "zIndex": "50",
+        "text": "",
+        "opacity": "1"
+      }
+    ]
+  },
+  "nav": null,
+  "navState": {
+    "at0": null,
+    "at2000": null
+  },
+  "shots": [
+    "imnotabot-390-full.jpg"
+  ],
+  "fullPageShotRepresentative": true,
+  "notMeasurable": "only 0 rendered text nodes (0 canvas element(s)) — WebGL/canvas-driven, no DOM grid to learn from",
+  "pageErrors": []
+}

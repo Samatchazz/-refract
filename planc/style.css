@@ -1,0 +1,783 @@
+/* PlanC — PICKSET M4-T*(PATH A)-A5-B2-C1-D2-E1-P2-G2-K3-F1-Q2-H1-I1-J1-L3 */
+
+/* ══════════════════════════════════════════════════════════════════════
+   THEME BLOCK — the only place a colour value or a font name may appear.
+   Swap --font-display / --font-body + the <link> block in index.html to
+   move to PATH B (Aperçu Thai Pro Variable + Thonglor Soi 4). No JS reads
+   a font name; no component hard-codes a colour.
+   ══════════════════════════════════════════════════════════════════════ */
+:root{
+  /* ---- COLOUR WORLD: "Playground" — light-first, white holds ~85% ---- */
+  --bg:      #ffffff;
+  --bg-2:    #f4f9fc;
+  --fg:      #111111;   /* 18.88:1 on --bg  (AAA) */
+  --fg-soft: #555555;   /*  7.46:1          (AAA) */
+  --ac1:     #2779a7;   /* TEAL  — 4.80:1 (AA) — text-safe */
+  --ac2:     #FF9398;   /* CORAL — 2.13:1 (FAIL) — graphic only, never text */
+
+  /* COLOUR MEANING (build rule, not a suggestion):
+     TEAL  = the system's moves — links, labels, rules, depth markers, numbers
+     CORAL = the visitor's moves — hover, ticked checkpoints, chosen items
+     Text on coral is always --fg (8.88:1). */
+
+  /* ---- TYPE ---- */
+  --font-display: Kanit, system-ui, sans-serif;    /* STATIC — never animate weight */
+  --font-body:    Anuphan, system-ui, sans-serif;  /* VARIABLE wght 100..700 */
+  --font-mono:    ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; /* accent labels, 0 KB */
+  /* TRAP 5 — MEASURED, not estimated. Canvas ink extents on Kanit 700 over
+     every display string on the site: worst descender อยู่ = 0.27em, worst
+     ascender ขั้น = 1.03em ⇒ 1.30 is the smallest value at which no wrap can
+     collide. 1.05 was NOT safe: at 390px the pinned sentence broke as
+     ...ครีเอเตอร์ / ที่... and needed 1.23. Do not lower without re-running
+     the measurement in the report. */
+  --lh-display: 1.30;
+  --lh-body:    1.7;
+  --ls-display: -0.01em;
+
+  /* TYPE SCALE — 6 steps, deliberately far apart. Before this there were 13
+     rendered sizes with SEVEN of them between 14 and 21px; sizes that close
+     together read as "nobody set this" rather than as a hierarchy. Nothing
+     outside this scale may set a font-size. */
+  --step-0: 12px;                          /* mono labels, markers */
+  --step-1: 15px;                          /* meta, captions, provenance */
+  --step-2: 17px;                          /* body */
+  --step-3: clamp(21px, 2.6vw, 30px);      /* lead / sub / pillar sub */
+  --step-4: clamp(34px, 6.2vw, 76px);      /* section headings */
+  --step-5: clamp(52px, 11vw, 150px);      /* hero, pillar names, walls, close */
+
+  /* ---- MOTION TOKENS — no easing or duration exists outside this set ---- */
+  --ease-glide:  cubic-bezier(0.25,0.1,0.25,1);
+  --ease-settle: cubic-bezier(0.22,1,0.36,1);
+  --ease-sym:    cubic-bezier(0.6,0,0.4,1);
+  --steps-q:     steps(5,end);
+  --t-micro: 150ms;
+  --t-base:  400ms;
+  --t-slow:  800ms;
+  --t-epic:  1200ms;
+  /* anchored to the reference build: its whole system staggers at 0.08s and
+     runs on two curves only — expo.out for entrances, power3.inOut for
+     curtains. --ease-settle and --ease-sym are this project's equivalents. */
+  --stagger-word: 80ms;
+  --stagger-row:  80ms;
+
+  /* ---- derived scale (no new values, pure layout) ---- */
+  --gut: clamp(20px, 4vw, 48px);
+  --wrap: 1320px;
+  --rule: 1px;
+  /* hairline, derived from --fg so it still lives in the theme block.
+     Separation is done with 1px lines and whitespace — never a heavy rule. */
+  --hair: color-mix(in srgb, var(--fg) 14%, transparent);
+  --hair-inv: color-mix(in srgb, var(--bg) 20%, transparent);
+  --sp-section: clamp(80px, 6vw + 40px, 132px);
+  --sp-block: clamp(36px, 4vw, 64px);
+}
+
+/* ══ PAGE GRID — 12 columns, and every section sits on a DIFFERENT span.
+   This is the part that decides whether a page reads as composed or as a
+   stack of blocks. Measured against the reference: it averaged 8.1 distinct
+   left edges per section; a single centred column gives 1.
+        s1 headline 1/9,  specimen 8/13      (asymmetric pair)
+        s2 manifesto 4/11                     (indented — nothing at the margin)
+        s3 four number cells, full bleed, divider rules between
+        s4 portrait 1/4, ledger 5/13          (narrow + wide)
+        s7 frame full, table 2/12
+        s8 headline 1/10, doors 7/13          (overlapping the headline's span)
+   ══════════════════════════════════════════════════════════════════════ */
+@media (min-width:900px){
+  .wrap--grid{
+    display:grid; grid-template-columns:repeat(12,minmax(0,1fr));
+    column-gap:clamp(16px,2vw,28px); align-items:start;
+  }
+  .s1 .hl        { grid-column:1 / 10; }
+  .s1__lower     { grid-column:1 / 13; display:grid;
+                   grid-template-columns:repeat(12,minmax(0,1fr));
+                   column-gap:clamp(16px,2vw,28px); align-items:start; }
+  .s1__lead      { grid-column:1 / 7; }
+  .s1 .spec      { grid-column:8 / 13; max-width:none; }
+  .s1 .scrollcue { grid-column:1 / 13; }
+
+  .s2 .hl--2, .s2 .fill, .s2 .en--mid, .s2 .voice-line{ grid-column:4 / 11; }
+  .s2 .mark{ grid-column:1 / 4; }
+
+  .s3 .hl--2 { grid-column:1 / 8; }
+  .s3 .sub   { grid-column:8 / 13; margin-block-start:.6em; }
+  .s3 .en    { grid-column:8 / 13; }
+  .s3 .nums, .s3 .ba, .s3 .voice-line, .s3 .bnd{ grid-column:1 / 13; }
+
+  .s4 .hl--2 { grid-column:1 / 8; }
+  .s4 .sub   { grid-column:8 / 13; margin-block-start:.6em; }
+  .s4 .en    { grid-column:8 / 13; }
+  .s4 .founder{ grid-column:1 / 13; }
+
+  .s5 .hl--2 { grid-column:1 / 7; }
+  .s5 .sub, .s5 .groups{ grid-column:7 / 13; }
+  .s5 .voice-line{ grid-column:1 / 13; }
+
+  .s6 .hl--2 { grid-column:1 / 8; }
+  .s6 .voice-line{ grid-column:8 / 13; }
+
+  .s7 .hl--2 { grid-column:1 / 8; }
+  .s7 .sub, .s7 .en{ grid-column:8 / 13; }
+  .s7 .voice-line, .s7 .diff{ grid-column:1 / 13; }
+
+  .s8 .hl--close{ grid-column:1 / 11; }
+  .s8 .sub  { grid-column:1 / 7; }
+  .s8 .doors{ grid-column:1 / 13; }
+}
+
+/* ══ RESET / BASE ══════════════════════════════════════════════════════ */
+*,*::before,*::after{ box-sizing:border-box; }
+html{ scroll-behavior:smooth; scroll-padding-top:84px; -webkit-text-size-adjust:100%; }
+body{
+  margin:0; background:var(--bg); color:var(--fg);
+  font-family:var(--font-body); font-size:var(--step-2); line-height:var(--lh-body);
+  font-variation-settings:'wght' 400;
+  word-break:normal; line-break:strict; overflow-wrap:break-word;
+  overflow-x:clip;                       /* TRAP 6 — clip, never hidden */
+}
+img,svg{ max-width:100%; }
+a{ color:var(--ac1); text-decoration-thickness:1px; text-underline-offset:.25em; }
+a:hover{ text-decoration-color:var(--ac2); text-decoration-thickness:3px; } /* coral as 3px underline only */
+button{ font:inherit; color:inherit; }
+:focus-visible{ outline:3px solid var(--ac1); outline-offset:3px; border-radius:2px; }
+.mono{ font-family:var(--font-mono); font-size:var(--step-0); letter-spacing:.04em; text-transform:none; }
+.wrap{ max-width:var(--wrap); margin-inline:auto; padding-inline:var(--gut); position:relative; }
+.wrap--narrow{ max-width:calc(32ch + var(--gut)*2); }
+
+/* Display headings. overflow:visible on every wrapping span (TRAP 5). */
+.hl{
+  font-family:var(--font-display); font-weight:500;
+  line-height:var(--lh-display); letter-spacing:var(--ls-display);
+  text-wrap:balance; margin:0; overflow:visible;
+}
+
+/* ══ HOUSE MOTION — masked word reveal. One grammar, reused everywhere, so
+   the page feels like a single piece rather than a pile of separate effects.
+   Word-level only: the mask never touches glyph structure, so Thai stacked
+   marks are safe.
+   The padding/negative-margin pair is load-bearing — a tight clip box cuts
+   the tops off ปุ๋ย/ขั้น because a font's declared ascent is smaller than the
+   ink those marks actually occupy. The padding buys headroom; the negative
+   margin keeps layout identical. */
+.rv{
+  display:inline-block; overflow:clip; vertical-align:top;
+  padding-block:.20em .20em; margin-block:-.20em -.20em;
+}
+.rv__i{ display:block; transform:translateY(120%); }
+.is-revealed .rv__i{
+  transform:translateY(0);
+  transition:transform var(--t-slow) var(--ease-settle) var(--d,0ms);
+}
+/* the accent word — a weight jump inside the heading. This is the Thai-safe
+   equivalent of an italic serif accent word: Kanit is static, so the heavier
+   cut is a second loaded file, never an interpolation. */
+.hl .is-accent{ font-weight:700; }
+
+/* ══ CURTAIN — the second half of the shared grammar, ported from the
+   reference's block-reveal. A solid panel wipes in from one side, the content
+   flips visible underneath it at mid-wipe, then the panel wipes out the far
+   side. Every block on the page enters this way, so crossing any section
+   boundary produces the same choreography instead of eight different ones.
+   transform + opacity only. */
+.cur{ position:relative; }
+.cur__c{
+  position:absolute; inset:0; z-index:2; pointer-events:none;
+  background:var(--curtain, var(--fg));
+  transform:scaleX(0); transform-origin:left center;
+}
+.on-ink .cur__c,.s2 .cur__c,.s6 .cur__c{ --curtain:var(--ac1); }
+.cur__hide{ opacity:0; }
+.cur.is-in .cur__c{ animation:curtain var(--t-slow) var(--ease-sym) var(--d,0ms) both; }
+.cur.is-in .cur__hide{ opacity:1; transition:opacity 1ms linear calc(var(--d, 0ms) + var(--t-base)); }
+@keyframes curtain{
+  0%     { transform:scaleX(0); transform-origin:left center; }
+  49.99% { transform:scaleX(1); transform-origin:left center; }
+  50%    { transform:scaleX(1); transform-origin:right center; }
+  100%   { transform:scaleX(0); transform-origin:right center; }
+}
+
+/* Hard failsafe. Every reveal above reaches its final value THROUGH a
+   transition or keyframe, so if the animation timeline never advances the
+   content stays hidden for good. This class jumps straight to the end state
+   with no timeline involved — it is the only thing that can rescue the page
+   when animation is frozen rather than merely slow. */
+.reveal-now .cur__hide{ opacity:1 !important; transition:none !important; }
+.reveal-now .cur__c{ display:none !important; }
+.reveal-now .rv__i{ transform:none !important; transition:none !important; }
+.hl *{ overflow:visible; }
+.hl__line{ display:block; }
+.hl--2{ font-size:var(--step-4); margin-block:0 .5em; max-width:16ch; }
+.hl--close{ font-size:var(--step-5); font-weight:700; margin-block:0 .4em; }
+
+.sub{ color:var(--fg-soft); max-width:38ch; font-size:var(--step-3); margin-block:1.4em 1em; }
+.en{ font-family:var(--font-mono); font-size:var(--step-0); color:var(--ac1); letter-spacing:.04em; }
+
+/* Section markers hang OFF the content column, on the page's left spine, so
+   every section no longer opens with an identical line of text. */
+.mark{
+  font-family:var(--font-mono); font-size:var(--step-0); color:var(--ac1);
+  letter-spacing:.1em; margin:0 0 clamp(20px,4vw,52px);
+}
+@media (min-width:1100px){
+  /* sits INSIDE the gutter band, not translated out of it — translating by
+     -100% put it at x:-38 where overflow-x:clip silently swallowed it */
+  .mark{ position:absolute; left:var(--gut); top:0; margin:0;
+    writing-mode:vertical-rl; }
+  .s > .wrap{ padding-inline-start:calc(var(--gut) + 56px); }
+  .s > .wrap::before{      /* the spine the markers hang on */
+    content:''; position:absolute; left:calc(var(--gut) + 28px); top:0; bottom:0;
+    width:var(--rule); background:var(--hair);
+  }
+}
+
+/* Sections butt directly together — there is never a gap, so there is never
+   an empty frame. Vertical rhythm lives in padding, not in margins. */
+/* SURFACE RHYTHM — backgrounds do the pacing. Before this, six of eight
+   sections were plain white and the page read as one long document.
+   white → bg-2 → INK(set piece) → white → white → bg-2 → INK → white → white
+   White still holds the large majority; the ink surfaces are the two word
+   walls, which are set pieces rather than reading sections. */
+.s{ position:relative; padding-block:var(--sp-section); }
+.s2,.s6{ background:var(--bg-2); }
+
+/* the dark anchor. Text on --fg is --bg = 18.88:1 */
+.on-ink{ background:var(--fg); color:var(--bg); }
+.on-ink .mark,.on-ink .en{ color:var(--bg); opacity:.65; }
+.on-ink a{ color:var(--bg); }
+.on-ink hr,.on-ink .bnd > i{ background:var(--hair-inv); }
+/* grid, not flex: a flex child shrink-wraps, which was pulling the hero's
+   content column to 603px and centring it while every other section sat at
+   the left gutter — the first thing a visitor saw was out of alignment with
+   the entire page below it. */
+.s1{ padding-block:clamp(96px,14vh,160px) clamp(60px,9vh,110px); min-height:100svh;
+     display:grid; align-content:center; }
+
+/* ══ [B2] SCROLL ENGINE — 3 parallax layers, transform only ═══════════
+   BACK 1.15× + blur + .35 (trend words) · MID 1× (content) · FRONT 0.92×
+   (pillar labels, depth markers, key numbers). Displacement capped ±8vh.
+   B2 also owns the boundary rules ([B2b] below) because they run on the
+   same scroll-progress engine. Depends on: nothing. */
+/* The trend words live in the document rather than in a fixed layer, so they
+   genuinely drift past the content instead of hovering over it. JS sets the
+   layer height to the document height; the words are then positioned as a
+   percentage of that. */
+/* At teal + .35 these read as a coral-ish blur sitting ON TOP of real
+   sentences — the eye files them as a rendering fault, not as depth. They are
+   noise the visitor is meant to scroll past, so: neutral, much fainter, and
+   never competing with body text for attention. */
+.px-back{
+  position:absolute; top:0; left:0; width:100%; z-index:0; pointer-events:none;
+  filter:blur(2px); opacity:.16;
+}
+.px-back span{
+  position:absolute; font-family:var(--font-display); font-weight:400;
+  color:var(--fg-soft); white-space:nowrap; font-size:var(--step-4);
+  will-change:transform;
+}
+.on-ink .px-back span{ color:var(--bg); }
+.nav,main,.foot,.wall{ position:relative; z-index:1; }
+.px-front{ will-change:transform; }
+
+/* ══ [B2b] BOUNDARY RULES — six hand-offs, all scaleX/scaleY ══════════
+   1→2 hero rule → manifesto left rule · 3→4 number rule → timeline axis
+   4→5 axis → partner top rule · 5→6 partner bottom rule → 00m marker
+   7→8 comparison axis → closing top edge */
+.bnd{ pointer-events:none; }
+.bnd > i{ display:block; background:var(--ac1); transform-origin:0 0; }
+.bnd--h{ margin-top:clamp(40px,7vh,90px); }
+.bnd--h > i{ height:var(--rule); width:100%; transform:scaleX(var(--p,0)); }
+.bnd--thick > i{ height:calc(var(--rule)*2); }
+.bnd--edge > i{ height:calc(var(--rule)*3); }
+.bnd--v > i{ width:var(--rule); height:100%; transform:scaleY(var(--p,0)); }
+.s2__rule{ position:absolute; inset-block:0; left:0; width:var(--rule); }
+.bnd--tail{ position:absolute; left:var(--gut); bottom:0; width:var(--rule); height:clamp(40px,7vh,90px); }
+.bnd--drop{ position:absolute; left:var(--gut); bottom:calc(-1*clamp(40px,7vh,90px)); width:var(--rule); height:clamp(40px,7vh,90px); }
+.s5{ overflow:visible; }
+
+/* ══ [I1] PRELOADER — epic budget 1/2 ════════════════════════════════ */
+.pre{ display:none; }
+.js .pre{
+  display:grid; place-items:center; position:fixed; inset:0; z-index:90;
+  background:var(--bg);
+  transition:opacity var(--t-base) var(--ease-settle);
+}
+.pre.is-out{ opacity:0; pointer-events:none; }
+.pre.is-gone{ display:none; }
+.pre__stage{ position:relative; }
+.pre__word{
+  font-family:var(--font-display); font-weight:500;
+  font-size:var(--step-5); line-height:var(--lh-display);
+  letter-spacing:var(--ls-display); display:block; overflow:visible;
+  will-change:transform;
+}
+.pre__strike{
+  position:absolute; left:-4%; top:50%; width:108%; height:2px; overflow:visible;
+}
+.pre__strike line{
+  stroke:var(--ac2); stroke-width:2; vector-effect:non-scaling-stroke;
+  stroke-dasharray:100; stroke-dashoffset:100;      /* sanctioned exception */
+}
+.pre.is-strike .pre__strike line{ stroke-dashoffset:0; transition:stroke-dashoffset 180ms var(--ease-glide); }
+.pre__word.is-fly{ transition:transform var(--t-epic) var(--ease-settle); }
+
+/* ══ [J1] NAV ════════════════════════════════════════════════════════ */
+.nav{
+  position:fixed; inset-block-start:0; inset-inline:0; height:64px; z-index:60;
+  display:flex; align-items:center; gap:24px;
+  padding-inline:var(--gut); background:var(--bg);
+  border-block-end:var(--rule) solid transparent;
+  transition:border-color var(--t-base) var(--ease-glide);
+}
+.nav.is-stuck{ border-block-end-color:var(--hair); }
+/* Over a set piece the bar must disappear into it, or the full-bleed moment is
+   cut in half by a white strip. Two separate states, because the wall has TWO
+   surfaces: ink wants white type, the coral wipe wants --fg (8.88:1). White on
+   coral measures ~1.9:1 and is unreadable. */
+.nav.is-clear{ background:transparent; border-block-end-color:transparent; }
+.nav.is-inv .nav__mark,.nav.is-inv .nav__links a{ color:var(--bg); }
+.nav.is-inv .nav__burger span{ background:var(--bg); }
+.nav__mark{
+  font-family:var(--font-display); font-weight:700; font-size:var(--step-2);
+  color:var(--fg); text-decoration:none; letter-spacing:var(--ls-display);
+  margin-inline-end:auto;
+}
+.nav__links{ display:flex; gap:22px; }
+.nav__links a{
+  color:var(--fg); text-decoration:none; font-size:var(--step-1); position:relative;
+  padding-block:4px;
+}
+.nav__links a::after{
+  content:''; position:absolute; inset-inline:0; inset-block-end:0; height:3px;
+  background:var(--ac2); transform:scaleX(0); transform-origin:0 50%;
+  transition:transform var(--t-micro) var(--ease-glide);
+}
+.nav__links a:hover::after,.nav__links a.is-press::after{ transform:scaleX(1); }
+.nav__burger{ display:none; width:44px; height:44px; background:none; border:0; padding:10px; cursor:pointer; }
+.nav__burger span{ display:block; height:2px; background:var(--fg); transition:transform var(--t-base) var(--ease-sym); }
+.nav__burger span+span{ margin-top:6px; }
+.nav__burger.is-press span{ transform:scaleX(.7); }
+
+.navov{
+  position:fixed; inset:0; z-index:70; background:var(--bg-2);
+  display:grid; place-content:center; gap:8px; text-align:center;
+}
+.navov[hidden]{ display:none; }
+.navov__list{ display:grid; gap:8px; }
+.navov__list a{
+  font-family:var(--font-display); font-weight:500; font-size:var(--step-4);
+  color:var(--fg); text-decoration:none; line-height:var(--lh-display); overflow:visible;
+  opacity:0; transform:translateY(24px);
+  transition:opacity var(--t-base) var(--ease-settle) var(--d,0ms),
+             transform var(--t-base) var(--ease-settle) var(--d,0ms);
+}
+.navov.is-open .navov__list a{ opacity:1; transform:none; }
+.navov__list a.is-press{ text-decoration:underline; text-decoration-color:var(--ac2); text-decoration-thickness:3px; }
+.navov__close{ margin-top:28px; background:none; border:0; font-family:var(--font-mono); font-size:var(--step-0); color:var(--ac1); cursor:pointer; }
+
+/* ══ [A5] HERO TYPE SPECIMEN ═════════════════════════════════════════
+   The hero is a two-part composition, not a stack: the headline takes the
+   full measure, and the specimen panel sits beside the sub as a second
+   column. On one axis it would just be another paragraph in the pile. */
+/* Default sits at the TOP of the specimen slider's own range (34–96px) rather
+   than the middle. The client previewed 64px, but at 64 the headline reads as
+   a paragraph in a 1320px container — and this hero is supposed to be the
+   type specimen. Flagged for review; the slider still spans the spec'd range. */
+.s1 .hl{ font-size:var(--hl-size, clamp(34px,7.6vw,96px)); font-weight:var(--hl-wght,500); max-width:13ch; }
+/* font-weight snaps between the 3 loaded Kanit files — never interpolated. */
+.s1 .sub{ max-width:34ch; }
+@media (min-width:900px){
+  .s1__lower{ display:grid; grid-template-columns:minmax(0,1fr) minmax(320px,.85fr);
+    gap:clamp(32px,5vw,72px); align-items:start; margin-block-start:clamp(24px,4vh,48px); }
+  .s1__lower > *{ margin-block-start:0; }
+}
+.spec{
+  padding-block-start:16px;
+  border-block-start:calc(var(--rule)*2) solid var(--fg); max-width:520px;
+}
+.spec__label{ color:var(--ac1); margin:0 0 18px; }
+.spec__row{ display:grid; gap:22px; }
+.spec__ctl{ display:grid; gap:8px; cursor:pointer; }
+.spec__ctl > span:first-child{ color:var(--fg-soft); display:flex; justify-content:space-between; }
+.spec__ctl output{ color:var(--fg); font-variant-numeric:tabular-nums; }
+.spec__hint{ color:var(--fg-soft); }
+.spec__cap{ color:var(--fg-soft); margin:18px 0 0; }
+.scrollcue{ color:var(--ac1); margin-block:clamp(28px,5vh,48px) 0; }
+
+/* --- the controls themselves. Browser-default range inputs were the single
+   loudest "this was not designed" signal on the page: a stock OS widget in
+   the middle of a site whose whole pitch is typographic taste. --- */
+.spec input[type=range]{
+  -webkit-appearance:none; appearance:none; width:100%; height:22px;
+  background:transparent; cursor:pointer; display:block; margin:0;
+}
+.spec input[type=range]::-webkit-slider-runnable-track{
+  height:calc(var(--rule)*2); background:var(--fg); border:0;
+}
+.spec input[type=range]::-moz-range-track{
+  height:calc(var(--rule)*2); background:var(--fg); border:0;
+}
+.spec input[type=range]::-webkit-slider-thumb{
+  -webkit-appearance:none; appearance:none;
+  width:14px; height:14px; border-radius:0; border:0;
+  background:var(--ac2);                       /* coral = the visitor's move */
+  margin-top:-6px;
+  transition:transform var(--t-micro) var(--ease-glide);
+}
+.spec input[type=range]::-moz-range-thumb{
+  width:14px; height:14px; border-radius:0; border:0; background:var(--ac2);
+  transition:transform var(--t-micro) var(--ease-glide);
+}
+.spec input[type=range]:hover::-webkit-slider-thumb,
+.spec input[type=range]:active::-webkit-slider-thumb{ transform:scale(1.25); }
+.spec input[type=range]:hover::-moz-range-thumb,
+.spec input[type=range]:active::-moz-range-thumb{ transform:scale(1.25); }
+.spec input[type=range]:focus-visible{ outline:3px solid var(--ac1); outline-offset:6px; }
+/* the 3 loaded weights, drawn as real stops so the snap looks deliberate */
+.spec__ctl--stops{ position:relative; }
+.spec__stops{ display:flex; justify-content:space-between; margin-top:-4px; }
+.spec__stops span{
+  font-family:var(--font-mono); font-size:var(--step-0); color:var(--fg-soft);
+  position:relative; padding-top:10px;
+}
+.spec__stops span::before{
+  content:''; position:absolute; top:0; left:50%; width:var(--rule); height:6px;
+  background:var(--fg-soft);
+}
+.spec__stops span:first-child::before{ left:0; }
+.spec__stops span:last-child::before{ left:auto; right:0; }
+.spec__stops span.is-on{ color:var(--fg); }
+
+/* ══ [C1] DUAL-VOICE WORDPLAY — mask wipe, transform only ════════════
+   Two layers in one grid cell so the button sizes to the longer string.
+   The mask box slides in from the left; its inner counter-translates so
+   the honest voice is revealed in place rather than sliding. */
+.voice-line{ margin-block:clamp(20px,3vh,32px); }
+.voice{
+  display:inline-grid; position:relative; background:none; border:0; padding:0;
+  text-align:start; cursor:pointer; font-size:var(--step-2);
+  line-height:var(--lh-body); max-width:46ch;
+}
+.voice > *{ grid-area:1/1; }
+.voice__a{ color:var(--fg-soft); font-variation-settings:'wght' 400; }
+.voice__mask{ overflow:clip; transform:translateX(-100%); background:inherit; }
+.voice__b{
+  display:block; color:var(--fg); font-variation-settings:'wght' 600;
+  transform:translateX(100%); background:var(--bg);
+}
+.s2 .voice__b,.s6 .voice__b{ background:var(--bg-2); }
+.voice__mask,.voice__b{ transition:transform var(--t-base) var(--ease-settle); }
+.voice[aria-expanded="true"] .voice__mask,
+.voice[aria-expanded="true"] .voice__b{ transform:translateX(0); }
+.voice::after{
+  content:''; position:absolute; inset-inline:0; inset-block-end:-6px; height:3px;
+  background:var(--ac2); transform:scaleX(0); transform-origin:0 50%;
+  transition:transform var(--t-base) var(--ease-settle);
+}
+.voice[aria-expanded="true"]::after{ transform:scaleX(1); }
+
+/* ══ [E1] MANIFESTO WORD-FILL — the only weight animation on the site.
+   Runs on Anuphan (variable). Class-driven: each word crosses once. */
+.fill{ max-width:32ch; font-size:var(--step-3); margin-block:0 1.2em; }
+.fill w{
+  display:inline-block; overflow:visible;   /* one shaping run per word */
+  font-variation-settings:'wght' 200;
+  color:var(--fg); opacity:.35; filter:blur(.4px);
+  transition:font-variation-settings var(--t-base) var(--ease-settle),
+             opacity var(--t-base) var(--ease-settle),
+             filter var(--t-base) var(--ease-settle);
+}
+.fill w.is-on{ font-variation-settings:'wght' 600; opacity:1; filter:blur(0); }
+.fill--land{ font-family:var(--font-display); font-weight:500; font-size:var(--step-4);
+  line-height:var(--lh-display); letter-spacing:var(--ls-display); max-width:20ch; }
+/* the landing line fills 1.5× slower */
+.fill--land w{ font-variation-settings:normal; transition-duration:calc(var(--t-base)*1.5); }
+.en--mid{ display:block; margin-block:1.6em; padding-inline-start:14px; border-inline-start:calc(var(--rule)*3) solid var(--ac1); }
+
+/* ══ [D2] WORD WALLS — 2 set pieces (boundaries 2→3 and 6→7).
+   These are the page's dark anchor: full-bleed ink, one enormous word. They
+   are the only moments the page goes dark, which is what makes them land. */
+.wall{ height:180vh; background:var(--fg); color:var(--bg); }
+.wall__sticky{ position:sticky; top:0; height:100svh; overflow:clip; }
+.wall__pane{ position:absolute; inset:0; display:grid; place-items:center; background:var(--fg); }
+.wall__word{
+  font-family:var(--font-display); font-weight:700;
+  font-size:clamp(56px,21vw,260px); line-height:var(--lh-display);
+  letter-spacing:var(--ls-display); overflow:visible; text-align:center;
+  padding-inline:var(--gut); color:var(--bg);
+}
+/* the wipe: mask slides down from above, inner counter-translates up */
+.wall__mask{ position:absolute; inset:0; overflow:clip; transform:translateY(calc((var(--p,0) - 1) * 100%)); }
+.wall__inner{ position:absolute; inset:0; transform:translateY(calc((1 - var(--p,0)) * 100%)); }
+/* the resolved word arrives in coral-on-ink: 5.5:1, and coral is a fill here,
+   not a hue applied to text on white */
+.wall__pane--b{ background:var(--ac2); }
+.wall__pane--b .wall__word{ color:var(--fg); }
+
+/* ══ [P2] PROOF NUMBERS — giant figures, provenance under every one ═══ */
+.nums{ list-style:none; margin:clamp(30px,6vh,60px) 0 0; padding:0;
+  display:grid; gap:clamp(28px,4vw,48px); grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); }
+/* counter-strip archetype: four cells edge to edge, separated by hairlines
+   rather than by gaps — the rules are what make it read as one instrument
+   instead of four floating numbers */
+@media (min-width:900px){
+  .nums{ grid-template-columns:repeat(4,minmax(0,1fr)); gap:0; }
+  .num{ padding-inline:clamp(14px,1.8vw,26px);
+        border-inline-start:var(--rule) solid var(--hair); }
+  .num:first-child{ padding-inline-start:0; border-inline-start:0; }
+}
+.num{ display:grid; gap:2px; align-content:start; }
+.num__v{
+  font-family:var(--font-display); font-weight:500;
+  font-size:var(--step-4); line-height:var(--lh-display);
+  letter-spacing:var(--ls-display); overflow:visible; color:var(--fg);
+  font-variant-numeric:tabular-nums; min-width:4ch;   /* digits never reflow neighbours */
+}
+/* entrance is owned by the shared curtain, not by a per-element fade */
+.num__u{ color:var(--ac1); }
+.num__p{ color:var(--fg-soft); font-size:var(--step-1); }
+.ba{ color:var(--fg-soft); margin-block:clamp(28px,4vh,44px) 0; display:grid; gap:4px; }
+.ba > span:first-child{ color:var(--ac1); }
+
+/* ══ [G2] FOUNDER TIMELINE — small mono figures on a rule.
+   Deliberately unlike §3: §3 is giant display figures about clients,
+   §4 is small mono figures about the founder. GAME budget 1/3. */
+.founder{ display:grid; gap:clamp(28px,5vw,56px); grid-template-columns:minmax(0,1fr); }
+/* narrow portrait against a wide ledger, with a deliberate empty column
+   between them — asymmetry is what stops this reading as a two-up card row */
+@media (min-width:900px){
+  .founder{ grid-template-columns:repeat(12,minmax(0,1fr));
+            column-gap:clamp(16px,2vw,28px); align-items:start; }
+  .portrait{ grid-column:1 / 4; }
+  .tl      { grid-column:5 / 13; }
+}
+.portrait{ margin:0; }
+.portrait__slot{
+  aspect-ratio:4/5; background:var(--bg-2); display:grid; place-content:center;
+  gap:6px; text-align:center; color:var(--ac1);
+  border:var(--rule) solid var(--ac1);
+}
+.portrait figcaption{ color:var(--fg-soft); font-size:var(--step-1); margin-block-start:10px; max-width:30ch; }
+
+.tl{ list-style:none; margin:0; padding:0 0 0 26px; position:relative; }
+.tl__axis{ position:absolute; inset-block:0; left:0; width:var(--rule); }
+.tl__row{ position:relative; display:grid; grid-template-columns:auto minmax(0,1fr);
+  gap:4px 14px; padding-block:clamp(12px,2vh,20px); align-items:baseline; }
+.tl__dot{ position:absolute; left:-26px; top:1.15em; width:7px; height:7px;
+  background:var(--bg); border:var(--rule) solid var(--ac1); border-radius:50%;
+  transform:translate(-3px,0); }
+.tl__y{ color:var(--ac1); font-variant-numeric:tabular-nums; min-width:5ch;
+  transform:translateY(12px); opacity:0;
+  transition:transform var(--t-base) var(--steps-q), opacity var(--t-base) var(--steps-q); }
+.tl__row.is-in .tl__y{ transform:none; opacity:1; }
+.tl__t{ font-size:var(--step-1); }
+.tl__row--now .tl__t{ color:var(--fg-soft); }
+
+.tl__row--here .tl__dot--here{ background:var(--ac2); border-color:var(--ac2); }
+.tl__row--here .tl__t{ color:var(--ac1); }
+.tl__caret{ display:inline-block; width:2px; height:1em; background:var(--ac1);
+  margin-inline-start:4px; vertical-align:-.15em;
+  animation:blink var(--t-epic) var(--ease-sym) infinite; }
+@keyframes blink{ 0%,45%{opacity:1} 50%,95%{opacity:0} 100%{opacity:1} }
+
+.tl__reveal{ background:none; border:0; padding:0; text-align:start; cursor:pointer;
+  font-size:var(--step-1); display:grid; gap:2px; justify-items:start; }
+.tl__more{ color:var(--ac1); }
+.tl__hidden{ grid-column:2; display:grid; grid-template-rows:0fr;
+  transition:grid-template-rows var(--t-base) var(--ease-settle); }
+.tl__hidden > p{ overflow:clip; margin:0; font-size:var(--step-1); color:var(--fg-soft); }
+.tl__row--fail.is-open .tl__hidden{ grid-template-rows:1fr; }
+.tl__row--fail.is-open .tl__hidden > p{ padding-block-start:8px; }
+.tl__row--fail.is-open .tl__more{ color:var(--fg-soft); }
+
+/* ══ [K3] PARTNER MARQUEE — names as type, 0 KB of assets ════════════ */
+.mq{ margin-block:clamp(28px,5vh,52px) 0; }
+.mq__viewport{ overflow:clip; padding-block:clamp(14px,2.4vh,26px);
+  border-block:var(--rule) solid var(--bg-2); }
+.mq__track{ display:flex; width:max-content; }
+.mq__set{ display:flex; gap:clamp(28px,5vw,64px); list-style:none; margin:0;
+  padding-inline:clamp(14px,2.5vw,32px); }
+.mq__set li{ font-family:var(--font-display); font-weight:500;
+  font-size:var(--step-4); line-height:var(--lh-display);
+  letter-spacing:var(--ls-display); overflow:visible; white-space:nowrap; }
+@media (prefers-reduced-motion: no-preference){
+  .mq__track{ animation:mq var(--mq-dur,40s) linear infinite; }
+}
+@keyframes mq{ from{ transform:translate3d(0,0,0); } to{ transform:translate3d(-25%,0,0); } }
+.mq__bar{ display:flex; align-items:center; gap:16px; margin-block-start:14px; }
+.mq__pause{ background:none; border:var(--rule) solid var(--ac1); color:var(--ac1);
+  font-family:var(--font-mono); font-size:var(--step-0); padding:6px 14px; cursor:pointer; border-radius:2px; }
+.mq__pause[aria-pressed="true"]{ background:var(--ac2); border-color:var(--ac2); color:var(--fg); }
+
+/* ══ [F1] PILLAR AUTO-ACCORDION — one open at a time ═════════════════ */
+.pillars{ margin-block:clamp(30px,6vh,60px) 0; border-block-start:var(--rule) solid var(--bg-2); }
+.pil{ border-block-end:var(--rule) solid var(--bg-2); }
+.pil__h{ margin:0; }
+.pil__btn{ width:100%; background:none; border:0; cursor:pointer; text-align:start;
+  display:grid; gap:2px 20px; align-items:baseline;
+  grid-template-columns:minmax(0,1fr) auto;
+  padding:clamp(18px,3vh,30px) var(--gut); max-width:var(--wrap); margin-inline:auto; }
+.pil__lv{ color:var(--ac1); grid-column:1; }
+.pil__depth{ color:var(--ac1); grid-column:2; grid-row:1/3; justify-self:end;
+  font-size:clamp(.8rem,2vw,1.5rem); font-variant-numeric:tabular-nums; }
+.pil[data-pillar="2"] .pil__depth{ font-size:clamp(1rem,3.4vw,2.4rem); }
+.pil[data-pillar="1"] .pil__depth{ font-size:clamp(.9rem,2.6vw,1.9rem); }
+.pil__name{ grid-column:1; font-family:var(--font-display); font-weight:500;
+  font-size:var(--step-5); line-height:var(--lh-display);
+  letter-spacing:var(--ls-display); overflow:visible;
+  transition:color var(--t-base) var(--ease-settle); }
+.pil__btn[aria-expanded="true"] .pil__name{ color:var(--fg); }
+.pil__btn[aria-expanded="false"] .pil__name{ color:var(--fg-soft); }
+.pil__wrap{ display:grid; grid-template-rows:0fr;
+  transition:grid-template-rows var(--t-base) var(--ease-settle); }
+.pil__btn[aria-expanded="true"] + .pil__wrap{ grid-template-rows:1fr; }
+.pil__inner{ overflow:clip; }
+.pil__inner > *{ max-width:var(--wrap); margin-inline:auto; padding-inline:var(--gut); }
+.pil__sub{ font-size:var(--step-3); margin-block:0 .6em; max-width:40ch; }
+.pil__body{ color:var(--fg-soft); max-width:52ch; margin-block:0 1em; }
+.pil__next{ color:var(--ac1); padding-block-end:clamp(18px,3vh,30px); }
+
+.faq__h{ color:var(--ac1); margin-block:clamp(40px,7vh,80px) 12px; }
+.faq details{ border-block-end:var(--rule) solid var(--bg-2); }
+.faq summary{ cursor:pointer; padding-block:14px; font-size:var(--step-2); list-style:none; position:relative; padding-inline-end:28px; }
+.faq summary::-webkit-details-marker{ display:none; }
+.faq summary::after{ content:'+'; position:absolute; inset-inline-end:0; color:var(--ac1); font-family:var(--font-mono); }
+.faq details[open] summary::after{ content:'–'; }
+.faq p{ margin:0 0 16px; color:var(--fg-soft); font-size:var(--step-1); max-width:52ch; }
+
+/* ══ [Q2] PINNED SENTENCE — pin budget 1/2, desktop only ═════════════ */
+.pin{ margin-block:clamp(20px,4vh,40px); }
+.pin__sentence{ font-family:var(--font-display); font-weight:500;
+  font-size:var(--step-4); line-height:var(--lh-display);
+  letter-spacing:var(--ls-display); overflow:visible; margin:0;
+  max-width:var(--wrap); margin-inline:auto; padding-inline:var(--gut); text-wrap:balance; }
+.pin__slot{ display:inline-grid; vertical-align:top; overflow:visible; }
+.pin__w{ grid-area:1/1; opacity:0; color:var(--ac1); overflow:visible;
+  transition:opacity var(--t-base) var(--ease-settle); }
+.pin__w.is-on{ opacity:1; }
+@media (min-width:768px){
+  .pin{ height:280vh; }
+  .pin__sticky{ position:sticky; top:0; height:100svh; display:grid; place-items:center; }
+}
+
+/* ══ comparison table — pairs argue, so nothing has to say "transformation" */
+.diff{ position:relative; margin-block:clamp(30px,6vh,60px) 0; }
+.diff__head{ display:none; color:var(--ac1); padding-block-end:10px; }
+.diff__axis{ display:none; }
+.diff__rows{ margin:0; display:grid; gap:0; }
+.diff__pair{ display:grid; gap:6px; padding-block:clamp(14px,2.4vh,22px);
+  border-block-start:var(--rule) solid var(--bg-2); }
+.diff__pair dt,.diff__pair dd{ margin:0; font-size:var(--step-1); }
+.diff__pair dt{ color:var(--fg-soft); }
+.diff__pair dd{ color:var(--fg); }
+/* the pairing does the arguing: the curtain sweeps left→right, so "now"
+   is uncovered before "after" without either side needing its own tween */
+/* mobile: axis is horizontal, each pair stacks before / rule / after */
+.diff__pair dd{ padding-block-start:10px; border-block-start:var(--rule) solid var(--ac1); }
+@media (min-width:768px){
+  .diff__head{ display:grid; grid-template-columns:1fr 1fr; gap:clamp(24px,5vw,64px); }
+  .diff__axis{ display:block; position:absolute; inset-block:0; left:50%; width:var(--rule); }
+  .diff__pair{ grid-template-columns:1fr 1fr; gap:clamp(24px,5vw,64px); align-items:start; }
+  .diff__pair dd{ padding-block-start:0; border-block-start:0; }
+}
+
+/* ══ [H1] CLOSING DOORS — deliberately unequal ═══════════════════════ */
+.doors{ display:grid; gap:clamp(36px,6vh,64px); margin-block:clamp(24px,4vh,44px) 0; }
+.door__a{
+  display:inline-block; background:var(--ac2); color:var(--fg);  /* 8.88:1 — the one legitimate coral+text */
+  text-decoration:none; font-family:var(--font-display); font-weight:700;
+  font-size:var(--step-4); line-height:var(--lh-display);
+  letter-spacing:var(--ls-display); overflow:visible;
+  padding:clamp(14px,2.4vh,24px) clamp(20px,4vw,44px);
+  transform:translateY(0); transition:transform var(--t-micro) var(--ease-glide);
+}
+.door__a:hover,.door__a.is-press{ transform:translateY(-3px); }
+.door__sub{ color:var(--fg-soft); font-size:var(--step-1); margin-block:14px 0; max-width:36ch; }
+.door--alt{ display:grid; gap:18px; align-items:start; }
+.door__q{ margin:0; font-size:var(--step-2); }
+.door__line{ font-variation-settings:'wght' 600; }
+.qr{ margin:0; display:none; }          /* LINE's URL scheme is dead on desktop → QR is mandatory there */
+.qr__svg{ width:160px; height:160px; display:block; }
+.qr figcaption{ color:var(--ac1); margin-block-start:8px; }
+@media (min-width:768px){
+  .door--alt{ grid-template-columns:auto auto; justify-content:start; gap:clamp(24px,4vw,48px); }
+  .qr{ display:block; }
+}
+
+/* ══ FOOTER ══════════════════════════════════════════════════════════ */
+.foot{ border-block-start:var(--rule) solid var(--bg-2); padding-block:clamp(32px,5vh,56px); }
+.foot__in{ display:grid; gap:18px; }
+.foot__nav,.foot__soc{ display:flex; flex-wrap:wrap; gap:18px; }
+.foot__nav a{ color:var(--fg); text-decoration:none; font-size:var(--step-1); }
+.foot__soc a{ font-size:var(--step-1); }
+.foot__micro{ color:var(--fg-soft); margin:0; }
+
+/* ══ [L3] CURSOR TRAIL — desktop pointers only ═══════════════════════ */
+.trail{ display:none; }
+@media (hover: hover) and (pointer: fine){
+  .trail{ display:block; position:fixed; inset:0; z-index:80; pointer-events:none; }
+}
+.trail b{
+  position:absolute; top:0; left:0; font-family:var(--font-mono); font-size:var(--step-0);
+  font-weight:400; color:var(--ac1); opacity:0; will-change:transform,opacity;
+}
+.trail b:nth-child(2n){ color:var(--fg); }   /* never coral — these are text */
+
+/* ══ RESPONSIVE ══════════════════════════════════════════════════════ */
+@media (max-width:768px){
+  .nav__links{ display:none; }
+  .nav__burger{ display:block; }
+  .nums{ grid-template-columns:repeat(2,minmax(0,1fr)); gap:clamp(20px,5vw,32px); } /* 2×2, never 1-per-row */
+  .num__v{ font-size:var(--step-4); }
+  .num__p{ font-size:var(--step-1); }
+  .wall{ height:150vh; }
+}
+@media (max-width:420px){
+  .wall__word{ font-size:clamp(40px,17vw,72px); }  /* scale down — never wipe horizontally */
+  .pil__btn{ grid-template-columns:minmax(0,1fr) auto; }
+}
+
+/* ══ REDUCED MOTION ══════════════════════════════════════════════════ */
+@media (prefers-reduced-motion: reduce){
+  html{ scroll-behavior:auto; }
+  *,*::before,*::after{
+    animation-duration:1ms !important; animation-iteration-count:1 !important;
+    transition-duration:1ms !important;
+  }
+  .px-back{ transform:none !important; }        /* multipliers → 1.0, blur stays */
+  .px-front{ transform:none !important; }
+  .pin{ height:auto; }
+  .pin__sticky{ position:static; height:auto; display:block; }
+  .tl__caret{ animation:none; opacity:1; background:var(--ac2); width:7px; height:7px; border-radius:50%; }
+  .mq__track{ animation:none; }
+  .num__v,.num__p,.diff__pair dt,.diff__pair dd,.tl__y,.navov__list a{ opacity:1 !important; transform:none !important; }
+  .fill w{ font-variation-settings:'wght' 600; opacity:1; filter:none; }
+  .wall{ height:auto; }
+  .wall__sticky{ position:static; height:auto; display:grid; }
+  .wall__pane{ position:static; padding-block:clamp(40px,8vh,90px); }
+  .wall__mask,.wall__inner{ position:static; transform:none !important; }
+}
+
+/* ══ NO-JS ═══════════════════════════════════════════════════════════
+   Everything that starts hidden for an entrance is revealed when JS is
+   absent, so the whole page is readable and the preloader never shows. */
+html:not(.js) .num__v,
+html:not(.js) .num__p,
+html:not(.js) .diff__pair dt,
+html:not(.js) .diff__pair dd,
+html:not(.js) .tl__y,
+html:not(.js) .pin__w{ opacity:1; transform:none; }
+html:not(.js) .pin{ height:auto; }
+html:not(.js) .pin__sticky{ position:static; height:auto; }
+html:not(.js) .pin__slot{ display:inline; }
+html:not(.js) .pin__w{ display:inline; }
+html:not(.js) .pin__w + .pin__w::before{ content:' → '; color:var(--fg-soft); }
+html:not(.js) .wall{ height:auto; }
+html:not(.js) .wall__sticky{ position:static; height:auto; display:grid; }
+html:not(.js) .wall__pane{ position:static; padding-block:clamp(40px,8vh,90px); }
+html:not(.js) .wall__mask,html:not(.js) .wall__inner{ position:static; transform:none; }
+html:not(.js) .bnd > i{ transform:none; }
+html:not(.js) .voice__mask{ display:none; }
+html:not(.js) .tl__hidden{ grid-template-rows:1fr; }
+html:not(.js) .pil__wrap{ grid-template-rows:1fr; }
+html:not(.js) .nav__burger{ display:none; }
+html:not(.js) .nav__links{ display:flex; }

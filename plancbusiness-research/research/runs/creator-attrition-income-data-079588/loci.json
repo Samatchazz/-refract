@@ -1,0 +1,154 @@
+{
+  "vault_tag": "creator-attrition-income-data-079588",
+  "analyst_outputs": {
+    "a": "loci-a.json (7 loci, 4 skips)",
+    "b": "loci-b.json (5 loci, 5 skips)"
+  },
+  "dedupe_note": "12 proposed loci merged to 6. Three pairs were near-duplicates across analysts (time-to-income, SEA evidence, and the quit-driver / exit-survey pair) and were merged keeping the stronger corpus_evidence. Two loci were dropped to skip_loci for budget: onlyfans-income-provenance (analyst A) and tiktok-nontransparency-benchmark (analyst B); both are recoverable in step 13 gap-fetch if a critic flags them. The analyst-A BLS/NEA administrative locus was folded into the comparability locus rather than dropped, because it is the anchor row that locus needs.",
+  "total_source_budget": 40,
+  "investigator_count": 6,
+  "inference_depth_review": "CONFIRMED deep, no change. Step 1 set deep provisionally; the corpus vindicates it. The load-bearing questions are underdetermined by clearly-published sources: the two highest-value primaries are bot-walled, the Indonesian national figure has no published methodology, no platform discloses creator-level distributions, and the best attrition evidence may not exist at all. Shim files unchanged.",
+  "loci": [
+    {
+      "name": "living-wage-share-magnitude",
+      "one_line": "Survey and telemetry evidence disagree by two to three orders of magnitude on what share of creators earns a living wage; establish which figure the report prints and why.",
+      "flavor": "dialectical",
+      "merged_from": [
+        "a:living-wage-share-magnitude"
+      ],
+      "importance": 10,
+      "uncertainty": 8,
+      "disagreement": 9,
+      "decision_impact": 10,
+      "composite_score": 37,
+      "source_budget": 12,
+      "rationale": "This is the query's central deliverable and the corpus's widest gap: 4-63% (self-selected surveys) against 0.04-1.6% (complete transaction records, platform-disclosed payouts, government-commissioned study). Part of the gap is denominator choice, but Hua et al. measured sampling-frame inflation at only about 10x, leaving a genuine residual. The report cannot print a single share figure without resolving how much of the gap is scope and how much is bias. Depth targets: the two still-blocked primaries (WSJ Twitch leak analysis, Rieder full monetization-linking paper) and the published UK IPO microdata, which permits computing a true median rather than banded percentages."
+    },
+    {
+      "name": "quit-driver-money-vs-motivation",
+      "one_line": "Self-reported burnout surveys blame financial insecurity; the only two studies that statistically model continuation find income does not predict exit at all.",
+      "flavor": "dialectical",
+      "merged_from": [
+        "a:quit-driver-money-vs-motivation",
+        "b:exit-survey-absence-actual-quitters"
+      ],
+      "importance": 9,
+      "uncertainty": 9,
+      "disagreement": 8,
+      "decision_impact": 8,
+      "composite_score": 34,
+      "source_budget": 8,
+      "rationale": "The sharpest genuine fight in the corpus, and it maps directly onto required heading 4. Censuswide/BDB (n=1,000) ranks financial instability first by severity at 55% and Ivors/MU (n=311) reports 43% took outside work; against this, Torhonen (n=377) finds intrinsic motivation predicts continuation at p=0.000 while income fails at p=0.052, and the Zhao Cox model (n=1,923) finds affiliation significant but hours streamed not. The two sides measure different constructs - stated reasons among survivors versus modelled predictors of actual exit - and both are routinely reported as why creators quit. The analyst-B exit-survey absence is folded in here because it is the REASON the fight cannot be settled: no instrument in the corpus samples people who already left. Depth target includes a hard search for any true ex-creator exit survey, with the absence documented if none exists."
+    },
+    {
+      "name": "sea-evidence-provenance-and-breadth",
+      "one_line": "Establish what quantitative creator evidence exists for Southeast Asia beyond Indonesia, and finish tracing the one national-scale figure to a primary record.",
+      "flavor": "dialectical",
+      "merged_from": [
+        "a:sea-figure-provenance-and-breadth",
+        "b:sea-creator-evidence-beyond-indonesia"
+      ],
+      "importance": 10,
+      "uncertainty": 8,
+      "disagreement": 6,
+      "decision_impact": 9,
+      "composite_score": 33,
+      "source_budget": 8,
+      "rationale": "Required heading 5 depends entirely on this. Analyst B verified by tag search that the 146-note corpus holds 14 Indonesia-tagged notes, 2 Philippines-tagged, and ZERO tagged Vietnam, Thailand, Malaysia or Singapore - against a decomposition requiring full-ASEAN scope. Meanwhile the single national-scale figure (8 million creators, 63% above UMR) has been traced to TikTok own DPR Komisi I testimony rather than to government statistics, and the BPS press release and DPR hearing record that would confirm it are both bot-walled. Depth work must either recover those primaries or state the absence with precision. Searching in Indonesian, Vietnamese, Thai and Tagalog is in scope."
+    },
+    {
+      "name": "attrition-telemetry-absence",
+      "one_line": "Verify whether any platform-scale creator survival telemetry exists, and adjudicate the one source claiming it.",
+      "flavor": "technical",
+      "merged_from": [
+        "a:attrition-telemetry-absence-and-creatormap-verification"
+      ],
+      "importance": 9,
+      "uncertainty": 7,
+      "disagreement": 6,
+      "decision_impact": 8,
+      "composite_score": 30,
+      "source_budget": 6,
+      "rationale": "Required heading 1 rests on four measurements and one unverified marketing claim. Three targeted OpenAlex sweeps in step 2 returned no platform-scale cohort survival study; if that holds, how many stop and how soon has no good answer and the report must say so with the search documented. The single source asserting otherwise - the creatormap.io claimed 97,601-channel study reporting 46.1% dark and a median lifespan of 8.8 years - must be adjudicated: either it discloses a methodology and becomes the report best attrition figure, or it is an SEO artefact with invented precision and must be named as such. A fresh search angle (non-English literature on Bilibili, Douyin, AfreecaTV, Niconico) is worth one pass before declaring the absence."
+    },
+    {
+      "name": "time-to-income-reframe-tenure-vs-output",
+      "one_line": "Advice sources give 3-18 month monetization timelines; a 36-million-channel census finds days-active is constant across success tiers and only output volume differs.",
+      "flavor": "dialectical",
+      "merged_from": [
+        "a:time-to-income-reframing",
+        "b:time-to-income-reframe-tenure-vs-output"
+      ],
+      "importance": 8,
+      "uncertainty": 6,
+      "disagreement": 7,
+      "decision_impact": 7,
+      "composite_score": 28,
+      "source_budget": 3,
+      "rationale": "Required heading 3 currently has an answer the evidence does not support. Rieder et al. 2020 (n=36,336,861) state that the average number of days active is surprisingly constant between tiers while elite channels average 940 videos against 294 - so elapsed time is not the operative variable, and the sub-question needs reframing rather than a number of months. Compounding this, vidIQ finds 89% of channels AT the 1,000-subscriber gate have under 5,000 monthly views, so eligibility does not equal income. Small budget because the direction is already clear; the depth work is confirming whether the tenure finding replicates beyond YouTube."
+    },
+    {
+      "name": "unit-of-analysis-and-comparability",
+      "one_line": "Determine whether a like-for-like cross-platform comparison table is constructable at all, given that every source uses a different unit, denominator, window and currency.",
+      "flavor": "synthesis",
+      "merged_from": [
+        "b:unit-of-analysis-comparison-table-feasibility",
+        "a:bls-nea-administrative-benchmark-for-creator-occupation"
+      ],
+      "importance": 8,
+      "uncertainty": 5,
+      "disagreement": 4,
+      "decision_impact": 8,
+      "composite_score": 25,
+      "source_budget": 3,
+      "rationale": "The query demands every figure carry sample size, year, platform and country - which is table-shaped - but the corpus mixes person-level (BLS, surveys), channel-level (Rieder), campaign-level (Regner) and account-level (Twitch leak) units across incompatible windows, and several headline statistics silently switch between them. This locus decides the report central presentational device: one comparison table, or a table plus an explicit non-comparability crosswalk. The analyst-A BLS/NEA/ACS administrative vein is folded in here as the table ground-truth anchor row - it is the only nationally-representative, self-employment-inclusive earnings series in the corpus (NEA/ACS 2023: full-time artists $70,170 versus part-time $20,380, the latter statistically indistinguishable from all part-time workers at $19,330)."
+    }
+  ],
+  "skip_loci": [
+    {
+      "slug": "creator-population-denominator",
+      "reason": "High decision_relevance in the contradiction graph, but the evidence_quality_delta already fully resolves it as definitional/genealogical rather than a measurement dispute needing more data: Goldman's figure is traced backwards through Zippia to a SignalFire VC blog post with no re-measurement possible, and Linktree's 200M is an admitted desk exercise. Further source-gathering will not produce a better denominator; the finding is the audited genealogy itself, which the corpus already has. Folded partial value into the bls-nea-administrative-benchmark locus, which chases a genuinely more rigorous denominator candidate instead.",
+      "proposed_by": "analyst-a"
+    },
+    {
+      "slug": "inequality-trend-worsening-vs-stable",
+      "reason": "decision_relevance is medium, not high, and the graph's own evidence_quality_delta concludes the apparent conflict is 'largely scoped differently rather than contradictory' (within-elite churn vs whole-population dispersion can both be true simultaneously) — already resolved, not a genuine open fight requiring depth investigation.",
+      "proposed_by": "analyst-a"
+    },
+    {
+      "slug": "youtube-payout-denominator-laundering",
+      "reason": "decision_relevance is medium, and the graph's evidence_quality_delta calls Side B 'an analytical correction rather than a competing measurement, and it is correct' with all three major platforms already confirmed to withhold the needed denominator. This is a stable finding to state in the draft, not a further-investigation target — no plausible additional source would unlock the missing per-creator distribution platforms have chosen not to disclose.",
+      "proposed_by": "analyst-a"
+    },
+    {
+      "slug": "twitch-payout-leak-denominator-reconciliation",
+      "reason": "The redundancy audit already establishes that the leak's denominator is quoted six incompatible ways and the observation window five incompatible ways, concluding 'pooling them produces nonsense' — this is an audited methodological instability to state, not a number to resolve with more sources, since the underlying leaked dataset itself is internally inconsistent per Dexerto's own analysis.",
+      "proposed_by": "analyst-a"
+    },
+    {
+      "slug": "living-wage-share-survey-vs-telemetry",
+      "reason": "Real, high-relevance contradiction (step-3 cluster 'living-wage-share', side_a survey 4-63% vs side_b telemetry 0.04-1.6%) but it is the corpus's single most heavily-argued fight, already fully structured with opposing_positions in contradiction-graph.json, and is the most obvious pick for the sibling analyst. My angle guidance directs me toward parts the corpus answers worst rather than argues about most, so I leave this for analyst A / direct promotion by the orchestrator rather than duplicating it.",
+      "proposed_by": "analyst-b"
+    },
+    {
+      "slug": "quit-driver-money-vs-motivation",
+      "reason": "Also a fully-structured, high-relevance step-3 cluster (financial-attribution surveys vs statistically-modelled continuation predictors) with its own opposing_positions already written. Strong candidate, but per angle guidance I am prioritising the exit-survey-absence locus instead, which targets a gap this cluster does not resolve: both sides in the existing cluster sample only currently-active creators, so neither side can speak to actual quitters. That gap is the more load-bearing depth target.",
+      "proposed_by": "analyst-b"
+    },
+    {
+      "slug": "creator-population-denominator-50m-vs-400m",
+      "reason": "Real definitional dispute (step-3 cluster), but resolving it would not change any share statistic's numerator, only its denominator's label, and the corpus has already traced the Goldman/Zippia/SignalFire provenance chain fully. Diminishing marginal value for report quality relative to the SEA and unit-of-analysis gaps; leaving to analyst A or orchestrator judgment.",
+      "proposed_by": "analyst-b"
+    },
+    {
+      "slug": "indonesia-63-percent-re-verification",
+      "reason": "Already fully traced by the width sweep (coverage-gaps.md and contradiction-graph.json cluster 'indonesia-63-percent'): origin is TikTok's DPR testimony, not a national statistic; BPS has no content-creator count; the 14% figure is an unrelated Linktree-derived quantity. Re-investigating would waste depth budget on a question the corpus has already settled with primary-source tracing.",
+      "proposed_by": "analyst-b"
+    },
+    {
+      "slug": "attrition-survival-telemetry-non-english-literature",
+      "reason": "Considered proposing a locus to search Chinese/Korean/Japanese-language academic literature (Bilibili, Douyin, Afreeca) for platform-scale survival telemetry the three OpenAlex sweeps missed. Rejected in favor of keeping loci focused on my assigned angle (SEA/time-to-income/unit-of-analysis); attrition-rate-and-timing is also a top-ranked step-3 contradiction cluster likely to be picked by the sibling analyst, and adding a sixth near-duplicate-domain locus would crowd out the SEA-breadth and TikTok-distribution gaps that are currently unclaimed by anyone.",
+      "proposed_by": "analyst-b"
+    }
+  ]
+}

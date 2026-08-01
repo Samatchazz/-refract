@@ -1,0 +1,44 @@
+[
+  {
+    "claim": "Survivorship bias operates not only on researchers sampling creators but on prospective creators themselves at the entry decision, making the visible-winners narrative self-sustaining as a recruitment mechanism.",
+    "stance": "supports",
+    "stance_target": "The methodological objection that creator populations are shaped by selection effects at entry as well as at measurement",
+    "evidence_type": "anecdotal",
+    "scope_conditions": "Personal opinion column, 949 words, published 3 July 2024; author self-identifies as an 18-year-old writer; no data, sample, platform, or country specified anywhere",
+    "quoted_support": "We all want to chase something which has inherent value to it. And when that comes with survivorship bias paired, it becomes irresistible not to chase.",
+    "numbers": [],
+    "entities": ["Substack", "Quora"],
+    "time_period": "July 2024",
+    "region": "Unstated; Western framing",
+    "confidence": "low",
+    "source_note_id": "desk-notes-2-whats-wrong-with-the-creator-economy"
+  },
+  {
+    "claim": "Platform lock-in for creators is structural rather than contractual: assembling creators, viewers and advertisers into a mutually-dependent triangle makes exit costly for each party without any explicit exclusivity term.",
+    "stance": "supports",
+    "stance_target": "Structural explanations for why creators persist on platforms with poor individual returns",
+    "evidence_type": "theoretical",
+    "scope_conditions": "Asserted without empirical support; no platform, cohort, or measurement given",
+    "quoted_support": "They build an ecosystem: creators, viewers, advertisers. Once all three elements are present, it starts to get locked up in a way. The other two elements make it highly frictional for the third one to leave.",
+    "numbers": [],
+    "entities": [],
+    "time_period": "2024",
+    "region": "Unstated",
+    "confidence": "low",
+    "source_note_id": "desk-notes-2-whats-wrong-with-the-creator-economy"
+  },
+  {
+    "claim": "A commentary source arguing at length that the creator economy fails creators contains zero quantitative evidence of any kind, illustrating how much of the adversarial literature on this topic is assertion rather than measurement.",
+    "stance": "supports",
+    "stance_target": "The finding that critique of creator-economy statistics is itself largely unquantified",
+    "evidence_type": "anecdotal",
+    "scope_conditions": "Full 949-word text reviewed; audited absence — no percentage, sample size, year-bounded figure, platform, or country appears in the piece",
+    "quoted_support": "I reject this notion of Creator Economy. It's a Fallacy Economy.",
+    "numbers": ["949 words", "0 statistics"],
+    "entities": [],
+    "time_period": "July 2024",
+    "region": "Unstated",
+    "confidence": "high",
+    "source_note_id": "desk-notes-2-whats-wrong-with-the-creator-economy"
+  }
+]

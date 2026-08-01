@@ -1,0 +1,58 @@
+[
+  {
+    "claim": "YouTube states that more than three million people earn through YouTube, a figure which against externally reported channel counts of roughly 115 million implies that only about 2-3% of channels generate income for anyone.",
+    "stance": "supports",
+    "stance_target": "The position that the share of content creators who earn any money at all is in the low single-digit percentages",
+    "evidence_type": "statistical",
+    "scope_conditions": "YouTube corporate marketing page, fetched 27 July 2026; 'earning through YouTube' is undefined and includes media companies, music labels and rights-holders, not only individual creators; no minimum earnings threshold is specified; the 115M channel denominator comes from a separate third-party source, so the ratio is a cross-source derivation rather than a platform-disclosed statistic",
+    "quoted_support": "See how our revenue sharing model has enabled a thriving ecosystem of more than three million people earning through YouTube.",
+    "numbers": ["3 million+ people earning", "2B viewers", "115M channels (external denominator)", "~2-3% derived"],
+    "entities": ["YouTube", "YouTube Partner Program"],
+    "time_period": "as published, fetched 27 July 2026",
+    "region": "Global",
+    "confidence": "medium",
+    "source_note_id": "creator-economy-income-through-youtube-how-youtube-works"
+  },
+  {
+    "claim": "YouTube reports paying more than $32 billion to partners globally in 2024, which divided by its own stated three million earners gives a mean of roughly $10,700 per earner per year, a figure that is uninformative about typical creators because the distribution is extreme right-skewed and the numerator includes media companies and record labels.",
+    "stance": "supports",
+    "stance_target": "The position that mean creator income is a misleading statistic and that platform aggregate payout figures cannot substitute for a median",
+    "evidence_type": "statistical",
+    "scope_conditions": "YouTube self-report citing the KPMG 'Money in Motion' report, September 2025; 2024 calendar year; global; 'partners' includes media companies and music rights-holders, so the per-person mean is an upper-bound artefact of dividing an institution-inclusive numerator by a person-count denominator",
+    "quoted_support": "YouTube was the 2nd largest contributor to content creation in terms of content spend in 2024, paying out more than $32B to partners globally. Source: KPMG \"Money in Motion\" report, September 2025",
+    "numbers": ["$32B paid in 2024", "3 million earners", "~$10,700 derived mean", "55% creator share"],
+    "entities": ["YouTube", "KPMG", "Money in Motion report"],
+    "time_period": "2024 payouts, report September 2025",
+    "region": "Global",
+    "confidence": "medium",
+    "source_note_id": "creator-economy-income-through-youtube-how-youtube-works"
+  },
+  {
+    "claim": "YouTube internal data for January-December 2024 shows that among Partner Program channels earning five figures or more in USD, over 50% earned revenue from sources other than ads and YouTube Premium.",
+    "stance": "supports",
+    "stance_target": "The position that reaching a living-wage income on a creator platform requires diversifying beyond the platform's own advertising revenue",
+    "evidence_type": "statistical",
+    "scope_conditions": "YouTube Internal Data, Jan-Dec 2024, global; CONDITIONED ON channels already earning $10,000+, so it is silent on the base rate of reaching that band and describes only the top of the distribution; no sample size, no channel count, and no independent audit disclosed",
+    "quoted_support": "Globally - of the YouTube Partner Program channels that earned 5 figures or more (USD) on YouTube in 2024, over 50% earned revenue from sources other than ads and YouTube Premium. Source: YouTube Internal Data, Jan-Dec 2024",
+    "numbers": ["5 figures or more (USD)", "over 50%", "Jan-Dec 2024"],
+    "entities": ["YouTube", "YouTube Partner Program", "YouTube Premium"],
+    "time_period": "January-December 2024",
+    "region": "Global",
+    "confidence": "medium",
+    "source_note_id": "creator-economy-income-through-youtube-how-youtube-works"
+  },
+  {
+    "claim": "YouTube's platform-disclosed structure separates a 500-subscriber application gate from a 1,000-subscriber ad-revenue gate, meaning a creator can be inside the Partner Program and still be earning no advertising revenue at all.",
+    "stance": "supports",
+    "stance_target": "The position that 'monetized creator' counts conflate two distinct populations and overstate how many creators have access to advertising income",
+    "evidence_type": "legal",
+    "scope_conditions": "YouTube corporate description of the Partner Program as of fetch date 27 July 2026; monetization surface availability varies by country",
+    "quoted_support": "Once a creator hits 500 subscribers they are eligible to apply for the YouTube Partner Program. Once accepted into the program and at 1,000 subscribers - creators unlock ad revenue and start earning 55% of the ads shown on their videos + YouTube premium subscriptions.",
+    "numbers": ["500 subscribers to apply", "1,000 subscribers for ad revenue", "55% share", "10 ways to earn"],
+    "entities": ["YouTube", "YouTube Partner Program", "YouTube Premium"],
+    "time_period": "fetched 27 July 2026",
+    "region": "Global, availability varies by country",
+    "confidence": "high",
+    "source_note_id": "creator-economy-income-through-youtube-how-youtube-works"
+  }
+]

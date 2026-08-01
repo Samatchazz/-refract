@@ -1,0 +1,58 @@
+[
+  {
+    "claim": "LenosTube's three-scenario time-to-monetization taxonomy (1-6 months fast-track, 6 months to 2 years for 'the majority', 2+ years slow growth) is asserted with no sample, no cohort and no measurement, and is published by a vendor that sells YouTube watch hours, views and comments.",
+    "stance": "refutes",
+    "stance_target": "The position that published time-to-monetization figures for creators constitute measured evidence",
+    "evidence_type": "anecdotal",
+    "scope_conditions": "LenosTube blog, last updated 2 April 2026; the page carries inline sales links to 'buy YouTube watch hours', 'buy real YouTube comments' and 'views from YouTube ads', giving the publisher a direct commercial interest in presenting the 4,000-hour threshold as a purchasable bottleneck; only two named survivor anecdotes are offered as support",
+    "quoted_support": "Fast-track Monetization | 1-6 Months | 2 Videos Per Week + Consistent Shorts... Average Pathway | 6 Months - 2 Years | 1 video per week or biweekly... Slow Growth | More Than 2 Years | Inconsistent Posting",
+    "numbers": ["1-6 months", "6 months to 2 years", "more than 2 years", "3 months (Cathrin anecdote)", "6 months to 1,000 subs (Ali Abdaal anecdote)"],
+    "entities": ["LenosTube", "YouTube", "Cathrin", "Ali Abdaal"],
+    "time_period": "article updated 2 April 2026",
+    "region": "Not specified",
+    "confidence": "low",
+    "source_note_id": "how-long-does-it-take-to-get-monetized-on-youtube-with-examples"
+  },
+  {
+    "claim": "The creator-advice literature describes a large sub-threshold population stalled below monetization for years, but quantifies it only rhetorically, as 'millions of little YouTubers trapped at 100-500 subscribers'.",
+    "stance": "supports",
+    "stance_target": "The position that the largest population in the creator economy is the pre-monetization stalled cohort, and that it is essentially unmeasured in published sources",
+    "evidence_type": "anecdotal",
+    "scope_conditions": "LenosTube blog assertion, April 2026; 'millions' is a rhetorical figure with no source; the associated attrition claim ('many give up at these stages') is likewise unquantified",
+    "quoted_support": "There are millions of little YouTubers trapped at 100-500 subscribers for years... Unfortunately, many give up at these stages.",
+    "numbers": ["100-500 subscribers", "'millions'"],
+    "entities": ["LenosTube", "YouTube"],
+    "time_period": "April 2026",
+    "region": "Not specified",
+    "confidence": "low",
+    "source_note_id": "how-long-does-it-take-to-get-monetized-on-youtube-with-examples"
+  },
+  {
+    "claim": "The 4,000-hour YouTube watch-time requirement is a rolling 12-month window counting only valid public watch hours, so a channel accumulating slowly can lose ground as older hours expire, and ad-driven views, private-video views and repeated views by the same user are excluded.",
+    "stance": "supports",
+    "stance_target": "The position that the monetization threshold is harder to clear than its headline number suggests, particularly for low-velocity channels",
+    "evidence_type": "legal",
+    "scope_conditions": "Third-party restatement of YouTube policy by LenosTube, April 2026; the rolling-window and valid-public-hours conditions are consistent with YouTube's own documentation, but the exclusion details here are the vendor's characterization",
+    "quoted_support": "You must have 4,000 hours of public watch time in the last 12 months... YouTube counts only public watch hours. If most of your views come from ads or private videos, those hours disappear from your total.",
+    "numbers": ["4,000 hours", "last 12 months"],
+    "entities": ["LenosTube", "YouTube"],
+    "time_period": "April 2026",
+    "region": "Global",
+    "confidence": "medium",
+    "source_note_id": "how-long-does-it-take-to-get-monetized-on-youtube-with-examples"
+  },
+  {
+    "claim": "Even after a channel meets YouTube's numeric thresholds, a manual human review stands between eligibility and monetization, reportedly adding delays of up to two months at peak and longer for finance, health, true-crime and children's content.",
+    "stance": "supports",
+    "stance_target": "The position that time-to-first-income exceeds time-to-threshold by an administratively imposed margin",
+    "evidence_type": "anecdotal",
+    "scope_conditions": "LenosTube assertion, April 2026; the existence of manual review is well established, but the 'as long as 2 months' delay figure has no source and no sample",
+    "quoted_support": "Remember, your channel is reviewed manually by an actual human - not an algorithm. Too many submissions can delay the review process. During peak times, the delay could be as long as 2 months.",
+    "numbers": ["up to 2 months review delay"],
+    "entities": ["LenosTube", "YouTube", "YouTube Partner Program"],
+    "time_period": "April 2026",
+    "region": "Global",
+    "confidence": "low",
+    "source_note_id": "how-long-does-it-take-to-get-monetized-on-youtube-with-examples"
+  }
+]

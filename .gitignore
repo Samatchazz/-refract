@@ -1,3 +1,7 @@
 node_modules/
 .env
 .claude/
+research/pixelcraft/out*/shots/
+research/pixelcraft/out*/dom/
+research/pixelcraft/out*/css/
+research/pixelcraft/out*/js/

@@ -1,0 +1,298 @@
+{
+  "recommendations": [
+    {
+      "id": "rec-1",
+      "category": "break-paragraph",
+      "severity": "major",
+      "section": "## 1. Attrition and Survival Rates of Creators and Channels — ### B. The absence, and who holds the missing data",
+      "current": "never published [[youtube-partner-program-overview-eligibility-computer-youtube-help]]. Five disclosure channels",
+      "recommended": "never published [[youtube-partner-program-overview-eligibility-computer-youtube-help]].\n\nFive disclosure channels",
+      "rationale": "The single paragraph runs past 2,000 characters and covers three distinct topics; this split ends the YouTube-specific block before the platform-disclosure inventory begins."
+    },
+    {
+      "id": "rec-2",
+      "category": "break-paragraph",
+      "severity": "major",
+      "section": "## 1. Attrition and Survival Rates of Creators and Channels — ### B. The absence, and who holds the missing data",
+      "current": "or platform-disclosure record. One vendor source claiming",
+      "recommended": "or platform-disclosure record.\n\nOne vendor source claiming",
+      "rationale": "The source-exclusion argument is a self-contained adjudication and reads as an afterthought when buried at the tail of a very long paragraph."
+    },
+    {
+      "id": "rec-3",
+      "category": "break-paragraph",
+      "severity": "major",
+      "section": "## 2. Income Distribution Across Creators: Median vs Mean and the Living-Wage Share — ### B. The living-wage share, as a matrix rather than a number",
+      "current": "already reporting the platform as an income source [[httpsdoiorg10117720563051231180628]] [[the-tiktok-effect]]. Two comparison classes survive:",
+      "recommended": "already reporting the platform as an income source [[httpsdoiorg10117720563051231180628]] [[the-tiktok-effect]].\n\nTwo comparison classes survive:",
+      "rationale": "This is the report's longest paragraph (~2,600 characters); the break separates the prohibition on averaging the rows from the constructive account of what can be compared."
+    },
+    {
+      "id": "rec-4",
+      "category": "break-paragraph",
+      "severity": "major",
+      "section": "## 2. Income Distribution Across Creators: Median vs Mean and the Living-Wage Share — ### B. The living-wage share, as a matrix rather than a number",
+      "current": "compatible with a stable top. One summary is defensible, scoped inline:",
+      "recommended": "compatible with a stable top.\n\nOne summary is defensible, scoped inline:",
+      "rationale": "The one defensible cross-study summary is the section's payload and should stand as its own paragraph rather than close a wall of text."
+    },
+    {
+      "id": "rec-5",
+      "category": "break-paragraph",
+      "severity": "moderate",
+      "section": "## 4. Documented Reasons Creators Give for Quitting — ### C. The absence, and its near-misses",
+      "current": "or burnout in 37 pages [[give-everybody-a-little-bit-more-equity-content-creator-perspectives-and-respons]]. The nearest creator-side statements are unsampled:",
+      "recommended": "or burnout in 37 pages [[give-everybody-a-little-bit-more-equity-content-creator-perspectives-and-respons]].\n\nThe nearest creator-side statements are unsampled:",
+      "rationale": "The paragraph exceeds 1,500 characters and shifts here from near-miss instruments to unsampled creator statements, a clean topical hinge."
+    },
+    {
+      "id": "rec-6",
+      "category": "break-paragraph",
+      "severity": "minor",
+      "section": "## 6. Evidence Quality and Measurement Caveats — ### B. Denominator, reference-period and definitional instability",
+      "current": "[[unlocking-even-more-opportunities-for-creators-with-the-creativity-program-beta]]. Sources also differ in unit of analysis",
+      "recommended": "[[unlocking-even-more-opportunities-for-creators-with-the-creativity-program-beta]].\n\nSources also differ in unit of analysis",
+      "rationale": "Splits the specific instability cases (denominator, reference period, threshold changes) from the general unit-of-analysis caveat that closes the subsection."
+    },
+    {
+      "id": "rec-7",
+      "category": "make-list",
+      "severity": "moderate",
+      "section": "## 1. Attrition and Survival Rates of Creators and Channels — ### B. The absence, and who holds the missing data",
+      "current": "curve: Bilibili's 20-F gives twelfth-month retention for users, not up-hosts; Kuaishou's prospectus gives monetization and GMV; Roblox's S-1 and 10-K give developer counts and payouts with no cohort framing; Patreon's *State of Create* is cross-sectional; and Spotify's *Loud & Clear* gives the tier retention above, not retention of participation. Meta publishes no per-creator",
+      "recommended": "curve:\n\n- **Bilibili** — the 20-F gives twelfth-month retention for users, not up-hosts.\n- **Kuaishou** — the prospectus gives monetization and GMV.\n- **Roblox** — the S-1 and 10-K give developer counts and payouts with no cohort framing.\n- **Patreon** — *State of Create* is cross-sectional.\n- **Spotify** — *Loud & Clear* gives the tier retention above, not retention of participation.\n\nMeta publishes no per-creator",
+      "rationale": "Five semicolon-separated platform disclosures are an inventory, not an argument, and a bolded list lets a reader check any single platform without re-reading the sentence. Apply after rec-1."
+    },
+    {
+      "id": "rec-8",
+      "category": "make-list",
+      "severity": "moderate",
+      "section": "## 2. Income Distribution Across Creators: Median vs Mean and the Living-Wage Share — ### A. Median and mean, side by side",
+      "current": "Four constraints travel with the October 2021 Twitch leak: 896,261 zero- or negative-revenue accounts were excluded before any percentile was computed, production companies sit inside the top ranks, sponsorships and tips are excluded while the $100 payout floor censors the low tail, and no country composition is disclosed [[twitch-streamer-earnings-increase-for-top-gamers-data-from-hack-shows-wsj]]. The much-repeated finding",
+      "recommended": "Four constraints travel with the October 2021 Twitch leak [[twitch-streamer-earnings-increase-for-top-gamers-data-from-hack-shows-wsj]]:\n\n- **896,261 zero- or negative-revenue accounts** were excluded before any percentile was computed.\n- **Production companies** sit inside the top ranks.\n- **Sponsorships and tips are excluded**, while the $100 payout floor censors the low tail.\n- **No country composition** is disclosed.\n\nThe much-repeated finding",
+      "rationale": "The sentence self-announces four items and runs to 320 characters; enumerating them makes each caveat individually citable by a reader working with the leak data."
+    },
+    {
+      "id": "rec-9",
+      "category": "make-list",
+      "severity": "moderate",
+      "section": "## 2. Income Distribution Across Creators: Median vs Mean and the Living-Wage Share — ### B. The living-wage share, as a matrix rather than a number",
+      "current": "Where the second class has been computed it points one way. Within-topic Patreon Gini rose from 0.30 in 2015 to 0.60 by December 2020 across the complete transaction record, while cross-topic Gini fell from 0.80 to 0.72 after mid-2015 [[quantifying-the-creator-economy-a-large-scale-analysis-of-patreon]]; VTuber between-creator Gini rose from 0.60 to 0.75 between 2018 and 2023 [[who-reaps-all-the-superchats-a-large-scale-analysis-of-income]]; and Pareto alpha fell across YouTube, Instagram, Facebook and Twitch between 2018 and 2024, n=104,719 [[rich-get-richer-platform-attention-and-earnings-inequality]]. Two counter-cuts belong beside it:",
+      "recommended": "Where the second class has been computed it points one way:\n\n- **Patreon within-topic Gini** rose from 0.30 in 2015 to 0.60 by December 2020 across the complete transaction record, while cross-topic Gini fell from 0.80 to 0.72 after mid-2015 [[quantifying-the-creator-economy-a-large-scale-analysis-of-patreon]].\n- **VTuber between-creator Gini** rose from 0.60 to 0.75 between 2018 and 2023 [[who-reaps-all-the-superchats-a-large-scale-analysis-of-income]].\n- **Pareto alpha** fell across YouTube, Instagram, Facebook and Twitch between 2018 and 2024, n=104,719 [[rich-get-richer-platform-attention-and-earnings-inequality]].\n\nTwo counter-cuts belong beside it:",
+      "rationale": "Three dimensionless shape statistics from three datasets are a comparison set; separating them stops the Gini values from blurring together in one 400-character run. Apply after rec-3."
+    },
+    {
+      "id": "rec-10",
+      "category": "make-list",
+      "severity": "moderate",
+      "section": "## 5. Geographic Scope: Which Findings Are US/Western-Only, and What Is Known for Southeast Asia — ### C. Southeast Asia is nine conditions, not one",
+      "current": "Three caveats travel with all of it: the sub-base of \"creators who use TikTok as a source of income\" — the actual denominator behind each percentage — is disclosed for no country except Myanmar; Indonesia's minimum-wage benchmark is a single blended national figure of $216 a month, erasing province-level variation; and the sample is self-selected active TikTok users recruited through the platform's own vendor [[the-tiktok-effect]]. The Thailand–Laos gap",
+      "recommended": "Three caveats travel with all of it [[the-tiktok-effect]]:\n\n- The **sub-base** of \"creators who use TikTok as a source of income\" — the actual denominator behind each percentage — is disclosed for no country except Myanmar.\n- Indonesia's **minimum-wage benchmark** is a single blended national figure of $216 a month, erasing province-level variation.\n- The **sample is self-selected** active TikTok users recruited through the platform's own vendor.\n\nThe Thailand–Laos gap",
+      "rationale": "These three caveats qualify the nine-country table directly above them and need to be as scannable as the table itself."
+    },
+    {
+      "id": "rec-11",
+      "category": "make-list",
+      "severity": "moderate",
+      "section": "## 6. Evidence Quality and Measurement Caveats — ### E. What becomes measurable next",
+      "current": "Three dated developments would change what this question can be answered with. A YouTube channel census built from 1.21 billion Internet Archive captures, covering at least 106 million unique channels with subscriber histories back to 2006, is public and has not yet carried a survival model — though its coverage bias correlates with subscriber count and would undercount small-channel deaths, where attrition is highest [[tube-census]]. Indonesia's 2026 Economic Census is billed as the first national instrument to enumerate content-creator business actors [[bps-dan-kemenekraf-bersinergi-kreator-lokal-dilibatkan-dalam-sosialisasi-se2026]], and the standard due at the 22nd International Conference of Labour Statisticians in 2028 would make national platform-work counts comparable for the first time [[ilo-brief]]. Until one lands,",
+      "recommended": "Three dated developments would change what this question can be answered with:\n\n- A **YouTube channel census** built from 1.21 billion Internet Archive captures, covering at least 106 million unique channels with subscriber histories back to 2006, is public and has not yet carried a survival model — though its coverage bias correlates with subscriber count and would undercount small-channel deaths, where attrition is highest [[tube-census]].\n- **Indonesia's 2026 Economic Census** is billed as the first national instrument to enumerate content-creator business actors [[bps-dan-kemenekraf-bersinergi-kreator-lokal-dilibatkan-dalam-sosialisasi-se2026]].\n- The **standard due at the 22nd International Conference of Labour Statisticians in 2028** would make national platform-work counts comparable for the first time [[ilo-brief]].\n\nUntil one lands,",
+      "rationale": "The closing forward-look enumerates three dated instruments of unequal length; as prose the third is compressed into a subordinate clause and loses visual weight."
+    },
+    {
+      "id": "rec-12",
+      "category": "split-sentence",
+      "severity": "minor",
+      "section": "## 2. Income Distribution Across Creators: Median vs Mean and the Living-Wage Share — ### A. Median and mean, side by side",
+      "current": "The much-repeated finding that 25% of the top 10,000 highest-paid streamers do not clear US minimum wage — the 8,000th-ranked account cumulating $29,396 since 2019, roughly $14,698 a year against a $15,080 federal minimum — therefore assumes US costs for a population of unknown nationality [[many-top-twitch-streamers-dont-make-minimum-wage-and-3-new-takeaways-from-the-tw]].",
+      "recommended": "The much-repeated finding is that **25%** of the top 10,000 highest-paid streamers do not clear US minimum wage: the 8,000th-ranked account cumulated $29,396 since 2019, roughly $14,698 a year against a $15,080 federal minimum. That comparison assumes US costs for a population of unknown nationality [[many-top-twitch-streamers-dont-make-minimum-wage-and-3-new-takeaways-from-the-tw]].",
+      "rationale": "A 285-character sentence with four dollar figures inside a nested em-dash aside separates its subject from its verb; splitting it puts the finding and the objection in separate sentences."
+    },
+    {
+      "id": "rec-13",
+      "category": "split-sentence",
+      "severity": "moderate",
+      "section": "## 4. Documented Reasons Creators Give for Quitting — ### B. What models of actual continuation find",
+      "current": "returns a hazard ratio of 1.980 for small-agency affiliation (p=0.003), while stream duration (p=0.207) and gender are not significant and Superchat income shows no significant main effect (β=−0.136, p=0.111) though its interaction with time is significant (p=0.010), making its protective effect small and cumulative rather than absent",
+      "recommended": "returns a **hazard ratio of 1.980** for small-agency affiliation (p=0.003), while stream duration (p=0.207) and gender are not significant. Superchat income shows no significant main effect (β=−0.136, p=0.111) though its interaction with time is significant (p=0.010), making its protective effect small and cumulative rather than absent",
+      "rationale": "At roughly 490 characters with five parenthetical statistics, this is the hardest sentence in the report to parse; the split isolates the income coefficient, which is the load-bearing result."
+    },
+    {
+      "id": "rec-14",
+      "category": "split-sentence",
+      "severity": "minor",
+      "section": "## 4. Documented Reasons Creators Give for Quitting — ### B. What models of actual continuation find",
+      "current": "finds the complement for creators without an alternate channel: losing Partner Program eligibility cut uploads by 2.816 per month against a sample mean of 3.248, an 87% collapse in output, while exiting creators",
+      "recommended": "finds the complement for creators without an alternate channel. Losing Partner Program eligibility cut uploads by 2.816 per month against a sample mean of 3.248, an **87% collapse in output**, while exiting creators",
+      "rationale": "Breaks a 385-character sentence at its colon so the method statement and the effect size stand separately, and bolds the headline magnitude."
+    },
+    {
+      "id": "rec-15",
+      "category": "split-sentence",
+      "severity": "minor",
+      "section": "## 4. Documented Reasons Creators Give for Quitting — ### C. The absence, and its near-misses",
+      "current": "The closest sampled exit-reason elicitation samples the wrong side of the transaction: among 1,356 lapsed Japanese Niconico viewers",
+      "recommended": "The closest sampled exit-reason elicitation samples the wrong side of the transaction. Among 1,356 lapsed Japanese Niconico viewers",
+      "rationale": "Ends a 330-character sentence at its natural hinge so the diagnosis is not carrying the sample description, screening n, fieldwork dates and result range behind a colon."
+    },
+    {
+      "id": "rec-16",
+      "category": "split-sentence",
+      "severity": "minor",
+      "section": "## 3. Time from Starting to First Meaningful Income",
+      "current": "collapsing to 0.009 and 0.003 across the full population, while elite channels averaged 940 published videos",
+      "recommended": "collapsing to 0.009 and 0.003 across the full population. Elite channels averaged 940 published videos",
+      "rationale": "Separates four correlation coefficients from the video-count comparison in a 355-character sentence; the shared citation remains at the end and covers both halves."
+    },
+    {
+      "id": "rec-17",
+      "category": "split-sentence",
+      "severity": "minor",
+      "section": "## 6. Evidence Quality and Measurement Caveats — ### B. Denominator, reference-period and definitional instability",
+      "current": "and in whether income is gross or net — nearly all of it is gross of the creator's own costs, and the ILO's criteria",
+      "recommended": "and in whether income is gross or net. Nearly all of it is gross of the creator's own costs, and the ILO's criteria",
+      "rationale": "Converts a trailing em-dash extension into its own sentence so the gross-versus-net point does not read as a parenthetical to a three-item list."
+    },
+    {
+      "id": "rec-18",
+      "category": "split-sentence",
+      "severity": "minor",
+      "section": "## 6. Evidence Quality and Measurement Caveats — ### C. Two provenance chains, one standard",
+      "current": "so every net entrant is an amateur by construction; the definition of professional slides from earning over $100,000 to self-description; and the companion statistic",
+      "recommended": "so every net entrant is an amateur by construction. The definition of professional slides from earning over $100,000 to self-description, and the companion statistic",
+      "rationale": "A 440-character sentence chaining three unrelated defects with semicolons; splitting after the first keeps each defect independently readable."
+    },
+    {
+      "id": "rec-19",
+      "category": "split-sentence",
+      "severity": "minor",
+      "section": "## 6. Evidence Quality and Measurement Caveats — ### C. Two provenance chains, one standard",
+      "current": "The failure is the merger: two figures from different sources, years and methods were welded into one statistic at a parliamentary hearing — where the same official, pressed for Indonesia revenue, stated on record that he did not have the data [[anggota-dpr-cecar-omzet-tiktok-mengaku-belum-siap-data-teknologi]] — and then repeated as a national statistic.",
+      "recommended": "The failure is the merger: two figures from different sources, years and methods were welded into one statistic at a parliamentary hearing, and then repeated as a national statistic. At that same hearing the official, pressed for Indonesia revenue, stated on record that he did not have the data [[anggota-dpr-cecar-omzet-tiktok-mengaku-belum-siap-data-teknologi]].",
+      "rationale": "The nested em-dash aside puts a full citation between the sentence's two halves; unnesting it preserves every fact and the citation while restoring the main clause."
+    },
+    {
+      "id": "rec-20",
+      "category": "add-whitespace",
+      "severity": "moderate",
+      "section": "## 4. Documented Reasons Creators Give for Quitting — ### B. What models of actual continuation find",
+      "current": "your-influencer-program]].\n### B. What models of actual continuation find",
+      "recommended": "your-influencer-program]].\n\n### B. What models of actual continuation find",
+      "rationale": "This is the only H3 in the report not preceded by a blank line, which collapses the visual boundary between subsection A and subsection B."
+    },
+    {
+      "id": "rec-21",
+      "category": "bold-keyterms",
+      "severity": "minor",
+      "section": "## 1. Attrition and Survival Rates of Creators and Channels",
+      "current": "What exists instead are measurements on five incompatible units",
+      "recommended": "What exists instead are measurements on **five incompatible units**",
+      "rationale": "The incompatibility of units is the section's governing finding and currently carries no visual weight ahead of a nine-row table."
+    },
+    {
+      "id": "rec-22",
+      "category": "bold-keyterms",
+      "severity": "moderate",
+      "section": "## 2. Income Distribution Across Creators: Median vs Mean and the Living-Wage Share — ### B. The living-wage share, as a matrix rather than a number",
+      "current": "under 2% of everyone who registered an account or held a channel reached roughly $15,000 a year, falling under 0.1% at a US median-household bar",
+      "recommended": "**under 2%** of everyone who registered an account or held a channel reached roughly $15,000 a year, falling **under 0.1%** at a US median-household bar",
+      "rationale": "This is the report's single defensible cross-study answer to the living-wage question and should be findable on a scan."
+    },
+    {
+      "id": "rec-23",
+      "category": "bold-keyterms",
+      "severity": "minor",
+      "section": "## 2. Income Distribution Across Creators: Median vs Mean and the Living-Wage Share — ### B. The living-wage share, as a matrix rather than a number",
+      "current": "a 5.75-fold swing from the denominator alone, numerator untouched",
+      "recommended": "a **5.75-fold swing** from the denominator alone, numerator untouched",
+      "rationale": "The denominator demonstration is the mechanism that explains the whole matrix above it, and the magnitude is the memorable part."
+    },
+    {
+      "id": "rec-24",
+      "category": "bold-keyterms",
+      "severity": "minor",
+      "section": "## 2. Income Distribution Across Creators: Median vs Mean and the Living-Wage Share — ### B. The living-wage share, as a matrix rather than a number",
+      "current": "multiply to roughly 58-fold; the remaining component",
+      "recommended": "multiply to roughly **58-fold**; the remaining component",
+      "rationale": "The composite of the two demonstrated levers is the quantitative core of the section's argument against ranging the published shares."
+    },
+    {
+      "id": "rec-25",
+      "category": "bold-keyterms",
+      "severity": "minor",
+      "section": "## 2. Income Distribution Across Creators: Median vs Mean and the Living-Wage Share — ### C. Two measured biases that push in opposite directions",
+      "current": "Partner Program enrolment is roughly 45–50% of eligible channels",
+      "recommended": "Partner Program enrolment is roughly **45–50%** of eligible channels",
+      "rationale": "This ratio is the only quantification of the registration-denominator bias and opens the paragraph that bounds it."
+    },
+    {
+      "id": "rec-26",
+      "category": "bold-keyterms",
+      "severity": "moderate",
+      "section": "## 3. Time from Starting to First Meaningful Income",
+      "current": "would need roughly five to twenty months of accrual to cross the $100 threshold",
+      "recommended": "would need roughly **five to twenty months** of accrual to cross the $100 threshold",
+      "rationale": "This is the closest thing the report has to an answer for the time-to-first-income question and is currently invisible inside a short paragraph after a table."
+    },
+    {
+      "id": "rec-27",
+      "category": "bold-keyterms",
+      "severity": "minor",
+      "section": "## 4. Documented Reasons Creators Give for Quitting — ### B. What models of actual continuation find",
+      "current": "among 311 members of UK music trade bodies, 43% said insufficient streaming income",
+      "recommended": "among 311 members of UK music trade bodies, **43%** said insufficient streaming income",
+      "rationale": "The only behavioural datapoint tying income insufficiency to conduct deserves the same visual marking as the modelled results around it."
+    },
+    {
+      "id": "rec-28",
+      "category": "bold-keyterms",
+      "severity": "minor",
+      "section": "## 5. Geographic Scope: Which Findings Are US/Western-Only, and What Is Known for Southeast Asia — ### A. Scope flags",
+      "current": "Only 20.1% of a random YouTube video sample was in English",
+      "recommended": "Only **20.1%** of a random YouTube video sample was in English",
+      "rationale": "This single figure carries the section's generalisability argument and sits alone in a one-sentence paragraph under the scope table."
+    },
+    {
+      "id": "rec-29",
+      "category": "bold-keyterms",
+      "severity": "minor",
+      "section": "## 5. Geographic Scope: Which Findings Are US/Western-Only, and What Is Known for Southeast Asia — ### B. Four measured mechanisms of non-transfer",
+      "current": "The threshold gap alone runs three to twenty-two times",
+      "recommended": "The threshold gap alone runs **three to twenty-two times**",
+      "rationale": "The magnitude of the threshold gap is the quantitative summary of the table directly above and should be scannable."
+    },
+    {
+      "id": "rec-30",
+      "category": "bold-keyterms",
+      "severity": "minor",
+      "section": "## 5. Geographic Scope: Which Findings Are US/Western-Only, and What Is Known for Southeast Asia — ### C. Southeast Asia is nine conditions, not one",
+      "current": "produces a 51-point spread.",
+      "recommended": "produces a **51-point spread**.",
+      "rationale": "The intra-regional spread is the subsection's thesis and introduces the nine-country table immediately below."
+    },
+    {
+      "id": "rec-31",
+      "category": "bold-keyterms",
+      "severity": "minor",
+      "section": "## 6. Evidence Quality and Measurement Caveats — ### A. Survivorship bias, and its bounded scale",
+      "current": "That roughly tenfold gap shows the mechanism is real",
+      "recommended": "That **roughly tenfold gap** shows the mechanism is real",
+      "rationale": "The only paired measurement bounding survivorship bias closes a dense paragraph and its magnitude is the takeaway."
+    }
+  ],
+  "summary": {
+    "total_recommendations": 31,
+    "by_category": {
+      "merge-paragraphs": 0,
+      "break-paragraph": 6,
+      "make-list": 5,
+      "make-table": 0,
+      "bold-keyterms": 11,
+      "split-sentence": 8,
+      "remove-hr": 0,
+      "add-whitespace": 1
+    },
+    "highest_severity": "major",
+    "expected_net_char_delta": 560
+  }
+}

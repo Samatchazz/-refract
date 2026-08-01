@@ -1,0 +1,58 @@
+[
+  {
+    "claim": "About half of all online platform workers earn under US$2 per hour, with typical rates of US$3.30 on microtask platforms and US$7.60 on freelance platforms, and workers in developing countries earn 60 percent less than those in developed countries.",
+    "stance": "supports",
+    "stance_target": "The position that platform-mediated online earnings for most workers fall far below any living-wage threshold, and that the developing-country discount is roughly 60 percent",
+    "evidence_type": "statistical",
+    "scope_conditions": "Global; figures reported by UNDP but attributed to ILO (2021) 'World Employment and Social Outlook: The role of digital labour platforms'; online web-based platform work (microtask and freelance), NOT content creation; sample size not restated in the UNDP text so the ILO original must be consulted for it",
+    "quoted_support": "Worker earnings on online platforms vary significantly, with about half earning under US$2 per hour. Typical hourly rates range from US$3.3 on microtask platforms to US$7.6 on freelance platforms, and workers in developing countries earn 60% less than those in developed nations.",
+    "numbers": ["half under US$2/hour", "US$3.30 microtask", "US$7.60 freelance", "60 percent less in developing countries"],
+    "entities": ["UNDP", "ILO"],
+    "time_period": "ILO 2021, republished 2025",
+    "region": "Global, reported in an Asia-Pacific context",
+    "confidence": "medium",
+    "source_note_id": "undp-regional-bureau"
+  },
+  {
+    "claim": "Only about one-third of online web-based platform workers report platform work as their primary income source, versus an overwhelming majority of location-based platform workers, so web-based digital earning is structurally a side activity.",
+    "stance": "supports",
+    "stance_target": "The position that online platform income, including creator-adjacent digital work, is predominantly supplementary rather than occupational",
+    "evidence_type": "statistical",
+    "scope_conditions": "Global; attributed to ILO (2021); distinguishes location-based (ride-hailing, delivery) from online web-based (freelancing, microwork) platforms; content creation not separately measured",
+    "quoted_support": "ILO (2021) noted that the overwhelming majority of workers on location-based platforms and about one-third of the workers on online web-based platforms stated that platform work was their primary source of income, while many of them often struggle to find sufficient, well-paid work to earn a decent income.",
+    "numbers": ["about one-third online web-based", "overwhelming majority location-based"],
+    "entities": ["UNDP", "ILO"],
+    "time_period": "ILO 2021, republished 2025",
+    "region": "Global",
+    "confidence": "medium",
+    "source_note_id": "undp-regional-bureau"
+  },
+  {
+    "claim": "Gender pay gaps in platform work arise from task segregation rather than differential pay rates, with women concentrated in lower-paid care, administrative and microwork tasks and men in higher-paid delivery and driving roles.",
+    "stance": "neutral",
+    "stance_target": "The mechanism behind gender earnings gaps in platform and creator work",
+    "evidence_type": "empirical",
+    "scope_conditions": "Global; UNDP synthesis citing Adams-Prassl and Berg (2017), ILO (2021), Churchill (2023) and Cook et al. (2018); ride-sharing disparities specifically attributed to experience, location choice and driving speed rather than discrimination",
+    "quoted_support": "These gaps do not stem from different pay rates but from persistent gendered inequalities. Women are concentrated in lower-paid care, administrative, and microwork tasks, while men dominate higher-paid delivery and driving roles.",
+    "numbers": [],
+    "entities": ["UNDP", "Adams-Prassl", "Berg", "Churchill", "Cook", "ILO"],
+    "time_period": "2017-2025",
+    "region": "Global",
+    "confidence": "medium",
+    "source_note_id": "undp-regional-bureau"
+  },
+  {
+    "claim": "UNDP's Asia-Pacific gig-economy report contains no data on content creation as an occupation, treating content work only as a task category exposed to generative-AI displacement.",
+    "stance": "refutes",
+    "stance_target": "The assumption that institutional gig-economy literature covers the content-creator population",
+    "evidence_type": "empirical",
+    "scope_conditions": "Asia and the Pacific; UNDP Regional Bureau for Asia and the Pacific, 2025; the report's scope is ride-hailing, delivery, freelancing, data annotation and content moderation",
+    "quoted_support": "to basic content creation and entry-level coding",
+    "numbers": [],
+    "entities": ["UNDP", "Asia and the Pacific"],
+    "time_period": "2025",
+    "region": "Asia and the Pacific",
+    "confidence": "high",
+    "source_note_id": "undp-regional-bureau"
+  }
+]

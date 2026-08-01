@@ -1,0 +1,48 @@
+[
+  {
+    "claim": "A marketing blog asserts that reaching 100 subscribers puts a channel ahead of 63% of all YouTube channels and that the average time to reach 1,000 subscribers is around 22 months, but the first figure links to a vidIQ page that now returns HTTP 404 and the second carries no citation at all.",
+    "stance": "neutral",
+    "stance_target": "The provenance of commonly circulated YouTube growth and time-to-monetization figures",
+    "evidence_type": "anecdotal",
+    "scope_conditions": "BerryViral, a thumbnail-optimization SaaS marketing its own product; article undated and unbylined; every numeric claim is sourced to another SEO page or a free-tool benchmark rather than to primary data; a direct fetch of the cited vidIQ URL on 27 July 2026 returned a 404 error page",
+    "quoted_support": "The average timeline to hit 1,000 subs is somewhere around 22 months. Reaching just 100 subscribers puts you ahead of 63% of all YouTube channels.",
+    "numbers": [
+      "63% of channels below 100 subscribers",
+      "about 22 months to 1,000 subscribers",
+      "0.5-0.6% average monthly growth",
+      "1-3% per month claimed industry benchmark",
+      "cited vidIQ source URL returns HTTP 404"
+    ],
+    "entities": [
+      "BerryViral",
+      "vidIQ",
+      "Adam Rumanek",
+      "instantviews.net"
+    ],
+    "time_period": "Undated; fetched July 2026",
+    "region": "Unspecified",
+    "confidence": "low",
+    "source_note_id": "average-youtube-channel-growth-rate-what-real-data-tells-us-and-how-to-beat-it"
+  },
+  {
+    "claim": "The article's own time-to-1,000-subscribers benchmarks are internally inconsistent, giving 6-12 months in one section and roughly 22 months as the average in another, with no sample size, year or country attached to either.",
+    "stance": "refutes",
+    "stance_target": "Any use of vendor blog benchmarks as evidence on time from starting to first meaningful income",
+    "evidence_type": "anecdotal",
+    "scope_conditions": "Same page, two adjacent sections; neither figure states a sample size, year, country or methodology",
+    "quoted_support": "At this stage, reaching 1,000 subs typically takes 6-12 months of consistent effort (3-4 videos per week). For hobbyists or ultra-niche channels, that timeline stretches to 1-2 years.",
+    "numbers": [
+      "6-12 months",
+      "1-2 years for hobbyists",
+      "about 22 months average",
+      "no sample size stated"
+    ],
+    "entities": [
+      "BerryViral"
+    ],
+    "time_period": "Undated",
+    "region": "Unspecified",
+    "confidence": "high",
+    "source_note_id": "average-youtube-channel-growth-rate-what-real-data-tells-us-and-how-to-beat-it"
+  }
+]

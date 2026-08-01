@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="th"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Plan C — Kanit + Anuphan</title>
+<link rel="stylesheet" href="./type.css">
+<style>
+:root{--ink:#181616;--ink2:#0f1613;--paper:#FFFDDB;--paper2:#F2EFDE;--red:#FF3831;--gold:#F0B32E}
+*{box-sizing:border-box}
+body{margin:0;background:var(--ink);color:var(--paper);-webkit-font-smoothing:antialiased}
+.wrap{max-width:1100px;margin:0 auto;padding:48px 28px 120px}
+.eyebrow{font-family:var(--font-text);font-size:12px;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--gold);opacity:.9;margin:0 0 10px}
+h1{font-size:clamp(40px,7vw,84px);margin:0 0 8px}
+h2{font-size:clamp(26px,3.4vw,40px);margin:64px 0 6px;color:var(--paper)}
+.sub{font-family:var(--font-text);opacity:.62;font-size:15px;margin:0 0 22px;max-width:62ch}
+.card{background:var(--ink2);border:1px solid rgba(255,253,219,.10);border-radius:14px;padding:26px 28px;margin:16px 0}
+.lbl{font-family:var(--font-text);font-size:11px;letter-spacing:.14em;text-transform:uppercase;
+  opacity:.45;margin:0 0 12px}
+.disp{font-family:var(--font-display)}
+.txt{font-family:var(--font-text)}
+.k500{font-weight:500}.k700{font-weight:700}
+.grid{display:grid;gap:16px}
+@media(min-width:820px){.grid.two{grid-template-columns:1fr 1fr}.grid.three{grid-template-columns:repeat(3,1fr)}}
+table{width:100%;border-collapse:collapse;font-family:var(--font-text);font-size:14px}
+th,td{text-align:left;padding:9px 10px;border-bottom:1px solid rgba(255,253,219,.10);vertical-align:top}
+th{font-size:11px;letter-spacing:.12em;text-transform:uppercase;opacity:.45;font-weight:400}
+td.num{font-variant-numeric:tabular-nums;white-space:nowrap}
+.ok{color:var(--gold)}
+.controls{position:sticky;top:0;z-index:10;background:rgba(24,22,22,.94);backdrop-filter:blur(10px);
+  border-bottom:1px solid rgba(255,253,219,.12);padding:12px 28px;display:flex;gap:22px;flex-wrap:wrap;align-items:center;
+  font-family:var(--font-text);font-size:12px}
+.controls label{display:flex;gap:8px;align-items:center;opacity:.8}
+input[type=range]{width:130px;accent-color:var(--red)}
+output{font-variant-numeric:tabular-nums;min-width:44px;opacity:.6}
+.clip{background:var(--paper);color:var(--ink);border-radius:10px;padding:20px 22px;overflow:hidden}
+.clip p{margin:0 0 6px}
+.warn{color:var(--red)}
+.hero{background:var(--paper);color:var(--ink);border-radius:16px;padding:clamp(28px,5vw,60px);margin:20px 0}
+.hero .eyebrow{color:var(--red)}
+.hero h1{color:var(--ink)}
+.hero p{max-width:46ch;font-size:17px;opacity:.78}
+.btn{display:inline-block;margin-top:22px;background:var(--ink);color:var(--paper);
+  font-family:var(--font-text);font-weight:600;font-size:15px;padding:13px 26px;border-radius:100px;text-decoration:none}
+.pill{display:inline-block;border:1px solid currentColor;border-radius:100px;padding:4px 12px;font-size:12px;
+  font-family:var(--font-text);opacity:.7;margin-right:6px}
+.scale div{margin:0 0 4px;line-height:1.05}
+.side{font-family:var(--font-text);font-size:13px;opacity:.55;margin-top:8px}
+code{font-family:ui-monospace,Menlo,monospace;font-size:12px;background:rgba(255,253,219,.08);padding:2px 6px;border-radius:5px}
+</style></head><body>
+
+<div class="controls">
+  <strong style="opacity:.85">ปรับดูสด</strong>
+  <label>ขนาด body <input type="range" id="fs" min="13" max="24" value="17"><output id="fsv">17</output>px</label>
+  <label>line-height <input type="range" id="lh" min="1.0" max="2.2" step="0.05" value="1.65"><output id="lhv">1.65</output></label>
+  <label>tracking <input type="range" id="ls" min="-3" max="3" step="0.5" value="0"><output id="lsv">0</output>%</label>
+  <label><input type="checkbox" id="showbox"> โชว์กรอบบรรทัด</label>
+</div>
+
+<div class="wrap">
+
+<p class="eyebrow">Plan C · type foundation</p>
+<h1 class="k500">Kanit + Anuphan</h1>
+<p class="sub">ทั้งคู่เป็นฟอนต์จาก Cadson Demak ไลเซนส์ SIL OFL 1.1 ใช้เชิงพาณิชย์ได้ฟรี ไม่ต้องซื้อ ไม่ต้องต่ออายุ
+เก็บไฟล์ไว้ในเครื่องเอง ไม่ต้องเรียก CDN — รวมทุกไฟล์ที่ต้องใช้ 116 KB</p>
+
+<h2 class="k500">หน้าจริงจะหน้าตาประมาณนี้</h2>
+<p class="sub">Kanit เป็นหัวเรื่อง Anuphan เป็นเนื้อความ ใช้ข้อความจริงของ Plan C</p>
+
+<div class="hero">
+  <p class="eyebrow">ที่ปรึกษาอัลกอริทึมและตัวตน · 1:1</p>
+  <h1 class="k500">แบรนด์ไม่ได้ขาดคนดัง<br>แบรนด์ขาดคนที่ยังอยู่</h1>
+  <p class="txt">คุณกำลังเล่นหมากรุกอยู่ในเกมที่จริง ๆ แล้วคือโป๊กเกอร์ — เราไม่ได้สอนให้คุณเดินหมากเก่งขึ้น
+  แต่เปลี่ยนวิธีที่คุณมองกระดานทั้งใบ</p>
+  <p><span class="pill">EXTRACT</span><span class="pill">ENGINEER</span><span class="pill">ESTABLISH</span></p>
+  <a class="btn" href="#">จองเซสชันแรก ฟรี</a>
+</div>
+
+<h2 class="k500">สเกลตัวอักษร</h2>
+<p class="sub">Kanit ทุกบรรทัด ยกเว้นสองบรรทัดล่างที่เป็น Anuphan</p>
+<div class="card scale">
+  <div class="disp k500" style="font-size:72px">เจอเสียงของตัวเอง</div>
+  <div class="disp k500" style="font-size:48px">อาณาจักรของคุณเอง</div>
+  <div class="disp k500" style="font-size:32px">ไล่ตามเทรนด์จนหมดไฟ</div>
+  <div class="disp k700" style="font-size:24px">Micro-Sovereignty · 999 บาท</div>
+  <div class="txt" style="font-size:17px;font-weight:400;line-height:1.65;margin-top:14px">เนื้อความปกติ Anuphan น้ำหนัก 400 — ขนาดนี้คือขนาดที่คนอ่านจริงบนมือถือ</div>
+  <div class="txt" style="font-size:13px;font-weight:400;opacity:.6">คำอธิบายเล็ก · แคปชัน · ป้ายกำกับ</div>
+</div>
+
+<h2 class="k500">ทดสอบสระซ้อนวรรณยุกต์</h2>
+<p class="sub">นี่คือจุดที่ฟอนต์ไทยพังบ่อยที่สุด — ลอง line-height ให้ต่ำลงด้วยแถบข้างบน
+ถ้าวรรณยุกต์เริ่มโดนตัดหรือชนบรรทัดบน แปลว่าต่ำเกินไปแล้ว</p>
+<div class="card">
+  <p class="lbl">Kanit — พื้นต่ำสุดตามค่าฟอนต์คือ 1.50</p>
+  <div class="clip" id="clipK">
+    <p class="disp k500" style="font-size:34px">ปุ๋ยญี่ปุ่น อั๊ยย่ะ กรุ๊ปที่หนึ่ง</p>
+    <p class="disp k500" style="font-size:34px">ชื่อผู้ใช้ ที่ปรึกษา เปลี่ยนกฎ</p>
+  </div>
+</div>
+<div class="card">
+  <p class="lbl">Anuphan — พื้นต่ำสุดตามค่าฟอนต์คือ 1.30</p>
+  <div class="clip" id="clipA">
+    <p class="txt" style="font-size:20px">ปุ๋ยญี่ปุ่น อั๊ยย่ะ กรุ๊ปที่หนึ่ง ชื่อผู้ใช้</p>
+    <p class="txt" style="font-size:20px">ที่ปรึกษาซึ่งเปลี่ยนกฎของเกมทั้งใบ</p>
+  </div>
+</div>
+
+<h2 class="k500">อังกฤษกับตัวเลข</h2>
+<p class="sub">ชื่อแบรนด์เป็นตัวโรมัน จึงต้องดูด้วยว่าฟอนต์ทำตัวอังกฤษได้ดีแค่ไหน — ทั้งคู่มีครบ</p>
+<div class="grid two">
+  <div class="card">
+    <p class="lbl">Kanit</p>
+    <div class="disp k500" style="font-size:40px">PlanC — 999 / 2,000</div>
+    <div class="disp k500" style="font-size:22px">ABCDEFGHIJKLM abcdefghijklm</div>
+    <div class="disp k700" style="font-size:22px">EXTRACT ENGINEER ESTABLISH</div>
+  </div>
+  <div class="card">
+    <p class="lbl">Anuphan</p>
+    <div class="txt" style="font-size:40px;font-weight:500">PlanC — 999 / 2,000</div>
+    <div class="txt" style="font-size:22px">ABCDEFGHIJKLM abcdefghijklm</div>
+    <div class="txt" style="font-size:22px;font-weight:600">EXTRACT ENGINEER ESTABLISH</div>
+  </div>
+</div>
+
+<h2 class="k500">น้ำหนักที่มีให้ใช้</h2>
+<div class="grid two">
+  <div class="card">
+    <p class="lbl">Kanit — ไฟล์แยกน้ำหนัก (ส่งมาให้ 500 กับ 700)</p>
+    <div class="disp" style="font-weight:500;font-size:28px">500 · หัวเรื่องหลัก เจอเสียงของตัวเอง</div>
+    <div class="disp" style="font-weight:700;font-size:28px">700 · เน้นหนัก อาณาจักรของคุณ</div>
+    <p class="side">ต้นฉบับมี 9 น้ำหนัก 100–900 พร้อมตัวเอียง โหลดเพิ่มได้ทีหลังถ้าอยากได้</p>
+  </div>
+  <div class="card">
+    <p class="lbl">Anuphan — variable ไล่ได้ต่อเนื่อง 100–700</p>
+    <div class="txt" style="font-weight:200;font-size:24px">200 · บางมาก</div>
+    <div class="txt" style="font-weight:400;font-size:24px">400 · เนื้อความ</div>
+    <div class="txt" style="font-weight:600;font-size:24px">600 · ปุ่มและป้าย</div>
+    <div class="txt" style="font-weight:700;font-size:24px">700 · หนักสุด</div>
+    <p class="side">ไฟล์เดียวได้ทุกน้ำหนัก เพราะเป็น variable font</p>
+  </div>
+</div>
+
+<h2 class="k500">ค่าที่วัดได้จากตัวฟอนต์</h2>
+<p class="sub">ไม่ใช่ความเห็น — อ่านจากตาราง metrics ในไฟล์ฟอนต์โดยตรงด้วย fontTools</p>
+<div class="card" style="padding:8px 14px">
+<table>
+<tr><th>ค่า</th><th>Kanit</th><th>Anuphan</th><th>แปลว่า</th></tr>
+<tr><td>ascender / descender</td><td class="num">1100 / −395</td><td class="num">1025 / −275</td><td>ระยะที่ตัวอักษรกินขึ้นบนและลงล่าง</td></tr>
+<tr><td>line-height ต่ำสุด</td><td class="num warn">1.495</td><td class="num">1.300</td><td>ต่ำกว่านี้วรรณยุกต์เริ่มโดนตัด</td></tr>
+<tr><td>cap height</td><td class="num">644</td><td class="num">698</td><td>ความสูงตัวพิมพ์ใหญ่</td></tr>
+<tr><td>x-height</td><td class="num">474</td><td class="num ok">570</td><td>Anuphan ดูใหญ่กว่าราว 20% ที่ px เท่ากัน</td></tr>
+<tr><td>น้ำหนัก</td><td class="num">9 แบบ + เอียง</td><td class="num">variable 100–700</td><td></td></tr>
+<tr><td>ขนาดไฟล์ (ไทย+อังกฤษ)</td><td class="num">65 KB</td><td class="num">53 KB</td><td>รวม 116 KB</td></tr>
+<tr><td>ไลเซนส์</td><td class="num ok">OFL 1.1</td><td class="num ok">OFL 1.1</td><td>ใช้ขายได้ ไม่ต้องจ่าย</td></tr>
+</table>
+</div>
+
+<h2 class="k500">ข้อควรระวังสองข้อ</h2>
+<div class="grid two">
+  <div class="card">
+    <p class="lbl">Kanit ต้องการที่มาก</p>
+    <p class="txt" style="font-size:15px;opacity:.8">พื้น line-height 1.50 สูงกว่า Anuphan ชัดเจน
+    เวลาวางหัวเรื่องหลายบรรทัดชิด ๆ ต้องเผื่อ ถ้าอยากได้ชิดกว่านั้นใช้ได้เฉพาะตอนตัวใหญ่มาก
+    เพราะที่ 72px ระยะจริงยังพอ แต่ที่ 24px จะเริ่มชน</p>
+  </div>
+  <div class="card">
+    <p class="lbl">ขนาดตาไม่เท่ากัน</p>
+    <p class="txt" style="font-size:15px;opacity:.8">x-height ต่างกัน 474 ต่อ 570 แปลว่าถ้าตั้ง Kanit 40px
+    คู่กับ Anuphan 40px สายตาจะเห็น Anuphan ใหญ่กว่า ให้ชดเชยด้วย
+    <code>--optical-anuphan: 0.83</code> ที่เตรียมไว้ใน type.css แล้ว</p>
+  </div>
+</div>
+
+</div>
+
+<script>
+const fs=document.getElementById('fs'),lh=document.getElementById('lh'),ls=document.getElementById('ls');
+const sync=()=>{
+  document.getElementById('fsv').value=fs.value;
+  document.getElementById('lhv').value=(+lh.value).toFixed(2);
+  document.getElementById('lsv').value=ls.value;
+  document.querySelectorAll('.txt').forEach(e=>{
+    if(e.closest('.controls')||e.closest('table'))return;
+    if(!e.dataset.base) e.dataset.base=getComputedStyle(e).fontSize;
+  });
+  document.documentElement.style.setProperty('--lh-body',lh.value);
+  document.querySelectorAll('.clip p').forEach(p=>{p.style.lineHeight=lh.value;p.style.letterSpacing=ls.value/100+'em';});
+  document.querySelectorAll('.hero p.txt, .card .txt').forEach(p=>{
+    if(p.closest('table'))return;
+    p.style.lineHeight=lh.value; p.style.letterSpacing=ls.value/100+'em';
+  });
+  document.querySelector('.hero p.txt').style.fontSize=fs.value+'px';
+};
+[fs,lh,ls].forEach(el=>el.addEventListener('input',sync));
+document.getElementById('showbox').addEventListener('change',e=>{
+  document.querySelectorAll('.clip p').forEach(p=>p.style.background=e.target.checked?'rgba(255,56,49,.14)':'');
+});
+sync();
+</script>
+</body></html>

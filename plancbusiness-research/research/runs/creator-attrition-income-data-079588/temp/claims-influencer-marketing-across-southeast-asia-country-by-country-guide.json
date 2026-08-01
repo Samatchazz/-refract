@@ -1,0 +1,72 @@
+[
+ {
+  "claim": "Indonesian TikTok advertising monetizes at roughly USD 0.005 to 0.01 per view against USD 0.03 to 0.05 in Western markets, meaning identical audience attention converts to between one-fifth and one-tenth the revenue in Southeast Asia.",
+  "stance": "supports",
+  "stance_target": "The position that US/Western creator income findings cannot be transferred to Southeast Asia because the per-view monetization rate differs by roughly an order of magnitude, so equivalent audience size yields materially different earnings",
+  "evidence_type": "statistical",
+  "scope_conditions": "Indonesia vs Western markets; TikTok CPM; 2025-2026 rates; attributed to third-party rate benchmarking (showca.se), no sample or methodology disclosed",
+  "quoted_support": "Indonesian TikTok CPMs run at USD 0.005 to 0.01 per view compared to USD 0.03 to 0.05 in Western markets, reflecting the overall cost differential.",
+  "numbers": ["USD 0.005-0.01 per view Indonesia", "USD 0.03-0.05 per view Western", "3x to 10x differential"],
+  "entities": ["TikTok", "Indonesia", "showca.se"],
+  "time_period": "2025-2026",
+  "region": "Indonesia vs Western markets",
+  "confidence": "low",
+  "source_note_id": "influencer-marketing-across-southeast-asia-country-by-country-guide"
+ },
+ {
+  "claim": "Sponsored-post rates for equivalent creator tiers differ by roughly a factor of ten between the most and least expensive Southeast Asian markets, with Singapore highest and Vietnam lowest, making any single regional creator-earnings figure meaningless.",
+  "stance": "supports",
+  "stance_target": "The position that Southeast Asia must be disaggregated by country in any creator-income analysis, and that regional aggregates conceal order-of-magnitude heterogeneity",
+  "evidence_type": "statistical",
+  "scope_conditions": "Six SEA markets; 2025-2026 agency rate cards compiled second-hand; brand-paid fee per post, not creator total income; no sample size or methodology",
+  "quoted_support": "Rates differ by a factor of ten between Singapore and Vietnam. Disclosure rules range from legally mandated in Singapore's financial sector to entirely absent in Indonesia.",
+  "numbers": ["Singapore micro tier SGD 600-3,000 per Instagram post", "Indonesia micro tier USD 80-500", "Vietnam micro tier USD 50-300 TikTok", "Philippines micro tier USD 70-450 Facebook", "Thailand micro tier USD 120-700", "Malaysia micro tier MYR 500-2,500"],
+  "entities": ["Singapore", "Vietnam", "Indonesia", "Thailand", "Philippines", "Malaysia"],
+  "time_period": "2025-2026",
+  "region": "Southeast Asia (6 countries)",
+  "confidence": "low",
+  "source_note_id": "influencer-marketing-across-southeast-asia-country-by-country-guide"
+ },
+ {
+  "claim": "Engagement rate falls monotonically with follower tier in Singapore, from 3-7% for nano creators (1K-10K) to 0.5-1.5% for macro creators (500K+), so per-post fees rise far faster than delivered engagement.",
+  "stance": "neutral",
+  "stance_target": "The position that follower count is a poor proxy for creator earning efficiency, complicating any attempt to infer income distribution from audience-size distribution",
+  "evidence_type": "statistical",
+  "scope_conditions": "Singapore; 2025-2026; agency rate-card compilation, not measured platform telemetry; no sample size",
+  "quoted_support": "Nano 1K to 10K 300 to 600 200 to 500 3 to 7% | Micro 10K to 100K 600 to 3,000 500 to 2,500 2 to 5% | Mid-tier 100K to 500K 3,000 to 9,000 2,500 to 7,000 1 to 3% | Macro 500K+ 9,000 to 25,000+ 7,000 to 20,000+ 0.5 to 1.5%",
+  "numbers": ["nano 3-7% engagement", "micro 2-5%", "mid-tier 1-3%", "macro 0.5-1.5%", "SGD 300-25,000+ fee span"],
+  "entities": ["Singapore", "Instagram", "TikTok"],
+  "time_period": "2025-2026",
+  "region": "Singapore",
+  "confidence": "low",
+  "source_note_id": "influencer-marketing-across-southeast-asia-country-by-country-guide"
+ },
+ {
+  "claim": "Influencer and creator brand engagements contributed approximately USD 11 billion in direct e-commerce sales value in Southeast Asia in 2023, with more than 90% of SEA online shoppers following influencers and more than 80% having purchased on a recommendation.",
+  "stance": "neutral",
+  "stance_target": "The position that SEA creator-economy measurement is concentrated entirely on commercial output and consumer behaviour, with no corresponding measurement of creator headcount, earnings distribution, or exit",
+  "evidence_type": "statistical",
+  "scope_conditions": "Southeast Asia; 2023 sales value; attributed to an Impact.com SEA influencer e-commerce study; underlying sample and method not stated in this source",
+  "quoted_support": "Brand engagements with influencers and creators contributed approximately USD 11 billion in direct e-commerce sales value in Southeast Asia in 2023 alone [...] More than 90% of Southeast Asian online shoppers actively follow influencers, and more than 80% have previously purchased a product because an influencer recommended it.",
+  "numbers": ["USD 11 billion SEA e-commerce sales value 2023", ">90% shoppers follow influencers", ">80% purchased on recommendation", ">80% of top influencers are local not regional", "USD 21.1 billion global influencer marketing industry 2024"],
+  "entities": ["Impact.com", "Influencer Marketing Hub", "Southeast Asia"],
+  "time_period": "2023-2024",
+  "region": "Southeast Asia",
+  "confidence": "low",
+  "source_note_id": "influencer-marketing-across-southeast-asia-country-by-country-guide"
+ },
+ {
+  "claim": "Only Singapore among the six main Southeast Asian markets has a mandatory influencer disclosure framework, with Indonesia, Thailand, Vietnam, the Philippines, and Malaysia relying on platform self-regulation, so no regulatory register of paid creators exists to enumerate them.",
+  "stance": "supports",
+  "stance_target": "The position that the absence of Southeast Asian creator attrition and income data is structural, because no mandatory disclosure or registration regime generates administrative records against which creator populations could be counted",
+  "evidence_type": "legal",
+  "scope_conditions": "Six SEA markets as of 2026; Singapore ASAS mandatory for ads with MAS financial-content rules effective March 2026; attributed in part to CreatorDB's Asia influencer regulation analysis",
+  "quoted_support": "Indonesia has no mandatory legal framework for influencer marketing disclosure [...] Vietnam has no disclosure regulations for influencer marketing [...] The Philippines has no mandatory regulatory framework for influencer marketing disclosure.",
+  "numbers": ["1 of 6 markets with mandatory disclosure", "MAS rules effective March 2026", "MCMC Content Code self-regulatory in Malaysia"],
+  "entities": ["ASAS", "MAS", "MCMC", "ASC", "NBTC", "CreatorDB", "Singapore", "Indonesia", "Vietnam", "Philippines", "Malaysia", "Thailand"],
+  "time_period": "2025-2026",
+  "region": "Southeast Asia (6 countries)",
+  "confidence": "medium",
+  "source_note_id": "influencer-marketing-across-southeast-asia-country-by-country-guide"
+ }
+]

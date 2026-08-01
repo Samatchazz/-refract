@@ -1,0 +1,1073 @@
+{
+  "slug": "elicyon",
+  "url": "https://elicyon.com",
+  "name": "Elicyon",
+  "country": "UK",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "ok": true,
+  "httpStatus": 200,
+  "finalUrl": "https://www.elicyon.com/",
+  "consentDismissed": [
+    "DENY"
+  ],
+  "scrollInfo": {
+    "contentHeight": 11580,
+    "docScrollHeight": 11571,
+    "maxElementBottom": 11580,
+    "innerScrollerHeight": 0,
+    "virtualScroll": false
+  },
+  "document": {
+    "scrollHeight": 11571,
+    "vhMultiple": 13.72,
+    "textNodeCount": 177,
+    "canvasCount": 0,
+    "elementCount": 624,
+    "title": "Global Luxury Interior Design Studio | Elicyon",
+    "lang": "en",
+    "contentHeight": 11580,
+    "scrollMode": "native"
+  },
+  "container": {
+    "dominantPairs": [
+      {
+        "width": 310,
+        "left": 32,
+        "count": 8,
+        "sample": {
+          "tag": "span",
+          "cls": "line"
+        }
+      },
+      {
+        "width": 347,
+        "left": 20,
+        "count": 7,
+        "sample": {
+          "tag": "span",
+          "cls": "line"
+        }
+      },
+      {
+        "width": 327,
+        "left": 20,
+        "count": 5,
+        "sample": {
+          "tag": "span",
+          "cls": "line"
+        }
+      },
+      {
+        "width": 350,
+        "left": 20,
+        "count": 4,
+        "sample": {
+          "tag": "p",
+          "cls": "block text-center font-elicyon text-[31px] leading-[130%] re"
+        }
+      },
+      {
+        "width": 294,
+        "left": 20,
+        "count": 4,
+        "sample": {
+          "tag": "span",
+          "cls": "line"
+        }
+      },
+      {
+        "width": 272,
+        "left": 20,
+        "count": 3,
+        "sample": {
+          "tag": "span",
+          "cls": "line"
+        }
+      }
+    ],
+    "containerChain": {
+      "chain": [
+        {
+          "tag": "span",
+          "cls": "line",
+          "width": 310.02,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "block"
+        },
+        {
+          "tag": "span",
+          "cls": "",
+          "width": 310.02,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "block"
+        },
+        {
+          "tag": "div",
+          "cls": "",
+          "width": 310.02,
+          "maxWidth": "314px",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "block"
+        },
+        {
+          "tag": "p",
+          "cls": "opacity-0",
+          "width": 310.02,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "block"
+        },
+        {
+          "tag": "div",
+          "cls": "mobile-body text-type-light self-start",
+          "width": 310.02,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "block"
+        },
+        {
+          "tag": "div",
+          "cls": "relative z-[3] flex flex-col gap-y-[40px] max-w-[395px] item",
+          "width": 326,
+          "maxWidth": "395px",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "flex"
+        },
+        {
+          "tag": "section",
+          "cls": "mt-[100px] py-[100px] relative px-[32px] flex items-center j",
+          "width": 390,
+          "maxWidth": "none",
+          "paddingInline": "32px / 32px",
+          "marginInline": "0px / 0px",
+          "display": "flex"
+        },
+        {
+          "tag": "main",
+          "cls": "bg-type-light",
+          "width": 390,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "block"
+        }
+      ],
+      "constrained": {
+        "tag": "div",
+        "cls": "",
+        "width": 310.02,
+        "maxWidth": "314px",
+        "paddingInline": "0px / 0px",
+        "marginInline": "0px / 0px",
+        "display": "block"
+      }
+    },
+    "grids": [
+      {
+        "columns": 2,
+        "columnGap": "20px",
+        "rowGap": "40px",
+        "width": 350,
+        "template": "165px 165px",
+        "count": 2
+      },
+      {
+        "columns": 6,
+        "columnGap": "20px",
+        "rowGap": "normal",
+        "width": 350,
+        "template": "41.6562px 41.6719px 41.6719px 41.6562px 41.6719px 41.6719px",
+        "count": 1
+      },
+      {
+        "columns": 2,
+        "columnGap": "20px",
+        "rowGap": "20px",
+        "width": 390,
+        "template": "165px 165px",
+        "count": 1
+      },
+      {
+        "columns": 6,
+        "columnGap": "20px",
+        "rowGap": "normal",
+        "width": 326,
+        "template": "37.6562px 37.6562px 37.6562px 37.6562px 37.6562px 37.6719px",
+        "count": 1
+      },
+      {
+        "columns": 2,
+        "columnGap": "16px",
+        "rowGap": "16px",
+        "width": 350,
+        "template": "167px 167px",
+        "count": 1
+      }
+    ],
+    "bodyPaddingInline": "0px / 0px",
+    "bodyMaxWidth": "none",
+    "htmlPaddingInline": "0px / 0px"
+  },
+  "leftEdgeTest": {
+    "layout": {
+      "n": 7,
+      "mean": 33.86,
+      "stdDev": 26.58,
+      "distinctExact": 4,
+      "distinctClustered2px": 4,
+      "clusters": [
+        {
+          "at": 20,
+          "count": 4
+        },
+        {
+          "at": 26,
+          "count": 1
+        },
+        {
+          "at": 33,
+          "count": 1
+        },
+        {
+          "at": 98,
+          "count": 1
+        }
+      ],
+      "values": [
+        20,
+        20,
+        20,
+        98,
+        20,
+        26,
+        33
+      ]
+    },
+    "rect": {
+      "n": 7,
+      "mean": 33.23,
+      "stdDev": 25.1,
+      "distinctExact": 4,
+      "distinctClustered2px": 4,
+      "clusters": [
+        {
+          "at": 20,
+          "count": 4
+        },
+        {
+          "at": 26.14,
+          "count": 1
+        },
+        {
+          "at": 32.78,
+          "count": 1
+        },
+        {
+          "at": 93.71,
+          "count": 1
+        }
+      ],
+      "values": [
+        20,
+        20,
+        20,
+        93.71,
+        20,
+        26.14,
+        32.78
+      ]
+    },
+    "headings": {
+      "n": 7,
+      "mean": 33.86,
+      "stdDev": 26.58,
+      "distinctExact": 4,
+      "distinctClustered2px": 4,
+      "clusters": [
+        {
+          "at": 20,
+          "count": 4
+        },
+        {
+          "at": 26,
+          "count": 1
+        },
+        {
+          "at": 33,
+          "count": 1
+        },
+        {
+          "at": 98,
+          "count": 1
+        }
+      ],
+      "values": [
+        20,
+        20,
+        20,
+        98,
+        20,
+        26,
+        33
+      ]
+    },
+    "sectionDiscovery": "semantic-siblings"
+  },
+  "sections": [
+    {
+      "index": 0,
+      "tag": "section",
+      "id": null,
+      "cls": "px-[20px] relative min-h-screen h-[1600px] md:hidden md:justify-center",
+      "height": 1600,
+      "vhFraction": 1.9,
+      "paddingBlockStart": "0px",
+      "paddingBlockEnd": "0px",
+      "marginBlockStart": "0px",
+      "marginBlockEnd": "0px",
+      "firstText": {
+        "layoutLeft": 20,
+        "rectLeft": 20,
+        "tag": "p",
+        "fontSize": "31px",
+        "text": "FORGING a NEW LUXURY through CRAFT, VISION and u"
+      },
+      "heading": {
+        "layoutLeft": 20,
+        "rectLeft": 20,
+        "tag": "p",
+        "fontSize": "31px",
+        "text": "FORGING a NEW LUXURY through CRAFT, VISION and u"
+      }
+    },
+    {
+      "index": 1,
+      "tag": "section",
+      "id": null,
+      "cls": "pt-[60px]  flex flex-col gap-y-[40px] lg:pt-[0px]",
+      "height": 3687.19,
+      "vhFraction": 4.37,
+      "paddingBlockStart": "60px",
+      "paddingBlockEnd": "0px",
+      "marginBlockStart": "0px",
+      "marginBlockEnd": "0px",
+      "firstText": {
+        "layoutLeft": 20,
+        "rectLeft": 20,
+        "tag": "span",
+        "fontSize": "32px",
+        "text": "OUR"
+      },
+      "heading": {
+        "layoutLeft": 20,
+        "rectLeft": 20,
+        "tag": "span",
+        "fontSize": "42.9px",
+        "text": "R"
+      }
+    },
+    {
+      "index": 2,
+      "tag": "section",
+      "id": null,
+      "cls": "pt-[100px] md:grid md:grid-cols-12 md:gap-y-[50px] md:gap-x-[20px] md:",
+      "height": 1052.77,
+      "vhFraction": 1.25,
+      "paddingBlockStart": "100px",
+      "paddingBlockEnd": "0px",
+      "marginBlockStart": "0px",
+      "marginBlockEnd": "0px",
+      "firstText": {
+        "layoutLeft": 20,
+        "rectLeft": 20,
+        "tag": "span",
+        "fontSize": "32px",
+        "text": "OUR"
+      },
+      "heading": {
+        "layoutLeft": 20,
+        "rectLeft": 20,
+        "tag": "span",
+        "fontSize": "32px",
+        "text": "OUR"
+      }
+    },
+    {
+      "index": 3,
+      "tag": "section",
+      "id": null,
+      "cls": "mt-[100px] py-[100px] relative px-[32px] flex items-center justify-cen",
+      "height": 835.05,
+      "vhFraction": 0.99,
+      "paddingBlockStart": "100px",
+      "paddingBlockEnd": "100px",
+      "marginBlockStart": "100px",
+      "marginBlockEnd": "0px",
+      "firstText": {
+        "layoutLeft": 98,
+        "rectLeft": 93.71,
+        "tag": "span",
+        "fontSize": "32px",
+        "text": "LEADING"
+      },
+      "heading": {
+        "layoutLeft": 98,
+        "rectLeft": 93.71,
+        "tag": "span",
+        "fontSize": "32px",
+        "text": "LEADING"
+      }
+    },
+    {
+      "index": 4,
+      "tag": "section",
+      "id": null,
+      "cls": "px-[20px] pt-[100px] lg:pt-[160px] lg:px-[32px] xl:px-[100px]",
+      "height": 988.83,
+      "vhFraction": 1.17,
+      "paddingBlockStart": "100px",
+      "paddingBlockEnd": "0px",
+      "marginBlockStart": "0px",
+      "marginBlockEnd": "0px",
+      "firstText": {
+        "layoutLeft": 20,
+        "rectLeft": 20,
+        "tag": "span",
+        "fontSize": "32px",
+        "text": "The WORLD"
+      },
+      "heading": {
+        "layoutLeft": 20,
+        "rectLeft": 20,
+        "tag": "span",
+        "fontSize": "32px",
+        "text": "The WORLD"
+      }
+    },
+    {
+      "index": 5,
+      "tag": "section",
+      "id": null,
+      "cls": "pt-[100px] lg:pt-[160px]",
+      "height": 701.8,
+      "vhFraction": 0.83,
+      "paddingBlockStart": "100px",
+      "paddingBlockEnd": "0px",
+      "marginBlockStart": "0px",
+      "marginBlockEnd": "0px",
+      "firstText": {
+        "layoutLeft": 26,
+        "rectLeft": 26.14,
+        "tag": "span",
+        "fontSize": "32px",
+        "text": "OBJECTS"
+      },
+      "heading": {
+        "layoutLeft": 26,
+        "rectLeft": 26.14,
+        "tag": "span",
+        "fontSize": "32px",
+        "text": "OBJECTS"
+      }
+    },
+    {
+      "index": 6,
+      "tag": "section",
+      "id": null,
+      "cls": "relative w-full h-screen min-h-[830px] overflow-hidden mt-[100px]  md:",
+      "height": 844,
+      "vhFraction": 1,
+      "paddingBlockStart": "0px",
+      "paddingBlockEnd": "0px",
+      "marginBlockStart": "100px",
+      "marginBlockEnd": "0px",
+      "firstText": {
+        "layoutLeft": 33,
+        "rectLeft": 32.78,
+        "tag": "span",
+        "fontSize": "23px",
+        "text": "GET IN TOUCH TO"
+      },
+      "heading": {
+        "layoutLeft": 33,
+        "rectLeft": 32.78,
+        "tag": "span",
+        "fontSize": "23px",
+        "text": "GET IN TOUCH TO"
+      }
+    }
+  ],
+  "verticalRhythm": {
+    "sectionCount": 7,
+    "near100vhCount": 2,
+    "near100vhPct": 28.57,
+    "strictGcdOfSpacing": 1,
+    "baseUnitEstimate80pct": 4,
+    "spacingHistogram": [
+      {
+        "value": 20,
+        "count": 30
+      },
+      {
+        "value": 100,
+        "count": 8
+      },
+      {
+        "value": 40,
+        "count": 7
+      },
+      {
+        "value": 30,
+        "count": 6
+      },
+      {
+        "value": 16,
+        "count": 6
+      },
+      {
+        "value": 12,
+        "count": 5
+      },
+      {
+        "value": 32,
+        "count": 4
+      },
+      {
+        "value": 4,
+        "count": 4
+      },
+      {
+        "value": 10,
+        "count": 3
+      },
+      {
+        "value": 44,
+        "count": 2
+      },
+      {
+        "value": 209,
+        "count": 2
+      },
+      {
+        "value": 88,
+        "count": 2
+      },
+      {
+        "value": 14,
+        "count": 2
+      },
+      {
+        "value": 60,
+        "count": 1
+      }
+    ],
+    "spacingSampleSize": 91
+  },
+  "typeScale": {
+    "distinctFontSizeCount": 12,
+    "distinctFontSizeCount_used2plus": 11,
+    "distinctSizes": [
+      {
+        "size": 70.98,
+        "count": 7
+      },
+      {
+        "size": 48,
+        "count": 3
+      },
+      {
+        "size": 42.9,
+        "count": 21
+      },
+      {
+        "size": 36.27,
+        "count": 11
+      },
+      {
+        "size": 32,
+        "count": 11
+      },
+      {
+        "size": 31,
+        "count": 1
+      },
+      {
+        "size": 28,
+        "count": 4
+      },
+      {
+        "size": 23,
+        "count": 6
+      },
+      {
+        "size": 16,
+        "count": 3
+      },
+      {
+        "size": 14,
+        "count": 56
+      },
+      {
+        "size": 12,
+        "count": 2
+      },
+      {
+        "size": 10,
+        "count": 8
+      }
+    ],
+    "scaleSizesDesc": [
+      70.98,
+      48,
+      42.9,
+      36.27,
+      32,
+      28,
+      23,
+      16,
+      14,
+      12,
+      10
+    ],
+    "consecutiveRatios": [
+      1.48,
+      1.12,
+      1.18,
+      1.13,
+      1.14,
+      1.22,
+      1.44,
+      1.14,
+      1.17,
+      1.2
+    ],
+    "roles": {
+      "h1": null,
+      "biggestText": {
+        "tag": "span",
+        "fontSize": 70.98,
+        "fontWeight": "400",
+        "lineHeightPx": 70.98,
+        "lineHeightRatio": 1,
+        "letterSpacing": "0px",
+        "letterSpacingEm": 0,
+        "fontFamily": "__elicyon_df1f4c",
+        "fontFamilyFull": "__elicyon_df1f4c, __elicyon_Fallback_df1f4c, serif",
+        "textTransform": "uppercase",
+        "color": "rgb(0, 0, 0)",
+        "widthPx": 45.63,
+        "text": "E"
+      },
+      "h2All": [],
+      "h3": {
+        "tag": "h3",
+        "fontSize": 28,
+        "fontWeight": "400",
+        "lineHeightPx": 32.2,
+        "lineHeightRatio": 1.15,
+        "letterSpacing": "0px",
+        "letterSpacingEm": 0,
+        "fontFamily": "__elicyon_df1f4c",
+        "fontFamilyFull": "__elicyon_df1f4c, __elicyon_Fallback_df1f4c",
+        "textTransform": "uppercase",
+        "color": "rgb(244, 242, 238)",
+        "widthPx": 260,
+        "text": "60 CURZON APARTMENT"
+      },
+      "body": {
+        "tag": "label",
+        "fontSize": 12,
+        "fontWeight": "400",
+        "lineHeightPx": 13.8,
+        "lineHeightRatio": 1.15,
+        "letterSpacing": "0px",
+        "letterSpacingEm": 0,
+        "fontFamily": "__antiqueLegacy_623eb9",
+        "fontFamilyFull": "__antiqueLegacy_623eb9, __antiqueLegacy_Fallback_623eb9",
+        "textTransform": "none",
+        "color": "rgb(0, 0, 0)",
+        "widthPx": 285,
+        "text": "I consent to my information being collected in accordance wi"
+      },
+      "small": {
+        "tag": "h6",
+        "fontSize": 10,
+        "fontWeight": "400",
+        "lineHeightPx": 10,
+        "lineHeightRatio": 1,
+        "letterSpacing": "1px",
+        "letterSpacingEm": 0.1,
+        "fontFamily": "__antiqueLegacy_623eb9",
+        "fontFamilyFull": "__antiqueLegacy_623eb9, __antiqueLegacy_Fallback_623eb9",
+        "textTransform": "uppercase",
+        "color": "rgb(0, 0, 0)",
+        "widthPx": 165,
+        "text": "House & Garden"
+      },
+      "mono": null
+    },
+    "readingMeasure": {
+      "columnWidthPx": 285,
+      "widthOf100Chars": 574.39,
+      "measureCh_spec": 49.62,
+      "measureCh_zeroWidth": 40.4,
+      "maxWidthDeclared": "285px",
+      "canvasFont": "12px __antiqueLegacy_623eb9, __antiqueLegacy_Fallback_623eb9"
+    },
+    "readingMeasureAlternates": [
+      {
+        "tag": "label",
+        "fontSize": 12,
+        "fontWeight": "400",
+        "lineHeightPx": 13.8,
+        "lineHeightRatio": 1.15,
+        "letterSpacing": "0px",
+        "letterSpacingEm": 0,
+        "fontFamily": "__antiqueLegacy_623eb9",
+        "fontFamilyFull": "__antiqueLegacy_623eb9, __antiqueLegacy_Fallback_623eb9",
+        "textTransform": "none",
+        "color": "rgb(0, 0, 0)",
+        "widthPx": 285,
+        "text": "I consent to my information being collected in accordance wi"
+      },
+      {
+        "tag": "p",
+        "fontSize": 14,
+        "fontWeight": "400",
+        "lineHeightPx": 16.1,
+        "lineHeightRatio": 1.15,
+        "letterSpacing": "0px",
+        "letterSpacingEm": 0,
+        "fontFamily": "__antiqueLegacy_623eb9",
+        "fontFamilyFull": "__antiqueLegacy_623eb9, __antiqueLegacy_Fallback_623eb9",
+        "textTransform": "none",
+        "color": "rgb(0, 0, 0)",
+        "widthPx": 350,
+        "text": "Subscribe to join our community and stay up to date with the"
+      }
+    ],
+    "distinctFontFamilyCount": 2,
+    "fontFamilies": [
+      {
+        "family": "__antiqueLegacy_623eb9",
+        "count": 69
+      },
+      {
+        "family": "__elicyon_df1f4c",
+        "count": 64
+      }
+    ]
+  },
+  "color": {
+    "textColors": [
+      {
+        "value": "rgb(0,0,0)",
+        "count": 74
+      },
+      {
+        "value": "rgb(244,242,238)",
+        "count": 56
+      },
+      {
+        "value": "rgb(255,255,255)",
+        "count": 3
+      }
+    ],
+    "backgroundColors": [
+      {
+        "value": "rgb(141,93,82)",
+        "count": 15
+      },
+      {
+        "value": "rgb(244,242,238)",
+        "count": 3
+      },
+      {
+        "value": "rgb(110,137,200)",
+        "count": 2
+      },
+      {
+        "value": "rgba(245,243,240,0.35)",
+        "count": 2
+      }
+    ],
+    "distinctTextColorCount": 3,
+    "distinctBgColorCount": 4
+  },
+  "persistent": {
+    "fixedOrSticky": [
+      {
+        "tag": "header",
+        "cls": "fixed top-0 left-0 py-[44px] px-[20px] w-full z-[99] text-wh",
+        "position": "fixed",
+        "rect": {
+          "top": 0,
+          "left": 0,
+          "width": 390,
+          "height": 102
+        },
+        "zIndex": "99",
+        "text": "ProjectsServicesStudioInsightsMenuCloseContactContact Us",
+        "opacity": "1"
+      },
+      {
+        "tag": "div",
+        "cls": "fixed inset-0 object-cover [&_img]:object-cover pointer-even",
+        "position": "fixed",
+        "rect": {
+          "top": 0,
+          "left": 0,
+          "width": 390,
+          "height": 844
+        },
+        "zIndex": "50",
+        "text": "",
+        "opacity": "1"
+      },
+      {
+        "tag": "div",
+        "cls": "fixed object-cover [&_img]:object-cover pointer-events-none ",
+        "position": "fixed",
+        "rect": {
+          "top": 311.84,
+          "left": 113.1,
+          "width": 163.8,
+          "height": 220.33
+        },
+        "zIndex": "50",
+        "text": "",
+        "opacity": "1"
+      },
+      {
+        "tag": "div",
+        "cls": "fixed inset-0 object-cover [&_img]:object-cover pointer-even",
+        "position": "fixed",
+        "rect": {
+          "top": 0,
+          "left": 0,
+          "width": 390,
+          "height": 570
+        },
+        "zIndex": "50",
+        "text": "",
+        "opacity": "1"
+      },
+      {
+        "tag": "div",
+        "cls": "h-[100svh] flex items-center justify-center sticky top-[0px]",
+        "position": "sticky",
+        "rect": {
+          "top": 844,
+          "left": 20,
+          "width": 350,
+          "height": 844
+        },
+        "zIndex": "2",
+        "text": "FORGING a NEW LUXURY through CRAFT, VISION and unrivalled GL",
+        "opacity": "1"
+      }
+    ]
+  },
+  "nav": {
+    "tag": "header",
+    "cls": "fixed top-0 left-0 py-[44px] px-[20px] w-full z-[99] text-wh",
+    "height": 102,
+    "top": 0,
+    "position": "fixed",
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "backdropFilter": "none",
+    "borderBottom": "0px rgb(229, 231, 235)",
+    "paddingBlock": "44px / 44px",
+    "transform": "matrix(1, 0, 0, 1, 0, 0)",
+    "opacity": "1",
+    "mixBlendMode": "normal",
+    "color": "rgb(255, 255, 255)"
+  },
+  "navState": {
+    "at0": {
+      "nav": {
+        "height": 102,
+        "top": 0,
+        "position": "fixed",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "backdropFilter": "none",
+        "borderBottom": "0px rgb(229, 231, 235)",
+        "paddingBlock": "44px / 44px",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)",
+        "opacity": "1",
+        "color": "rgb(255, 255, 255)"
+      },
+      "fixedOrSticky": [
+        {
+          "tag": "header",
+          "cls": "fixed top-0 left-0 py-[44px] px-[20px] w-full z-[99] text-wh",
+          "position": "fixed",
+          "rect": {
+            "top": 0,
+            "left": 0,
+            "width": 390,
+            "height": 102
+          },
+          "text": "ProjectsServicesStudioInsightsMenuCloseContactContact Us",
+          "opacity": "1"
+        },
+        {
+          "tag": "div",
+          "cls": "fixed inset-0 object-cover [&_img]:object-cover pointer-even",
+          "position": "fixed",
+          "rect": {
+            "top": 0,
+            "left": 0,
+            "width": 390,
+            "height": 844
+          },
+          "text": "",
+          "opacity": "1"
+        },
+        {
+          "tag": "div",
+          "cls": "fixed object-cover [&_img]:object-cover pointer-events-none ",
+          "position": "fixed",
+          "rect": {
+            "top": 311.84,
+            "left": 113.1,
+            "width": 163.8,
+            "height": 220.33
+          },
+          "text": "",
+          "opacity": "1"
+        },
+        {
+          "tag": "div",
+          "cls": "fixed inset-0 object-cover [&_img]:object-cover pointer-even",
+          "position": "fixed",
+          "rect": {
+            "top": 0,
+            "left": 0,
+            "width": 390,
+            "height": 570
+          },
+          "text": "",
+          "opacity": "1"
+        },
+        {
+          "tag": "div",
+          "cls": "h-[100svh] flex items-center justify-center sticky top-[0px]",
+          "position": "sticky",
+          "rect": {
+            "top": 844,
+            "left": 20,
+            "width": 350,
+            "height": 844
+          },
+          "text": "FORGING a NEW LUXURY through CRAFT, VISION and unrivalled GL",
+          "opacity": "1"
+        }
+      ]
+    },
+    "at2000": {
+      "nav": {
+        "height": 102,
+        "top": 0,
+        "position": "fixed",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "backdropFilter": "none",
+        "borderBottom": "0px rgb(229, 231, 235)",
+        "paddingBlock": "44px / 44px",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)",
+        "opacity": "0",
+        "color": "rgb(255, 255, 255)"
+      },
+      "fixedOrSticky": [
+        {
+          "tag": "header",
+          "cls": "fixed top-0 left-0 py-[44px] px-[20px] w-full z-[99] text-wh",
+          "position": "fixed",
+          "rect": {
+            "top": 0,
+            "left": 0,
+            "width": 390,
+            "height": 102
+          },
+          "text": "ProjectsServicesStudioInsightsMenuCloseContactContact Us",
+          "opacity": "0"
+        },
+        {
+          "tag": "div",
+          "cls": "fixed inset-0 object-cover [&_img]:object-cover pointer-even",
+          "position": "fixed",
+          "rect": {
+            "top": 0,
+            "left": 0,
+            "width": 390,
+            "height": 844
+          },
+          "text": "",
+          "opacity": "1"
+        },
+        {
+          "tag": "div",
+          "cls": "fixed object-cover [&_img]:object-cover pointer-events-none ",
+          "position": "fixed",
+          "rect": {
+            "top": 311.84,
+            "left": 113.1,
+            "width": 163.8,
+            "height": 220.33
+          },
+          "text": "",
+          "opacity": "1"
+        },
+        {
+          "tag": "div",
+          "cls": "fixed inset-0 object-cover [&_img]:object-cover pointer-even",
+          "position": "fixed",
+          "rect": {
+            "top": 0,
+            "left": 0,
+            "width": 390,
+            "height": 570
+          },
+          "text": "",
+          "opacity": "1"
+        },
+        {
+          "tag": "div",
+          "cls": "h-[100svh] flex items-center justify-center sticky top-[0px]",
+          "position": "sticky",
+          "rect": {
+            "top": -400,
+            "left": 20,
+            "width": 350,
+            "height": 844
+          },
+          "text": "FORGING a NEW LUXURY through CRAFT, VISION and unrivalled GL",
+          "opacity": "1"
+        }
+      ]
+    },
+    "changed": true,
+    "diff": {
+      "opacity": {
+        "at0": "1",
+        "at2000": "0"
+      }
+    }
+  },
+  "shots": [
+    "elicyon-390-full.jpg"
+  ],
+  "fullPageShotRepresentative": true,
+  "pageErrors": []
+}

@@ -1,0 +1,58 @@
+[
+  {
+    "claim": "Twitch disclosed that it paid out more than $1 billion to streamers in 2022 while approximately 7 million streamers went live on the platform each month, implying a mean of roughly $143 per monthly-active streamer per year.",
+    "stance": "supports",
+    "stance_target": "The typical creator on a major platform earns a trivial amount, and even the arithmetic mean falls far below any living wage",
+    "evidence_type": "statistical",
+    "scope_conditions": "Both figures are Twitch self-disclosures with no methodology; 'streamer' is undefined (presumably an account that went live at least once in a month); the two figures may not cover identical populations or periods; the mean is inflated relative to the median by extreme top-tail concentration",
+    "quoted_support": "According to Twitch, it paid out more than $1 billion to streamers in 2022. ... On a monthly basis, some 7 million streamers go live on Twitch, the company says.",
+    "numbers": ["$1 billion", "7 million", "31 million", "2.5 million", "~$143"],
+    "entities": ["Twitch", "Amazon", "Variety"],
+    "time_period": "2022 payouts; 2023 platform statistics",
+    "region": "Twitch global; no country breakdown disclosed",
+    "confidence": "high",
+    "source_note_id": "twitch-partner-plus-will-pay-70-of-subscription-revenue-to-creators"
+  },
+  {
+    "claim": "Twitch's Partner Plus program, effective 1 October 2023, requires at least 350 recurring paid subscriptions maintained for three consecutive months to qualify for a 70/30 revenue split, capped at the first $100,000 per 12 months after which the rate reverts to 50%.",
+    "stance": "supports",
+    "stance_target": "Platform-set monetisation thresholds define a measurable and demanding boundary for commercially serious creator status",
+    "evidence_type": "empirical",
+    "scope_conditions": "Twitch Partners only (already an elite subset); net subscription revenue only, not ads or Bits; threshold resets each calendar year",
+    "quoted_support": "To qualify, Twitch Partners must maintain a sub count of at least 350 recurring paid subscriptions for three consecutive months. ... Once a streamer earns $100,000 through Partner Plus, the revenue share will return to standard rate of 50% for most partners.",
+    "numbers": ["350", "3", "70%", "30%", "50%", "$100,000", "12 months"],
+    "entities": ["Twitch", "Mike Minton", "Laura Lee"],
+    "time_period": "Announced 15 June 2023, effective 1 October 2023",
+    "region": "Twitch global",
+    "confidence": "high",
+    "source_note_id": "twitch-partner-plus-will-pay-70-of-subscription-revenue-to-creators"
+  },
+  {
+    "claim": "Clearing Twitch's elevated Partner Plus threshold of 350 subscriptions yields roughly $1,200 per month in gross subscription revenue, which is below a US living wage before tax and before production costs.",
+    "stance": "supports",
+    "stance_target": "Even platform-designated 'successful' creator tiers do not by themselves constitute a living wage",
+    "evidence_type": "statistical",
+    "scope_conditions": "Derived figure: 350 subs x $4.99 x 70% = ~$1,223/month, assuming all tier-1 subs and excluding ads, Bits, sponsorships; the underlying threshold and rate are directly stated by Twitch",
+    "quoted_support": "Twitch Partners must maintain a sub count of at least 350 recurring paid subscriptions for three consecutive months.",
+    "numbers": ["350", "$4.99", "70%", "~$1,223"],
+    "entities": ["Twitch"],
+    "time_period": "2023",
+    "region": "United States (wage benchmark)",
+    "confidence": "medium",
+    "source_note_id": "twitch-partner-plus-will-pay-70-of-subscription-revenue-to-creators"
+  },
+  {
+    "claim": "Twitch reports 31 million average daily visitors and 2.5 million average concurrent viewers against 7 million monthly streamers, giving a ratio of roughly one live streamer for every 4.4 daily visitors.",
+    "stance": "supports",
+    "stance_target": "Creator supply has grown far faster than attention supply, structurally capping per-creator revenue",
+    "evidence_type": "statistical",
+    "scope_conditions": "Twitch self-disclosed 2023 figures; daily visitors and monthly streamers are different time bases, so the ratio is indicative rather than exact",
+    "quoted_support": "The Amazon-owned platform says it has more than 31 million average daily visitors (and that at any given moment an average of 2.5 million people are watching livestreams). On a monthly basis, some 7 million streamers go live on Twitch, the company says.",
+    "numbers": ["31 million", "2.5 million", "7 million", "4.4"],
+    "entities": ["Twitch", "Amazon"],
+    "time_period": "June 2023",
+    "region": "Twitch global; no country breakdown",
+    "confidence": "medium",
+    "source_note_id": "twitch-partner-plus-will-pay-70-of-subscription-revenue-to-creators"
+  }
+]

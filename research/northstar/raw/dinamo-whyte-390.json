@@ -1,0 +1,1597 @@
+{
+  "slug": "dinamo-whyte",
+  "url": "https://abcdinamo.com/typefaces/whyte",
+  "name": "ABC Dinamo — Whyte",
+  "country": "Switzerland",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "ok": true,
+  "httpStatus": 200,
+  "finalUrl": "https://abcdinamo.com/typefaces/whyte",
+  "consentDismissed": [],
+  "scrollInfo": {
+    "contentHeight": 7929,
+    "docScrollHeight": 7929,
+    "maxElementBottom": 7929,
+    "innerScrollerHeight": 4767,
+    "virtualScroll": false
+  },
+  "document": {
+    "scrollHeight": 7929,
+    "vhMultiple": 9.39,
+    "textNodeCount": 528,
+    "canvasCount": 0,
+    "elementCount": 3988,
+    "title": "Whyte — Dinamo Typefaces",
+    "lang": "en-US",
+    "contentHeight": 7929,
+    "scrollMode": "native"
+  },
+  "container": {
+    "dominantPairs": [
+      {
+        "width": 352,
+        "left": 19,
+        "count": 7,
+        "sample": {
+          "tag": "p",
+          "cls": ""
+        }
+      },
+      {
+        "width": 374,
+        "left": 8,
+        "count": 5,
+        "sample": {
+          "tag": "p",
+          "cls": ""
+        }
+      },
+      {
+        "width": 1,
+        "left": -1,
+        "count": 1,
+        "sample": {
+          "tag": "a",
+          "cls": "hidden-visually"
+        }
+      },
+      {
+        "width": 1,
+        "left": 5,
+        "count": 1,
+        "sample": {
+          "tag": "h4",
+          "cls": "hidden-visually"
+        }
+      },
+      {
+        "width": 334,
+        "left": 28,
+        "count": 1,
+        "sample": {
+          "tag": "h4",
+          "cls": "custom-font custom-font--wyt-sm-mn-ik-rg"
+        }
+      },
+      {
+        "width": 141,
+        "left": 21,
+        "count": 1,
+        "sample": {
+          "tag": "p",
+          "cls": "custom-font custom-font--wyt-gr-rg"
+        }
+      }
+    ],
+    "containerChain": {
+      "chain": [
+        {
+          "tag": "p",
+          "cls": "",
+          "width": 352.27,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "block"
+        },
+        {
+          "tag": "div",
+          "cls": "text-box typeface__about-box boxes__box l:box-m l:spacing-m ",
+          "width": 378.95,
+          "maxWidth": "100%",
+          "paddingInline": "13.3482px / 13.3482px",
+          "marginInline": "0px / 0px",
+          "display": "block"
+        },
+        {
+          "tag": "div",
+          "cls": "accordion__content typeface__about-inner",
+          "width": 378.95,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "flex"
+        },
+        {
+          "tag": "div",
+          "cls": "accordion__body",
+          "width": 378.95,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "block"
+        },
+        {
+          "tag": "div",
+          "cls": "s-m:box-ultra s-m:accordion s-m:accordion--btn",
+          "width": 378.95,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "block"
+        },
+        {
+          "tag": "section",
+          "cls": "typeface__about boxes l:section l:section--fond l:section--s",
+          "width": 390,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "flex"
+        },
+        {
+          "tag": "div",
+          "cls": "has-selection-color",
+          "width": 390,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "block"
+        },
+        {
+          "tag": "div",
+          "cls": "content-wrapper",
+          "width": 390,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "block"
+        }
+      ],
+      "constrained": {
+        "tag": "div",
+        "cls": "text-box typeface__about-box boxes__box l:box-m l:spacing-m ",
+        "width": 378.95,
+        "maxWidth": "100%",
+        "paddingInline": "13.3482px / 13.3482px",
+        "marginInline": "0px / 0px",
+        "display": "block"
+      }
+    },
+    "grids": [],
+    "bodyPaddingInline": "0px / 0px",
+    "bodyMaxWidth": "none",
+    "htmlPaddingInline": "0px / 0px"
+  },
+  "leftEdgeTest": {
+    "layout": {
+      "n": 5,
+      "mean": 92.8,
+      "stdDev": 48.55,
+      "distinctExact": 5,
+      "distinctClustered2px": 4,
+      "clusters": [
+        {
+          "at": 0,
+          "count": 1
+        },
+        {
+          "at": 92,
+          "count": 1
+        },
+        {
+          "at": 111,
+          "count": 1
+        },
+        {
+          "at": 130.5,
+          "count": 2
+        }
+      ],
+      "values": [
+        131,
+        111,
+        0,
+        92,
+        130
+      ]
+    },
+    "rect": {
+      "n": 5,
+      "mean": 92.74,
+      "stdDev": 48.49,
+      "distinctExact": 4,
+      "distinctClustered2px": 4,
+      "clusters": [
+        {
+          "at": 0,
+          "count": 1
+        },
+        {
+          "at": 92,
+          "count": 1
+        },
+        {
+          "at": 111.22,
+          "count": 1
+        },
+        {
+          "at": 130.25,
+          "count": 2
+        }
+      ],
+      "values": [
+        130.11,
+        111.22,
+        0,
+        92,
+        130.38
+      ]
+    },
+    "headings": {
+      "n": 5,
+      "mean": 75,
+      "stdDev": 54.56,
+      "distinctExact": 5,
+      "distinctClustered2px": 4,
+      "clusters": [
+        {
+          "at": 0,
+          "count": 1
+        },
+        {
+          "at": 22,
+          "count": 1
+        },
+        {
+          "at": 92,
+          "count": 1
+        },
+        {
+          "at": 130.5,
+          "count": 2
+        }
+      ],
+      "values": [
+        131,
+        22,
+        0,
+        92,
+        130
+      ]
+    },
+    "sectionDiscovery": "tall-children-of-wrapper"
+  },
+  "sections": [
+    {
+      "index": 0,
+      "tag": "header",
+      "id": null,
+      "cls": "hero hero--typefaces",
+      "height": 624.55,
+      "vhFraction": 0.74,
+      "paddingBlockStart": "0px",
+      "paddingBlockEnd": "0px",
+      "marginBlockStart": "0px",
+      "marginBlockEnd": "0px",
+      "firstText": {
+        "layoutLeft": 131,
+        "rectLeft": 130.11,
+        "tag": "span",
+        "fontSize": "36.4393px",
+        "text": "Whyte"
+      },
+      "heading": {
+        "layoutLeft": 131,
+        "rectLeft": 130.11,
+        "tag": "span",
+        "fontSize": "36.4393px",
+        "text": "Whyte"
+      }
+    },
+    {
+      "index": 1,
+      "tag": "section",
+      "id": "try",
+      "cls": "typeface__try boxes",
+      "height": 2997.95,
+      "vhFraction": 3.55,
+      "paddingBlockStart": "0px",
+      "paddingBlockEnd": "0px",
+      "marginBlockStart": "66.7408px",
+      "marginBlockEnd": "0px",
+      "firstText": {
+        "layoutLeft": 111,
+        "rectLeft": 111.22,
+        "tag": "h4",
+        "fontSize": "19.3239px",
+        "text": "Whyte Plus Variable"
+      },
+      "heading": {
+        "layoutLeft": 22,
+        "rectLeft": 39.23,
+        "tag": "span",
+        "fontSize": "59.67px",
+        "text": "You’re going to"
+      }
+    },
+    {
+      "index": 2,
+      "tag": "div",
+      "id": null,
+      "cls": "script-listing l:hidden",
+      "height": 157.86,
+      "vhFraction": 0.19,
+      "paddingBlockStart": "0px",
+      "paddingBlockEnd": "0px",
+      "marginBlockStart": "44.4939px",
+      "marginBlockEnd": "0px",
+      "firstText": {
+        "layoutLeft": 0,
+        "rectLeft": 0,
+        "tag": "h2",
+        "fontSize": "19.3239px",
+        "text": "Whyte Global"
+      },
+      "heading": {
+        "layoutLeft": 0,
+        "rectLeft": 0,
+        "tag": "h2",
+        "fontSize": "19.3239px",
+        "text": "Whyte Global"
+      }
+    },
+    {
+      "index": 3,
+      "tag": "section",
+      "id": "about",
+      "cls": "typeface__about boxes l:section l:section--fond l:section--spacing-m",
+      "height": 247.53,
+      "vhFraction": 0.29,
+      "paddingBlockStart": "0px",
+      "paddingBlockEnd": "0px",
+      "marginBlockStart": "0px",
+      "marginBlockEnd": "0px",
+      "firstText": {
+        "layoutLeft": 92,
+        "rectLeft": 92,
+        "tag": "h3",
+        "fontSize": "19.3239px",
+        "text": "About this typeface"
+      },
+      "heading": {
+        "layoutLeft": 92,
+        "rectLeft": 92,
+        "tag": "h3",
+        "fontSize": "19.3239px",
+        "text": "About this typeface"
+      }
+    },
+    {
+      "index": 4,
+      "tag": "section",
+      "id": "in-use",
+      "cls": "typeface__in-use in-use--center-row boxes spacing-l",
+      "height": 2596.27,
+      "vhFraction": 3.08,
+      "paddingBlockStart": "0px",
+      "paddingBlockEnd": "0px",
+      "marginBlockStart": "88.9877px",
+      "marginBlockEnd": "0px",
+      "firstText": {
+        "layoutLeft": 130,
+        "rectLeft": 130.38,
+        "tag": "h2",
+        "fontSize": "19.3239px",
+        "text": "Whyte In Use"
+      },
+      "heading": {
+        "layoutLeft": 130,
+        "rectLeft": 130.38,
+        "tag": "h2",
+        "fontSize": "19.3239px",
+        "text": "Whyte In Use"
+      }
+    }
+  ],
+  "verticalRhythm": {
+    "sectionCount": 5,
+    "near100vhCount": 0,
+    "near100vhPct": 0,
+    "strictGcdOfSpacing": 1,
+    "baseUnitEstimate80pct": null,
+    "spacingHistogram": [
+      {
+        "value": 7,
+        "count": 318
+      },
+      {
+        "value": 8,
+        "count": 211
+      },
+      {
+        "value": 28,
+        "count": 120
+      },
+      {
+        "value": 10,
+        "count": 80
+      },
+      {
+        "value": 22,
+        "count": 63
+      },
+      {
+        "value": 14,
+        "count": 38
+      },
+      {
+        "value": 6,
+        "count": 35
+      },
+      {
+        "value": 13,
+        "count": 32
+      },
+      {
+        "value": 11,
+        "count": 21
+      },
+      {
+        "value": 44,
+        "count": 15
+      },
+      {
+        "value": 89,
+        "count": 12
+      },
+      {
+        "value": 21,
+        "count": 10
+      },
+      {
+        "value": 4,
+        "count": 6
+      },
+      {
+        "value": 23,
+        "count": 4
+      }
+    ],
+    "spacingSampleSize": 982
+  },
+  "typeScale": {
+    "distinctFontSizeCount": 17,
+    "distinctFontSizeCount_used2plus": 11,
+    "distinctSizes": [
+      {
+        "size": 549.95,
+        "count": 1
+      },
+      {
+        "size": 420.04,
+        "count": 1
+      },
+      {
+        "size": 152.92,
+        "count": 2
+      },
+      {
+        "size": 122.34,
+        "count": 1
+      },
+      {
+        "size": 59.67,
+        "count": 1
+      },
+      {
+        "size": 49.97,
+        "count": 20
+      },
+      {
+        "size": 36.44,
+        "count": 1
+      },
+      {
+        "size": 32.43,
+        "count": 5
+      },
+      {
+        "size": 30.37,
+        "count": 6
+      },
+      {
+        "size": 28.92,
+        "count": 55
+      },
+      {
+        "size": 24.85,
+        "count": 12
+      },
+      {
+        "size": 22.08,
+        "count": 120
+      },
+      {
+        "size": 19.32,
+        "count": 47
+      },
+      {
+        "size": 15.18,
+        "count": 60
+      },
+      {
+        "size": 12.08,
+        "count": 10
+      },
+      {
+        "size": 11.12,
+        "count": 1
+      },
+      {
+        "size": 8.97,
+        "count": 2
+      }
+    ],
+    "scaleSizesDesc": [
+      152.92,
+      49.97,
+      32.43,
+      30.37,
+      28.92,
+      24.85,
+      22.08,
+      19.32,
+      15.18,
+      12.08,
+      8.97
+    ],
+    "consecutiveRatios": [
+      3.06,
+      1.54,
+      1.07,
+      1.05,
+      1.16,
+      1.13,
+      1.14,
+      1.27,
+      1.26,
+      1.35
+    ],
+    "roles": {
+      "h1": null,
+      "biggestText": {
+        "tag": "em",
+        "fontSize": 549.95,
+        "fontWeight": "400",
+        "lineHeightPx": 439.96,
+        "lineHeightRatio": 0.8,
+        "letterSpacing": "0px",
+        "letterSpacingEm": 0,
+        "fontFamily": "ABCWhytePlusVariable-A",
+        "fontFamilyFull": "ABCWhytePlusVariable-A, ABCWhytePlusVariable-B, DinamoLoading, sans-serif",
+        "textTransform": "none",
+        "color": "rgb(255, 255, 255)",
+        "widthPx": 296.42,
+        "text": "a"
+      },
+      "h2All": [
+        {
+          "tag": "h2",
+          "fontSize": 19.32,
+          "fontWeight": "400",
+          "lineHeightPx": 21.26,
+          "lineHeightRatio": 1.1,
+          "letterSpacing": "0px",
+          "letterSpacingEm": 0,
+          "fontFamily": "Monument Grotesk",
+          "fontFamilyFull": "\"Monument Grotesk\", \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+          "textTransform": "uppercase",
+          "color": "rgb(0, 0, 0)",
+          "widthPx": 390,
+          "text": "Whyte Global"
+        },
+        {
+          "tag": "h2",
+          "fontSize": 19.32,
+          "fontWeight": "400",
+          "lineHeightPx": 21.26,
+          "lineHeightRatio": 1.1,
+          "letterSpacing": "0px",
+          "letterSpacingEm": 0,
+          "fontFamily": "Monument Grotesk",
+          "fontFamilyFull": "\"Monument Grotesk\", \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+          "textTransform": "uppercase",
+          "color": "rgb(0, 0, 0)",
+          "widthPx": 94.31,
+          "text": "Features"
+        },
+        {
+          "tag": "h2",
+          "fontSize": 19.32,
+          "fontWeight": "400",
+          "lineHeightPx": 21.26,
+          "lineHeightRatio": 1.1,
+          "letterSpacing": "0px",
+          "letterSpacingEm": 0,
+          "fontFamily": "Monument Grotesk",
+          "fontFamilyFull": "\"Monument Grotesk\", \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+          "textTransform": "uppercase",
+          "color": "rgb(0, 0, 0)",
+          "widthPx": 361.41,
+          "text": "Related Entries"
+        },
+        {
+          "tag": "h2",
+          "fontSize": 19.32,
+          "fontWeight": "400",
+          "lineHeightPx": 21.26,
+          "lineHeightRatio": 1.1,
+          "letterSpacing": "0px",
+          "letterSpacingEm": 0,
+          "fontFamily": "Monument Grotesk",
+          "fontFamilyFull": "\"Monument Grotesk\", \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+          "textTransform": "uppercase",
+          "color": "rgb(0, 0, 0)",
+          "widthPx": 212.91,
+          "text": "Character Overview"
+        },
+        {
+          "tag": "h2",
+          "fontSize": 19.32,
+          "fontWeight": "400",
+          "lineHeightPx": 21.26,
+          "lineHeightRatio": 1.1,
+          "letterSpacing": "0px",
+          "letterSpacingEm": 0,
+          "fontFamily": "Monument Grotesk",
+          "fontFamilyFull": "\"Monument Grotesk\", \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+          "textTransform": "uppercase",
+          "color": "rgb(0, 0, 0)",
+          "widthPx": 129.23,
+          "text": "Whyte In Use"
+        }
+      ],
+      "h3": {
+        "tag": "h3",
+        "fontSize": 19.32,
+        "fontWeight": "400",
+        "lineHeightPx": 21.26,
+        "lineHeightRatio": 1.1,
+        "letterSpacing": "0px",
+        "letterSpacingEm": 0,
+        "fontFamily": "Monument Grotesk",
+        "fontFamilyFull": "\"Monument Grotesk\", \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+        "textTransform": "uppercase",
+        "color": "rgb(0, 0, 0)",
+        "widthPx": 205.98,
+        "text": "About this typeface"
+      },
+      "body": {
+        "tag": "p",
+        "fontSize": 19.32,
+        "fontWeight": "400",
+        "lineHeightPx": 21.26,
+        "lineHeightRatio": 1.1,
+        "letterSpacing": "0px",
+        "letterSpacingEm": 0,
+        "fontFamily": "Monument Grotesk",
+        "fontFamilyFull": "\"Monument Grotesk\", \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+        "textTransform": "none",
+        "color": "rgb(0, 0, 0)",
+        "widthPx": 352.27,
+        "text": "Latin: Spanish, English, Portuguese, Swahili (individual lan"
+      },
+      "small": {
+        "tag": "a",
+        "fontSize": 11.12,
+        "fontWeight": "400",
+        "lineHeightPx": 12.24,
+        "lineHeightRatio": 1.1,
+        "letterSpacing": "0px",
+        "letterSpacingEm": 0,
+        "fontFamily": "Monument Grotesk",
+        "fontFamilyFull": "\"Monument Grotesk\", \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+        "textTransform": "none",
+        "color": "rgb(0, 0, 0)",
+        "widthPx": 1,
+        "text": "Skip to main content"
+      },
+      "mono": {
+        "tag": "span",
+        "fontSize": 12.08,
+        "fontWeight": "400",
+        "lineHeightPx": 15.7,
+        "lineHeightRatio": 1.3,
+        "letterSpacing": "-0.241548px",
+        "letterSpacingEm": -0.02,
+        "fontFamily": "Monument Grotesk Mono",
+        "fontFamilyFull": "\"Monument Grotesk Mono\", SFMono-Regular, Consolas, Monaco, monospace",
+        "textTransform": "none",
+        "color": "rgb(255, 255, 255)",
+        "widthPx": 27.52,
+        "text": "Inkt"
+      }
+    },
+    "readingMeasure": {
+      "columnWidthPx": 352.27,
+      "widthOf100Chars": 899.35,
+      "measureCh_spec": 39.17,
+      "measureCh_zeroWidth": 31.06,
+      "maxWidthDeclared": "none",
+      "canvasFont": "19.3239px \"Monument Grotesk\", \"Helvetica Neue\", Helvetica, Arial, sans-serif"
+    },
+    "readingMeasureAlternates": [
+      {
+        "tag": "p",
+        "fontSize": 19.32,
+        "fontWeight": "400",
+        "lineHeightPx": 21.26,
+        "lineHeightRatio": 1.1,
+        "letterSpacing": "0px",
+        "letterSpacingEm": 0,
+        "fontFamily": "Monument Grotesk",
+        "fontFamilyFull": "\"Monument Grotesk\", \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+        "textTransform": "none",
+        "color": "rgb(0, 0, 0)",
+        "widthPx": 352.27,
+        "text": "Latin: Spanish, English, Portuguese, Swahili (individual lan"
+      },
+      {
+        "tag": "p",
+        "fontSize": 19.32,
+        "fontWeight": "400",
+        "lineHeightPx": 21.26,
+        "lineHeightRatio": 1.1,
+        "letterSpacing": "0px",
+        "letterSpacingEm": 0,
+        "fontFamily": "Monument Grotesk",
+        "fontFamilyFull": "\"Monument Grotesk\", \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+        "textTransform": "none",
+        "color": "rgb(0, 0, 0)",
+        "widthPx": 352.27,
+        "text": "ABC Whyte is a contemporary grotesque typeface filled with i"
+      },
+      {
+        "tag": "p",
+        "fontSize": 12.08,
+        "fontWeight": "400",
+        "lineHeightPx": 15.7,
+        "lineHeightRatio": 1.3,
+        "letterSpacing": "-0.241548px",
+        "letterSpacingEm": -0.02,
+        "fontFamily": "Monument Grotesk Mono",
+        "fontFamilyFull": "\"Monument Grotesk Mono\", SFMono-Regular, Consolas, Monaco, monospace",
+        "textTransform": "none",
+        "color": "rgb(0, 0, 0)",
+        "widthPx": 346.14,
+        "text": "By continuing to browse this site, you agree to the use of c"
+      }
+    ],
+    "distinctFontFamilyCount": 11,
+    "fontFamilies": [
+      {
+        "family": "ABCWhytePlusVariable-A",
+        "count": 211
+      },
+      {
+        "family": "Monument Grotesk",
+        "count": 107
+      },
+      {
+        "family": "Monument Grotesk Mono",
+        "count": 19
+      },
+      {
+        "family": "wyt-pls-vr-rg-A",
+        "count": 1
+      },
+      {
+        "family": "wyt-gr-rg-A",
+        "count": 1
+      },
+      {
+        "family": "wyt-cyr-rg-A",
+        "count": 1
+      },
+      {
+        "family": "wyt-hgl-rg-A",
+        "count": 1
+      },
+      {
+        "family": "wyt-hbr-rg-A",
+        "count": 1
+      }
+    ]
+  },
+  "color": {
+    "textColors": [
+      {
+        "value": "rgb(255,255,255)",
+        "count": 178
+      },
+      {
+        "value": "rgb(0,0,0)",
+        "count": 159
+      },
+      {
+        "value": "rgb(143,143,143)",
+        "count": 7
+      },
+      {
+        "value": "rgb(235,235,235)",
+        "count": 1
+      }
+    ],
+    "backgroundColors": [
+      {
+        "value": "rgb(245,248,250)",
+        "count": 120
+      },
+      {
+        "value": "rgb(255,255,255)",
+        "count": 59
+      },
+      {
+        "value": "rgb(130,130,130)",
+        "count": 7
+      },
+      {
+        "value": "rgb(240,244,246)",
+        "count": 6
+      },
+      {
+        "value": "rgb(64,64,64)",
+        "count": 4
+      },
+      {
+        "value": "rgb(248,241,53)",
+        "count": 1
+      },
+      {
+        "value": "rgb(36,36,36)",
+        "count": 1
+      },
+      {
+        "value": "rgb(255,248,55)",
+        "count": 1
+      },
+      {
+        "value": "rgb(45,45,45)",
+        "count": 1
+      },
+      {
+        "value": "rgb(0,82,255)",
+        "count": 1
+      },
+      {
+        "value": "rgb(13,13,13)",
+        "count": 1
+      },
+      {
+        "value": "rgb(255,255,0)",
+        "count": 1
+      }
+    ],
+    "distinctTextColorCount": 4,
+    "distinctBgColorCount": 12
+  },
+  "persistent": {
+    "fixedOrSticky": [
+      {
+        "tag": "nav",
+        "cls": "typeface-nav anchor-nav",
+        "position": "sticky",
+        "rect": {
+          "top": 507.23,
+          "left": 0,
+          "width": 390,
+          "height": 110.42
+        },
+        "zIndex": "101",
+        "text": "FamiliesTryFeaturesInfoGlyphsIn UsePDF SpecimenTrial fontsBu",
+        "opacity": "1"
+      },
+      {
+        "tag": "div",
+        "cls": "accordion__close l:hidden js-toggle-accordion",
+        "position": "sticky",
+        "rect": {
+          "top": 1549.24,
+          "left": 69.94,
+          "width": 250.11,
+          "height": 29.14
+        },
+        "zIndex": "2",
+        "text": "",
+        "opacity": "0"
+      },
+      {
+        "tag": "div",
+        "cls": "accordion__close l:hidden js-toggle-accordion",
+        "position": "sticky",
+        "rect": {
+          "top": 1843.68,
+          "left": 69.94,
+          "width": 250.11,
+          "height": 29.14
+        },
+        "zIndex": "2",
+        "text": "",
+        "opacity": "0"
+      },
+      {
+        "tag": "div",
+        "cls": "accordion__close l:hidden js-toggle-accordion",
+        "position": "sticky",
+        "rect": {
+          "top": 2213.96,
+          "left": 69.94,
+          "width": 250.11,
+          "height": 29.14
+        },
+        "zIndex": "2",
+        "text": "",
+        "opacity": "0"
+      },
+      {
+        "tag": "div",
+        "cls": "accordion__close l:hidden js-toggle-accordion",
+        "position": "sticky",
+        "rect": {
+          "top": 2609.52,
+          "left": 69.94,
+          "width": 250.11,
+          "height": 29.14
+        },
+        "zIndex": "2",
+        "text": "",
+        "opacity": "0"
+      },
+      {
+        "tag": "div",
+        "cls": "accordion__close l:hidden js-toggle-accordion",
+        "position": "sticky",
+        "rect": {
+          "top": 2903.96,
+          "left": 69.94,
+          "width": 250.11,
+          "height": 29.14
+        },
+        "zIndex": "2",
+        "text": "",
+        "opacity": "0"
+      },
+      {
+        "tag": "div",
+        "cls": "accordion__close l:hidden js-toggle-accordion",
+        "position": "sticky",
+        "rect": {
+          "top": 3307.63,
+          "left": 69.94,
+          "width": 250.11,
+          "height": 29.14
+        },
+        "zIndex": "2",
+        "text": "",
+        "opacity": "0"
+      },
+      {
+        "tag": "div",
+        "cls": "accordion__close l:hidden js-toggle-accordion",
+        "position": "sticky",
+        "rect": {
+          "top": 3925.55,
+          "left": 69.94,
+          "width": 250.11,
+          "height": 29.14
+        },
+        "zIndex": "2",
+        "text": "",
+        "opacity": "0"
+      },
+      {
+        "tag": "div",
+        "cls": "accordion__close l:hidden js-toggle-accordion",
+        "position": "sticky",
+        "rect": {
+          "top": 4049.32,
+          "left": 69.94,
+          "width": 250.11,
+          "height": 29.14
+        },
+        "zIndex": "2",
+        "text": "",
+        "opacity": "0"
+      },
+      {
+        "tag": "div",
+        "cls": "accordion__close js-toggle-accordion",
+        "position": "sticky",
+        "rect": {
+          "top": 4173.08,
+          "left": 78.74,
+          "width": 232.5,
+          "height": 29.14
+        },
+        "zIndex": "2",
+        "text": "",
+        "opacity": "0"
+      },
+      {
+        "tag": "div",
+        "cls": "accordion__close l:hidden js-toggle-accordion",
+        "position": "sticky",
+        "rect": {
+          "top": 4296.85,
+          "left": 69.94,
+          "width": 250.11,
+          "height": 29.14
+        },
+        "zIndex": "2",
+        "text": "",
+        "opacity": "0"
+      },
+      {
+        "tag": "div",
+        "cls": "teaser-bubble teaser-bubble--1 teaser-bubble--shape",
+        "position": "sticky",
+        "rect": {
+          "top": 7085.02,
+          "left": 0,
+          "width": 390,
+          "height": 844
+        },
+        "zIndex": "2",
+        "text": "Buy Whyte",
+        "opacity": "1"
+      },
+      {
+        "tag": "footer",
+        "cls": "main-footer",
+        "position": "fixed",
+        "rect": {
+          "top": 845.21,
+          "left": -9.75,
+          "width": 409.5,
+          "height": 120.86
+        },
+        "zIndex": "5",
+        "text": "© 2013–2026 Dinamo Typefaces. All rights reserved FAQContact",
+        "opacity": "1"
+      },
+      {
+        "tag": "div",
+        "cls": "main-header main-header--tongue",
+        "position": "fixed",
+        "rect": {
+          "top": -262.22,
+          "left": 0,
+          "width": 390,
+          "height": 328.47
+        },
+        "zIndex": "205",
+        "text": "Dinamo 👄 TypefacesNEWAboutClient WorkHardwareNEWEventsStud",
+        "opacity": "1"
+      },
+      {
+        "tag": "div",
+        "cls": "zoom-container js-close-zoom",
+        "position": "fixed",
+        "rect": {
+          "top": 0,
+          "left": 0,
+          "width": 390,
+          "height": 844
+        },
+        "zIndex": "250",
+        "text": "CloseClose",
+        "opacity": "0"
+      },
+      {
+        "tag": "div",
+        "cls": "cookie-consent",
+        "position": "fixed",
+        "rect": {
+          "top": 0,
+          "left": 0,
+          "width": 390,
+          "height": 844
+        },
+        "zIndex": "260",
+        "text": "By continuing to browse this site, you agree to the use of c",
+        "opacity": "1"
+      }
+    ]
+  },
+  "nav": {
+    "tag": "header",
+    "cls": "main-header",
+    "height": 88.33,
+    "top": 0,
+    "position": "absolute",
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "backdropFilter": "none",
+    "borderBottom": "0px rgb(0, 0, 0)",
+    "paddingBlock": "0px / 0px",
+    "transform": "none",
+    "opacity": "1",
+    "mixBlendMode": "normal",
+    "color": "rgb(0, 0, 0)"
+  },
+  "navState": {
+    "at0": {
+      "nav": {
+        "height": 88.33,
+        "top": 0,
+        "position": "absolute",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "backdropFilter": "none",
+        "borderBottom": "0px rgb(0, 0, 0)",
+        "paddingBlock": "0px / 0px",
+        "transform": "none",
+        "opacity": "1",
+        "color": "rgb(0, 0, 0)"
+      },
+      "fixedOrSticky": [
+        {
+          "tag": "nav",
+          "cls": "typeface-nav anchor-nav",
+          "position": "sticky",
+          "rect": {
+            "top": 507.23,
+            "left": 0,
+            "width": 390,
+            "height": 110.42
+          },
+          "text": "FamiliesTryFeaturesInfoGlyphsIn UsePDF SpecimenTrial fontsBu",
+          "opacity": "1"
+        },
+        {
+          "tag": "div",
+          "cls": "accordion__close l:hidden js-toggle-accordion",
+          "position": "sticky",
+          "rect": {
+            "top": 1549.24,
+            "left": 69.94,
+            "width": 250.11,
+            "height": 29.14
+          },
+          "text": "",
+          "opacity": "0"
+        },
+        {
+          "tag": "div",
+          "cls": "accordion__close l:hidden js-toggle-accordion",
+          "position": "sticky",
+          "rect": {
+            "top": 1843.68,
+            "left": 69.94,
+            "width": 250.11,
+            "height": 29.14
+          },
+          "text": "",
+          "opacity": "0"
+        },
+        {
+          "tag": "div",
+          "cls": "accordion__close l:hidden js-toggle-accordion",
+          "position": "sticky",
+          "rect": {
+            "top": 2213.96,
+            "left": 69.94,
+            "width": 250.11,
+            "height": 29.14
+          },
+          "text": "",
+          "opacity": "0"
+        },
+        {
+          "tag": "div",
+          "cls": "accordion__close l:hidden js-toggle-accordion",
+          "position": "sticky",
+          "rect": {
+            "top": 2609.52,
+            "left": 69.94,
+            "width": 250.11,
+            "height": 29.14
+          },
+          "text": "",
+          "opacity": "0"
+        },
+        {
+          "tag": "div",
+          "cls": "accordion__close l:hidden js-toggle-accordion",
+          "position": "sticky",
+          "rect": {
+            "top": 2903.96,
+            "left": 69.94,
+            "width": 250.11,
+            "height": 29.14
+          },
+          "text": "",
+          "opacity": "0"
+        },
+        {
+          "tag": "div",
+          "cls": "accordion__close l:hidden js-toggle-accordion",
+          "position": "sticky",
+          "rect": {
+            "top": 3307.63,
+            "left": 69.94,
+            "width": 250.11,
+            "height": 29.14
+          },
+          "text": "",
+          "opacity": "0"
+        },
+        {
+          "tag": "div",
+          "cls": "accordion__close l:hidden js-toggle-accordion",
+          "position": "sticky",
+          "rect": {
+            "top": 3925.55,
+            "left": 69.94,
+            "width": 250.11,
+            "height": 29.14
+          },
+          "text": "",
+          "opacity": "0"
+        },
+        {
+          "tag": "div",
+          "cls": "accordion__close l:hidden js-toggle-accordion",
+          "position": "sticky",
+          "rect": {
+            "top": 4049.32,
+            "left": 69.94,
+            "width": 250.11,
+            "height": 29.14
+          },
+          "text": "",
+          "opacity": "0"
+        },
+        {
+          "tag": "div",
+          "cls": "accordion__close js-toggle-accordion",
+          "position": "sticky",
+          "rect": {
+            "top": 4173.08,
+            "left": 78.74,
+            "width": 232.5,
+            "height": 29.14
+          },
+          "text": "",
+          "opacity": "0"
+        },
+        {
+          "tag": "div",
+          "cls": "accordion__close l:hidden js-toggle-accordion",
+          "position": "sticky",
+          "rect": {
+            "top": 4296.85,
+            "left": 69.94,
+            "width": 250.11,
+            "height": 29.14
+          },
+          "text": "",
+          "opacity": "0"
+        },
+        {
+          "tag": "div",
+          "cls": "teaser-bubble teaser-bubble--1 teaser-bubble--shape",
+          "position": "sticky",
+          "rect": {
+            "top": 7085.02,
+            "left": 0,
+            "width": 390,
+            "height": 844
+          },
+          "text": "Buy Whyte",
+          "opacity": "1"
+        },
+        {
+          "tag": "footer",
+          "cls": "main-footer",
+          "position": "fixed",
+          "rect": {
+            "top": 845.21,
+            "left": -9.75,
+            "width": 409.5,
+            "height": 120.86
+          },
+          "text": "© 2013–2026 Dinamo Typefaces. All rights reserved FAQContact",
+          "opacity": "1"
+        },
+        {
+          "tag": "div",
+          "cls": "main-header main-header--tongue",
+          "position": "fixed",
+          "rect": {
+            "top": -262.22,
+            "left": 0,
+            "width": 390,
+            "height": 328.47
+          },
+          "text": "Dinamo 👄 TypefacesNEWAboutClient WorkHardwareNEWEventsStud",
+          "opacity": "1"
+        },
+        {
+          "tag": "div",
+          "cls": "zoom-container js-close-zoom",
+          "position": "fixed",
+          "rect": {
+            "top": 0,
+            "left": 0,
+            "width": 390,
+            "height": 844
+          },
+          "text": "CloseClose",
+          "opacity": "0"
+        },
+        {
+          "tag": "div",
+          "cls": "cookie-consent",
+          "position": "fixed",
+          "rect": {
+            "top": 0,
+            "left": 0,
+            "width": 390,
+            "height": 844
+          },
+          "text": "By continuing to browse this site, you agree to the use of c",
+          "opacity": "1"
+        }
+      ]
+    },
+    "at2000": {
+      "nav": {
+        "height": 88.33,
+        "top": -2000,
+        "position": "absolute",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "backdropFilter": "none",
+        "borderBottom": "0px rgb(0, 0, 0)",
+        "paddingBlock": "0px / 0px",
+        "transform": "none",
+        "opacity": "1",
+        "color": "rgb(0, 0, 0)"
+      },
+      "fixedOrSticky": [
+        {
+          "tag": "nav",
+          "cls": "typeface-nav anchor-nav is-stuck is-collapsed",
+          "position": "sticky",
+          "rect": {
+            "top": -44.16,
+            "left": 0,
+            "width": 390,
+            "height": 110.42
+          },
+          "text": "FamiliesTryFeaturesInfoGlyphsIn UsePDF SpecimenTrial fontsBu",
+          "opacity": "1"
+        },
+        {
+          "tag": "div",
+          "cls": "accordion__close l:hidden js-toggle-accordion",
+          "position": "sticky",
+          "rect": {
+            "top": -213.82,
+            "left": 69.94,
+            "width": 250.11,
+            "height": 29.14
+          },
+          "text": "",
+          "opacity": "0"
+        },
+        {
+          "tag": "div",
+          "cls": "accordion__close l:hidden js-toggle-accordion",
+          "position": "sticky",
+          "rect": {
+            "top": 73.76,
+            "left": 69.94,
+            "width": 250.11,
+            "height": 29.14
+          },
+          "text": "",
+          "opacity": "0"
+        },
+        {
+          "tag": "div",
+          "cls": "accordion__close l:hidden js-toggle-accordion",
+          "position": "sticky",
+          "rect": {
+            "top": 213.96,
+            "left": 69.94,
+            "width": 250.11,
+            "height": 29.14
+          },
+          "text": "",
+          "opacity": "0"
+        },
+        {
+          "tag": "div",
+          "cls": "accordion__close l:hidden js-toggle-accordion",
+          "position": "sticky",
+          "rect": {
+            "top": 609.52,
+            "left": 69.94,
+            "width": 250.11,
+            "height": 29.14
+          },
+          "text": "",
+          "opacity": "0"
+        },
+        {
+          "tag": "div",
+          "cls": "accordion__close l:hidden js-toggle-accordion",
+          "position": "sticky",
+          "rect": {
+            "top": 903.96,
+            "left": 69.94,
+            "width": 250.11,
+            "height": 29.14
+          },
+          "text": "",
+          "opacity": "0"
+        },
+        {
+          "tag": "div",
+          "cls": "accordion__close l:hidden js-toggle-accordion",
+          "position": "sticky",
+          "rect": {
+            "top": 1307.63,
+            "left": 69.94,
+            "width": 250.11,
+            "height": 29.14
+          },
+          "text": "",
+          "opacity": "0"
+        },
+        {
+          "tag": "div",
+          "cls": "accordion__close l:hidden js-toggle-accordion",
+          "position": "sticky",
+          "rect": {
+            "top": 1925.55,
+            "left": 69.94,
+            "width": 250.11,
+            "height": 29.14
+          },
+          "text": "",
+          "opacity": "0"
+        },
+        {
+          "tag": "div",
+          "cls": "accordion__close l:hidden js-toggle-accordion",
+          "position": "sticky",
+          "rect": {
+            "top": 2049.32,
+            "left": 69.94,
+            "width": 250.11,
+            "height": 29.14
+          },
+          "text": "",
+          "opacity": "0"
+        },
+        {
+          "tag": "div",
+          "cls": "accordion__close js-toggle-accordion",
+          "position": "sticky",
+          "rect": {
+            "top": 2173.08,
+            "left": 78.74,
+            "width": 232.5,
+            "height": 29.14
+          },
+          "text": "",
+          "opacity": "0"
+        },
+        {
+          "tag": "div",
+          "cls": "accordion__close l:hidden js-toggle-accordion",
+          "position": "sticky",
+          "rect": {
+            "top": 2296.85,
+            "left": 69.94,
+            "width": 250.11,
+            "height": 29.14
+          },
+          "text": "",
+          "opacity": "0"
+        },
+        {
+          "tag": "div",
+          "cls": "teaser-bubble teaser-bubble--1 teaser-bubble--shape",
+          "position": "sticky",
+          "rect": {
+            "top": 5085.02,
+            "left": 0,
+            "width": 390,
+            "height": 844
+          },
+          "text": "Buy Whyte",
+          "opacity": "1"
+        },
+        {
+          "tag": "footer",
+          "cls": "main-footer",
+          "position": "fixed",
+          "rect": {
+            "top": 845.21,
+            "left": -9.75,
+            "width": 409.5,
+            "height": 120.86
+          },
+          "text": "© 2013–2026 Dinamo Typefaces. All rights reserved FAQContact",
+          "opacity": "1"
+        },
+        {
+          "tag": "div",
+          "cls": "main-header main-header--tongue",
+          "position": "fixed",
+          "rect": {
+            "top": -262.22,
+            "left": 0,
+            "width": 390,
+            "height": 328.47
+          },
+          "text": "Dinamo 👄 TypefacesNEWAboutClient WorkHardwareNEWEventsStud",
+          "opacity": "1"
+        },
+        {
+          "tag": "div",
+          "cls": "zoom-container js-close-zoom",
+          "position": "fixed",
+          "rect": {
+            "top": 0,
+            "left": 0,
+            "width": 390,
+            "height": 844
+          },
+          "text": "CloseClose",
+          "opacity": "0"
+        },
+        {
+          "tag": "div",
+          "cls": "cookie-consent",
+          "position": "fixed",
+          "rect": {
+            "top": 0,
+            "left": 0,
+            "width": 390,
+            "height": 844
+          },
+          "text": "By continuing to browse this site, you agree to the use of c",
+          "opacity": "1"
+        }
+      ]
+    },
+    "changed": true,
+    "diff": {
+      "top": {
+        "at0": 0,
+        "at2000": -2000
+      }
+    }
+  },
+  "shots": [
+    "dinamo-whyte-390-full.jpg"
+  ],
+  "fullPageShotRepresentative": true,
+  "pageErrors": []
+}

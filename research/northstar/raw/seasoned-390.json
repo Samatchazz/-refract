@@ -1,0 +1,737 @@
+{
+  "slug": "seasoned",
+  "url": "https://seasoned.koto.studio",
+  "name": "Seasoned (Koto)",
+  "country": "UK",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "ok": true,
+  "httpStatus": 200,
+  "finalUrl": "https://seasoned.koto.studio/",
+  "consentDismissed": [
+    "Deny"
+  ],
+  "scrollInfo": {
+    "contentHeight": 6123,
+    "docScrollHeight": 844,
+    "maxElementBottom": 6123,
+    "innerScrollerHeight": 6123,
+    "virtualScroll": true
+  },
+  "document": {
+    "scrollHeight": 844,
+    "vhMultiple": 7.25,
+    "textNodeCount": 174,
+    "canvasCount": 0,
+    "elementCount": 671,
+    "title": "Seasoned - The brand creation kitchen",
+    "lang": "en-US",
+    "contentHeight": 6123,
+    "scrollMode": "virtual (transformed wrapper / JS scroller)"
+  },
+  "container": {
+    "dominantPairs": [
+      {
+        "width": 1,
+        "left": 15,
+        "count": 1,
+        "sample": {
+          "tag": "h1",
+          "cls": "sr-only fixed"
+        }
+      },
+      {
+        "width": 330,
+        "left": 30,
+        "count": 1,
+        "sample": {
+          "tag": "p",
+          "cls": "typography-mobile-body lg:typography-desktop-body mx-auto mt"
+        }
+      },
+      {
+        "width": 358,
+        "left": 16,
+        "count": 1,
+        "sample": {
+          "tag": "p",
+          "cls": "typography-mobile-subtitle-slab lg:typography-desktop-subtit"
+        }
+      }
+    ],
+    "containerChain": {
+      "chain": [
+        {
+          "tag": "h1",
+          "cls": "sr-only fixed",
+          "width": 0.98,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "-0.999999px / -0.999999px",
+          "display": "block"
+        },
+        {
+          "tag": "div",
+          "cls": "",
+          "width": 358.03,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "block"
+        },
+        {
+          "tag": "div",
+          "cls": "relative z-10 my-auto px-4 lg:px-7.5",
+          "width": 390,
+          "maxWidth": "none",
+          "paddingInline": "16px / 16px",
+          "marginInline": "0px / 0px",
+          "display": "block"
+        },
+        {
+          "tag": "div",
+          "cls": "relative z-0 flex h-svh flex-col overflow-hidden text-home-1",
+          "width": 390,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "flex"
+        },
+        {
+          "tag": "div",
+          "cls": "left-0 top-0 z-50 h-svh w-full relative",
+          "width": 390,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "block"
+        },
+        {
+          "tag": "div",
+          "cls": "relative overflow-hidden",
+          "width": 390,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "block"
+        },
+        {
+          "tag": "div",
+          "cls": "overflow-x-hidden font-body leading-100 antialiased",
+          "width": 390,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "block"
+        },
+        {
+          "tag": "div",
+          "cls": "relative h-full w-full overflow-auto",
+          "width": 390,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "block"
+        }
+      ],
+      "constrained": null
+    },
+    "grids": [],
+    "bodyPaddingInline": "0px / 0px",
+    "bodyMaxWidth": "none",
+    "htmlPaddingInline": "0px / 0px"
+  },
+  "leftEdgeTest": {
+    "layout": {
+      "n": 3,
+      "mean": 211.67,
+      "stdDev": 266.88,
+      "distinctExact": 3,
+      "distinctClustered2px": 3,
+      "clusters": [
+        {
+          "at": 16,
+          "count": 1
+        },
+        {
+          "at": 30,
+          "count": 1
+        },
+        {
+          "at": 589,
+          "count": 1
+        }
+      ],
+      "values": [
+        30,
+        16,
+        589
+      ]
+    },
+    "rect": {
+      "n": 3,
+      "mean": 64.74,
+      "stdDev": 59.31,
+      "distinctExact": 3,
+      "distinctClustered2px": 3,
+      "clusters": [
+        {
+          "at": 16,
+          "count": 1
+        },
+        {
+          "at": 30,
+          "count": 1
+        },
+        {
+          "at": 148.23,
+          "count": 1
+        }
+      ],
+      "values": [
+        30,
+        16,
+        148.23
+      ]
+    },
+    "headings": {
+      "n": 3,
+      "mean": 228.67,
+      "stdDev": 290.91,
+      "distinctExact": 3,
+      "distinctClustered2px": 3,
+      "clusters": [
+        {
+          "at": 16,
+          "count": 1
+        },
+        {
+          "at": 30,
+          "count": 1
+        },
+        {
+          "at": 640,
+          "count": 1
+        }
+      ],
+      "values": [
+        30,
+        16,
+        640
+      ]
+    },
+    "sectionDiscovery": "tall-children-of-wrapper"
+  },
+  "sections": [
+    {
+      "index": 0,
+      "tag": "div",
+      "id": null,
+      "cls": "relative flex flex-col justify-center overflow-hidden px-4 pb-13 pt-20",
+      "height": 1049.53,
+      "vhFraction": 1.24,
+      "paddingBlockStart": "80px",
+      "paddingBlockEnd": "52px",
+      "marginBlockStart": "0px",
+      "marginBlockEnd": "0px",
+      "firstText": {
+        "layoutLeft": 30,
+        "rectLeft": 30,
+        "tag": "h2",
+        "fontSize": "56px",
+        "text": "Braise your game"
+      },
+      "heading": {
+        "layoutLeft": 30,
+        "rectLeft": 30,
+        "tag": "h2",
+        "fontSize": "56px",
+        "text": "Braise your game"
+      }
+    },
+    {
+      "index": 1,
+      "tag": "div",
+      "id": null,
+      "cls": "pb-35 pt-15 lg:pb-20 lg:pt-[30px]",
+      "height": 2935.19,
+      "vhFraction": 3.48,
+      "paddingBlockStart": "60px",
+      "paddingBlockEnd": "140px",
+      "marginBlockStart": "0px",
+      "marginBlockEnd": "0px",
+      "firstText": {
+        "layoutLeft": 16,
+        "rectLeft": 16,
+        "tag": "p",
+        "fontSize": "32px",
+        "text": "Indulge in our delicious guides, created to help"
+      },
+      "heading": {
+        "layoutLeft": 16,
+        "rectLeft": 16,
+        "tag": "p",
+        "fontSize": "32px",
+        "text": "Indulge in our delicious guides, created to help"
+      }
+    },
+    {
+      "index": 2,
+      "tag": "div",
+      "id": null,
+      "cls": "relative overflow-hidden pt-20 lg:pt-30",
+      "height": 657.02,
+      "vhFraction": 0.78,
+      "paddingBlockStart": "80px",
+      "paddingBlockEnd": "0px",
+      "marginBlockStart": "0px",
+      "marginBlockEnd": "0px",
+      "firstText": {
+        "layoutLeft": 589,
+        "rectLeft": 148.23,
+        "tag": "p",
+        "fontSize": "15.54px",
+        "text": "Produced Built"
+      },
+      "heading": {
+        "layoutLeft": 640,
+        "rectLeft": 199.7,
+        "tag": "span",
+        "fontSize": "26px",
+        "text": "by"
+      }
+    }
+  ],
+  "verticalRhythm": {
+    "sectionCount": 3,
+    "near100vhCount": 0,
+    "near100vhPct": 0,
+    "strictGcdOfSpacing": 2,
+    "baseUnitEstimate80pct": 2,
+    "spacingHistogram": [
+      {
+        "value": 30,
+        "count": 17
+      },
+      {
+        "value": 16,
+        "count": 13
+      },
+      {
+        "value": 210,
+        "count": 2
+      },
+      {
+        "value": 10,
+        "count": 2
+      },
+      {
+        "value": 80,
+        "count": 2
+      },
+      {
+        "value": 60,
+        "count": 2
+      },
+      {
+        "value": 36,
+        "count": 2
+      },
+      {
+        "value": 28,
+        "count": 2
+      },
+      {
+        "value": 4,
+        "count": 2
+      },
+      {
+        "value": 52,
+        "count": 1
+      },
+      {
+        "value": 24,
+        "count": 1
+      },
+      {
+        "value": 140,
+        "count": 1
+      },
+      {
+        "value": 100,
+        "count": 1
+      },
+      {
+        "value": 12,
+        "count": 1
+      }
+    ],
+    "spacingSampleSize": 50
+  },
+  "typeScale": {
+    "distinctFontSizeCount": 10,
+    "distinctFontSizeCount_used2plus": 7,
+    "distinctSizes": [
+      {
+        "size": 56,
+        "count": 1
+      },
+      {
+        "size": 48,
+        "count": 16
+      },
+      {
+        "size": 32,
+        "count": 25
+      },
+      {
+        "size": 26,
+        "count": 2
+      },
+      {
+        "size": 24,
+        "count": 1
+      },
+      {
+        "size": 20,
+        "count": 1
+      },
+      {
+        "size": 18,
+        "count": 3
+      },
+      {
+        "size": 16,
+        "count": 6
+      },
+      {
+        "size": 15.54,
+        "count": 3
+      },
+      {
+        "size": 7.77,
+        "count": 2
+      }
+    ],
+    "scaleSizesDesc": [
+      48,
+      32,
+      26,
+      18,
+      16,
+      15.54,
+      7.77
+    ],
+    "consecutiveRatios": [
+      1.5,
+      1.23,
+      1.44,
+      1.13,
+      1.03,
+      2
+    ],
+    "roles": {
+      "h1": {
+        "tag": "h1",
+        "fontSize": 16,
+        "fontWeight": "400",
+        "lineHeightPx": 16,
+        "lineHeightRatio": 1,
+        "letterSpacing": "0px",
+        "letterSpacingEm": 0,
+        "fontFamily": "STIXTwoText",
+        "fontFamilyFull": "STIXTwoText, serif",
+        "textTransform": "none",
+        "color": "rgb(251, 251, 251)",
+        "widthPx": 0.98,
+        "text": "The brand creation kitchen"
+      },
+      "biggestText": {
+        "tag": "h2",
+        "fontSize": 56,
+        "fontWeight": "500",
+        "lineHeightPx": 56,
+        "lineHeightRatio": 1,
+        "letterSpacing": "-1.12px",
+        "letterSpacingEm": -0.02,
+        "fontFamily": "Gooper Condensed",
+        "fontFamilyFull": "\"Gooper Condensed\", sans-serif",
+        "textTransform": "none",
+        "color": "rgb(87, 44, 33)",
+        "widthPx": 329.98,
+        "text": "Braise your game"
+      },
+      "h2All": [
+        {
+          "tag": "h2",
+          "fontSize": 56,
+          "fontWeight": "500",
+          "lineHeightPx": 56,
+          "lineHeightRatio": 1,
+          "letterSpacing": "-1.12px",
+          "letterSpacingEm": -0.02,
+          "fontFamily": "Gooper Condensed",
+          "fontFamilyFull": "\"Gooper Condensed\", sans-serif",
+          "textTransform": "none",
+          "color": "rgb(87, 44, 33)",
+          "widthPx": 329.98,
+          "text": "Braise your game"
+        },
+        {
+          "tag": "h2",
+          "fontSize": 16,
+          "fontWeight": "400",
+          "lineHeightPx": 16,
+          "lineHeightRatio": 1,
+          "letterSpacing": "0px",
+          "letterSpacingEm": 0,
+          "fontFamily": "STIXTwoText",
+          "fontFamilyFull": "STIXTwoText, serif",
+          "textTransform": "none",
+          "color": "rgb(0, 0, 0)",
+          "widthPx": 0.98,
+          "text": "Our Best Cookbooks"
+        },
+        {
+          "tag": "h2",
+          "fontSize": 16,
+          "fontWeight": "400",
+          "lineHeightPx": 16,
+          "lineHeightRatio": 1,
+          "letterSpacing": "0px",
+          "letterSpacingEm": 0,
+          "fontFamily": "STIXTwoText",
+          "fontFamilyFull": "STIXTwoText, serif",
+          "textTransform": "none",
+          "color": "rgb(0, 0, 0)",
+          "widthPx": 0.98,
+          "text": "Pop back anytime"
+        }
+      ],
+      "h3": null,
+      "body": {
+        "tag": "p",
+        "fontSize": 20,
+        "fontWeight": "400",
+        "lineHeightPx": 24,
+        "lineHeightRatio": 1.2,
+        "letterSpacing": "-0.800001px",
+        "letterSpacingEm": -0.04,
+        "fontFamily": "STIXTwoText",
+        "fontFamilyFull": "STIXTwoText, serif",
+        "textTransform": "none",
+        "color": "rgb(87, 44, 33)",
+        "widthPx": 329.98,
+        "text": "You’ll find lots of info about getting into the industry or "
+      },
+      "small": {
+        "tag": "span",
+        "fontSize": 7.77,
+        "fontWeight": "400",
+        "lineHeightPx": 7.77,
+        "lineHeightRatio": 1,
+        "letterSpacing": "0px",
+        "letterSpacingEm": 0,
+        "fontFamily": "STIXTwoText",
+        "fontFamilyFull": "STIXTwoText, serif",
+        "textTransform": "uppercase",
+        "color": "rgb(182, 182, 182)",
+        "widthPx": 15.39,
+        "text": "2024"
+      },
+      "mono": {
+        "tag": "p",
+        "fontSize": 18,
+        "fontWeight": "400",
+        "lineHeightPx": 13.5,
+        "lineHeightRatio": 0.75,
+        "letterSpacing": "-0.36px",
+        "letterSpacingEm": -0.02,
+        "fontFamily": "VCR OSD Mono",
+        "fontFamilyFull": "\"VCR OSD Mono\", monospace",
+        "textTransform": "uppercase",
+        "color": "rgb(251, 251, 251)",
+        "widthPx": 133.77,
+        "text": "Jul 27 2026"
+      }
+    },
+    "readingMeasure": {
+      "columnWidthPx": 329.98,
+      "widthOf100Chars": 873.4,
+      "measureCh_spec": 37.78,
+      "measureCh_zeroWidth": 33.33,
+      "maxWidthDeclared": "330px",
+      "canvasFont": "20px STIXTwoText, serif"
+    },
+    "readingMeasureAlternates": [
+      {
+        "tag": "p",
+        "fontSize": 20,
+        "fontWeight": "400",
+        "lineHeightPx": 24,
+        "lineHeightRatio": 1.2,
+        "letterSpacing": "-0.800001px",
+        "letterSpacingEm": -0.04,
+        "fontFamily": "STIXTwoText",
+        "fontFamilyFull": "STIXTwoText, serif",
+        "textTransform": "none",
+        "color": "rgb(87, 44, 33)",
+        "widthPx": 329.98,
+        "text": "You’ll find lots of info about getting into the industry or "
+      }
+    ],
+    "distinctFontFamilyCount": 4,
+    "fontFamilies": [
+      {
+        "family": "Gooper Condensed",
+        "count": 30
+      },
+      {
+        "family": "Luxurious Script",
+        "count": 18
+      },
+      {
+        "family": "STIXTwoText",
+        "count": 9
+      },
+      {
+        "family": "VCR OSD Mono",
+        "count": 3
+      }
+    ]
+  },
+  "color": {
+    "textColors": [
+      {
+        "value": "rgb(251,251,251)",
+        "count": 26
+      },
+      {
+        "value": "rgb(212,94,27)",
+        "count": 20
+      },
+      {
+        "value": "rgb(182,182,182)",
+        "count": 7
+      },
+      {
+        "value": "rgb(87,44,33)",
+        "count": 3
+      },
+      {
+        "value": "rgb(0,0,0)",
+        "count": 3
+      },
+      {
+        "value": "rgb(255,240,154)",
+        "count": 1
+      }
+    ],
+    "backgroundColors": [
+      {
+        "value": "rgb(0,0,0)",
+        "count": 1
+      },
+      {
+        "value": "rgb(212,94,27)",
+        "count": 1
+      },
+      {
+        "value": "rgb(145,145,145)",
+        "count": 1
+      },
+      {
+        "value": "rgb(250,208,6)",
+        "count": 1
+      }
+    ],
+    "distinctTextColorCount": 6,
+    "distinctBgColorCount": 4
+  },
+  "persistent": {
+    "fixedOrSticky": [
+      {
+        "tag": "h1",
+        "cls": "sr-only fixed",
+        "position": "fixed",
+        "rect": {
+          "top": 273.52,
+          "left": 15,
+          "width": 0.98,
+          "height": 0.98
+        },
+        "zIndex": "auto",
+        "text": "The brand creation kitchen",
+        "opacity": "1"
+      },
+      {
+        "tag": "h2",
+        "cls": "sr-only fixed",
+        "position": "fixed",
+        "rect": {
+          "top": 1952.55,
+          "left": 15,
+          "width": 0.98,
+          "height": 0.98
+        },
+        "zIndex": "auto",
+        "text": "Our Best Cookbooks",
+        "opacity": "1"
+      },
+      {
+        "tag": "p",
+        "cls": "sr-only fixed",
+        "position": "fixed",
+        "rect": {
+          "top": 4427.73,
+          "left": 15.02,
+          "width": 0.98,
+          "height": 0.98
+        },
+        "zIndex": "auto",
+        "text": "Still hungry?",
+        "opacity": "1"
+      },
+      {
+        "tag": "h2",
+        "cls": "sr-only fixed",
+        "position": "fixed",
+        "rect": {
+          "top": 4907.73,
+          "left": 15,
+          "width": 0.98,
+          "height": 0.98
+        },
+        "zIndex": "auto",
+        "text": "Pop back anytime",
+        "opacity": "1"
+      },
+      {
+        "tag": "div",
+        "cls": "pointer-events-none fixed left-0 top-0 z-[100] h-full w-full",
+        "position": "fixed",
+        "rect": {
+          "top": 0,
+          "left": 0,
+          "width": 390,
+          "height": 844
+        },
+        "zIndex": "100",
+        "text": "",
+        "opacity": "1"
+      }
+    ]
+  },
+  "nav": null,
+  "navState": {
+    "at0": null,
+    "at2000": null
+  },
+  "shots": [
+    "seasoned-390-full.jpg"
+  ],
+  "fullPageShotRepresentative": false,
+  "pageErrors": []
+}

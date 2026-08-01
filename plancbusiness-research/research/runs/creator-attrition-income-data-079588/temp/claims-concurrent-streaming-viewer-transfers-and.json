@@ -1,0 +1,58 @@
+[
+  {
+    "claim": "Roughly half of a livestream's departing audience does not follow the creator's colleagues or stay in the ecosystem at all: median viewer transfer efficiency at stream endings is about 49%.",
+    "stance": "supports",
+    "stance_target": "Audience attention is not a durable asset a creator can rely on or hand off",
+    "evidence_type": "empirical",
+    "scope_conditions": "3,243 algorithmically detected transfer events across 7,762 Hololive English livestreams, Nov 2022 - Mar 2026; heuristic detection cannot separate deliberate raids from organic migration; ~5% estimated false positives",
+    "quoted_support": "Among events with plausible efficiency (≤100%), the mean spike magnitude is 2,552 viewers and the median transfer efficiency is approximately 49% (IQR: 29%–60%).",
+    "numbers": ["3,243 events", "median efficiency ~49%", "IQR 29-60%", "mean spike 2,552 viewers", "top 10 channel pairs = 16% of events"],
+    "entities": ["Hololive English", "YouTube Live"],
+    "time_period": "November 2022 to March 2026",
+    "region": "Anglophone audience; Japanese parent agency",
+    "confidence": "medium",
+    "source_note_id": "concurrent-streaming-viewer-transfers-and"
+  },
+  {
+    "claim": "Per-stream audience falls from 14,377 viewers when a creator streams alone to 6,057 when eight affiliated creators stream at the same time, but hour-of-day controls show most of this is scheduling confound rather than audience splitting.",
+    "stance": "neutral",
+    "stance_target": "Whether creators within an ecosystem cannibalise each other's audiences",
+    "evidence_type": "statistical",
+    "scope_conditions": "2,935,985 minute-level observations, 18 Hololive English channels, 3.3 years; observational, not causal; day-level block bootstrap over 1,209 days with 2,000 iterations",
+    "quoted_support": "a creator streaming alone averages 14,377 viewers, while a creator streaming alongside 8 others averages 6,057. The hour-of-day residualization isolates the within-hour competition effect as small (ρ = −0.165)",
+    "numbers": ["14,377 viewers alone", "6,057 viewers with 8 concurrent", "58% raw drop", "residualised rho = -0.165", "95% CI [-0.186, -0.145]", "p<0.001", "1,209 days bootstrapped"],
+    "entities": ["Hololive English", "YouTube Live"],
+    "time_period": "November 2022 to March 2026",
+    "region": "Anglophone",
+    "confidence": "high",
+    "source_note_id": "concurrent-streaming-viewer-transfers-and"
+  },
+  {
+    "claim": "Audience exclusivity varies almost across the full possible range between creators inside a single agency, with competition resistance from 0.364 to 1.000, so audience loyalty is a creator-level property that organisational backing does not confer.",
+    "stance": "refutes",
+    "stance_target": "Agency or network affiliation determines a creator's audience durability",
+    "evidence_type": "statistical",
+    "scope_conditions": "18 Hololive English channels only; loyalty composite weights (0.30/0.25/0.25/0.20) are acknowledged as subjective, though the individual components are not",
+    "quoted_support": "The most striking variation is in Competition Resistance (R), which ranges from 0.364 (Gura) to 1.000 (Kiara).",
+    "numbers": ["Competition Resistance 0.364 to 1.000", "18 channels", "4 loyalty components"],
+    "entities": ["Hololive English", "Gawr Gura", "Takanashi Kiara"],
+    "time_period": "November 2022 to March 2026",
+    "region": "Anglophone",
+    "confidence": "medium",
+    "source_note_id": "concurrent-streaming-viewer-transfers-and"
+  },
+  {
+    "claim": "Output varies sevenfold among elite creators inside the same agency, from 3.1 to 22.8 streams per month, showing that observed creator effort is not standardised even where earnings potential is comparable.",
+    "stance": "neutral",
+    "stance_target": "Effort as an explanatory variable for creator outcomes",
+    "evidence_type": "empirical",
+    "scope_conditions": "18 Hololive English channels; all still active at study end, so no exit observations; active periods 632 to 1,220 days",
+    "quoted_support": "Streaming frequency ranges from 3.1 streams per month (Gura, 90 streams) to 22.8 streams per month (Bijou, 720 streams), and active periods range from 632 days (Justice generation, debuting most recently) to up to 1,220 days for the earliest channels.",
+    "numbers": ["3.1 to 22.8 streams/month", "90 to 720 streams", "632 to 1,220 active days", "median stream duration 181.2 minutes", "mean 7,587 viewers per stream", "max 243,897 viewers"],
+    "entities": ["Hololive English", "Gawr Gura", "Koseki Bijou"],
+    "time_period": "November 2022 to March 2026",
+    "region": "Anglophone",
+    "confidence": "high",
+    "source_note_id": "concurrent-streaming-viewer-transfers-and"
+  }
+]

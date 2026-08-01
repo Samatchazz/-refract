@@ -1,0 +1,131 @@
+{
+  "manifest_version": 1,
+  "vault_tag": "creator-attrition-income-data-079588",
+  "profile": "full",
+  "profile_steps": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "11",
+    "12",
+    "13",
+    "14",
+    "15",
+    "16"
+  ],
+  "status": "done",
+  "started_at": "2026-07-27T07:57:14.955976+00:00",
+  "updated_at": "2026-07-29T16:45:00.154498+00:00",
+  "budget_usd": null,
+  "blocked_on": null,
+  "steps": {
+    "1": {
+      "status": "done",
+      "started_at": "2026-07-27T07:58:16.789114+00:00",
+      "finished_at": "2026-07-27T11:07:11.937793+00:00"
+    },
+    "2": {
+      "status": "done",
+      "started_at": "2026-07-27T11:07:12.611462+00:00",
+      "finished_at": "2026-07-27T17:01:21.504116+00:00"
+    },
+    "3": {
+      "status": "done",
+      "started_at": "2026-07-27T17:01:22.165565+00:00",
+      "finished_at": "2026-07-27T17:05:28.188939+00:00"
+    },
+    "4": {
+      "status": "done",
+      "started_at": "2026-07-27T17:05:28.858859+00:00",
+      "finished_at": "2026-07-27T17:13:22.241889+00:00"
+    },
+    "5": {
+      "status": "done",
+      "started_at": "2026-07-27T17:13:22.912343+00:00",
+      "finished_at": "2026-07-27T17:31:56.923049+00:00"
+    },
+    "6": {
+      "status": "done",
+      "started_at": "2026-07-27T17:31:57.516540+00:00",
+      "finished_at": "2026-07-27T17:33:36.778438+00:00"
+    },
+    "7": {
+      "status": "done",
+      "started_at": "2026-07-27T17:33:37.386087+00:00",
+      "finished_at": "2026-07-27T17:36:03.606330+00:00"
+    },
+    "8": {
+      "status": "done",
+      "started_at": "2026-07-27T17:36:04.249630+00:00",
+      "finished_at": "2026-07-27T18:20:36.293422+00:00"
+    },
+    "9": {
+      "status": "done",
+      "started_at": "2026-07-27T18:20:36.951094+00:00",
+      "finished_at": "2026-07-27T18:22:05.798061+00:00"
+    },
+    "10": {
+      "status": "done",
+      "started_at": "2026-07-27T18:22:06.462632+00:00",
+      "finished_at": "2026-07-27T18:44:47.752889+00:00"
+    },
+    "11": {
+      "status": "done",
+      "started_at": "2026-07-27T18:44:48.426881+00:00",
+      "finished_at": "2026-07-27T19:24:09.526391+00:00"
+    },
+    "12": {
+      "status": "done",
+      "started_at": "2026-07-27T19:24:10.196134+00:00",
+      "finished_at": "2026-07-27T19:32:35.249702+00:00"
+    },
+    "13": {
+      "status": "done",
+      "started_at": "2026-07-27T19:32:35.937847+00:00",
+      "finished_at": "2026-07-27T19:33:36.739908+00:00"
+    },
+    "14": {
+      "status": "done",
+      "started_at": "2026-07-27T19:33:37.425562+00:00",
+      "finished_at": "2026-07-27T19:51:40.026173+00:00"
+    },
+    "14.5": {
+      "status": "done",
+      "started_at": "2026-07-27T19:51:40.731873+00:00",
+      "finished_at": "2026-07-29T16:19:04.519094+00:00"
+    },
+    "15": {
+      "status": "done",
+      "finished_at": "2026-07-29T16:35:42.497613+00:00"
+    },
+    "16": {
+      "status": "done",
+      "started_at": "2026-07-29T16:35:43.127988+00:00",
+      "finished_at": "2026-07-29T16:44:24.058255+00:00"
+    }
+  },
+  "chapters": {},
+  "spend": {
+    "estimated_usd": 0.0,
+    "sources_fetched": 0,
+    "notes_written": 0,
+    "agents_spawned": 0
+  },
+  "levers": {
+    "register": "survey",
+    "inference_depth": "deep",
+    "domain_notes": "Sourcing order: academic APIs first (Semantic Scholar, OpenAlex, arXiv cs.CY/econ.GN, SSRN, NBER) for platform-labour and creator-economy panel studies \u2014 this literature is real and citation-ranked, and web search returns mostly vendor marketing in its place. Then platform-disclosed and administrative data (YouTube/TikTok transparency and payout disclosures, Patreon/Substack public payout data, national statistical agencies, tax-authority self-employment data). Then gray literature for Southeast Asia specifically: ADB, World Bank, ILO, national statistics offices (BPS Indonesia, PSA Philippines, NSO Thailand), and regional platform reports \u2014 SEA quantitative evidence is thin on the clear web and lives here. Vendor surveys (Influencer Marketing Hub, NeoReach, Linktree, Adobe, Kajabi) MAY be cited but MUST be labelled as self-selected vendor surveys with sample size stated, and must never outrank telemetry or peer-reviewed panel data on the same quantity. Evidence norms for this topic: measured platform telemetry and administrative records > peer-reviewed longitudinal panels > cross-sectional academic surveys > self-selected vendor surveys > press-cited round numbers with no traceable methodology (exclude these last entirely). Survivorship bias is the dominant failure mode \u2014 any sample recruited from active creators systematically overstates income and understates attrition, and this must be flagged wherever it applies. Recency window: 2018-2026, with 2021-2026 preferred; monetization-threshold changes make older cohorts non-comparable."
+  },
+  "verify": {
+    "passed": true,
+    "at": "2026-07-29T16:45:00.144136+00:00",
+    "failed_checks": []
+  }
+}

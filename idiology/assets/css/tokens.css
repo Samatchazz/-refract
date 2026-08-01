@@ -1,0 +1,58 @@
+:root {
+  /* ---------- COLOR (electric blue/violet palette) ---------- */
+  --c-bg-light:   #F3F4F9;   /* cool off-white */
+  --c-bg-white:   #FFFFFF;
+  --c-bg-grey:    #E9EBF4;
+  --c-bg-dark:    #0B0721;   /* deep violet-navy (from #4300FF) */
+  --c-text-dark:  #14112B;
+  --c-text-light: #F3F4F9;
+  --c-text-muted: #63667A;
+  --c-text-muted-inv: #9FA3BC;
+  --c-accent:     #00FFDE;   /* neon aqua — hover accents, loader */
+  --c-accent-2:   #00CAFF;   /* cyan — secondary */
+  --c-border-light: rgba(20,17,43,.14);
+  --c-border-dark:  rgba(243,244,249,.16);
+
+  /* ---------- TYPOGRAPHY ---------- */
+  --f-display: 'Unbounded', sans-serif;
+  --f-body:    'Inter', sans-serif;
+  --f-accent:  'Instrument Serif', serif;
+
+  /* Fluid type scale (min @375px -> max @1600px) */
+  --fs-hero-xl:  clamp(3.4rem, 1.2rem + 9.5vw, 8.75rem);
+  --fs-hero:     clamp(1.6rem, 1rem + 2.6vw, 3.25rem);
+  --fs-h2:       clamp(2.2rem, 1.2rem + 4.5vw, 5rem);
+  --fs-h4:       clamp(1.15rem, 1rem + .8vw, 1.5rem);
+  --fs-quote:    clamp(1.35rem, 1.05rem + 1.6vw, 2.1rem);
+  --fs-counter:  clamp(3rem, 2rem + 4.5vw, 5.5rem);
+  --fs-body-lg:  1.25rem;
+  --fs-body:     1.0625rem;
+  --fs-small:    .875rem;
+
+  --lh-tight: 1.08;
+  --lh-head:  1.18;
+  --lh-body:  1.65;
+  --ls-display: .015em;
+
+  /* ---------- SPACING ---------- */
+  --sp-section:    clamp(72px, 6vw + 40px, 120px);
+  --sp-block:      60px;
+  --sp-gap:        24px;
+  --sp-gap-lg:     40px;
+
+  /* ---------- LAYOUT ---------- */
+  --container-max: 1320px;
+  --container-pad: clamp(20px, 4vw, 48px);
+
+  /* ---------- MOTION ---------- */
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-inout:    cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-fast: .35s;
+  --dur-med:  .7s;
+  --dur-slow: 1.1s;
+
+  /* ---------- MISC ---------- */
+  --radius-card: 4px;
+  --header-h: 96px;
+  --header-h-sticky: 70px;
+}

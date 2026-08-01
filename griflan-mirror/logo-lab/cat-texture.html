@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<title>Plan C — เทียบ สีเรียบ / ขนฟู / ลายแบน</title>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:#0f1613; color:#f2efde; font-family:sans-serif; padding:26px 16px; }
+  h1 { font-size:18px; color:#f0b32e; margin-bottom:4px; }
+  p.hint { font-size:12.5px; color:rgba(242,239,222,.55); margin-bottom:20px; }
+  table { border-collapse:collapse; width:100%; max-width:1100px; }
+  th { font-size:13px; color:#f0b32e; padding:8px; font-weight:bold; text-align:center; }
+  th.rowlab { text-align:left; width:120px; color:#f2efde; }
+  td { padding:6px; text-align:center; border-top:1px solid rgba(242,239,222,.1); }
+  td canvas { width:100%; max-width:300px; height:auto; display:block; margin:0 auto;
+    background:#0f1613; border-radius:8px; }
+  .colhead td { border:0; }
+</style>
+</head>
+<body>
+<h1>Plan C — เทียบทรีตเมนต์ขนแมว</h1>
+<p class="hint">คอลัมน์: สีเรียบ (ตอนนี้) · ขนฟู (procedural fur) · ลายแบน (flat pattern) — เท็กซ์เจอร์ทั้งหมด generate สดในเบราว์เซอร์ ไม่ได้โหลดรูป</p>
+
+<table id="grid">
+  <tr class="colhead"><th class="rowlab"></th><th>สีเรียบ (ปัจจุบัน)</th><th>ขนฟู</th><th>ลายแบน</th></tr>
+</table>
+
+<script>
+(async () => {
+  const W = 2048;
+  // ---------- โหลดโลโก้ → สร้าง alpha mask (ดำ→ทึบ ขาว→ใส) ----------
+  const im = new Image(); im.src = 'assets/logo-closed.png'; await im.decode();
+  const mc = document.createElement('canvas'); mc.width = W; mc.height = W;
+  const mx = mc.getContext('2d', { willReadFrequently: true });
+  mx.drawImage(im, 0, 0, W, W);
+  // ถมแถบตาให้หัวทึบ (ไม่ให้ตาขาวเจาะรู)
+  mx.fillStyle = '#000'; mx.fillRect(220, 690, 360, 190);
+  const md = mx.getImageData(0, 0, W, W);
+  for (let i = 0; i < md.data.length; i += 4) {
+    const lum = (md.data[i] + md.data[i+1] + md.data[i+2]) / 3;
+    md.data[i] = md.data[i+1] = md.data[i+2] = 255;
+    md.data[i+3] = 255 - lum;
+  }
+  mx.putImageData(md, 0, 0);
+  // bbox ของแมว (ไว้ crop ให้เห็นชัด) — ประมาณจากงานจริง
+  const BB = { x: 180, y: 520, w: 1560, h: 760 };
+
+  const clip = (drawFn) => {
+    const c = document.createElement('canvas'); c.width = W; c.height = W;
+    const x = c.getContext('2d');
+    drawFn(x);
+    x.globalCompositeOperation = 'destination-in';
+    x.drawImage(mc, 0, 0);
+    // crop เป็น canvas เล็ก
+    const o = document.createElement('canvas'); o.width = BB.w; o.height = BB.h;
+    o.getContext('2d').drawImage(c, BB.x, BB.y, BB.w, BB.h, 0, 0, BB.w, BB.h);
+    return o;
+  };
+
+  // ---------- treatment A: สีเรียบ ----------
+  const solid = (color) => clip(x => { x.fillStyle = color; x.fillRect(0, 0, W, W); });
+
+  // ---------- treatment B: ขนฟู (procedural) ----------
+  const rnd = (a, b) => a + Math.random() * (b - a);
+  const fur = (base, shades) => clip(x => {
+    x.fillStyle = base; x.fillRect(0, 0, W, W);
+    // เส้นขนสั้นๆ เอียงเล็กน้อย จำนวนมาก
+    const N = 26000;
+    for (let i = 0; i < N; i++) {
+      const px = rnd(BB.x, BB.x + BB.w), py = rnd(BB.y, BB.y + BB.h);
+      const ang = rnd(-0.25, 0.25);        // ขนวางตามแนวนอนเป็นหลัก
+      const len = rnd(14, 40);
+      x.strokeStyle = shades[(Math.random() * shades.length) | 0];
+      x.lineWidth = rnd(2, 4.5);
+      x.globalAlpha = rnd(0.25, 0.7);
+      x.beginPath();
+      x.moveTo(px, py);
+      x.lineTo(px + Math.cos(ang) * len, py + Math.sin(ang) * len);
+      x.stroke();
+    }
+    x.globalAlpha = 1;
+  });
+
+  // ---------- treatment C: ลายแบน (flat pattern) ----------
+  const flat = {
+    orange: () => clip(x => {
+      x.fillStyle = '#e8923a'; x.fillRect(0, 0, W, W);
+      x.fillStyle = '#c56a1e';                     // ลายทาง tabby แนวตั้งโค้ง
+      for (let sx = BB.x - 40; sx < BB.x + BB.w; sx += 150) {
+        x.beginPath();
+        x.moveTo(sx, BB.y);
+        x.quadraticCurveTo(sx + 40, BB.y + BB.h / 2, sx, BB.y + BB.h);
+        x.lineTo(sx + 46, BB.y + BB.h);
+        x.quadraticCurveTo(sx + 86, BB.y + BB.h / 2, sx + 46, BB.y);
+        x.closePath(); x.fill();
+      }
+    }),
+    calico: () => clip(x => {
+      x.fillStyle = '#f4ecd8'; x.fillRect(0, 0, W, W);      // พื้นขาวครีม
+      x.fillStyle = '#2a2320';                              // ปื้นดำ (หัว)
+      x.beginPath(); x.ellipse(560, 820, 430, 340, 0, 0, 7); x.fill();
+      x.fillStyle = '#d98a34';                              // ปื้นส้ม (สะโพก/หาง)
+      x.beginPath(); x.ellipse(1350, 980, 420, 300, 0, 0, 7); x.fill();
+      x.beginPath(); x.ellipse(950, 1120, 240, 170, 0, 0, 7); x.fill();
+    }),
+    grey: () => clip(x => {
+      x.fillStyle = '#8b93a1'; x.fillRect(0, 0, W, W);
+      x.strokeStyle = 'rgba(60,70,84,.35)';                // undertone จางๆ
+      x.lineWidth = 60;
+      for (let sy = BB.y; sy < BB.y + BB.h; sy += 120) {
+        x.beginPath(); x.moveTo(BB.x, sy + 30); x.quadraticCurveTo(BB.x + BB.w/2, sy - 20, BB.x + BB.w, sy + 30); x.stroke();
+      }
+    }),
+  };
+
+  // ---------- variants ----------
+  const variants = [
+    { name: 'ส้ม tabby', solid: '#e8923a', fur: ['#f0a856','#c56a1e','#e8923a','#a8531a'], flat: flat.orange },
+    { name: 'สามสี calico', solid: '#d98a34', fur: ['#f4ecd8','#2a2320','#d98a34','#b06a24'], flat: flat.calico },
+    { name: 'เทา Korat', solid: '#8b93a1', fur: ['#a3aab6','#5f6a7a','#8b93a1','#727c8c'], flat: flat.grey },
+  ];
+
+  const tbl = document.getElementById('grid');
+  const show = (parent, canvas) => {
+    const td = document.createElement('td');
+    const disp = document.createElement('canvas');
+    disp.width = canvas.width; disp.height = canvas.height;
+    disp.getContext('2d').drawImage(canvas, 0, 0);
+    td.appendChild(disp); parent.appendChild(td);
+  };
+  for (const v of variants) {
+    const tr = document.createElement('tr');
+    const lab = document.createElement('th'); lab.className = 'rowlab'; lab.textContent = v.name;
+    tr.appendChild(lab);
+    show(tr, solid(v.solid));
+    show(tr, fur(v.solid, v.fur));
+    show(tr, v.flat());
+    tbl.appendChild(tr);
+  }
+})();
+</script>
+</body>
+</html>

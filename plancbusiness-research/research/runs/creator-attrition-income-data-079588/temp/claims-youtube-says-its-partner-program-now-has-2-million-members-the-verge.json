@@ -1,0 +1,30 @@
+[
+  {
+    "claim": "YouTube's own platform disclosure states its Partner Program (the gate to ad, subscription, and Super Chat monetization) passed 2 million members as of August 2021, with new-channel enrollment in 2020 more than doubling versus 2019.",
+    "stance": "neutral",
+    "stance_target": "Establishing a platform-disclosed count of actually-monetizing YouTube creators, distinct from the raw count of channels that clear the subscriber eligibility threshold",
+    "evidence_type": "empirical",
+    "scope_conditions": "Company statement by Neal Mohan (YouTube Chief Product Officer) in an official blog post, reported by The Verge, August 23, 2021; a raw membership count, not validated by independent audit, and YouTube did not disclose how many of the 2 million actually earn any revenue in a given period",
+    "quoted_support": "YouTube's Partner Program, which allows users to make money off their videos, has passed the 2 million creator mark, the company said Monday... Neal Mohan, chief product officer at YouTube, said in a blog post that the number of new channels joining the program in 2020 more than doubled when compared to 2019",
+    "numbers": ["2 million YPP members (Aug 2021)", ">100% YoY growth in new enrollments, 2019 to 2020", "channels making six figures up 35% YoY (no absolute count given)"],
+    "entities": ["YouTube", "YouTube Partner Program", "Neal Mohan", "Kim Lyons", "The Verge"],
+    "time_period": "disclosed August 23, 2021; growth figures for 2019-2020",
+    "region": "Global",
+    "confidence": "high",
+    "source_note_id": "youtube-says-its-partner-program-now-has-2-million-members-the-verge"
+  },
+  {
+    "claim": "Cross-referencing YouTube's own 2 million YPP-member disclosure (Aug 2021) against Rieder et al.'s independently-crawled census of 4,415,180 channels with 1,000+ subscribers (the YPP eligibility floor, crawled 2019-2020) implies only about 45% of subscriber-eligible channels actually enroll in monetization, roughly doubling the true attempt rate compared to using the raw subscriber-tier channel count as a denominator.",
+    "stance": "refutes",
+    "stance_target": "Raw channel counts above the 1,000-subscriber eligibility threshold are an accurate denominator for 'creators who attempted to earn income from YouTube'",
+    "evidence_type": "statistical",
+    "scope_conditions": "Cross-source computation: YouTube's self-reported 2 million YPP members (Aug 2021) is a single point-in-time platform disclosure with no published audit trail; Rieder et al.'s 4,415,180-channel count is from an independent academic crawl one to two years earlier (2019-2020), so the two figures are not perfectly time-matched, and YPP membership was still growing rapidly (>100% YoY in 2020) which could narrow or widen the gap depending on exact timing",
+    "quoted_support": "YouTube's Partner Program... has passed the 2 million creator mark [Aug 2021]. (Cross-referenced with Rieder et al. 2020's independent count of 4,415,180 channels with 1,000+ subscribers.)",
+    "numbers": ["2,000,000 YPP members", "4,415,180 channels with 1,000+ subscribers", "~45% implied enrollment rate", "~2.2x denominator inflation if raw subscriber count is used instead of actual YPP membership"],
+    "entities": ["YouTube", "YouTube Partner Program", "Rieder", "Borra", "Coromina", "Matamoros-Fernández"],
+    "time_period": "channels crawled 2019-2020; YPP membership disclosed August 2021",
+    "region": "Global",
+    "confidence": "medium",
+    "source_note_id": "youtube-says-its-partner-program-now-has-2-million-members-the-verge"
+  }
+]

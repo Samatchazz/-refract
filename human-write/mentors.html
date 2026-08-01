@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>พี่เลี้ยงทั้งหมด — Human-Write</title>
+  <meta name="description" content="ทำเนียบพี่เลี้ยงของ Human-Write — อินฟลูเอนเซอร์และบล็อกเกอร์ตัวจริง คัดด้วยมือทุกคน">
+  <link rel="stylesheet" href="/assets/css/tokens.css">
+  <link rel="stylesheet" href="/assets/css/base.css">
+  <link rel="stylesheet" href="/assets/css/components.css">
+  <link rel="stylesheet" href="/assets/css/motion.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">ข้ามไปยังเนื้อหา</a>
+
+  <header class="site-header">
+    <a class="brand" href="/">Human<span class="brand__dash">–</span>Write</a>
+    <nav class="site-nav" aria-label="เมนูหลัก">
+      <ul>
+        <li><a href="/mentors.html" aria-current="page">พี่เลี้ยง</a></li>
+        <li><a href="/how-it-works.html">วิธีทำงาน</a></li>
+        <li><a href="/journal.html">เขียนด้วยมือ</a></li>
+        <li><a href="/about.html">เกี่ยวกับเรา</a></li>
+        <li><a href="/contact.html">ติดต่อ</a></li>
+      </ul>
+    </nav>
+    <img class="stamp" src="/assets/img/stamp.svg" alt="ตรารับรอง: 100% Human-made — ไม่ใช้ AI" width="72" height="72">
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section class="section section--first container">
+      <div class="section-head">
+        <p class="label">Mentors — Hand-picked</p>
+        <h1><span class="squiggle">พี่เลี้ยง<svg viewBox="0 0 120 12" preserveAspectRatio="none" aria-hidden="true"><path d="M2 8c10-6 18-6 28 0s18 6 28 0 18-6 28 0 18 6 32-2" pathLength="1" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg></span>ทั้งหมด</h1>
+        <p>ทุกคนผ่านการคัดด้วยมือ และยังทำคอนเทนต์ของตัวเองอยู่จริงทุกสัปดาห์</p>
+      </div>
+
+      <div class="filters" role="group" aria-label="กรองตามรูปแบบคอนเทนต์">
+        <button class="filter-btn" type="button" data-filter="all" aria-pressed="true">ทั้งหมด</button>
+        <button class="filter-btn" type="button" data-filter="video" aria-pressed="false">วิดีโอ</button>
+        <button class="filter-btn" type="button" data-filter="writing" aria-pressed="false">งานเขียน</button>
+        <button class="filter-btn" type="button" data-filter="social" aria-pressed="false">โซเชียล</button>
+        <button class="filter-btn" type="button" data-filter="audio" aria-pressed="false">พอดแคสต์</button>
+      </div>
+
+      <ul class="roster">
+        <li class="roster-row" data-tags="video writing" style="--vt: mentor-pim">
+          <a href="/mentor/pim.html">
+            <span class="roster__thumb duotone ph--a" style="--vt: mentor-pim-img" role="img" aria-label="ครัวเปิดของพี่พิม (ภาพตัวอย่าง)"></span>
+            <span><span class="roster__name">พี่พิม</span></span>
+            <span class="roster__meta">สายอาหาร — TikTok / Blog — 1.2M</span>
+          </a>
+        </li>
+        <li class="roster-row" data-tags="video social" style="--vt: mentor-nan">
+          <a href="/mentor/nan.html">
+            <span class="roster__thumb duotone ph--b" style="--vt: mentor-nan-img" role="img" aria-label="ภูเขาที่พี่แนนไปถ่ายวิดีโอ (ภาพตัวอย่าง)"></span>
+            <span><span class="roster__name">พี่แนน</span></span>
+            <span class="roster__meta">สายท่องเที่ยว — YouTube / Instagram — 850K</span>
+          </a>
+        </li>
+        <li class="roster-row" data-tags="video social" style="--vt: mentor-ton">
+          <a href="/mentor/ton.html">
+            <span class="roster__thumb duotone ph--c" style="--vt: mentor-ton-img" role="img" aria-label="โต๊ะรีวิวแกดเจ็ตของพี่ต้น (ภาพตัวอย่าง)"></span>
+            <span><span class="roster__name">พี่ต้น</span></span>
+            <span class="roster__meta">สายเทค — YouTube / X — 540K</span>
+          </a>
+        </li>
+        <li class="roster-row" data-tags="social" style="--vt: mentor-mind">
+          <a href="/mentor/mind.html">
+            <span class="roster__thumb duotone ph--d" style="--vt: mentor-mind-img" role="img" aria-label="สตูดิโอแฟชั่นของพี่มายด์ (ภาพตัวอย่าง)"></span>
+            <span><span class="roster__name">พี่มายด์</span></span>
+            <span class="roster__meta">สายแฟชั่น–ไลฟ์สไตล์ — Instagram — 2.1M</span>
+          </a>
+        </li>
+        <li class="roster-row" data-tags="writing" style="--vt: mentor-book">
+          <a href="/mentor/book.html">
+            <span class="roster__thumb duotone ph--e" style="--vt: mentor-book-img" role="img" aria-label="ชั้นหนังสือและโต๊ะเขียนงานของพี่บุ๊ค (ภาพตัวอย่าง)"></span>
+            <span><span class="roster__name">พี่บุ๊ค</span></span>
+            <span class="roster__meta">สายหนังสือ–การเขียน — Blog / Facebook — 320K</span>
+          </a>
+        </li>
+        <li class="roster-row" data-tags="audio video" style="--vt: mentor-jay">
+          <a href="/mentor/jay.html">
+            <span class="roster__thumb duotone ph--f" style="--vt: mentor-jay-img" role="img" aria-label="โต๊ะอัดพอดแคสต์ของพี่เจ (ภาพตัวอย่าง)"></span>
+            <span><span class="roster__name">พี่เจ</span></span>
+            <span class="roster__meta">สายการเงิน — Podcast / YouTube — 660K</span>
+          </a>
+        </li>
+      </ul>
+      <p aria-live="polite" class="visually-hidden" data-filter-status></p>
+
+      <p style="margin-top: 2.5rem">ยังไม่เจอสายที่ตรง? รอสเตอร์เราโตขึ้นทุกเดือน — <a href="/contact.html">บอกเราว่าคุณทำสายไหน</a></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p class="footer-banner" data-availability>รอบนี้รับ 6 คู่ — เปิดรอบถัดไป ตุลาคม 2026</p>
+    <div class="footer-inner">
+      <p class="footer-recruit">อยากเป็นพี่เลี้ยงกับเรา? <a href="/contact.html">ชวนคุยได้ →</a></p>
+      <a class="footer-mailto" href="mailto:hello@human-write.studio">hello@human-write.studio</a>
+      <div class="footer-row">
+        <ul class="social-row">
+          <li><a href="https://instagram.com/humanwrite.studio" rel="noopener">Instagram</a></li>
+          <li><a href="https://facebook.com/humanwrite.studio" rel="noopener">Facebook</a></li>
+          <li><a href="https://line.me/R/ti/p/@humanwrite" rel="noopener">LINE</a></li>
+        </ul>
+        <img class="stamp stamp--footer" src="/assets/img/stamp.svg" alt="ตรารับรอง: 100% Human-made — ไม่ใช้ AI" width="88" height="88">
+      </div>
+      <p class="footer-tiny">เว็บไซต์นี้ออกแบบและเขียนโดยมนุษย์ทั้งหมด · © 2026 Human-Write</p>
+    </div>
+  </footer>
+
+  <script type="module" src="/assets/js/app.js"></script>
+</body>
+</html>

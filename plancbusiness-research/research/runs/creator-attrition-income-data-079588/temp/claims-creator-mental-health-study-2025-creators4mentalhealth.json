@@ -1,0 +1,16 @@
+[
+  {
+    "claim": "The primary landing page for the Creators 4 Mental Health / Lupiani Insights & Strategies study discloses no sample size, methodology, field dates, or country breakdown - all the load-bearing figures (n=542, North America, 62% burnout, 89% lack access, 10% suicidal ideation) are recoverable only from secondary journalism (Tubefilter), not from the study's own primary page.",
+    "stance": "neutral",
+    "stance_target": "methodological transparency of the Creators 4 Mental Health study at its own source",
+    "evidence_type": "empirical",
+    "scope_conditions": "Provenance/methodology-audit finding. This is the study's official landing page (creators4mentalhealth.com/study) fetched directly; it renders as a near-empty JavaScript shell (98 words) with sponsor logos and one pull-quote, but no data tables, PDF, or methodology statement are present in the fetched HTML. Confirms the partnership with Lupiani Insights & Strategies named in the secondary coverage.",
+    "quoted_support": "\"Landmark Creator Mental Health Study Reveals Rising Burnout and Anxiety Across the Industry... The first comprehensive study on content creator mental health...conducted in partnership with Lupiani Insights & Strategies\"",
+    "numbers": [],
+    "entities": ["Creators 4 Mental Health", "Lupiani Insights & Strategies", "Shira Lazar"],
+    "time_period": "2025",
+    "region": "unstated on this page (North America per secondary coverage)",
+    "confidence": "low",
+    "source_note_id": "creator-mental-health-study-2025-creators4mentalhealth"
+  }
+]

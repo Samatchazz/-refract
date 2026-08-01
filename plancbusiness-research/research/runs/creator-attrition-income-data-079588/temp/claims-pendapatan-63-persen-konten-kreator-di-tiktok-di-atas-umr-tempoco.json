@@ -1,0 +1,44 @@
+[
+  {
+    "claim": "TikTok Indonesia explicitly confirmed in verbatim testimony to DPR Komisi I that the 8-million/63%-above-UMR figure describes creators on the TikTok platform specifically, not Indonesian content creators generally.",
+    "stance": "supports",
+    "stance_target": "platform-specific (not national) scope of the 8-juta/63-persen figure",
+    "evidence_type": "statistical",
+    "scope_conditions": "Indonesia, TikTok platform only, 15 July 2025 DPR Komisi I RDPU hearing",
+    "quoted_support": "\"Sekitar 8 juta kreator di platform TikTok sudah meraup penghasilan melalui fitur monetisasi... Dari 8 juta kreator, 63 persen juga sudah mendapatkan penghasilan lebih dari UMR.\"",
+    "numbers": ["8,000,000 TikTok-monetized creators", "63% earning above UMR"],
+    "entities": ["Hilmi Adrianto", "TikTok Indonesia", "DPR Komisi I"],
+    "time_period": "15 July 2025",
+    "region": "Indonesia",
+    "confidence": "high",
+    "source_note_id": "pendapatan-63-persen-konten-kreator-di-tiktok-di-atas-umr-tempoco"
+  },
+  {
+    "claim": "When directly asked by DPR Komisi I member Nico Siahaan to disclose TikTok Indonesia's actual revenue, TikTok's public policy representative declined, citing a need to consolidate figures across e-commerce and video-distribution business lines -- illustrating selective disclosure (favorable creator-monetization stats shared, revenue withheld).",
+    "stance": "neutral",
+    "stance_target": "transparency of TikTok's disclosures to Indonesian regulators",
+    "evidence_type": "anecdotal",
+    "scope_conditions": "Indonesia, DPR Komisi I hearing, 15 July 2025",
+    "quoted_support": "\"Data penghasilan memang saya belum pegang, karena ada banyak juga dari sisi e-commerce, dari sisi video distribusi platform-nya juga, sehingga hal tersebut perlu kami konsolidasikan terlebih dahulu.\"",
+    "numbers": [],
+    "entities": ["Hilmi Adrianto", "Nico Siahaan", "TikTok Indonesia", "DPR Komisi I"],
+    "time_period": "15 July 2025",
+    "region": "Indonesia",
+    "confidence": "high",
+    "source_note_id": "pendapatan-63-persen-konten-kreator-di-tiktok-di-atas-umr-tempoco"
+  },
+  {
+    "claim": "TikTok reported approximately 125 million monthly active users in Indonesia and 21 million sellers across TikTok Shop and Tokopedia as of the July 2025 DPR hearing.",
+    "stance": "neutral",
+    "stance_target": "scale of TikTok's user and seller base in Indonesia",
+    "evidence_type": "statistical",
+    "scope_conditions": "Indonesia, TikTok/Tokopedia platforms, 15 July 2025",
+    "quoted_support": "\"kini tercatat ada sekitar 125 juta pengguna aktif TikTok... ada sekitar 21 juta penjual atau seller di platform e-commerce mereka, TikTok Shop dan Tokopedia\"",
+    "numbers": ["125,000,000 monthly active users", "21,000,000 sellers"],
+    "entities": ["TikTok Indonesia", "TikTok Shop", "Tokopedia"],
+    "time_period": "15 July 2025",
+    "region": "Indonesia",
+    "confidence": "high",
+    "source_note_id": "pendapatan-63-persen-konten-kreator-di-tiktok-di-atas-umr-tempoco"
+  }
+]

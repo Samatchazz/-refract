@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<title>Plan C — โลโก้เวกเตอร์ rig ได้</title>
+<style>
+  body{background:#0f1613;color:#f2efde;font:13px/1.7 sans-serif;padding:22px;margin:0}
+  h1{color:#f0b32e;font-size:16px;margin-bottom:2px}
+  p.sub{color:rgba(242,239,222,.5);font-size:12px;margin-bottom:16px}
+  #stage{width:430px;height:430px;background:#181616;border-radius:14px;position:relative;cursor:pointer}
+  svg{width:100%;height:100%;display:block}
+  .btns{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0}
+  button{background:#f0b32e;border:0;color:#181616;font-weight:700;padding:6px 12px;border-radius:6px;cursor:pointer;font-size:12px}
+  button.alt{background:transparent;border:1px solid rgba(242,239,222,.3);color:#f2efde}
+  pre{background:#00000055;padding:10px;border-radius:6px;font-size:11.5px;white-space:pre-wrap;max-width:560px;color:#9fd}
+</style>
+</head>
+<body>
+<h1>โลโก้เวกเตอร์ที่ rig ได้จริง</h1>
+<p class="sub">เอาวิดีโอ → แตกเฟรม → potrace → ได้ path แยกชิ้น → ผูก spring · เลื่อนเมาส์ / คลิก</p>
+
+<div id="stage"></div>
+
+<div class="btns">
+  <button onclick="RIG.click()">คลิก (สะบัดหาง)</button>
+  <button onclick="RIG.blink()">กะพริบตา</button>
+  <button class="alt" onclick="RIG.coat('#f2efde')">ครีม</button>
+  <button class="alt" onclick="RIG.coat('#f0b32e')">ทอง</button>
+  <button class="alt" onclick="RIG.coat('#FF3831')">แดง</button>
+  <button class="alt" onclick="RIG.outline()">โชว์ชิ้นส่วน</button>
+</div>
+<pre id="log">โหลด…</pre>
+
+<script>
+const NS='http://www.w3.org/2000/svg';
+// แผนที่ชิ้นส่วนที่วัดมาจริง (viewBox 624×624)
+const PART = { HEAD:0, TAIL:1, L:2, A:3, FACE:4, N:5, PBOWL:6, ACOUNTER:7 };
+const HEAD_PIVOT = {x:130, y:400};   // คอ — ใต้หัว
+const TAIL_PIVOT = {x:430, y:340};   // โคนหาง C
+
+const RIG = window.RIG = {};
+
+fetch('_frame1.json').then(r=>r.json()).then(S=>{
+  const svg=document.createElementNS(NS,'svg');
+  svg.setAttribute('viewBox','0 0 624 624');
+  document.getElementById('stage').appendChild(svg);
+
+  const mk=(d,fill)=>{const p=document.createElementNS(NS,'path');
+    p.setAttribute('d',d); p.setAttribute('fill',fill); return p;};
+  const g=(id)=>{const e=document.createElementNS(NS,'g'); e.dataset.id=id; return e;};
+
+  let coat='#f2efde';
+  // ลำตัว "lan" อยู่นิ่ง
+  const gBody=g('body');
+  [PART.L,PART.A,PART.N].forEach(i=>gBody.appendChild(mk(S[i],coat)));
+  gBody.appendChild(mk(S[PART.ACOUNTER],'#181616'));
+  // หัว P + หน้าแมว — ขยับพร้อมกัน
+  const gHead=g('head');
+  gHead.appendChild(mk(S[PART.HEAD],coat));
+  gHead.appendChild(mk(S[PART.PBOWL],coat));   // ชิ้นนี้เป็นเนื้อ ไม่ใช่รู (วัดแล้ว IoU 94.8→98.8%)
+  const face=mk(S[PART.FACE],'#181616'); gHead.appendChild(face);
+  // หาง C — ชิ้นอิสระ 100%
+  const gTail=g('tail');
+  gTail.appendChild(mk(S[PART.TAIL],coat));
+  // เปลือกตา วาดทับหน้า
+  const lids=document.createElementNS(NS,'g');
+  const fb=(()=>{const t=document.createElementNS(NS,'svg');t.setAttribute('viewBox','0 0 624 624');
+    const p=mk(S[PART.FACE],'#000');t.appendChild(p);document.body.appendChild(t);
+    const b=p.getBBox();t.remove();return b;})();
+  const lid=document.createElementNS(NS,'rect');
+  lid.setAttribute('x',fb.x-4); lid.setAttribute('width',fb.width+8);
+  lid.setAttribute('y',fb.y-3); lid.setAttribute('height',fb.height*0.62);
+  lid.setAttribute('fill',coat); lid.setAttribute('opacity',0);
+  lids.appendChild(lid); gHead.appendChild(lids);
+
+  svg.appendChild(gBody); svg.appendChild(gHead); svg.appendChild(gTail);
+
+  // ---------- ฟิสิกส์ spring ----------
+  const sp=(stiff,damp)=>({p:0,v:0,t:0,k:stiff,c:damp});
+  const step=(s,dt)=>{const a=-s.k*(s.p-s.t)-s.c*s.v; s.v+=a*dt; s.p+=s.v*dt; return s.p;};
+  const tail=sp(90,11), headR=sp(120,14), headY=sp(150,15);
+  let blink=0, blinkAt=performance.now()+2200, mx=0, my=0;
+
+  function loop(now){
+    const dt=1/60;
+    step(tail,dt); step(headR,dt); step(headY,dt);
+    gTail.setAttribute('transform',
+      `rotate(${tail.p.toFixed(2)} ${TAIL_PIVOT.x} ${TAIL_PIVOT.y})`);
+    gHead.setAttribute('transform',
+      `rotate(${headR.p.toFixed(2)} ${HEAD_PIVOT.x} ${HEAD_PIVOT.y}) translate(0 ${headY.p.toFixed(2)})`);
+    if(now>blinkAt){ blink=1; blinkAt=now+1800+Math.random()*3200; }
+    if(blink>0){ blink=Math.max(0, blink-0.085);
+      lid.setAttribute('opacity', Math.sin(Math.min(1,(1-blink))*Math.PI).toFixed(3)); }
+    requestAnimationFrame(loop);
+  }
+  requestAnimationFrame(loop);
+
+  const stage=document.getElementById('stage');
+  stage.addEventListener('mousemove',e=>{
+    const r=stage.getBoundingClientRect();
+    mx=(e.clientX-r.left)/r.width-0.5; my=(e.clientY-r.top)/r.height-0.5;
+    headR.t=mx*9; headY.t=my*12; tail.t=mx*7;
+  });
+  stage.addEventListener('mouseleave',()=>{ headR.t=0; headY.t=0; tail.t=0; });
+  stage.addEventListener('click',()=>RIG.click());
+
+  RIG.click=()=>{ tail.v-=260; headY.v-=90; };
+  RIG.blink=()=>{ blink=1; };
+  RIG.coat=(c)=>{ coat=c;
+    [...gBody.querySelectorAll('path'),...gHead.querySelectorAll('path'),...gTail.querySelectorAll('path')]
+      .forEach(p=>{ if(p.getAttribute('fill')!=='#181616') p.setAttribute('fill',c); });
+    lid.setAttribute('fill',c); };
+  let outlined=false;
+  RIG.outline=()=>{ outlined=!outlined;
+    const cols=['#e6194b','#3cb44b','#ffe119','#4363d8','#f58231','#911eb4','#46f0f0','#f032e6'];
+    const all=[...svg.querySelectorAll('path')];
+    if(outlined) all.forEach((p,i)=>p.setAttribute('fill',cols[i%8]));
+    else RIG.coat(coat); };
+
+  document.getElementById('log').textContent =
+    'ชิ้นส่วนจาก potrace: '+S.length+' ชิ้น\n'+
+    'หาง C = ชิ้น #1 แยกอิสระสนิท (ไม่แตะชิ้นไหนเลย) → หมุนเท่าไหร่ก็ไม่มีรอยต่อ\n'+
+    'หัว+P = #0 · หน้าแมว = #4 (อยู่ในหัว) · l/a/n = #2/#3/#5\n'+
+    'ขนาดรวมทุก path: '+(JSON.stringify(S).length/1024).toFixed(1)+' KB (ก่อนบีบ)';
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+[
+  {
+    "claim": "The ILO publicly disowned the only recent Philippine platform-worker earnings figures in circulation, stating they came from an unvalidated draft and that assertions workers earn 'well above minimum wage' are not official ILO conclusions.",
+    "stance": "supports",
+    "stance_target": "The claim that authoritative quantitative income evidence for Southeast Asian platform and creator work does not currently exist, and that circulating figures are unvalidated",
+    "evidence_type": "legal",
+    "scope_conditions": "Philippines, statement dated 26 February 2026; covers transport network vehicle service drivers and delivery riders, adjacent to but not identical with content creators",
+    "quoted_support": "The material cited in recent media coverage is drawn from a draft document currently undergoing technical validation. It is not a published report, not final, not endorsed, and does not represent an official ILO position.",
+    "numbers": ["statement dated 26 February 2026", "0 citable published figures"],
+    "entities": ["International Labour Organization", "ILO Philippines", "TNVS"],
+    "time_period": "February 2026",
+    "region": "Philippines",
+    "confidence": "high",
+    "source_note_id": "ilo-philippines-clarifies-misuse-of-preliminary-platform-work-survey-findings-in"
+  },
+  {
+    "claim": "The ILO specifies that a credible platform-work earnings figure must distinguish gross from net income and account for operating costs, unpaid waiting time, working-time intensity, overtime hours and income volatility -- criteria that essentially no published creator income statistic meets.",
+    "stance": "refutes",
+    "stance_target": "The validity of reported creator income figures that quote gross brand-deal, affiliate or ad revenue without netting production costs, unpaid pitching and production time, or month-to-month volatility",
+    "evidence_type": "expert-opinion",
+    "scope_conditions": "Philippines, February 2026; stated by the ILO country office as a general methodological requirement for platform-work earnings assessment",
+    "quoted_support": "Proper assessment of earnings requires distinguishing between gross and net income and accounting for operating costs, unpaid waiting time, working-time intensity, overtime hours, and income volatility.",
+    "numbers": ["6 named adjustment criteria"],
+    "entities": ["International Labour Organization"],
+    "time_period": "February 2026",
+    "region": "Philippines, methodologically general",
+    "confidence": "high",
+    "source_note_id": "ilo-philippines-clarifies-misuse-of-preliminary-platform-work-survey-findings-in"
+  },
+  {
+    "claim": "Philippine labour groups publicly disputed the leaked platform-worker earnings findings, showing that even the direction of the finding is contested within the country it describes.",
+    "stance": "supports",
+    "stance_target": "The claim that Southeast Asian platform-income figures should not be reported without noting that they are contested and unvalidated",
+    "evidence_type": "empirical",
+    "scope_conditions": "Philippines, February 2026; evidenced by the ILO's own linked press coverage (BusinessWorld 17 Feb 2026, BusinessMirror 18 Feb 2026, Malaya)",
+    "quoted_support": "The integrity of evidence matters. Preliminary technical work must not be used in ways that distort public discourse or undermine the objective of advancing decent work and social justice.",
+    "numbers": ["3 press items linked by the ILO", "February 2026"],
+    "entities": ["International Labour Organization", "BusinessWorld", "BusinessMirror", "Malaya"],
+    "time_period": "February 2026",
+    "region": "Philippines",
+    "confidence": "high",
+    "source_note_id": "ilo-philippines-clarifies-misuse-of-preliminary-platform-work-survey-findings-in"
+  }
+]

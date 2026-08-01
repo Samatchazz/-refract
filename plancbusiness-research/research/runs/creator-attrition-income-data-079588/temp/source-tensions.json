@@ -1,0 +1,118 @@
+{
+  "vault_tag": "creator-attrition-income-data-079588",
+  "note": "Seven tensions. Three carry forward from comparisons.md; four are orphan tensions recovered from high-relevance contradiction-graph clusters that neither loci analyst promoted to a locus, and which would otherwise never surface in the draft. Every tension below is pre-committed to a resolution.",
+  "tensions": [
+    {
+      "name": "Goldman Sachs versus its own citation chain",
+      "side_a": {
+        "position": "There are roughly 50 million global creators (2022), re-baselined to 67 million (2025), of whom about 2 million are professionals — a figure carrying the authority of an investment bank's research division.",
+        "evidence": "Goldman Sachs Global Investment Research states approximately 67 million individuals 'consider themselves creators' globally in 2025, up from approximately 50 million in 2022, growing toward approximately 107 million by 2030, with the creator economy reaching approximately US$480 billion by 2027. Reproduced worldwide as the field's standard population estimate.",
+        "proponents": ["the-creator-economy-could-approach-half-a-trillion-dollars-by-2027-goldman-sachs", "with-this-report-we-assess-the-current-state-of-the-creator-economy-including", "goldman-sachs-sees-rise-of-content-creators-to-107-million-by-2030-stronger-priv"]
+      },
+      "side_b": {
+        "position": "The figure is not independent research; it is a venture-capital blog estimate laundered through an SEO listicle, and its professional subset has never been re-measured.",
+        "evidence": "Goldman's own exhibit source line reads 'Zippia, Influencer Marketing Hub, Goldman Sachs Global Investment Research', and its text says 'Leveraging our prior estimates and data from Zippia'. Zippia is an SEO careers listicle that recycles SignalFire's circa-2020 venture-capital blog TAM estimate. The professional count is held at 2.0 million for 2022 AND 2.0 million for 2025 while the total grows 50.0 to 66.6 million, so professional share falls 4.0% to 3.0% by arithmetic rather than measurement. Goldman's 2023 article defines professionals as earning over $100,000/year; its 2025 exhibit footnote says the split is 'based on self-definitions (e.g. full-time vs. part-time)' with no income threshold at all. Separately, the '3% of channels take 90% of the wealth' statistic attributed to the same chain is a transformation error: Baertl 2018 measured 85% of VIEWS accruing to 3% of channels.",
+        "proponents": ["with-this-report-we-assess-the-current-state-of-the-creator-economy-including", "20-incredible-creator-economy-statistics-2023-facts-charts-trends-zippia", "creator-economy-guide-trends-tools-monetization"]
+      },
+      "resolution": "Side B, decisively, and the report should say so plainly. This is not a dispute about whose estimate is better — Goldman is not an independent estimate at all, and its own documents establish that. The load-bearing reason is that the chain is documented in Goldman's own source line rather than inferred: SignalFire (venture-capital blog, circa 2020) to Zippia (SEO listicle, 2023) to Goldman Sachs (2023 and 2025) to global press. The consequence matters beyond this one figure, because the creator population is the DENOMINATOR of every 'what share of creators earns X' statistic in the field. A share statistic computed against an unmeasured denominator is not a measurement, and the widely-quoted '4% of creators earn over $100,000' inherits this twice over — once through the denominator and once through the 2025 footnote's abandonment of any income threshold.",
+      "origin": "contradiction-graph",
+      "decision_relevance": "high"
+    },
+    {
+      "name": "Survey regime versus telemetry regime: one word, two populations",
+      "side_a": {
+        "position": "Roughly half of creators earn something and a meaningful minority earn well — 46% report any income, 12% of full-time creators clear $50,000.",
+        "evidence": "Toerhoenen et al. 2019 find 45.8% of respondents (n=377) earn any income, independently replicated at 46.1% (n=382). Linktree (n=9,576, fielded 2021) reports 12% of full-time creators above $50,000/year.",
+        "proponents": ["fame-and-fortune-or-just-fun", "play-playbour-or-labour-the-relationships-between-perception-of", "pdf-linktree-creatorreport-2022-02f3aa05a27be6fecb3537b13d5ec9depdf"]
+      },
+      "side_b": {
+        "position": "Measured payout records show a zero-earning majority that survey instruments structurally cannot observe.",
+        "evidence": "Regner's complete Patreon transaction record (n=139,366 campaigns, 2013-2015) finds 115,183 (82.6%) never received a single pledge. Rieder et al. find 31,727,531 YouTube channels under 1,000 subscribers receive 0% of channel revenue. Zhao et al. find 25% of VTubers received zero Superchats. The Wall Street Journal's analysis of the Twitch leak excluded 896,261 zero or negative-revenue accounts from approximately 4.9 million before computing any percentile. Institutions concede the limitation in their own methodology: the ILO states 'there was no sampling base from which a random sample could be drawn', and the World Bank found self-identified gig workers were the most likely to drop out mid-survey.",
+        "proponents": ["vol0123456789-3", "httpsdoiorg10117720563051231180628", "who-reaps-all-the-superchats-a-large-scale-analysis-of-income", "twitch-streamer-earnings-increase-for-top-gamers-data-from-hack-shows-wsj", "x-opportunities-and-challenges", "the-promise-and-peril"]
+      },
+      "resolution": "Both are correct about their own populations, and that is precisely the finding — but the report must not present them as a range, because they are not competing estimates of one quantity. Side A measures people who already identify as creators; Side B divides by everyone who opened an account. The load-bearing reason to lead with Side B is the query's own framing: it asks about content creation AS AN OCCUPATION, which requires the full-population denominator, since an occupation is characterised by what happens to everyone who enters it, not by how the survivors are doing. One caution the report must observe: the popularity-gated versus random-sample effect has been directly measured at roughly tenfold only for affiliate-link prevalence (Hua et al. 2022 at 36.7% against Mathur, Narayanan and Chetty 2018 at 3.49%, Howto and Style category), NOT for income. It bounds the mechanism's plausible scale; it is not a coefficient that may be applied to income figures.",
+      "origin": "contradiction-graph",
+      "decision_relevance": "high"
+    },
+    {
+      "name": "NeoReach versus Linktree: same year, same question, 3.5x apart",
+      "side_a": {
+        "position": "Most creators are full-time and a large minority earn well: 70% full-time, 43% above $50,000/year, 77% earning the majority of income from brand deals.",
+        "evidence": "NeoReach / Influencer Marketing Hub creator earnings survey. The respondent pool is an influencer-agency roster in which 4% of respondents have over 10 million followers.",
+        "proponents": ["creator-earnings-breakdown-the-creator-economy-today"]
+      },
+      "side_b": {
+        "position": "Most creators are part-time and earn almost nothing: 34% full-time, 12% above $50,000, 70% earning under 10% of income from brand partnerships, and 53% of all creators earning $100/year or less.",
+        "evidence": "Linktree Creator Report, n=9,576, approximately 95% completion, fielded 2021. Creator defined by intent: 'if you produce and seek to monetize content, you're a creator'. Full-time: 12% over $50,000, 46% under $1,000. Part-time: 3% over $50,000, 68% under $1,000. Beginners under 12 months: 59% unmonetized.",
+        "proponents": ["pdf-linktree-creatorreport-2022-02f3aa05a27be6fecb3537b13d5ec9depdf", "only-12-of-full-time-creators-make-over-50k-a-year-says-linktree", "200-million-people-are-earning-money-from-digital-content-creation-tubefilter"]
+      },
+      "resolution": "Neither figure is a measurement of the creator population; both are measurements of a recruitment channel, and the 3.5x gap is the size of the recruitment effect. This tension earns its place in the report precisely because it is a clean natural experiment: same year, same nominal quantity, opposite answers, and the only material difference is who was invited to respond. NeoReach sampled an influencer-marketing agency's roster — a population selected for already having brand deals — and unsurprisingly found brand deals dominant and incomes high. Linktree sampled its own link-in-bio user base, which skews toward people attempting monetization rather than achieving it. The report should present the pair as the clearest available demonstration that vendor survey figures describe their sampling frames, and should decline to cite the NeoReach figures at all except as an illustration of this effect, since no methodology statement for them exists anywhere in the corpus.",
+      "origin": "orphan-scan",
+      "decision_relevance": "high"
+    },
+    {
+      "name": "The Twitch leak: best available measurement versus unverified breach data",
+      "side_a": {
+        "position": "The October 2021 leak is the single best measured income distribution in the field — actual payout records for approximately 4.9 million accounts, not a survey.",
+        "evidence": "The Wall Street Journal analysis (Bentley and Kim, 9 October 2021) reports $889 million paid January to September 2021 against $517 million in the same 2020 period; 75% of earning accounts under $120 and 50% under $28; only 0.06% above the US median household income of $67,521; only 5% above $1,000; the top 1% taking over half of all payouts; the top 1,000 accounts taking $220 million of $889 million. WSJ cross-checked one streamer's pay stubs against the leak and matched to within 25 cents.",
+        "proponents": ["twitch-streamer-earnings-increase-for-top-gamers-data-from-hack-shows-wsj", "the-unbearable-lightness-of-streaming-superjoost-playlist", "many-top-twitch-streamers-dont-make-minimum-wage-and-3-new-takeaways-from-the-tw"]
+      },
+      "side_b": {
+        "position": "It is stolen data of unverified provenance whose internal tables contradict each other, and Twitch has never confirmed it.",
+        "evidence": "Dexerto found streamers gave mixed responses when asked to confirm their own figures, some confirming and some denying, and found the leaked tables inconsistent with each other — Asmongold's September 2021 monthly figure extrapolates to $3.4 million against his $2.55 million cumulative listing. The observation window is stated five incompatible ways across outlets (July, August, September or October 2019 starts; 24, 26 or 36-month spans), making cumulative-to-annual conversion unsound. The dataset ranks ACCOUNTS, not people: rank 8 is an extension developer, and Riot Games, ESL_CSGO, GamesDoneQuick and RocketLeague all appear in the top 100.",
+        "proponents": ["twitch-responds-to-leak-revealing-earnings-of-top-streamers-and-more-dexerto", "twitch-leak-10-biggest-revelations-from-the-unprecedented-data-breach", "full-list-of-all-twitch-payouts-twitch-leaks"]
+      },
+      "resolution": "Use it, cite it as the best available evidence for its specific question, and carry its four constraints in the same breath every time. The load-bearing reason to use it is that the alternative is worse: without the leak the field has no measured income distribution for any live-streaming platform at all, and a flawed measurement beats an unflawed survey of survivors. But four constraints are non-negotiable and must travel with every figure drawn from it. First, the denominator: WSJ's percentiles are computed over EARNING accounts after excluding 896,261 zero or negative-revenue accounts, so '75% under $120' describes earners, not all accounts, and the versions circulating without that exclusion are wrong. Second, the unit is the account, not the person, and organisations sit inside the top ranks. Third, it excludes sponsorships, tips and publisher payments, and Twitch's $100 payout floor censors the low tail. Fourth, it discloses no country composition whatsoever, so every living-wage comparison drawn from it silently assumes a US cost of living for a population of unknown nationality.",
+      "origin": "orphan-scan",
+      "decision_relevance": "high"
+    },
+    {
+      "name": "Concentration worsening versus elite-tier stability",
+      "side_a": {
+        "position": "Creator income concentration has measurably worsened over the past decade, confirmed by three research groups on three platforms.",
+        "evidence": "Patreon within-topic Gini rose 0.30 to 0.60 between 2015 and 2020 (El Sanyoura and Anderson). VTuber between-creator Gini rose 0.60 to 0.75 between 2018 and 2023 (Zhao et al.). Pareto alpha fell across YouTube, Instagram, Facebook and Twitch between 2018 and 2024 (Strauss, Yang and Mazzucato, official Patreon data n=104,719). Goldman Sachs names the mechanism: creator funds shrank 'with the number of new creators joining the platforms diluting the payout of existing creators'.",
+        "proponents": ["quantifying-the-creator-economy-a-large-scale-analysis-of-patreon", "who-reaps-all-the-superchats-a-large-scale-analysis-of-income", "rich-get-richer-platform-attention-and-earnings-inequality", "with-this-report-we-assess-the-current-state-of-the-creator-economy-including"]
+      },
+      "side_b": {
+        "position": "The structure is a stable power law in equilibrium, with elite turnover comparable to natural language word-frequency distributions.",
+        "evidence": "Houssard et al. 2023 in Scientific Reports report Twitch weekly ranking dropout flux of 0.2 for the top 100 and 0.135 for the top 1,000, a stability the authors compare to word-frequency distributions in natural language.",
+        "proponents": ["vol0123456789-2"]
+      },
+      "resolution": "Compatible, not contradictory — and saying so is more informative than picking a side. Houssard measures churn WITHIN the elite tier; Side A measures the distribution ACROSS the whole population. Both can hold simultaneously, and their conjunction is the sharper finding: the composition of the top is relatively stable while the distance between top and bottom widens. For a reader deciding whether to enter the occupation this matters more than either result alone, because it means the top is not a lottery being redrawn each year — incumbents largely persist — while the expected value of entering falls as the field grows. The report should present this as a resolved apparent-conflict rather than an open dispute, and should note that Side A's three confirmations come from independent groups using different platforms and different inequality statistics, which is why the weight sits there.",
+      "origin": "contradiction-graph",
+      "decision_relevance": "medium"
+    },
+    {
+      "name": "Money versus motivation as the driver of exit",
+      "side_a": {
+        "position": "Creators quit because the income is insufficient — they say so when asked.",
+        "evidence": "Censuswide for Billion Dollar Boy (July 2025, n=1,000 creators, 500 US and 500 UK) finds financial instability ranked first by severity at 55% among creators who suffered burnout, with 52% reporting burnout and 37% having considered quitting. Ivors Academy and Musicians' Union (n=311) report 43% took a job outside music because streaming income was insufficient. Creators 4 Mental Health / Lupiani Insights (n=542, North America, November 2025) report 69% experiencing financial insecurity.",
+        "proponents": ["over-half-of-creators-face-burnout-action-urged-billion-dollar-boy", "music-creators-earnings-in", "in-sweeping-study-89-of-creators-claim-to-lack-access-to-specialized-mental-heal"]
+      },
+      "side_b": {
+        "position": "Income level does not predict who continues. Structural access to monetization infrastructure and intrinsic motivation do.",
+        "evidence": "Toerhoenen et al. 2019 (n=377) find intrinsic motivation predicts intention to continue at p=0.000 while income and every other extrinsic motivator fail significance at p=0.052. Zhao et al. 2025 (n=1,923 VTubers, Cox proportional-hazards) find affiliation status significant (HR 1.980 for small-agency, p=0.003) while gender and hours streamed are NOT significant predictors of survival. Wollborn et al. 2023 (Twitch difference-in-differences, n=18,467) find newcomers reaching only affiliate status reverted to pre-pandemic effort within 4-8 weeks while those reaching partner sustained it.",
+        "proponents": ["fame-and-fortune-or-just-fun", "who-reaps-all-the-superchats-a-large-scale-analysis-of-income", "vol0123456789"]
+      },
+      "resolution": "Side B on the narrow question of what predicts continuation, but the honest headline is that neither side answers the question the query actually asks. The load-bearing reason to weight Side B is design: it contains the only studies that model continuation behaviour rather than self-reported feeling, and two of them are quasi-causal. Side A's 'financial instability ranks first' finding also fails to replicate within its own literature — it is the result of one of four instruments, and the other three (Awin, Vibely, Creators 4 Mental Health) rank a different cause first or do not rank financial causes at all. But the decisive point is a population mismatch that disqualifies Side A from answering the query regardless of its internal consistency: every one of these instruments samples creators who have NOT quit and asks them to introspect about a hypothetical. No instrument anywhere has asked a departed creator why they left. The closest existing design, Sounds Profitable's The Creators 2025 (n=5,034, census-weighted, US, December 2025), reaches a genuinely lapsed creator population but never asks it why it lapsed, and its authors list that as an open question. Kingsley et al. 2022 recruited both current and former YouTube creators and contains no mention of quitting at all. A plausible synthesis the report may offer explicitly as an inference: income determines who CAN continue while motivation determines who DOES among those who can.",
+      "origin": "comparisons",
+      "decision_relevance": "high"
+    },
+    {
+      "name": "Indonesia's national creator statistic versus a corporate marketing figure",
+      "side_a": {
+        "position": "Indonesia has 8 million people whose main profession is content creation, of whom 63% earn above the provincial minimum wage — an official national figure.",
+        "evidence": "Stated publicly by Menteri Ekonomi Kreatif Teuku Riefky Harsya and reported in Indonesian media as a national creative-economy statistic.",
+        "proponents": ["menekraf-8-juta-orang-berprofesi-konten-kreatof-63-persen-gajinya-di-atas-umr-ku", "babak-baru-profesi-kreator-konten-di-indonesia"]
+      },
+      "side_b": {
+        "position": "The two numbers come from different sources and were merged later: 63% is a real but thin TikTok-commissioned survey figure, 8 million is an unaudited internal count, and Indonesia has no official content-creator count at all.",
+        "evidence": "The official DPR RI record of the 15 July 2025 Komisi I hearing shows Hilmi Adrianto of TikTok Indonesia stating 8 million creators with 63% above minimum wage, describing creators monetizing via TikTok specifically. In the same hearing, pressed by MP Nico Siahaan for actual Indonesia revenue, he answered on record 'Data tersebut saya belum memiliki saat ini pak' — I do not have that data right now. The figures were already circulating in July 2024 via TikTok Indonesia's communications director, who attributed them to TikTok's own June 2023 report 'The TikTok Effect' plus unspecified internal data as of December 2023. The vendor that conducted that report, Kadence International (9 SEA markets, n=3,400+ users plus 25 non-profits), publishes a methodology summary that does not contain the 63% or 8 million figures at all. BPS publishes no content-creator count; its 'creative economy workforce' series (27.4 million in 2025) is a far broader category, and BPS states the 2026 Economic Census will be the first instrument to make content-creator business actors visible.",
+        "proponents": ["jdih-setjen-dpr-ri-jaringan-dokumentasi-dan-informasi-hukum-sekretariat-jenderal", "anggota-dpr-cecar-omzet-tiktok-mengaku-belum-siap-data-teknologi", "63-percent-of-tiktok-creators-earn-more-than-minimum-wage", "tiktoks-socio-economic-impact-in-southeast-asia-a-summary-of-the-report-kadence", "bps-dan-kemenekraf-bersinergi-kreator-lokal-dilibatkan-dalam-sosialisasi-se2026"]
+      },
+      "resolution": "REVISED AT STEP 8 after the primary source was recovered — the earlier verdict was too harsh and is corrected here. A step 8 fetcher retrieved the full 'The TikTok Effect' PDF (36 pages) through the Wayback Machine CDX index after the live host was Cloudflare-blocked. Page 10 carries a nine-country chart of creators earning above minimum wage, and the value-to-country pairing was reconstructed from the PDF's raw text coordinates and validated against the report's own low-base footnote for Myanmar (n=26), which matched exactly: Laos 87%, Vietnam 83%, Malaysia 80%, Myanmar 73%, Singapore 68%, Indonesia 63%, Cambodia 56%, Philippines 40%, Thailand 36%. Survey fielded August-September 2022; Indonesia n=540 total respondents. So the 63% DOES trace to a real instrument — thin, self-selected to active TikTok users, three-plus years old, with the sub-base for the income question undisclosed and a single blended US$216/month benchmark erasing provincial UMR variation — but real, and citable with those caveats attached. The 8 million figure is the part that remains an orphan: it appears nowhere in the primary report, which contains only percentages and no headcount for any country, and TikTok Indonesia's communications director attributed it separately to unaudited internal data as of December 2023. THE ACTUAL PROVENANCE FAILURE IS THE MERGER: two figures from different sources, different years and different methods were welded into a single '8 million / 63%' statistic at the DPR hearing and then repeated by the Menekraf as a national statistic. That is a smaller and more precise charge than 'the whole figure is marketing', and the report should make exactly that charge. The symmetry with the SignalFire-Zippia-Goldman chain still holds and should still be drawn — but note the asymmetry in how it resolved: the Southeast Asian chain, when chased to its primary, turned out to have a real survey underneath it, whereas the Goldman chain terminates in a venture-capital blog with no instrument at any depth. Applying one standard uniformly therefore leaves the Western figure in worse shape than the Indonesian one.",
+      "origin": "comparisons",
+      "decision_relevance": "high"
+    }
+  ]
+}

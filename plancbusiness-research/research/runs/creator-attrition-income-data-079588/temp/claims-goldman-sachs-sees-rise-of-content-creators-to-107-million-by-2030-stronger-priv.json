@@ -1,0 +1,72 @@
+[
+  {
+    "claim": "Goldman Sachs re-baselined its global creator population from 50 million to approximately 67 million for 2025, projecting 10% CAGR growth to 107 million by 2030 while projecting the professional share to fall from 3.0% in 2025 to 2.5% by 2030.",
+    "stance": "supports",
+    "stance_target": "The claim that creator population growth is concentrated entirely in non-earning amateurs",
+    "evidence_type": "statistical",
+    "scope_conditions": "Global; Goldman Sachs report 'Creator Economy: Framing Market Opportunity, Drivers of Content Creation/Distribution & Ads/Commerce', 26 March 2025; professional/amateur assigned by self-identification",
+    "quoted_support": "The investment bank estimates that approximately 67 million individuals worldwide identify as \"creators\" in 2025, with projections suggesting this figure will grow at a 10% compound annual growth rate (CAGR) to reach 107 million by 2030.",
+    "numbers": ["67 million in 2025", "107 million by 2030", "10% CAGR", "3.0% professional in 2025", "2.5% professional in 2030"],
+    "entities": ["Goldman Sachs", "NetInfluencer"],
+    "time_period": "Report dated 26 March 2025; projections to 2030",
+    "region": "Global",
+    "confidence": "high",
+    "source_note_id": "goldman-sachs-sees-rise-of-content-creators-to-107-million-by-2030-stronger-priv"
+  },
+  {
+    "claim": "Goldman Sachs attributes creator earnings inequality to a barbell distribution in which a small percentage of creators capture a disproportionate share of revenue, citing the figure that 3% of YouTubers capture 90% of net creator earnings on the platform.",
+    "stance": "supports",
+    "stance_target": "The claim that creator earnings are extremely concentrated at the top of the distribution",
+    "evidence_type": "statistical",
+    "scope_conditions": "YouTube; figure is sourced inside the Goldman report to a Zippia listicle, which in turn derives from Bärtl's 2018 peer-reviewed finding that 85% of views go to 3% of channels — a measure of attention, not revenue",
+    "quoted_support": "The report cites data indicating that 3% of YouTubers capture 90% of net creator earnings on the platform.",
+    "numbers": ["3% of YouTubers", "90% of net creator earnings"],
+    "entities": ["Goldman Sachs", "YouTube", "Zippia", "Mathias Bärtl"],
+    "time_period": "Cited March 2025",
+    "region": "Global",
+    "confidence": "medium",
+    "source_note_id": "goldman-sachs-sees-rise-of-content-creators-to-107-million-by-2030-stronger-priv"
+  },
+  {
+    "claim": "Goldman Sachs documents the closure of TikTok's and Meta's respective $1 billion-plus Creator Funds and a shift toward conditional Creator Programs requiring minimum follower or viewership thresholds, narrowing the population eligible for platform payouts.",
+    "stance": "supports",
+    "stance_target": "The claim that platform monetization eligibility has tightened over time, making older creator-earnings cohorts non-comparable to newer ones",
+    "evidence_type": "historical",
+    "scope_conditions": "Global; TikTok and Meta creator funds; as of March 2025",
+    "quoted_support": "The report notes a reduction in fixed creator funds, following the closure of TikTok and Meta's respective $1 billion+ Creator Funds, and a shift toward Creator Programs that incorporate revenue sharing, subscriptions, tipping, and other monetization methods.",
+    "numbers": ["$1 billion+ TikTok Creator Fund", "$1 billion+ Meta Creator Fund"],
+    "entities": ["Goldman Sachs", "TikTok", "Meta"],
+    "time_period": "Through March 2025",
+    "region": "Global",
+    "confidence": "high",
+    "source_note_id": "goldman-sachs-sees-rise-of-content-creators-to-107-million-by-2030-stronger-priv"
+  },
+  {
+    "claim": "Venture funding into creator-economy companies fell from approximately $3.6 billion in 2021 to $2.3 billion in 2022 and $950 million in 2023, recovering to roughly $1.5 billion in 2024 — a 74% peak-to-trough decline that coincided with the sector's peak public visibility.",
+    "stance": "neutral",
+    "stance_target": "The claim that the creator economy grew monotonically through the 2020s",
+    "evidence_type": "statistical",
+    "scope_conditions": "Content creation and creator platform companies; Goldman Sachs compilation; primarily US startup funding",
+    "quoted_support": "After peaking in 2021 with approximately $3.6 billion invested in content creation and creator platforms, funding declined to $2.3 billion in 2022 and $950 million in 2023. However, funding reaccelerated in 2024, growing to approximately $1.5 billion",
+    "numbers": ["$3.6 billion 2021", "$2.3 billion 2022", "$950 million 2023", "$1.5 billion 2024", "74% peak-to-trough decline"],
+    "entities": ["Goldman Sachs"],
+    "time_period": "2021-2024",
+    "region": "Primarily US",
+    "confidence": "high",
+    "source_note_id": "goldman-sachs-sees-rise-of-content-creators-to-107-million-by-2030-stronger-priv"
+  },
+  {
+    "claim": "Goldman Sachs cites EMARKETER that total US influencer marketing spend reached approximately $26 billion in 2023, roughly one-third of total US social digital ad spend, a figure specific to the United States and not transferable to Southeast Asian markets.",
+    "stance": "neutral",
+    "stance_target": "The extrapolation of US influencer-marketing spend to other regions",
+    "evidence_type": "statistical",
+    "scope_conditions": "United States only; 2023; EMARKETER estimate",
+    "quoted_support": "EMARKETER estimates cited in the report indicate that total U.S. influencer marketing was approximately $26 billion in 2023, representing about one-third of total U.S. social digital ad spend.",
+    "numbers": ["$26 billion", "one-third of US social digital ad spend"],
+    "entities": ["EMARKETER", "Goldman Sachs"],
+    "time_period": "2023",
+    "region": "United States — explicitly US-only",
+    "confidence": "high",
+    "source_note_id": "goldman-sachs-sees-rise-of-content-creators-to-107-million-by-2030-stronger-priv"
+  }
+]

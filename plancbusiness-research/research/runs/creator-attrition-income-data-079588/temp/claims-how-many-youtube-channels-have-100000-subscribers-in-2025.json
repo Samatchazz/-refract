@@ -1,0 +1,44 @@
+[
+  {
+    "claim": "An August 2025 channel census puts total YouTube channels at approximately 115 million against roughly 60 million uploading in any given month, implying that around half of all channels are dormant at any point in time.",
+    "stance": "supports",
+    "stance_target": "The position that channel-level abandonment is the normal outcome and that active-creator counts are roughly half of cumulative channel counts",
+    "evidence_type": "statistical",
+    "scope_conditions": "Awesome Creator Academy blog, 2 August 2025; NO methodology or data source is disclosed anywhere in the post, numbers are presumably scraped from a third-party channel database; 'monthly active channels uploading' is not defined; dormancy in a single month is a weak proxy for permanent attrition",
+    "quoted_support": "That is less than 1% of all the YouTube Channels World Wide (115M YouTube Channels, over 60M monthly active channels uploading each month).",
+    "numbers": ["115M total channels", "60M+ monthly active uploading", "August 2025"],
+    "entities": ["Awesome Creator Academy", "YouTube"],
+    "time_period": "August 2025",
+    "region": "Global",
+    "confidence": "low",
+    "source_note_id": "how-many-youtube-channels-have-100000-subscribers-in-2025"
+  },
+  {
+    "claim": "As of August 2025, 618,955 YouTube channels globally had 100,000 or more subscribers and 69,182 had one million or more, with 90% of all channels below 1,000 subscribers and 97% below 10,000.",
+    "stance": "supports",
+    "stance_target": "The position that the subscriber distribution across creators is extremely concentrated, with career-scale audiences held by well under 1% of channels",
+    "evidence_type": "statistical",
+    "scope_conditions": "Awesome Creator Academy blog, 2 August 2025; no methodology disclosed; RELIABILITY WARNING: the same bullet list states both '678' and '6' US channels with 10 million or more subscribers in consecutive lines, an internal contradiction indicating the figures are transcribed rather than computed",
+    "quoted_support": "618,955 YouTube Channels have over 100,000 Subscribers (or more) in 2025... 90% of all YouTube channels have less than 1000 Subscribers, and 97% of Channels have less than 10,000 Subscribers on YouTube.",
+    "numbers": ["618,955 channels 100k+", "69,182 channels 1M+", "2,639 channels 10M+", "74 channels 50M+", "14 channels 100M+", "90% under 1,000 subs", "97% under 10,000 subs"],
+    "entities": ["Awesome Creator Academy", "YouTube"],
+    "time_period": "August 2025",
+    "region": "Global",
+    "confidence": "low",
+    "source_note_id": "how-many-youtube-channels-have-100000-subscribers-in-2025"
+  },
+  {
+    "claim": "Large-audience YouTube channels are concentrated outside the high-CPM West: India leads Play Button awards (100,000+ subscribers) with 144,430, ahead of the United States at 105,960, with Indonesia fourth at 26,647 and Brazil third at 33,835.",
+    "stance": "refutes",
+    "stance_target": "The assumption that audience-size distributions measured on Western creator populations describe the global creator population, or that audience size and income scale together across countries",
+    "evidence_type": "statistical",
+    "scope_conditions": "Awesome Creator Academy blog, August 2025; no methodology disclosed; Play Button award counts are a proxy for the 100k+ subscriber tier; directly relevant to the Southeast Asia generalization question because Indonesia ranks fourth globally on audience scale while sitting in the lowest advertising CPM tier",
+    "quoted_support": "India has the most YouTube Play Buttons (144,430), United States has the second most (105,960), Brazil has the 3rd most (33,835), followed by Indonesia in fourth with (26,647), and Japan in fifth place with (16,368).",
+    "numbers": ["India 144,430", "US 105,960", "Brazil 33,835", "Indonesia 26,647", "Japan 16,368", "US 91,700 channels with 100k+ subs", "US 13,510 channels with 1M+"],
+    "entities": ["Awesome Creator Academy", "YouTube", "India", "United States", "Brazil", "Indonesia", "Japan"],
+    "time_period": "August 2025",
+    "region": "Global with country breakdown; Indonesia is the only Southeast Asian country listed",
+    "confidence": "low",
+    "source_note_id": "how-many-youtube-channels-have-100000-subscribers-in-2025"
+  }
+]

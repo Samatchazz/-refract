@@ -1,0 +1,16 @@
+[
+  {
+    "claim": "This KPMG landing page is a thinner duplicate of the same 'Money in Motion' report content processed in full as note [[the-future-of]], with no additional data; it exists only as the page that links to the downloadable PDF.",
+    "stance": "neutral",
+    "stance_target": "Provenance/deduplication note -- this page adds no new figures beyond the full PDF report",
+    "evidence_type": "empirical",
+    "scope_conditions": "KPMG US website landing page, same authorship and scope as the full PDF",
+    "quoted_support": "Our report draws on extensive KPMG research of the industry's largest content players and a cross-section of relevant market data and signals.",
+    "numbers": [],
+    "entities": ["KPMG"],
+    "time_period": "2025",
+    "region": "US-centric; no Southeast Asia data",
+    "confidence": "high",
+    "source_note_id": "the-future-of-content-spend-and-business-models-in-media"
+  }
+]

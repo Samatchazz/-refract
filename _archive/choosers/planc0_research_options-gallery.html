@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PlanC — Options Gallery (10-minute skim)</title>
+<style>
+  :root{--ink:#111;--paper:#fcfcfa;--mid:#8a8a86;--line:#dddad4;--hl:#111;}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--paper);color:var(--ink);font-family:"Sukhumvit Set","IBM Plex Sans Thai","Noto Sans Thai",-apple-system,"Segoe UI",sans-serif;line-height:1.5;padding:0 0 96px}
+  .mono{font-family:"IBM Plex Mono","SF Mono",Consolas,monospace}
+  header{padding:48px 5vw 24px;border-bottom:1px solid var(--ink)}
+  header h1{font-size:clamp(28px,5vw,56px);letter-spacing:-.02em;line-height:1.1}
+  header p{max-width:70ch;margin-top:12px;color:#444}
+  header .mono{font-size:12px;color:var(--mid);display:block;margin-top:10px}
+  .legend{padding:14px 5vw;border-bottom:1px solid var(--line);font-size:13px;color:#555;display:flex;gap:24px;flex-wrap:wrap}
+  section.comp{padding:40px 5vw;border-bottom:1px solid var(--line)}
+  .comp-head{display:flex;align-items:baseline;gap:16px;flex-wrap:wrap;margin-bottom:6px}
+  .comp-head .tier{font-size:11px;border:1px solid var(--ink);padding:2px 8px;border-radius:999px;letter-spacing:.08em}
+  .comp-head h2{font-size:clamp(20px,3vw,32px);letter-spacing:-.01em}
+  .comp-sub{color:#666;font-size:14px;margin-bottom:20px}
+  .cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px}
+  .card{border:1px solid var(--line);background:#fff;padding:18px 18px 14px;position:relative;display:flex;flex-direction:column;gap:10px}
+  .card.star{border:1.5px solid var(--ink);box-shadow:4px 4px 0 var(--ink)}
+  .card .badge{position:absolute;top:-11px;right:14px;background:var(--ink);color:var(--paper);font-size:11px;padding:3px 10px;letter-spacing:.08em}
+  .card .id{font-size:11px;color:var(--mid);letter-spacing:.1em}
+  .card h3{font-size:17px;line-height:1.25}
+  .card h3 a{color:inherit;text-decoration:none;border-bottom:1px solid var(--line)}
+  .card h3 a:hover{border-bottom-color:var(--ink)}
+  .card .what{font-size:13.5px;color:#333}
+  .twist{font-size:12.5px;padding:8px 10px;border-left:2px solid var(--line);color:#444}
+  .twist b{font-size:10.5px;letter-spacing:.1em;color:var(--mid);display:block;margin-bottom:2px}
+  .twist.b{border-left-color:var(--ink)}
+  .score-row{margin-top:auto;display:flex;align-items:center;justify-content:space-between;padding-top:8px;border-top:1px dashed var(--line)}
+  .score{font-size:13px}
+  .score b{font-size:16px}
+  .bar{height:4px;background:var(--line);flex:1;margin:0 12px;position:relative;border-radius:2px;overflow:hidden}
+  .bar i{position:absolute;inset:0;background:var(--ink);transform-origin:left}
+  .flag{font-size:11px;color:#a05a00}
+  .sw{display:flex;gap:4px;align-items:center}
+  .sw i{display:inline-block;width:22px;height:22px;border-radius:4px;border:1px solid rgba(0,0,0,.18)}
+  .sw span{font-size:10px;color:var(--mid);margin-left:4px}
+  footer{padding:32px 5vw;font-size:13px;color:#666}
+  @media (max-width:640px){.cards{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header>
+  <h1>PlanC — Options Gallery</h1>
+  <p>13 components · 44 verified options · คุณเลือกใน <b>SELECTION.md</b> — หน้านี้มีไว้ skim ใน 10 นาที การ์ดที่มีกรอบหนา + เงา = ★ คำแนะนำของผม (ไม่ใช่การตัดสินใจ) เต็ม 30 คะแนน (6 แกน × 5)</p>
+  <span class="mono">PALETTE CORRECTION: โทนสียังไม่ตัดสินใจ — ดู component M (COLOR WORLD) · คำว่า "หมึก/ink" ในการ์ดทั้งหมดหมายถึงสี foreground ของ world ที่คุณจะเลือก ไม่ใช่สีดำ · สไตล์ขาวดำของ "หน้านี้" คือสไตล์เอกสาร ไม่ใช่ทิศทางของเว็บ</span><br>
+  <span class="mono">observation = fetched page/DOM + fetched award writeups (no visual capture possible from this sandbox — noted per card where relevant) · full details in component-map.md</span>
+</header>
+<div class="legend mono">
+  <span>TWIST-M = mechanical (baseline)</span><span>TWIST-B = PlanC lens (the build target)</span><span>★ = recommended</span><span>⚑ = caveat noted</span>
+</div>
+<div id="app"></div>
+<footer class="mono">Generated 2026-07-24 · PlanC research · scores: FIT / SEAMLESS / MOBILE / BUILD-cheap / WOW-per-KB / TWIST — details per option in component-map.md</footer>
+<script>
+const DATA=[
+{tier:"TIER 1",name:"A — Type-first HERO",sub:"หน้าแรกที่ type คือพระเอก",opts:[
+{id:"A1",site:"Exo Ape",url:"https://www.exoape.com",what:"สามคำยักษ์ซ้อนกันเต็มจอ (Digital/Design/Experience) + mission line",m:"เข้าเป็นสเต็ปแบบเกม สลับซ้าย/ขวา ทริกเกอร์จาก preloader ไม่ใช่ scroll",b:"IDENTITY — คำกลางไล่ลอง 'ตัวตนคนอื่น' (สายเกม สายบิวตี้…) ขีดฆ่าทีละคำ แล้วหยุดที่ 'ตัวตน'",score:29,star:true},
+{id:"A2",site:"Aristide Benoist",url:"https://www.aristidebenoist.com",what:"Type ยักษ์แบบ condensed นิ่งๆ ทั้งเว็บ JS แค่ 67KB (JS shell — อ่านจาก Awwwards SOTM ที่ fetch จริง)",m:"เปลี่ยน shape+trigger: ไทยหนาพิเศษ 20vw เข้าแบบ mask-wipe เดียว",b:"CAT — headline นิ่งเหมือนแมวแกล้งหลับ หางกลิ้กทุก ~7 วิ hover แล้วเอียง 1.5°",score:27,flag:"JS shell — motion จาก case pages"},
+{id:"A3",site:"14islands",url:"https://www.14islands.com",what:"Hero สลับลำดับคำ 'DesignTechnology&' รอบจุด pivot",m:"สลับตำแหน่งคำรอบแกนตั้ง แล้วล็อก (x-swap → y-swap)",b:"GAME — สลับใน 8 เฟรมแบบ sprite + แฟลช 1 เฟรม + ป้าย mono 'LV.1 — IDENTITY FOUND'",score:24},
+{id:"A4",site:"Kwok Yin Mak",url:"https://www.kwokyinmak.com",what:"เปิดด้วยประโยคยักษ์เต็มจอก่อนเนื้อหาจริง (สองภาษา)",m:"ล็อกแนวนอน — gesture แรกของผู้ใช้ปัดประโยคทิ้งทั้งก้อน",b:"IDENTITY — ประโยคเปิดคือคำถาม 'คุณกำลังเป็นใครอยู่?' ให้ผู้ชมปัดตัวตนที่ยืมมาทิ้งเอง",score:24}]},
+{tier:"TIER 1",name:"B — Global SCROLL EXPERIENCE",sub:"ฟิสิกส์ของทั้งหน้า",opts:[
+{id:"B1",site:"darkroom.engineering (ผู้สร้าง Lenis)",url:"https://darkroom.engineering",what:"Lenis smooth scroll — มาตรฐาน buttery scroll ของวงการ",m:"ลด lerp ให้หน้ารู้สึก 'หนัก' + ส่ง scroll-velocity เป็น CSS var ให้ทุก component ใช้",b:"CAT — เลื่อนปกติ = แมวเดิน, สะบัดเร็ว = pounce (overshoot แล้ว settle นุ่มๆ) ทั้งหน้ามีฟิสิกส์แมวเดียวกัน",score:28,star:true},
+{id:"B2",site:"Locomotive",url:"https://locomotive.ca/en",what:"ระบบ parallax/sticky ผ่าน data-attributes (เจ้าของ locomotive-scroll)",m:"จำกัด parallax เหลือ 3 ชั้นตายตัว + sticky ปล่อยแบบสเต็ป",b:"IDENTITY — 3 ชั้นมีความหมาย: เทรนด์ลอยเร็ว/เบลอ อยู่หลังสุด, ตัวตนขยับช้าสุด — ความลึก = ความถาวร",score:24},
+{id:"B3",site:"Robin Noguier",url:"https://robin-noguier.com",what:"Custom inertia scroll ที่ velocity ไปขับ visual (จาก Codrops ที่ fetch จริง)",m:"velocity บิด 'ตัวหนังสือ' ไม่ใช่รูป — wght ของ variable font หายใจตามความเร็ว",b:"GAME — HUD bar 8 บล็อกมุมจอ เลื่อนเร็วพอขึ้น TURBO — ใครเลื่อนช้าไม่มีวันเห็น",score:21},
+{id:"B4",site:"DeSo (Studio Freight)",url:"https://www.awwwards.com/case-study-deso-by-studio-freight.html",what:"Scrollytelling 7 บท กล้องผูกกับ scroll (อ้างอิง case study ที่ fetch จริง)",m:"บทเป็น typographic ไม่ใช่ 3D + progress rail แทน camera path",b:"GAME — บท = ด่าน LV.1/2/3 บน rail + paw stamp ตอนผ่าน checkpoint",score:26,flag:"deso.studio live = shell; ยึด case study"}]},
+{tier:"TIER 1",name:"C — Page-wide WORDPLAY SYSTEM",sub:"ระบบเล่นคำทั้งหน้า (ต้องผ่าน MEANING test)",opts:[
+{id:"C1",site:"Minh Pham",url:"https://minhpham.design",what:"ก็อปปี้สองเสียง: ทางการ vs เสียงจริงซ่อนอยู่ เปิดด้วย mask cursor",m:"เปลี่ยน trigger: มือถือใช้ scroll-mask / tap-hold, mask เป็นเส้นโค้งหาง C ไม่ใช่วงกลม",b:"IDENTITY — เสียง default = ภาษาการตลาดที่ใครก็พูด, เสียงที่เผย = เสียงจริง ตรงๆ — กลไกนี้คือ pitch ของ PlanC เอง",score:28,star:true},
+{id:"C2",site:"Igloo Inc",url:"https://igloo.inc",what:"Text scramble/glitch แล้ว settle (SOTD 2024, จาก case study ที่ fetch จริง)",m:"DOM แทน WebGL, เล่นครั้งเดียวตอนเข้าจอ, quantize 12fps",b:"IDENTITY — pool ไม่ใช่ตัวอักษรสุ่ม แต่เป็นคำของครีเอเตอร์คนอื่น (ปัง/viral/แมส) ลองสวม ขีดฆ่า แล้วจบที่คำจริง — ตัด grapheme ผ่าน Intl.Segmenter เท่านั้น",score:25},
+{id:"C3",site:"Obys",url:"https://obys.agency",what:"Kinetic typography เป็นระบบหลักของเว็บ (ตัวอักษร scale/split/morph ตอน scroll)",m:"morph เฉพาะตอนข้าม section + แกนตั้งเท่านั้น (สระบนล่ามห้ามบีบแนวนอน)",b:"CAT — สิ่งเดียวที่ขยับตลอด = เส้นใต้หัวข้อที่ลากตาม scroll เหมือนหางตามแมว หน่วงๆ โค้งๆ สะบัดตอน scroll กลับ",score:22},
+{id:"C4",site:"Locomotive",url:"https://locomotive.ca/en",what:"Letter-shuffle + glyph ของ custom typeface เป็น identity (SOTM case study)",m:"ไม่มี custom font: shuffle เฉพาะคำ EN mono ผ่าน 3 น้ำหนักของคำเดิม",b:"POKER — ป้าย EXTRACT/ENGINEER/ESTABLISH แจกเหมือนไพ่: คว่ำ (▓▓▓) แล้วเปิดหน้าไพ่ตอน reveal ใช้ ≤4 ครั้งทั้งเว็บ",score:23}]},
+{tier:"TIER 1",name:"D — SECTION TRANSITIONS",sub:"เครื่องจักรความ seamless",opts:[
+{id:"D1",site:"Exo Ape",url:"https://www.exoape.com",what:"Transition ที่มี element ถูก 'พาข้าม' ให้รู้สึกต่อเนื่อง + sense of direction",m:"สิ่งที่พาข้ามคือ 'เส้น' เส้นเดียว: underline ของ section นี้โค้งไปเป็นเส้นบนของ section หน้า สลับทิศทุก boundary",b:"CAT — เส้นนั้นคือหางแมว: วิ่งตาม curve ของโลโก้ C ทั้งเว็บ และมี 2 จุดที่หาง 'pounce' พาสายตาข้ามรอยต่อ",score:29,star:true},
+{id:"D2",site:"Unseen Studio",url:"https://unseen.co",what:"Transition เป็น set piece มีชื่อ (Index→Contact / Gallery transition, SOTD 9.2/10)",m:"ยิงตอนข้าม section แทน route + ตัวกลางเป็นกำแพงคำเต็ม viewport",b:"IDENTITY — 2 จุดเปลี่ยนของเรื่อง: หลงทาง→เจอตัวเอง / ตัวคนเดียว→มีทีม — wipe คือชื่อบทของเรื่องเล่า",score:23},
+{id:"D3",site:"Igloo Inc",url:"https://igloo.inc",what:"Blend ฉากด้วย effect (frost/chromatic aberration/displacement)",m:"ไม่ใช้ WebGL: หมึกซึม (SVG turbulence) แบบ B&W, quantize 6 สเต็ปให้เหมือนงานพิมพ์",b:"GAME — screen-wipe ระหว่างด่าน มี pause 1 เฟรมที่ 50% + ป้าย LV. ประทับตอนจบ",score:19,flag:"แพง — ทดสอบ 390px ก่อน"},
+{id:"D4",site:"Dennis Snellenberg",url:"https://dennissnellenberg.com",what:"ม่านโค้งเลื่อนปิด/เปิดระหว่างหน้า (GSAP+Barba, awards fetch จริง; ตัวเว็บ block bot)",m:"ขอบโค้งใช้รัศมี C ของโลโก้ + ยิงตอน scroll ไม่ใช่ route + สลับบน/ล่าง",b:"CAT — ม่านคือ 'เปลือกตา': เว็บกระพริบตาช้าๆ ระหว่างความคิด (slow-blink = ความไว้ใจของแมว) ใช้แค่ 2 ครั้ง",score:26,flag:"เว็บ block fetcher"}]},
+{tier:"TIER 1",name:"M — COLOR WORLD (เพิ่มตาม palette correction)",sub:"โทนสีทั้งเว็บ — ยังไม่ตัดสินใจ ทุกระบบผ่าน WCAG check แล้ว (ตารางเต็มใน component-map.md)",opts:[
+{id:"M0",site:"Previous PlanC — \"The Table\"",url:"",what:"เขียวโต๊ะโป๊กเกอร์ #181616→#0f1613 + ivory #FFFDDB/#F2EFDE + ทอง #F0B32E + แดง #FF3831 — ประเมินตรงๆ: EVOLVE (เก็บทุก hex, เพิ่มกติกาใช้สี — ทองห้ามอยู่บน ivory: AA fail 1.82)",m:"เปลี่ยน ratio+trigger: dark:light ~70:30 และสลับ world เฉพาะตอนข้าม section",b:"POKER — เปิดเรื่องบนโต๊ะ (เขียวเข้ม) ทองโผล่ครั้งแรกหลังผ่าน services — ยังไม่เห็นชิปจนกว่าจะเล่นมือจบ ส่วนแดงมีหน้าที่เดียว: สีของทุกอย่างที่คุณเลิกเป็น",score:28,star:true,sw:["#181616","#0f1613","#FFFDDB","#F2EFDE","#F0B32E","#FF3831"]},
+{id:"M1",site:"Henri Heymans — \"Ink & Paper\"",url:"https://henriheymans.com",what:"ขาวดำเคร่งครัด (#000/#FFF บนหน้า award; build ใช้ #111/#fcfcfa) — ไม่มี accent เลย ลำดับชั้นด้วยน้ำหนัก/ขนาด (AA 18.38 ทุกคู่)",m:"จาก light-ตลอด → กลับด้านเต็มจอ 2 ครั้งเป็นโครงเรื่อง (มืด-สว่าง-มืด)",b:"CAT — แมวดำคือสิ่งเดียวที่ดำสนิทบนหน้ากระดาษ: ชี้จุดสำคัญด้วยแมสคอต ไม่ใช่ด้วยสี",score:26,sw:["#111111","#fcfcfa"]},
+{id:"M2",site:"Zajno — \"Signal\"",url:"https://zajno.com",what:"เกือบดำ #1a1a1a + ส้มแดงร้อน #ff3928 ตัวเดียว (AA 4.86 บนดำ — ใช้ได้; บนขาว large-only)",m:"ต้นฉบับใช้ accent แบบ static → ที่นี่สีโผล่เฉพาะใน 'motion' (transition/ขีดฆ่า/hover) พักนิ่ง = grayscale ล้วน",b:"IDENTITY — สีคือเสียงจริง: ทุกจุดที่เสียงตรงๆ โผล่ (C1 reveal, ขีดฆ่า, คำว่า ตัวตน ตอน settle) คือที่เดียวที่มีสี — ความจริงรั่วผ่านความขัดเกลา",score:27,sw:["#1a1a1a","#ffffff","#ff3928"]},
+{id:"M3",site:"DeSo — \"Midnight Storybook\"",url:"https://www.awwwards.com/sites/deso",what:"น้ำเงินเที่ยงคืน #000818 + ทองอุ่น #FFDA59 (สายตา contrast สวยสุดในลิสต์: 14.7–20.0 ทุกคู่)",m:"ทองของต้นฉบับกระจายทั้ง UI → ที่นี่บีบเหลือ 'เส้นด้ายทอง' เส้นเดียว (tail-line + markers + ตัวเลข ledger)",b:"CAT — เที่ยงคืนคือกะของแมวดำ: ดวงตา preloader คือทองคู่แรกของเว็บ หลังจากนั้นทอง = สิ่งที่ตาแมวจับ",score:27,sw:["#000818","#F2EFDE","#FFDA59"]},
+{id:"M4",site:"Chungi Yoo — \"Playground\"",url:"https://www.chungiyoo.com",what:"ขาว + teal #2779a7 + coral #FF9398 (จากหน้า award ที่ fetch จริง) — coral ห้ามเป็นตัวหนังสือบนขาว (2.13 fail — graphic เท่านั้น)",m:"จากสีทั้งเว็บ → ขาวถือ ~85% สีเข้าเฉพาะผ่าน interaction/scroll (สี = feedback ไม่ใช่ตกแต่ง)",b:"GAME — teal/coral คือสี P1/P2: teal = การเดินหมากของระบบ, coral = การเดินหมากของคุณ (hover, checkpoint, ไพ่ที่เลือก)",score:24,sw:["#ffffff","#111111","#2779a7","#FF9398"]}]},
+{tier:"TIER 2",name:"E — Manifesto scroll-reveal",sub:"ถ้อยแถลงที่ค่อยๆ เผยตาม scroll",opts:[
+{id:"E1",site:"Nikola Radeski",url:"https://nikolaradeski.com",what:"Text-fill ตาม scroll (featured element บนหน้า award ที่ fetch จริง)",m:"fill ทีละคำ (ไม่ใช่ตัวอักษร — ปลอดภัยกับไทย) + snap ล่วงหน้า 1 คำให้บรรทัดจบคม",b:"IDENTITY — สถานะยังไม่ fill = เสียงเทรนด์ (บาง เบลอ), fill แล้ว = เสียงจริง (หมึกเข้ม) — การ scroll คือการที่คำของคุณทับเสียงรบกวน",score:28,star:true},
+{id:"E2",site:"monopo london",url:"https://monopo.london",what:"หน้าแรกคือ manifesto ที่เป็นเศษประโยคแตกกระจาย (SOTD, Animations 8.6/10)",m:"เศษประโยคเข้าจากสองฝั่งสลับกัน แล้วสานเป็นคอลัมน์เดียว",b:"IDENTITY — สองเสียงมี label: 'สิ่งที่โลกเห็น' / 'สิ่งที่คุณเป็น' จุดพีคคือตอนมันรวมเป็นประโยคเดียว",score:24},
+{id:"E3",site:"Lusion",url:"https://lusion.co",what:"บล็อกปรัชญา 'We do not chase trends' (คำบนหน้าเว็บจริง — ตรง theme มาก)",m:"pin เต็มจอ + highlight ไล่ทีละบรรทัดแบบ teleprompter สเต็ป",b:"POKER — แต่ละบรรทัดเปิดเหมือนไพ่หงายหน้า (x-rotate 6°) บรรทัดสุดท้าย = การเปิดมือที่ PlanC เล่นแบบแบไต๋",score:24}]},
+{tier:"TIER 2",name:"F — Services (3 pillars)",sub:"EXTRACT / ENGINEER / ESTABLISH",opts:[
+{id:"F1",site:"Cuberto",url:"https://cuberto.com",what:"Services 3 เสาแบบชัดเจนใน one-flow (observed บนหน้าจริง)",m:"เสาเป็นแถวเต็มจอ accordion เปิดเองตอน scroll ถึง — พูดทีละเสา",b:"IDENTITY — สามแถวคือการเดินทางตามลำดับ + เลขแถวเป็น depth marker 00m→-30m: ยิ่งขุดลึก ยิ่งเป็นของคุณ",score:28,star:true},
+{id:"F2",site:"Bluxstudio",url:"https://bluxstudio.com",what:"Services + methodology เป็นขั้นตอนมีตัวเลข (observed; Awwwards HM fetch จริง)",m:"ลากแนวนอนบน desktop / snap แนวตั้งบนมือถือ + เลขหมุนแบบ odometer",b:"GAME — แต่ละเสาเป็น level-select tile: 'LV.1 — EXTRACT' + mission objective + checkpoint ติ๊กเมื่ออ่านผ่าน ครบ 3 อัน CTA ท้ายเว็บเปลี่ยนเป็น 'พร้อมแล้ว → เริ่มเลย'",score:25},
+{id:"F3",site:"basement.studio",url:"https://basement.studio",what:"Capabilities + ก็อปปี้ผลลัพธ์จัดๆ ('sold out in hours') (observed)",m:"ผลลัพธ์เป็น type ยักษ์หลังเสา เลื่อน 0.5× ความเร็ว scroll",b:"CAT — แต่ละเสามีท่าแมวประจำ (หูฟัง/ตะปบไหมพรม/นั่งบัลลังก์) icon 24px กระพริบตาเมื่อ block เข้าจอ",score:22}]},
+{tier:"TIER 2",name:"G — Founder credibility",sub:"อินฟลูตัวจริง ไม่ใช่นักทฤษฎี",opts:[
+{id:"G1",site:"Henri Heymans",url:"https://henriheymans.com",what:"Bio + ลิสต์รางวัล 15 รายการเป็น type ล้วน B&W (observed บนหน้าจริง)",m:"แถวเผยแบบบัญชีแยกประเภท: เส้นวาดก่อน แล้วตัวหนังสือตาม + hover เล่าเรื่อง 1 บรรทัด",b:"IDENTITY — ledger ใช้กรอบ 'หลักฐาน ไม่ใช่คำโฆษณา': ทุกแถวคือเลขจริงจากอาชีพครีเอเตอร์ของผู้ก่อตั้ง ไม่มี adjective",score:28,star:true},
+{id:"G2",site:"Nikola Radeski",url:"https://nikolaradeski.com",what:"Stats + timeline อาชีพ + testimonials 4.9/5 (observed)",m:"ตัวเลขกระโดด 3 สเต็ปแบบ odometer + timeline เป็นเส้นเดียวมีสถานี",b:"GAME — timeline คือ level map: ปี = checkpoint มี paw marker + ด่านลับ (กดค้าง) เผยปีที่เจ๊ง — ความจริงใจเป็น easter egg",score:23},
+{id:"G3",site:"Phantom",url:"https://phantom.land",what:"About ทีมด้วย face-scan effects (จากหน้า SOTD 2025 ที่ fetch จริง)",m:"ไม่ใช้ WebGL: ภาพผู้ก่อตั้งใต้ CSS scanline mask จาก halftone→ภาพจริงตอน section เข้า",b:"IDENTITY — ภาพค่อยๆ ชัด + แคปชัน 'กว่าจะชัดว่าตัวเองเป็นใคร ก็ใช้เวลาเหมือนกัน' — รูปผู้ก่อตั้งแสดง EXTRACT ด้วยตัวเอง",score:25}]},
+{tier:"TIER 2",name:"H — Big CTA + footer",sub:"จบทั้งหน้าให้จำ",opts:[
+{id:"H1",site:"Bluxstudio",url:"https://bluxstudio.com",what:"'Fullscreen footer' เป็น featured element บนหน้า award (fetch จริง)",m:"footer ไม่ scroll เข้า — ทั้งหน้า 'ยกออก' เผยสิ่งที่อยู่ข้างใต้ + CTA 15vw",b:"CAT — ใต้ผ้าคือแมวดำนั่งอยู่แล้วทั้งเว็บ (วาดเส้นเดียว หาง = C) ข้างคำว่า 'พร้อมจะเป็นตัวเองหรือยัง' — ตัวตนอยู่ข้างใต้มาตลอด หางกลิ้กหนึ่งทีตอน footer ลงล็อก",score:29,star:true},
+{id:"H2",site:"14islands",url:"https://www.14islands.com",what:"Footer มี watercolor interaction เป็น signature (หน้า award fetch จริง)",m:"เปลี่ยน fluid canvas เป็นรอยเท้าแมวหมึกที่ค่อยๆ จาง ตาม pointer/tap",b:"IDENTITY — ครบ ~6 รอย เส้นเชื่อมกันเป็นคำว่า 'คุณ' — การขยับของคุณเขียนคำว่าคุณเอง",score:24},
+{id:"H3",site:"Chungi Yoo",url:"https://www.chungiyoo.com",what:"Double-CTA ใหญ่ใจดี 'Say a simple Hello!' (observed บนหน้าจริง)",m:"รวมเป็น split-button ยักษ์ เส้นแบ่งเอียงหาฝั่งที่ hover แบบสปริง",b:"POKER — ปุ่มคือไพ่คว่ำสองใบ hover = แง้มมุม 5° คลิก = เปิดไพ่เต็มจอเป็นทางเข้า contact — ไม่ได้กดปุ่ม แต่ call",score:24}]},
+{tier:"TIER 3",name:"I — Preloader",sub:"วินาทีแรก",opts:[
+{id:"I1",site:"Unseen Studio",url:"https://unseen.co",what:"'Suspicious Loader' — preloader มีบุคลิก เป็น featured element (fetch จริง)",m:"ไม่มี % — นับผ่านคำตัวตนที่โดนขีดฆ่า จังหวะสเต็ป",b:"CAT — ตาสองดวงในความมืด ตามเมาส์ กระพริบที่ 60% แล้วดวงตากลายเป็นช่องว่างของ ส ตัวแรกของ headline — แมวเห็นคุณก่อนคุณเห็นเว็บ",score:29,star:true},
+{id:"I2",site:"Poolsuite",url:"https://poolsuite.net",what:"Retro ASCII boot loader สไตล์ OS ยุค 90 (จากหน้า award ที่ fetch จริง)",m:"boot log ภาษาไทยแบบ mono เป็น batch สเต็ป ≤1.2 วิ",b:"GAME — เว็บบูต 'คุณ' ไม่ใช่ตัวมันเอง: LOADING PLAYER: YOU → IDENTITY: NOT FOUND → สร้างใหม่เลยไหม?",score:26},
+{id:"I3",site:"Phantom",url:"https://phantom.land",what:"'Loading Sequence' ที่ได้รางวัล (หน้า SOTD fetch จริง)",m:"ย่อเหลือ wipe เดียว ผูกกับ font-load event — รอแบบมีหน้าที่",b:"IDENTITY — เส้นขีดฆ่าคำว่า 'เหมือนใคร' สิ่งที่เหลือคือ 'เป็นตัวเอง' — วิทยานิพนธ์ใน 0.8 วินาที",score:26}]},
+{tier:"TIER 3",name:"J — Nav + mobile menu",sub:"เรียบ แต่มีลายเซ็น",opts:[
+{id:"J1",site:"Dennis Snellenberg",url:"https://dennissnellenberg.com",what:"Nav minimal + overlay menu ระดับตำนาน (Navigation คือ featured element; awards fetch จริง)",m:"ขอบ overlay ใช้รัศมี C + press-state บน pointerdown ให้มือถือเป็นพลเมืองชั้นหนึ่ง",b:"CAT — burger คือหนวดแมว 3 เส้น เปิดแล้วสวิงเป็นเส้นโปรไฟล์แมว รายการเข้าแบบ paw-step ปิด = กระพริบตา",score:27,star:true,flag:"เว็บ block fetcher"},
+{id:"J2",site:"Obys",url:"https://obys.agency",what:"Nav เหลือแค่ 2 ลิงก์ + นาฬิกา + ปุ่มสลับ view (observed ใน markup จริง)",m:"เปลี่ยนแกน toggle จาก layout เป็นภาษา/ความหนา EN accents",b:"IDENTITY — สวิตช์ 'โหมดตัวตน: สุภาพ/ตรงๆ' สลับก็อปปี้ทั้งเว็บระหว่างเสียงขัดเกลากับเสียงตรงๆ",score:25},
+{id:"J3",site:"Poolsuite",url:"https://poolsuite.net",what:"Retro-OS navigation หน้าต่างลากได้ (จากหน้า award ที่ fetch จริง)",m:"ตัดหน้าต่างลาก — เหลือ menu sheet เป็น HUD panel 'PLANC.SYS' ลิสต์ section เป็นไฟล์",b:"GAME — เมนู = pause screen: เปิดแล้ว marquee หลังฉากหยุดจริงๆ ขึ้น PAUSED — เกมฟีลแท้ในราคาศูนย์",score:22}]},
+{tier:"TIER 3",name:"K — Social proof strip",sub:"หลักฐาน 5 วินาที",opts:[
+{id:"K1",site:"basement.studio",url:"https://basement.studio",what:"กำแพงโลโก้ 'Trusted by Visionaries' 30+ (observed บนหน้าจริง)",m:"โลโก้→ตัวเลข: marquee เมตริกจริงของผู้ก่อตั้ง วิ่งสวนทาง scroll ตัว mono",b:"IDENTITY — แทรกคำเทรนด์ที่ตายแล้วแบบขีดฆ่าจางๆ ระหว่างเมตริก — สิ่งที่ผ่านไป vs สิ่งที่อยู่ (ตัวเลข)",score:27,star:true},
+{id:"K2",site:"darkroom.engineering",url:"https://darkroom.engineering",what:"Testimonials + activity log มี timestamp (observed บนหน้าจริง)",m:"พิมพ์เป็น batch ทีละคำ ใหม่สุดขึ้นก่อน จำกัด 5 บรรทัด",b:"GAME — log เป็น match history: W·W·L·W มี L หนึ่งตัวโชว์จริง — เคสที่ไม่เวิร์กก็เล่าตรงๆ = ความน่าเชื่อถือ",score:24}]},
+{tier:"TIER 3",name:"L — Cursor / touch feedback",sub:"สัมผัสสุดท้ายของบุคลิก",opts:[
+{id:"L1",site:"Cuberto",url:"https://cuberto.com",what:"เจ้าของไลบรารี Mouse Follower (README fetch จริง: states/magnetic/skew)",m:"ไม่มี blob: จุดหมึก 6px + หางโค้ง 3 จุดหน่วง 120ms, เปลี่ยน state แบบ 2 เฟรม",b:"CAT — states คือภาษากายแมว: ปกติ=นิ่ง, ลิงก์=ยกอุ้งเตรียมตะปบ, ลากได้=ยืดตัว, คลิก=pounce สควอช / มือถือ: ripple เป็นรอยอุ้งเท้า",score:26,star:true},
+{id:"L2",site:"Minh Pham",url:"https://minhpham.design",what:"Mask cursor เผยเลเยอร์ความจริง (หน้า SOTD fetch จริง)",m:"เปลี่ยนเป็นกรวยไฟฉาย anchor โซนหัวแม่มือบนมือถือ รัศมีเต้นตาม velocity",b:"IDENTITY — แสงเผย 'โน้ตข้างกระดาษ' ของผู้ก่อตั้ง — เว็บมีไดอารี่ใต้ผิว (ซ้ำกลไกกับ C1 — เลือกบ้านเดียว)",score:23,flag:"ทับซ้อน C1"},
+{id:"L3",site:"monopo london",url:"https://monopo.london",what:"Mouse interaction ที่เป็น featured element (WebGL; fetch จริง)",m:"WebGL→DOM: pointer ทิ้งเทรลคำ EN จิ๋ว กระจายแล้วจางใน 600ms",b:"CAT — คำที่หลุดคือ 'ขน': ลูบแรงขนร่วงเยอะ ลูบเบาๆ ไม่ร่วง — จับเว็บเบาๆ มันก็เรียบร้อย",score:22}]}
+];
+const app=document.getElementById('app');
+DATA.forEach(c=>{
+  const s=document.createElement('section');s.className='comp';
+  s.innerHTML=`<div class="comp-head"><span class="tier mono">${c.tier}</span><h2>${c.name}</h2></div><div class="comp-sub">${c.sub}</div>
+  <div class="cards">${c.opts.map(o=>`
+    <div class="card${o.star?' star':''}">
+      ${o.star?'<span class="badge">★ RECOMMENDED</span>':''}
+      <span class="id mono">${o.id}${o.flag?` · <span class="flag">⚑ ${o.flag}</span>`:''}</span>
+      <h3>${o.url?`<a href="${o.url}" target="_blank" rel="noopener">${o.site}</a>`:o.site}</h3>
+      ${o.sw?`<div class="sw">${o.sw.map(h=>`<i style="background:${h}"></i>`).join('')}<span>${o.sw.join(' ')}</span></div>`:''}
+      <div class="what">${o.what}</div>
+      <div class="twist"><b>TWIST-M</b>${o.m}</div>
+      <div class="twist b"><b>TWIST-B</b>${o.b}</div>
+      <div class="score-row"><span class="score mono"><b>${o.score}</b>/30</span><span class="bar"><i style="transform:scaleX(${o.score/30})"></i></span></div>
+    </div>`).join('')}</div>`;
+  app.appendChild(s);
+});
+</script>
+</body>
+</html>

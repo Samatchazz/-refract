@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<title>Plan C — rig v3 (ตาเปิดตอนคลิก + กลอกตามเมาส์)</title>
+<style>
+  body{background:#0f1613;color:#f2efde;font:13px/1.7 sans-serif;padding:22px;margin:0}
+  h1{color:#f0b32e;font-size:16px;margin-bottom:2px}
+  p.sub{color:rgba(242,239,222,.5);font-size:12px;margin-bottom:14px}
+  .wrap{display:flex;gap:20px;flex-wrap:wrap;align-items:flex-start}
+  #stage{width:430px;height:430px;background:#181616;border-radius:14px;cursor:pointer;flex:none}
+  #stage svg{width:100%;height:100%;display:block}
+  .panel{width:290px;font-size:12px}
+  .panel label{display:flex;align-items:center;gap:8px;margin:5px 0}
+  .panel label span{width:74px;color:rgba(242,239,222,.6)}
+  .panel input[type=range]{flex:1}
+  .panel b{display:inline-block;width:38px;text-align:right;color:#f0b32e;font-variant-numeric:tabular-nums}
+  .btns{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0;max-width:560px}
+  button{background:#f0b32e;border:0;color:#181616;font-weight:700;padding:6px 12px;border-radius:6px;cursor:pointer;font-size:12px}
+  button.alt{background:transparent;border:1px solid rgba(242,239,222,.3);color:#f2efde}
+  pre{background:#00000055;padding:10px;border-radius:6px;font-size:11.5px;white-space:pre-wrap;max-width:640px;color:#9fd}
+  h2{font-size:12px;color:#f0b32e;margin:12px 0 4px}
+  #legend{display:flex;flex-wrap:wrap;gap:6px;max-width:640px;margin-bottom:12px}
+  #legend span{padding:2px 9px;border-radius:4px;color:#111;font-weight:700;font-size:11px}
+</style>
+</head>
+<body>
+<h1>rig v3 — ตาโผล่ตอนคลิก แล้วกลอกตามเมาส์</h1>
+<p class="sub">ปกติไม่มีตา (ตามดีไซน์) · คลิกแล้วตาเบิก · เลื่อนเมาส์ลูกตาตาม · อยู่นิ่งแล้วหลับกลับ</p>
+
+<div class="wrap">
+  <div id="stage"></div>
+  <div class="panel">
+    <h2>ปรับตำแหน่งตา (ถ้ายังไม่ตรง)</h2>
+    <label><span>ตาซ้าย X</span><input type="range" id="lx" min="60" max="120" step="0.5"><b id="lxv"></b></label>
+    <label><span>ตาขวา X</span><input type="range" id="rx" min="140" max="200" step="0.5"><b id="rxv"></b></label>
+    <label><span>สูง Y</span><input type="range" id="ey" min="210" max="300" step="0.5"><b id="eyv"></b></label>
+    <label><span>กว้าง</span><input type="range" id="erx" min="8" max="26" step="0.5"><b id="erxv"></b></label>
+    <label><span>สูง(รี)</span><input type="range" id="ery" min="8" max="28" step="0.5"><b id="eryv"></b></label>
+    <label><span>ลูกตากว้าง</span><input type="range" id="prx" min="2" max="14" step="0.5"><b id="prxv"></b></label>
+    <label><span>ลูกตาสูง</span><input type="range" id="pry" min="3" max="20" step="0.5"><b id="pryv"></b></label>
+    <h2>ผลลัพธ์ (ก๊อปไปใช้)</h2>
+    <pre id="cfg" style="max-width:none"></pre>
+  </div>
+</div>
+
+<div class="btns">
+  <button onclick="RIG.wake()">คลิก (ลืมตา + สะบัดหาง)</button>
+  <button class="alt" onclick="RIG.sleep()">หลับตา</button>
+  <button class="alt" onclick="RIG.coat('#f2efde')">ครีม</button>
+  <button class="alt" onclick="RIG.coat('#f0b32e')">ทอง</button>
+  <button class="alt" onclick="RIG.bg('#f2efde')">พื้นสว่าง</button>
+  <button class="alt" onclick="RIG.bg('#181616')">พื้นเข้ม</button>
+  <button class="alt" onclick="RIG.parts()">แยกสีชิ้นส่วน</button>
+</div>
+<div id="legend"></div>
+<pre id="log">โหลด…</pre>
+
+<script>
+const NS='http://www.w3.org/2000/svg';
+const HEAD_PIVOT={x:130,y:400}, TAIL_PIVOT={x:430,y:340};
+
+// วัดจากรูปอ้างอิงโดยเทียบสัดส่วนหัว (สอบเทียบกับปากแล้ว คลาดเคลื่อน 2-3px)
+const EYE = { lx:91.8, rx:168.6, y:251.4, rx_:15.1, ry:16.8, prx:6.1, pry:10.0 };
+
+const RIG=window.RIG={};
+
+// วงรีเป็น path (คุมขนาดรายเฟรมได้)
+function ellipse(cx,cy,rx,ry){
+  const k=0.5523;
+  return `M${cx-rx},${cy}`+
+    `C${cx-rx},${cy-ry*k} ${cx-rx*k},${cy-ry} ${cx},${cy-ry}`+
+    `C${cx+rx*k},${cy-ry} ${cx+rx},${cy-ry*k} ${cx+rx},${cy}`+
+    `C${cx+rx},${cy+ry*k} ${cx+rx*k},${cy+ry} ${cx},${cy+ry}`+
+    `C${cx-rx*k},${cy+ry} ${cx-rx},${cy+ry*k} ${cx-rx},${cy}Z`;
+}
+
+fetch('_frame1_fine.json').then(r=>r.json()).then(subs=>{
+  const svg=document.createElementNS(NS,'svg');
+  svg.setAttribute('viewBox','0 0 624 624');
+  document.getElementById('stage').appendChild(svg);
+
+  // ---- หาผังการซ้อน (เหมือน v2) ----
+  const probe=document.createElementNS(NS,'svg');
+  probe.setAttribute('viewBox','0 0 624 624');
+  probe.style.cssText='position:absolute;left:-9999px;width:624px;height:624px';
+  document.body.appendChild(probe);
+  const els=subs.map(d=>{const p=document.createElementNS(NS,'path');p.setAttribute('d',d);probe.appendChild(p);return p;});
+  const box=els.map(p=>p.getBBox()), area=box.map(b=>b.width*b.height);
+  const inner=i=>{const b=box[i];
+    for(let k=0;k<60;k++){const q=probe.createSVGPoint();
+      q.x=b.x+b.width*(0.5+0.38*Math.sin(k*1.7)); q.y=b.y+b.height*(0.5+0.38*Math.cos(k*2.3));
+      if(els[i].isPointInFill(q)) return q;}
+    const q=probe.createSVGPoint(); q.x=b.x+b.width/2; q.y=b.y+b.height/2; return q;};
+  const parent=subs.map(()=>null);
+  for(let i=0;i<subs.length;i++){const q=inner(i);
+    for(let j=0;j<subs.length;j++){ if(i!==j && area[j]>area[i] && els[j].isPointInFill(q))
+      if(parent[i]===null||area[j]<area[parent[i]]) parent[i]=j; }}
+  probe.remove();
+
+  const shapes=[];
+  subs.forEach((d,i)=>{ if(parent[i]===null) shapes.push({root:i,holes:[]}); });
+  subs.forEach((d,i)=>{ if(parent[i]!==null){const s=shapes.find(s=>s.root===parent[i]);
+    if(s) s.holes.push(i); else shapes.push({root:i,holes:[]});} });
+  shapes.forEach(s=>{ s.bbox=box[s.root]; s.d=[s.root,...s.holes].map(i=>subs[i]).join(' '); });
+
+  const headShape=[...shapes].sort((a,b)=>a.bbox.x-b.bbox.x)[0];
+  const tailShape=shapes.reduce((m,s)=>s.bbox.x>m.bbox.x?s:m, shapes[0]);
+  // ชิ้นที่กรอบอยู่ในกรอบหัวทั้งก้อน = ส่วนหนึ่งของแมว (ขาหน้า) → ขยับไปกับหัว
+  const hb=headShape.bbox, TOL=2;   // เผื่อ 2px — ขาหน้าล้นกรอบหัวลงมา 0.083px จากการ trace
+  const inHead=s=>s!==headShape && s.bbox.x>=hb.x-TOL && s.bbox.y>=hb.y-TOL &&
+    s.bbox.x+s.bbox.width<=hb.x+hb.width+TOL && s.bbox.y+s.bbox.height<=hb.y+hb.height+TOL;
+  const headExtra=shapes.filter(inHead);
+  const bodyShapes=shapes.filter(s=>s!==headShape&&s!==tailShape&&!inHead(s));
+
+  let coat='#f2efde';
+  const mk=d=>{const p=document.createElementNS(NS,'path');p.setAttribute('d',d);
+    p.setAttribute('fill',coat);p.setAttribute('fill-rule','evenodd');return p;};
+  const grp=id=>{const g=document.createElementNS(NS,'g');g.dataset.id=id;return g;};
+
+  const gBody=grp('body'); bodyShapes.forEach(s=>gBody.appendChild(mk(s.d)));
+  const gHead=grp('head');
+  const headPath=mk(headShape.d); gHead.appendChild(headPath);      // หัว + ปาก (+รูตาเมื่อเปิด)
+  const headExtraEls=headExtra.map(s=>{const p=mk(s.d); gHead.appendChild(p); return p;});  // ขาหน้า
+  // เลเยอร์โชว์เฉพาะโหมดแยกสี (ปกติซ่อน) — ปาก/ตาขาวเป็น "รู" เลยระบายสีตรงๆ ไม่ได้
+  const ovMouth=mk(headShape.holes.map(i=>subs[i]).join(' ')); ovMouth.style.display='none';
+  const ovEyes=mk(''); ovEyes.style.display='none';
+  gHead.appendChild(ovMouth); gHead.appendChild(ovEyes);
+  const pupilL=mk(''); const pupilR=mk('');                          // ลูกตา สีเดียวกับขน
+  gHead.appendChild(pupilL); gHead.appendChild(pupilR);
+  const gTail=grp('tail'); gTail.appendChild(mk(tailShape.d));
+  svg.appendChild(gBody); svg.appendChild(gHead); svg.appendChild(gTail);
+
+  // ---- spring ----
+  const sp=(k,c)=>({p:0,v:0,t:0,k,c});
+  const step=(s,dt)=>{const a=-s.k*(s.p-s.t)-s.c*s.v; s.v+=a*dt; s.p+=s.v*dt;};
+  const tail=sp(90,11), headR=sp(120,14), headY=sp(150,15);
+  const open=sp(190,13);                 // 0 = ไม่มีตา, 1 = ตาเบิก
+  const gazeX=sp(150,16), gazeY=sp(150,16);
+  let mx=0,my=0, sleepAt=0;
+
+  function frame(now){
+    const dt=1/60;
+    [tail,headR,headY,open,gazeX,gazeY].forEach(s=>step(s,dt));
+    if(sleepAt && now>sleepAt){ open.t=0; sleepAt=0; }
+
+    gTail.setAttribute('transform',`rotate(${tail.p.toFixed(2)} ${TAIL_PIVOT.x} ${TAIL_PIVOT.y})`);
+    gHead.setAttribute('transform',
+      `rotate(${headR.p.toFixed(2)} ${HEAD_PIVOT.x} ${HEAD_PIVOT.y}) translate(0 ${headY.p.toFixed(2)})`);
+
+    const o=Math.max(0,Math.min(1.15,open.p));
+    if(o<0.02){
+      headPath.setAttribute('d', headShape.d);          // ไม่มีตาเลย = โลโก้ปกติเป๊ะ
+      pupilL.setAttribute('d',''); pupilR.setAttribute('d','');
+    } else {
+      const ry=EYE.ry*o, rx=EYE.rx_*Math.min(1,0.35+o*0.65);
+      const wl=ellipse(EYE.lx,EYE.y,rx,ry), wr=ellipse(EYE.rx,EYE.y,rx,ry);
+      headPath.setAttribute('d', headShape.d+' '+wl+' '+wr);   // ตาขาว = รูในหัว
+      // ลูกตา เคลื่อนในกรอบตาขาว
+      const lim=(r,pr)=>Math.max(0,r-pr-1.2);
+      const dx=gazeX.p*lim(rx,EYE.prx), dy=gazeY.p*lim(ry,EYE.pry);
+      const pr=Math.min(1,o);
+      pupilL.setAttribute('d', ellipse(EYE.lx+dx, EYE.y+dy, EYE.prx*pr, EYE.pry*pr*Math.min(1,ry/EYE.ry)));
+      pupilR.setAttribute('d', ellipse(EYE.rx+dx, EYE.y+dy, EYE.prx*pr, EYE.pry*pr*Math.min(1,ry/EYE.ry)));
+      if(partsMode) ovEyes.setAttribute('d', wl+' '+wr);
+    }
+    if(o<0.02 && partsMode) ovEyes.setAttribute('d','');
+    requestAnimationFrame(frame);
+  }
+  requestAnimationFrame(frame);
+
+  const stage=document.getElementById('stage');
+  // ตาหลับตลอด เปิดเฉพาะตอนคลิก — เลื่อนเมาส์ไม่ทำให้ตาเปิดหรือค้าง
+  let held=false;
+  stage.addEventListener('mousemove',e=>{
+    const r=stage.getBoundingClientRect();
+    mx=(e.clientX-r.left)/r.width-0.5; my=(e.clientY-r.top)/r.height-0.5;
+    headR.t=mx*9; headY.t=my*12; tail.t=mx*7;
+    gazeX.t=Math.max(-1,Math.min(1,mx*2.6)); gazeY.t=Math.max(-1,Math.min(1,my*2.6));
+  });
+  stage.addEventListener('mouseleave',()=>{headR.t=0;headY.t=0;tail.t=0;gazeX.t=0;gazeY.t=0;});
+  stage.addEventListener('pointerdown',()=>{ held=true; RIG.wake(); });   // pointer = ครอบทั้งเมาส์และนิ้ว
+  addEventListener('pointerup',()=>{ if(held){ held=false; sleepAt=performance.now()+RIG.openMs; } });
+  addEventListener('pointercancel',()=>{ if(held){ held=false; sleepAt=performance.now()+RIG.openMs; } });
+
+  RIG.openMs=1800;                        // ค้างไว้กี่ ms หลังปล่อยเมาส์
+  RIG.wake=()=>{ tail.v-=260; headY.v-=90; open.t=1; open.v+=3.5;
+                 sleepAt=held?0:performance.now()+RIG.openMs; };   // กดค้าง = ลืมตาค้าง
+  RIG.sleep=()=>{ open.t=0; sleepAt=0; held=false; };
+  RIG.coat=c=>{ coat=c; if(!partsMode) svg.querySelectorAll('path').forEach(p=>p.setAttribute('fill',c)); };
+  RIG.bg=c=>{ stage.style.background=c; };
+
+  // ---- โหมดแยกสี ----
+  const PARTS=[
+    {el:()=>headPath,                    c:'#4363d8', name:'หัว + หู + ขาหน้า (ตัว P)'},
+    ...headExtraEls.map(e=>({el:()=>e,   c:'#4363d8', name:null})),   // สีเดียวกับหัว = กลุ่มเดียวกัน
+    {el:()=>ovMouth,                     c:'#3cb44b', name:'ปาก/จมูก (เป็นรูในหัว)'},
+    {el:()=>ovEyes,                      c:'#46f0f0', name:'ตาขาว (รูที่เปิดตอนคลิก)'},
+    {el:()=>pupilL,                      c:'#e6194b', name:'ลูกตาซ้าย'},
+    {el:()=>pupilR,                      c:'#f032e6', name:'ลูกตาขวา'},
+    {el:()=>gTail.querySelector('path'), c:'#f58231', name:'หาง (ตัว C) — ชิ้นลอยอิสระ'},
+  ];
+  const BODY_COLS=['#ffe119','#911eb4','#bcf60c','#fabebe'];
+  let partsMode=false;
+  RIG.parts=()=>{
+    partsMode=!partsMode;
+    const legend=document.getElementById('legend');
+    if(partsMode){
+      PARTS.forEach(p=>{const e=p.el(); if(e) e.setAttribute('fill',p.c);});
+      ovMouth.style.display=''; ovEyes.style.display='';
+      const bp=[...gBody.querySelectorAll('path')];
+      bp.forEach((p,i)=>p.setAttribute('fill',BODY_COLS[i%BODY_COLS.length]));
+      legend.innerHTML = PARTS.filter(p=>p.name).map(p=>
+        `<span style="background:${p.c}">${p.name}</span>`).join('') +
+        bp.map((_,i)=>`<span style="background:${BODY_COLS[i%BODY_COLS.length]}">ลำตัว ${i+1} (l a n)</span>`).join('');
+    } else {
+      ovMouth.style.display='none'; ovEyes.style.display='none';
+      svg.querySelectorAll('path').forEach(p=>p.setAttribute('fill',coat));
+      legend.innerHTML='';
+    }
+  };
+
+  // ---- สไลเดอร์ปรับตา ----
+  const S=[['lx','lx',EYE.lx],['rx','rx',EYE.rx],['ey','y',EYE.y],
+           ['erx','rx_',EYE.rx_],['ery','ry',EYE.ry],['prx','prx',EYE.prx],['pry','pry',EYE.pry]];
+  const cfgEl=document.getElementById('cfg');
+  const sync=()=>{ S.forEach(([id,key])=>{document.getElementById(id+'v').textContent=EYE[key].toFixed(1);});
+    cfgEl.textContent='const EYE = {\n'+
+      `  lx:${EYE.lx.toFixed(1)}, rx:${EYE.rx.toFixed(1)}, y:${EYE.y.toFixed(1)},\n`+
+      `  rx_:${EYE.rx_.toFixed(1)}, ry:${EYE.ry.toFixed(1)},\n`+
+      `  prx:${EYE.prx.toFixed(1)}, pry:${EYE.pry.toFixed(1)}\n};`; };
+  S.forEach(([id,key,init])=>{ const el=document.getElementById(id); el.value=init;
+    el.addEventListener('input',()=>{ EYE[key]=+el.value; if(open.p<0.5) RIG.wake(); sync(); }); });
+  sync();
+
+  document.getElementById('log').textContent =
+    'ชิ้นส่วน: '+shapes.length+' (หัว+ปาก / หาง C / lan)\n'+
+    'ตาสร้างเป็นเวกเตอร์ในโค้ด — ตาขาวเป็น "รู" ในหัว, ลูกตาสีเดียวกับขน\n'+
+    'ตอนหลับสนิท path หัวจะเท่ากับโลโก้ต้นฉบับทุกไบต์ → ไม่มีร่องรอยตาเหลืออยู่';
+});
+</script>
+</body>
+</html>

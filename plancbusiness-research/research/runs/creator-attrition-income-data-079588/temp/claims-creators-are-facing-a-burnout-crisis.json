@@ -1,0 +1,30 @@
+[
+  {
+    "claim": "Creativebrief's July 2025 article is a DERIVATIVE recirculation of the Billion Dollar Boy/Censuswide survey, adding contextual framing about media stereotyping of influencers but no new measurement.",
+    "stance": "neutral",
+    "stance_target": "provenance of the 52%/37% burnout figures",
+    "evidence_type": "empirical",
+    "scope_conditions": "Not an independent study; same n=1,000 US/UK creator sample as the BDB release. Editorial framing only, not data.",
+    "quoted_support": "\"The findings are based on a survey of 1,000 creators and 1,000 senior marketers across the US and UK, and paint a picture of an industry in which creative, emotional, and operational pressures are beginning to overwhelm the support systems in place to manage them.\"",
+    "numbers": ["52%", "37%", "n=1,000"],
+    "entities": ["Billion Dollar Boy", "Creativebrief"],
+    "time_period": "July 2025",
+    "region": "US, UK",
+    "confidence": "high",
+    "source_note_id": "creators-are-facing-a-burnout-crisis"
+  },
+  {
+    "claim": "Mainstream media has stereotyped creators/influencers as 'detestable freeloaders', which this article argues contributes to public misunderstanding of the lived burnout experience documented by the BDB survey.",
+    "stance": "supports",
+    "stance_target": "media framing of creators as a contextual factor, not a quantitative burnout finding",
+    "evidence_type": "anecdotal",
+    "scope_conditions": "Editorial opinion/framing, not measured data; no sample size or instrument attached to this specific claim.",
+    "quoted_support": "\"A nuance that is particularly important to recognise in a wider media ecosystem in which creators have been stereotyped and undermined by mainstream media platforms that continue to refer to them as 'detestable freeloaders'.\"",
+    "numbers": [],
+    "entities": ["Creativebrief"],
+    "time_period": "July 2025",
+    "region": "UK (implied, Creativebrief is UK trade press)",
+    "confidence": "low",
+    "source_note_id": "creators-are-facing-a-burnout-crisis"
+  }
+]

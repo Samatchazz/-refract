@@ -1,0 +1,72 @@
+[
+  {
+    "claim": "Mathur et al. (2018) is the primary source of the 3.49% figure that Hua et al. (2022) cite in contrast to their own 36.7% figure for affiliate-marketing link prevalence in YouTube Howto & Style videos.",
+    "stance": "neutral",
+    "stance_target": "provenance of the 36.7% vs 3.49% sampling-bias pair",
+    "evidence_type": "empirical",
+    "scope_conditions": "YouTube Howto & Style content category, 2017 data collection",
+    "quoted_support": "Prevalence of affiliate marketing across YouTube's Science & Technology and Howto & Style categories stood at 3.61% and 3.49% respectively.",
+    "numbers": ["3.49%", "3.61%", "36.7%"],
+    "entities": ["Arunesh Mathur", "Arvind Narayanan", "Marshini Chetty", "Yiqing Hua", "YouTube", "Howto & Style"],
+    "time_period": "2017 data collection; published November 2018",
+    "region": "not geographically restricted (platform-wide sample)",
+    "confidence": "high",
+    "source_note_id": "endorsements-on-social-media-an-empirical-study-of"
+  },
+  {
+    "claim": "The 3.49% figure measures the prevalence of affiliate-marketing URLs in video descriptions within one content category, not creator income or living-wage attainment.",
+    "stance": "refutes",
+    "stance_target": "the contradiction graph's attribution of the 36.7%/3.49% split to a 'living wage' or income-earning quantity",
+    "evidence_type": "empirical",
+    "scope_conditions": "YouTube Howto & Style category videos",
+    "quoted_support": "We found at least one affiliate URL in a total of 0.67% or 3,472 videos on YouTube, and a total of 0.85% or 18,237 pins on Pinterest.",
+    "numbers": ["0.67%", "3,472 videos", "0.85%", "18,237 pins"],
+    "entities": ["YouTube", "Pinterest", "affiliate marketing"],
+    "time_period": "2017",
+    "region": "global platform sample",
+    "confidence": "high",
+    "source_note_id": "endorsements-on-social-media-an-empirical-study-of"
+  },
+  {
+    "claim": "The study used 'random prefix sampling' -- generating random video/pin IDs directly -- to build an unbiased, non-popularity-gated sample, in contrast to crawls that start from popular/trending seed channels.",
+    "stance": "supports",
+    "stance_target": "existence of a genuine popularity-gated vs. random-sample methodological contrast between Hua et al. 2022's YouNiverse dataset and Mathur et al. 2018's sample",
+    "evidence_type": "theoretical",
+    "scope_conditions": "sampling methodology for YouTube/Pinterest content studies",
+    "quoted_support": "To gather a set of random prefixes, we first retrieved 25 pins—the number of...",
+    "numbers": ["~500,000 YouTube videos", "~2.1 million Pinterest pins"],
+    "entities": ["YouTube", "Pinterest"],
+    "time_period": "2017",
+    "region": "global",
+    "confidence": "high",
+    "source_note_id": "endorsements-on-social-media-an-empirical-study-of"
+  },
+  {
+    "claim": "Amazon Associates was the most common affiliate program detected on both platforms, appearing in 7,308 YouTube URL resolutions and 7,368 Pinterest URL resolutions.",
+    "stance": "neutral",
+    "stance_target": "affiliate marketing ecosystem composition",
+    "evidence_type": "empirical",
+    "scope_conditions": "YouTube and Pinterest, 2017 sample",
+    "quoted_support": "Across both YouTube and Pinterest, Amazon's Associate Program had the largest presence (YouTube = 7,308, Pinterest = 7,368), closely followed by AliExpress' Affiliate Program (YouTube = 2,167, Pinterest = 785).",
+    "numbers": ["7,308", "7,368", "2,167", "785"],
+    "entities": ["Amazon Associates", "AliExpress"],
+    "time_period": "2017",
+    "region": "global",
+    "confidence": "high",
+    "source_note_id": "endorsements-on-social-media-an-empirical-study-of"
+  },
+  {
+    "claim": "The authors compiled the most comprehensive publicly available list at the time of affiliate-marketing URL patterns: 57 unique patterns from 33 different companies.",
+    "stance": "neutral",
+    "stance_target": "methodology for detecting affiliate marketing content",
+    "evidence_type": "empirical",
+    "scope_conditions": "YouTube and Pinterest, 2017",
+    "quoted_support": "Through our analysis, we compiled a total of 57 unique affiliate URL patterns from 33 different affiliate marketing companies—the most comprehensive publicly available list of its kind.",
+    "numbers": ["57", "33"],
+    "entities": ["affiliate marketing companies"],
+    "time_period": "2017",
+    "region": "global",
+    "confidence": "medium",
+    "source_note_id": "endorsements-on-social-media-an-empirical-study-of"
+  }
+]

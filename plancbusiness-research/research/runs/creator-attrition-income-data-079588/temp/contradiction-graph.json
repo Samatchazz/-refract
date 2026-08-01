@@ -1,0 +1,319 @@
+{
+  "vault_tag": "creator-attrition-income-data-079588",
+  "method_note": "Automatic pairing on stance_target was not usable: the fetchers wrote 722 distinct stance_target strings for 726 claims, so no two claims share a target key. Clusters below were built by semantic grouping over the claims corpus, the fetcher provenance reports, and the redundancy audit. Ranked by decision_relevance, then by tightness of the evidence-quality delta.",
+  "clusters": [
+    {
+      "cluster_id": "living-wage-share",
+      "fight": "What share of creators earns a living wage — single-digit percent, or a fraction of one percent?",
+      "side_a": {
+        "position": "A meaningful minority reach a living income. Roughly 4-12% of full-time or self-identified creators clear a living-wage threshold.",
+        "claims": [
+          "Linktree: 12% of full-time creators earn over $50,000/year (n=9,576, fielded 2021, country composition undisclosed)",
+          "NeoReach/Influencer Marketing Hub: 43% of surveyed creators earn over $50,000/year and 70% are full-time",
+          "Goldman Sachs: ~4% of ~50 million global creators are 'professionals' (2023 framing: earning over $100,000/year)",
+          "TikTok Indonesia to DPR Komisi I: 63% of 8 million monetizing Indonesian creators earn above the provincial minimum wage (15 Jul 2025)"
+        ],
+        "sources": [
+          "pdf-linktree-creatorreport-2022-02f3aa05a27be6fecb3537b13d5ec9depdf",
+          "creator-earnings-breakdown-the-creator-economy-today",
+          "the-creator-economy-could-approach-half-a-trillion-dollars-by-2027-goldman-sachs",
+          "tiktok-buka-data-63-persen-kreator-di-indonesia-berpenghasilan-tinggi-merdekacom",
+          "pendapatan-63-persen-konten-kreator-di-tiktok-di-atas-umr-tempoco"
+        ]
+      },
+      "side_b": {
+        "position": "The living-wage share is a fraction of one percent of the creator population. Measured payout data puts it two to three orders of magnitude below the survey figures.",
+        "claims": [
+          "Regner (complete Patreon transaction record, 2013-2015, n=139,366 campaigns): approximately 250 creators reached a living income — the top 1% of ACTIVE campaigns, but 0.18% of all registered",
+          "Rieder et al. 2023 (Google-disclosed $8.25bn 2019 payout distributed across 36,336,861 channels): approximately 0.043% of channels average above a US median wage; the 31,727,531 channels under 1,000 subscribers receive 0% of revenue",
+          "Twitch October 2021 payout leak: the top 1,322 accounts were needed to reach the 2020 US median household income of $67,521; rank 8,000 cumulated $29,396 over the window, roughly $14,698/year, below the $15,080 US minimum wage",
+          "UK IPO 2021 (n=708 music creators): approximately 720 UK artists reached the ~1m-streams/month living threshold in 2020, against an ONS count of 45,000 UK musicians — approximately 1.6%"
+        ],
+        "sources": [
+          "vol0123456789-3",
+          "httpsdoiorg10117720563051231180628",
+          "the-unbearable-lightness-of-streaming-superjoost-playlist",
+          "many-top-twitch-streamers-dont-make-minimum-wage-and-3-new-takeaways-from-the-tw",
+          "music-creators-earnings-in"
+        ]
+      },
+      "evidence_quality_delta": "Side B is decisively stronger. It is administrative and telemetry data (complete transaction records, platform-disclosed payouts, leaked payout tables, a government-commissioned study with published microdata). Side A is entirely self-selected survey, and in Goldman's case not a survey at all but a citation chain terminating in a venture-capital blog post. Side A's own internal disagreement is severe: NeoReach and Linktree, same year and same quantity, report 43% versus 12% above $50k.",
+      "scope_overlap": "PARTIALLY scoped differently — and the scoping is the mechanism. Side A samples people who already identify as creators or as full-time creators; Side B divides by the full platform population including everyone who tried. Some of the gap is therefore denominator, not disagreement. CORRECTION APPLIED: an earlier version of this file cited Hua et al. 2022 as having measured sampling-frame inflation at ~10x for this quantity. That was an error. The 36.7%/3.49% pair concerns the prevalence of affiliate-marketing links in YouTube video descriptions within the Howto & Style category — 36.7% from Hua et al. on the YouNiverse dataset (all channels >=10,000 subscribers, popularity-gated) against 3.49% from Mathur, Narayanan & Chetty 2018 (random-prefix sampling, ~500K videos, 2017), whom Hua et al. cite for contrast. It demonstrates that popularity-gated sampling inflates prevalence estimates roughly tenfold on a DIFFERENT quantity; it is legitimate evidence that the mechanism is real and large, but it is NOT a measured coefficient for income or living-wage share and must never be presented as one. No study has directly measured the sampling-frame effect on creator income. The residual disagreement after denominator and threshold are accounted for therefore remains estimated rather than measured.",
+      "decision_relevance": "high"
+    },
+    {
+      "cluster_id": "quit-driver-money-vs-motivation",
+      "fight": "Do creators stop because the money is insufficient, or because intrinsic motivation runs out — and does income predict survival at all?",
+      "side_a": {
+        "position": "Financial insufficiency is the dominant driver of exit. Creators say so themselves when asked.",
+        "claims": [
+          "Censuswide for Billion Dollar Boy (Jul 2025, n=1,000 creators, 500 US / 500 UK): among creators who suffered burnout, financial instability ranked first by severity at 55%, above creative fatigue, workload and screen time",
+          "Ivors Academy / Musicians' Union (n=311): 43% said insufficient streaming income caused them to take a job outside music",
+          "Creators 4 Mental Health / Lupiani Insights (n=542, North America, Nov 2025): 69% report financial insecurity"
+        ],
+        "sources": [
+          "over-half-of-creators-face-burnout-action-urged-billion-dollar-boy",
+          "music-creators-earnings-in",
+          "in-sweeping-study-89-of-creators-claim-to-lack-access-to-specialized-mental-heal"
+        ]
+      },
+      "side_b": {
+        "position": "Income does not predict who keeps going. The variables that actually survive a statistical model of continuation are intrinsic motivation and structural affiliation — not earnings.",
+        "claims": [
+          "Törhönen et al. 2019 (Internet Research, n=377): intrinsic motivation predicts intention to continue at p=0.000, while income and every other extrinsic motivator fail to reach significance (p=0.052)",
+          "Zhao et al. 2025 (n=1,923 VTubers, Cox proportional-hazards): affiliation status is the significant predictor of exit (HR 1.980 for small-agency, p=0.003), while gender and hours streamed are NOT significant predictors of survival",
+          "Wollborn et al. 2023 (Twitch difference-in-differences panel): newcomers who reached only affiliate status reverted to pre-pandemic effort within 4-8 weeks, while those reaching partner sustained it — a structural threshold effect, not an earnings gradient"
+        ],
+        "sources": [
+          "fame-and-fortune-or-just-fun",
+          "who-reaps-all-the-superchats-a-large-scale-analysis-of-income",
+          "vol0123456789"
+        ]
+      },
+      "evidence_quality_delta": "Side B is methodologically stronger where it counts. Side A is self-reported attribution collected cross-sectionally from people who have NOT quit — it records what active creators believe would make them quit, which is a different quantity from what actually causes exit. Side B contains the only two studies in the corpus that statistically model continuation or survival. However Side B's samples are narrower (one Finnish-led survey, one VTuber population drawn from a fandom wiki), so it is stronger in design and weaker in generality.",
+      "scope_overlap": "GENUINE DISAGREEMENT, and it is the sharpest one in the corpus. The two sides measure different constructs that are routinely reported as if they were the same: stated reasons for burnout among survivors, versus modelled predictors of actual exit. Both cannot be uncritically reported as 'why creators quit'. This is the dialectical core of the quit-reasons deliverable.",
+      "decision_relevance": "high"
+    },
+    {
+      "cluster_id": "attrition-rate-and-timing",
+      "fight": "How many creators stop, and how soon — is the median career two years or nearly nine?",
+      "side_a": {
+        "position": "Attrition is fast and majority-scale: most creators are gone within two to three years.",
+        "claims": [
+          "Zhao et al. 2025 (n=1,923 VTubers, YouTube, 2017 to Jul 2023): median career 24 months; 1,057 of 1,923 (over 50%) stopped streaming entirely within 3 years; among those who quit, the median was 19 months. By affiliation: 44 months large agency, 28 months independent, 21 months small agency",
+          "Regner 2021 (complete Patreon record, n=139,366 campaigns): 115,183 (82.6%) never received a single pledge — failure at entry rather than exit",
+          "Kässi, Lehdonvirta & Stephany 2021: of 163 million registered online-labour accounts, 8.6% ever worked and 2.0% completed ten or more projects or earned $1,000+"
+        ],
+        "sources": [
+          "who-reaps-all-the-superchats-a-large-scale-analysis-of-income",
+          "vol0123456789-3",
+          "how-many-online-workers-are-there-in-the-open-research-europe"
+        ]
+      },
+      "side_b": {
+        "position": "Attrition is slower and less total than the pessimistic figures suggest; a large share of channels persist for years and activity rates are far higher than 8.6%.",
+        "claims": [
+          "creatormap.io: of 97,601 independent YouTube channels tracked 2019-2026, 46.1% went dark, 25.4% are 'fading', 21% still growing, with a median channel lifespan of 8.8 years",
+          "World Bank (n=503 platforms, traffic-proxy model): mean active share 37%, median 26% — roughly four times the ILO/Online Labour Observatory 8.6% figure"
+        ],
+        "sources": [
+          "creatormap-youtube-channel-survival-rate-study",
+          "the-promise-and-peril"
+        ]
+      },
+      "evidence_quality_delta": "Side A is far stronger. Zhao is a peer-reviewed survival analysis with a Cox model; Regner is a complete transaction record, not a sample. Side B's headline figure (creatormap) is a marketing-blog 'study' whose methodology, sampling frame, author and data source require verification and which carries invented-looking precision. The World Bank / ILO apparent conflict is NOT a real contradiction and was resolved during fetching: 36.8% is the highest single-platform value inside Kässi's own observed range of 2.0%-36.8%, so the World Bank traffic-proxy estimate simply sits at the top of that range. Kässi's authors decline to publish a confidence interval precisely because the spread is so wide.",
+      "scope_overlap": "MOSTLY scoped differently, in a way the report must state rather than resolve. 'Median lifespan 8.8 years' counts channel existence; 'median career 24 months' counts active production. A channel can persist as an artifact for years after its creator stopped. Additionally: online-labour marketplace accounts are not content-creator accounts. The deeper finding is that NO peer-reviewed platform-scale cohort telemetry exists for creator survival — three targeted academic sweeps returned nothing — so this fight cannot currently be settled with good evidence, and saying so is itself a required finding.",
+      "decision_relevance": "high"
+    },
+    {
+      "cluster_id": "creator-population-denominator",
+      "fight": "How many creators are there — 50 million, 200 million, 303 million, or 400 million?",
+      "side_a": {
+        "position": "Tens of millions. Goldman Sachs: ~50 million (2022), re-baselined to ~67 million (2025), reaching ~107 million by 2030, of whom ~2 million are professionals.",
+        "claims": [
+          "Goldman Sachs Global Investment Research: ~67 million individuals 'consider themselves creators' globally in 2025, up from ~50 million in 2022",
+          "The professional subset is held at 2.0 million for 2022 AND 2.0 million for 2025, so professional share declines 4.0% to 3.0% purely arithmetically"
+        ],
+        "sources": [
+          "the-creator-economy-could-approach-half-a-trillion-dollars-by-2027-goldman-sachs",
+          "with-this-report-we-assess-the-current-state-of-the-creator-economy-including"
+        ]
+      },
+      "side_b": {
+        "position": "Hundreds of millions. Linktree: 200 million. Adobe: 303 million. Later restatements: 400 million-plus.",
+        "claims": [
+          "Linktree 2022 Creator Report: 200 million people 'use their influence, creativity or skills to aggregate and monetise their audience', most of them part-time",
+          "The 200 million figure is not survey output — it is a separate desk exercise bucketing platform users by follower count from Statista, Omnicore and Global Media Insight, with Douyin excluded"
+        ],
+        "sources": [
+          "pdf-linktree-creatorreport-2022-02f3aa05a27be6fecb3537b13d5ec9depdf",
+          "200-million-people-are-earning-money-from-digital-content-creation-tubefilter"
+        ]
+      },
+      "evidence_quality_delta": "Neither side has measurement behind it, and one side has less than it appears. Tracing the Goldman figure backwards yields: SignalFire (venture-capital blog, c. 2020) to Zippia (SEO careers listicle, 2023) to Goldman Sachs (2023 and 2025) to global press — Goldman's exhibit source line reads 'Zippia, Influencer Marketing Hub, Goldman Sachs Global Investment Research'. Goldman is therefore not independent of the vendor layer; it IS the vendor layer with an investment bank's name on it. Linktree's 200 million is at least transparently a desk exercise with named inputs.",
+      "scope_overlap": "NOT a measurement disagreement at all — it is definitional. The estimates differ by an order of magnitude because each counts a different population: self-identified creators, anyone monetizing anything, anyone posting content, or anyone above a follower threshold. This matters enormously because the population estimate is the DENOMINATOR for every 'what share earns X' statistic in the report. Any share figure inherits the definitional instability of its denominator.",
+      "decision_relevance": "high"
+    },
+    {
+      "cluster_id": "indonesia-63-percent",
+      "fight": "Is the Indonesian figure — 8 million creators, 63% earning above minimum wage — a national statistic, and is it credible?",
+      "side_a": {
+        "position": "It is an official national figure: Indonesia has 8 million people whose main profession is content creation, and 63% earn above the provincial minimum wage (UMR).",
+        "claims": [
+          "Menekraf Teuku Riefky Harsya stated publicly that 8 million of Indonesia's 17 million creators have content creation as their main profession, and that 63% earn above UMR",
+          "Reported as a national creative-economy statistic in Indonesian media"
+        ],
+        "sources": [
+          "menekraf-8-juta-orang-berprofesi-konten-kreatof-63-persen-gajinya-di-atas-umr-ku",
+          "babak-baru-profesi-kreator-konten-di-indonesia"
+        ]
+      },
+      "side_b": {
+        "position": "It is TikTok's own platform statistic, repackaged as a national one, and Indonesia has no official content-creator count at all.",
+        "claims": [
+          "TikTok Indonesia's Hilmi Adrianto disclosed the 8 million / 63% figure to DPR Komisi I on 15 July 2025, describing creators monetizing via TikTok's features specifically — not a national population",
+          "At the same hearing TikTok declined to disclose its Indonesia revenue when pressed by MP Nico Siahaan",
+          "BPS publishes no content-creator count. Its only relevant series is 'creative economy workforce' — 27.4 million (2025), 26.48 million (2024) — a substantially broader category",
+          "BPS has stated that the 2026 Economic Census (SE2026) will be the FIRST instrument to make content-creator business actors statistically visible",
+          "A competing figure holds that of 8 million creators only 14% are profitable — but this traces to a Linktree vendor survey of ambiguous (likely global) scope, cited by a 2023 article that also attributes an unverifiable creator-count to the IMF"
+        ],
+        "sources": [
+          "tiktok-buka-data-63-persen-kreator-di-indonesia-berpenghasilan-tinggi-merdekacom",
+          "pendapatan-63-persen-konten-kreator-di-tiktok-di-atas-umr-tempoco",
+          "bps-dan-kemenekraf-bersinergi-kreator-lokal-dilibatkan-dalam-sosialisasi-se2026",
+          "ada-8-juta-kreator-konten-tapi-baru-14-persen-yang-cuan"
+        ]
+      },
+      "evidence_quality_delta": "Side B is documented and Side A is not. The DPR hearing record and two independent Indonesian outlets place the figure's origin with TikTok; no ministry publication discloses a methodology or a definition of 'kreator konten'. Neither side is a measurement in the sense this report requires — but Side B correctly identifies what the number actually is, which changes how it may be cited.",
+      "scope_overlap": "The 63% and 14% figures are NOT competing estimates of one quantity and must never be averaged or presented as a range. 63% describes above-minimum-wage earnings among creators monetizing on one platform; 14% describes profitability in a vendor survey of unclear geographic scope. Recorded as an unresolved contradiction of scope and metric.",
+      "decision_relevance": "high"
+    },
+    {
+      "cluster_id": "survey-vs-telemetry-regime",
+      "fight": "Do self-reported creator surveys and measured platform data describe the same population — and by how much do they diverge?",
+      "side_a": {
+        "position": "Survey evidence is usable: roughly half of surveyed creators report earning something.",
+        "claims": [
+          "Törhönen et al. 2019: 45.8% of respondents (n=377) earn any income from content creation, independently replicated at 46.1% (n=382)"
+        ],
+        "sources": ["fame-and-fortune-or-just-fun", "play-playbour-or-labour-the-relationships-between-perception-of"]
+      },
+      "side_b": {
+        "position": "Measured data shows the zero-earning majority that surveys structurally cannot see.",
+        "claims": [
+          "Regner: 82.6% of Patreon campaigns never received a single pledge",
+          "Zhao et al.: 25% of VTubers in the sample received zero Superchats",
+          "Rieder et al.: 31.7 million YouTube channels under 1,000 subscribers receive 0% of channel revenue",
+          "Hua et al. 2022 (YouNiverse, channels >=10,000 subscribers) report 36.7% affiliate-link prevalence in Howto & Style video descriptions against 3.49% measured by Mathur, Narayanan & Chetty 2018 on a random-prefix sample of ~500K videos — an approximately tenfold inflation attributable to the popularity-gated sampling frame. NOTE: this is a prevalence measure of affiliate-link disclosure, NOT of income or living-wage share. It evidences that the sampling mechanism is real and large; it does not supply a coefficient transferable to income figures.",
+          "ILO states of its own instrument that 'there was no sampling base from which a random sample could be drawn'; the World Bank found self-identified gig workers were the most likely to drop out mid-survey"
+        ],
+        "sources": [
+          "vol0123456789-3",
+          "who-reaps-all-the-superchats-a-large-scale-analysis-of-income",
+          "httpsdoiorg10117720563051231180628",
+          "the-promise-and-peril",
+          "x-opportunities-and-challenges"
+        ]
+      },
+      "evidence_quality_delta": "Side B is stronger and, unusually, its magnitude is itself measured rather than asserted — Hua et al. quantify the bias at approximately 10x. Several Side A sources concede the limitation in their own methodology sections.",
+      "scope_overlap": "NOT a genuine disagreement about the world — it is a disagreement about who is in the sample, with a measured coefficient. This cluster is the methodological key to the whole report: it explains most of the other clusters' gaps, and it means survey and telemetry figures must never be placed side by side in a table as if comparable.",
+      "decision_relevance": "high"
+    },
+    {
+      "cluster_id": "time-predicts-success",
+      "fight": "Does time spent predict reaching monetization, or is the widely-repeated 6-18 month timeline meaningless?",
+      "side_a": {
+        "position": "Monetization takes a knowable amount of time — typically 3 to 18 months of consistent posting to reach 1,000 subscribers and 4,000 watch hours.",
+        "claims": [
+          "Advice sources converge on 3-18 months to threshold, 6-12 months for committed creators, plus 7-30 days review and 2-3 months to the $100 payout minimum"
+        ],
+        "sources": ["how-long-does-it-take-to-get-monetized-on-youtube-lenostube", "when-do-you-start-making-money-on-youtube-whop"]
+      },
+      "side_b": {
+        "position": "Tenure does not distinguish successful channels from unsuccessful ones. Output volume does.",
+        "claims": [
+          "Rieder et al. 2020 (n=36,336,861 channels): elite channels average 940 videos against 294 for the tier below, but 'the average number of days active is surprisingly constant between tiers'",
+          "vidIQ analysis of channels at the 1,000-1,100 subscriber threshold: 89% have under 5,000 monthly views, a volume at which ad revenue is negligible regardless of Partner Program status — so reaching the eligibility gate is not reaching income"
+        ],
+        "sources": ["mapping-youtube-a-quantitative-exploration-of-a-platformed-media-system", "how-much-does-youtube-pay-for-1000-subscribers-vidiq"]
+      },
+      "evidence_quality_delta": "Side B is vastly stronger: a 36-million-channel census against advice-column assertion. Every Side A figure is survivor-reported or simply asserted with no sample, no method and no date.",
+      "scope_overlap": "GENUINE, and it reframes the sub-question. The prompt asks for time from starting to first meaningful income; the best available evidence says elapsed time is not the operative variable and that the monetization threshold does not correspond to meaningful income anyway. The honest answer is a reframing plus an audited absence, not a number of months.",
+      "decision_relevance": "high"
+    },
+    {
+      "cluster_id": "inequality-trend",
+      "fight": "Is creator-income concentration worsening over time, or is it a stable power law?",
+      "side_a": {
+        "position": "Concentration is measurably worsening, confirmed independently on three platforms.",
+        "claims": [
+          "Patreon within-topic Gini rose 0.30 to 0.60 between 2015 and 2020 (El Sanyoura & Anderson)",
+          "VTuber between-creator Gini rose 0.60 to 0.75 between 2018 and 2023 (Zhao et al.)",
+          "Pareto alpha falling across YouTube, Instagram, Facebook and Twitch, 2018 to 2024 (Strauss, Yang & Mazzucato, official Patreon data n=104,719)",
+          "Goldman Sachs states the mechanism explicitly: creator funds shrank 'with the number of new creators joining the platforms diluting the payout of existing creators'"
+        ],
+        "sources": [
+          "quantifying-the-creator-economy-a-large-scale-analysis-of-patreon",
+          "who-reaps-all-the-superchats-a-large-scale-analysis-of-income",
+          "rich-get-richer-platform-attention-and-earnings-inequality",
+          "with-this-report-we-assess-the-current-state-of-the-creator-economy-including"
+        ]
+      },
+      "side_b": {
+        "position": "The structure is stable rather than deteriorating — elite turnover resembles a natural power-law system in equilibrium.",
+        "claims": [
+          "Houssard et al. 2023 (Scientific Reports): Twitch weekly ranking dropout flux of 0.2 for the top 100 and 0.135 for the top 1,000 — a stability comparable to word-frequency distributions in natural language"
+        ],
+        "sources": ["vol0123456789-2"]
+      },
+      "evidence_quality_delta": "Side A is stronger on both weight and independence: three separate research groups, three platforms, three time series, all pointing the same direction. Side B rests on one study measuring a different thing.",
+      "scope_overlap": "LARGELY scoped differently rather than contradictory. Houssard measures churn WITHIN the elite tier; Side A measures the distribution across the whole population. Both can be true: the top can be internally stable while the gap between top and bottom widens. Worth stating as a resolved apparent-conflict rather than an open fight.",
+      "decision_relevance": "medium"
+    },
+    {
+      "cluster_id": "youtube-payout-denominator",
+      "fight": "Do platform-disclosed aggregate payouts tell us anything about individual creator income?",
+      "side_a": {
+        "position": "Platforms pay creators enormous and growing sums — YouTube over $100bn in 2022-2025, Twitch $1bn in 2022, YouTube Partner Program over 3 million channels.",
+        "claims": [
+          "YouTube: over $100 billion paid to 'creators, artists and media companies' 2022-2025",
+          "Twitch: $1 billion paid in 2022"
+        ],
+        "sources": ["powered-by-americans", "twitch-partner-plus-will-pay-70-of-subscription-revenue-to-creators"]
+      },
+      "side_b": {
+        "position": "These figures are uninterpretable as creator income because the denominator is withheld, and where a denominator exists the per-creator result is trivial.",
+        "claims": [
+          "YouTube's $100bn+ is stated for 'creators, artists and media companies' combined, with no split and no headcount, so no average or median is derivable",
+          "YouTube's 2 million YPP figure (2021) was disclosed with no accompanying payout total — the mirror-image omission",
+          "Where both numbers exist the result is stark: Twitch's $1bn across roughly 7 million monthly streamers is approximately $143 per streamer per year",
+          "KPMG's $210bn 2024 content-spend figure covers 12 US companies with no creator-count denominator anywhere, and YouTube's $32bn within it bundles ad payouts, affiliate, Premium licensing, memberships and NFL rights"
+        ],
+        "sources": [
+          "powered-by-americans",
+          "new-features-community-updates-for-2022-youtube-blog-youtube-blog",
+          "the-unbearable-lightness-of-streaming-superjoost-playlist",
+          "the-future-of"
+        ]
+      },
+      "evidence_quality_delta": "Side B is an analytical correction rather than a competing measurement, and it is correct. Confirmed across all three major platforms: none publishes a creator-level earnings distribution, a median payout, or a count of monetized channels alongside its aggregate.",
+      "scope_overlap": "GENUINE — this is the aggregate-versus-distribution laundering the report exists to correct. Aggregate growth is compatible with falling median income, and the sources that report the aggregates systematically omit what would let a reader tell the difference.",
+      "decision_relevance": "medium"
+    },
+    {
+      "cluster_id": "sea-transferability",
+      "fight": "Can Western creator-income findings be transferred to Southeast Asia at all?",
+      "side_a": {
+        "position": "Implicitly yes — the vast majority of published creator statistics are reported without geographic qualification and are read globally.",
+        "claims": [
+          "Linktree, Goldman Sachs, NeoReach and the aggregator layer report creator income and population figures with no country composition disclosed"
+        ],
+        "sources": ["pdf-linktree-creatorreport-2022-02f3aa05a27be6fecb3537b13d5ec9depdf", "creator-earnings-breakdown-the-creator-economy-today"]
+      },
+      "side_b": {
+        "position": "No — three structural breaks make transfer invalid, and all three are measured.",
+        "claims": [
+          "Living-wage denominators differ by roughly an order of magnitude: ADBI puts the developing-Asia living wage at USD 254.28/month (absolute) and USD 414.88/month (moderate) for a family of four on a 48-hour week",
+          "Revenue per view differs by 5-6x: 1,000 views at 70% inventory fill yields INR 30 (under USD 1) from an Indian audience against USD 5 from a US audience, corroborated by a Turkish channel drawing 10% of views but 30% of income from Germany",
+          "Income composition differs structurally: approximately 90% of Indonesian influencer income is brand sponsorship rather than platform ad revenue, so studies measuring AdSense-type earnings measure the wrong channel entirely for the region",
+          "Rieder et al. 2023: India, Indonesia and Thailand are over-represented among channels with zero monetization links, and the Global South shows much lower alternative-monetization use overall",
+          "Rieder et al. 2020: 53.6% of monetizable channels carry no country flag at all, so every country-level creator analysis covers under half the platform",
+          "World Bank: 71% of Indonesians engaged in e-commerce sell exclusively via social media and chat apps — 'making money on social media' in Indonesia is substantially C2C selling, not content monetization",
+          "ILO: of 133 countries responding to a review, only 40 have ever measured digital platform employment, and no international statistical standard will exist before the 22nd ICLS in 2028"
+        ],
+        "sources": [
+          "adbi-working-paper-series",
+          "httpsdoiorg10117720563051241234693",
+          "vero-indonesia-influencer-whitepaper",
+          "httpsdoiorg10117720563051231180628",
+          "mapping-youtube-a-quantitative-exploration-of-a-platformed-media-system",
+          "technologies",
+          "ilo-brief"
+        ]
+      },
+      "evidence_quality_delta": "Side B is overwhelmingly stronger and Side A is not really a position — it is an omission. Side A's sources do not argue for transferability; they simply fail to state their geographic scope, which readers then treat as universality.",
+      "scope_overlap": "GENUINE and directly answers the prompt's final requirement. The finding is not merely that Western data 'may not' generalize — three specific mechanisms of non-transfer are measured, and the region's own statistical infrastructure does not yet exist to replace it.",
+      "decision_relevance": "high"
+    }
+  ]
+}

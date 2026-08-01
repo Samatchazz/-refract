@@ -1,0 +1,72 @@
+[
+  {
+    "claim": "Among 1,153 web-based digital platform workers across 21 Latin American and Caribbean countries, mean hourly pay was US$5.48 while the median was US$2.57, meaning the average is 2.13 times the median and describes almost nobody's actual earnings.",
+    "stance": "supports",
+    "stance_target": "The position that platform and creator income distributions are so right-skewed that mean earnings figures are structurally misleading and only medians should be reported",
+    "evidence_type": "statistical",
+    "scope_conditions": "21 Latin American and Caribbean countries; n = 1,153 web-based digital platform workers; ILO Regional Office for Latin America and the Caribbean, published 2025; freelancing and microwork tasks (database research, surveys, graphic design), not content creation; LAC not Southeast Asia",
+    "quoted_support": "The average hourly pay for workers surveyed is 5.48 United States dollars (USD), and the median is USD 2.57.",
+    "numbers": ["n = 1,153", "21 countries", "US$5.48 mean hourly", "US$2.57 median hourly", "2025"],
+    "entities": ["ILO", "Cravo", "Latin America and the Caribbean"],
+    "time_period": "published 2025",
+    "region": "Latin America and the Caribbean",
+    "confidence": "high",
+    "source_note_id": "survey-on-workers-on"
+  },
+  {
+    "claim": "Median income from platform work alone is roughly equal to the national minimum wage, while workers who also hold non-platform work have median incomes at least double the minimum wage, so platform income only clears a living wage when it is not the sole source.",
+    "stance": "supports",
+    "stance_target": "The position that platform-only income rarely constitutes a living wage and adequacy depends on holding other work",
+    "evidence_type": "statistical",
+    "scope_conditions": "Selected LAC countries analysed within the 1,153-worker survey; 2025; ratio computed against national minimum wages",
+    "quoted_support": "when considering only the median income from digital platform work, the ratio to the national minimum wage is closer to one, indicating that these payments are closer to the minimum wage.",
+    "numbers": ["ratio close to 1", "at least 2x minimum wage for those with other work", "52 percent say platform work is not primary income"],
+    "entities": ["ILO"],
+    "time_period": "2025",
+    "region": "Latin America and the Caribbean",
+    "confidence": "high",
+    "source_note_id": "survey-on-workers-on"
+  },
+  {
+    "claim": "Workers who work exclusively on web-based platforms became less formally employed after entry: 38.9 percent identified as formal workers in the three months before joining, but only 17.7 percent describe their current platform job as formal work.",
+    "stance": "supports",
+    "stance_target": "The position that entering full-time platform work is associated with a measured downgrade in employment formality rather than an upgrade",
+    "evidence_type": "statistical",
+    "scope_conditions": "Subsample of the n = 1,153 survey who work exclusively on web-based platforms; self-reported retrospective status; LAC, 21 countries, 2025",
+    "quoted_support": "they were asked about their work status up to three months before they started working on these platforms and, of these, 38.9 percent identified themselves as formal workers.",
+    "numbers": ["17.7 percent formal now", "38.9 percent formal before", "three months prior"],
+    "entities": ["ILO"],
+    "time_period": "2025",
+    "region": "Latin America and the Caribbean",
+    "confidence": "high",
+    "source_note_id": "survey-on-workers-on"
+  },
+  {
+    "claim": "When platform workers name the risks of their work, financial insecurity leads at 13 percent, followed by internet connection problems at 11 percent and lack of growth opportunities at 10 percent, with no single reason approaching a majority.",
+    "stance": "supports",
+    "stance_target": "The position that stated reasons for dissatisfaction or exit in platform work are diffuse rather than concentrated on one dominant cause",
+    "evidence_type": "empirical",
+    "scope_conditions": "n = 1,153 web-based platform workers, 21 LAC countries, 2025; these are self-reported risks, NOT reasons given by people who actually quit, so they cannot stand in for exit reasons without qualification",
+    "quoted_support": "These include financial insecurity (13 percent), internet connection issues (11 percent) and lack of growth opportunities (10 percent).",
+    "numbers": ["13 percent financial insecurity", "11 percent internet issues", "10 percent lack of growth", "8 percent planning difficulty", "8 percent lack of recognition", "7 percent work-life balance", "6 percent isolation", "4 percent long hours", "4 percent lack of autonomy", "4 percent complex tasks", "4 percent work overload"],
+    "entities": ["ILO"],
+    "time_period": "2025",
+    "region": "Latin America and the Caribbean",
+    "confidence": "high",
+    "source_note_id": "survey-on-workers-on"
+  },
+  {
+    "claim": "Platform workers report working at least ten hours a day across six and a half days a week and nearly 11 nights a month, and about 40 percent are excluded from health care and social security coverage.",
+    "stance": "supports",
+    "stance_target": "The position that platform income is earned at hour counts well above standard full-time and without social protection, so hourly comparisons to salaried work understate the gap",
+    "evidence_type": "statistical",
+    "scope_conditions": "n = 1,153 web-based platform workers, 21 LAC countries, 2025; night work defined as 10pm-5am; the report notes coverage where it exists may attach to a traditional main job rather than to platform work",
+    "quoted_support": "on average, respondents work at least ten hours a day, six and a half days a month, and almost 11 days at night (from 10 p.m. to 5 a.m.).",
+    "numbers": ["10+ hours/day", "29 percent work up to five days/week", "16 percent six days", "18 percent seven days", "11 nights/month", "40 percent excluded from health and social security"],
+    "entities": ["ILO"],
+    "time_period": "2025",
+    "region": "Latin America and the Caribbean",
+    "confidence": "medium",
+    "source_note_id": "survey-on-workers-on"
+  }
+]

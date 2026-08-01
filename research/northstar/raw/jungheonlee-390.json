@@ -1,0 +1,963 @@
+{
+  "slug": "jungheonlee",
+  "url": "https://jungheonlee.com",
+  "name": "Jungheon Lee",
+  "country": "Korea",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "ok": false,
+  "httpStatus": 200,
+  "finalUrl": "https://www.jungheonlee.com/",
+  "networkIdleTimeout": true,
+  "consentDismissed": [],
+  "scrollInfo": {
+    "contentHeight": 844,
+    "docScrollHeight": 844,
+    "maxElementBottom": 844,
+    "innerScrollerHeight": 0,
+    "virtualScroll": false
+  },
+  "document": {
+    "scrollHeight": 844,
+    "vhMultiple": 1,
+    "textNodeCount": 10,
+    "canvasCount": 3,
+    "elementCount": 447,
+    "title": "이정헌 (Jungheon Lee) — Digital Artist & Interactive Designer",
+    "lang": "ko",
+    "contentHeight": 844,
+    "scrollMode": "native"
+  },
+  "container": {
+    "dominantPairs": [
+      {
+        "width": 146,
+        "left": 195,
+        "count": 1,
+        "sample": {
+          "tag": "div",
+          "cls": "ui-layer__hint"
+        }
+      },
+      {
+        "width": 90,
+        "left": 286,
+        "count": 1,
+        "sample": {
+          "tag": "div",
+          "cls": "mouse-readout"
+        }
+      }
+    ],
+    "containerChain": {
+      "chain": [
+        {
+          "tag": "div",
+          "cls": "ui-layer__hint",
+          "width": 145.8,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "block"
+        },
+        {
+          "tag": "div",
+          "cls": "ui-layer",
+          "width": 390,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "block"
+        },
+        {
+          "tag": "div",
+          "cls": "page",
+          "width": 390,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "block"
+        }
+      ],
+      "constrained": null
+    },
+    "grids": [],
+    "bodyPaddingInline": "0px / 0px",
+    "bodyMaxWidth": "none",
+    "htmlPaddingInline": "0px / 0px"
+  },
+  "leftEdgeTest": {
+    "layout": {
+      "n": 1,
+      "mean": -1,
+      "stdDev": 0,
+      "distinctExact": 1,
+      "distinctClustered2px": 1,
+      "clusters": [
+        {
+          "at": -1,
+          "count": 1
+        }
+      ],
+      "values": [
+        -1
+      ]
+    },
+    "rect": {
+      "n": 1,
+      "mean": -1,
+      "stdDev": 0,
+      "distinctExact": 1,
+      "distinctClustered2px": 1,
+      "clusters": [
+        {
+          "at": -1,
+          "count": 1
+        }
+      ],
+      "values": [
+        -1
+      ]
+    },
+    "headings": {
+      "n": 1,
+      "mean": -1,
+      "stdDev": 0,
+      "distinctExact": 1,
+      "distinctClustered2px": 1,
+      "clusters": [
+        {
+          "at": -1,
+          "count": 1
+        }
+      ],
+      "values": [
+        -1
+      ]
+    },
+    "sectionDiscovery": "tall-children-of-wrapper"
+  },
+  "sections": [
+    {
+      "index": 0,
+      "tag": "div",
+      "id": "page",
+      "cls": "page",
+      "height": 844,
+      "vhFraction": 1,
+      "paddingBlockStart": "0px",
+      "paddingBlockEnd": "0px",
+      "marginBlockStart": "0px",
+      "marginBlockEnd": "0px",
+      "firstText": {
+        "layoutLeft": -1,
+        "rectLeft": -1,
+        "tag": "a",
+        "fontSize": "16px",
+        "text": "INTERACTIVE ART"
+      },
+      "heading": {
+        "layoutLeft": -1,
+        "rectLeft": -1,
+        "tag": "a",
+        "fontSize": "16px",
+        "text": "INTERACTIVE ART"
+      }
+    },
+    {
+      "index": 1,
+      "tag": "div",
+      "id": "cursorTrail",
+      "cls": "cursor-trail",
+      "height": 844,
+      "vhFraction": 1,
+      "paddingBlockStart": "0px",
+      "paddingBlockEnd": "0px",
+      "marginBlockStart": "0px",
+      "marginBlockEnd": "0px",
+      "firstText": null,
+      "heading": null
+    },
+    {
+      "index": 2,
+      "tag": "div",
+      "id": "awwwards",
+      "cls": "",
+      "height": 158.22,
+      "vhFraction": 0.19,
+      "paddingBlockStart": "0px",
+      "paddingBlockEnd": "0px",
+      "marginBlockStart": "0px",
+      "marginBlockEnd": "0px",
+      "firstText": null,
+      "heading": null
+    }
+  ],
+  "verticalRhythm": {
+    "sectionCount": 3,
+    "near100vhCount": 2,
+    "near100vhPct": 66.67,
+    "strictGcdOfSpacing": null,
+    "baseUnitEstimate80pct": null,
+    "spacingHistogram": [],
+    "spacingSampleSize": 0
+  },
+  "typeScale": {
+    "distinctFontSizeCount": 4,
+    "distinctFontSizeCount_used2plus": 1,
+    "distinctSizes": [
+      {
+        "size": 16,
+        "count": 7
+      },
+      {
+        "size": 11.2,
+        "count": 1
+      },
+      {
+        "size": 11,
+        "count": 1
+      },
+      {
+        "size": 9.92,
+        "count": 1
+      }
+    ],
+    "scaleSizesDesc": [
+      16
+    ],
+    "consecutiveRatios": [],
+    "roles": {
+      "h1": null,
+      "biggestText": {
+        "tag": "a",
+        "fontSize": 16,
+        "fontWeight": "400",
+        "lineHeightPx": "normal",
+        "lineHeightRatio": null,
+        "letterSpacing": "0px",
+        "letterSpacingEm": 0,
+        "fontFamily": "Montserrat",
+        "fontFamilyFull": "Montserrat, sans-serif",
+        "textTransform": "none",
+        "color": "rgb(255, 255, 255)",
+        "widthPx": 143.39,
+        "text": "INTERACTIVE ART"
+      },
+      "h2All": [],
+      "h3": null,
+      "body": null,
+      "small": {
+        "tag": "div",
+        "fontSize": 9.92,
+        "fontWeight": "400",
+        "lineHeightPx": "normal",
+        "lineHeightRatio": null,
+        "letterSpacing": "1.1904px",
+        "letterSpacingEm": 0.12,
+        "fontFamily": "Montserrat",
+        "fontFamilyFull": "Montserrat, sans-serif",
+        "textTransform": "lowercase",
+        "color": "rgba(255, 255, 255, 0.22)",
+        "widthPx": 145.8,
+        "text": "scroll or drag to explore"
+      },
+      "mono": {
+        "tag": "div",
+        "fontSize": 11,
+        "fontWeight": "400",
+        "lineHeightPx": 11,
+        "lineHeightRatio": 1,
+        "letterSpacing": "0.33px",
+        "letterSpacingEm": 0.03,
+        "fontFamily": "JetBrains Mono",
+        "fontFamilyFull": "\"JetBrains Mono\", monospace",
+        "textTransform": "none",
+        "color": "rgba(255, 255, 255, 0.62)",
+        "widthPx": 90.09,
+        "text": "X 0195 Y 0422"
+      }
+    },
+    "readingMeasure": null,
+    "readingMeasureAlternates": [],
+    "distinctFontFamilyCount": 2,
+    "fontFamilies": [
+      {
+        "family": "Montserrat",
+        "count": 9
+      },
+      {
+        "family": "JetBrains Mono",
+        "count": 1
+      }
+    ]
+  },
+  "color": {
+    "textColors": [
+      {
+        "value": "rgb(255,255,255)",
+        "count": 7
+      },
+      {
+        "value": "rgba(255,255,255,0.72)",
+        "count": 1
+      },
+      {
+        "value": "rgba(255,255,255,0.22)",
+        "count": 1
+      },
+      {
+        "value": "rgba(255,255,255,0.62)",
+        "count": 1
+      }
+    ],
+    "backgroundColors": [
+      {
+        "value": "rgb(255,255,255)",
+        "count": 8
+      },
+      {
+        "value": "rgb(0,0,0)",
+        "count": 2
+      }
+    ],
+    "distinctTextColorCount": 4,
+    "distinctBgColorCount": 2
+  },
+  "persistent": {
+    "fixedOrSticky": [
+      {
+        "tag": "header",
+        "cls": "top-ui",
+        "position": "fixed",
+        "rect": {
+          "top": 14,
+          "left": 14,
+          "width": 101.42,
+          "height": 19
+        },
+        "zIndex": "99999",
+        "text": "JUNGHEONLEE",
+        "opacity": "1"
+      },
+      {
+        "tag": "div",
+        "cls": "scene-wrap",
+        "position": "fixed",
+        "rect": {
+          "top": 0,
+          "left": 0,
+          "width": 390,
+          "height": 844
+        },
+        "zIndex": "1",
+        "text": "",
+        "opacity": "1"
+      },
+      {
+        "tag": "div",
+        "cls": "ui-layer",
+        "position": "fixed",
+        "rect": {
+          "top": 0,
+          "left": 0,
+          "width": 390,
+          "height": 844
+        },
+        "zIndex": "4",
+        "text": "scroll or drag to explore",
+        "opacity": "1"
+      },
+      {
+        "tag": "div",
+        "cls": "mouse-readout",
+        "position": "fixed",
+        "rect": {
+          "top": 819,
+          "left": 285.91,
+          "width": 90.09,
+          "height": 11
+        },
+        "zIndex": "8",
+        "text": "X 0195 Y 0422",
+        "opacity": "1"
+      },
+      {
+        "tag": "div",
+        "cls": "cursor-trail",
+        "position": "fixed",
+        "rect": {
+          "top": 0,
+          "left": 0,
+          "width": 390,
+          "height": 844
+        },
+        "zIndex": "9",
+        "text": "",
+        "opacity": "1"
+      },
+      {
+        "tag": "div",
+        "cls": "cursor-trail__square",
+        "position": "fixed",
+        "rect": {
+          "top": 413,
+          "left": 186,
+          "width": 18,
+          "height": 18
+        },
+        "zIndex": "auto",
+        "text": "",
+        "opacity": "1"
+      },
+      {
+        "tag": "div",
+        "cls": "cursor-trail__square",
+        "position": "fixed",
+        "rect": {
+          "top": 413,
+          "left": 186,
+          "width": 18,
+          "height": 18
+        },
+        "zIndex": "auto",
+        "text": "",
+        "opacity": "1"
+      },
+      {
+        "tag": "div",
+        "cls": "cursor-trail__square",
+        "position": "fixed",
+        "rect": {
+          "top": 413,
+          "left": 186,
+          "width": 18,
+          "height": 18
+        },
+        "zIndex": "auto",
+        "text": "",
+        "opacity": "1"
+      },
+      {
+        "tag": "div",
+        "cls": "cursor-trail__square",
+        "position": "fixed",
+        "rect": {
+          "top": 413,
+          "left": 186,
+          "width": 18,
+          "height": 18
+        },
+        "zIndex": "auto",
+        "text": "",
+        "opacity": "1"
+      },
+      {
+        "tag": "div",
+        "cls": "cursor-trail__square",
+        "position": "fixed",
+        "rect": {
+          "top": 413,
+          "left": 186,
+          "width": 18,
+          "height": 18
+        },
+        "zIndex": "auto",
+        "text": "",
+        "opacity": "1"
+      },
+      {
+        "tag": "div",
+        "cls": "cursor-trail__square",
+        "position": "fixed",
+        "rect": {
+          "top": 413,
+          "left": 186,
+          "width": 18,
+          "height": 18
+        },
+        "zIndex": "auto",
+        "text": "",
+        "opacity": "1"
+      },
+      {
+        "tag": "div",
+        "cls": "cursor-trail__square",
+        "position": "fixed",
+        "rect": {
+          "top": 413,
+          "left": 186,
+          "width": 18,
+          "height": 18
+        },
+        "zIndex": "auto",
+        "text": "",
+        "opacity": "1"
+      },
+      {
+        "tag": "div",
+        "cls": "cursor-trail__square",
+        "position": "fixed",
+        "rect": {
+          "top": 413,
+          "left": 186,
+          "width": 18,
+          "height": 18
+        },
+        "zIndex": "auto",
+        "text": "",
+        "opacity": "1"
+      },
+      {
+        "tag": "div",
+        "cls": "",
+        "position": "fixed",
+        "rect": {
+          "top": 342.89,
+          "left": 342.23,
+          "width": 47.77,
+          "height": 158.22
+        },
+        "zIndex": "999",
+        "text": "",
+        "opacity": "1"
+      }
+    ]
+  },
+  "nav": {
+    "tag": "header",
+    "cls": "top-ui",
+    "height": 19,
+    "top": 14,
+    "position": "fixed",
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "backdropFilter": "none",
+    "borderBottom": "0px rgb(255, 255, 255)",
+    "paddingBlock": "0px / 0px",
+    "transform": "none",
+    "opacity": "1",
+    "mixBlendMode": "normal",
+    "color": "rgb(255, 255, 255)"
+  },
+  "navState": {
+    "at0": {
+      "nav": {
+        "height": 19,
+        "top": 14,
+        "position": "fixed",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "backdropFilter": "none",
+        "borderBottom": "0px rgb(255, 255, 255)",
+        "paddingBlock": "0px / 0px",
+        "transform": "none",
+        "opacity": "1",
+        "color": "rgb(255, 255, 255)"
+      },
+      "fixedOrSticky": [
+        {
+          "tag": "header",
+          "cls": "top-ui",
+          "position": "fixed",
+          "rect": {
+            "top": 14,
+            "left": 14,
+            "width": 101.42,
+            "height": 19
+          },
+          "text": "JUNGHEONLEE",
+          "opacity": "1"
+        },
+        {
+          "tag": "div",
+          "cls": "scene-wrap",
+          "position": "fixed",
+          "rect": {
+            "top": 0,
+            "left": 0,
+            "width": 390,
+            "height": 844
+          },
+          "text": "",
+          "opacity": "1"
+        },
+        {
+          "tag": "div",
+          "cls": "ui-layer",
+          "position": "fixed",
+          "rect": {
+            "top": 0,
+            "left": 0,
+            "width": 390,
+            "height": 844
+          },
+          "text": "scroll or drag to explore",
+          "opacity": "1"
+        },
+        {
+          "tag": "div",
+          "cls": "mouse-readout",
+          "position": "fixed",
+          "rect": {
+            "top": 819,
+            "left": 285.91,
+            "width": 90.09,
+            "height": 11
+          },
+          "text": "X 0195 Y 0422",
+          "opacity": "1"
+        },
+        {
+          "tag": "div",
+          "cls": "cursor-trail",
+          "position": "fixed",
+          "rect": {
+            "top": 0,
+            "left": 0,
+            "width": 390,
+            "height": 844
+          },
+          "text": "",
+          "opacity": "1"
+        },
+        {
+          "tag": "div",
+          "cls": "cursor-trail__square",
+          "position": "fixed",
+          "rect": {
+            "top": 413,
+            "left": 186,
+            "width": 18,
+            "height": 18
+          },
+          "text": "",
+          "opacity": "1"
+        },
+        {
+          "tag": "div",
+          "cls": "cursor-trail__square",
+          "position": "fixed",
+          "rect": {
+            "top": 413,
+            "left": 186,
+            "width": 18,
+            "height": 18
+          },
+          "text": "",
+          "opacity": "1"
+        },
+        {
+          "tag": "div",
+          "cls": "cursor-trail__square",
+          "position": "fixed",
+          "rect": {
+            "top": 413,
+            "left": 186,
+            "width": 18,
+            "height": 18
+          },
+          "text": "",
+          "opacity": "1"
+        },
+        {
+          "tag": "div",
+          "cls": "cursor-trail__square",
+          "position": "fixed",
+          "rect": {
+            "top": 413,
+            "left": 186,
+            "width": 18,
+            "height": 18
+          },
+          "text": "",
+          "opacity": "1"
+        },
+        {
+          "tag": "div",
+          "cls": "cursor-trail__square",
+          "position": "fixed",
+          "rect": {
+            "top": 413,
+            "left": 186,
+            "width": 18,
+            "height": 18
+          },
+          "text": "",
+          "opacity": "1"
+        },
+        {
+          "tag": "div",
+          "cls": "cursor-trail__square",
+          "position": "fixed",
+          "rect": {
+            "top": 413,
+            "left": 186,
+            "width": 18,
+            "height": 18
+          },
+          "text": "",
+          "opacity": "1"
+        },
+        {
+          "tag": "div",
+          "cls": "cursor-trail__square",
+          "position": "fixed",
+          "rect": {
+            "top": 413,
+            "left": 186,
+            "width": 18,
+            "height": 18
+          },
+          "text": "",
+          "opacity": "1"
+        },
+        {
+          "tag": "div",
+          "cls": "cursor-trail__square",
+          "position": "fixed",
+          "rect": {
+            "top": 413,
+            "left": 186,
+            "width": 18,
+            "height": 18
+          },
+          "text": "",
+          "opacity": "1"
+        },
+        {
+          "tag": "div",
+          "cls": "",
+          "position": "fixed",
+          "rect": {
+            "top": 342.89,
+            "left": 342.23,
+            "width": 47.77,
+            "height": 158.22
+          },
+          "text": "",
+          "opacity": "1"
+        }
+      ]
+    },
+    "at2000": {
+      "nav": {
+        "height": 19,
+        "top": 14,
+        "position": "fixed",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "backdropFilter": "none",
+        "borderBottom": "0px rgb(255, 255, 255)",
+        "paddingBlock": "0px / 0px",
+        "transform": "none",
+        "opacity": "1",
+        "color": "rgb(255, 255, 255)"
+      },
+      "fixedOrSticky": [
+        {
+          "tag": "header",
+          "cls": "top-ui",
+          "position": "fixed",
+          "rect": {
+            "top": 14,
+            "left": 14,
+            "width": 101.42,
+            "height": 19
+          },
+          "text": "JUNGHEONLEE",
+          "opacity": "1"
+        },
+        {
+          "tag": "div",
+          "cls": "scene-wrap",
+          "position": "fixed",
+          "rect": {
+            "top": 0,
+            "left": 0,
+            "width": 390,
+            "height": 844
+          },
+          "text": "",
+          "opacity": "1"
+        },
+        {
+          "tag": "div",
+          "cls": "ui-layer",
+          "position": "fixed",
+          "rect": {
+            "top": 0,
+            "left": 0,
+            "width": 390,
+            "height": 844
+          },
+          "text": "scroll or drag to explore",
+          "opacity": "1"
+        },
+        {
+          "tag": "div",
+          "cls": "action-log",
+          "position": "fixed",
+          "rect": {
+            "top": 739.78,
+            "left": 14,
+            "width": 170.52,
+            "height": 90.22
+          },
+          "text": "[14:11:04] SCROLL INPUT[14:11:03] SCROLL INPUT[14:11:03] SCR",
+          "opacity": "1"
+        },
+        {
+          "tag": "div",
+          "cls": "mouse-readout",
+          "position": "fixed",
+          "rect": {
+            "top": 819,
+            "left": 285.91,
+            "width": 90.09,
+            "height": 11
+          },
+          "text": "X 0195 Y 0422",
+          "opacity": "1"
+        },
+        {
+          "tag": "div",
+          "cls": "cursor-trail",
+          "position": "fixed",
+          "rect": {
+            "top": 0,
+            "left": 0,
+            "width": 390,
+            "height": 844
+          },
+          "text": "",
+          "opacity": "1"
+        },
+        {
+          "tag": "div",
+          "cls": "cursor-trail__square",
+          "position": "fixed",
+          "rect": {
+            "top": 413,
+            "left": 186,
+            "width": 18,
+            "height": 18
+          },
+          "text": "",
+          "opacity": "1"
+        },
+        {
+          "tag": "div",
+          "cls": "cursor-trail__square",
+          "position": "fixed",
+          "rect": {
+            "top": 413,
+            "left": 186,
+            "width": 18,
+            "height": 18
+          },
+          "text": "",
+          "opacity": "1"
+        },
+        {
+          "tag": "div",
+          "cls": "cursor-trail__square",
+          "position": "fixed",
+          "rect": {
+            "top": 413,
+            "left": 186,
+            "width": 18,
+            "height": 18
+          },
+          "text": "",
+          "opacity": "1"
+        },
+        {
+          "tag": "div",
+          "cls": "cursor-trail__square",
+          "position": "fixed",
+          "rect": {
+            "top": 413,
+            "left": 186,
+            "width": 18,
+            "height": 18
+          },
+          "text": "",
+          "opacity": "1"
+        },
+        {
+          "tag": "div",
+          "cls": "cursor-trail__square",
+          "position": "fixed",
+          "rect": {
+            "top": 413,
+            "left": 186,
+            "width": 18,
+            "height": 18
+          },
+          "text": "",
+          "opacity": "1"
+        },
+        {
+          "tag": "div",
+          "cls": "cursor-trail__square",
+          "position": "fixed",
+          "rect": {
+            "top": 413,
+            "left": 186,
+            "width": 18,
+            "height": 18
+          },
+          "text": "",
+          "opacity": "1"
+        },
+        {
+          "tag": "div",
+          "cls": "cursor-trail__square",
+          "position": "fixed",
+          "rect": {
+            "top": 413,
+            "left": 186,
+            "width": 18,
+            "height": 18
+          },
+          "text": "",
+          "opacity": "1"
+        },
+        {
+          "tag": "div",
+          "cls": "cursor-trail__square",
+          "position": "fixed",
+          "rect": {
+            "top": 413,
+            "left": 186,
+            "width": 18,
+            "height": 18
+          },
+          "text": "",
+          "opacity": "1"
+        },
+        {
+          "tag": "div",
+          "cls": "",
+          "position": "fixed",
+          "rect": {
+            "top": 342.89,
+            "left": 342.23,
+            "width": 47.77,
+            "height": 158.22
+          },
+          "text": "",
+          "opacity": "1"
+        }
+      ]
+    },
+    "changed": false,
+    "diff": {}
+  },
+  "shots": [
+    "jungheonlee-390-full.jpg"
+  ],
+  "fullPageShotRepresentative": true,
+  "notMeasurable": "only 10 rendered text nodes (3 canvas element(s)) — WebGL/canvas-driven, no DOM grid to learn from",
+  "pageErrors": []
+}

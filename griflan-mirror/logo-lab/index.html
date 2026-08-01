@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<title>Plan C — Logo Lab (3 concepts)</title>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  :root { --bg:#0f1613; --ivory:#f2efde; --gold:#f0b32e; }
+  body { background:var(--bg); color:var(--ivory); font-family:sans-serif; padding:40px 24px; }
+  h1 { font-size:20px; color:var(--gold); margin-bottom:6px; }
+  p.hint { color:rgba(242,239,222,.55); font-size:13px; margin-bottom:30px; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:24px; }
+  .card { border:1px solid rgba(242,239,222,.14); border-radius:12px; padding:28px 20px 20px; text-align:center; }
+  .stage { height:180px; display:grid; place-items:center; margin-bottom:14px; cursor:pointer; }
+  .card h2 { font-size:15px; color:var(--gold); margin-bottom:4px; }
+  .card p { font-size:12.5px; color:rgba(242,239,222,.6); line-height:1.6; }
+
+  /* ── concept 1: pawn → Z flip ───────────────────────── */
+  .c1 { width:110px; height:150px; position:relative; perspective:600px; }
+  .c1 .face { position:absolute; inset:0; display:grid; place-items:center;
+    backface-visibility:hidden; transition:transform .9s cubic-bezier(.7,0,.2,1); }
+  .c1 .pawn { transform:rotateY(0); }
+  .c1 .zee { transform:rotateY(180deg); }
+  .stage:hover .c1 .pawn, .c1.auto .pawn { transform:rotateY(180deg); }
+  .stage:hover .c1 .zee,  .c1.auto .zee  { transform:rotateY(360deg); }
+  .c1 .zee span { font-family:Georgia,serif; font-weight:bold; font-size:120px; color:var(--gold); line-height:1; }
+
+  /* ── concept 2: Z spotlight sweep + hand stroke ─────── */
+  .c2 svg { overflow:visible; }
+  .c2 .zpath { fill:none; stroke:var(--ivory); stroke-width:14; stroke-linecap:round; stroke-linejoin:round;
+    stroke-dasharray:340; stroke-dashoffset:340; animation:draw 2.6s cubic-bezier(.6,0,.2,1) infinite; }
+  .c2 .under { fill:none; stroke:var(--gold); stroke-width:8; stroke-linecap:round;
+    stroke-dasharray:110; stroke-dashoffset:110; animation:draw2 2.6s 1s cubic-bezier(.6,0,.2,1) infinite; }
+  @keyframes draw { 25%,70% { stroke-dashoffset:0; } 100% { stroke-dashoffset:-340; } }
+  @keyframes draw2 { 25%,70% { stroke-dashoffset:0; } 100% { stroke-dashoffset:-110; } }
+  .c2 .spot { animation:sweep 2.6s ease-in-out infinite; }
+  @keyframes sweep { 0%,100% { transform:translateX(-25px); opacity:0; } 40%,60% { transform:translateX(25px); opacity:.5; } }
+
+  /* ── concept 3: poker chip coin-spin ────────────────── */
+  .c3 { width:140px; height:140px; animation:spin3 3.2s cubic-bezier(.65,0,.35,1) infinite; transform-style:preserve-3d; }
+  @keyframes spin3 { 0%,18% { transform:rotateY(0); } 55%,68% { transform:rotateY(540deg); } 100% { transform:rotateY(720deg); } }
+  .c3 svg { width:100%; height:100%; }
+
+  .badge { display:inline-block; margin-top:10px; font-size:11px; letter-spacing:.08em;
+    border:1px solid rgba(240,179,46,.5); color:var(--gold); border-radius:99px; padding:3px 10px; }
+</style>
+</head>
+<body>
+<h1>Plan C — Logo Lab</h1>
+<p class="hint">3 คอนเซ็ปต์ animate จริง (hover ที่การ์ดแรกเพื่อพลิก) — เลือกเบอร์ได้เลย เดี๋ยวขัดเงาต่อ + เสียบแทนโลโก้ Rive ใน mirror</p>
+
+<div class="grid">
+
+  <!-- 1 -->
+  <div class="card">
+    <div class="stage" onmouseenter="" title="hover เพื่อพลิก">
+      <div class="c1" id="c1">
+        <div class="face pawn">
+          <svg width="110" height="150" viewBox="0 0 110 150">
+            <g fill="#f2efde">
+              <circle cx="55" cy="34" r="20"/>
+              <path d="M40 56 h30 l6 14 h-42 z"/>
+              <path d="M45 70 h20 c2 22 8 34 16 44 h-52 c8-10 14-22 16-44 z"/>
+              <rect x="22" y="118" width="66" height="12" rx="4"/>
+              <rect x="14" y="132" width="82" height="12" rx="4" fill="#f0b32e"/>
+            </g>
+          </svg>
+        </div>
+        <div class="face zee"><span>Z</span></div>
+      </div>
+    </div>
+    <h2>1. เบี้ย ♟ พลิกเป็น Z</h2>
+    <p>หมากตัวเล็กสุดบนกระดาน (micro-influencer) พลิกร่างเป็น Z — ตอน hover/scroll<br>เล่าเรื่อง "หมากรุก → ตัวตน" ตรงที่สุด</p>
+    <span class="badge">HOVER TO FLIP</span>
+  </div>
+
+  <!-- 2 -->
+  <div class="card">
+    <div class="stage">
+      <div class="c2">
+        <svg width="150" height="150" viewBox="0 0 150 150">
+          <defs>
+            <linearGradient id="sg" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0" stop-color="#f0b32e" stop-opacity="0"/>
+              <stop offset=".5" stop-color="#f0b32e" stop-opacity=".7"/>
+              <stop offset="1" stop-color="#f0b32e" stop-opacity="0"/>
+            </linearGradient>
+          </defs>
+          <rect class="spot" x="30" y="0" width="90" height="150" fill="url(#sg)"/>
+          <path class="zpath" d="M25 25 H125 L25 115 H125"/>
+          <path class="under" d="M25 138 C60 130 95 146 128 134"/>
+        </svg>
+      </div>
+    </div>
+    <h2>2. Z ลายเซ็น + สปอตไลท์</h2>
+    <p>เส้น Z วาดตัวเองเหมือนเซ็นชื่อ แล้วขีดเส้นใต้สีทองแบบลายมือ — ล้อปรัชญา<br>"เราอยู่ในสปอตไลท์ตั้งแต่ก่อนมีคำว่าคอนเทนต์"</p>
+    <span class="badge">AUTO LOOP</span>
+  </div>
+
+  <!-- 3 -->
+  <div class="card">
+    <div class="stage">
+      <div class="c3">
+        <svg viewBox="0 0 140 140">
+          <circle cx="70" cy="70" r="66" fill="none" stroke="#f0b32e" stroke-width="8"
+                  stroke-dasharray="26 12"/>
+          <circle cx="70" cy="70" r="52" fill="none" stroke="#f2efde" stroke-width="3"/>
+          <text x="70" y="94" text-anchor="middle" font-family="Georgia,serif" font-weight="bold"
+                font-size="70" fill="#f2efde">Z</text>
+        </svg>
+      </div>
+    </div>
+    <h2>3. ชิปโป๊กเกอร์หมุน</h2>
+    <p>เหรียญชิปขอบทองหมุนแบบ coin-flip — ล้อ positioning "บริหารความเสี่ยงแบบ<br>เกมโป๊กเกอร์" + เข้ากับ accent ทองชิปที่เลือกไว้</p>
+    <span class="badge">AUTO LOOP</span>
+  </div>
+
+</div>
+<script>
+  /* concept 1: auto-flip every 3s as preview, hover still works */
+  const c1 = document.getElementById('c1');
+  setInterval(() => c1.classList.toggle('auto'), 3000);
+</script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+[
+  {
+    "claim": "In February 2024 Lyft introduced a staggered-rollout policy guaranteeing drivers at least 70% of net rider payments weekly plus per-trip earnings transparency, creating a natural experiment analyzed with dynamic staggered difference-in-differences models on approximately 47 million rides.",
+    "stance": "neutral",
+    "stance_target": "existence of a genuine income-level natural experiment in gig work",
+    "evidence_type": "empirical",
+    "scope_conditions": "United States, one major urban market (LAX) plus two adjacent non-major markets (OCX, SBD), Feb 2024 rollout plus comparison window in 2022-23",
+    "quoted_support": "In February 2024, Lyft (henceforth referred to as 'the platform') announced a new earning standard, under which drivers would be guaranteed to earn 70% or more of rider payments each week, after external fees...The staggered rollout of the earning guarantee and earning transparency created a natural experiment.",
+    "numbers": ["70% earnings guarantee floor", "~47 million rides", "25-week window", "February 2024"],
+    "entities": ["Lyft"],
+    "time_period": "February 2024",
+    "region": "United States",
+    "confidence": "high",
+    "source_note_id": "platform-design-earnings-transparency-and"
+  },
+  {
+    "claim": "Following the Lyft earnings-guarantee/transparency intervention, drivers whose pretreatment earnings rate was below the new 70% floor increased weekly driving hours by an estimated 41.7% (log-hours effect of 0.349, p<.001, n=47,987 drivers), a larger response than drivers already above 70% pretreatment (30.7% increase, log-hours effect 0.268, p<.001, n=7,232 drivers).",
+    "stance": "supports",
+    "stance_target": "income-level shocks causally affect gig-worker labor supply intensity",
+    "evidence_type": "empirical",
+    "scope_conditions": "United States, Lyft drivers, Feb 2024 rollout",
+    "quoted_support": "For group HH, the weekly number of driving hours has increased by 30.7% in the post-treatment period. For group LH, the increase was 41.7%.",
+    "numbers": ["log-hours effect 0.2679 (HH, n=7,232, 180,800 driver-weeks)", "log-hours effect 0.3488 (LH, n=47,987, 1,199,675 driver-weeks)", "30.7% and 41.7% hour increases"],
+    "entities": ["Lyft"],
+    "time_period": "February 2024",
+    "region": "United States",
+    "confidence": "high",
+    "source_note_id": "platform-design-earnings-transparency-and"
+  },
+  {
+    "claim": "Despite being the most methodologically rigorous income-shock natural experiment located in the adjacent gig-economy literature, this study's outcome variables are hours worked, utilization, take rate and predictability -- it contains no measurement of driver attrition, retention, or platform exit following the income shock.",
+    "stance": "neutral",
+    "stance_target": "whether causal income-shock-to-exit designs exist in the gig-economy literature (Gap 3)",
+    "evidence_type": "theoretical",
+    "scope_conditions": "methodological caveat, gig economy, Lyft",
+    "quoted_support": "We show that the design change led to substantial changes in driver engagement, with separate effects from the guarantee and the transparency. Drivers increased their working hours and utilization, leading to more completed trips and higher per-hour and per-trip earnings.",
+    "numbers": [],
+    "entities": ["Lyft"],
+    "time_period": "February 2024",
+    "region": "United States",
+    "confidence": "high",
+    "source_note_id": "platform-design-earnings-transparency-and"
+  },
+  {
+    "claim": "The authors cite two documented precedents where a platform pricing/design change caused provider exit or churn: TaskRabbit's 2014 shift from an auction system to fixed hourly rates drove significant provider backlash and exit, and an unnamed peer-to-peer car-rental platform's shift to platform-led pricing (even though it raised provider revenue) led to increased provider churn (citing Filippas et al. 2023).",
+    "stance": "supports",
+    "stance_target": "existence of documented gig-platform design-change-to-provider-exit effects, as background evidence adjacent to Gap 3",
+    "evidence_type": "empirical",
+    "scope_conditions": "gig/sharing-economy platforms generally, TaskRabbit 2014 and an unnamed car-rental platform",
+    "quoted_support": "For example, when TaskRabbit changed their pricing mechanism from an auction system to one involving fixed hourly rates, there was significant backlash from the providers, many of whom left the platform. When a popular peer-to-peer car rental platform shifted from provider-led to platform-led pricing in a manner that significantly increased provider revenue, this change nevertheless induced an unexpected negative reaction from providers and led to increased levels of churn (Filippas et al. (2023)).",
+    "numbers": ["TaskRabbit pricing shift, 2014"],
+    "entities": ["TaskRabbit", "Filippas et al. 2023"],
+    "time_period": "2014-2023",
+    "region": "not specified (gig economy, primarily US)",
+    "confidence": "medium",
+    "source_note_id": "platform-design-earnings-transparency-and"
+  }
+]

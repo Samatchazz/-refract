@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>xxix mechanics — masonry index POC</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="cursor" aria-hidden="true"></div>
+
+  <nav class="nav">
+    <a class="pill" href="index.html">POC</a>
+    <a class="pill" href="work.html">WORK</a>
+  </nav>
+
+  <p class="doc-note">Structure demo — placeholder content only. Mechanic: sticky index list (indicator swap) + <code>column-count:2</code> masonry with hover overlay/tags reveal.</p>
+
+  <main class="base-grid">
+    <div class="work-layout">
+
+      <!-- sticky index list -->
+      <nav class="index-list">
+        <ul>
+          <li class="list-item"><a href="#">
+            <svg class="ind ind--off" viewBox="0 0 20 20"><circle cx="10" cy="10" r="8" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+            <svg class="ind ind--sel" viewBox="0 0 20 20"><circle cx="10" cy="10" r="8" fill="currentColor"/></svg>
+            All</a></li>
+          <li class="list-item"><a href="#">
+            <svg class="ind ind--off" viewBox="0 0 20 20"><circle cx="10" cy="10" r="8" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+            <svg class="ind ind--sel" viewBox="0 0 20 20"><circle cx="10" cy="10" r="8" fill="currentColor"/></svg>
+            Project One</a></li>
+          <li class="list-item"><a href="#">
+            <svg class="ind ind--off" viewBox="0 0 20 20"><circle cx="10" cy="10" r="8" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+            <svg class="ind ind--sel" viewBox="0 0 20 20"><circle cx="10" cy="10" r="8" fill="currentColor"/></svg>
+            Project Two</a></li>
+          <li class="list-item"><a href="#">
+            <svg class="ind ind--off" viewBox="0 0 20 20"><circle cx="10" cy="10" r="8" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+            <svg class="ind ind--sel" viewBox="0 0 20 20"><circle cx="10" cy="10" r="8" fill="currentColor"/></svg>
+            Project Three</a></li>
+          <li class="list-item"><a href="#">
+            <svg class="ind ind--off" viewBox="0 0 20 20"><circle cx="10" cy="10" r="8" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+            <svg class="ind ind--sel" viewBox="0 0 20 20"><circle cx="10" cy="10" r="8" fill="currentColor"/></svg>
+            Project Four</a></li>
+        </ul>
+      </nav>
+
+      <!-- masonry image grid -->
+      <div class="image-grid">
+        <a class="grid-item" href="#">
+          <div class="grid-item__media" style="height:340px;background-color:var(--purple)"></div>
+          <div class="grid-item__overlay">View project →</div>
+          <div class="grid-item__tags">Project One · Brand</div>
+        </a>
+        <a class="grid-item" href="#">
+          <div class="grid-item__media" style="height:240px;background-color:var(--red)"></div>
+          <div class="grid-item__overlay">View project →</div>
+          <div class="grid-item__tags">Project Two · Web</div>
+        </a>
+        <a class="grid-item" href="#">
+          <div class="grid-item__media" style="height:420px;background-color:var(--beige)"></div>
+          <div class="grid-item__overlay">View project →</div>
+          <div class="grid-item__tags">Project Three · Product</div>
+        </a>
+        <a class="grid-item" href="#">
+          <div class="grid-item__media" style="height:300px;background-color:var(--gray)"></div>
+          <div class="grid-item__overlay">View project →</div>
+          <div class="grid-item__tags">Project Four · Strategy</div>
+        </a>
+        <a class="grid-item" href="#">
+          <div class="grid-item__media" style="height:380px;background-color:var(--yellow)"></div>
+          <div class="grid-item__overlay">View project →</div>
+          <div class="grid-item__tags">Project Five · Brand</div>
+        </a>
+        <a class="grid-item" href="#">
+          <div class="grid-item__media" style="height:260px;background-color:var(--offwhite)"></div>
+          <div class="grid-item__overlay" style="color:var(--black);background:rgba(255,255,255,.5)">View project →</div>
+          <div class="grid-item__tags" style="color:var(--black)">Project Six · Web</div>
+        </a>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="foot">
+    <span>Twenty-mechanics POC</span>
+    <span>Structure study — no client assets</span>
+  </footer>
+
+  <script>
+    (function () {
+      var cur = document.querySelector('.cursor');
+      if (!cur || !matchMedia('(pointer:fine)').matches) { if (cur) cur.style.display='none'; return; }
+      var x = 0, y = 0, tx = 0, ty = 0;
+      addEventListener('pointermove', function (e) { tx = e.clientX; ty = e.clientY; });
+      (function loop() {
+        x += (tx - x) * 0.2; y += (ty - y) * 0.2;
+        cur.style.transform = 'translate(' + x + 'px,' + y + 'px) translate(-50%,-50%)';
+        requestAnimationFrame(loop);
+      })();
+      document.addEventListener('pointerover', function (e) {
+        cur.classList.toggle('is-hover', !!e.target.closest('a,button,.card,.grid-item,.list-item'));
+      });
+    })();
+  </script>
+</body>
+</html>

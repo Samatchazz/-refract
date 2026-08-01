@@ -1,0 +1,72 @@
+[
+  {
+    "claim": "An '8 million content creators' figure is attributed to the IMF by Indonesian press coverage, with an IMF projection of 17 million creators globally or in Indonesia by 2027 and cumulative income potential of USD 7 billion -- but no traceable IMF publication corroborates this figure, and web search for a matching IMF creator-economy report returned nothing.",
+    "stance": "neutral",
+    "stance_target": "existence of an authoritative IMF statistic on content creator populations",
+    "evidence_type": "statistical",
+    "scope_conditions": "scope ambiguous -- article does not specify whether IMF figure is Indonesia-specific or global; published 21 Aug 2023",
+    "quoted_support": "\"Dana Moneter Internasional (IMF) mencatat ada 8 juta kreator konten di media sosial yang berpotensi meraup keuntungan dari konten yang dibuat... IMF memprediksi akan ada 17 juta kreator konten pada 2027 mendatang. Potensi pemasukan secara kumulatif ditaksir mencapai USD 7 miliar atau setara Rp 105 triliun.\"",
+    "numbers": ["8,000,000 creators (current)", "17,000,000 creators (2027 projection)", "USD 7 billion / Rp 105 trillion cumulative income potential"],
+    "entities": ["IMF (International Monetary Fund)"],
+    "time_period": "2023, with 2027 projection",
+    "region": "unclear -- possibly global, not confirmed as Indonesia-specific",
+    "confidence": "low",
+    "source_note_id": "ada-8-juta-kreator-konten-tapi-baru-14-persen-yang-cuan"
+  },
+  {
+    "claim": "A Linktree study cited by Liputan6 found 59% of beginner creators are not yet well-known and have not recorded any profit, while only 14% have a built audience community and can profit.",
+    "stance": "refutes",
+    "stance_target": "high monetization success rates among content creators",
+    "evidence_type": "statistical",
+    "scope_conditions": "scope/sample size/geography not stated in this article; Linktree is a self-selected vendor survey of its own platform users, likely skewing toward creators already using audience-link tools",
+    "quoted_support": "\"studi Linktree menunjukkan ada 59 persen kreator pemula yang belum tenar dan belum mencatatkan untuk. Di sisi lain, hanya ada 14 persen kreatoe yang memiliki komunitas dan bisa merauo untung.\" (\"Linktree's study shows 59 percent of beginner creators are not yet well-known and have not recorded profit. On the other hand, only 14 percent of creators have a community and can profit.\")",
+    "numbers": ["59% unprofitable beginner creators", "14% profitable creators with built community"],
+    "entities": ["Linktree"],
+    "time_period": "2023",
+    "region": "not specified -- likely global vendor survey, not confirmed Indonesia-specific",
+    "confidence": "low",
+    "source_note_id": "ada-8-juta-kreator-konten-tapi-baru-14-persen-yang-cuan"
+  },
+  {
+    "claim": "The 14% profitability figure and the Menekraf/TikTok 63%-above-UMR figure are NOT measuring the same quantity: 14% describes 'has a community and can profit' among a possibly-global beginner creator population (Linktree vendor survey), while 63% describes 'earns above minimum wage' among only the subset of 8 million creators already monetizing on TikTok specifically (Indonesia). This is a scope and metric mismatch, not a true contradiction resolvable to one number.",
+    "stance": "neutral",
+    "stance_target": "apparent 63%-vs-14% contradiction in Indonesian creator income statistics",
+    "evidence_type": "theoretical",
+    "scope_conditions": "cross-source comparison; both underlying figures lack disclosed sampling methodology",
+    "quoted_support": "\"hanya ada 14 persen kreatoe yang memiliki komunitas dan bisa merauo untung\" vs. TikTok's \"63 Persen di antaranya berpenghasilan lebih dari upah minimum\"",
+    "numbers": ["14%", "63%", "8,000,000"],
+    "entities": ["Linktree", "TikTok Indonesia", "Kemenekraf"],
+    "time_period": "2023 (Linktree) vs 2024-2025 (Menekraf/TikTok)",
+    "region": "Indonesia (Menekraf/TikTok figures); unclear/possibly global (Linktree/IMF figures)",
+    "confidence": "medium",
+    "source_note_id": "ada-8-juta-kreator-konten-tapi-baru-14-persen-yang-cuan"
+  },
+  {
+    "claim": "TipTip (Indonesian creator monetization platform) CEO Albert Lucius claimed the platform hosts 20 million content creators, with 67% of recorded income coming from creators located outside major Indonesian cities.",
+    "stance": "neutral",
+    "stance_target": "geographic distribution of creator income on TipTip",
+    "evidence_type": "statistical",
+    "scope_conditions": "Indonesia, TipTip platform only, self-reported by platform CEO, 21 Aug 2023",
+    "quoted_support": "\"Dia mengklaim TipTip mampu mewadahi 20 juta kreator konten di platform-nya... ada 67 persen pemasukan tercatat dari kreator yang berlokasi diluar kota besar.\"",
+    "numbers": ["20,000,000 creators on TipTip", "67% of income from outside major cities"],
+    "entities": ["Albert Lucius", "TipTip"],
+    "time_period": "21 August 2023",
+    "region": "Indonesia",
+    "confidence": "low",
+    "source_note_id": "ada-8-juta-kreator-konten-tapi-baru-14-persen-yang-cuan"
+  },
+  {
+    "claim": "TipTip's CEO claimed active creators on the platform earn roughly twice the average regional minimum wage (UMR).",
+    "stance": "supports",
+    "stance_target": "above-average earnings for engaged creators on a monetization platform",
+    "evidence_type": "anecdotal",
+    "scope_conditions": "Indonesia, TipTip platform, self-reported, 21 Aug 2023, applies only to 'aktif' creators not all registered users",
+    "quoted_support": "\"kreator-kreator yang aktif di TipTip dapat menghasilkan sekitar dua kali lipat dibandingkan upah minimum rata-rata (UMR)\"",
+    "numbers": ["~2x average UMR income for active creators"],
+    "entities": ["TipTip", "Albert Lucius"],
+    "time_period": "21 August 2023",
+    "region": "Indonesia",
+    "confidence": "low",
+    "source_note_id": "ada-8-juta-kreator-konten-tapi-baru-14-persen-yang-cuan"
+  }
+]

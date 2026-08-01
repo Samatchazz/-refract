@@ -1,0 +1,61 @@
+{
+ "tokens": {
+  "--bg": "#ffffff",
+  "--bg-2": "#f4f9fc",
+  "--fg": "#111111",
+  "--fg-soft": "#555555",
+  "--ac1": "#2779a7",
+  "--ac2": "#FF9398",
+  "--font-display": "Kanit, system-ui, sans-serif",
+  "--font-body": "Anuphan, system-ui, sans-serif",
+  "--font-mono": "ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+  "--lh-display": "1.30",
+  "--lh-body": "1.7",
+  "--ls-display": "-0.01em",
+  "--step-0": "12px",
+  "--step-1": "15px",
+  "--step-2": "17px",
+  "--step-3": "clamp(21px, 2.6vw, 30px)",
+  "--step-4": "clamp(34px, 6.2vw, 76px)",
+  "--step-5": "clamp(52px, 11vw, 150px)",
+  "--ease-glide": "cubic-bezier(0.25,0.1,0.25,1)",
+  "--ease-settle": "cubic-bezier(0.22,1,0.36,1)",
+  "--ease-sym": "cubic-bezier(0.6,0,0.4,1)",
+  "--steps-q": "steps(5,end)",
+  "--t-micro": "150ms",
+  "--t-base": "400ms",
+  "--t-slow": "800ms",
+  "--t-epic": "1200ms",
+  "--stagger-word": "80ms",
+  "--stagger-row": "80ms",
+  "--gut": "clamp(20px, 4vw, 48px)",
+  "--wrap": "1320px",
+  "--rule": "1px",
+  "--hair": "color-mix(in srgb, var(--fg) 14%, transparent)",
+  "--hair-inv": "color-mix(in srgb, var(--bg) 20%, transparent)",
+  "--sp-section": "clamp(80px, 6vw + 40px, 132px)",
+  "--sp-block": "clamp(36px, 4vw, 64px)"
+ },
+ "sections": [
+  "s1",
+  "s2",
+  "s3",
+  "s4",
+  "s5",
+  "s6",
+  "s7",
+  "s8"
+ ],
+ "sectionCount": 8,
+ "currentWorld": "M4",
+ "files": {
+  "css": "planc/style.css",
+  "html": "planc/index.html",
+  "js": "planc/app.js",
+  "bytes": {
+   "css": 42730,
+   "html": 39252,
+   "js": 54805
+  }
+ }
+}

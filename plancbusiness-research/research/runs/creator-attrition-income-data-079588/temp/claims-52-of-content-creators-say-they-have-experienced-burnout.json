@@ -1,0 +1,30 @@
+[
+  {
+    "claim": "The full fielding methodology of the Billion Dollar Boy burnout survey - Censuswide as fielding agency, July 2025 fieldwork, 500 US / 500 UK creator split, and 2,000+2,000 consumer arms - is disclosed only in this archived CosmeticsDesign-Europe article; the BDB press release itself omits this detail.",
+    "stance": "neutral",
+    "stance_target": "methodology transparency / provenance of the anchor burnout survey",
+    "evidence_type": "empirical",
+    "scope_conditions": "Provenance/methodology-audit finding. This Wayback-archived trade article (captured 4 March 2026; live URL now dead after CosmeticsDesign's March 2026 closure) is the sole surviving record naming the fielding agency and exact sample split for the primary anchor study in this batch.",
+    "quoted_support": "\"The research, which was undertaken in July 2025 by Censuswide and commissioned by Billion Dollar Boy, quizzed 1,000 senior marketing professionals; 1,000 content creators in the US and UK (500 per market); 2,000 US consumers; and 2,000 UK consumers.\"",
+    "numbers": ["1,000 marketers", "1,000 creators", "500 US", "500 UK", "2,000 US consumers", "2,000 UK consumers"],
+    "entities": ["Censuswide", "Billion Dollar Boy", "CosmeticsDesign-Europe"],
+    "time_period": "July 2025",
+    "region": "US, UK",
+    "confidence": "high",
+    "source_note_id": "52-of-content-creators-say-they-have-experienced-burnout"
+  },
+  {
+    "claim": "52% of the 1,000 US/UK content creators surveyed have experienced career burnout and 37% considered quitting the industry because of it, per the Censuswide/Billion Dollar Boy July 2025 survey.",
+    "stance": "neutral",
+    "stance_target": "prevalence of self-reported creator burnout and quit intention",
+    "evidence_type": "statistical",
+    "scope_conditions": "DERIVATIVE restatement of the same n=1,000 US/UK Censuswide dataset as the BDB press release - not independent corroboration. Intention to quit measured among active creators; cannot capture anyone who already left. US/UK only.",
+    "quoted_support": "\"Global social media marketing agency Billion Dollar Boy has shared its new research, which reveals that 52% of creators quizzed have experienced career burnout and 37% considered quitting the industry because of it.\"",
+    "numbers": ["52%", "37%"],
+    "entities": ["Billion Dollar Boy", "Censuswide"],
+    "time_period": "July 2025",
+    "region": "US, UK",
+    "confidence": "medium",
+    "source_note_id": "52-of-content-creators-say-they-have-experienced-burnout"
+  }
+]

@@ -1,0 +1,146 @@
+[
+  {
+    "claim": "CreatorMap reports that of 97,601 independent YouTube channels that had at least 10,000 subscribers in 2019, 74.8% were dormant, fading or deleted by 2026 and only 21% were still in positive subscriber growth.",
+    "stance": "supports",
+    "stance_target": "Content creation has extremely high multi-year attrition even among creators who have already reached a meaningful audience",
+    "evidence_type": "statistical",
+    "scope_conditions": "Vendor (influencer-discovery SaaS) blog study, undated on the page itself but dated 10 May 2026 on the publisher's own related-article card; no author byline; YouTube Data API; global channel set with NO country composition reported; cohort restricted to channels already at 10,000+ subscribers in 2019, so it measures attrition among established creators, not among all starters",
+    "quoted_support": "Combined, 74.8% of the 2019 cohort is now Dormant, Fading, or Gone. Only 21% are in positive growth territory (Breakout or Growing).",
+    "numbers": [
+      "97,601 channels",
+      "Dormant 40,379 (41.4%)",
+      "Fading 24,766 (25.4%)",
+      "Breakout 13,464 (13.8%)",
+      "Gone 7,781 (8.0%)",
+      "Growing 7,028 (7.2%)",
+      "Stalling 3,425 (3.5%)",
+      "74.8%",
+      "21%",
+      "2019-2026",
+      "threshold 10,000 subscribers"
+    ],
+    "entities": [
+      "CreatorMap",
+      "YouTube Data API"
+    ],
+    "time_period": "2019 to 2026 (7-year window)",
+    "region": "Global / unspecified; no country breakdown published",
+    "confidence": "low",
+    "source_note_id": "youtube-channel-survival-rates-a-7-year-creator-study-creatormap"
+  },
+  {
+    "claim": "The CreatorMap survival study's six outcome categories, which it states are exhaustive, sum to 96,843 channels rather than the 97,601 headline sample, leaving 758 channels unaccounted for and the reported percentages summing to 99.3%.",
+    "stance": "refutes",
+    "stance_target": "The reliability and reproducibility of the CreatorMap 97,601-channel survival study",
+    "evidence_type": "statistical",
+    "scope_conditions": "Arithmetic check performed on the figures as published; the four size-tier totals (54,131 + 25,921 + 13,232 + 3,559) also sum to 96,843, confirming the internal dataset is 96,843 and the headline N is inflated by 758",
+    "quoted_support": "Each channel was assigned to one of six outcomes by comparing its 2019 subscriber count against its 2026 subscriber count and posting activity, all sourced directly from the YouTube Data API",
+    "numbers": [
+      "40,379+24,766+13,464+7,781+7,028+3,425 = 96,843",
+      "headline 97,601",
+      "discrepancy 758",
+      "percentages sum to 99.3%",
+      "tier totals sum 96,843"
+    ],
+    "entities": [
+      "CreatorMap"
+    ],
+    "time_period": "2026",
+    "region": "n/a",
+    "confidence": "high",
+    "source_note_id": "youtube-channel-survival-rates-a-7-year-creator-study-creatormap"
+  },
+  {
+    "claim": "The study discloses outcome definitions and a data source but no author, no on-page publication date, no method for how the 2019 subscriber snapshot was captured, no definition of how 'independent influencer' was distinguished from corporate channels, no confidence intervals and no data availability, and it closes with a signup call-to-action for the vendor's own product.",
+    "stance": "refutes",
+    "stance_target": "Treating the CreatorMap survival figures as reproducible research-grade telemetry",
+    "evidence_type": "statistical",
+    "scope_conditions": "Audit of the page as fetched 27 July 2026; the YouTube Data API does not serve historical subscriber counts, so the unexplained 2019 snapshot is a proprietary and externally unverifiable input",
+    "quoted_support": "CreatorMap was built on this insight. Our platform maps the full landscape of active, growing independent YouTube creators, scoring channels for trajectory, engagement, and audience alignment.",
+    "numbers": [
+      "fetched 2026-07-27",
+      "0 named authors",
+      "0 disclosed confidence intervals",
+      "0 disclosed sampling method for the 2019 snapshot"
+    ],
+    "entities": [
+      "CreatorMap",
+      "YouTube Data API"
+    ],
+    "time_period": "2026",
+    "region": "n/a",
+    "confidence": "high",
+    "source_note_id": "youtube-channel-survival-rates-a-7-year-creator-study-creatormap"
+  },
+  {
+    "claim": "Survival in the CreatorMap cohort rises monotonically with 2019 channel size: 11.4% of Nano channels (10k-50k subs) were still actively posting by 2026 versus 33.5% of Micro, 49.7% of Mid and 66.7% of Macro+ channels.",
+    "stance": "supports",
+    "stance_target": "Creator attrition is concentrated among small creators and audience size buys durability",
+    "evidence_type": "statistical",
+    "scope_conditions": "Vendor study, same caveats; 'still actively posting' excludes the Fading category even though Fading is itself defined as still posting, and the Nano tier components (8.7+2.2+0.8) sum to 11.7% not the 11.4% stated",
+    "quoted_support": "Nano (10K-50K) 11.4% | Micro (50K-200K) 33.5% | Mid (200K-1M) 49.7% | Macro+ (>=1M) 66.7%",
+    "numbers": [
+      "Nano 11.4% of 54,131",
+      "Micro 33.5% of 25,921",
+      "Mid 49.7% of 13,232",
+      "Macro+ 66.7% of 3,559",
+      "Nano dormant 46.1% (24,959)",
+      "Nano fading 33.0%",
+      "Nano gone 9.3%",
+      "Macro+ dormant 25.1%"
+    ],
+    "entities": [
+      "CreatorMap"
+    ],
+    "time_period": "2019-2026",
+    "region": "Global / unspecified",
+    "confidence": "low",
+    "source_note_id": "youtube-channel-survival-rates-a-7-year-creator-study-creatormap"
+  },
+  {
+    "claim": "Among the 23,917 CreatorMap channels still active in 2026, median subscriber growth since 2019 was 2.25x, the top decile grew at least 8.62x and the maximum was 1,699x, a distribution the study itself concedes is computed only on survivors.",
+    "stance": "supports",
+    "stance_target": "Creator outcome distributions are extremely right-skewed and survivor-conditioned summaries overstate typical returns",
+    "evidence_type": "statistical",
+    "scope_conditions": "Explicitly a survivor-only subset (23,917 of ~96,843 channels); the study states the excluded 88.6% of Nano and 66.5% of Micro channels are not in the distribution",
+    "quoted_support": "The important caveat: a 2.25x median sounds impressive, but it is the median of a heavily filtered group, channels that survived, stayed active, and had measurable subscriber data.",
+    "numbers": [
+      "23,917 active channels",
+      "median 2.25x",
+      "top 25% >=4.19x",
+      "top 10% >=8.62x",
+      "top 5% >=14.85x",
+      "max 1,699x"
+    ],
+    "entities": [
+      "CreatorMap"
+    ],
+    "time_period": "2019-2026",
+    "region": "Global / unspecified",
+    "confidence": "low",
+    "source_note_id": "youtube-channel-survival-rates-a-7-year-creator-study-creatormap"
+  },
+  {
+    "claim": "CreatorMap splits creator failure into two measurable modes: dormancy (41.4% of the cohort, no upload in 180+ days) and algorithmic abandonment (25.4%, still uploading but averaging under 2,500 views across the last five videos).",
+    "stance": "supports",
+    "stance_target": "Creator exit is predominantly a slow fade rather than a discrete quitting event",
+    "evidence_type": "statistical",
+    "scope_conditions": "Definitional thresholds (180 days, 2,500 views) are chosen by the vendor and not justified; the 'Gone' category also absorbs channels merely 'inaccessible via the API', conflating deletion with privacy changes and regional blocking",
+    "quoted_support": "The most common failure is not a sudden collapse, it is a slow fade into silence. Over 40,000 channels simply stopped uploading. No dramatic finale, no public announcement.",
+    "numbers": [
+      "41.4% dormant",
+      "25.4% fading",
+      "180+ days without upload",
+      "under 2,500 average views over last 5 uploads",
+      "24,766 fading channels"
+    ],
+    "entities": [
+      "CreatorMap",
+      "YouTube"
+    ],
+    "time_period": "2019-2026",
+    "region": "Global / unspecified",
+    "confidence": "low",
+    "source_note_id": "youtube-channel-survival-rates-a-7-year-creator-study-creatormap"
+  }
+]

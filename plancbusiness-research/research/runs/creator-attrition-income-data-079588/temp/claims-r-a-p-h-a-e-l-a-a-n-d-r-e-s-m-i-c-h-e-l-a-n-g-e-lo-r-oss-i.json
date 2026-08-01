@@ -1,0 +1,58 @@
+[
+  {
+    "claim": "Using a difference-in-differences design on a Patreon panel of 11,371 content creators (131,006 CC-month observations) in the 'Video' category from August 2017 to August 2018, creators who multi-homed on both YouTube and Patreon (treated by YouTube's Adpocalypse-driven demonetization) increased subscriber-only/paid content production and patron subscriptions on Patreon relative to Patreon-only creators (control), after YouTube tightened its Partner Program eligibility (>=1,000 subscribers and >=4,000 watch hours) effective February 20, 2018.",
+    "stance": "supports",
+    "stance_target": "existence of a causal income-shock quasi-experiment on creator behavior using the exact 2017-2018 YouTube Adpocalypse event named in Gap 3",
+    "evidence_type": "empirical",
+    "scope_conditions": "Patreon 'Video' category creators multi-homing with YouTube, August 2017-August 2018",
+    "quoted_support": "We find that in the aftermath of the YouTube 'Adpocalypse', content creators who engage in multi-homing increase the amount of subscriber-only content they offer on Patreon. In addition, the number of Patreon subscriptions increases.",
+    "numbers": ["n=11,371 unique CCs", "131,006 CC-month observations", "85% of CCs link to YouTube (treated group)", "mean 84 patrons (median 10)", "mean $321/month earnings (median $54)", "eligibility threshold: 1,000 subscribers / 4,000 watch hours, effective Feb 20, 2018"],
+    "entities": ["YouTube", "Patreon", "Graphtreon", "YouTube Partner Program"],
+    "time_period": "August 2017-August 2018",
+    "region": "not geographically restricted (global Patreon/YouTube creators, English-language platforms)",
+    "confidence": "high",
+    "source_note_id": "r-a-p-h-a-e-l-a-a-n-d-r-e-s-m-i-c-h-e-l-a-n-g-e-lo-r-oss-i"
+  },
+  {
+    "claim": "Around the YouTube Adpocalypse demonetization shock, the Patreon 'Video'-category creator population grew rather than shrank: more new creators joined than left throughout August 2017-August 2018, with entry spikes in August 2017, November 2017, and January 2018 coinciding with the ad-boycott timeline, and the total creator population (11,000+) remained 'relatively stable' with fewer than 1,200 new entrants in late 2017/early 2018.",
+    "stance": "refutes",
+    "stance_target": "a simple income-shock-causes-creator-exit model; supports the pipeline's structural-access framing where creators with access to an alternative monetization channel (Patreon) absorbed the shock via reallocation rather than attrition",
+    "evidence_type": "empirical",
+    "scope_conditions": "Patreon 'Video' category, August 2017-August 2018",
+    "quoted_support": "As can be seen in the figure, the platform experienced growth during this period, with more new CCs joining than leaving...the total number of CCs present from August 2017 to August 2018 exceeded 11,000, while the number of new CCs joining the platforms in late 2017 or early 2018 is less than 1200. This suggests that while there were fluctuations in the number of new arrivals, the overall CC population on Patreon experienced only modest changes.",
+    "numbers": ["11,000+ total CCs", "<1,200 new entrants late 2017/early 2018", "entry spikes Aug 2017, Nov 2017, Jan 2018"],
+    "entities": ["Patreon"],
+    "time_period": "August 2017-August 2018",
+    "region": "not geographically restricted",
+    "confidence": "medium-high",
+    "source_note_id": "r-a-p-h-a-e-l-a-a-n-d-r-e-s-m-i-c-h-e-l-a-n-g-e-lo-r-oss-i"
+  },
+  {
+    "claim": "A closely related paper cited in this study's literature review -- El-Komboz, Kerkhof & Loh (2023), CESifo Working Paper No. 10363, 'Platform Partnership Programs and Content Supply: Evidence from the YouTube Adpocalypse' -- uses a regression discontinuity design around YouTube's exact monetization-eligibility thresholds and finds that creators who no longer qualified for monetization produced both fewer pieces of content and lower-quality content than creators who remained eligible.",
+    "stance": "supports",
+    "stance_target": "existence of a genuine RD-identified causal income-eligibility-shock effect on creator content OUTPUT (not confirmed as an effect on exit/discontinuation specifically)",
+    "evidence_type": "empirical",
+    "scope_conditions": "YouTube creators near the 2018 Partner Program eligibility threshold; secondary citation only -- primary paper could not be fetched (blocked by bot-walls on EconStor, ifo.de, and an earlier EconStor-hosted 2019 conference draft)",
+    "quoted_support": "One paper that closely relates to ours is El-Komboz et al. (2023) who consider the direct impact of the YouTube 'Adpocalypse' on YouTube content creators. Using a regression discontinuity design, they found that content creators who no longer qualify for platform monetization channels produce both fewer pieces of content and lower quality content compared to creators who remained eligible.",
+    "numbers": [],
+    "entities": ["El-Komboz", "Kerkhof", "Loh", "YouTube", "CESifo"],
+    "time_period": "2018 (YouTube Partner Program eligibility change)",
+    "region": "not specified",
+    "confidence": "medium (secondary citation, primary source not independently verified)",
+    "source_note_id": "r-a-p-h-a-e-l-a-a-n-d-r-e-s-m-i-c-h-e-l-a-n-g-e-lo-r-oss-i"
+  },
+  {
+    "claim": "Following YouTube's demonetization shock, overall content toxicity decreased on YouTube (the more heavily moderated platform) and increased on Patreon (the less-moderated platform to which multi-homing creators shifted effort), indicating toxic content migrated across platforms rather than disappearing.",
+    "stance": "neutral",
+    "stance_target": "platform-migration response to an income/moderation shock as an alternative to exit",
+    "evidence_type": "empirical",
+    "scope_conditions": "YouTube and Patreon, Video category, 2017-2018",
+    "quoted_support": "Our results suggest that the overall toxicity of all subscriber-only contents (only accessible via Patreon) increases after the shock. Accordingly, and confirming our theory, toxicity migrates to Patreon in response to YouTube's content restrictions.",
+    "numbers": [],
+    "entities": ["YouTube", "Patreon"],
+    "time_period": "2017-2018",
+    "region": "not geographically restricted",
+    "confidence": "high",
+    "source_note_id": "r-a-p-h-a-e-l-a-a-n-d-r-e-s-m-i-c-h-e-l-a-n-g-e-lo-r-oss-i"
+  }
+]

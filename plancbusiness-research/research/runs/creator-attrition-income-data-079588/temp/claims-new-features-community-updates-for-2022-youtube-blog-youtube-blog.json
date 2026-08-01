@@ -1,0 +1,44 @@
+[
+  {
+    "claim": "YouTube disclosed in 2021 that it reached 2 million creators enrolled in the YouTube Partner Program, with 10 monetization methods available, but the same post gives no aggregate payout total for that population, so no per-creator average income can be derived from this source alone.",
+    "stance": "neutral",
+    "stance_target": "Aggregate creator-count disclosures without an accompanying payout figure cannot establish average or median creator income",
+    "evidence_type": "empirical",
+    "scope_conditions": "Global (not US-only); YouTube Partner Program; platform first-party disclosure, 10 February 2022",
+    "quoted_support": "In 2021, we reached the incredible milestone of 2 million creators in the YouTube Partner Program, with 10 ways for them to make money.",
+    "numbers": ["2 million YPP creators", "10 monetization methods"],
+    "entities": ["YouTube Partner Program", "Neal Mohan"],
+    "time_period": "2021, published February 2022",
+    "region": "Global; Western-sourced platform disclosure",
+    "confidence": "high",
+    "source_note_id": "new-features-community-updates-for-2022-youtube-blog-youtube-blog"
+  },
+  {
+    "claim": "More than 40% of creators who received a payment from the YouTube Shorts Fund in 2021 had not previously monetized any content on YouTube, indicating the Fund functioned partly as a new-monetization onramp rather than solely rewarding already-monetized creators.",
+    "stance": "neutral",
+    "stance_target": "Some platform monetization programs expand the pool of paid creators beyond the existing Partner Program population",
+    "evidence_type": "empirical",
+    "scope_conditions": "YouTube Shorts Fund, 2021, global; no base sample size (N) disclosed for the 40% figure",
+    "quoted_support": "In fact, over 40 percent of creators who got a check from the Fund last year weren't previously monetizing their content on YouTube.",
+    "numbers": ["over 40%"],
+    "entities": ["YouTube Shorts Fund", "YouTube"],
+    "time_period": "2021",
+    "region": "Global",
+    "confidence": "low",
+    "source_note_id": "new-features-community-updates-for-2022-youtube-blog-youtube-blog"
+  },
+  {
+    "claim": "YouTube reported daily live watchtime more than tripled between January 2020 and December 2021, but did not disclose the absolute watch-hour figures, only the multiple.",
+    "stance": "neutral",
+    "stance_target": "Platform growth claims stated as multiples without absolute baselines limit independent verification",
+    "evidence_type": "empirical",
+    "scope_conditions": "YouTube Live, global, January 2020-December 2021",
+    "quoted_support": "daily live watchtime more than tripled between January 2020 and December 2021.",
+    "numbers": ["3x+ increase, Jan 2020-Dec 2021"],
+    "entities": ["YouTube Live"],
+    "time_period": "January 2020-December 2021",
+    "region": "Global",
+    "confidence": "low",
+    "source_note_id": "new-features-community-updates-for-2022-youtube-blog-youtube-blog"
+  }
+]

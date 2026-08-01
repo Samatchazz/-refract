@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PlanC — Console v3</title>
+<link rel="stylesheet" href="/research/console/console.css">
+</head>
+<body>
+
+<div class="shell">
+
+  <nav class="rail" role="tablist" aria-label="แผงการตัดสินใจ">
+    <div class="brand">
+      <b>PlanC Console</b>
+      <span>v3 · ทุกการเลือกอยู่ที่นี่</span>
+    </div>
+    <!-- tabs injected -->
+  </nav>
+
+  <main class="main" id="main">
+    <!-- panels injected -->
+  </main>
+
+  <aside class="side">
+    <div class="head">
+      <b>ตัวอย่างสด</b>
+      <div class="seg">
+        <button class="segb" id="vp-d" aria-pressed="true" type="button">1440</button>
+        <button class="segb" id="vp-m" aria-pressed="false" type="button">390</button>
+        <button class="segb" id="reload" type="button" title="โหลดใหม่">↻</button>
+      </div>
+    </div>
+    <div class="framenote">planc/ ตัวจริง · token เปลี่ยนตามที่เลือกทันที · แผงคอมโพเนนต์พรีวิวไม่ได้</div>
+    <div class="frame" id="frame">
+      <iframe id="preview" src="/planc/" title="ตัวอย่างเว็บ PlanC"></iframe>
+    </div>
+
+    <div class="diff" id="diff">
+      <h3>สิ่งที่จะเปลี่ยนจากของเดิม</h3>
+      <div class="empty" id="diff-empty">ยังไม่ได้เลือกอะไรที่ต่างจากที่บิ้วไว้</div>
+      <div id="diff-list"></div>
+      <div id="analysis"></div>
+    </div>
+
+    <div class="actions">
+      <div class="count" id="count">—</div>
+      <button class="btn" id="gen" type="button">GEN PROMPT — สร้างเว็บใหม่ทั้งหน้า</button>
+      <button class="btn ghost" id="save" type="button">บันทึก SELECTION.json</button>
+      <button class="btn ghost" id="reset" type="button">คืนค่าเป็นของที่บิ้วไว้</button>
+    </div>
+  </aside>
+
+</div>
+
+<div class="sheet" id="sheet" hidden>
+  <div class="box">
+    <header>
+      <b id="sheet-title">BUILD PROMPT</b>
+      <div class="g">
+        <button class="btn" id="sheet-copy" type="button">คัดลอก</button>
+        <button class="btn ghost" id="sheet-close" type="button">ปิด</button>
+      </div>
+    </header>
+    <textarea id="sheet-text" spellcheck="false" readonly></textarea>
+    <footer id="sheet-foot"></footer>
+  </div>
+</div>
+
+<script src="/research/console/app.js"></script>
+</body>
+</html>

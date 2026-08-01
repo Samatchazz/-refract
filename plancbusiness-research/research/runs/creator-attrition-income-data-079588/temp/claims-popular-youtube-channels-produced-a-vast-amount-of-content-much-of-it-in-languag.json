@@ -1,0 +1,94 @@
+[
+  {
+    "claim": "Pew measured a roughly 15-fold gap between mean and median video performance among popular YouTube channels: the average video received 58,358 views in its first week while 50% of videos received fewer than 3,860.",
+    "stance": "supports",
+    "stance_target": "Mean-based creator statistics are systematically misleading and the median creator outcome is an order of magnitude below the average",
+    "evidence_type": "empirical",
+    "scope_conditions": "Unit is videos, not creators, and only from channels with 250,000+ subscribers, i.e. the top tier of the platform; the median across all channels would be far lower still",
+    "quoted_support": "each individual video received an average of 58,358 views in its first week, although 50% received fewer than 3,860 views",
+    "numbers": [
+      "mean 58,358 views",
+      "median under 3,860 views",
+      "ratio about 15x",
+      "243,254 videos",
+      "14.2 billion total views",
+      "48,486 hours"
+    ],
+    "entities": [
+      "Pew Research Center",
+      "YouTube"
+    ],
+    "time_period": "First week of January 2019",
+    "region": "Global",
+    "confidence": "high",
+    "source_note_id": "popular-youtube-channels-produced-a-vast-amount-of-content-much-of-it-in-languag"
+  },
+  {
+    "claim": "Within the 56% of popular channels that were active, output was itself highly concentrated: 31% posted exactly one video, 55% posted between two and nine, and the 14% that posted ten or more published 75% of all videos.",
+    "stance": "supports",
+    "stance_target": "Sustained high-volume production is confined to a small minority even among established creators",
+    "evidence_type": "empirical",
+    "scope_conditions": "Among the 24,632 active channels in a single week, January 2019; 250,000+ subscriber frame",
+    "quoted_support": "Just 14% posted 10 or more videos during the study period, but this subset of channels was responsible for publishing 75% of all of the videos uploaded by popular channels during the week.",
+    "numbers": [
+      "31% posted one video",
+      "55% posted 2-9 videos",
+      "14% posted 10 or more",
+      "that 14% produced 75% of videos"
+    ],
+    "entities": [
+      "Pew Research Center"
+    ],
+    "time_period": "1-7 January 2019",
+    "region": "Global",
+    "confidence": "high",
+    "source_note_id": "popular-youtube-channels-produced-a-vast-amount-of-content-much-of-it-in-languag"
+  },
+  {
+    "claim": "Pew found English-language videos from popular channels earned a median of 13,316 first-week views versus 3,028 for videos in other languages, a 4.4-fold median advantage, even though non-English videos made up over 80% of all output.",
+    "stance": "refutes",
+    "stance_target": "That findings about creator economics measured on Anglophone content generalize to non-English-language markets such as Southeast Asia",
+    "evidence_type": "empirical",
+    "scope_conditions": "Same platform, same week, same channel-size frame, so the comparison is unusually clean; Pew does not decompose the non-English group by country or language, so the gap cannot be attributed to any specific market; measures views, not revenue, and regional CPM differences would widen the earnings gap further",
+    "quoted_support": "English-language videos comprised just 17% of the videos that were published by popular channels during the week, but they received 28% of all of the views received by popular-channel videos during their first week after being published.",
+    "numbers": [
+      "English median 13,316 views (mean 99,043)",
+      "other-language median 3,028 (mean 50,310)",
+      "median ratio 4.4x",
+      "English 17% of videos but 28% of views",
+      "English median 298 likes vs 42",
+      "47 comments vs 6"
+    ],
+    "entities": [
+      "Pew Research Center",
+      "YouTube"
+    ],
+    "time_period": "First week of January 2019",
+    "region": "Global; English versus all other languages",
+    "confidence": "high",
+    "source_note_id": "popular-youtube-channels-produced-a-vast-amount-of-content-much-of-it-in-languag"
+  },
+  {
+    "claim": "A majority of Pew's active popular channels were not Anglophone: 67% posted exclusively in languages other than English, 28% exclusively in English and 5% in both, so the most-cited Western YouTube census is drawn from a predominantly non-English channel population.",
+    "stance": "neutral",
+    "stance_target": "The assumption that Pew's YouTube research is US or Western-only evidence",
+    "evidence_type": "empirical",
+    "scope_conditions": "Language composition is published; country composition is not, so this establishes linguistic breadth without establishing regional representation and no Southeast Asian country share is reported anywhere; separately, Pew's top-500 video comparison was restricted to videos viewable in the United States, the API default, which is a genuine US-centric artefact",
+    "quoted_support": "And within this subset of active channels, 28% posted videos exclusively in English. Meanwhile, 67% posted videos exclusively in languages other than English, and 5% posted videos in multiple languages including English.",
+    "numbers": [
+      "67% non-English only",
+      "28% English only",
+      "5% mixed",
+      "17% of all videos fully in English",
+      "top-500 list restricted to US-viewable videos"
+    ],
+    "entities": [
+      "Pew Research Center",
+      "YouTube"
+    ],
+    "time_period": "January 2019",
+    "region": "Global; country composition unreported",
+    "confidence": "high",
+    "source_note_id": "popular-youtube-channels-produced-a-vast-amount-of-content-much-of-it-in-languag"
+  }
+]

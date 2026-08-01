@@ -1,0 +1,44 @@
+[
+ {
+  "claim": "Employed in-house content creators in Indonesia earn an average monthly salary of Rp 3,500,000 to Rp 5,350,000 as of July 2026, based on employer-disclosed salary ranges in job advertisements from the preceding three months.",
+  "stance": "supports",
+  "stance_target": "The position that an employment-side wage benchmark exists for Indonesian content work and provides the correct denominator for judging whether independent creator income constitutes a living wage",
+  "evidence_type": "statistical",
+  "scope_conditions": "Indonesia only; refreshed 1 July 2026; covers EMPLOYED full-time roles advertised on Jobstreet, not independent or self-employed creators; only ads with voluntarily disclosed salary are included; number of ads not disclosed",
+  "quoted_support": "The average monthly salary for Content Creator jobs in Indonesia ranges from Rp 3.500.000 to Rp 5.350.000. [...] Our insights are based on full-time salary ranges disclosed by employers on Jobstreet job ads.",
+  "numbers": ["Rp 3,500,000 low average", "Rp 5,350,000 high average", "Rp 1.7M distribution floor", "Rp 7.2M distribution ceiling", "refreshed 1 July 2026", "last three months of listings"],
+  "entities": ["Jobstreet", "SEEK", "Indonesia"],
+  "time_period": "July 2026 (three-month trailing window)",
+  "region": "Indonesia",
+  "confidence": "high",
+  "source_note_id": "content-creator-salary-in-indonesia-july-2026-jobstreet"
+ },
+ {
+  "claim": "Indonesian salaried content-creator pay is compressed both geographically and against adjacent creative roles, with the ten top-paying locations spanning only Rp 5.1M to Rp 5.6M and comparable roles such as Social Media Manager (Rp 8,250,000) and Content Writer (Rp 8,000,000) paying substantially more.",
+  "stance": "supports",
+  "stance_target": "The position that content creation is a low-paid occupation relative to adjacent professionalised media roles even when performed as salaried employment, independent of the winner-take-all dynamics of independent creation",
+  "evidence_type": "statistical",
+  "scope_conditions": "Indonesia; July 2026; employer-disclosed advertised salaries only; Jobstreet's own role taxonomy",
+  "quoted_support": "Copywriter Typical monthly salary Rp 4.750.000 [...] Content Writer Typical monthly salary Rp 8.000.000 [...] Social Media Manager Typical monthly salary Rp 8.250.000",
+  "numbers": ["Copywriter Rp 4,750,000", "Content Writer Rp 8,000,000", "Writer Rp 4,375,000", "Editor Rp 4,760,000", "Videographer Rp 5,180,000", "Video Editor Rp 5,125,000", "Social Media Manager Rp 8,250,000", "Producer Rp 6,625,000", "top locations Rp 5.1M-5.6M"],
+  "entities": ["Jobstreet", "Indonesia"],
+  "time_period": "July 2026",
+  "region": "Indonesia",
+  "confidence": "high",
+  "source_note_id": "content-creator-salary-in-indonesia-july-2026-jobstreet"
+ },
+ {
+  "claim": "The Jobstreet Indonesia salary figure measures employed content-creator wages and cannot be used as a proxy for independent creator earnings, a distinction that collapses in most secondary reporting on Indonesian creator income.",
+  "stance": "refutes",
+  "stance_target": "The common inference that salary-aggregator figures describe what independent Indonesian content creators earn",
+  "evidence_type": "empirical",
+  "scope_conditions": "Methodological scope statement published by the source; Indonesia; July 2026",
+  "quoted_support": "Our insights are based on full-time salary ranges disclosed by employers on Jobstreet job ads. We only include salary data from jobs listed in the last three months.",
+  "numbers": ["full-time employer-disclosed ads only", "three-month window", "sample size not disclosed"],
+  "entities": ["Jobstreet", "Indonesia"],
+  "time_period": "July 2026",
+  "region": "Indonesia",
+  "confidence": "high",
+  "source_note_id": "content-creator-salary-in-indonesia-july-2026-jobstreet"
+ }
+]

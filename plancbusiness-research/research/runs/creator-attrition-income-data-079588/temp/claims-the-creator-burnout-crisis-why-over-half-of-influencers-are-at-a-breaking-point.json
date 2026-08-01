@@ -1,0 +1,58 @@
+[
+  {
+    "claim": "Viral Nation's article recirculates the Billion Dollar Boy/Censuswide burnout figures (52% burnout, 37% quit consideration) as background context, not as independent data.",
+    "stance": "neutral",
+    "stance_target": "provenance of the 52%/37% burnout figures",
+    "evidence_type": "empirical",
+    "scope_conditions": "Derivative; same underlying n=1,000 US/UK dataset as the BDB press release. Does not add a second sample.",
+    "quoted_support": "\"A global study by Billion Dollar Boy found that 52% of creators are experiencing burnout and 37% are considering leaving their careers altogether.\"",
+    "numbers": ["52%", "37%"],
+    "entities": ["Billion Dollar Boy", "Viral Nation"],
+    "time_period": "July 2025 (survey), September 2025 (article)",
+    "region": "US, UK",
+    "confidence": "high",
+    "source_note_id": "the-creator-burnout-crisis-why-over-half-of-influencers-are-at-a-breaking-point"
+  },
+  {
+    "claim": "50.71% of influencers earn less than USD 15,000 annually, and only 15.41% earn over USD 100,000 annually, per a cited NeoReach Creator Earnings Report 2025; the share of low earners has risen steadily since 2023.",
+    "stance": "supports",
+    "stance_target": "income distribution among creators / share earning below a living-wage threshold",
+    "evidence_type": "statistical",
+    "scope_conditions": "SELF-SELECTED VENDOR SURVEY - NeoReach is an influencer-marketing platform with a commercial interest in framing creator income patterns. This article does not fetch the underlying NeoReach report directly, so sample size, sampling frame, field dates, and country mix are UNSTATED and unverified here; must be verified against the primary NeoReach report before citing as a load-bearing income-distribution figure. Country coverage unknown - cannot be assumed to include or exclude Southeast Asia.",
+    "quoted_support": "\"A NeoReach report revealed: 50.71% of influencers earn less than $15,000 annually / The share of low earners has risen steadily since 2023 / Only 15.41% of influencers earn over $100,000 annually\"",
+    "numbers": ["50.71%", "$15,000", "15.41%", "$100,000"],
+    "entities": ["NeoReach"],
+    "time_period": "2025 (report title), trend since 2023",
+    "region": "unstated - unverified",
+    "confidence": "low",
+    "source_note_id": "the-creator-burnout-crisis-why-over-half-of-influencers-are-at-a-breaking-point"
+  },
+  {
+    "claim": "A named creator (Gabe Dannenbring, 2M+ TikTok followers) describes influencer income as effectively 100% commission-based, creating financial vulnerability if a creator builds a lifestyle around a peak-earning year.",
+    "stance": "supports",
+    "stance_target": "income volatility as a driver of creator financial instability",
+    "evidence_type": "anecdotal",
+    "scope_conditions": "Single named-creator testimonial, not a measured statistic; illustrative of the mechanism behind the '55% financial instability' severity figure in the BDB survey but carries no sample size of its own.",
+    "quoted_support": "\"Influencers essentially operate in a 100% commission-based field. If you build a lifestyle around your peak earning year, then make significantly less the following year, you could be in huge trouble financially.\"",
+    "numbers": [],
+    "entities": ["Gabe Dannenbring"],
+    "time_period": "2025",
+    "region": "US (implied)",
+    "confidence": "low",
+    "source_note_id": "the-creator-burnout-crisis-why-over-half-of-influencers-are-at-a-breaking-point"
+  },
+  {
+    "claim": "An unattributed Goldman Sachs figure cited in this article claims 'more than 50 million influencers worldwide', growing 10-20% per year.",
+    "stance": "neutral",
+    "stance_target": "global creator population size (not attrition or income per se)",
+    "evidence_type": "statistical",
+    "scope_conditions": "Cited without a direct link to a specific Goldman Sachs report, methodology, or date; unverified secondhand figure. No country breakdown given, so no basis to assess Southeast Asia representation.",
+    "quoted_support": "\"With more than 50 million influencers worldwide, growing 10-20% each year, this workforce is only going to get larger and more competitive.\"",
+    "numbers": ["50 million", "10-20% annual growth"],
+    "entities": ["Goldman Sachs"],
+    "time_period": "unstated",
+    "region": "global (unverified)",
+    "confidence": "low",
+    "source_note_id": "the-creator-burnout-crisis-why-over-half-of-influencers-are-at-a-breaking-point"
+  }
+]

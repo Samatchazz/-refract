@@ -1,0 +1,72 @@
+[
+  {
+    "claim": "An OSINT-composite estimate places total YouTube channels at 113.9 million as of March 2022, with only 32,300 (0.028%) reaching 1 million or more subscribers and 85.54 million (75.1%) having fewer than 100 subscribers.",
+    "stance": "supports",
+    "stance_target": "The overwhelming majority of content creators never reach an audience scale associated with meaningful income",
+    "evidence_type": "statistical",
+    "scope_conditions": "Global; YouTube platform; estimate derived by a single blogger from Google, Google Ads, YouTube, SEMrush, SocialBlade, Statista, GlobalWebIndex and SimilarWeb data, not from platform-disclosed telemetry; updated 26 March 2022",
+    "quoted_support": "YouTube has 113.9 million YouTube channels. Only 4.4% of the 2.6 billion active YouTube users created their own YouTube channel.",
+    "numbers": ["113.9 million channels", "32,300 channels with 1M+ subs (0.028%)", "85.54 million channels with 0-99 subs", "2.6 billion monthly active users", "4.4% of users have a channel"],
+    "entities": ["YouTube", "SocialBlade", "SimilarWeb", "Statista"],
+    "time_period": "March 2022",
+    "region": "Global; US/Western data sources; not Southeast Asia specific",
+    "confidence": "low",
+    "source_note_id": "how-many-youtube-channels-are-there-in-2026-tim-queen"
+  },
+  {
+    "claim": "Only 10.1 million of an estimated 113.9 million YouTube channels (8.86%) have reached 1,000 or more subscribers, one of the two eligibility gates for the YouTube Partner Program.",
+    "stance": "supports",
+    "stance_target": "Very few creators clear the minimum monetization threshold on YouTube",
+    "evidence_type": "statistical",
+    "scope_conditions": "Global; OSINT-derived estimate, March 2022",
+    "quoted_support": "10.1 million YouTube channels have at least 1,000 subscribers. That is 8.86% of all YouTube channels or about 1 in 12 channels.",
+    "numbers": ["10.1 million channels with 1,000+ subs", "8.86%", "113.9 million total channels"],
+    "entities": ["YouTube", "YouTube Partner Program"],
+    "time_period": "March 2022",
+    "region": "Global; not Southeast Asia specific",
+    "confidence": "low",
+    "source_note_id": "how-many-youtube-channels-are-there-in-2026-tim-queen"
+  },
+  {
+    "claim": "YouTube disclosed in August 2021 that 2 million creators were enrolled in the YouTube Partner Program, against an estimated 10.1 million channels meeting at least one of the two YPP subscriber/watch-hour eligibility criteria — meaning roughly 1 in 5 eligible channels are actually monetized.",
+    "stance": "supports",
+    "stance_target": "Aggregate monetized-creator counts substantially undercount channels that have reached basic audience thresholds, and eligibility does not equal monetization",
+    "evidence_type": "statistical",
+    "scope_conditions": "Global; YouTube Partner Program; platform-disclosed headcount (2 million) combined with OSINT channel-count estimate (10.1 million), so the ratio itself is only as reliable as the weaker denominator",
+    "quoted_support": "In August 2021, YouTube announced that there are 2 million creators in the YouTube Partner Program... Yet only one in five channels joins.",
+    "numbers": ["2 million YPP creators", "10.1 million channels with 1,000+ subs", "~1 in 5 ratio", "4,000 watch-hours threshold"],
+    "entities": ["YouTube Partner Program", "YouTube"],
+    "time_period": "August 2021",
+    "region": "Global",
+    "confidence": "medium",
+    "source_note_id": "how-many-youtube-channels-are-there-in-2026-tim-queen"
+  },
+  {
+    "claim": "Forbes' 2021 ranking of highest-paid YouTube creators lists pretax estimated annual revenues from MrBeast ($54M), Jake Paul ($45M), Markiplier ($38M), Rhett and Link ($30M), and Unspeakable ($28.5M), figures compiled from Captiv8, SocialBlade, and Pollstar data plus industry interviews.",
+    "stance": "neutral",
+    "stance_target": "Top-earner figures illustrate extreme survivorship-selected outliers, not typical creator income",
+    "evidence_type": "empirical",
+    "scope_conditions": "US; measured January 1-December 31, 2021; pretax, before agent/manager/lawyer fees",
+    "quoted_support": "According to Forbes, MrBeast is the highest-paid YouTube creator in history with estimated earnings of 54 million USD in 2021.",
+    "numbers": ["MrBeast $54M", "Jake Paul $45M", "Markiplier $38M", "Rhett and Link $30M", "Unspeakable $28.5M", "Dude Perfect $20M"],
+    "entities": ["MrBeast", "Jake Paul", "Markiplier", "Forbes"],
+    "time_period": "2021 calendar year",
+    "region": "US",
+    "confidence": "medium",
+    "source_note_id": "how-many-youtube-channels-are-there-in-2026-tim-queen"
+  },
+  {
+    "claim": "The blog's country-level YouTube audience table shows Southeast Asian countries with substantial YouTube viewership as of January 2022 (Indonesia 139 million, Vietnam 62.5 million, Philippines 56.6 million, Thailand 42.8 million users), but these are viewership counts, not creator counts or income data.",
+    "stance": "neutral",
+    "stance_target": "Data availability gap: Southeast Asian YouTube viewership is large but creator-income/attrition data for the region is absent from this source",
+    "evidence_type": "statistical",
+    "scope_conditions": "January 2022; sourced to Digital 2022 Global Overview Report / DataReportal; viewer counts only",
+    "quoted_support": "Indonesia ranked third, with 139 million people watching YouTube videos.",
+    "numbers": ["Indonesia 139M viewers", "Vietnam 62.5M viewers", "Philippines 56.6M viewers", "Thailand 42.8M viewers", "India 467M viewers", "US 247M viewers"],
+    "entities": ["Indonesia", "Vietnam", "Philippines", "Thailand", "DataReportal"],
+    "time_period": "January 2022",
+    "region": "Southeast Asia (viewership only, no creator/income data)",
+    "confidence": "medium",
+    "source_note_id": "how-many-youtube-channels-are-there-in-2026-tim-queen"
+  }
+]

@@ -1,0 +1,58 @@
+[
+  {
+    "claim": "TikTok Indonesia disclosed to Indonesia's parliament that 8 million creators earn income through TikTok's own monetization features, of which 63% earn more than Indonesia's minimum wage -- a platform-specific figure, not a national cross-platform census.",
+    "stance": "supports",
+    "stance_target": "TikTok platform-specific creator monetization and income levels in Indonesia",
+    "evidence_type": "statistical",
+    "scope_conditions": "Indonesia, TikTok platform only, disclosed 15 July 2025 at DPR Komisi I hearing",
+    "quoted_support": "\"125 Juta pengguna aktif yang datang ke TikTok setiap bulannya, dimana ada 8 juta kreator berpenghasilan melalui fitur monetisasi TikTok. 63 Persen di antaranya berpenghasilan lebih dari upah minimum di Indonesia.\"",
+    "numbers": ["125,000,000 monthly active TikTok users", "8,000,000 monetized creators", "63% earning above minimum wage"],
+    "entities": ["Hilmi Adrianto", "TikTok Indonesia", "DPR Komisi I", "Panja Penyiaran"],
+    "time_period": "15 July 2025",
+    "region": "Indonesia",
+    "confidence": "medium",
+    "source_note_id": "tiktok-buka-data-63-persen-kreator-di-indonesia-berpenghasilan-tinggi-merdekacom"
+  },
+  {
+    "claim": "TikTok Indonesia reported 21 million local sellers on TikTok Shop and Tokopedia combined, with 60% of promotional content on TikTok supporting local products.",
+    "stance": "neutral",
+    "stance_target": "TikTok's role in Indonesian e-commerce",
+    "evidence_type": "statistical",
+    "scope_conditions": "Indonesia, TikTok Shop and Tokopedia platforms, 15 July 2025",
+    "quoted_support": "\"21 Juta penjual lokal seluruhnya Indonesia ada di TikTok Shop dan Tokopedia\"",
+    "numbers": ["21,000,000 local sellers", "60% local-product promotional content"],
+    "entities": ["TikTok Shop", "Tokopedia", "Hilmi Adrianto"],
+    "time_period": "15 July 2025",
+    "region": "Indonesia",
+    "confidence": "medium",
+    "source_note_id": "tiktok-buka-data-63-persen-kreator-di-indonesia-berpenghasilan-tinggi-merdekacom"
+  },
+  {
+    "claim": "TikTok reported having trained 180,000 creators and UMKM (small business) participants in Indonesia, and that over 5 million business entities/UMKM use TikTok.",
+    "stance": "neutral",
+    "stance_target": "TikTok's stated support programs for Indonesian creators and small businesses",
+    "evidence_type": "statistical",
+    "scope_conditions": "Indonesia, TikTok platform, as of 15 July 2025",
+    "quoted_support": "\"Saat ini bisa dilihat ada lebih dari 5 juta entitas bisnis dan UMKM memanfaatkan TikTok. Ada 180 ribu kreator dan UMKM telah menerima pelatihan dari TikTok.\"",
+    "numbers": ["5,000,000+ business/UMKM entities", "180,000 trained creators/UMKM"],
+    "entities": ["TikTok Indonesia", "Hilmi Adrianto"],
+    "time_period": "as of 15 July 2025",
+    "region": "Indonesia",
+    "confidence": "medium",
+    "source_note_id": "tiktok-buka-data-63-persen-kreator-di-indonesia-berpenghasilan-tinggi-merdekacom"
+  },
+  {
+    "claim": "The 8-million/63%-above-UMR figure attributed to Indonesia's Menekraf in a separate speech is numerically identical to TikTok's self-reported platform-specific monetization data, indicating the ministerial 'national' claim likely derives from a single platform's disclosure rather than an independent government census.",
+    "stance": "refutes",
+    "stance_target": "the notion that the Menekraf's 8-juta/63-persen figure is an independent national government estimate",
+    "evidence_type": "statistical",
+    "scope_conditions": "Indonesia, cross-source comparison between Menekraf speech and TikTok DPR testimony",
+    "quoted_support": "\"ada 8 juta kreator berpenghasilan melalui fitur monetisasi TikTok. 63 Persen di antaranya berpenghasilan lebih dari upah minimum di Indonesia.\"",
+    "numbers": ["8,000,000", "63%"],
+    "entities": ["TikTok Indonesia", "Teuku Riefky Harsya", "Kemenekraf"],
+    "time_period": "2025",
+    "region": "Indonesia",
+    "confidence": "medium",
+    "source_note_id": "tiktok-buka-data-63-persen-kreator-di-indonesia-berpenghasilan-tinggi-merdekacom"
+  }
+]

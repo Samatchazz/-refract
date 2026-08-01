@@ -1,0 +1,12 @@
+# verification output — regenerate with `node tools/shots.mjs` / `tools/rec.mjs`
+tools/shots/
+tools/vid/
+tools/sheet.png
+
+# build output — regenerate with `python3 build.py`
+dist/
+
+node_modules/
+__pycache__/
+.DS_Store
+Thumbs.db

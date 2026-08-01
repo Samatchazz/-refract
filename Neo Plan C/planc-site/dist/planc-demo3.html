@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>planc* — ชีวิตครีเอเตอร์ ก็เหมือนเกมด่านนึง</title>
+<meta name="description" content="planc* digital — เอเจนซี่ครีเอทีฟ. เลื่อนลงเพื่อเดินไปกับเรา ทีละด่าน ทีละอุปสรรค">
+<meta name="theme-color" content="#111111">
+<meta property="og:type" content="website">
+<meta property="og:title" content="planc* — ชีวิตครีเอเตอร์ ก็เหมือนเกมด่านนึง">
+<meta property="og:description" content="เลื่อนลงเพื่อเดินไปกับเรา ทีละด่าน ทีละอุปสรรค">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+CiAgPHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiBmaWxsPSIjMTExIi8+CiAgPHRleHQgeD0iMzIiIHk9IjQ1IiBmb250LWZhbWlseT0iSGVsdmV0aWNhLEFyaWFsLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iNDIiIGZvbnQtd2VpZ2h0PSJib2xkIgogICAgICAgIGZpbGw9IiNmY2ZjZmEiIHRleHQtYW5jaG9yPSJtaWRkbGUiPnA8L3RleHQ+CiAgPGNpcmNsZSBjeD0iNDkiIGN5PSIxOCIgcj0iNSIgZmlsbD0iI2ZjZmNmYSIvPgo8L3N2Zz4K" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@600;800&family=Sarabun:wght@400;600&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   planc* — scrollytelling site
+   B&W only. Two tokens: --ink / --paper. Dark level swaps them
+   via body.inverted, so every rule below must state BOTH sides.
+   ============================================================ */
+:root{
+  --ink:#111;
+  --paper:#fcfcfa;
+  --ground-h:22dvh;
+  --nav-h:56px;
+  --hud-h:38px;
+  --ease:cubic-bezier(.22,.61,.36,1);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:auto}
+body{
+  font-family:'Sarabun',system-ui,sans-serif;
+  background:var(--paper);color:var(--ink);
+  overscroll-behavior-y:none;
+  transition:background .6s ease,color .6s ease;
+}
+h1,h2,h3,.display,.brand,.logo,.cta,.flag,.block,.hud-world{font-family:'Prompt','Sarabun',sans-serif}
+img{display:block}
+
+/* ============ PRELOADER ============ */
+#preload{
+  position:fixed;inset:0;z-index:100;background:var(--paper);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1.1rem;
+  transition:opacity .5s ease,visibility .5s;
+}
+#preload.gone{opacity:0;visibility:hidden;pointer-events:none}
+.pl-mark{font-size:clamp(2.2rem,9vw,3.4rem);font-weight:800;letter-spacing:-.02em}
+.pl-mark span{display:inline-block;animation:spin 2.4s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.pl-bar{width:min(180px,44vw);height:3px;background:rgba(17,17,17,.14);overflow:hidden}
+.pl-bar i{display:block;height:100%;width:0;background:var(--ink);transition:width .3s var(--ease)}
+.pl-txt{font-size:.68rem;letter-spacing:.34em;opacity:.5}
+
+/* ============ TOP NAV ============ */
+#nav{
+  position:fixed;top:0;left:0;right:0;height:var(--nav-h);z-index:40;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 max(18px,4vw);mix-blend-mode:normal;
+  transition:transform .45s var(--ease);
+}
+#nav::after{
+  content:'';position:absolute;left:max(18px,4vw);right:max(18px,4vw);bottom:0;height:1px;
+  background:currentColor;opacity:.14;
+}
+body.nav-hidden #nav{transform:translateY(-100%)}
+.brand{
+  font-size:1.35rem;font-weight:800;letter-spacing:-.02em;
+  color:inherit;text-decoration:none;line-height:1;
+}
+.brand span{display:inline-block;transition:transform .5s var(--ease)}
+.brand:hover span{transform:rotate(90deg)}
+#menuBtn{
+  display:flex;align-items:center;gap:.6rem;background:none;border:0;color:inherit;
+  font-family:'Sarabun',sans-serif;font-size:.7rem;letter-spacing:.28em;cursor:pointer;padding:.4rem 0;
+}
+.mb-ico{display:block;width:22px}
+.mb-ico i{display:block;height:1.5px;background:currentColor;margin:4px 0;transition:transform .35s var(--ease)}
+body.menu-open .mb-ico i:first-child{transform:translateY(2.75px) rotate(45deg)}
+body.menu-open .mb-ico i:last-child{transform:translateY(-2.75px) rotate(-45deg)}
+
+/* ============ MENU OVERLAY ============ */
+#menu{
+  position:fixed;inset:0;z-index:38;background:var(--paper);
+  padding:calc(var(--nav-h) + 6dvh) max(18px,4vw) 4dvh;
+  display:flex;flex-direction:column;justify-content:space-between;
+  clip-path:inset(0 0 100% 0);transition:clip-path .6s var(--ease);
+}
+body.menu-open #menu{clip-path:inset(0 0 0 0)}
+#menuList{list-style:none;counter-reset:m}
+#menuList li{overflow:hidden;border-bottom:1px solid rgba(17,17,17,.12)}
+#menuList button{
+  display:flex;align-items:baseline;gap:1rem;width:100%;padding:.75rem 0;
+  background:none;border:0;color:inherit;cursor:pointer;text-align:left;
+  font-family:'Prompt','Sarabun',sans-serif;font-size:clamp(1.5rem,7vw,2.4rem);font-weight:800;
+  transform:translateY(105%);transition:transform .55s var(--ease),opacity .3s;
+}
+body.menu-open #menuList button{transform:translateY(0)}
+#menuList .num{font-family:'Sarabun',sans-serif;font-size:.7rem;font-weight:600;letter-spacing:.2em;opacity:.45}
+#menuList li.here button{opacity:.42}
+.menu-foot{display:flex;justify-content:space-between;font-size:.75rem;letter-spacing:.06em;opacity:.6;gap:1rem;flex-wrap:wrap}
+.menu-foot a{color:inherit}
+
+/* ============ STAGE + PARALLAX LAYERS ============ */
+#stage{position:fixed;inset:0;overflow:hidden;background:var(--paper);transition:background .6s ease}
+.layer{position:absolute;top:0;left:0;height:100%;will-change:transform}
+#lSky{z-index:1}
+#lMid{z-index:2}
+#lWorld{z-index:3}
+#lFore{z-index:6;pointer-events:none}
+#world{position:absolute;top:0;left:0;height:100%}
+
+.sky-grad{
+  position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(17,17,17,.055) 0%,rgba(17,17,17,0) 42%);
+}
+/* every tile is rooted on the GROUND LINE, not the viewport floor —
+   anchored to the floor they hid behind the 22dvh ground and never showed */
+.tile{position:absolute;bottom:var(--ground-h);left:0;width:100%;
+      background-repeat:repeat-x;background-position:left bottom}
+
+/* far hills — one 1200px tile, low contrast so it reads as distance */
+.hills{
+  height:30dvh;background-size:1200px 100%;opacity:.15;
+  background-image:url("data:image/svg+xml;utf8,\
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 300' preserveAspectRatio='none'>\
+<path d='M0 300 L0 190 Q90 120 180 178 Q260 228 330 168 Q420 92 520 172 Q600 236 690 176 Q780 116 880 186 Q960 242 1050 172 Q1130 112 1200 178 L1200 300 Z' fill='%23111'/>\
+</svg>");
+}
+/* mid city — taller contrast, still flat black */
+.city{
+  height:23dvh;background-size:900px 100%;opacity:.3;
+  background-image:url("data:image/svg+xml;utf8,\
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 900 260' preserveAspectRatio='none'>\
+<g fill='%23111'>\
+<rect x='0' y='150' width='90' height='110'/><rect x='100' y='96' width='64' height='164'/>\
+<rect x='176' y='170' width='110' height='90'/><rect x='298' y='60' width='52' height='200'/>\
+<rect x='362' y='134' width='86' height='126'/><rect x='460' y='182' width='120' height='78'/>\
+<rect x='592' y='104' width='70' height='156'/><rect x='674' y='158' width='58' height='102'/>\
+<rect x='744' y='78' width='46' height='182'/><rect x='802' y='166' width='98' height='94'/>\
+</g></svg>");
+}
+/* foreground grass — sits ON the ground line and passes in FRONT of the
+   cat's feet. Black on the black ground is invisible, so it has to grow
+   upward into the paper, not downward into the ground. */
+.grass{
+  height:4.2dvh;background-size:520px 100%;opacity:1;
+  background-image:url("data:image/svg+xml;utf8,\
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 520 90' preserveAspectRatio='none'>\
+<g fill='%23111'>\
+<path d='M8 90 Q10 40 18 8 Q24 44 30 90 Z'/><path d='M40 90 Q44 52 54 26 Q54 58 60 90 Z'/>\
+<path d='M96 90 Q98 34 108 4 Q112 46 118 90 Z'/><path d='M132 90 Q138 56 146 32 Q146 62 152 90 Z'/>\
+<path d='M206 90 Q208 42 218 12 Q222 50 228 90 Z'/><path d='M248 90 Q252 58 262 30 Q262 60 268 90 Z'/>\
+<path d='M318 90 Q320 36 330 6 Q334 48 340 90 Z'/><path d='M358 90 Q364 54 372 28 Q372 60 378 90 Z'/>\
+<path d='M436 90 Q438 44 448 14 Q452 50 458 90 Z'/><path d='M474 90 Q480 58 488 34 Q488 62 494 90 Z'/>\
+</g></svg>");
+}
+.clouds{position:absolute;top:0;left:0;height:100%;width:100%;pointer-events:none}
+.cloud{
+  position:absolute;display:block;opacity:.16;
+  background:var(--ink);border-radius:999px;
+  box-shadow:34px 6px 0 -4px var(--ink), -30px 8px 0 -6px var(--ink), 12px -10px 0 -8px var(--ink);
+  animation:drift linear infinite;
+  transition:background .6s ease,box-shadow .6s ease;
+}
+@keyframes drift{from{transform:translateX(0)}to{transform:translateX(-46vw)}}
+.c1{width:70px;height:22px;top:14dvh;left:14vw;animation-duration:62s}
+.c2{width:52px;height:17px;top:24dvh;left:58vw;animation-duration:88s;animation-delay:-20s}
+.c3{width:86px;height:26px;top:9dvh;left:104vw;animation-duration:74s;animation-delay:-40s}
+.c4{width:60px;height:19px;top:29dvh;left:158vw;animation-duration:96s;animation-delay:-10s}
+
+/* ============ GROUND ============ */
+.ground{position:absolute;bottom:0;height:var(--ground-h);background:var(--ink);transition:background .6s ease}
+.ground::before{ /* bright top edge — reads as a lit surface */
+  content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--paper);opacity:.85;
+}
+.ground::after{ /* brick texture, drawn not imaged */
+  content:'';position:absolute;top:3px;left:0;right:0;height:calc(100% - 3px);opacity:.16;
+  background-image:
+    repeating-linear-gradient(90deg,var(--paper) 0 1px,transparent 1px 44px),
+    repeating-linear-gradient(180deg,var(--paper) 0 1px,transparent 1px 22px);
+}
+
+/* ============ BEATS ============ */
+.beat{position:absolute;top:calc(var(--nav-h) + 5dvh);width:78vw;max-width:34rem;transition:color .6s ease}
+.beat .kicker{font-size:.72rem;letter-spacing:.34em;text-transform:uppercase;margin-bottom:.6rem;font-weight:600;opacity:.62}
+.beat h2{font-size:clamp(1.6rem,6.5vw,3.2rem);font-weight:800;line-height:1.15;letter-spacing:-.01em}
+.beat p{margin-top:.7rem;font-size:clamp(.95rem,3.6vw,1.15rem);line-height:1.65;max-width:30rem}
+#hero .logo{font-size:clamp(2.4rem,10vw,5rem);font-weight:800;letter-spacing:-.02em;line-height:1}
+#hero .logo span{display:inline-block}
+#hero .tag{margin-top:.5rem;font-size:clamp(1rem,4vw,1.3rem)}
+/* per-word entry — filled in by scene.js using Intl.Segmenter so Thai stays intact */
+.w{display:inline-block;transform:translateY(.42em);opacity:0;
+   transition:transform .55s var(--ease),opacity .45s ease}
+.beat.lit .w{transform:none;opacity:1}
+
+/* a chip, not bare text — the parallax city behind it made plain type unreadable */
+#hint{position:absolute;z-index:7;left:50%;bottom:calc(var(--ground-h) + 17dvh);transform:translateX(-50%);
+      padding:.6rem 1.1rem;background:var(--paper);box-shadow:0 0 0 1px rgba(17,17,17,.16);
+      font-size:.74rem;letter-spacing:.25em;text-align:center;line-height:1.9;white-space:nowrap;
+      animation:bob 1.4s ease-in-out infinite;transition:opacity .4s}
+#hint span{letter-spacing:.05em}
+@keyframes bob{50%{transform:translateX(-50%) translateY(8px)}}
+
+/* ============ PROPS ============ */
+.prop{position:absolute;transition:color .6s ease}
+.enemy{bottom:var(--ground-h);width:clamp(70px,13vw,100px)}
+.enemy .label{display:block;text-align:center;margin-bottom:.35rem;font-weight:600;font-size:.72rem;letter-spacing:.2em;transition:opacity .4s}
+.enemy svg{transform-origin:bottom center;transition:transform .45s cubic-bezier(.6,0,.8,.2)}
+.enemy .pupil{transition:transform .18s ease-out}
+.enemy:not(.squashed) svg{animation:patrol 1.6s ease-in-out infinite}
+@keyframes patrol{0%,100%{transform:translateX(-5px) scaleY(1)}50%{transform:translateX(5px) scaleY(.94)}}
+.squashed svg{transform:scaleY(.16)!important;animation:none}
+.squashed .label{text-decoration:line-through;opacity:.4}
+
+.block{bottom:calc(var(--ground-h) + 32dvh);width:clamp(58px,10vw,80px);aspect-ratio:1;
+       border:4px solid var(--ink);display:flex;align-items:center;justify-content:center;
+       font-weight:800;font-size:1.8rem;transition:border-color .6s ease,transform .3s ease}
+.block .star{position:absolute;left:50%;top:-.6rem;transform:translate(-50%,0) scale(0);font-size:2rem;line-height:1;
+             transition:transform .7s cubic-bezier(.2,1.6,.4,1)}
+.block.hit{transform:translateY(-14px)}
+.block.hit .star{transform:translate(-50%,-3.4rem) scale(1) rotate(180deg)}
+
+.flagpole{bottom:var(--ground-h);width:8px;height:31dvh;background:var(--ink);transition:background .6s ease}
+.flag{position:absolute;top:0;left:8px;padding:.5rem .9rem;background:var(--ink);color:var(--paper);
+      font-weight:800;letter-spacing:.05em;white-space:nowrap;transition:background .6s ease,color .6s ease}
+
+.cta{display:inline-block;margin-top:1.1rem;padding:.8rem 1.6rem;background:var(--ink);color:var(--paper);
+     text-decoration:none;font-weight:600;letter-spacing:.08em;transition:background .6s ease,color .6s ease,transform .3s var(--ease)}
+.cta:hover{transform:translateX(4px)}
+.cta.big{margin-top:1.6rem;padding:1rem 2rem;font-size:1.05rem}
+
+/* ============ CAT RIG ============
+   #catWrap : jump arc + step bob (translateY)
+   #catLean : body tilt (rotate)
+   #catSq   : squash/stretch + facing flip (scale)
+   Three nested nodes so the signals never fight over one matrix. */
+#catWrap{position:absolute;left:24vw;bottom:calc(var(--ground-h) - 6px);
+         width:clamp(104px,18vw,150px);z-index:5;will-change:transform}
+#catLean{transform-origin:50% 100%;will-change:transform}
+#catSq{transform-origin:50% 100%;will-change:transform}
+#catSq img{width:100%;transform:scaleX(-1)}   /* art faces left; the walk goes right */
+/* Dark level: do NOT invert the cat to white — the ground inverts to white too
+   and the cat's lower half would vanish into it. Keep it black, add a rim. */
+body.inverted #catSq img{
+  filter:drop-shadow(2px 0 0 var(--paper)) drop-shadow(-2px 0 0 var(--paper))
+         drop-shadow(0 2px 0 var(--paper)) drop-shadow(0 -2px 0 var(--paper));
+}
+#shadow{position:absolute;left:24vw;bottom:calc(var(--ground-h) - 10px);
+        width:clamp(104px,18vw,150px);height:16px;z-index:4;pointer-events:none}
+#shadow i{display:block;width:62%;height:100%;margin:0 auto;border-radius:50%;
+          background:var(--ink);opacity:.18;transform-origin:50% 50%;transition:background .6s ease}
+
+/* ============ MICRO LABELS ============ */
+.micro{position:absolute;z-index:7;font-size:.6rem;letter-spacing:.24em;line-height:1.7;opacity:.4;
+       pointer-events:none;transition:opacity .4s,color .6s ease}
+/* above the ground line — sitting on the black ground they were ink-on-ink */
+.micro-l{left:max(18px,4vw);bottom:calc(var(--ground-h) + 5.5dvh)}
+.micro-r{right:max(18px,4vw);bottom:calc(var(--ground-h) + 5.5dvh);text-align:right}
+
+/* ============ GAME HUD ============ */
+#hud{
+  position:fixed;left:0;right:0;bottom:0;height:var(--hud-h);z-index:30;
+  display:flex;align-items:center;gap:.7rem;padding:0 max(18px,4vw);
+  background:var(--paper);border-top:1px solid rgba(17,17,17,.14);
+  transition:background .6s ease,border-color .6s ease,transform .45s var(--ease);
+}
+body.hud-hidden #hud{transform:translateY(100%)}
+.hud-world{font-size:.62rem;letter-spacing:.24em;white-space:nowrap;opacity:.75}
+.hud-world b{font-weight:800}
+.hud-rail{position:relative;flex:1;height:2px;background:currentColor;opacity:1}
+.hud-rail::before{content:'';position:absolute;inset:0;background:currentColor;opacity:.16}
+#hudFill{position:absolute;left:0;top:0;height:100%;width:100%;background:currentColor;
+         transform-origin:left center;transform:scaleX(0)}
+#hudPins{position:absolute;inset:0}
+#hudPins b{position:absolute;top:50%;width:7px;height:7px;margin:-3.5px 0 0 -3.5px;border-radius:50%;
+           background:var(--paper);box-shadow:0 0 0 1.5px currentColor;transition:background .3s,transform .3s var(--ease)}
+#hudPins b.on{background:currentColor;transform:scale(1.25)}
+.hud-scene{font-size:.66rem;letter-spacing:.1em;white-space:nowrap;min-width:4.5rem;text-align:right;opacity:.8}
+
+/* ============ CLOSING PANEL ============ */
+#end{position:relative;z-index:35;background:var(--ink);color:var(--paper);
+     padding:14dvh max(18px,4vw) calc(var(--hud-h) + 6dvh)}
+.end-in{max-width:60rem;margin:0 auto}
+.end-kick{font-size:.68rem;letter-spacing:.34em;opacity:.55;margin-bottom:1rem}
+#end h2{font-size:clamp(1.9rem,7.5vw,3.6rem);font-weight:800;line-height:1.18}
+#end .cta{background:var(--paper);color:var(--ink)}
+.end-cols{display:flex;flex-wrap:wrap;gap:2.4rem 3.5rem;margin-top:9dvh}
+.end-cols h3{font-size:.68rem;letter-spacing:.28em;opacity:.55;margin-bottom:.8rem;font-weight:600}
+.end-cols a,.end-cols span{display:block;color:inherit;text-decoration:none;line-height:1.9;font-size:.98rem}
+.end-cols a{transition:opacity .25s}
+.end-cols a:hover{opacity:.6}
+.end-bar{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;
+         margin-top:8dvh;padding-top:1.2rem;border-top:1px solid rgba(252,252,250,.2);
+         font-size:.7rem;letter-spacing:.08em;opacity:.5}
+
+/* ============ DARK LEVEL SWAP ============ */
+body.inverted{background:var(--ink)}
+body.inverted #stage{background:var(--ink)}
+body.inverted{color:var(--paper)}
+body.inverted .ground{background:var(--paper)}
+body.inverted .ground::before,body.inverted .ground::after{background:var(--ink)}
+body.inverted .ground::after{
+  background-image:
+    repeating-linear-gradient(90deg,var(--ink) 0 1px,transparent 1px 44px),
+    repeating-linear-gradient(180deg,var(--ink) 0 1px,transparent 1px 22px);
+}
+body.inverted .hills,body.inverted .city,body.inverted .grass{filter:invert(1)}
+body.inverted .sky-grad{background:linear-gradient(180deg,rgba(252,252,250,.06) 0%,rgba(252,252,250,0) 42%)}
+body.inverted .cloud{background:var(--paper);
+  box-shadow:34px 6px 0 -4px var(--paper), -30px 8px 0 -6px var(--paper), 12px -10px 0 -8px var(--paper)}
+body.inverted #shadow i{background:var(--paper)}
+body.inverted .block{border-color:var(--paper)}
+body.inverted .flagpole{background:var(--paper)}
+body.inverted .flag{background:var(--paper);color:var(--ink)}
+body.inverted .cta{background:var(--paper);color:var(--ink)}
+body.inverted #hud{background:var(--ink);border-color:rgba(252,252,250,.2)}
+body.inverted #hudPins b{background:var(--ink)}
+body.inverted #menu{background:var(--ink)}
+body.inverted #menuList li{border-color:rgba(252,252,250,.16)}
+body.inverted #nav::after{opacity:.24}
+
+/* nav has to survive sitting on top of the dark closing panel */
+body.on-end #nav{color:var(--paper)}
+body.on-end #nav::after{opacity:.26}
+
+/* ============ FALLBACK ============ */
+#fallback{display:none;padding:14dvh 8vw;max-width:40rem}
+#fallback h1{font-size:2.2rem;margin-bottom:1rem}
+#fallback p{line-height:1.8;margin-bottom:.8rem}
+#fallback a{color:inherit}
+@media (prefers-reduced-motion: reduce){
+  #stage,#spacer,#hud,#preload{display:none!important}
+  #fallback{display:block}
+  #end{margin-top:0}
+}
+
+</style>
+</head>
+<body>
+
+<!-- ============ PRELOADER ============ -->
+<div id="preload" aria-hidden="true">
+  <div class="pl-mark">planc<span>*</span></div>
+  <div class="pl-bar"><i></i></div>
+  <div class="pl-txt">LOADING WORLD 1-1</div>
+</div>
+
+<!-- ============ SITE CHROME — TOP ============ -->
+<header id="nav">
+  <a class="brand" href="#top">planc<span>*</span></a>
+  <button id="menuBtn" aria-expanded="false" aria-controls="menu">
+    <span class="mb-txt">MENU</span><span class="mb-ico"><i></i><i></i></span>
+  </button>
+</header>
+
+<nav id="menu" aria-hidden="true">
+  <ol id="menuList"></ol>
+  <div class="menu-foot">
+    <span>planc* digital · Bangkok</span>
+    <a href="mailto:hello@planc.studio">hello@planc.studio</a>
+  </div>
+</nav>
+
+<!-- ============ THE WORLD ============ -->
+<main id="stage">
+
+  <!-- depth 1 — sky + far hills, 0.12x -->
+  <div class="layer" id="lSky" data-f="0.12">
+    <div class="sky-grad"></div>
+    <div class="tile hills"></div>
+  </div>
+
+  <!-- depth 2 — city + clouds, 0.35x -->
+  <div class="layer" id="lMid" data-f="0.35">
+    <div class="tile city"></div>
+    <div class="clouds">
+      <span class="cloud c1"></span><span class="cloud c2"></span>
+      <span class="cloud c3"></span><span class="cloud c4"></span>
+    </div>
+  </div>
+
+  <!-- depth 3 — the level itself, 1.0x -->
+  <div class="layer" id="lWorld" data-f="1">
+    <div id="world">
+      <section class="beat" id="hero" data-p="0" data-name="เริ่มต้น">
+        <div class="logo">planc<span>*</span></div>
+        <p class="tag">ชีวิตครีเอเตอร์ ก็เหมือนเกมด่านนึง</p>
+      </section>
+
+      <section class="beat" data-p="0.16" data-name="ออกเดิน">
+        <div class="kicker">The Journey</div>
+        <h2>เดินหน้าอย่างเดียว<br>คือกติกาข้อแรก</h2>
+        <p>การเลื่อนนิ้วของคุณคือก้าวเดินของเรา — ทุกโปรเจกต์คือฉากใหม่ที่ไม่เคยซ้ำ</p>
+      </section>
+
+      <section class="beat" data-p="0.335" data-name="อุปสรรค">
+        <div class="kicker">Pain Point</div>
+        <h2>อุปสรรค มีไว้เหยียบ</h2>
+        <p>เดดไลน์ งบจำกัด บรีฟไม่ชัด — เราจัดการให้ราบเป็นหน้ากลอง</p>
+      </section>
+
+      <section class="beat" data-p="0.535" data-name="บริการ">
+        <div class="kicker">Service</div>
+        <h2>เก็บของดีระหว่างทาง</h2>
+        <p>ทุกช่วงของด่าน คือหนึ่งบริการของ planc ที่ปลดล็อกให้ธุรกิจคุณ</p>
+      </section>
+
+      <section class="beat" data-p="0.715" data-name="ด่านมืด">
+        <div class="kicker">The Dark Level</div>
+        <h2>บางช่วงของทาง<br>มันมืดจริงๆ</h2>
+        <p>และนั่นแหละคือตอนที่ครีเอทีฟดีๆ ส่องแสงที่สุด</p>
+      </section>
+
+      <section class="beat" data-p="0.90" data-hold="0.13" data-name="เสาธง">
+        <div class="kicker">Goal</div>
+        <h2>ถึงเสาธงแล้ว</h2>
+        <p>ท่าเดินทั้งหมดนี้สร้างด้วยโค้ดจากภาพนิ่งใบเดียว ไม่ได้ใช้คลิปเดิน</p>
+        <a class="cta" href="#end">คุยกับเรา →</a>
+      </section>
+
+      <div class="prop enemy" data-p="0.415" id="enemy">
+        <span class="label">DEADLINE</span>
+        <svg viewBox="0 0 100 60" aria-hidden="true">
+          <ellipse cx="50" cy="38" rx="42" ry="22" fill="currentColor"/>
+          <circle cx="38" cy="32" r="5" fill="#fcfcfa"/><circle cx="62" cy="32" r="5" fill="#fcfcfa"/>
+          <circle class="pupil" cx="38" cy="32" r="2" fill="#111"/>
+          <circle class="pupil" cx="62" cy="32" r="2" fill="#111"/>
+        </svg>
+      </div>
+      <div class="prop block" data-p="0.615" id="block">!<span class="star">★</span></div>
+      <div class="prop flagpole" data-p="0.995"><div class="flag">planc*</div></div>
+    </div>
+  </div>
+
+  <!-- hint lives on the stage, not in #world: left:50% of a 7,590px world
+       would put it 3,795px off-screen -->
+  <div id="hint">SCROLL ↓<br><span>เลื่อนลง แล้วดูว่าเกิดอะไรขึ้น</span></div>
+
+  <!-- the cat sits between the level and the foreground -->
+  <div id="shadow"><i></i></div>
+  <div id="catWrap"><div id="catLean"><div id="catSq">
+    <img id="catImg" src="data:image/png;base64,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" alt="แมวดำมาสคอตของ planc กำลังเดิน">
+  </div></div></div>
+
+  <!-- depth 4 — foreground grass, 1.25x, passes in FRONT of the cat -->
+  <div class="layer" id="lFore" data-f="1.25"><div class="tile grass"></div></div>
+
+  <!-- award-site micro labels -->
+  <span class="micro micro-l">PLANC* DIGITAL<br>BANGKOK · EST. 2019</span>
+  <span class="micro micro-r">SCROLL<br>TO WALK</span>
+</main>
+
+<div id="spacer"></div>
+
+<!-- ============ GAME HUD ============ -->
+<div id="hud">
+  <span class="hud-world">WORLD <b>1-1</b></span>
+  <div class="hud-rail"><i id="hudFill"></i><div id="hudPins"></div></div>
+  <span class="hud-scene" id="hudScene">เริ่มต้น</span>
+</div>
+
+<!-- ============ REAL CLOSING PANEL ============ -->
+<footer id="end">
+  <div class="end-in">
+    <p class="end-kick">END OF WORLD 1-1</p>
+    <h2>ด่านต่อไปเป็นของคุณ<br>เราเดินไปด้วย</h2>
+    <a class="cta big" href="mailto:hello@planc.studio">เริ่มคุยกับ planc*</a>
+
+    <div class="end-cols">
+      <div>
+        <h3>ติดต่อ</h3>
+        <a href="mailto:hello@planc.studio">hello@planc.studio</a>
+        <a href="tel:+6620000000">+66 2 000 0000</a>
+      </div>
+      <div>
+        <h3>โซเชียล</h3>
+        <a href="#">Instagram</a><a href="#">Facebook</a><a href="#">Behance</a>
+      </div>
+      <div>
+        <h3>ที่อยู่</h3>
+        <span>กรุงเทพมหานคร<br>ประเทศไทย</span>
+      </div>
+    </div>
+
+    <div class="end-bar">
+      <span>© 2026 planc* digital</span>
+      <span>Made with scroll, not with a game engine</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ NO-MOTION / NO-JS FALLBACK ============ -->
+<article id="fallback">
+  <h1>planc* digital</h1>
+  <p>ชีวิตครีเอเตอร์ ก็เหมือนเกมด่านนึง — เดินหน้าอย่างเดียวคือกติกาข้อแรก</p>
+  <p>อุปสรรคมีไว้เหยียบ: เดดไลน์ งบจำกัด บรีฟไม่ชัด เราจัดการให้ราบเป็นหน้ากลอง</p>
+  <p>ทุกช่วงของด่านคือหนึ่งบริการของ planc ที่ปลดล็อกให้ธุรกิจคุณ</p>
+  <p>บางช่วงของทางมันมืดจริงๆ — และนั่นคือตอนที่ครีเอทีฟดีๆ ส่องแสงที่สุด</p>
+  <p><strong><a href="mailto:hello@planc.studio">ถึงเสาธงแล้ว — คุยกับเรา</a></strong></p>
+</article>
+
+<script>
+/* ============================================================
+   scene.js — the level: layout, parallax depths, ground, jumps
+   ------------------------------------------------------------
+   LAYOUT BY PROGRESS, NOT PIXELS.
+   Every beat and prop carries data-p = the progress (0..1) at
+   which the cat should meet it. Absolute px positions break on
+   narrow screens: at 390px the old level was longer than the
+   scroll could reach and the flag was never seen. Deriving left
+   from `travel` fixes that at any viewport width.
+   ============================================================ */
+window.PLANC = window.PLANC || {};
+
+PLANC.Scene = (function(){
+
+  const TRAVEL_MIN = 7200;   // px of world movement, floor
+  const SCROLL_LEN = 5200;   // px of page scroll mapped to 0..1
+  const PIT        = [0.245, 0.285];  // ground gap, in progress
+  const HOLD       = 0.085;  // default: how long a text beat stands still
+
+  const world  = document.getElementById('world');
+  const spacer = document.getElementById('spacer');
+  const layers = [...document.querySelectorAll('.layer')].map(el => ({
+    el, f: parseFloat(el.dataset.f)
+  }));
+
+  let travel = 0, catX = 0;
+  let beats = [], jumps = [], grounds = [];
+
+  /* --- Thai-safe per-word splitting -------------------------
+     Naive letter-splitting shatters Thai (no spaces, combining
+     marks). Intl.Segmenter with granularity 'word' keeps clusters
+     whole. Falls back to whole-line animation where unsupported. */
+  function splitWords(){
+    if (typeof Intl === 'undefined' || !Intl.Segmenter) return;
+    let seg;
+    try { seg = new Intl.Segmenter('th', {granularity:'word'}); }
+    catch(e){ return; }
+
+    document.querySelectorAll('.beat h2, .beat .tag, .beat .kicker').forEach(el=>{
+      const out = document.createDocumentFragment();
+      [...el.childNodes].forEach(node=>{
+        if (node.nodeType !== 3){ out.appendChild(node.cloneNode(true)); return; }
+        let i = 0;
+        for (const s of seg.segment(node.nodeValue)){
+          // a whitespace-only inline-block collapses to nothing and the
+          // words weld together ("THEJOURNEY") — keep spaces as text
+          if (!/\S/.test(s.segment)){ out.appendChild(document.createTextNode(s.segment)); continue; }
+          const w = document.createElement('span');
+          w.className = 'w';
+          w.textContent = s.segment;
+          w.style.transitionDelay = (Math.min(i, 14) * 34) + 'ms';
+          out.appendChild(w);
+          i++;
+        }
+      });
+      el.replaceChildren(out);
+    });
+  }
+
+  function layout(){
+    catX   = innerWidth * 0.24;
+    travel = Math.max(TRAVEL_MIN, innerWidth * 4.2);
+
+    world.style.width = (travel + innerWidth) + 'px';
+    spacer.style.height = (SCROLL_LEN + innerHeight) + 'px';
+
+    // every parallax layer must be wide enough for its own scroll rate
+    layers.forEach(L => {
+      L.el.style.width = (travel * L.f + innerWidth * 2) + 'px';
+    });
+
+    beats = [...document.querySelectorAll('.beat[data-p]')];
+    beats.forEach(el=>{
+      el.style.left = (el.dataset.p * travel + innerWidth * 0.08) + 'px';
+      el.style.willChange = 'transform';
+    });
+    document.querySelectorAll('.prop[data-p]').forEach(el=>{
+      el.style.left = (el.dataset.p * travel + catX) + 'px';
+    });
+
+    // ground, split in two around the pit
+    grounds.forEach(g => g.remove());
+    grounds = [];
+    [[0, PIT[0]*travel + catX], [PIT[1]*travel + catX, travel + innerWidth]].forEach(([a,b])=>{
+      const g = document.createElement('div');
+      g.className = 'ground';
+      g.style.left = a + 'px';
+      g.style.width = (b - a) + 'px';
+      world.appendChild(g);
+      grounds.push(g);
+    });
+
+    const H = Math.min(innerHeight * 0.22, 190);
+    jumps = [
+      {p:(PIT[0]+PIT[1])/2, w:.034, h:H*1.15},  // over the pit
+      {p:0.415,             w:.026, h:H*0.85},  // stomp DEADLINE
+      {p:0.615,             w:.028, h:H*1.05},  // hit the block
+      {p:0.985,             w:.022, h:H*0.60}   // hop at the flag
+    ];
+  }
+
+  /* --- per-frame: slide the depths, hold the text ----------- */
+  function render(cur, cam){
+    for (const L of layers){
+      L.el.style.transform =
+        'translate3d(' + (-cur * travel * L.f + cam.x * L.f).toFixed(2) + 'px,' +
+                          cam.y.toFixed(2) + 'px,0)';
+    }
+    // each beat rides the world in, HOLDS still long enough to be read,
+    // then rides out — otherwise 78vw of Thai crosses a 390px screen too fast
+    for (const el of beats){
+      const p = +el.dataset.p;
+      const h = Math.min(+(el.dataset.hold || HOLD), Math.max(0, cur - p));
+      el.style.transform = h ? 'translate3d(' + (h*travel).toFixed(1) + 'px,0,0)' : '';
+      el.classList.toggle('lit', cur > p - 0.055);
+    }
+  }
+
+  splitWords();
+
+  return {
+    SCROLL_LEN, PIT,
+    layout, render,
+    get travel(){ return travel; },
+    get catX(){ return catX; },
+    get jumps(){ return jumps; }
+  };
+})();
+
+</script>
+<script>
+/* ============================================================
+   cat.js — the faked walk
+   ------------------------------------------------------------
+   There is no walk clip. Midjourney grew extra legs on every
+   attempt, so the gait is built in code from ONE still frame.
+   The site's own mechanic makes this work: the world slides and
+   the cat stays put, so the legs never need to travel — only the
+   body has to behave like it's walking.
+
+   Four coupled signals, all driven by scroll VELOCITY (not time):
+     gait   – a phase that advances with scroll speed
+     bob    – vertical lift, one hop per half cycle
+     lean   – rotation into the direction of travel
+     squash – scaleX/scaleY, compressed at contact, stretched at lift
+   Plus jump stretch and a landing impact that decays.
+   Scroll backwards and every one of them reverses. Scrub-safe.
+   ============================================================ */
+window.PLANC = window.PLANC || {};
+
+PLANC.Cat = (function(){
+
+  const GAIT_RATE = 0.46;   // cycle speed per unit of normalised scroll speed
+  const BOB_PX    = 10;     // step lift
+  const LEAN_DEG  = 7;      // max body tilt
+  const SQUASH    = 0.085;  // contact compression
+
+  const wrap   = document.getElementById('catWrap');
+  const lean   = document.getElementById('catLean');
+  const sq     = document.getElementById('catSq');
+  const shadow = document.getElementById('shadow').firstElementChild;
+
+  let phase = 0, v = 0, dir = 1, prevY = 0, land = 0;
+
+  /* dt is in frames-at-60Hz, so every smoothing constant below stays
+     the value it was tuned at while behaving the same on a 120Hz screen */
+  function update(cur, d, dt, jumps){
+    if (Math.abs(d) > 0.00004) dir = d > 0 ? 1 : -1;
+
+    // normalised gait speed 0..1 (tuned so a comfortable scroll sits near 0.6)
+    const spd = Math.min(1, Math.abs(d) / Math.max(dt, .0001) * 820);
+    v += (spd - v) * (1 - Math.pow(1 - 0.18, dt));
+    phase += GAIT_RATE * v * dir * dt;
+
+    // jump arcs — parabolas centred on each obstacle
+    let jy = 0;
+    for (const j of jumps){
+      const t = (cur - j.p) / j.w;
+      if (t > -1 && t < 1) jy -= j.h * (1 - t*t);
+    }
+    const air = jy < -2;
+    const vy  = jy - prevY;                 // <0 rising, >0 falling
+
+    // landing impact
+    let landed = false;
+    if (prevY < -6 && jy >= -6){ land = 1; landed = true; }
+    land *= Math.pow(0.86, dt);
+    if (land < 0.004) land = 0;
+
+    const step = Math.abs(Math.sin(phase));   // 0 = foot planted, 1 = mid-lift
+    const bob  = air ? 0 : -step * BOB_PX * v;
+    const rock = Math.sin(phase * 2) * 2.2 * v;
+
+    let sx, sy;
+    if (air){
+      const s = Math.max(-0.10, Math.min(0.13, -vy * 0.011));
+      sy = 1 + s;  sx = 1 - s * 0.8;
+    } else {
+      sy = 1 - (SQUASH*(1-step) - SQUASH*0.55*step) * v;
+      sx = 1 + (SQUASH*0.8*(1-step) - SQUASH*0.45*step) * v;
+    }
+    sy -= land * 0.20;  sx += land * 0.16;
+
+    const deg = dir*LEAN_DEG*v*0.55 + rock + (air ? dir*4*v : 0);
+
+    wrap.style.transform = 'translate3d(0,' + (jy + bob).toFixed(2) + 'px,0)';
+    lean.style.transform = 'rotate(' + deg.toFixed(2) + 'deg)';
+    sq.style.transform   = 'scale(' + (dir < 0 ? -sx : sx).toFixed(3) + ',' + sy.toFixed(3) + ')';
+
+    // the shadow reacting to height is what actually sells the jump
+    const lift = Math.min(1, -jy / 150);
+    shadow.style.transform = 'scale(' + (1 - lift*0.55).toFixed(3) + ',' + (1 - lift*0.35).toFixed(3) + ')';
+    shadow.style.opacity   = (0.18 * (1 - lift*0.7)).toFixed(3);
+
+    prevY = jy;
+    return {v, dir, jy, air, landed};
+  }
+
+  return {update};
+})();
+
+</script>
+<script>
+/* ============================================================
+   ui.js — the site chrome: preloader, nav, menu, game HUD
+   ------------------------------------------------------------
+   The hybrid: polite award-site nav and footer on the outside,
+   a game HUD on the inside. The HUD rail doubles as the scroll
+   progress bar and as the level's checkpoint map.
+   ============================================================ */
+window.PLANC = window.PLANC || {};
+
+PLANC.UI = (function(){
+
+  const scenes = [...document.querySelectorAll('.beat[data-p]')].map(el => ({
+    p: +el.dataset.p,
+    name: el.dataset.name || ''
+  }));
+
+  /* ---------- PRELOADER ---------- */
+  function preload(done){
+    const pre  = document.getElementById('preload');
+    const bar  = pre.querySelector('.pl-bar i');
+    const img  = document.getElementById('catImg');
+    let pct = 0, fake = null;
+
+    const tick = () => { pct = Math.min(92, pct + 7 + Math.random()*11); bar.style.width = pct + '%'; };
+    fake = setInterval(tick, 110); tick();
+
+    const finish = () => {
+      clearInterval(fake);
+      bar.style.width = '100%';
+      setTimeout(()=>{
+        pre.classList.add('gone');
+        document.body.classList.add('ready');
+        done && done();
+      }, 320);
+    };
+
+    // the cat image must be decoded before the curtain lifts, or the
+    // first frame of the walk plays against an empty stage
+    const ready = () => (img.decode ? img.decode().catch(()=>{}) : Promise.resolve());
+    if (img.complete) ready().then(finish);
+    else { img.addEventListener('load', ()=>ready().then(finish)); img.addEventListener('error', finish); }
+    setTimeout(finish, 4000);            // never trap the visitor
+  }
+
+  /* ---------- NAV + MENU OVERLAY ---------- */
+  function nav(scrollToP){
+    const btn  = document.getElementById('menuBtn');
+    const list = document.getElementById('menuList');
+
+    scenes.forEach((s, i)=>{
+      const li = document.createElement('li');
+      const b  = document.createElement('button');
+      b.innerHTML = '<span class="num">' + String(i+1).padStart(2,'0') + '</span><span>' + s.name + '</span>';
+      b.style.transitionDelay = (i * 45) + 'ms';
+      b.addEventListener('click', ()=>{ close(); scrollToP(s.p); });
+      li.appendChild(b); list.appendChild(li);
+    });
+
+    function open(){ document.body.classList.add('menu-open'); btn.setAttribute('aria-expanded','true');
+                     document.getElementById('menu').setAttribute('aria-hidden','false'); }
+    function close(){ document.body.classList.remove('menu-open'); btn.setAttribute('aria-expanded','false');
+                      document.getElementById('menu').setAttribute('aria-hidden','true'); }
+
+    btn.addEventListener('click', ()=> document.body.classList.contains('menu-open') ? close() : open());
+    addEventListener('keydown', e => { if (e.key === 'Escape') close(); });
+
+    return {close, items:[...list.children]};
+  }
+
+  /* ---------- GAME HUD ---------- */
+  function hud(){
+    const fill = document.getElementById('hudFill');
+    const pins = document.getElementById('hudPins');
+    const name = document.getElementById('hudScene');
+    let last = -1;
+
+    scenes.forEach(s=>{
+      const b = document.createElement('b');
+      b.style.left = (s.p * 100) + '%';
+      pins.appendChild(b);
+    });
+    const dots = [...pins.children];
+
+    return function update(cur, menuItems){
+      fill.style.transform = 'scaleX(' + cur.toFixed(4) + ')';
+      let idx = 0;
+      for (let i = 0; i < scenes.length; i++) if (cur >= scenes[i].p - 0.02) idx = i;
+      if (idx !== last){
+        dots.forEach((d,i)=> d.classList.toggle('on', i <= idx));
+        name.textContent = scenes[idx].name;
+        if (menuItems) menuItems.forEach((li,i)=> li.classList.toggle('here', i === idx));
+        last = idx;
+      }
+    };
+  }
+
+  return {scenes, preload, nav, hud};
+})();
+
+</script>
+<script>
+/* ============================================================
+   main.js — the loop that ties scroll to everything else
+   ============================================================ */
+(function(){
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  const Scene = PLANC.Scene, Cat = PLANC.Cat, UI = PLANC.UI;
+  const S = Scene.SCROLL_LEN;
+
+  const hint  = document.getElementById('hint');
+  const enemy = document.getElementById('enemy');
+  const block = document.getElementById('block');
+  const pupils = [...enemy.querySelectorAll('.pupil')];
+
+  Scene.layout();
+  addEventListener('resize', Scene.layout);
+
+  const scrollToP = p => scrollTo({top: p * S, behavior:'smooth'});
+  const menu = UI.nav(scrollToP);
+  const hudUpdate = UI.hud();
+  UI.preload();
+
+  /* ---------- camera ----------
+     look-ahead: at speed the camera leads the cat slightly, so you
+     see where you're going instead of where you are.
+     shake: a short decaying jolt on landing, applied to every depth. */
+  const cam = {x:0, y:0};
+  let shake = 0, shakeT = 0;
+
+  let target = 0, cur = 0, lastCur = 0, prevT = performance.now();
+
+  function frame(now){
+    // dt in 60Hz-frames: keeps every smoothing constant frame-rate independent
+    const dt = Math.min(3, Math.max(.2, (now - prevT) / 16.667));
+    prevT = now;
+
+    target = Math.min(1, Math.max(0, scrollY / S));
+    cur += (target - cur) * (1 - Math.pow(1 - 0.14, dt));
+    if (Math.abs(target - cur) < 0.0002) cur = target;
+
+    const d = cur - lastCur;
+    const cat = Cat.update(cur, d, dt, Scene.jumps);
+
+    // camera
+    const lookAhead = -cat.dir * cat.v * 30;
+    cam.x += (lookAhead - cam.x) * (1 - Math.pow(1 - 0.08, dt));
+    if (cat.landed) shake = 1;
+    if (shake > 0.002){
+      shakeT += dt;
+      cam.y = Math.sin(shakeT * 1.9) * shake * 5;
+      shake *= Math.pow(0.80, dt);
+    } else { shake = 0; cam.y += (0 - cam.y) * 0.3; }
+
+    Scene.render(cur, cam);
+
+    // DEADLINE watches the cat walk in, then loses its nerve
+    const dx = (0.415 - cur) * Scene.travel;
+    const look = Math.max(-1, Math.min(1, -dx / 420)) * 2.4;
+    for (const p of pupils) p.style.transform = 'translateX(' + look.toFixed(2) + 'px)';
+
+    enemy.classList.toggle('squashed', cur > 0.419);
+    block.classList.toggle('hit',      cur > 0.611);
+    document.body.classList.toggle('inverted', cur > 0.690 && cur < 0.860);
+
+    hudUpdate(cur, menu.items);
+    hint.style.opacity = cur < 0.015 ? 1 : 0;
+
+    // hand the page over to the real closing panel.
+    // Two different thresholds: the HUD sits at the bottom so the footer
+    // covers it the moment it appears, but the nav only needs to flip to
+    // paper once the footer has actually risen far enough to be under it.
+    document.body.classList.toggle('hud-hidden', scrollY > S + 40);
+    document.body.classList.toggle('on-end',     scrollY > S + innerHeight - 70);
+
+    lastCur = cur;
+    requestAnimationFrame(frame);
+  }
+  requestAnimationFrame(frame);
+})();
+
+</script>
+</body>
+</html>

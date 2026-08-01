@@ -1,0 +1,24 @@
+[
+  {
+    "claim": "A video agency asserts that most YouTube channels stall at around 1,000 subscribers because of unclear audience positioning rather than content quality, but the article contains no data, no sample, no publication date and no measurement of any kind, and carries affiliate links to a YouTube analytics tool.",
+    "stance": "neutral",
+    "stance_target": "Documented reasons creators give for quitting",
+    "evidence_type": "anecdotal",
+    "scope_conditions": "Red11 Media blog by Silas Pippitt; ambiguous 'Jan 23' dateline; practitioner-observation content with vidIQ affiliate links embedded; contains zero numeric findings and therefore cannot support any quantitative claim; deprecated in the vault for this reason",
+    "quoted_support": "The majority of YouTube channels don't consciously quit; they slowly disengage. People fail when effort stops producing visible results and there's no clear feedback loop.",
+    "numbers": [
+      "0 quantitative findings",
+      "0 stated sample size",
+      "1,000-subscriber threshold referenced only qualitatively"
+    ],
+    "entities": [
+      "Red11 Media",
+      "Silas Pippitt",
+      "vidIQ"
+    ],
+    "time_period": "Undated ('Jan 23')",
+    "region": "Unspecified",
+    "confidence": "low",
+    "source_note_id": "why-youtube-channels-fail-at-1000-subscribers"
+  }
+]

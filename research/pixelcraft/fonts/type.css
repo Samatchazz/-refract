@@ -1,0 +1,87 @@
+/* Plan C — type foundation
+ * Kanit (display) + Anuphan (text). Both SIL OFL 1.1, free for commercial use.
+ * Self-hosted: no CDN, no external request, no licence to buy.
+ *
+ * Drop `files/` and this file in, then use ONLY the custom properties below.
+ * Never write a raw `font-family` anywhere else.
+ */
+
+/* ---------------------------------------------------------------- Kanit 500 */
+@font-face {
+  font-family: 'Kanit'; font-style: normal; font-weight: 500; font-display: swap;
+  src: url('./files/kanit-thai-500-normal.woff2') format('woff2');
+  unicode-range: U+02D7,U+0303,U+0331,U+0E01-0E5B,U+200C-200D,U+25CC;
+}
+@font-face {
+  font-family: 'Kanit'; font-style: normal; font-weight: 500; font-display: swap;
+  src: url('./files/kanit-latin-500-normal.woff2') format('woff2');
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
+/* ---------------------------------------------------------------- Kanit 700 */
+@font-face {
+  font-family: 'Kanit'; font-style: normal; font-weight: 700; font-display: swap;
+  src: url('./files/kanit-thai-700-normal.woff2') format('woff2');
+  unicode-range: U+02D7,U+0303,U+0331,U+0E01-0E5B,U+200C-200D,U+25CC;
+}
+@font-face {
+  font-family: 'Kanit'; font-style: normal; font-weight: 700; font-display: swap;
+  src: url('./files/kanit-latin-700-normal.woff2') format('woff2');
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
+/* ------------------------------------------- Anuphan — variable, wght 100–700 */
+@font-face {
+  font-family: 'Anuphan'; font-style: normal; font-weight: 100 700; font-display: swap;
+  src: url('./files/anuphan-thai-wght-normal.woff2') format('woff2-variations');
+  unicode-range: U+02D7,U+0303,U+0331,U+0E01-0E5B,U+200C-200D,U+25CC;
+}
+@font-face {
+  font-family: 'Anuphan'; font-style: normal; font-weight: 100 700; font-display: swap;
+  src: url('./files/anuphan-latin-wght-normal.woff2') format('woff2-variations');
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
+
+:root {
+  /* The only two font declarations in the project. */
+  --font-display: 'Kanit', system-ui, 'Leelawadee UI', Tahoma, sans-serif;
+  --font-text:    'Anuphan', system-ui, 'Leelawadee UI', Tahoma, sans-serif;
+
+  /* Line-height floors, derived from each font's own metrics — NOT taste.
+     Kanit  asc 1100 / desc −395 → glyphs occupy 1.495em, so 1.50 is the floor.
+     Anuphan asc 1025 / desc −275 → 1.300em, so 1.30 is the floor.
+     Going below these clips tone marks and lower vowels. */
+  --lh-display: 1.15;   /* display sizes: tight is fine, marks have room at large px */
+  --lh-heading: 1.30;
+  --lh-body:    1.65;   /* comfortably above Anuphan's 1.30 floor */
+  --lh-tight:   1.50;   /* absolute minimum for Kanit at any size */
+
+  /* Optical size compensation — measured, not guessed.
+     Kanit x-height 474, Anuphan x-height 570. Anuphan therefore looks ~20% larger
+     at the same px. Set body text with this factor so the pair reads as one system. */
+  --optical-anuphan: 0.83;
+
+  /* Thai runs long: leave room, never fix a height. */
+  --measure: 34em;      /* comfortable reading width for Thai body copy */
+}
+
+html { font-family: var(--font-text); }
+:lang(th) {
+  word-break: normal;        /* NEVER break-all — it chops Thai clusters */
+  overflow-wrap: break-word;
+  hyphens: none;
+  line-break: normal;
+}
+h1, h2, h3, .display {
+  font-family: var(--font-display);
+  font-weight: 500;
+  line-height: var(--lh-display);
+  letter-spacing: -0.01em;   /* Kanit is wide; a hair negative tightens display sizes */
+}
+body, p, li, input, button, textarea {
+  font-family: var(--font-text);
+  line-height: var(--lh-body);
+}
+
+/* Thai justification stretches INSIDE words — there are no word spaces. Never use it. */
+p { text-align: left; }
+
+@media (prefers-reduced-motion: reduce) { * { animation: none !important; } }

@@ -1,0 +1,16 @@
+[
+  {
+    "claim": "Twitch (Amazon-owned) confirmed on October 6, 2021 that it suffered a data breach in which internal information, including creator payout data, was posted to 4chan by an anonymous user.",
+    "stance": "neutral",
+    "stance_target": "Provenance of the leaked Twitch payout dataset underlying the 36.7%/3.49%-adjacent percentile figures",
+    "evidence_type": "empirical",
+    "scope_conditions": "Twitch platform, October 2021 disclosure",
+    "quoted_support": "Amazon.com Inc.-owned Twitch Interactive, the videogame streaming platform, said Wednesday it suffered a data breach, with information leaked on the online chat forum 4chan. The 4chan user who allegedly posted Twitch data said they did so to hurt Twitch's business. The person claimed to have access to information including Twitch source code, internal security tools and creator payouts.",
+    "numbers": ["October 6, 2021"],
+    "entities": ["Twitch", "Amazon", "4chan", "David Uberti", "Sarah E. Needleman"],
+    "time_period": "October 2021",
+    "region": "global",
+    "confidence": "high",
+    "source_note_id": "twitch-hack-reveals-how-much-revenue-the-platforms-biggest-streamers-make-wsj"
+  }
+]

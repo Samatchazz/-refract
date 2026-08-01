@@ -1,0 +1,30 @@
+[
+  {
+    "claim": "A longitudinal study of approximately 22,000 YouTube channels from 2008 to 2019 found that the more productive strata of the channel population increased output by more than 800% over ten years.",
+    "stance": "supports",
+    "stance_target": "The time and output required to remain competitive as a creator escalates continuously, raising the effort floor for new entrants and driving burnout-related exit.",
+    "evidence_type": "empirical",
+    "scope_conditions": "ABSTRACT ONLY — full text paywalled, so the per-stratum breakdown, the exact channel-sampling method and the definition of 'more productive strata' are not verified. Approximately 22,000 channels, 2008-2019, three productivity parameters (videos uploaded, average video length, total output). Global YouTube API sample; no country breakdown available. A footnote notes the API appears capped at 100,000 videos per channel, so the true range is likely higher.",
+    "quoted_support": "Parts of the channel population saw relatively small changes, but some of the more productive strata of the population saw productivity increases above 800% over 10 years.",
+    "numbers": ["~22,000 channels", "2008-2019", "above 800% over 10 years", "3 productivity parameters", "100,000-video API cap"],
+    "entities": ["YouTube", "Andreas Gregersen", "Jacob Ormen", "University of Copenhagen"],
+    "time_period": "2008-2019; published Information, Communication & Society 26(7):1363-1380, online 26 Dec 2021",
+    "region": "Global YouTube sample, Danish authors; NOT broken out by country and NOT validated for Southeast Asia",
+    "confidence": "medium",
+    "source_note_id": "the-output-imperative-productivity-and-precarity-on-youtube-information-communic"
+  },
+  {
+    "claim": "Rising YouTube productivity was driven primarily by new channels joining the platform, with existing channels then following the output benchmarks newcomers set.",
+    "stance": "supports",
+    "stance_target": "Creator effort requirements ratchet upward through competitive imitation rather than through platform policy, meaning the bar for a given income keeps rising for later cohorts.",
+    "evidence_type": "empirical",
+    "scope_conditions": "ABSTRACT ONLY; the supporting cohort analysis is behind the Taylor & Francis paywall. ~22,000 channels, 2008-2019.",
+    "quoted_support": "We show that these developments have been driven primarily by new channels joining the platform and that existing channels tend to follow the benchmarks set by newcomers. This indicates the existence of steadily increasing demands for increased output to stay competitive.",
+    "numbers": ["~22,000 channels", "2008-2019"],
+    "entities": ["YouTube"],
+    "time_period": "2008-2019",
+    "region": "Global YouTube; US/Western-authored, no regional breakout",
+    "confidence": "medium",
+    "source_note_id": "the-output-imperative-productivity-and-precarity-on-youtube-information-communic"
+  }
+]

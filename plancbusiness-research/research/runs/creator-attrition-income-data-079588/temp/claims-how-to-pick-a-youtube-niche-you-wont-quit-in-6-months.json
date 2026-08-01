@@ -1,0 +1,23 @@
+[
+  {
+    "claim": "The circulating statistic that 73% of creators quit in their first year appears in this source as a bare opening assertion with no citation, no sample size, no year, no platform and no country, and no primary study for it is identifiable from the source chain.",
+    "stance": "refutes",
+    "stance_target": "The evidentiary standing of the widely repeated claim that 73% of creators quit within a year",
+    "evidence_type": "anecdotal",
+    "scope_conditions": "BerryViral SEO article, undated and unbylined, promoting the publisher's own thumbnail tool; the only outbound citation on the page points to a Teachable marketing blog about profitable niches, which is unrelated to the attrition figure",
+    "quoted_support": "73% of creators quit in their first year. It isn't because they lack talent or the algorithm hates them.",
+    "numbers": [
+      "73% claimed first-year quit rate",
+      "0 citations",
+      "0 stated sample size"
+    ],
+    "entities": [
+      "BerryViral",
+      "Teachable"
+    ],
+    "time_period": "Undated; fetched July 2026",
+    "region": "Unspecified",
+    "confidence": "high",
+    "source_note_id": "how-to-pick-a-youtube-niche-you-wont-quit-in-6-months"
+  }
+]

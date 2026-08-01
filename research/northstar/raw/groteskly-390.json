@@ -1,0 +1,824 @@
+{
+  "slug": "groteskly",
+  "url": "https://groteskly.xyz",
+  "name": "Groteskly Yours",
+  "country": "Lithuania",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "ok": true,
+  "httpStatus": 200,
+  "finalUrl": "https://groteskly.xyz/",
+  "consentDismissed": [],
+  "scrollInfo": {
+    "contentHeight": 4714,
+    "docScrollHeight": 4714,
+    "maxElementBottom": 4714,
+    "innerScrollerHeight": 0,
+    "virtualScroll": false
+  },
+  "document": {
+    "scrollHeight": 4714,
+    "vhMultiple": 5.59,
+    "textNodeCount": 64,
+    "canvasCount": 0,
+    "elementCount": 415,
+    "title": "Groteskly Yours Studio | Modern Fonts for Commercial Use",
+    "lang": "en-US",
+    "contentHeight": 4714,
+    "scrollMode": "native"
+  },
+  "container": {
+    "dominantPairs": [
+      {
+        "width": 360,
+        "left": 15,
+        "count": 3,
+        "sample": {
+          "tag": "p",
+          "cls": "framer-text framer-styles-preset-135a3zu"
+        }
+      },
+      {
+        "width": 324,
+        "left": 15,
+        "count": 2,
+        "sample": {
+          "tag": "p",
+          "cls": "framer-text framer-styles-preset-1h8jytt"
+        }
+      },
+      {
+        "width": 165,
+        "left": 15,
+        "count": 1,
+        "sample": {
+          "tag": "h1",
+          "cls": "framer-text framer-styles-preset-15nfmzw"
+        }
+      },
+      {
+        "width": 248,
+        "left": 35,
+        "count": 1,
+        "sample": {
+          "tag": "p",
+          "cls": ""
+        }
+      }
+    ],
+    "containerChain": {
+      "chain": [
+        {
+          "tag": "p",
+          "cls": "framer-text framer-styles-preset-135a3zu",
+          "width": 360,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "block"
+        },
+        {
+          "tag": "div",
+          "cls": "framer-9v76r6",
+          "width": 360,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "flex"
+        },
+        {
+          "tag": "div",
+          "cls": "framer-bxgqpu",
+          "width": 360,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "flex"
+        },
+        {
+          "tag": "div",
+          "cls": "framer-802bvk",
+          "width": 360,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "flex"
+        },
+        {
+          "tag": "div",
+          "cls": "framer-skb1v9",
+          "width": 390,
+          "maxWidth": "2550px",
+          "paddingInline": "15px / 15px",
+          "marginInline": "0px / 0px",
+          "display": "flex"
+        },
+        {
+          "tag": "div",
+          "cls": "framer-ipwze framer-JzK1f framer-sfiAP framer-asYhj framer-r",
+          "width": 390,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "flex"
+        },
+        {
+          "tag": "div",
+          "cls": "",
+          "width": 390,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "block"
+        }
+      ],
+      "constrained": {
+        "tag": "div",
+        "cls": "framer-skb1v9",
+        "width": 390,
+        "maxWidth": "2550px",
+        "paddingInline": "15px / 15px",
+        "marginInline": "0px / 0px",
+        "display": "flex"
+      }
+    },
+    "grids": [],
+    "bodyPaddingInline": "0px / 0px",
+    "bodyMaxWidth": "none",
+    "htmlPaddingInline": "0px / 0px"
+  },
+  "leftEdgeTest": {
+    "layout": {
+      "n": 5,
+      "mean": 15,
+      "stdDev": 0,
+      "distinctExact": 1,
+      "distinctClustered2px": 1,
+      "clusters": [
+        {
+          "at": 15,
+          "count": 5
+        }
+      ],
+      "values": [
+        15,
+        15,
+        15,
+        15,
+        15
+      ]
+    },
+    "rect": {
+      "n": 5,
+      "mean": 15,
+      "stdDev": 0,
+      "distinctExact": 1,
+      "distinctClustered2px": 1,
+      "clusters": [
+        {
+          "at": 15,
+          "count": 5
+        }
+      ],
+      "values": [
+        15,
+        15,
+        15,
+        15,
+        15
+      ]
+    },
+    "headings": {
+      "n": 5,
+      "mean": 15,
+      "stdDev": 0,
+      "distinctExact": 1,
+      "distinctClustered2px": 1,
+      "clusters": [
+        {
+          "at": 15,
+          "count": 5
+        }
+      ],
+      "values": [
+        15,
+        15,
+        15,
+        15,
+        15
+      ]
+    },
+    "sectionDiscovery": "tall-children-of-wrapper"
+  },
+  "sections": [
+    {
+      "index": 0,
+      "tag": "div",
+      "id": null,
+      "cls": "framer-802bvk",
+      "height": 206.7,
+      "vhFraction": 0.24,
+      "paddingBlockStart": "40px",
+      "paddingBlockEnd": "0px",
+      "marginBlockStart": "0px",
+      "marginBlockEnd": "0px",
+      "firstText": {
+        "layoutLeft": 15,
+        "rectLeft": 15,
+        "tag": "h1",
+        "fontSize": "16px",
+        "text": "Groteskly Yours Studio"
+      },
+      "heading": {
+        "layoutLeft": 15,
+        "rectLeft": 15,
+        "tag": "p",
+        "fontSize": "25px",
+        "text": "We're an independent type foundry developing mod"
+      }
+    },
+    {
+      "index": 1,
+      "tag": "div",
+      "id": null,
+      "cls": "framer-l5x9f6",
+      "height": 1063.25,
+      "vhFraction": 1.26,
+      "paddingBlockStart": "0px",
+      "paddingBlockEnd": "0px",
+      "marginBlockStart": "0px",
+      "marginBlockEnd": "0px",
+      "firstText": {
+        "layoutLeft": 15,
+        "rectLeft": 15,
+        "tag": "h2",
+        "fontSize": "16px",
+        "text": "Selected Fonts"
+      },
+      "heading": {
+        "layoutLeft": 15,
+        "rectLeft": 15,
+        "tag": "h2",
+        "fontSize": "16px",
+        "text": "Selected Fonts"
+      }
+    },
+    {
+      "index": 2,
+      "tag": "div",
+      "id": null,
+      "cls": "framer-1dkemvs",
+      "height": 1107.59,
+      "vhFraction": 1.31,
+      "paddingBlockStart": "0px",
+      "paddingBlockEnd": "0px",
+      "marginBlockStart": "0px",
+      "marginBlockEnd": "0px",
+      "firstText": {
+        "layoutLeft": 15,
+        "rectLeft": 15,
+        "tag": "h2",
+        "fontSize": "16px",
+        "text": "Font Collection"
+      },
+      "heading": {
+        "layoutLeft": 15,
+        "rectLeft": 15,
+        "tag": "h2",
+        "fontSize": "16px",
+        "text": "Font Collection"
+      }
+    },
+    {
+      "index": 3,
+      "tag": "div",
+      "id": null,
+      "cls": "framer-1pvyt8u",
+      "height": 307.8,
+      "vhFraction": 0.36,
+      "paddingBlockStart": "0px",
+      "paddingBlockEnd": "0px",
+      "marginBlockStart": "0px",
+      "marginBlockEnd": "0px",
+      "firstText": {
+        "layoutLeft": 15,
+        "rectLeft": 15,
+        "tag": "h2",
+        "fontSize": "16px",
+        "text": "Fonts in Use"
+      },
+      "heading": {
+        "layoutLeft": 15,
+        "rectLeft": 15,
+        "tag": "h2",
+        "fontSize": "16px",
+        "text": "Fonts in Use"
+      }
+    },
+    {
+      "index": 4,
+      "tag": "div",
+      "id": null,
+      "cls": "framer-1kbgnb6",
+      "height": 758.52,
+      "vhFraction": 0.9,
+      "paddingBlockStart": "0px",
+      "paddingBlockEnd": "0px",
+      "marginBlockStart": "0px",
+      "marginBlockEnd": "0px",
+      "firstText": {
+        "layoutLeft": 15,
+        "rectLeft": 15,
+        "tag": "h2",
+        "fontSize": "16px",
+        "text": "Blog"
+      },
+      "heading": {
+        "layoutLeft": 15,
+        "rectLeft": 15,
+        "tag": "h2",
+        "fontSize": "16px",
+        "text": "Blog"
+      }
+    }
+  ],
+  "verticalRhythm": {
+    "sectionCount": 5,
+    "near100vhCount": 0,
+    "near100vhPct": 0,
+    "strictGcdOfSpacing": 5,
+    "baseUnitEstimate80pct": 5,
+    "spacingHistogram": [
+      {
+        "value": 5,
+        "count": 64
+      },
+      {
+        "value": 15,
+        "count": 12
+      },
+      {
+        "value": 20,
+        "count": 12
+      },
+      {
+        "value": 10,
+        "count": 10
+      },
+      {
+        "value": 50,
+        "count": 3
+      },
+      {
+        "value": 40,
+        "count": 2
+      },
+      {
+        "value": 120,
+        "count": 1
+      }
+    ],
+    "spacingSampleSize": 104
+  },
+  "typeScale": {
+    "distinctFontSizeCount": 5,
+    "distinctFontSizeCount_used2plus": 4,
+    "distinctSizes": [
+      {
+        "size": 50,
+        "count": 2
+      },
+      {
+        "size": 25,
+        "count": 1
+      },
+      {
+        "size": 16,
+        "count": 11
+      },
+      {
+        "size": 14,
+        "count": 25
+      },
+      {
+        "size": 12,
+        "count": 24
+      }
+    ],
+    "scaleSizesDesc": [
+      50,
+      16,
+      14,
+      12
+    ],
+    "consecutiveRatios": [
+      3.13,
+      1.14,
+      1.17
+    ],
+    "roles": {
+      "h1": {
+        "tag": "h1",
+        "fontSize": 16,
+        "fontWeight": "400",
+        "lineHeightPx": 19.2,
+        "lineHeightRatio": 1.2,
+        "letterSpacing": "0px",
+        "letterSpacingEm": 0,
+        "fontFamily": "Groteskly Sans 1.02 108",
+        "fontFamilyFull": "\"Groteskly Sans 1.02 108\", \"Groteskly Sans 1.02 108 Placeholder\", sans-serif",
+        "textTransform": "none",
+        "color": "rgb(0, 0, 0)",
+        "widthPx": 165.09,
+        "text": "Groteskly Yours Studio"
+      },
+      "biggestText": {
+        "tag": "p",
+        "fontSize": 50,
+        "fontWeight": "400",
+        "lineHeightPx": 60,
+        "lineHeightRatio": 1.2,
+        "letterSpacing": "0px",
+        "letterSpacingEm": 0,
+        "fontFamily": "Groteskly Sans 1.02 100",
+        "fontFamilyFull": "\"Groteskly Sans 1.02 100\", \"Groteskly Sans 1.02 100 Placeholder\", sans-serif",
+        "textTransform": "none",
+        "color": "rgb(0, 0, 0)",
+        "widthPx": 145.75,
+        "text": "© GYS"
+      },
+      "h2All": [
+        {
+          "tag": "h2",
+          "fontSize": 16,
+          "fontWeight": "400",
+          "lineHeightPx": 17.6,
+          "lineHeightRatio": 1.1,
+          "letterSpacing": "0px",
+          "letterSpacingEm": 0,
+          "fontFamily": "Groteskly Sans 1.02 108",
+          "fontFamilyFull": "\"Groteskly Sans 1.02 108\", \"Groteskly Sans 1.02 108 Placeholder\", sans-serif",
+          "textTransform": "none",
+          "color": "rgb(0, 0, 0)",
+          "widthPx": 360,
+          "text": "Selected Fonts"
+        },
+        {
+          "tag": "h2",
+          "fontSize": 16,
+          "fontWeight": "400",
+          "lineHeightPx": 17.6,
+          "lineHeightRatio": 1.1,
+          "letterSpacing": "0px",
+          "letterSpacingEm": 0,
+          "fontFamily": "Groteskly Sans 1.02 108",
+          "fontFamilyFull": "\"Groteskly Sans 1.02 108\", \"Groteskly Sans 1.02 108 Placeholder\", sans-serif",
+          "textTransform": "none",
+          "color": "rgb(0, 0, 0)",
+          "widthPx": 360,
+          "text": "Font Collection"
+        },
+        {
+          "tag": "h2",
+          "fontSize": 16,
+          "fontWeight": "400",
+          "lineHeightPx": 17.6,
+          "lineHeightRatio": 1.1,
+          "letterSpacing": "0px",
+          "letterSpacingEm": 0,
+          "fontFamily": "Groteskly Sans 1.02 108",
+          "fontFamilyFull": "\"Groteskly Sans 1.02 108\", \"Groteskly Sans 1.02 108 Placeholder\", sans-serif",
+          "textTransform": "none",
+          "color": "rgb(0, 0, 0)",
+          "widthPx": 360,
+          "text": "Fonts in Use"
+        },
+        {
+          "tag": "h2",
+          "fontSize": 16,
+          "fontWeight": "400",
+          "lineHeightPx": 17.6,
+          "lineHeightRatio": 1.1,
+          "letterSpacing": "0px",
+          "letterSpacingEm": 0,
+          "fontFamily": "Groteskly Sans 1.02 108",
+          "fontFamilyFull": "\"Groteskly Sans 1.02 108\", \"Groteskly Sans 1.02 108 Placeholder\", sans-serif",
+          "textTransform": "none",
+          "color": "rgb(0, 0, 0)",
+          "widthPx": 360,
+          "text": "Blog"
+        }
+      ],
+      "h3": {
+        "tag": "h3",
+        "fontSize": 12,
+        "fontWeight": "400",
+        "lineHeightPx": 14.4,
+        "lineHeightRatio": 1.2,
+        "letterSpacing": "0px",
+        "letterSpacingEm": 0,
+        "fontFamily": "Groteskly Sans 1.02 100",
+        "fontFamilyFull": "\"Groteskly Sans 1.02 100\", \"Groteskly Sans 1.02 100 Placeholder\", sans-serif",
+        "textTransform": "none",
+        "color": "rgb(0, 0, 0)",
+        "widthPx": 41.81,
+        "text": "Strekka"
+      },
+      "body": {
+        "tag": "p",
+        "fontSize": 25,
+        "fontWeight": "400",
+        "lineHeightPx": 27.5,
+        "lineHeightRatio": 1.1,
+        "letterSpacing": "0px",
+        "letterSpacingEm": 0,
+        "fontFamily": "Groteskly Sans 1.02 93",
+        "fontFamilyFull": "\"Groteskly Sans 1.02 93\", \"Groteskly Sans 1.02 93 Placeholder\", sans-serif",
+        "textTransform": "none",
+        "color": "rgb(0, 0, 0)",
+        "widthPx": 360,
+        "text": "We're an independent type foundry developing modern fonts an"
+      },
+      "small": {
+        "tag": "h3",
+        "fontSize": 12,
+        "fontWeight": "400",
+        "lineHeightPx": 14.4,
+        "lineHeightRatio": 1.2,
+        "letterSpacing": "0px",
+        "letterSpacingEm": 0,
+        "fontFamily": "Groteskly Sans 1.02 100",
+        "fontFamilyFull": "\"Groteskly Sans 1.02 100\", \"Groteskly Sans 1.02 100 Placeholder\", sans-serif",
+        "textTransform": "none",
+        "color": "rgb(0, 0, 0)",
+        "widthPx": 41.81,
+        "text": "Strekka"
+      },
+      "mono": null
+    },
+    "readingMeasure": {
+      "columnWidthPx": 360,
+      "widthOf100Chars": 1171.9,
+      "measureCh_spec": 30.72,
+      "measureCh_zeroWidth": 21.98,
+      "maxWidthDeclared": "none",
+      "canvasFont": "25px \"Groteskly Sans 1.02 93\", \"Groteskly Sans 1.02 93 Placeholder\", sans-serif"
+    },
+    "readingMeasureAlternates": [
+      {
+        "tag": "p",
+        "fontSize": 25,
+        "fontWeight": "400",
+        "lineHeightPx": 27.5,
+        "lineHeightRatio": 1.1,
+        "letterSpacing": "0px",
+        "letterSpacingEm": 0,
+        "fontFamily": "Groteskly Sans 1.02 93",
+        "fontFamilyFull": "\"Groteskly Sans 1.02 93\", \"Groteskly Sans 1.02 93 Placeholder\", sans-serif",
+        "textTransform": "none",
+        "color": "rgb(0, 0, 0)",
+        "widthPx": 360,
+        "text": "We're an independent type foundry developing modern fonts an"
+      },
+      {
+        "tag": "p",
+        "fontSize": 14,
+        "fontWeight": "400",
+        "lineHeightPx": 16.8,
+        "lineHeightRatio": 1.2,
+        "letterSpacing": "0px",
+        "letterSpacingEm": 0,
+        "fontFamily": "Groteskly Sans 1.02 100",
+        "fontFamilyFull": "\"Groteskly Sans 1.02 100\", \"Groteskly Sans 1.02 100 Placeholder\", sans-serif",
+        "textTransform": "none",
+        "color": "rgb(0, 0, 0)",
+        "widthPx": 247.97,
+        "text": "We use cookies to enhance your experience, analyze site traf"
+      },
+      {
+        "tag": "p",
+        "fontSize": 14,
+        "fontWeight": "400",
+        "lineHeightPx": 16.8,
+        "lineHeightRatio": 1.2,
+        "letterSpacing": "0px",
+        "letterSpacingEm": 0,
+        "fontFamily": "Groteskly Sans 1.02 100",
+        "fontFamilyFull": "\"Groteskly Sans 1.02 100\", \"Groteskly Sans 1.02 100 Placeholder\", sans-serif",
+        "textTransform": "none",
+        "color": "rgb(0, 0, 0)",
+        "widthPx": 324,
+        "text": "How we feel about typography as AI-generated fonts become in"
+      }
+    ],
+    "distinctFontFamilyCount": 5,
+    "fontFamilies": [
+      {
+        "family": "Groteskly Sans 1.02 100",
+        "count": 33
+      },
+      {
+        "family": "Groteskly Sans 1.02 108",
+        "count": 23
+      },
+      {
+        "family": "Groteskly Sans 1.02 122",
+        "count": 4
+      },
+      {
+        "family": "Groteskly Sans 122",
+        "count": 2
+      },
+      {
+        "family": "Groteskly Sans 1.02 93",
+        "count": 1
+      }
+    ]
+  },
+  "color": {
+    "textColors": [
+      {
+        "value": "rgb(0,0,0)",
+        "count": 40
+      },
+      {
+        "value": "rgb(255,255,255)",
+        "count": 19
+      },
+      {
+        "value": "rgb(17,17,17)",
+        "count": 2
+      },
+      {
+        "value": "rgb(128,128,128)",
+        "count": 1
+      },
+      {
+        "value": "rgb(104,104,104)",
+        "count": 1
+      }
+    ],
+    "backgroundColors": [
+      {
+        "value": "rgb(0,0,0)",
+        "count": 20
+      },
+      {
+        "value": "rgb(255,255,255)",
+        "count": 19
+      },
+      {
+        "value": "rgb(221,221,221)",
+        "count": 5
+      },
+      {
+        "value": "rgba(255,255,255,0)",
+        "count": 2
+      }
+    ],
+    "distinctTextColorCount": 5,
+    "distinctBgColorCount": 4
+  },
+  "persistent": {
+    "fixedOrSticky": [
+      {
+        "tag": "div",
+        "cls": "framer-8qgd74-container",
+        "position": "sticky",
+        "rect": {
+          "top": 0,
+          "left": 0,
+          "width": 390,
+          "height": 54
+        },
+        "zIndex": "5",
+        "text": "",
+        "opacity": "1"
+      },
+      {
+        "tag": "div",
+        "cls": "",
+        "position": "fixed",
+        "rect": {
+          "top": 706.81,
+          "left": 0,
+          "width": 390,
+          "height": 137.19
+        },
+        "zIndex": "10",
+        "text": "We use cookies to enhance your experience, analyze site traf",
+        "opacity": "1"
+      }
+    ]
+  },
+  "nav": {
+    "tag": "nav",
+    "cls": "framer-Oynmu framer-CPShv framer-mVtC2 framer-1oysp2o framer",
+    "height": 54,
+    "top": 0,
+    "position": "relative",
+    "backgroundColor": "rgb(255, 255, 255)",
+    "backdropFilter": "none",
+    "borderBottom": "0px rgb(0, 0, 0)",
+    "paddingBlock": "15px / 15px",
+    "transform": "none",
+    "opacity": "1",
+    "mixBlendMode": "normal",
+    "color": "rgb(0, 0, 0)"
+  },
+  "navState": {
+    "at0": {
+      "nav": {
+        "height": 54,
+        "top": 0,
+        "position": "relative",
+        "backgroundColor": "rgb(255, 255, 255)",
+        "backdropFilter": "none",
+        "borderBottom": "0px rgb(0, 0, 0)",
+        "paddingBlock": "15px / 15px",
+        "transform": "none",
+        "opacity": "1",
+        "color": "rgb(0, 0, 0)"
+      },
+      "fixedOrSticky": [
+        {
+          "tag": "div",
+          "cls": "framer-8qgd74-container",
+          "position": "sticky",
+          "rect": {
+            "top": 0,
+            "left": 0,
+            "width": 390,
+            "height": 54
+          },
+          "text": "",
+          "opacity": "1"
+        },
+        {
+          "tag": "div",
+          "cls": "",
+          "position": "fixed",
+          "rect": {
+            "top": 706.81,
+            "left": 0,
+            "width": 390,
+            "height": 137.19
+          },
+          "text": "We use cookies to enhance your experience, analyze site traf",
+          "opacity": "1"
+        }
+      ]
+    },
+    "at2000": {
+      "nav": {
+        "height": 54,
+        "top": 0,
+        "position": "relative",
+        "backgroundColor": "rgb(255, 255, 255)",
+        "backdropFilter": "none",
+        "borderBottom": "0px rgb(0, 0, 0)",
+        "paddingBlock": "15px / 15px",
+        "transform": "none",
+        "opacity": "1",
+        "color": "rgb(0, 0, 0)"
+      },
+      "fixedOrSticky": [
+        {
+          "tag": "div",
+          "cls": "framer-8qgd74-container",
+          "position": "sticky",
+          "rect": {
+            "top": 0,
+            "left": 0,
+            "width": 390,
+            "height": 54
+          },
+          "text": "",
+          "opacity": "1"
+        },
+        {
+          "tag": "div",
+          "cls": "",
+          "position": "fixed",
+          "rect": {
+            "top": 706.81,
+            "left": 0,
+            "width": 390,
+            "height": 137.19
+          },
+          "text": "We use cookies to enhance your experience, analyze site traf",
+          "opacity": "1"
+        }
+      ]
+    },
+    "changed": false,
+    "diff": {}
+  },
+  "shots": [
+    "groteskly-390-full.jpg"
+  ],
+  "fullPageShotRepresentative": true,
+  "pageErrors": []
+}

@@ -1,0 +1,1009 @@
+{
+  "slug": "jungheonlee",
+  "url": "https://jungheonlee.com",
+  "name": "Jungheon Lee",
+  "country": "Korea",
+  "viewport": {
+    "width": 1440,
+    "height": 900
+  },
+  "ok": false,
+  "httpStatus": 200,
+  "finalUrl": "https://www.jungheonlee.com/",
+  "networkIdleTimeout": true,
+  "consentDismissed": [],
+  "scrollInfo": {
+    "contentHeight": 900,
+    "docScrollHeight": 900,
+    "maxElementBottom": 900,
+    "innerScrollerHeight": 0,
+    "virtualScroll": false
+  },
+  "document": {
+    "scrollHeight": 900,
+    "vhMultiple": 1,
+    "textNodeCount": 10,
+    "canvasCount": 3,
+    "elementCount": 447,
+    "title": "이정헌 (Jungheon Lee) — Digital Artist & Interactive Designer",
+    "lang": "ko",
+    "contentHeight": 900,
+    "scrollMode": "native"
+  },
+  "container": {
+    "dominantPairs": [
+      {
+        "width": 171,
+        "left": 720,
+        "count": 1,
+        "sample": {
+          "tag": "div",
+          "cls": "ui-layer__hint"
+        }
+      },
+      {
+        "width": 74,
+        "left": 1348,
+        "count": 1,
+        "sample": {
+          "tag": "div",
+          "cls": "mouse-readout"
+        }
+      }
+    ],
+    "containerChain": {
+      "chain": [
+        {
+          "tag": "div",
+          "cls": "ui-layer__hint",
+          "width": 170.8,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "block"
+        },
+        {
+          "tag": "div",
+          "cls": "ui-layer",
+          "width": 1440,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "block"
+        },
+        {
+          "tag": "div",
+          "cls": "page",
+          "width": 1440,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "block"
+        }
+      ],
+      "constrained": null
+    },
+    "grids": [],
+    "bodyPaddingInline": "0px / 0px",
+    "bodyMaxWidth": "none",
+    "htmlPaddingInline": "0px / 0px"
+  },
+  "leftEdgeTest": {
+    "layout": {
+      "n": 2,
+      "mean": 9.5,
+      "stdDev": 10.5,
+      "distinctExact": 2,
+      "distinctClustered2px": 2,
+      "clusters": [
+        {
+          "at": -1,
+          "count": 1
+        },
+        {
+          "at": 20,
+          "count": 1
+        }
+      ],
+      "values": [
+        20,
+        -1
+      ]
+    },
+    "rect": {
+      "n": 2,
+      "mean": 9.5,
+      "stdDev": 10.5,
+      "distinctExact": 2,
+      "distinctClustered2px": 2,
+      "clusters": [
+        {
+          "at": -1,
+          "count": 1
+        },
+        {
+          "at": 20,
+          "count": 1
+        }
+      ],
+      "values": [
+        20,
+        -1
+      ]
+    },
+    "headings": {
+      "n": 2,
+      "mean": 9.5,
+      "stdDev": 10.5,
+      "distinctExact": 2,
+      "distinctClustered2px": 2,
+      "clusters": [
+        {
+          "at": -1,
+          "count": 1
+        },
+        {
+          "at": 20,
+          "count": 1
+        }
+      ],
+      "values": [
+        20,
+        -1
+      ]
+    },
+    "sectionDiscovery": "body-children"
+  },
+  "sections": [
+    {
+      "index": 0,
+      "tag": "header",
+      "id": null,
+      "cls": "top-ui",
+      "height": 19,
+      "vhFraction": 0.02,
+      "paddingBlockStart": "0px",
+      "paddingBlockEnd": "0px",
+      "marginBlockStart": "0px",
+      "marginBlockEnd": "0px",
+      "firstText": {
+        "layoutLeft": 20,
+        "rectLeft": 20,
+        "tag": "button",
+        "fontSize": "12.48px",
+        "text": "JUNGHEONLEE"
+      },
+      "heading": {
+        "layoutLeft": 20,
+        "rectLeft": 20,
+        "tag": "button",
+        "fontSize": "12.48px",
+        "text": "JUNGHEONLEE"
+      }
+    },
+    {
+      "index": 1,
+      "tag": "div",
+      "id": "page",
+      "cls": "page",
+      "height": 900,
+      "vhFraction": 1,
+      "paddingBlockStart": "0px",
+      "paddingBlockEnd": "0px",
+      "marginBlockStart": "0px",
+      "marginBlockEnd": "0px",
+      "firstText": {
+        "layoutLeft": -1,
+        "rectLeft": -1,
+        "tag": "a",
+        "fontSize": "16px",
+        "text": "INTERACTIVE ART"
+      },
+      "heading": {
+        "layoutLeft": -1,
+        "rectLeft": -1,
+        "tag": "a",
+        "fontSize": "16px",
+        "text": "INTERACTIVE ART"
+      }
+    },
+    {
+      "index": 2,
+      "tag": "div",
+      "id": "cursorTrail",
+      "cls": "cursor-trail",
+      "height": 900,
+      "vhFraction": 1,
+      "paddingBlockStart": "0px",
+      "paddingBlockEnd": "0px",
+      "marginBlockStart": "0px",
+      "marginBlockEnd": "0px",
+      "firstText": null,
+      "heading": null
+    },
+    {
+      "index": 3,
+      "tag": "div",
+      "id": "awwwards",
+      "cls": "",
+      "height": 158.22,
+      "vhFraction": 0.18,
+      "paddingBlockStart": "0px",
+      "paddingBlockEnd": "0px",
+      "marginBlockStart": "0px",
+      "marginBlockEnd": "0px",
+      "firstText": null,
+      "heading": null
+    }
+  ],
+  "verticalRhythm": {
+    "sectionCount": 4,
+    "near100vhCount": 2,
+    "near100vhPct": 50,
+    "strictGcdOfSpacing": null,
+    "baseUnitEstimate80pct": null,
+    "spacingHistogram": [],
+    "spacingSampleSize": 0
+  },
+  "typeScale": {
+    "distinctFontSizeCount": 4,
+    "distinctFontSizeCount_used2plus": 1,
+    "distinctSizes": [
+      {
+        "size": 16,
+        "count": 7
+      },
+      {
+        "size": 12.48,
+        "count": 1
+      },
+      {
+        "size": 10.88,
+        "count": 1
+      },
+      {
+        "size": 9,
+        "count": 1
+      }
+    ],
+    "scaleSizesDesc": [
+      16
+    ],
+    "consecutiveRatios": [],
+    "roles": {
+      "h1": null,
+      "biggestText": {
+        "tag": "a",
+        "fontSize": 16,
+        "fontWeight": "400",
+        "lineHeightPx": "normal",
+        "lineHeightRatio": null,
+        "letterSpacing": "0px",
+        "letterSpacingEm": 0,
+        "fontFamily": "Montserrat",
+        "fontFamilyFull": "Montserrat, sans-serif",
+        "textTransform": "none",
+        "color": "rgb(255, 255, 255)",
+        "widthPx": 143.39,
+        "text": "INTERACTIVE ART"
+      },
+      "h2All": [],
+      "h3": null,
+      "body": null,
+      "small": {
+        "tag": "div",
+        "fontSize": 9,
+        "fontWeight": "400",
+        "lineHeightPx": 9,
+        "lineHeightRatio": 1,
+        "letterSpacing": "0.27px",
+        "letterSpacingEm": 0.03,
+        "fontFamily": "JetBrains Mono",
+        "fontFamilyFull": "\"JetBrains Mono\", monospace",
+        "textTransform": "none",
+        "color": "rgba(255, 255, 255, 0.62)",
+        "widthPx": 73.72,
+        "text": "X 0720 Y 0450"
+      },
+      "mono": {
+        "tag": "div",
+        "fontSize": 9,
+        "fontWeight": "400",
+        "lineHeightPx": 9,
+        "lineHeightRatio": 1,
+        "letterSpacing": "0.27px",
+        "letterSpacingEm": 0.03,
+        "fontFamily": "JetBrains Mono",
+        "fontFamilyFull": "\"JetBrains Mono\", monospace",
+        "textTransform": "none",
+        "color": "rgba(255, 255, 255, 0.62)",
+        "widthPx": 73.72,
+        "text": "X 0720 Y 0450"
+      }
+    },
+    "readingMeasure": null,
+    "readingMeasureAlternates": [],
+    "distinctFontFamilyCount": 2,
+    "fontFamilies": [
+      {
+        "family": "Montserrat",
+        "count": 9
+      },
+      {
+        "family": "JetBrains Mono",
+        "count": 1
+      }
+    ]
+  },
+  "color": {
+    "textColors": [
+      {
+        "value": "rgb(255,255,255)",
+        "count": 7
+      },
+      {
+        "value": "rgba(255,255,255,0.72)",
+        "count": 1
+      },
+      {
+        "value": "rgba(255,255,255,0.22)",
+        "count": 1
+      },
+      {
+        "value": "rgba(255,255,255,0.62)",
+        "count": 1
+      }
+    ],
+    "backgroundColors": [
+      {
+        "value": "rgb(255,255,255)",
+        "count": 8
+      },
+      {
+        "value": "rgb(0,0,0)",
+        "count": 2
+      }
+    ],
+    "distinctTextColorCount": 4,
+    "distinctBgColorCount": 2
+  },
+  "persistent": {
+    "fixedOrSticky": [
+      {
+        "tag": "header",
+        "cls": "top-ui",
+        "position": "fixed",
+        "rect": {
+          "top": 18,
+          "left": 20,
+          "width": 115.77,
+          "height": 19
+        },
+        "zIndex": "99999",
+        "text": "JUNGHEONLEE",
+        "opacity": "1"
+      },
+      {
+        "tag": "div",
+        "cls": "scene-wrap",
+        "position": "fixed",
+        "rect": {
+          "top": 0,
+          "left": 0,
+          "width": 1440,
+          "height": 900
+        },
+        "zIndex": "1",
+        "text": "",
+        "opacity": "1"
+      },
+      {
+        "tag": "div",
+        "cls": "ui-layer",
+        "position": "fixed",
+        "rect": {
+          "top": 0,
+          "left": 0,
+          "width": 1440,
+          "height": 900
+        },
+        "zIndex": "4",
+        "text": "scroll or drag to explore",
+        "opacity": "1"
+      },
+      {
+        "tag": "div",
+        "cls": "mouse-readout",
+        "position": "fixed",
+        "rect": {
+          "top": 873,
+          "left": 1348.28,
+          "width": 73.72,
+          "height": 9
+        },
+        "zIndex": "8",
+        "text": "X 0720 Y 0450",
+        "opacity": "1"
+      },
+      {
+        "tag": "div",
+        "cls": "cursor-trail",
+        "position": "fixed",
+        "rect": {
+          "top": 0,
+          "left": 0,
+          "width": 1440,
+          "height": 900
+        },
+        "zIndex": "9",
+        "text": "",
+        "opacity": "1"
+      },
+      {
+        "tag": "div",
+        "cls": "cursor-trail__square",
+        "position": "fixed",
+        "rect": {
+          "top": 441,
+          "left": 711,
+          "width": 18,
+          "height": 18
+        },
+        "zIndex": "auto",
+        "text": "",
+        "opacity": "1"
+      },
+      {
+        "tag": "div",
+        "cls": "cursor-trail__square",
+        "position": "fixed",
+        "rect": {
+          "top": 441,
+          "left": 711,
+          "width": 18,
+          "height": 18
+        },
+        "zIndex": "auto",
+        "text": "",
+        "opacity": "1"
+      },
+      {
+        "tag": "div",
+        "cls": "cursor-trail__square",
+        "position": "fixed",
+        "rect": {
+          "top": 441,
+          "left": 711,
+          "width": 18,
+          "height": 18
+        },
+        "zIndex": "auto",
+        "text": "",
+        "opacity": "1"
+      },
+      {
+        "tag": "div",
+        "cls": "cursor-trail__square",
+        "position": "fixed",
+        "rect": {
+          "top": 441,
+          "left": 711,
+          "width": 18,
+          "height": 18
+        },
+        "zIndex": "auto",
+        "text": "",
+        "opacity": "1"
+      },
+      {
+        "tag": "div",
+        "cls": "cursor-trail__square",
+        "position": "fixed",
+        "rect": {
+          "top": 441,
+          "left": 711,
+          "width": 18,
+          "height": 18
+        },
+        "zIndex": "auto",
+        "text": "",
+        "opacity": "1"
+      },
+      {
+        "tag": "div",
+        "cls": "cursor-trail__square",
+        "position": "fixed",
+        "rect": {
+          "top": 441,
+          "left": 711,
+          "width": 18,
+          "height": 18
+        },
+        "zIndex": "auto",
+        "text": "",
+        "opacity": "1"
+      },
+      {
+        "tag": "div",
+        "cls": "cursor-trail__square",
+        "position": "fixed",
+        "rect": {
+          "top": 441,
+          "left": 711,
+          "width": 18,
+          "height": 18
+        },
+        "zIndex": "auto",
+        "text": "",
+        "opacity": "1"
+      },
+      {
+        "tag": "div",
+        "cls": "cursor-trail__square",
+        "position": "fixed",
+        "rect": {
+          "top": 441,
+          "left": 711,
+          "width": 18,
+          "height": 18
+        },
+        "zIndex": "auto",
+        "text": "",
+        "opacity": "1"
+      },
+      {
+        "tag": "div",
+        "cls": "",
+        "position": "fixed",
+        "rect": {
+          "top": 370.89,
+          "left": 1392.23,
+          "width": 47.77,
+          "height": 158.22
+        },
+        "zIndex": "999",
+        "text": "",
+        "opacity": "1"
+      }
+    ]
+  },
+  "nav": {
+    "tag": "header",
+    "cls": "top-ui",
+    "height": 19,
+    "top": 18,
+    "position": "fixed",
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "backdropFilter": "none",
+    "borderBottom": "0px rgb(255, 255, 255)",
+    "paddingBlock": "0px / 0px",
+    "transform": "none",
+    "opacity": "1",
+    "mixBlendMode": "normal",
+    "color": "rgb(255, 255, 255)"
+  },
+  "navState": {
+    "at0": {
+      "nav": {
+        "height": 19,
+        "top": 18,
+        "position": "fixed",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "backdropFilter": "none",
+        "borderBottom": "0px rgb(255, 255, 255)",
+        "paddingBlock": "0px / 0px",
+        "transform": "none",
+        "opacity": "1",
+        "color": "rgb(255, 255, 255)"
+      },
+      "fixedOrSticky": [
+        {
+          "tag": "header",
+          "cls": "top-ui",
+          "position": "fixed",
+          "rect": {
+            "top": 18,
+            "left": 20,
+            "width": 115.77,
+            "height": 19
+          },
+          "text": "JUNGHEONLEE",
+          "opacity": "1"
+        },
+        {
+          "tag": "div",
+          "cls": "scene-wrap",
+          "position": "fixed",
+          "rect": {
+            "top": 0,
+            "left": 0,
+            "width": 1440,
+            "height": 900
+          },
+          "text": "",
+          "opacity": "1"
+        },
+        {
+          "tag": "div",
+          "cls": "ui-layer",
+          "position": "fixed",
+          "rect": {
+            "top": 0,
+            "left": 0,
+            "width": 1440,
+            "height": 900
+          },
+          "text": "scroll or drag to explore",
+          "opacity": "1"
+        },
+        {
+          "tag": "div",
+          "cls": "mouse-readout",
+          "position": "fixed",
+          "rect": {
+            "top": 873,
+            "left": 1348.28,
+            "width": 73.72,
+            "height": 9
+          },
+          "text": "X 0720 Y 0450",
+          "opacity": "1"
+        },
+        {
+          "tag": "div",
+          "cls": "cursor-trail",
+          "position": "fixed",
+          "rect": {
+            "top": 0,
+            "left": 0,
+            "width": 1440,
+            "height": 900
+          },
+          "text": "",
+          "opacity": "1"
+        },
+        {
+          "tag": "div",
+          "cls": "cursor-trail__square",
+          "position": "fixed",
+          "rect": {
+            "top": 441,
+            "left": 711,
+            "width": 18,
+            "height": 18
+          },
+          "text": "",
+          "opacity": "1"
+        },
+        {
+          "tag": "div",
+          "cls": "cursor-trail__square",
+          "position": "fixed",
+          "rect": {
+            "top": 441,
+            "left": 711,
+            "width": 18,
+            "height": 18
+          },
+          "text": "",
+          "opacity": "1"
+        },
+        {
+          "tag": "div",
+          "cls": "cursor-trail__square",
+          "position": "fixed",
+          "rect": {
+            "top": 441,
+            "left": 711,
+            "width": 18,
+            "height": 18
+          },
+          "text": "",
+          "opacity": "1"
+        },
+        {
+          "tag": "div",
+          "cls": "cursor-trail__square",
+          "position": "fixed",
+          "rect": {
+            "top": 441,
+            "left": 711,
+            "width": 18,
+            "height": 18
+          },
+          "text": "",
+          "opacity": "1"
+        },
+        {
+          "tag": "div",
+          "cls": "cursor-trail__square",
+          "position": "fixed",
+          "rect": {
+            "top": 441,
+            "left": 711,
+            "width": 18,
+            "height": 18
+          },
+          "text": "",
+          "opacity": "1"
+        },
+        {
+          "tag": "div",
+          "cls": "cursor-trail__square",
+          "position": "fixed",
+          "rect": {
+            "top": 441,
+            "left": 711,
+            "width": 18,
+            "height": 18
+          },
+          "text": "",
+          "opacity": "1"
+        },
+        {
+          "tag": "div",
+          "cls": "cursor-trail__square",
+          "position": "fixed",
+          "rect": {
+            "top": 441,
+            "left": 711,
+            "width": 18,
+            "height": 18
+          },
+          "text": "",
+          "opacity": "1"
+        },
+        {
+          "tag": "div",
+          "cls": "cursor-trail__square",
+          "position": "fixed",
+          "rect": {
+            "top": 441,
+            "left": 711,
+            "width": 18,
+            "height": 18
+          },
+          "text": "",
+          "opacity": "1"
+        },
+        {
+          "tag": "div",
+          "cls": "",
+          "position": "fixed",
+          "rect": {
+            "top": 370.89,
+            "left": 1392.23,
+            "width": 47.77,
+            "height": 158.22
+          },
+          "text": "",
+          "opacity": "1"
+        }
+      ]
+    },
+    "at2000": {
+      "nav": {
+        "height": 19,
+        "top": 18,
+        "position": "fixed",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "backdropFilter": "none",
+        "borderBottom": "0px rgb(255, 255, 255)",
+        "paddingBlock": "0px / 0px",
+        "transform": "none",
+        "opacity": "1",
+        "color": "rgb(255, 255, 255)"
+      },
+      "fixedOrSticky": [
+        {
+          "tag": "header",
+          "cls": "top-ui",
+          "position": "fixed",
+          "rect": {
+            "top": 18,
+            "left": 20,
+            "width": 115.77,
+            "height": 19
+          },
+          "text": "JUNGHEONLEE",
+          "opacity": "1"
+        },
+        {
+          "tag": "div",
+          "cls": "scene-wrap",
+          "position": "fixed",
+          "rect": {
+            "top": 0,
+            "left": 0,
+            "width": 1440,
+            "height": 900
+          },
+          "text": "",
+          "opacity": "1"
+        },
+        {
+          "tag": "div",
+          "cls": "ui-layer",
+          "position": "fixed",
+          "rect": {
+            "top": 0,
+            "left": 0,
+            "width": 1440,
+            "height": 900
+          },
+          "text": "scroll or drag to explore",
+          "opacity": "1"
+        },
+        {
+          "tag": "div",
+          "cls": "action-log",
+          "position": "fixed",
+          "rect": {
+            "top": 805.3,
+            "left": 18,
+            "width": 139.52,
+            "height": 76.7
+          },
+          "text": "[14:09:07] SCROLL INPUT[14:09:06] SCROLL INPUT[14:09:06] SCR",
+          "opacity": "1"
+        },
+        {
+          "tag": "div",
+          "cls": "mouse-readout",
+          "position": "fixed",
+          "rect": {
+            "top": 873,
+            "left": 1348.28,
+            "width": 73.72,
+            "height": 9
+          },
+          "text": "X 0720 Y 0450",
+          "opacity": "1"
+        },
+        {
+          "tag": "div",
+          "cls": "cursor-trail",
+          "position": "fixed",
+          "rect": {
+            "top": 0,
+            "left": 0,
+            "width": 1440,
+            "height": 900
+          },
+          "text": "",
+          "opacity": "1"
+        },
+        {
+          "tag": "div",
+          "cls": "cursor-trail__square",
+          "position": "fixed",
+          "rect": {
+            "top": 441,
+            "left": 711,
+            "width": 18,
+            "height": 18
+          },
+          "text": "",
+          "opacity": "1"
+        },
+        {
+          "tag": "div",
+          "cls": "cursor-trail__square",
+          "position": "fixed",
+          "rect": {
+            "top": 441,
+            "left": 711,
+            "width": 18,
+            "height": 18
+          },
+          "text": "",
+          "opacity": "1"
+        },
+        {
+          "tag": "div",
+          "cls": "cursor-trail__square",
+          "position": "fixed",
+          "rect": {
+            "top": 441,
+            "left": 711,
+            "width": 18,
+            "height": 18
+          },
+          "text": "",
+          "opacity": "1"
+        },
+        {
+          "tag": "div",
+          "cls": "cursor-trail__square",
+          "position": "fixed",
+          "rect": {
+            "top": 441,
+            "left": 711,
+            "width": 18,
+            "height": 18
+          },
+          "text": "",
+          "opacity": "1"
+        },
+        {
+          "tag": "div",
+          "cls": "cursor-trail__square",
+          "position": "fixed",
+          "rect": {
+            "top": 441,
+            "left": 711,
+            "width": 18,
+            "height": 18
+          },
+          "text": "",
+          "opacity": "1"
+        },
+        {
+          "tag": "div",
+          "cls": "cursor-trail__square",
+          "position": "fixed",
+          "rect": {
+            "top": 441,
+            "left": 711,
+            "width": 18,
+            "height": 18
+          },
+          "text": "",
+          "opacity": "1"
+        },
+        {
+          "tag": "div",
+          "cls": "cursor-trail__square",
+          "position": "fixed",
+          "rect": {
+            "top": 441,
+            "left": 711,
+            "width": 18,
+            "height": 18
+          },
+          "text": "",
+          "opacity": "1"
+        },
+        {
+          "tag": "div",
+          "cls": "cursor-trail__square",
+          "position": "fixed",
+          "rect": {
+            "top": 441,
+            "left": 711,
+            "width": 18,
+            "height": 18
+          },
+          "text": "",
+          "opacity": "1"
+        },
+        {
+          "tag": "div",
+          "cls": "",
+          "position": "fixed",
+          "rect": {
+            "top": 370.89,
+            "left": 1392.23,
+            "width": 47.77,
+            "height": 158.22
+          },
+          "text": "",
+          "opacity": "1"
+        }
+      ]
+    },
+    "changed": false,
+    "diff": {}
+  },
+  "shots": [
+    "jungheonlee-1440-full.jpg",
+    "jungheonlee-1440-scroll000.jpg",
+    "jungheonlee-1440-scroll025.jpg",
+    "jungheonlee-1440-scroll050.jpg",
+    "jungheonlee-1440-scroll075.jpg",
+    "jungheonlee-1440-scroll100.jpg"
+  ],
+  "fullPageShotRepresentative": true,
+  "notMeasurable": "only 10 rendered text nodes (3 canvas element(s)) — WebGL/canvas-driven, no DOM grid to learn from",
+  "pageErrors": []
+}

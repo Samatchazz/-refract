@@ -1,0 +1,140 @@
+{
+  "slug": "igloo",
+  "url": "https://igloo.inc",
+  "name": "Igloo Inc",
+  "country": "USA",
+  "viewport": {
+    "width": 1440,
+    "height": 900
+  },
+  "ok": false,
+  "httpStatus": 200,
+  "finalUrl": "https://www.igloo.inc/",
+  "consentDismissed": [],
+  "scrollInfo": {
+    "contentHeight": 900,
+    "docScrollHeight": 900,
+    "maxElementBottom": 900,
+    "innerScrollerHeight": 0,
+    "virtualScroll": false
+  },
+  "document": {
+    "scrollHeight": 900,
+    "vhMultiple": 1,
+    "textNodeCount": 0,
+    "canvasCount": 0,
+    "elementCount": 4,
+    "title": "Igloo Inc.",
+    "lang": "en",
+    "contentHeight": 900,
+    "scrollMode": "native"
+  },
+  "container": {
+    "dominantPairs": [],
+    "containerChain": null,
+    "grids": [],
+    "bodyPaddingInline": "0px / 0px",
+    "bodyMaxWidth": "none",
+    "htmlPaddingInline": "0px / 0px"
+  },
+  "leftEdgeTest": {
+    "layout": {
+      "n": 0,
+      "mean": null,
+      "stdDev": null,
+      "distinctExact": null,
+      "distinctClustered2px": null,
+      "clusters": [],
+      "values": []
+    },
+    "rect": {
+      "n": 0,
+      "mean": null,
+      "stdDev": null,
+      "distinctExact": null,
+      "distinctClustered2px": null,
+      "clusters": [],
+      "values": []
+    },
+    "headings": {
+      "n": 0,
+      "mean": null,
+      "stdDev": null,
+      "distinctExact": null,
+      "distinctClustered2px": null,
+      "clusters": [],
+      "values": []
+    },
+    "sectionDiscovery": "body-children"
+  },
+  "sections": [
+    {
+      "index": 0,
+      "tag": "div",
+      "id": "app",
+      "cls": "",
+      "height": 900,
+      "vhFraction": 1,
+      "paddingBlockStart": "0px",
+      "paddingBlockEnd": "0px",
+      "marginBlockStart": "0px",
+      "marginBlockEnd": "0px",
+      "firstText": null,
+      "heading": null
+    }
+  ],
+  "verticalRhythm": {
+    "sectionCount": 1,
+    "near100vhCount": 1,
+    "near100vhPct": 100,
+    "strictGcdOfSpacing": null,
+    "baseUnitEstimate80pct": null,
+    "spacingHistogram": [],
+    "spacingSampleSize": 0
+  },
+  "typeScale": {
+    "distinctFontSizeCount": 0,
+    "distinctFontSizeCount_used2plus": 0,
+    "distinctSizes": [],
+    "scaleSizesDesc": [],
+    "consecutiveRatios": [],
+    "roles": {
+      "h1": null,
+      "biggestText": null,
+      "h2All": [],
+      "h3": null,
+      "body": null,
+      "small": null,
+      "mono": null
+    },
+    "readingMeasure": null,
+    "readingMeasureAlternates": [],
+    "distinctFontFamilyCount": 0,
+    "fontFamilies": []
+  },
+  "color": {
+    "textColors": [],
+    "backgroundColors": [],
+    "distinctTextColorCount": 0,
+    "distinctBgColorCount": 0
+  },
+  "persistent": {
+    "fixedOrSticky": []
+  },
+  "nav": null,
+  "navState": {
+    "at0": null,
+    "at2000": null
+  },
+  "shots": [
+    "igloo-1440-full.jpg",
+    "igloo-1440-scroll000.jpg",
+    "igloo-1440-scroll025.jpg",
+    "igloo-1440-scroll050.jpg",
+    "igloo-1440-scroll075.jpg",
+    "igloo-1440-scroll100.jpg"
+  ],
+  "fullPageShotRepresentative": true,
+  "notMeasurable": "only 0 rendered text nodes (0 canvas element(s)) — WebGL/canvas-driven, no DOM grid to learn from",
+  "pageErrors": []
+}

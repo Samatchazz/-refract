@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PlanC — FONT LAB (เทียบฟอนต์ไทยเอง)</title>
+<style>
+  :root{
+    --bg:#0f0f0e; --bg2:#171716; --fg:#f4f2ec; --fg2:#9a9791; --line:rgba(255,255,255,.15);
+    --ac:#E9F056; --warn:#ff8a5c; --ok:#8fd694;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--fg);font-family:-apple-system,"Segoe UI",system-ui,sans-serif;line-height:1.5;padding-bottom:80px}
+  .mono{font-family:"IBM Plex Mono","SF Mono",Consolas,monospace}
+  header{position:sticky;top:0;z-index:60;background:var(--bg2);border-bottom:1px solid var(--line);padding:12px 3vw}
+  h1{font-size:18px;letter-spacing:-.01em;display:inline-block;margin-right:14px}
+  h1 em{font-style:normal;color:var(--ac)}
+  .sub{font-size:11.5px;color:var(--fg2);margin-top:5px}
+  .tabs{display:flex;gap:6px;margin-top:10px;flex-wrap:wrap}
+  .tabs button{font:inherit;font-size:12.5px;padding:6px 13px;border-radius:99px;border:1px solid var(--line);background:transparent;color:var(--fg);cursor:pointer}
+  .tabs button.on{background:var(--ac);color:#111;border-color:transparent;font-weight:600}
+  section{padding:22px 3vw;border-bottom:1px solid var(--line)}
+  h2{font-size:15px;margin-bottom:4px}
+  .hint{font-size:11.5px;color:var(--fg2);margin-bottom:14px;max-width:80ch}
+  .panel{display:none}.panel.on{display:block}
+  /* controls */
+  .ctrls{display:flex;gap:16px;flex-wrap:wrap;align-items:center;background:var(--bg2);border:1px solid var(--line);border-radius:12px;padding:12px 14px;margin-bottom:16px;position:sticky;top:112px;z-index:40}
+  .c{display:flex;flex-direction:column;gap:3px;font-size:10.5px;color:var(--fg2)}
+  .c input[type=range]{width:110px}
+  .c b{color:var(--fg);font-size:11.5px}
+  .c select{font:inherit;font-size:12px;background:var(--bg);color:var(--fg);border:1px solid var(--line);border-radius:6px;padding:4px 7px;max-width:220px}
+  .tog{display:flex;align-items:center;gap:6px;font-size:11.5px;color:var(--fg)}
+  /* font cards */
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:12px}
+  .fc{border:1px solid var(--line);border-radius:12px;padding:14px;background:var(--bg2);cursor:pointer;transition:border-color .18s,transform .18s}
+  .fc:hover{transform:translateY(-2px);border-color:var(--fg2)}
+  .fc.selD{border:2px solid var(--ac);padding:13px}
+  .fc.selB{border:2px solid #6db3e8;padding:13px}
+  .fc .top{display:flex;justify-content:space-between;align-items:baseline;gap:8px;margin-bottom:8px}
+  .fc .nm{font-size:13px;font-weight:600}
+  .tags{display:flex;gap:4px;flex-wrap:wrap;margin-bottom:9px}
+  .tag{font-size:9.5px;letter-spacing:.05em;padding:2px 7px;border-radius:99px;border:1px solid var(--line);color:var(--fg2)}
+  .tag.vf{border-color:var(--ac);color:var(--ac)}
+  .tag.st{opacity:.6}
+  .tag.loop{border-color:#7fb0d6;color:#9cc6e6}
+  .tag.nol{border-color:#c9a6e0;color:#d5bdea}
+  .tag.hook{border-color:#e0c07f;color:#eacf9c}
+  .tag.q{border-color:var(--warn);color:var(--warn)}
+  .spec{font-size:38px;line-height:1.35;overflow:visible;word-break:normal;line-break:strict}
+  .meta{font-size:10.5px;color:var(--fg2);margin-top:8px;display:flex;justify-content:space-between;gap:8px}
+  .meta a{color:var(--fg2)}
+  .pick{display:flex;gap:5px;margin-top:9px}
+  .pick button{font:inherit;font-size:10.5px;padding:4px 9px;border-radius:6px;border:1px solid var(--line);background:transparent;color:var(--fg);cursor:pointer}
+  .pick button:hover{background:rgba(255,255,255,.07)}
+  /* pair */
+  .pairwrap{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .pane{border:1px solid var(--line);border-radius:14px;padding:20px;background:var(--bg2);min-width:0}
+  .pane h3{font-size:11px;letter-spacing:.09em;color:var(--fg2);margin-bottom:12px;font-weight:600}
+  .pane .slots{font-size:11px;color:var(--fg2);margin-bottom:16px;line-height:1.7}
+  .pane .slots b{color:var(--ac)}
+  .hd{line-height:1.12;letter-spacing:-.01em;margin-bottom:14px;overflow:visible}
+  .bd{margin-bottom:12px}
+  .lbl{font-size:10.5px;letter-spacing:.1em;opacity:.55;margin-bottom:6px}
+  .clip .hd,.clip .spec,.clip .stress b{overflow:hidden!important}
+  /* stress */
+  .stress{display:grid;gap:9px}
+  .stress .row{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1.4fr);gap:14px;align-items:center;border-bottom:1px solid rgba(255,255,255,.07);padding-bottom:9px}
+  .stress b{font-weight:400;font-size:34px;line-height:1.45;overflow:visible;display:block}
+  .stress span{font-size:11.5px;color:var(--fg2)}
+  .small b{font-size:14px}
+  table{width:100%;border-collapse:collapse;font-size:12px}
+  th,td{text-align:left;padding:7px 9px;border-bottom:1px solid var(--line);vertical-align:top}
+  th{font-size:10.5px;letter-spacing:.07em;color:var(--fg2);font-weight:600}
+  td a{color:var(--ac)}
+  .drop{border:1.5px dashed var(--line);border-radius:12px;padding:22px;text-align:center;font-size:12.5px;color:var(--fg2);cursor:pointer}
+  .drop.hot{border-color:var(--ac);color:var(--ac)}
+  #shortlist{font-size:12px}
+  textarea{width:100%;min-height:150px;background:var(--bg2);color:var(--fg);border:1px solid var(--line);border-radius:10px;padding:12px;font-family:"IBM Plex Mono",Consolas,monospace;font-size:11.5px;margin-top:10px}
+  .warnbox{border-left:3px solid var(--warn);background:rgba(255,138,92,.08);padding:10px 13px;border-radius:8px;font-size:12px;margin-bottom:14px}
+  @media(max-width:820px){.pairwrap{grid-template-columns:1fr}.ctrls{position:static}.stress .row{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header>
+  <h1>PlanC <em>FONT LAB</em></h1>
+  <span class="mono" style="font-size:11px;color:var(--fg2)">ฟอนต์ไทย 22 ตัวจาก Google Fonts + รายการพรีเมียมที่ซื้อได้ + ช่องใส่ไฟล์ฟอนต์เอง</span>
+  <div class="sub">เลือก <b style="color:var(--ac)">DISPLAY</b> กับ <b style="color:#6db3e8">BODY</b> จากการ์ด แล้วไปแท็บ "เทียบคู่ A/B" เพื่อดูของจริงคู่กัน · ทุกอย่างทำงานในเครื่องคุณ ไม่ส่งข้อมูลไปไหน (ฟอนต์โหลดจาก Google Fonts จึงต้องต่อเน็ต)</div>
+  <div class="tabs">
+    <button data-p="p-grid" class="on">1 · เลือกฟอนต์</button>
+    <button data-p="p-pair">2 · เทียบคู่ A/B</button>
+    <button data-p="p-stress">3 · ทดสอบสระ/วรรณยุกต์</button>
+    <button data-p="p-prem">4 · ฟอนต์พรีเมียม (ซื้อ)</button>
+    <button data-p="p-own">5 · ใส่ไฟล์ฟอนต์เอง</button>
+    <button data-p="p-out">6 · สรุป/ส่งกลับ</button>
+  </div>
+</header>
+
+<!-- 1 GRID -->
+<div class="panel on" id="p-grid"><section>
+  <h2>ฟอนต์ไทยที่โหลดได้ฟรีทันที (Google Fonts)</h2>
+  <p class="hint">ป้าย <span class="tag vf">VARIABLE</span> = animate น้ำหนักได้ลื่น (มีแค่ 5 ตัวในภาษาไทยทั้ง Google Fonts) · <span class="tag st">STATIC</span> = ถ้า animate น้ำหนักจะกระตุกและโหลดไฟล์ใหม่ทุกสเต็ป · <span class="tag loop">มีหัว</span> อ่านยาวสบายตากว่า · <span class="tag nol">ไม่มีหัว</span> คมกว่าเหมาะหัวเรื่อง · <span class="tag q">ต้องเช็คตา</span> = Google ไม่ได้ระบุว่ามีหัวหรือไม่มีหัว ผมไม่เดาให้</p>
+  <div class="ctrls">
+    <label class="c">ขนาดตัวอย่าง <b id="gs-v">38px</b><input type="range" id="gs" min="16" max="90" value="38"></label>
+    <label class="c">น้ำหนัก <b id="gw-v">400</b><input type="range" id="gw" min="100" max="900" step="100" value="400"></label>
+    <label class="c">คำตัวอย่าง<select id="gt">
+      <option value="สร้างตัวตนที่เป็นของคุณ">สร้างตัวตนที่เป็นของคุณ</option>
+      <option value="เปี่ยม ปุ๋ย ฟื้นฟู ที่">คำทดสอบสระซ้อน</option>
+      <option value="หยุดวิ่งตามเทรนด์">หยุดวิ่งตามเทรนด์</option>
+      <option value="ขุดตัวตน วิศวกรรมอัลกอริทึม">ชื่อเสาบริการ</option>
+      <option value="PlanC 2026 กรุงเทพฯ">ไทย+อังกฤษ+เลข</option>
+      <option value="จองเลย">จองเลย</option>
+    </select></label>
+    <label class="tog"><input type="checkbox" id="clip"> ตัดขอบบน-ล่าง (overflow:hidden) — ทดสอบสระหาย</label>
+    <label class="c">กรอง<select id="filt">
+      <option value="all">ทั้งหมด (22)</option><option value="display">สำหรับหัวเรื่อง (11)</option><option value="body">สำหรับเนื้อความ (11)</option>
+      <option value="vf">variable เท่านั้น (5)</option><option value="loopless">ไม่มีหัว</option><option value="looped">มีหัว</option>
+    </select></label>
+  </div>
+  <div class="grid" id="grid"></div>
+</section></div>
+
+<!-- 2 PAIR -->
+<div class="panel" id="p-pair"><section>
+  <h2>เทียบคู่ A/B ด้วยก็อปปี้จริงของ PlanC</h2>
+  <p class="hint">ช่อง A คือคู่ที่คุณเลือกอยู่ ช่อง B ล็อกไว้เทียบ — กด "ล็อกคู่นี้ไว้เทียบ (B)" เพื่อย้ายคู่ปัจจุบันไปฝั่ง B แล้วไปเลือกคู่ใหม่ใน A</p>
+  <div class="ctrls">
+    <label class="c">ขนาดหัวเรื่อง <b id="hs-v">64px</b><input type="range" id="hs" min="28" max="140" value="64"></label>
+    <label class="c">น้ำหนักหัวเรื่อง <b id="hw-v">700</b><input type="range" id="hw" min="100" max="900" step="100" value="700"></label>
+    <label class="c">line-height หัวเรื่อง <b id="hl-v">1.12</b><input type="range" id="hl" min="0.85" max="1.8" step="0.01" value="1.12"></label>
+    <label class="c">ระยะตัวอักษร <b id="ls-v">-0.01em</b><input type="range" id="ls" min="-0.05" max="0.15" step="0.005" value="-0.01"></label>
+    <label class="c">ขนาดเนื้อความ <b id="bs-v">17px</b><input type="range" id="bs" min="12" max="28" value="17"></label>
+    <label class="c">line-height เนื้อความ <b id="bl-v">1.7</b><input type="range" id="bl" min="1.2" max="2.2" step="0.05" value="1.7"></label>
+    <button id="lockB" style="font:inherit;font-size:12px;padding:7px 13px;border-radius:8px;border:1px solid var(--ac);background:transparent;color:var(--ac);cursor:pointer">ล็อกคู่นี้ไว้เทียบ (B)</button>
+  </div>
+  <div class="pairwrap" id="pairwrap"></div>
+</section></div>
+
+<!-- 3 STRESS -->
+<div class="panel" id="p-stress"><section>
+  <h2>ทดสอบสระซ้อน/วรรณยุกต์ — จุดที่ฟอนต์ไทยพังจริง</h2>
+  <p class="hint">คำ 12 คำนี้คือชุดที่ใช้จับบั๊กการวางสระ-วรรณยุกต์ (อ้างอิงสเปกการ shaping ภาษาไทยของ thep, linux.thai.net) ดูที่ฟอนต์ที่กำลังเลือกเป็นหัวเรื่อง — <b>ทดสอบที่น้ำหนักหนาสุดด้วย</b> เพราะยิ่งหนา วรรณยุกต์ยิ่งชนกัน</p>
+  <div class="ctrls">
+    <label class="c">ดูฟอนต์<select id="ss-f"></select></label>
+    <label class="c">ขนาด <b id="ss-s-v">34px</b><input type="range" id="ss-s" min="18" max="86" value="34"></label>
+    <label class="c">น้ำหนัก <b id="ss-w-v">700</b><input type="range" id="ss-w" min="100" max="900" step="100" value="700"></label>
+    <label class="c">line-height <b id="ss-l-v">1.45</b><input type="range" id="ss-l" min="0.9" max="2" step="0.05" value="1.45"></label>
+    <label class="tog"><input type="checkbox" id="clip2"> ตัดขอบ (ทดสอบสระหาย)</label>
+  </div>
+  <div class="warnbox">สิ่งที่ต้องมองหา: (1) วรรณยุกต์ลอยสูงเกินหรือชนกับสระบน (2) สระบนของ <b>ป ฝ ฟ</b> ต้องเลื่อนไปซ้ายเพื่อหลบหางตัวอักษร (3) หางของ <b>ญ ฐ</b> ต้องหายไปเมื่อมีสระล่าง (4) สระล่างไม่ควรชนบรรทัดถัดไป</div>
+  <div class="stress" id="stress"></div>
+  <h2 style="margin-top:26px">ทดสอบตัวอักษรที่หน้าตาใกล้กัน (ที่ขนาดเล็ก)</h2>
+  <p class="hint">ถ้าฟอนต์ "ไม่มีหัว" คู่พวกนี้จะเริ่มแยกไม่ออกที่ 12-14px — แปลว่าใช้เป็นหัวเรื่องได้ แต่ห้ามใช้เป็นเนื้อความ</p>
+  <div class="stress small" id="confuse"></div>
+</section></div>
+
+<!-- 4 PREMIUM -->
+<div class="panel" id="p-prem"><section>
+  <h2>ฟอนต์ไทยพรีเมียม (คุณบอกว่าซื้อได้)</h2>
+  <p class="hint">ผมไม่สามารถโหลดฟอนต์พรีเมียมมาโชว์ในหน้านี้ได้ (ลิขสิทธิ์) — แต่ทดลองได้จริง 2 ทาง: (ก) <b>Fontstand</b> ให้ลองฟรี 3 ชั่วโมงต่อฟอนต์ (เดือนละครั้ง) (ข) ซื้อ/ขอไฟล์ trial แล้วลากไฟล์เข้าแท็บ 5 เพื่อทดสอบในเครื่องมือนี้ได้เลย · ราคาเป็น USD ตามหน้าที่ผู้ช่วยเปิดจริงเมื่อ ก.ค. 2026 — ยืนยันกับผู้ขายก่อนจ่ายเสมอ</p>
+  <div class="warnbox">ข้อควรระวังเรื่องลิขสิทธิ์เว็บ: <b>Adobe Fonts</b> ใช้บนเว็บได้ผ่าน CDN ของ Adobe เท่านั้น (self-host ไม่ได้) · <b>Fontstand</b> เช่าได้แต่ self-host ไม่ได้เช่นกัน · <b>Katatrad</b> ให้ไฟล์ WOFF2 มา self-host ได้ (1 license = 1 โดเมน) · <b>DB Fonts</b> ยังไม่ยืนยันว่าให้สิทธิ์เว็บฟอนต์</div>
+  <table id="prem"></table>
+</section></div>
+
+<!-- 5 OWN -->
+<div class="panel" id="p-own"><section>
+  <h2>ใส่ไฟล์ฟอนต์ของคุณเอง</h2>
+  <p class="hint">ลากไฟล์ .woff2 / .woff / .ttf / .otf ลงกรอบนี้ (หรือกดเพื่อเลือกไฟล์) — ฟอนต์จะเข้าไปอยู่ในลิสต์แท็บ 1 ทันที ใช้เทียบกับฟอนต์ฟรีได้เลย ไฟล์อยู่ในเครื่องคุณ ไม่ถูกอัปโหลดไปไหน</p>
+  <div class="drop" id="drop">ลากไฟล์ฟอนต์มาวางที่นี่<br><span style="font-size:11px">รองรับหลายไฟล์พร้อมกัน · ตั้งชื่อไฟล์ให้รู้เรื่อง เช่น Aperçu-Thai-Bold.woff2</span>
+    <input type="file" id="file" multiple accept=".woff2,.woff,.ttf,.otf" style="display:none"></div>
+  <div id="loaded" style="margin-top:14px;font-size:12px;color:var(--fg2)"></div>
+</section></div>
+
+<!-- 6 OUT -->
+<div class="panel" id="p-out"><section>
+  <h2>สรุปสิ่งที่เลือก</h2>
+  <p class="hint">ก็อปข้อความนี้ส่งกลับมาในแชท ผมจะเอาไปใส่ BUILD-BRIEF เป็น component T (typography) ให้ตรงกับที่คุณเลือก</p>
+  <div id="shortlist"></div>
+  <textarea id="out" readonly></textarea>
+  <button id="copy" style="font:inherit;margin-top:10px;font-size:12.5px;padding:8px 15px;border-radius:8px;border:none;background:var(--ac);color:#111;font-weight:600;cursor:pointer">คัดลอก</button>
+</section></div>
+
+<script>
+/* ============ DATA (fetched from fonts.google.com/metadata/fonts/<Family>, July 2026) ============ */
+const FONTS=[
+ // ---- DISPLAY ----
+ {f:'Kanit',w:[200,400,700,900],vf:0,loop:'nol',role:'display',p:'ทางการ ไม่มีหัว คม เป็นมาตรฐานหัวเรื่องไทย',lat:'แข็ง'},
+ {f:'Chakra Petch',w:[300,400,700],vf:0,loop:'loop',role:'display',p:'เหลี่ยม เทคโน มุมตัด',lat:'ดี',note:'⚠ เป็นแบบ "มีหัว" ไม่ใช่ไม่มีหัว — คนเข้าใจผิดบ่อย'},
+ {f:'Bai Jamjuree',w:[200,400,700],vf:0,loop:'q',role:'display',p:'sans เหลี่ยมสไตล์ Eurostile',lat:'ดี',note:'Google ไม่ระบุว่ามีหัว/ไม่มีหัว — ต้องดูด้วยตา'},
+ {f:'Fahkwang',w:[200,400,700],vf:0,loop:'q',role:'display',p:'คอนทราสต์สูง แบบพาดหัวหนังสือพิมพ์เก่า',lat:'ดี',note:'Google ไม่ระบุสถานะหัว — ต้องดูด้วยตา'},
+ {f:'Chonburi',w:[400],vf:0,loop:'loop',role:'display',p:'display serif อ้วน มีหัว',lat:'ดี',note:'มีน้ำหนักเดียว (400) — animate น้ำหนักไม่ได้เลย'},
+ {f:'Trirong',w:[200,400,700,900],vf:0,loop:'loop',role:'display',p:'serif แคบสูง หนา-บางตัดกัน',lat:'ดี'},
+ {f:'Srisakdi',w:[400,700],vf:0,loop:'loop',role:'display',p:'ยุครัตนโกสินทร์ ลายมือย้อนยุค',lat:'พอใช้'},
+ {f:'Playpen Sans Thai',w:[100,800],vf:1,va:'wght@100..800',loop:'hook',role:'display',p:'ลายมือ ขี้เล่น มีชีวิต',lat:'ดี',note:'ปลายแบบ "ตะขอ" — ไม่ใช่มีหัวหรือไม่มีหัว เป็นประเภทที่สาม'},
+ {f:'Pattaya',w:[400],vf:0,loop:'nol',role:'display',p:'สคริปต์ย้อนยุค (ต่อจาก Lobster)',lat:'ดี',note:'Google เตือนว่า vertical metrics ถูกแก้ — เช็คระยะบรรทัดให้ดี'},
+ {f:'Charmonman',w:[400,700],vf:0,loop:'loop',role:'display',p:'คัดลายมือหางยาว แบบ Zapfino',lat:'พอใช้',note:'หางบน-ล่างยาวมาก ต้องเผื่อที่เยอะ'},
+ {f:'Noto Serif Thai',w:[100,900],vf:1,va:'wght@100..900',loop:'nol',role:'display',p:'serif คลาสสิกคม + variable',lat:'ดีมาก',note:'variable ทั้ง wght และ wdth — ตัวเดียวที่บีบความกว้างได้'},
+ // ---- BODY ----
+ {f:'Sarabun',w:[200,400,700,800],vf:0,loop:'loop',role:'body',p:'มาตรฐานเอกสารราชการไทย เป็นกลาง',lat:'ดี'},
+ {f:'IBM Plex Sans Thai Looped',w:[200,400,700],vf:0,loop:'loop',role:'body',p:'humanist อบอุ่น เชิงเทคนิค',lat:'ดีมาก',note:'Latin ดีที่สุดในกลุ่มมีหัวบน Google Fonts'},
+ {f:'IBM Plex Sans Thai',w:[200,400,700],vf:0,loop:'nol',role:'body',p:'grotesque แม่นยำ ไม่มีหัว',lat:'ดีมาก',note:'จับคู่กับตัวมีหัวของมันเองเป็นระบบเดียวได้'},
+ {f:'Noto Sans Thai Looped',w:[100,900],vf:1,va:'wght@100..900',loop:'loop',role:'body',p:'มีหัว อ่านง่ายมาก + variable',lat:'ดีมาก'},
+ {f:'Anuphan',w:[100,700],vf:1,va:'wght@100..700',loop:'nol',role:'body',p:'โมเดิร์น ไม่มีหัว สะอาด',lat:'ดีมาก',note:'เป็นเวอร์ชันไม่มีหัวของ IBM Plex Thai โดย Cadson Demak — variable ที่ครบเครื่องสุด'},
+ {f:'Niramit',w:[200,400,700],vf:0,loop:'loop',role:'body',p:'มีหัว รายละเอียดเยอะ',lat:'ดี'},
+ {f:'Krub',w:[200,400,700],vf:0,loop:'loop',role:'body',p:'มีกลิ่นตัวเรียงพิมพ์โลหะ',lat:'ดี'},
+ {f:'Maitree',w:[200,400,700],vf:0,loop:'loop',role:'body',p:'serif หัวใหญ่ กว้างใจดี',lat:'ดี'},
+ {f:'Taviraj',w:[200,400,700,900],vf:0,loop:'loop',role:'body',p:'serif ทางการ หนา-บางตัดกัน',lat:'ดี'},
+ {f:'Pridi',w:[200,400,700],vf:0,loop:'loop',role:'body',p:'slab serif เป็นทางการแต่เป็นมิตร',lat:'ดี'},
+ {f:'Noto Sans Thai',w:[100,900],vf:1,va:'wght@100..900',loop:'nol',role:'body',p:'grotesque เป็นกลาง โมเดิร์น',lat:'ดีมาก',note:'variable ทั้ง wght + wdth 62.5..100'},
+];
+const LOOPLBL={loop:'มีหัว',nol:'ไม่มีหัว',hook:'ปลายตะขอ',q:'ต้องเช็คตา'};
+
+/* 12 stress strings — from Thai shaping spec research */
+const STRESS=[
+ ['ที่','คำที่ใช้บ่อยที่สุดในภาษาไทย และเป็นสระบน+วรรณยุกต์ซ้อนกันพื้นฐาน ถ้าอันนี้ชนกัน ตัดทิ้งได้เลย'],
+ ['เปี่ยม','⭐ ตัวตัดสิน — ป มีหางสูงและแบกสระ+วรรณยุกต์ซ้อน ฟอนต์ที่ไม่ทำกฎ "เลื่อนสระไปซ้าย" จะชนตรงนี้'],
+ ['ฟื้นฟู','ฟ หางสูง + สระอือ + ไม้โท คู่สระอีกแบบ พร้อมสระล่างในคำเดียวกัน'],
+ ['ปุ๋ย','ครบสี่ชั้นในคำเดียว: หางสูง + สระล่าง + วรรณยุกต์ — เคสที่แน่นที่สุดในภาษาไทยทั่วไป'],
+ ['ฝุ่น','หางสูง + สระล่าง + วรรณยุกต์ ดูว่าสระล่างชนบรรทัดถัดไปไหม'],
+ ['หญิง','กฎหางหาย — หางของ ญ ต้องหายไปเมื่อมีสระอิ ถ้าหางยังอยู่แล้วชนกัน = ฟอนต์ทำ GPOS ไม่ครบ'],
+ ['ปฏิญาณ','ฏ ต้องเก็บหางไว้ แต่ ญ ต้องทิ้งหาง — ทดสอบสองกฎพร้อมกันในคำเดียว'],
+ ['เรื่อง','สระซ้อนบนพยัญชนะปกติที่เจอทุกวัน — เกณฑ์ "เคสธรรมดาสวยไหม"'],
+ ['กุ๊กกิ๊ก','สระล่าง+วรรณยุกต์สูงซ้ำเป็นจังหวะ เผยระยะสระที่ไม่สม่ำเสมอ'],
+ ['กถภ คดต บษ พฟ ขช รธ','ชุดตัวอักษรที่สับสนกันเมื่อไม่มีหัว — ดูที่ 12-14px ถ้าแยกไม่ออก = ใช้เป็นหัวเรื่องเท่านั้น'],
+ ['กรุงเทพฯ Bangkok 2026 ๒๕๖๙ จ๊ะๆ จ๋าๆ','ไทย+อังกฤษ+เลขอารบิก+เลขไทย ในบรรทัดเดียว ดูความสูง x-height, Latin อ่อน, และ ฯ ๆ'],
+ ['มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี','คำยาวไม่มีเว้นวรรค — ทดสอบการตัดบรรทัดและจังหวะสระตลอดคำ'],
+];
+const CONFUSE=[['ก ถ ภ','ก/ถ/ภ'],['ค ด ต','ค/ด/ต'],['บ ษ','บ/ษ'],['พ ฟ','พ/ฟ'],['ข ช','ข/ช'],['ร ธ','ร/ธ'],['ด ค','ด/ค ที่เล็กสุด']];
+
+/* premium (prices as displayed July 2026 — verify before buying) */
+const PREM=[
+ ['Aperçu Thai Pro Variable','Colophon','ไม่มีหัว · variable · 4 น้ำหนัก + 5 stylistic sets','$272 (family) / $60 ต่อสไตล์','MyFonts (รายปี)','https://www.myfonts.com/collections/apercu-thai-variable-font-colophon-foundry/','Latin ระดับรางวัลที่มีไทยจริง — ตัวเลือกที่แรงสุดถ้าจะบิ้วด้วย type'],
+ ['Taksin Loopless Thai VF','Indian Type Foundry','ไม่มีหัว · variable น้ำหนัก · +5 static','$130','MyFonts (รายปี)','https://www.myfonts.com/collections/taksin-loopless-thai-variable-font-indian-type-foundry','ออกแบบมาเพื่องานโฆษณา/หัวเรื่องไทยไม่มีหัวโดยเฉพาะ ถูกเมื่อเทียบคุณภาพ'],
+ ['Kohinoor Thai VF','Indian Type Foundry','variable น้ำหนัก · 4-5 static','$130 (VF) / $260 (family)','MyFonts (รายปี, 1 โดเมน)','https://www.myfonts.com/collections/kohinoor-thai-variable-font-indian-type-foundry','ช่วงจากเนื้อความถึงหัวเรื่องกว้าง งานวิศวกรรมฟอนต์สะอาด'],
+ ['Volte Thai','Indian Type Foundry','geometric · variable ทั้งตั้งและเอียง','$80 / $260 (10 fonts)','MyFonts','https://www.myfonts.com/collections/volte-thai-font-indian-type-foundry/','ตัวเดียวในลิสต์ที่มี variable italic'],
+ ['Proxima Nova Thai + Thai Looped','Mark Simonson × Cadson Demak','16 สไตล์ · มีทั้งมีหัวและไม่มีหัว','รวมใน Adobe CC','Adobe Fonts (CDN เท่านั้น)','https://fonts.adobe.com/fonts/proxima-nova-thai','ระบบเดียวได้ทั้งหัวเรื่องไม่มีหัว + เนื้อความมีหัว = ตัดสินใจครั้งเดียวจบ'],
+ ['Forma DJR Thai','DJR','25 สไตล์ · มี optical size','รวมใน Adobe CC','Adobe Fonts','https://fonts.adobe.com/fonts/forma-djr-thai','optical size คือของดีสำหรับแยก display/body (แกน variable ยังไม่ยืนยัน)'],
+ ['Preuksa','Cadson Demak','ไม่มีหัว · 9 น้ำหนัก','รวมใน Adobe CC','Adobe Fonts','https://fonts.adobe.com/fonts/preuksa','ไทยไม่มีหัวสมัยใหม่ + Latin organic sans — ไม่โหลเหมือน Kanit'],
+ ['Thonglor Soi 4','Cadson Demak','มีหัว · 8 น้ำหนัก · ปรับมาเพื่อจอ','รวมใน Adobe CC','Adobe Fonts','https://fonts.adobe.com/fonts/thonglor-soi-4','ตัวมีหัวพรีเมียมที่ปรับมาเพื่อหน้าจอดีที่สุด คู่กับหัวเรื่องไม่มีหัว'],
+ ['Ekachon','Katatrad','neo-grotesque · 10 fonts (5 น้ำหนัก + เอียง)','฿11,800/น้ำหนัก · ฿65,000 ทั้งชุด','ให้ WOFF2 มา self-host (1 โดเมน)','https://www.katatrad.com/thai-font/','neo-grotesque ไทยของจริง คมสุดในลิสต์ — แพงและต้องติดต่อขอใบอนุญาตเว็บแยก'],
+ ['Anuyart','Katatrad','humanist sans · 8 น้ำหนัก','฿11,800/น้ำหนัก','ให้ WOFF2 self-host ได้','https://www.katatrad.com/thai-font/','humanist ไทยที่อ่านสบาย ใช้เป็น body คู่ Ekachon ได้'],
+ ['Thonglor / Thongterm / NumSamai','Cadson Demak (retail)','หลายสไตล์','ดูที่ Fontstand','Fontstand: เช่า/ลองฟรี 3 ชม. · self-host ไม่ได้','https://fontstand.com/news/new-releases/cadson-demak/','⭐ ทางลองฟรีที่ดีที่สุด: Fontstand ให้ลอง 3 ชั่วโมงต่อฟอนต์ เดือนละครั้ง'],
+ ['DB Helvethaica X ฯลฯ','DB Fonts','40+ ตระกูล','$40–$220','⚠ ยังไม่ยืนยันสิทธิ์เว็บฟอนต์','https://songcharoen.com/db_fonts/','โรงหล่อไทยที่ใหญ่สุด แต่หน้าเว็บอัปเดตล่าสุด 2017 และไม่พูดถึง WOFF2 เลย'],
+];
+
+/* ============ LOAD FONTS ============ */
+const loadedOwn=[];
+function gfUrl(f){
+  const fam=f.f.replace(/ /g,'+');
+  const spec=f.vf? f.va : 'wght@'+f.w.join(';');
+  return 'https://fonts.googleapis.com/css2?family='+fam+':'+spec+'&display=swap';
+}
+FONTS.forEach(f=>{const l=document.createElement('link');l.rel='stylesheet';l.href=gfUrl(f);document.head.appendChild(l)});
+
+/* ============ STATE ============ */
+let D=FONTS.find(f=>f.f==='Kanit'), B=FONTS.find(f=>f.f==='Anuphan');
+let lockedA=null, star=new Set();
+const $=id=>document.getElementById(id);
+const all=()=>FONTS.concat(loadedOwn);
+
+/* ============ TABS ============ */
+document.querySelectorAll('.tabs button').forEach(b=>b.onclick=()=>{
+  document.querySelectorAll('.tabs button').forEach(x=>x.classList.remove('on'));b.classList.add('on');
+  document.querySelectorAll('.panel').forEach(p=>p.classList.remove('on'));$(b.dataset.p).classList.add('on');
+  if(b.dataset.p==='p-out')buildOut();
+});
+
+/* ============ GRID ============ */
+function renderGrid(){
+  const size=$('gs').value, wt=$('gw').value, txt=$('gt').value, filt=$('filt').value;
+  $('gs-v').textContent=size+'px'; $('gw-v').textContent=wt;
+  const list=all().filter(f=>{
+    if(filt==='all')return 1; if(filt==='vf')return f.vf; if(filt==='display'||filt==='body')return f.role===filt;
+    if(filt==='loopless')return f.loop==='nol'; if(filt==='looped')return f.loop==='loop'; return 1;
+  });
+  $('grid').innerHTML=list.map(f=>{
+    const wmin=f.w[0], wmax=f.w[f.w.length-1];
+    const useW=f.vf? Math.min(Math.max(wt,wmin),wmax) : f.w.reduce((a,b)=>Math.abs(b-wt)<Math.abs(a-wt)?b:a);
+    return `<div class="fc ${D&&D.f===f.f?'selD':''} ${B&&B.f===f.f?'selB':''}" data-f="${f.f}">
+      <div class="top"><span class="nm">${f.f}</span><span class="mono" style="font-size:10px;color:var(--fg2)">${f.role==='display'?'หัวเรื่อง':'เนื้อความ'}</span></div>
+      <div class="tags">
+        <span class="tag ${f.vf?'vf':'st'}">${f.vf?'VARIABLE '+f.va.replace('wght@',''):'STATIC '+f.w.length+' น้ำหนัก'}</span>
+        <span class="tag ${f.loop}">${LOOPLBL[f.loop]}</span>
+        ${f.own?'<span class="tag" style="border-color:var(--ok);color:var(--ok)">ไฟล์ของคุณ</span>':''}
+        ${f.lat?'<span class="tag">Latin '+f.lat+'</span>':''}
+      </div>
+      <div class="spec" style="font-family:'${f.f}',sans-serif;font-size:${size}px;font-weight:${useW}">${txt}</div>
+      <div class="meta"><span>${f.p}</span><span class="mono">${useW}</span></div>
+      ${f.note?`<div class="meta" style="color:var(--warn)">${f.note}</div>`:''}
+      <div class="pick">
+        <button data-set="D">ตั้งเป็นหัวเรื่อง</button><button data-set="B">ตั้งเป็นเนื้อความ</button>
+        <button data-set="S">${star.has(f.f)?'★ ชอบ':'☆ ชอบ'}</button>
+      </div></div>`;
+  }).join('');
+}
+$('grid').addEventListener('click',e=>{
+  const card=e.target.closest('.fc'); if(!card)return;
+  const f=all().find(x=>x.f===card.dataset.f);
+  const set=e.target.dataset.set;
+  if(set==='D')D=f; else if(set==='B')B=f;
+  else if(set==='S'){star.has(f.f)?star.delete(f.f):star.add(f.f)}
+  else {f.role==='display'?D=f:B=f}
+  renderAll();
+});
+['gs','gw','gt','filt'].forEach(id=>$(id).oninput=renderGrid);
+$('clip').onchange=e=>document.querySelectorAll('#p-grid').forEach(p=>p.classList.toggle('clip',e.target.checked));
+
+/* ============ PAIR ============ */
+const COPY={h:'สร้างตัวตนที่เป็นของคุณ',h2:'ไม่ใช่ของเทรนด์',sub:'ที่ปรึกษา 1:1 สำหรับครีเอเตอร์ที่เบื่อการวิ่งตามเทรนด์ โดยอินฟลูเอนเซอร์ตัวจริงที่ยังทำงานอยู่ทุกวัน',
+ body:'ทุกคนบอกให้คุณตามเทรนด์ เต้นตามเพลงเดิม พูดมุกเดียวกัน ทำคลิปหน้าตาเหมือนกันทั้งฟีด แล้วสงสัยทำไมคนจำเราไม่ได้ ความจริงคือ อัลกอริทึมไม่ได้รักคนที่เหมือนใคร มันรักคนที่ชัด',
+ pil:'ขุดตัวตน · วิศวกรรมอัลกอริทึม · สร้างอาณาจักรของตัวเอง',cta:'จองคุยฟรี 30 นาที'};
+function paneHTML(title,d,b){
+  const hs=$('hs').value,hw=$('hw').value,hl=$('hl').value,ls=$('ls').value,bs=$('bs').value,bl=$('bl').value;
+  const dW=d.vf?Math.min(Math.max(hw,d.w[0]),d.w[d.w.length-1]):d.w.reduce((a,c)=>Math.abs(c-hw)<Math.abs(a-hw)?c:a);
+  return `<div class="pane">
+    <h3>${title}</h3>
+    <div class="slots">หัวเรื่อง <b>${d.f}</b> ${d.vf?'(variable)':'(static '+dW+')'} · เนื้อความ <b>${b.f}</b> ${b.vf?'(variable)':''}</div>
+    <div class="lbl">HERO</div>
+    <div class="hd" style="font-family:'${d.f}',sans-serif;font-size:${hs}px;font-weight:${dW};line-height:${hl};letter-spacing:${ls}em">${COPY.h}<br>${COPY.h2}</div>
+    <div class="bd" style="font-family:'${b.f}',sans-serif;font-size:${bs}px;line-height:${bl};color:var(--fg2)">${COPY.sub}</div>
+    <div class="lbl" style="margin-top:20px">MANIFESTO</div>
+    <div class="bd" style="font-family:'${b.f}',sans-serif;font-size:${bs}px;line-height:${bl}">${COPY.body}</div>
+    <div class="lbl" style="margin-top:20px">เสาบริการ (หัวเรื่องเล็ก)</div>
+    <div class="hd" style="font-family:'${d.f}',sans-serif;font-size:${Math.round(hs*0.42)}px;font-weight:${dW};line-height:1.3;letter-spacing:${ls}em">${COPY.pil}</div>
+    <div class="lbl" style="margin-top:20px">ปุ่มปิดท้าย</div>
+    <div style="font-family:'${d.f}',sans-serif;font-size:${Math.round(hs*0.34)}px;font-weight:${dW};display:inline-block;border:2px solid var(--ac);color:var(--ac);border-radius:99px;padding:8px 22px">${COPY.cta}</div>
+  </div>`;
+}
+function renderPair(){
+  ['hs','hw','hl','ls','bs','bl'].forEach(id=>{const v=$(id).value;$(id+'-v').textContent=id==='ls'?v+'em':(id==='hl'||id==='bl'?v:v+'px')});
+  $('pairwrap').innerHTML=paneHTML('A — คู่ที่เลือกอยู่',D,B)+(lockedA?paneHTML('B — คู่ที่ล็อกไว้',lockedA.d,lockedA.b):'<div class="pane" style="display:flex;align-items:center;justify-content:center;color:var(--fg2);font-size:12.5px">ยังไม่ได้ล็อกคู่เทียบ<br>กดปุ่ม "ล็อกคู่นี้ไว้เทียบ (B)" ด้านบน</div>');
+}
+['hs','hw','hl','ls','bs','bl'].forEach(id=>$(id).oninput=renderPair);
+$('lockB').onclick=()=>{lockedA={d:D,b:B};renderPair()};
+
+/* ============ STRESS ============ */
+function renderStress(){
+  const sel=$('ss-f'); if(!sel.options.length){sel.innerHTML=all().map(f=>`<option${f.f===D.f?' selected':''}>${f.f}</option>`).join('')}
+  const f=all().find(x=>x.f===sel.value)||D;
+  const s=$('ss-s').value,w=$('ss-w').value,l=$('ss-l').value;
+  $('ss-s-v').textContent=s+'px';$('ss-w-v').textContent=w;$('ss-l-v').textContent=l;
+  const useW=f.vf?Math.min(Math.max(w,f.w[0]),f.w[f.w.length-1]):f.w.reduce((a,c)=>Math.abs(c-w)<Math.abs(a-w)?c:a);
+  const st=`font-family:'${f.f}',sans-serif;font-size:${s}px;font-weight:${useW};line-height:${l}`;
+  $('stress').innerHTML=STRESS.map(([t,n])=>`<div class="row"><b style="${st}">${t}</b><span>${n}</span></div>`).join('');
+  $('confuse').innerHTML=CONFUSE.map(([t,n])=>`<div class="row"><b style="font-family:'${f.f}',sans-serif;font-weight:${useW};line-height:1.6">${t}</b><span>${n}</span></div>`).join('');
+}
+['ss-f','ss-s','ss-w','ss-l'].forEach(id=>$(id).oninput=renderStress);
+$('clip2').onchange=e=>$('p-stress').classList.toggle('clip',e.target.checked);
+
+/* ============ PREMIUM ============ */
+$('prem').innerHTML='<tr><th>ฟอนต์</th><th>โรงหล่อ</th><th>รายละเอียด</th><th>ราคา</th><th>สิทธิ์เว็บ</th><th>ทำไมน่าสนใจ</th></tr>'+
+ PREM.map(p=>`<tr><td><a href="${p[5]}" target="_blank" rel="noopener"><b>${p[0]}</b></a></td><td>${p[1]}</td><td>${p[2]}</td><td class="mono">${p[3]}</td><td>${p[4]}</td><td>${p[6]}</td></tr>`).join('');
+
+/* ============ OWN FONTS ============ */
+const drop=$('drop');
+drop.onclick=()=>$('file').click();
+drop.ondragover=e=>{e.preventDefault();drop.classList.add('hot')};
+drop.ondragleave=()=>drop.classList.remove('hot');
+drop.ondrop=e=>{e.preventDefault();drop.classList.remove('hot');handle(e.dataTransfer.files)};
+$('file').onchange=e=>handle(e.target.files);
+function handle(files){
+  [...files].forEach(file=>{
+    const name=file.name.replace(/\.(woff2?|ttf|otf)$/i,'');
+    const r=new FileReader();
+    r.onload=()=>{
+      const ff=new FontFace(name,r.result);
+      ff.load().then(l=>{
+        document.fonts.add(l);
+        loadedOwn.push({f:name,w:[400],vf:0,loop:'q',role:'display',p:'ไฟล์ที่คุณใส่เอง',lat:'?',own:1,note:'ไฟล์ในเครื่อง — ถ้าเป็น variable ให้เลื่อนน้ำหนักดู อาจไม่ตอบสนองถ้าไฟล์เป็น static'});
+        $('ss-f').innerHTML='';
+        renderAll();
+        $('loaded').innerHTML='โหลดแล้ว: '+loadedOwn.map(x=>'<b style="color:var(--ok)">'+x.f+'</b>').join(', ')+'<br><span style="font-size:11px">ไปแท็บ 1 หรือ 3 เพื่อเทียบได้เลย</span>';
+      }).catch(err=>{$('loaded').innerHTML='<span style="color:var(--warn)">โหลด '+file.name+' ไม่ได้: '+err.message+'</span>'});
+    };
+    r.readAsArrayBuffer(file);
+  });
+}
+
+/* ============ OUTPUT ============ */
+function buildOut(){
+  const s=[...star];
+  $('shortlist').innerHTML=`<div style="font-size:13px;line-height:2">
+    เลือกเป็น <b style="color:var(--ac)">หัวเรื่อง</b>: ${D.f} ${D.vf?'(variable '+D.va.replace('wght@','')+')':'(static)'}<br>
+    เลือกเป็น <b style="color:#6db3e8">เนื้อความ</b>: ${B.f} ${B.vf?'(variable)':'(static)'}<br>
+    ${lockedA?'คู่ที่ล็อกเทียบไว้: '+lockedA.d.f+' + '+lockedA.b.f+'<br>':''}
+    ดาวที่ให้ไว้: ${s.length?s.join(', '):'—'}</div>`;
+  let t='# PlanC — FONT LAB ผลการเลือก\n\n';
+  t+='คู่ที่เลือก (A): หัวเรื่อง = '+D.f+' / เนื้อความ = '+B.f+'\n';
+  if(lockedA)t+='คู่ที่เทียบ (B): หัวเรื่อง = '+lockedA.d.f+' / เนื้อความ = '+lockedA.b.f+'\n';
+  t+='ฟอนต์ที่ติดดาว: '+(s.length?s.join(', '):'ไม่มี')+'\n\n';
+  t+='ค่าที่ตั้งไว้ตอนดู:\n';
+  t+='- หัวเรื่อง '+$('hs').value+'px / น้ำหนัก '+$('hw').value+' / line-height '+$('hl').value+' / letter-spacing '+$('ls').value+'em\n';
+  t+='- เนื้อความ '+$('bs').value+'px / line-height '+$('bl').value+'\n\n';
+  t+='หมายเหตุจากข้อมูลจริง:\n';
+  t+='- '+D.f+': '+(D.vf?'VARIABLE — animate น้ำหนักได้':'STATIC '+D.w.length+' น้ำหนัก — อย่า animate น้ำหนัก')+' · '+LOOPLBL[D.loop]+'\n';
+  t+='- '+B.f+': '+(B.vf?'VARIABLE':'STATIC')+' · '+LOOPLBL[B.loop]+'\n';
+  if(loadedOwn.length)t+='- ฟอนต์ที่ใส่ไฟล์เอง: '+loadedOwn.map(x=>x.f).join(', ')+'\n';
+  t+='\nส่งข้อความนี้กลับไปในแชท → จะถูกใส่เป็น component T (typography) ใน BUILD-BRIEF\n';
+  $('out').value=t;
+}
+$('copy').onclick=()=>{const ta=$('out');ta.select();try{document.execCommand('copy')}catch(e){};$('copy').textContent='คัดลอกแล้ว ✓';setTimeout(()=>$('copy').textContent='คัดลอก',1500)};
+
+function renderAll(){renderGrid();renderPair();renderStress()}
+document.fonts.ready.then(renderAll);
+renderAll();
+</script>
+</body>
+</html>

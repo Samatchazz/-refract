@@ -1,0 +1,44 @@
+[
+ {
+  "claim": "Southeast Asian regional influencer campaign spending was projected to surpass USD 2.1 billion in 2025, with Indonesia, Thailand, and Vietnam together accounting for over 65% of regional influencer engagement.",
+  "stance": "neutral",
+  "stance_target": "The position that SEA creator-economy figures in circulation are a small number of vendor estimates recycled across agency blogs, giving a false impression of evidentiary depth",
+  "evidence_type": "statistical",
+  "scope_conditions": "Southeast Asia; 2025 projection; both figures hyperlinked by this source back to the Vero white paper, i.e. not independent evidence; no sample size or method",
+  "quoted_support": "Projections estimate regional spending on influencer campaigns will surpass $2.1 billion in 2025, with industries such as beauty, fintech, and online learning leading the charge.",
+  "numbers": ["USD 2.1 billion SEA influencer spend 2025", ">65% of SEA influencer engagement from Indonesia, Thailand, Vietnam"],
+  "entities": ["AWISEE", "Vero", "Indonesia", "Thailand", "Vietnam"],
+  "time_period": "2025",
+  "region": "Southeast Asia",
+  "confidence": "low",
+  "source_note_id": "thriving-influencer-marketing-in-southeast-asia-the-ultimate-2025-guide"
+ },
+ {
+  "claim": "Projected 2025 influencer marketing spend by Southeast Asian country is given as Indonesia over USD 500 million, Thailand about USD 320 million, Vietnam about USD 290 million, the Philippines about USD 190 million, and Singapore about USD 150 million, with no source or methodology stated.",
+  "stance": "neutral",
+  "stance_target": "The position that per-country Southeast Asian creator-economy figures are published without provenance and should not be treated as measurements",
+  "evidence_type": "statistical",
+  "scope_conditions": "Five SEA countries; 2025 projection; presented as a chart in an agency SEO post with no cited origin, model, or methodology; author Josh Wambugu, 7 May 2025",
+  "quoted_support": "Indonesia leads the region by a significant margin, with projected spending exceeding $500 million USD, showcasing its dominant role in the region's creator economy.",
+  "numbers": ["Indonesia >USD 500m", "Thailand ~USD 320m", "Vietnam ~USD 290m", "Philippines ~USD 190m", "Singapore ~USD 150m"],
+  "entities": ["AWISEE", "Indonesia", "Thailand", "Vietnam", "Philippines", "Singapore"],
+  "time_period": "2025",
+  "region": "Southeast Asia (5 countries)",
+  "confidence": "low",
+  "source_note_id": "thriving-influencer-marketing-in-southeast-asia-the-ultimate-2025-guide"
+ },
+ {
+  "claim": "Southeast Asian consumers are described as placing more trust in nano and micro influencers than in the mega influencers that dominate Western markets, a structural difference in where audience attention and therefore income concentrates.",
+  "stance": "supports",
+  "stance_target": "The position that the winner-take-all attention concentration documented in Western creator-economy panel data may take a different shape in Southeast Asia, so Western inequality measures should not be assumed to transfer",
+  "evidence_type": "expert-opinion",
+  "scope_conditions": "Southeast Asia; 2025; agency assertion with no supporting data or measurement",
+  "quoted_support": "Unlike Western markets dominated by mega influencers, Southeast Asian consumers place more trust in nano and micro influencers, often choosing authenticity over celebrity appeal.",
+  "numbers": ["no quantification provided"],
+  "entities": ["AWISEE", "Southeast Asia"],
+  "time_period": "2025",
+  "region": "Southeast Asia",
+  "confidence": "low",
+  "source_note_id": "thriving-influencer-marketing-in-southeast-asia-the-ultimate-2025-guide"
+ }
+]

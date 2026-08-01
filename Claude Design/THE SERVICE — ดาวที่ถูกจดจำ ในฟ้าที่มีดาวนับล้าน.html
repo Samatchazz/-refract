@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<!-- saved from url=(0061)file:///C:/Users/SaChaz/Downloads/the-service-night-v4_1.html -->
+<html lang="th" style="scroll-behavior: smooth;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>THE SERVICE — ดาวที่ถูกจดจำ ในฟ้าที่มีดาวนับล้าน</title>
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+<link href="./THE SERVICE — ดาวที่ถูกจดจำ ในฟ้าที่มีดาวนับล้าน_files/css2" rel="stylesheet">
+<style>
+  :root{
+    --night:#0B1526;
+    --dusk:#16263E;
+    --ink:#DCEBF7;
+    --ink-dim:#8FA6BE;
+    --amber:#F2A93B;
+    --amber-soft:#F7C877;
+    --line:rgba(220,235,247,.14);
+    --display:'Fraunces',serif;
+    --body:'IBM Plex Sans Thai',sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:var(--body);
+    background:var(--night);
+    color:var(--ink);
+    font-weight:300;
+    line-height:1.7;
+    overflow-x:hidden;
+  }
+  ::selection{background:var(--amber);color:var(--night)}
+
+  /* ---------- ฟ้าผืนเดียว (fixed) ---------- */
+  .sky{
+    position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden;
+    background:linear-gradient(180deg,#0B1526 0%,#101D33 55%,#16263E 100%);
+  }
+  /* ผืนดาวหมุนได้ — ใหญ่กว่าจอมาก หมุนรอบดาวเหนือ */
+  .rot-field{
+    position:absolute;
+    width:220vmax;height:220vmax;
+    left:32%;top:26%;               /* จุดหมุน = ตำแหน่งดาวเหนือบนจอ */
+    transform:translate(-50%,-50%);
+    will-change:transform;
+  }
+  .star{
+    position:absolute;border-radius:50%;
+    background:var(--ink);
+    animation:twinkle 4s ease-in-out infinite;
+  }
+  @keyframes twinkle{0%,100%{opacity:.16}50%{opacity:.8}}
+  /* ดาวเหนือ — ดวงเดียวที่ไม่หมุน */
+  .polaris{
+    position:absolute;left:32%;top:26%;
+    width:6px;height:6px;margin:-3px 0 0 -3px;border-radius:50%;
+    background:var(--amber-soft);
+    box-shadow:0 0 10px rgba(242,169,59,.9),0 0 30px rgba(242,169,59,.45);
+  }
+  .dusk-glow{
+    position:absolute;left:0;right:0;bottom:0;height:42vh;
+    background:linear-gradient(180deg,rgba(242,169,59,0) 0%,rgba(242,169,59,.16) 70%,rgba(217,131,36,.30) 100%);
+  }
+
+  /* ---------- ดวงจันทร์ ---------- */
+  .moon{
+    position:fixed;z-index:1;pointer-events:none;
+    top:22vh;right:10vw;
+    width:min(34vw,340px);height:min(34vw,340px);
+    border-radius:50%;
+    background:radial-gradient(circle at 34% 30%,#FFF6E3 0%,#F7DFAE 38%,#E8BC6C 72%,#C99A4E 100%);
+    animation:moonbreath 7s ease-in-out infinite alternate;
+  }
+  @keyframes moonbreath{
+    from{box-shadow:
+      inset -18px -14px 44px rgba(120,84,26,.35),
+      0 0 60px rgba(242,169,59,.38),
+      0 0 160px rgba(242,169,59,.20),
+      0 0 300px rgba(242,169,59,.09)}
+    to{box-shadow:
+      inset -18px -14px 44px rgba(120,84,26,.35),
+      0 0 80px rgba(242,169,59,.55),
+      0 0 200px rgba(242,169,59,.30),
+      0 0 380px rgba(242,169,59,.14)}
+  }
+  .moon::after{
+    content:'';position:absolute;inset:0;border-radius:50%;
+    background:
+      radial-gradient(circle at 62% 58%,rgba(160,115,45,.28) 0 7%,transparent 8%),
+      radial-gradient(circle at 40% 68%,rgba(160,115,45,.22) 0 5%,transparent 6%),
+      radial-gradient(circle at 70% 30%,rgba(160,115,45,.20) 0 4%,transparent 5%);
+  }
+  /* เมื่อมีวิดีโอ hero จริง จันทร์ CSS จะถูกซ่อนช่วง hero แล้วโผล่ตอนหด (JS จัดการ) */
+
+  /* ---------- เนื้อฟิล์ม ---------- */
+  .grain{
+    position:fixed;inset:-50%;z-index:40;pointer-events:none;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
+    opacity:.055;
+    animation:grain-shift 1.2s steps(4) infinite;
+  }
+  @keyframes grain-shift{
+    0%{transform:translate(0,0)}25%{transform:translate(-2%,1%)}
+    50%{transform:translate(1%,-2%)}75%{transform:translate(-1%,2%)}100%{transform:translate(0,0)}
+  }
+  .vignette{
+    position:fixed;inset:0;z-index:39;pointer-events:none;
+    background:radial-gradient(ellipse at 50% 42%,transparent 52%,rgba(4,9,18,.5) 100%);
+  }
+
+  /* ---------- เปลือกเนื้อหา ---------- */
+  main{position:relative;z-index:2}
+  nav{
+    position:fixed;top:0;left:0;right:0;z-index:50;
+    display:flex;justify-content:space-between;align-items:center;
+    padding:20px 5vw;
+    background:rgba(11,21,38,.55);
+    -webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav-logo{font-family:var(--display);font-weight:500;font-size:1.02rem;letter-spacing:.16em;color:var(--ink);text-decoration:none}
+  .nav-right{display:flex;align-items:center;gap:26px}
+  .nav-seats{font-size:.78rem;letter-spacing:.05em;color:var(--ink-dim)}
+  .nav-seats b{color:var(--amber);font-weight:500}
+  .nav-cta{
+    font-size:.85rem;font-weight:500;color:var(--night);text-decoration:none;
+    background:var(--amber);padding:10px 22px;border-radius:99px;
+    transition:transform .25s,box-shadow .25s;
+  }
+  .nav-cta:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(242,169,59,.35)}
+
+  section{padding:18vh 5vw;position:relative}
+  .sec-label{
+    font-size:.78rem;letter-spacing:.3em;text-transform:uppercase;
+    color:var(--amber);font-weight:500;margin-bottom:56px;
+  }
+
+  /* ---------- HERO ---------- */
+  .hero{min-height:100vh;display:flex;align-items:center;padding-top:10vh;position:relative;overflow:hidden}
+  .hero-video{
+    position:absolute;inset:0;z-index:0;pointer-events:none;
+  }
+  .hero-video video{
+    width:100%;height:100%;object-fit:cover;display:block;
+  }
+  .hero-video::after{ /* หมอกทับให้ตัวหนังสือฝั่งซ้ายอ่านชัดเสมอ */
+    content:'';position:absolute;inset:0;
+    background:linear-gradient(90deg,rgba(11,21,38,.78) 0%,rgba(11,21,38,.32) 52%,rgba(11,21,38,0) 100%);
+  }
+  .hero-content{max-width:820px;position:relative;z-index:2}
+  .hero-eyebrow{font-size:.8rem;letter-spacing:.3em;text-transform:uppercase;color:var(--amber);font-weight:500;margin-bottom:30px}
+  h1{
+    font-family:var(--display);font-weight:300;
+    font-size:clamp(2.7rem,8vw,7rem);
+    line-height:1.04;letter-spacing:-.02em;
+  }
+  h1 em{
+    font-style:italic;font-weight:400;color:var(--amber-soft);
+    text-shadow:0 0 26px rgba(242,169,59,.55),0 0 70px rgba(242,169,59,.25);
+  }
+  .hero-sub{margin-top:34px;max-width:480px;font-size:1.05rem;color:var(--ink-dim)}
+  .hero-scroll{position:absolute;bottom:36px;left:5vw;font-size:.74rem;letter-spacing:.26em;text-transform:uppercase;color:var(--ink-dim);z-index:2}
+
+  /* ---------- MANIFESTO ---------- */
+  .manifesto{max-width:960px}
+  .manifesto p{
+    font-family:var(--display);font-weight:300;
+    font-size:clamp(1.6rem,3.6vw,3rem);
+    line-height:1.34;margin-bottom:1.15em;
+  }
+  .manifesto p em{font-style:italic;color:var(--amber-soft)}
+  .manifesto p b{font-weight:500}
+
+  /* ---------- SERVICES: ท้องฟ้าจำลอง ---------- */
+  .services-wrap{display:grid;grid-template-columns:1fr 1.1fr;gap:56px;align-items:start}
+  .sv-list{display:flex;flex-direction:column}
+  .sv-item{
+    display:grid;grid-template-columns:56px 1fr;align-items:baseline;gap:18px;
+    padding:26px 14px;border-bottom:1px solid var(--line);cursor:pointer;
+    border-radius:10px;transition:background .3s,padding-left .3s;
+  }
+  .sv-item:first-child{border-top:1px solid var(--line)}
+  .sv-num{
+    font-family:var(--display);font-style:italic;font-size:1rem;
+    color:var(--ink-dim);transition:color .3s;
+  }
+  .sv-name{
+    font-family:var(--display);font-weight:500;
+    font-size:clamp(1.3rem,2.2vw,1.8rem);line-height:1.2;display:block;
+    transition:color .3s,text-shadow .3s;
+  }
+  .sv-star{font-size:.75rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-dim);display:block;margin-top:4px;transition:color .3s}
+  .sv-item:hover,.sv-item.active{background:rgba(242,169,59,.07);padding-left:24px}
+  .sv-item.active .sv-num{color:var(--amber)}
+  .sv-item.active .sv-name{color:var(--amber-soft);text-shadow:0 0 22px rgba(242,169,59,.4)}
+  .sv-item.active .sv-star{color:var(--amber)}
+  .sv-desc-mobile{display:none;font-size:.92rem;color:var(--ink-dim);grid-column:2;margin-top:8px}
+
+  .planetarium{
+    position:sticky;top:14vh;height:72vh;border-radius:20px;overflow:hidden;
+    border:1px solid rgba(247,200,119,.22);
+    background:
+      radial-gradient(ellipse at 50% 120%,rgba(242,169,59,.10),transparent 55%),
+      radial-gradient(ellipse at 30% 20%,rgba(63,90,130,.35),transparent 60%),
+      linear-gradient(180deg,#0A1322,#101D33);
+    box-shadow:inset 0 0 80px rgba(4,9,18,.6),0 0 60px rgba(242,169,59,.07);
+  }
+  .p-scene{
+    position:absolute;inset:0;display:flex;flex-direction:column;
+    justify-content:center;align-items:center;padding:8%;
+    opacity:0;transition:opacity .7s ease;pointer-events:none;
+  }
+  .p-scene.active{opacity:1;pointer-events:auto}
+  .p-scene svg{width:82%;max-height:52%;overflow:visible}
+  .p-scene .p-starname{
+    font-family:var(--display);font-style:italic;font-weight:400;
+    font-size:1.5rem;color:var(--amber-soft);margin-top:30px;
+    text-shadow:0 0 24px rgba(242,169,59,.5);
+  }
+  .p-scene .p-desc{
+    font-size:.94rem;color:var(--ink-dim);text-align:center;
+    max-width:400px;margin-top:14px;
+  }
+  .p-scene circle{fill:var(--ink);opacity:.9}
+  .p-scene .bright{fill:var(--amber);filter:drop-shadow(0 0 8px rgba(242,169,59,.9))}
+  .p-scene path,.p-scene polyline{
+    fill:none;stroke:var(--amber-soft);stroke-width:1.2;opacity:.85;
+    stroke-linecap:round;stroke-linejoin:round;
+    filter:drop-shadow(0 0 5px rgba(242,169,59,.5));
+  }
+  .p-dust{position:absolute;border-radius:50%;background:var(--ink);opacity:.28}
+  @media(max-width:900px){
+    .services-wrap{grid-template-columns:1fr}
+    .planetarium{display:none}
+    .sv-desc-mobile{display:block}
+    .sv-item{cursor:default}
+  }
+
+  /* ---------- WORKS ---------- */
+  .works-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:26px}
+  .work{position:relative;overflow:hidden;border-radius:14px;cursor:pointer;border:1px solid var(--line)}
+  .work-thumb{aspect-ratio:4/3;transition:transform .8s cubic-bezier(.2,.8,.2,1)}
+  .work:hover .work-thumb{transform:scale(1.05)}
+  .w1-bg{background:radial-gradient(circle at 30% 30%,#2A3E5E,#101D33)}
+  .w2-bg{background:radial-gradient(circle at 70% 40%,#3E3157,#101D33)}
+  .w3-bg{background:radial-gradient(circle at 40% 70%,#4A3A28,#101D33)}
+  .w4-bg{background:radial-gradient(circle at 60% 30%,#1F3A4D,#101D33)}
+  /* ฝุ่นดาว + อักษรผี ทำให้ thumb ดูตั้งใจแม้ยังไม่มีภาพจริง */
+  .work-thumb::before{
+    content:'';position:absolute;inset:0;
+    background-image:
+      radial-gradient(1.5px 1.5px at 18% 26%,rgba(220,235,247,.8),transparent 100%),
+      radial-gradient(1px 1px at 64% 14%,rgba(220,235,247,.6),transparent 100%),
+      radial-gradient(2px 2px at 82% 58%,rgba(247,200,119,.7),transparent 100%),
+      radial-gradient(1px 1px at 38% 72%,rgba(220,235,247,.55),transparent 100%),
+      radial-gradient(1.4px 1.4px at 52% 42%,rgba(220,235,247,.7),transparent 100%),
+      radial-gradient(1px 1px at 90% 84%,rgba(220,235,247,.5),transparent 100%),
+      radial-gradient(1.2px 1.2px at 8% 88%,rgba(247,200,119,.55),transparent 100%);
+  }
+  .work-thumb::after{
+    content:attr(data-ghost);
+    position:absolute;right:6%;bottom:-6%;
+    font-family:var(--display);font-style:italic;font-weight:300;
+    font-size:clamp(5rem,10vw,9rem);line-height:1;
+    color:transparent;-webkit-text-stroke:1px rgba(220,235,247,.14);
+    pointer-events:none;
+  }
+  .work{border:1px solid rgba(247,200,119,.14);box-shadow:inset 0 0 40px rgba(4,9,18,.35)}
+  .work:hover{border-color:rgba(247,200,119,.4);box-shadow:inset 0 0 40px rgba(4,9,18,.35),0 0 40px rgba(242,169,59,.12)}
+  .work-meta{display:flex;justify-content:space-between;align-items:baseline;padding:16px 4px 14px;background:rgba(11,21,38,.4)}
+  .work-name{font-family:var(--display);font-weight:500;font-size:1.12rem}
+  .work-tag{font-size:.8rem;color:var(--ink-dim)}
+
+  /* ---------- AVAILABILITY ---------- */
+  .avail{
+    display:flex;flex-wrap:wrap;gap:14px 40px;align-items:baseline;
+    padding:10vh 5vw;border-top:1px solid var(--line);position:relative;z-index:2;
+  }
+  .avail-city{font-family:var(--display);font-size:1.3rem;font-weight:500}
+  .avail-item{font-size:.9rem;color:var(--ink-dim)}
+  .avail-item b{color:var(--amber);font-weight:500}
+
+  /* ---------- CTA ---------- */
+  .cta{min-height:90vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center}
+  .cta-star{
+    width:14px;height:14px;border-radius:50%;
+    background:var(--amber);margin-bottom:44px;
+    box-shadow:0 0 18px rgba(242,169,59,.9),0 0 60px rgba(242,169,59,.5),0 0 140px rgba(242,169,59,.25);
+    opacity:0;transform:scale(.2);
+  }
+  .cta h2{
+    font-family:var(--display);font-weight:300;
+    font-size:clamp(2.4rem,7vw,5.6rem);line-height:1.1;letter-spacing:-.015em;
+  }
+  .cta h2 em{font-style:italic;font-weight:400;color:var(--amber-soft)}
+  .cta p{margin:30px auto 44px;max-width:460px;font-size:1.02rem;color:var(--ink-dim)}
+  .cta-btn{
+    display:inline-block;text-decoration:none;
+    font-weight:500;font-size:1rem;color:var(--night);
+    background:var(--amber);padding:18px 46px;border-radius:99px;
+    transition:transform .25s,box-shadow .25s;
+  }
+  .cta-btn:hover{transform:translateY(-3px);box-shadow:0 14px 40px rgba(242,169,59,.4)}
+  footer{
+    position:relative;z-index:2;
+    display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;
+    padding:26px 5vw;font-size:.78rem;color:var(--ink-dim);
+    border-top:1px solid var(--line);
+  }
+
+  /* ---------- PRELOADER ---------- */
+  .preloader{
+    position:fixed;inset:0;z-index:100;
+    background:var(--night);
+    display:flex;flex-direction:column;justify-content:center;align-items:center;gap:18px;
+  }
+  .pre-logo{font-family:var(--display);font-weight:500;letter-spacing:.2em;font-size:1.1rem}
+  .pre-count{font-family:var(--display);font-style:italic;font-size:3.2rem;font-weight:300;color:var(--amber-soft);line-height:1}
+  .pre-line{width:120px;height:1px;background:var(--line);overflow:hidden}
+  .pre-line i{display:block;height:100%;width:0;background:var(--amber)}
+
+  /* ---------- NAV MENU ---------- */
+  .nav-menu{display:flex;gap:30px}
+  .nav-menu a{
+    font-size:.85rem;color:var(--ink-dim);text-decoration:none;letter-spacing:.04em;
+    transition:color .25s;
+  }
+  .nav-menu a:hover{color:var(--amber)}
+  .nav-menu a sup{font-size:.6rem;color:var(--amber);margin-left:3px}
+  @media(max-width:900px){.nav-menu{display:none}}
+
+  /* ---------- MARQUEE ---------- */
+  .marquee{
+    position:relative;z-index:2;overflow:hidden;white-space:nowrap;
+    border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+    padding:22px 0;background:rgba(11,21,38,.35);
+  }
+  .marquee-track{display:inline-block;animation:marquee 28s linear infinite}
+  .marquee span{
+    font-family:var(--display);font-weight:300;font-style:italic;
+    font-size:1.25rem;color:var(--ink-dim);margin:0 34px;
+  }
+  .marquee span b{color:var(--amber);font-weight:500;font-style:normal}
+  @keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+  /* ---------- CHAPTER HEAD ---------- */
+  .chapter{
+    display:flex;align-items:baseline;gap:26px;
+    border-top:1px solid var(--line);padding-top:30px;margin-bottom:72px;
+  }
+  .chapter-num{
+    font-family:var(--display);font-style:italic;font-weight:300;
+    font-size:clamp(3.4rem,7vw,5.4rem);line-height:1;
+    color:transparent;-webkit-text-stroke:1px rgba(247,200,119,.75);
+    text-shadow:0 0 30px rgba(242,169,59,.18);
+  }
+  .chapter-name{
+    font-size:.78rem;letter-spacing:.3em;text-transform:uppercase;
+    color:var(--ink-dim);font-weight:500;
+  }
+  .chapter-hint{margin-left:auto;font-size:.78rem;color:var(--ink-dim)}
+  @media(max-width:720px){.chapter-hint{display:none}}
+
+  /* ปุ่มเรืองแสง */
+  .nav-cta,.cta-btn{
+    background:linear-gradient(135deg,#F7C877 0%,#F2A93B 55%,#E8952F 100%);
+    box-shadow:0 0 0 1px rgba(247,200,119,.35),0 6px 24px rgba(242,169,59,.28);
+  }
+  .nav-cta:hover{transform:translateY(-2px);box-shadow:0 0 0 1px rgba(247,200,119,.5),0 10px 34px rgba(242,169,59,.45)}
+  .cta-btn:hover{transform:translateY(-3px);box-shadow:0 0 0 1px rgba(247,200,119,.5),0 16px 48px rgba(242,169,59,.5)}
+
+  .marquee span.o{
+    color:transparent;-webkit-text-stroke:1px rgba(143,166,190,.7);
+  }
+
+  /* ---------- WORKS: เหลื่อมกัน + กดเข้าเคสได้ ---------- */
+  .works-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:26px}
+  .work{cursor:pointer}
+  .work .work-thumb{position:relative}
+  .work-view{
+    position:absolute;right:14px;bottom:14px;
+    font-size:.78rem;letter-spacing:.08em;color:var(--night);
+    background:var(--amber);padding:8px 16px;border-radius:99px;font-weight:500;
+    opacity:0;transform:translateY(8px);transition:opacity .3s,transform .3s;
+  }
+  .work:hover .work-view{opacity:1;transform:translateY(0)}
+  .work.big{grid-column:span 7}
+  .work.small{grid-column:span 5}
+  .work.small.offset{margin-top:9vh}
+  .work.big.offset{margin-top:-9vh}
+  @media(max-width:860px){
+    .work.big,.work.small{grid-column:span 12}
+    .work.small.offset,.work.big.offset{margin-top:0}
+  }
+
+  /* ---------- CASE PANEL (ห้องข้างใน) ---------- */
+  .case-panel{
+    position:fixed;top:0;right:0;bottom:0;z-index:80;
+    width:min(560px,92vw);
+    background:linear-gradient(180deg,#101D33,#0B1526);
+    border-left:1px solid var(--line);
+    padding:96px 5vw 60px 48px;overflow-y:auto;
+    transform:translateX(105%);transition:transform .6s cubic-bezier(.2,.8,.2,1);
+    box-shadow:-30px 0 80px rgba(0,0,0,.45);
+  }
+  .case-panel.open{transform:translateX(0)}
+  .case-close{
+    position:absolute;top:26px;right:26px;cursor:pointer;
+    font-size:.8rem;letter-spacing:.1em;color:var(--ink-dim);
+    border:1px solid var(--line);border-radius:99px;padding:8px 18px;
+    background:none;font-family:var(--body);
+    transition:color .25s,border-color .25s;
+  }
+  .case-close:hover{color:var(--amber);border-color:var(--amber)}
+  .case-tag{font-size:.78rem;letter-spacing:.24em;text-transform:uppercase;color:var(--amber);font-weight:500}
+  .case-title{font-family:var(--display);font-weight:500;font-size:2.2rem;margin:14px 0 26px;line-height:1.15}
+  .case-body p{color:var(--ink-dim);font-size:.98rem;margin-bottom:1em}
+  .case-hero{aspect-ratio:16/10;border-radius:12px;margin:26px 0;border:1px solid var(--line)}
+  .case-backdrop{
+    position:fixed;inset:0;z-index:79;background:rgba(4,9,18,.55);
+    opacity:0;pointer-events:none;transition:opacity .5s;
+  }
+  .case-backdrop.open{opacity:1;pointer-events:auto}
+
+  /* ---------- FOOTER ใหญ่ ---------- */
+  .footer-grid{
+    position:relative;z-index:2;
+    display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;
+    padding:12vh 5vw 8vh;border-top:1px solid var(--line);
+  }
+  .footer-brand{font-family:var(--display);font-weight:500;letter-spacing:.16em;font-size:1.05rem;margin-bottom:14px}
+  .footer-note{font-size:.88rem;color:var(--ink-dim);max-width:280px}
+  .footer-col h4{font-size:.75rem;letter-spacing:.26em;text-transform:uppercase;color:var(--amber);font-weight:500;margin-bottom:18px}
+  .footer-col a{display:block;font-size:.9rem;color:var(--ink-dim);text-decoration:none;margin-bottom:10px;transition:color .25s}
+  .footer-col a:hover{color:var(--ink)}
+  @media(max-width:860px){.footer-grid{grid-template-columns:1fr 1fr}}
+
+  .reveal{opacity:0;transform:translateY(36px)}
+  @media(prefers-reduced-motion:reduce){
+    .star{animation:none;opacity:.5}
+    .grain{animation:none}
+    .reveal{opacity:1;transform:none}
+    .cta-star{opacity:1;transform:scale(1)}
+  }
+</style>
+</head>
+<body style="">
+
+<!-- PRELOADER -->
+<div class="preloader" id="preloader" style="opacity: 0; display: none;">
+  <div class="pre-logo">THE SERVICE</div>
+  <div class="pre-count" id="preCount">100</div>
+  <div class="pre-line"><i id="preBar" style="width: 100%;"></i></div>
+</div>
+
+<!-- ฟ้าผืนเดียว: ผืนดาวหมุนรอบดาวเหนือ -->
+<div class="sky">
+  <div class="rot-field" id="rotField" style="translate: none; rotate: none; scale: none; transform: translate(-50%, -50%);"><div class="star" style="height: 2.37162px; width: 2.37162px; left: 84.4436%; top: 49.972%; animation-delay: 1.20825s; animation-duration: 6.55125s;"></div><div class="star" style="height: 1.52565px; width: 1.52565px; left: 24.439%; top: 77.2994%; animation-delay: 2.61192s; animation-duration: 4.35976s;"></div><div class="star" style="height: 1.34232px; width: 1.34232px; left: 9.27883%; top: 15.4566%; animation-delay: 3.07592s; animation-duration: 3.84226s;"></div><div class="star" style="height: 0.706511px; width: 0.706511px; left: 51.1015%; top: 34.117%; animation-delay: 1.20283s; animation-duration: 3.69511s;"></div><div class="star" style="height: 1.29672px; width: 1.29672px; left: 66.7815%; top: 81.1996%; animation-delay: 3.53935s; animation-duration: 3.60969s;"></div><div class="star" style="height: 1.9471px; width: 1.9471px; left: 78.9166%; top: 80.3566%; animation-delay: 2.10527s; animation-duration: 3.16336s;"></div><div class="star" style="height: 0.895348px; width: 0.895348px; left: 71.0291%; top: 0.118585%; animation-delay: 3.31295s; animation-duration: 5.64898s;"></div><div class="star" style="height: 0.678429px; width: 0.678429px; left: 40.5547%; top: 66.2154%; animation-delay: 0.371595s; animation-duration: 5.15602s;"></div><div class="star" style="height: 1.85499px; width: 1.85499px; left: 22.3244%; top: 70.4443%; animation-delay: 2.51008s; animation-duration: 3.18541s;"></div><div class="star" style="height: 1.26322px; width: 1.26322px; left: 97.9927%; top: 21.0778%; animation-delay: 2.641s; animation-duration: 4.86626s;"></div><div class="star" style="height: 0.617097px; width: 0.617097px; left: 27.0651%; top: 62.8298%; animation-delay: 0.914992s; animation-duration: 3.7306s;"></div><div class="star" style="height: 1.5225px; width: 1.5225px; left: 84.9436%; top: 87.0126%; animation-delay: 1.76243s; animation-duration: 3.46095s;"></div><div class="star" style="height: 1.69549px; width: 1.69549px; left: 73.6913%; top: 25.8831%; animation-delay: 2.61809s; animation-duration: 4.08658s;"></div><div class="star" style="height: 1.47803px; width: 1.47803px; left: 11.4103%; top: 15.5868%; animation-delay: 2.79442s; animation-duration: 4.71737s;"></div><div class="star" style="height: 2.35255px; width: 2.35255px; left: 80.5603%; top: 3.55458%; animation-delay: 2.71201s; animation-duration: 6.36869s;"></div><div class="star" style="height: 1.46678px; width: 1.46678px; left: 21.053%; top: 55.309%; animation-delay: 3.83067s; animation-duration: 6.73538s;"></div><div class="star" style="height: 1.8513px; width: 1.8513px; left: 61.8365%; top: 82.0038%; animation-delay: 3.00787s; animation-duration: 3.52132s;"></div><div class="star" style="height: 1.50581px; width: 1.50581px; left: 90.2908%; top: 44.742%; animation-delay: 3.02036s; animation-duration: 3.92868s;"></div><div class="star" style="height: 0.84733px; width: 0.84733px; left: 22.2505%; top: 18.7319%; animation-delay: 2.19889s; animation-duration: 3.56821s;"></div><div class="star" style="height: 2.20539px; width: 2.20539px; left: 87.3524%; top: 22.2296%; animation-delay: 1.00559s; animation-duration: 4.76766s;"></div><div class="star" style="height: 2.11862px; width: 2.11862px; left: 33.1976%; top: 91.7551%; animation-delay: 3.33645s; animation-duration: 3.45539s;"></div><div class="star" style="height: 2.3288px; width: 2.3288px; left: 15.3573%; top: 65.6888%; animation-delay: 1.97581s; animation-duration: 4.71662s;"></div><div class="star" style="height: 1.70661px; width: 1.70661px; left: 47.9226%; top: 29.6285%; animation-delay: 3.02341s; animation-duration: 3.09378s;"></div><div class="star" style="height: 1.47434px; width: 1.47434px; left: 1.73043%; top: 49.1388%; animation-delay: 1.24698s; animation-duration: 6.21622s;"></div><div class="star" style="height: 1.78867px; width: 1.78867px; left: 8.36458%; top: 76.325%; animation-delay: 1.55999s; animation-duration: 4.77636s;"></div><div class="star" style="height: 1.62204px; width: 1.62204px; left: 49.8563%; top: 88.1161%; animation-delay: 0.774096s; animation-duration: 5.7907s;"></div><div class="star" style="height: 1.79254px; width: 1.79254px; left: 63.7876%; top: 92.9415%; animation-delay: 2.34058s; animation-duration: 4.13006s;"></div><div class="star" style="height: 1.5911px; width: 1.5911px; left: 83.7261%; top: 71.7322%; animation-delay: 3.08704s; animation-duration: 4.90575s;"></div><div class="star" style="height: 1.43985px; width: 1.43985px; left: 36.3698%; top: 98.8081%; animation-delay: 0.504394s; animation-duration: 5.06567s;"></div><div class="star" style="height: 1.21396px; width: 1.21396px; left: 22.0445%; top: 35.4737%; animation-delay: 2.38818s; animation-duration: 3.22312s;"></div><div class="star" style="height: 2.3488px; width: 2.3488px; left: 94.0019%; top: 82.7015%; animation-delay: 0.702058s; animation-duration: 5.87821s;"></div><div class="star" style="height: 1.23902px; width: 1.23902px; left: 31.8051%; top: 84.1845%; animation-delay: 0.905905s; animation-duration: 6.75143s;"></div><div class="star" style="height: 2.19916px; width: 2.19916px; left: 64.3585%; top: 50.7666%; animation-delay: 1.68555s; animation-duration: 5.3924s;"></div><div class="star" style="height: 0.758188px; width: 0.758188px; left: 57.3348%; top: 46.0595%; animation-delay: 2.61183s; animation-duration: 3.79299s;"></div><div class="star" style="height: 2.10085px; width: 2.10085px; left: 53.941%; top: 62.0115%; animation-delay: 2.35004s; animation-duration: 4.5969s;"></div><div class="star" style="height: 2.2364px; width: 2.2364px; left: 16.0604%; top: 30.1453%; animation-delay: 0.260453s; animation-duration: 4.56866s;"></div><div class="star" style="height: 1.19431px; width: 1.19431px; left: 79.4768%; top: 36.6345%; animation-delay: 3.04345s; animation-duration: 5.43088s;"></div><div class="star" style="height: 1.81305px; width: 1.81305px; left: 90.6096%; top: 11.9603%; animation-delay: 3.08759s; animation-duration: 3.29976s;"></div><div class="star" style="height: 2.11074px; width: 2.11074px; left: 35.9876%; top: 67.535%; animation-delay: 1.36779s; animation-duration: 5.64756s;"></div><div class="star" style="height: 2.22789px; width: 2.22789px; left: 8.63737%; top: 18.4871%; animation-delay: 1.52571s; animation-duration: 3.3387s;"></div><div class="star" style="height: 1.84709px; width: 1.84709px; left: 80.7991%; top: 39.869%; animation-delay: 1.27496s; animation-duration: 3.15041s;"></div><div class="star" style="height: 1.03091px; width: 1.03091px; left: 84.5751%; top: 71.8887%; animation-delay: 2.4446s; animation-duration: 3.9352s;"></div><div class="star" style="height: 1.48508px; width: 1.48508px; left: 18.618%; top: 0.990669%; animation-delay: 0.9364s; animation-duration: 6.81929s;"></div><div class="star" style="height: 1.26376px; width: 1.26376px; left: 83.6811%; top: 98.8379%; animation-delay: 2.33288s; animation-duration: 5.12084s;"></div><div class="star" style="height: 1.29751px; width: 1.29751px; left: 55.1463%; top: 52.7575%; animation-delay: 3.93296s; animation-duration: 6.56042s;"></div><div class="star" style="height: 2.27039px; width: 2.27039px; left: 0.309612%; top: 39.4163%; animation-delay: 0.692184s; animation-duration: 4.50011s;"></div><div class="star" style="height: 2.15745px; width: 2.15745px; left: 84.6978%; top: 78.3971%; animation-delay: 0.926468s; animation-duration: 5.36679s;"></div><div class="star" style="height: 2.2725px; width: 2.2725px; left: 60.8619%; top: 34.3739%; animation-delay: 1.76215s; animation-duration: 4.89339s;"></div><div class="star" style="height: 2.33368px; width: 2.33368px; left: 4.76876%; top: 68.7933%; animation-delay: 3.48428s; animation-duration: 6.93038s;"></div><div class="star" style="height: 1.48506px; width: 1.48506px; left: 3.07788%; top: 34.2904%; animation-delay: 3.45134s; animation-duration: 4.54955s;"></div><div class="star" style="height: 1.66631px; width: 1.66631px; left: 60.7896%; top: 69.4084%; animation-delay: 0.943706s; animation-duration: 4.90864s;"></div><div class="star" style="height: 1.20416px; width: 1.20416px; left: 81.6419%; top: 94.8266%; animation-delay: 1.6541s; animation-duration: 4.28601s;"></div><div class="star" style="height: 1.93733px; width: 1.93733px; left: 61.6101%; top: 56.7758%; animation-delay: 1.26735s; animation-duration: 3.92597s;"></div><div class="star" style="height: 2.18128px; width: 2.18128px; left: 99.3643%; top: 27.7936%; animation-delay: 3.20409s; animation-duration: 4.38681s;"></div><div class="star" style="height: 2.28592px; width: 2.28592px; left: 35.3241%; top: 59.9808%; animation-delay: 3.10491s; animation-duration: 4.5966s;"></div><div class="star" style="height: 0.955375px; width: 0.955375px; left: 88.8522%; top: 72.7855%; animation-delay: 0.464344s; animation-duration: 3.99085s;"></div><div class="star" style="height: 1.67818px; width: 1.67818px; left: 91.5228%; top: 80.0711%; animation-delay: 2.94597s; animation-duration: 3.84872s;"></div><div class="star" style="height: 1.0953px; width: 1.0953px; left: 75.794%; top: 56.4325%; animation-delay: 3.3081s; animation-duration: 4.56913s;"></div><div class="star" style="height: 0.742116px; width: 0.742116px; left: 40.7905%; top: 23.7006%; animation-delay: 0.305853s; animation-duration: 3.59581s;"></div><div class="star" style="height: 1.57285px; width: 1.57285px; left: 47.5807%; top: 44.1062%; animation-delay: 1.66521s; animation-duration: 4.08008s;"></div><div class="star" style="height: 1.78776px; width: 1.78776px; left: 36.2833%; top: 25.6581%; animation-delay: 1.4155s; animation-duration: 3.80815s;"></div><div class="star" style="height: 2.2129px; width: 2.2129px; left: 12.2794%; top: 64.1856%; animation-delay: 3.80083s; animation-duration: 5.10053s;"></div><div class="star" style="height: 1.79412px; width: 1.79412px; left: 73.4648%; top: 17.9655%; animation-delay: 3.71419s; animation-duration: 3.53274s;"></div><div class="star" style="height: 1.51023px; width: 1.51023px; left: 90.3997%; top: 62.4291%; animation-delay: 0.741793s; animation-duration: 4.13365s;"></div><div class="star" style="height: 2.14939px; width: 2.14939px; left: 72.2682%; top: 66.5869%; animation-delay: 1.61382s; animation-duration: 3.9428s;"></div><div class="star" style="height: 0.787053px; width: 0.787053px; left: 88.3547%; top: 12.2845%; animation-delay: 0.988688s; animation-duration: 3.70029s;"></div><div class="star" style="height: 0.832823px; width: 0.832823px; left: 28.0764%; top: 50.9424%; animation-delay: 0.978755s; animation-duration: 3.24824s;"></div><div class="star" style="height: 0.760647px; width: 0.760647px; left: 20.4882%; top: 78.2402%; animation-delay: 2.68577s; animation-duration: 5.73124s;"></div><div class="star" style="height: 1.78747px; width: 1.78747px; left: 28.653%; top: 63.5516%; animation-delay: 1.29065s; animation-duration: 4.31752s;"></div><div class="star" style="height: 0.943279px; width: 0.943279px; left: 43.4578%; top: 71.9654%; animation-delay: 2.8406s; animation-duration: 4.65565s;"></div><div class="star" style="height: 1.2806px; width: 1.2806px; left: 88.6231%; top: 53.3058%; animation-delay: 2.70567s; animation-duration: 5.58577s;"></div><div class="star" style="height: 1.6074px; width: 1.6074px; left: 84.6601%; top: 82.3959%; animation-delay: 0.0604826s; animation-duration: 4.30866s;"></div><div class="star" style="height: 1.95693px; width: 1.95693px; left: 21.6675%; top: 31.9607%; animation-delay: 2.79123s; animation-duration: 5.83717s;"></div><div class="star" style="height: 1.20356px; width: 1.20356px; left: 8.67303%; top: 57.5225%; animation-delay: 0.9363s; animation-duration: 4.84381s;"></div><div class="star" style="height: 1.14339px; width: 1.14339px; left: 43.8473%; top: 89.6279%; animation-delay: 3.82414s; animation-duration: 5.35233s;"></div><div class="star" style="height: 1.185px; width: 1.185px; left: 25.7161%; top: 55.7831%; animation-delay: 2.61665s; animation-duration: 5.58524s;"></div><div class="star" style="height: 1.95798px; width: 1.95798px; left: 1.08819%; top: 81.2244%; animation-delay: 1.56773s; animation-duration: 3.84831s;"></div><div class="star" style="height: 0.680502px; width: 0.680502px; left: 1.80092%; top: 77.93%; animation-delay: 2.23007s; animation-duration: 3.37761s;"></div><div class="star" style="height: 1.25389px; width: 1.25389px; left: 10.7698%; top: 58.4192%; animation-delay: 3.62109s; animation-duration: 3.48177s;"></div><div class="star" style="height: 1.6114px; width: 1.6114px; left: 55.6904%; top: 24.8895%; animation-delay: 3.20239s; animation-duration: 3.64905s;"></div><div class="star" style="height: 0.66966px; width: 0.66966px; left: 12.1841%; top: 39.6669%; animation-delay: 0.110172s; animation-duration: 3.85167s;"></div><div class="star" style="height: 1.31636px; width: 1.31636px; left: 66.3789%; top: 78.486%; animation-delay: 1.95255s; animation-duration: 4.93808s;"></div><div class="star" style="height: 0.874103px; width: 0.874103px; left: 22.9938%; top: 97.0125%; animation-delay: 1.44498s; animation-duration: 5.99922s;"></div><div class="star" style="height: 1.27898px; width: 1.27898px; left: 93.5732%; top: 0.190159%; animation-delay: 3.4015s; animation-duration: 5.28852s;"></div><div class="star" style="height: 1.17705px; width: 1.17705px; left: 46.3879%; top: 31.3943%; animation-delay: 0.0461236s; animation-duration: 4.09175s;"></div><div class="star" style="height: 2.35457px; width: 2.35457px; left: 31.0247%; top: 63.7801%; animation-delay: 2.78389s; animation-duration: 5.03173s;"></div><div class="star" style="height: 0.699415px; width: 0.699415px; left: 83.8763%; top: 78.2322%; animation-delay: 3.96728s; animation-duration: 4.11098s;"></div><div class="star" style="height: 0.608551px; width: 0.608551px; left: 31.5382%; top: 0.920983%; animation-delay: 1.25244s; animation-duration: 3.46952s;"></div><div class="star" style="height: 0.947262px; width: 0.947262px; left: 22.1966%; top: 91.8236%; animation-delay: 3.0057s; animation-duration: 3.93192s;"></div><div class="star" style="height: 1.53498px; width: 1.53498px; left: 43.7125%; top: 99.115%; animation-delay: 1.90146s; animation-duration: 5.62299s;"></div><div class="star" style="height: 1.89392px; width: 1.89392px; left: 4.28348%; top: 72.6006%; animation-delay: 0.500889s; animation-duration: 4.27875s;"></div><div class="star" style="height: 0.739573px; width: 0.739573px; left: 70.5622%; top: 80.3563%; animation-delay: 1.29578s; animation-duration: 6.95566s;"></div><div class="star" style="height: 0.671249px; width: 0.671249px; left: 51.2751%; top: 30.7651%; animation-delay: 1.41477s; animation-duration: 4.67211s;"></div><div class="star" style="height: 1.80804px; width: 1.80804px; left: 74.0648%; top: 46.7789%; animation-delay: 3.28706s; animation-duration: 4.8059s;"></div><div class="star" style="height: 1.78658px; width: 1.78658px; left: 92.145%; top: 76.6583%; animation-delay: 2.06599s; animation-duration: 4.29837s;"></div><div class="star" style="height: 1.56461px; width: 1.56461px; left: 64.8948%; top: 73.2781%; animation-delay: 0.660143s; animation-duration: 3.19349s;"></div><div class="star" style="height: 1.78525px; width: 1.78525px; left: 36.0999%; top: 84.8111%; animation-delay: 0.067479s; animation-duration: 5.47414s;"></div><div class="star" style="height: 1.4404px; width: 1.4404px; left: 42.3092%; top: 62.6937%; animation-delay: 1.91464s; animation-duration: 3.61922s;"></div><div class="star" style="height: 2.15256px; width: 2.15256px; left: 13.6075%; top: 34.5902%; animation-delay: 1.81407s; animation-duration: 5.32113s;"></div><div class="star" style="height: 0.711057px; width: 0.711057px; left: 63.1752%; top: 63.0473%; animation-delay: 3.405s; animation-duration: 5.95725s;"></div><div class="star" style="height: 1.10554px; width: 1.10554px; left: 82.4566%; top: 27.1858%; animation-delay: 2.6481s; animation-duration: 6.47628s;"></div><div class="star" style="height: 0.624688px; width: 0.624688px; left: 51.6112%; top: 48.5999%; animation-delay: 2.04619s; animation-duration: 5.91923s;"></div><div class="star" style="height: 2.13497px; width: 2.13497px; left: 92.6611%; top: 85.3731%; animation-delay: 1.16685s; animation-duration: 5.4196s;"></div><div class="star" style="height: 2.08573px; width: 2.08573px; left: 49.8874%; top: 48.302%; animation-delay: 0.559734s; animation-duration: 4.91207s;"></div><div class="star" style="height: 1.38931px; width: 1.38931px; left: 68.9713%; top: 17.0861%; animation-delay: 1.66055s; animation-duration: 5.08596s;"></div><div class="star" style="height: 2.29558px; width: 2.29558px; left: 93.6538%; top: 20.1087%; animation-delay: 1.02068s; animation-duration: 5.4391s;"></div><div class="star" style="height: 1.85968px; width: 1.85968px; left: 46.8035%; top: 2.63558%; animation-delay: 0.345083s; animation-duration: 3.5415s;"></div><div class="star" style="height: 2.1599px; width: 2.1599px; left: 22.65%; top: 96.0464%; animation-delay: 1.78569s; animation-duration: 4.97333s;"></div><div class="star" style="height: 1.75031px; width: 1.75031px; left: 89.9597%; top: 37.7055%; animation-delay: 1.57214s; animation-duration: 4.44007s;"></div><div class="star" style="height: 0.889903px; width: 0.889903px; left: 86.217%; top: 64.7279%; animation-delay: 0.282328s; animation-duration: 5.51954s;"></div><div class="star" style="height: 0.650329px; width: 0.650329px; left: 88.6478%; top: 86.003%; animation-delay: 3.74234s; animation-duration: 4.90916s;"></div><div class="star" style="height: 1.26737px; width: 1.26737px; left: 72.0073%; top: 13.7448%; animation-delay: 3.5141s; animation-duration: 5.87866s;"></div><div class="star" style="height: 1.59022px; width: 1.59022px; left: 85.0911%; top: 79.4614%; animation-delay: 2.98997s; animation-duration: 6.6714s;"></div><div class="star" style="height: 2.36699px; width: 2.36699px; left: 79.8242%; top: 28.3152%; animation-delay: 1.73717s; animation-duration: 5.13137s;"></div><div class="star" style="height: 2.18847px; width: 2.18847px; left: 44.8468%; top: 50.8345%; animation-delay: 3.14687s; animation-duration: 6.19247s;"></div><div class="star" style="height: 1.64359px; width: 1.64359px; left: 28.4926%; top: 50.3574%; animation-delay: 1.38919s; animation-duration: 5.05508s;"></div><div class="star" style="height: 1.32835px; width: 1.32835px; left: 82.9596%; top: 38.9945%; animation-delay: 0.360848s; animation-duration: 3.93875s;"></div><div class="star" style="height: 1.37217px; width: 1.37217px; left: 97.4012%; top: 3.50624%; animation-delay: 1.86971s; animation-duration: 3.01028s;"></div><div class="star" style="height: 1.82992px; width: 1.82992px; left: 12.8609%; top: 66.8153%; animation-delay: 1.27546s; animation-duration: 4.58487s;"></div><div class="star" style="height: 0.969567px; width: 0.969567px; left: 65.2541%; top: 28.747%; animation-delay: 2.95173s; animation-duration: 3.68981s;"></div><div class="star" style="height: 1.41919px; width: 1.41919px; left: 15.6236%; top: 15.6953%; animation-delay: 3.62859s; animation-duration: 3.72101s;"></div><div class="star" style="height: 0.761471px; width: 0.761471px; left: 71.1531%; top: 87.7048%; animation-delay: 0.932966s; animation-duration: 3.90477s;"></div><div class="star" style="height: 1.42941px; width: 1.42941px; left: 88.4489%; top: 14.0697%; animation-delay: 2.60946s; animation-duration: 5.94348s;"></div><div class="star" style="height: 2.04823px; width: 2.04823px; left: 39.9424%; top: 30.8749%; animation-delay: 0.705275s; animation-duration: 5.72275s;"></div><div class="star" style="height: 1.63986px; width: 1.63986px; left: 2.33022%; top: 33.8538%; animation-delay: 0.991096s; animation-duration: 4.19699s;"></div><div class="star" style="height: 1.93207px; width: 1.93207px; left: 73.6781%; top: 7.55348%; animation-delay: 0.610264s; animation-duration: 6.93s;"></div><div class="star" style="height: 1.56338px; width: 1.56338px; left: 57.1007%; top: 75.5108%; animation-delay: 1.43295s; animation-duration: 5.51508s;"></div><div class="star" style="height: 0.760298px; width: 0.760298px; left: 45.2824%; top: 90.6615%; animation-delay: 2.33145s; animation-duration: 4.14526s;"></div><div class="star" style="height: 1.69927px; width: 1.69927px; left: 11.275%; top: 62.5084%; animation-delay: 0.0931661s; animation-duration: 6.39084s;"></div><div class="star" style="height: 1.78867px; width: 1.78867px; left: 67.9423%; top: 30.217%; animation-delay: 1.80163s; animation-duration: 3.12846s;"></div><div class="star" style="height: 0.788438px; width: 0.788438px; left: 61.1885%; top: 99.6093%; animation-delay: 3.81801s; animation-duration: 6.70011s;"></div><div class="star" style="height: 2.05797px; width: 2.05797px; left: 65.8558%; top: 3.30238%; animation-delay: 0.32126s; animation-duration: 6.97355s;"></div><div class="star" style="height: 1.71722px; width: 1.71722px; left: 83.875%; top: 27.3008%; animation-delay: 3.45106s; animation-duration: 4.76422s;"></div><div class="star" style="height: 1.83463px; width: 1.83463px; left: 5.03593%; top: 18.6707%; animation-delay: 3.40552s; animation-duration: 6.19454s;"></div><div class="star" style="height: 1.16278px; width: 1.16278px; left: 38.6877%; top: 76.3782%; animation-delay: 0.0458552s; animation-duration: 5.43229s;"></div><div class="star" style="height: 1.78691px; width: 1.78691px; left: 42.5538%; top: 26.5048%; animation-delay: 3.40738s; animation-duration: 4.09278s;"></div><div class="star" style="height: 0.733231px; width: 0.733231px; left: 72.4627%; top: 27.8215%; animation-delay: 1.74442s; animation-duration: 4.76794s;"></div><div class="star" style="height: 2.08429px; width: 2.08429px; left: 91.2554%; top: 5.11705%; animation-delay: 0.938323s; animation-duration: 5.95605s;"></div><div class="star" style="height: 1.8003px; width: 1.8003px; left: 56.7549%; top: 31.6326%; animation-delay: 1.47796s; animation-duration: 3.00385s;"></div><div class="star" style="height: 1.48484px; width: 1.48484px; left: 27.7481%; top: 64.1231%; animation-delay: 1.8437s; animation-duration: 5.33846s;"></div><div class="star" style="height: 2.10854px; width: 2.10854px; left: 70.9793%; top: 62.3326%; animation-delay: 0.120169s; animation-duration: 5.1596s;"></div><div class="star" style="height: 0.865769px; width: 0.865769px; left: 50.0965%; top: 67.1864%; animation-delay: 2.26291s; animation-duration: 6.88473s;"></div><div class="star" style="height: 0.834247px; width: 0.834247px; left: 39.764%; top: 42.9671%; animation-delay: 3.68343s; animation-duration: 5.71271s;"></div><div class="star" style="height: 1.2604px; width: 1.2604px; left: 64.1936%; top: 90.4368%; animation-delay: 1.89648s; animation-duration: 6.7782s;"></div><div class="star" style="height: 0.835003px; width: 0.835003px; left: 80.5098%; top: 83.3812%; animation-delay: 3.23393s; animation-duration: 3.44522s;"></div><div class="star" style="height: 0.970408px; width: 0.970408px; left: 18.5499%; top: 29.1351%; animation-delay: 3.49742s; animation-duration: 6.46602s;"></div><div class="star" style="height: 0.823565px; width: 0.823565px; left: 88.8311%; top: 55.8716%; animation-delay: 0.406348s; animation-duration: 4.60774s;"></div><div class="star" style="height: 0.886311px; width: 0.886311px; left: 25.86%; top: 41.8388%; animation-delay: 3.72004s; animation-duration: 4.13676s;"></div><div class="star" style="height: 1.24255px; width: 1.24255px; left: 81.1789%; top: 17.5514%; animation-delay: 2.11529s; animation-duration: 4.04563s;"></div><div class="star" style="height: 0.85229px; width: 0.85229px; left: 12.1631%; top: 6.20298%; animation-delay: 1.25958s; animation-duration: 6.45555s;"></div><div class="star" style="height: 2.33501px; width: 2.33501px; left: 21.2542%; top: 89.1364%; animation-delay: 1.34845s; animation-duration: 5.18282s;"></div><div class="star" style="height: 0.741529px; width: 0.741529px; left: 77.822%; top: 33.3743%; animation-delay: 3.57819s; animation-duration: 4.11419s;"></div><div class="star" style="height: 2.26866px; width: 2.26866px; left: 58.519%; top: 77.7415%; animation-delay: 0.666243s; animation-duration: 4.48005s;"></div><div class="star" style="height: 2.28704px; width: 2.28704px; left: 95.7906%; top: 50.4479%; animation-delay: 2.23636s; animation-duration: 4.56864s;"></div><div class="star" style="height: 0.816814px; width: 0.816814px; left: 33.7439%; top: 34.7419%; animation-delay: 3.88094s; animation-duration: 4.66673s;"></div><div class="star" style="height: 2.08307px; width: 2.08307px; left: 93.6078%; top: 83.4164%; animation-delay: 0.703299s; animation-duration: 6.24794s;"></div><div class="star" style="height: 2.10741px; width: 2.10741px; left: 67.3393%; top: 13.2128%; animation-delay: 1.54496s; animation-duration: 4.97369s;"></div><div class="star" style="height: 2.09927px; width: 2.09927px; left: 92.8764%; top: 13.1923%; animation-delay: 3.22583s; animation-duration: 4.26004s;"></div><div class="star" style="height: 2.33881px; width: 2.33881px; left: 21.4355%; top: 49.5113%; animation-delay: 0.140511s; animation-duration: 6.63681s;"></div><div class="star" style="height: 1.63583px; width: 1.63583px; left: 57.3916%; top: 60.1409%; animation-delay: 3.75864s; animation-duration: 3.60952s;"></div><div class="star" style="height: 1.87525px; width: 1.87525px; left: 14.7653%; top: 27.5761%; animation-delay: 0.835606s; animation-duration: 6.28479s;"></div><div class="star" style="height: 1.74414px; width: 1.74414px; left: 37.167%; top: 2.47378%; animation-delay: 1.53261s; animation-duration: 5.1575s;"></div><div class="star" style="height: 2.26854px; width: 2.26854px; left: 41.6307%; top: 95.601%; animation-delay: 1.75732s; animation-duration: 6.14926s;"></div><div class="star" style="height: 1.21734px; width: 1.21734px; left: 61.0762%; top: 46.7056%; animation-delay: 1.42324s; animation-duration: 3.67189s;"></div><div class="star" style="height: 1.99292px; width: 1.99292px; left: 46.1916%; top: 88.0981%; animation-delay: 0.183907s; animation-duration: 5.60302s;"></div><div class="star" style="height: 2.24287px; width: 2.24287px; left: 83.1384%; top: 16.7723%; animation-delay: 0.287352s; animation-duration: 4.95985s;"></div><div class="star" style="height: 2.18411px; width: 2.18411px; left: 88.0908%; top: 71.2037%; animation-delay: 2.19421s; animation-duration: 5.00555s;"></div><div class="star" style="height: 2.37882px; width: 2.37882px; left: 89.5035%; top: 19.5944%; animation-delay: 2.22214s; animation-duration: 6.64899s;"></div><div class="star" style="height: 2.36439px; width: 2.36439px; left: 94.7506%; top: 44.964%; animation-delay: 1.64794s; animation-duration: 4.66951s;"></div><div class="star" style="height: 2.37521px; width: 2.37521px; left: 72.2806%; top: 23.9548%; animation-delay: 1.49857s; animation-duration: 3.79394s;"></div><div class="star" style="height: 0.722291px; width: 0.722291px; left: 89.8836%; top: 4.33769%; animation-delay: 2.14056s; animation-duration: 3.23031s;"></div><div class="star" style="height: 1.54611px; width: 1.54611px; left: 9.32234%; top: 4.14841%; animation-delay: 1.3773s; animation-duration: 3.31308s;"></div><div class="star" style="height: 0.853978px; width: 0.853978px; left: 24.4332%; top: 15.7295%; animation-delay: 0.375696s; animation-duration: 6.24672s;"></div><div class="star" style="height: 2.04415px; width: 2.04415px; left: 2.89567%; top: 8.91179%; animation-delay: 2.20313s; animation-duration: 5.35259s;"></div><div class="star" style="height: 1.19433px; width: 1.19433px; left: 83.9817%; top: 92.0903%; animation-delay: 2.02557s; animation-duration: 3.67939s;"></div><div class="star" style="height: 1.28585px; width: 1.28585px; left: 39.8666%; top: 80.7678%; animation-delay: 0.879854s; animation-duration: 5.61555s;"></div><div class="star" style="height: 1.40456px; width: 1.40456px; left: 69.8425%; top: 2.20974%; animation-delay: 1.33003s; animation-duration: 5.10224s;"></div><div class="star" style="height: 1.53384px; width: 1.53384px; left: 49.5368%; top: 49.9691%; animation-delay: 1.64375s; animation-duration: 3.78863s;"></div><div class="star" style="height: 1.74559px; width: 1.74559px; left: 66.6833%; top: 64.4663%; animation-delay: 2.2406s; animation-duration: 5.52502s;"></div><div class="star" style="height: 1.78753px; width: 1.78753px; left: 9.39722%; top: 80.8122%; animation-delay: 3.90079s; animation-duration: 5.54861s;"></div><div class="star" style="height: 1.56171px; width: 1.56171px; left: 31.3391%; top: 90.0549%; animation-delay: 0.025639s; animation-duration: 5.94204s;"></div><div class="star" style="height: 1.81171px; width: 1.81171px; left: 48.1934%; top: 48.6454%; animation-delay: 0.434056s; animation-duration: 3.09743s;"></div><div class="star" style="height: 1.51583px; width: 1.51583px; left: 86.0957%; top: 48.7678%; animation-delay: 0.184839s; animation-duration: 5.57093s;"></div><div class="star" style="height: 0.605469px; width: 0.605469px; left: 48.6046%; top: 77.2259%; animation-delay: 0.00347887s; animation-duration: 3.61237s;"></div><div class="star" style="height: 1.89359px; width: 1.89359px; left: 76.3697%; top: 86.9784%; animation-delay: 0.575771s; animation-duration: 6.23188s;"></div><div class="star" style="height: 1.22533px; width: 1.22533px; left: 47.747%; top: 32.8196%; animation-delay: 1.06556s; animation-duration: 5.58264s;"></div><div class="star" style="height: 1.85942px; width: 1.85942px; left: 48.3263%; top: 54.0658%; animation-delay: 1.89549s; animation-duration: 5.64321s;"></div><div class="star" style="height: 2.24728px; width: 2.24728px; left: 50.586%; top: 89.5752%; animation-delay: 2.67238s; animation-duration: 3.93458s;"></div><div class="star" style="height: 1.9271px; width: 1.9271px; left: 27.0688%; top: 40.1828%; animation-delay: 1.59012s; animation-duration: 3.00064s;"></div><div class="star" style="height: 1.42406px; width: 1.42406px; left: 66.6378%; top: 71.128%; animation-delay: 1.57894s; animation-duration: 3.41991s;"></div><div class="star" style="height: 1.18037px; width: 1.18037px; left: 26.9026%; top: 73.0981%; animation-delay: 3.99672s; animation-duration: 5.30104s;"></div><div class="star" style="height: 0.651095px; width: 0.651095px; left: 22.1786%; top: 9.87197%; animation-delay: 1.72755s; animation-duration: 3.42612s;"></div><div class="star" style="height: 1.28571px; width: 1.28571px; left: 87.7775%; top: 27.1058%; animation-delay: 2.02556s; animation-duration: 3.35056s;"></div><div class="star" style="height: 0.749029px; width: 0.749029px; left: 35.5418%; top: 61.9798%; animation-delay: 3.32532s; animation-duration: 3.14241s;"></div><div class="star" style="height: 0.816409px; width: 0.816409px; left: 96.7029%; top: 37.1151%; animation-delay: 2.90846s; animation-duration: 4.3293s;"></div><div class="star" style="height: 0.629199px; width: 0.629199px; left: 98.3455%; top: 36.1028%; animation-delay: 0.917123s; animation-duration: 3.27824s;"></div><div class="star" style="height: 1.06644px; width: 1.06644px; left: 94.6801%; top: 40.815%; animation-delay: 2.23622s; animation-duration: 3.17179s;"></div><div class="star" style="height: 1.87518px; width: 1.87518px; left: 32.2149%; top: 88.5685%; animation-delay: 3.0989s; animation-duration: 3.55052s;"></div><div class="star" style="height: 2.37127px; width: 2.37127px; left: 10.4639%; top: 33.1015%; animation-delay: 2.38432s; animation-duration: 6.12493s;"></div><div class="star" style="height: 0.607285px; width: 0.607285px; left: 11.913%; top: 57.0961%; animation-delay: 0.297138s; animation-duration: 3.93852s;"></div><div class="star" style="height: 1.7977px; width: 1.7977px; left: 93.5636%; top: 58.9809%; animation-delay: 2.84419s; animation-duration: 5.07247s;"></div><div class="star" style="height: 1.63901px; width: 1.63901px; left: 39.3411%; top: 91.5188%; animation-delay: 1.94575s; animation-duration: 5.44555s;"></div><div class="star" style="height: 0.800198px; width: 0.800198px; left: 1.93858%; top: 97.2226%; animation-delay: 3.01131s; animation-duration: 4.58168s;"></div><div class="star" style="height: 1.65193px; width: 1.65193px; left: 13.4493%; top: 48.7298%; animation-delay: 0.757309s; animation-duration: 6.35963s;"></div><div class="star" style="height: 2.21396px; width: 2.21396px; left: 66.1465%; top: 56.4524%; animation-delay: 1.18048s; animation-duration: 3.59253s;"></div><div class="star" style="height: 0.688395px; width: 0.688395px; left: 7.54043%; top: 67.2413%; animation-delay: 3.0083s; animation-duration: 6.11093s;"></div><div class="star" style="height: 2.13245px; width: 2.13245px; left: 81.3966%; top: 60.9681%; animation-delay: 0.945226s; animation-duration: 6.48159s;"></div><div class="star" style="height: 1.97121px; width: 1.97121px; left: 37.497%; top: 13.1973%; animation-delay: 0.265323s; animation-duration: 3.79166s;"></div><div class="star" style="height: 1.66318px; width: 1.66318px; left: 25.6249%; top: 38.5679%; animation-delay: 3.714s; animation-duration: 6.80234s;"></div><div class="star" style="height: 2.38378px; width: 2.38378px; left: 9.14952%; top: 8.03962%; animation-delay: 2.01538s; animation-duration: 5.47493s;"></div><div class="star" style="height: 2.24605px; width: 2.24605px; left: 66.4469%; top: 2.65645%; animation-delay: 1.93473s; animation-duration: 5.01693s;"></div><div class="star" style="height: 1.58847px; width: 1.58847px; left: 2.25234%; top: 93.3754%; animation-delay: 2.606s; animation-duration: 5.58396s;"></div><div class="star" style="height: 2.36658px; width: 2.36658px; left: 28.4557%; top: 90.1922%; animation-delay: 3.82746s; animation-duration: 5.77265s;"></div><div class="star" style="height: 0.774487px; width: 0.774487px; left: 43.2197%; top: 49.9023%; animation-delay: 2.27563s; animation-duration: 6.92617s;"></div><div class="star" style="height: 0.655764px; width: 0.655764px; left: 62.7783%; top: 10.6814%; animation-delay: 1.2746s; animation-duration: 3.93881s;"></div><div class="star" style="height: 0.870726px; width: 0.870726px; left: 48.4022%; top: 53.4167%; animation-delay: 3.60278s; animation-duration: 3.49395s;"></div><div class="star" style="height: 1.87367px; width: 1.87367px; left: 73.6444%; top: 19.1153%; animation-delay: 0.430834s; animation-duration: 3.07675s;"></div><div class="star" style="height: 0.738072px; width: 0.738072px; left: 2.75587%; top: 13.354%; animation-delay: 3.9649s; animation-duration: 6.05453s;"></div><div class="star" style="height: 2.3745px; width: 2.3745px; left: 36.9239%; top: 39.6145%; animation-delay: 2.82033s; animation-duration: 6.62341s;"></div><div class="star" style="height: 1.56275px; width: 1.56275px; left: 4.22577%; top: 27.9414%; animation-delay: 2.21985s; animation-duration: 3.78368s;"></div><div class="star" style="height: 2.24202px; width: 2.24202px; left: 11.5629%; top: 58.7305%; animation-delay: 3.43086s; animation-duration: 4.95399s;"></div><div class="star" style="height: 1.30596px; width: 1.30596px; left: 35.3248%; top: 94.1539%; animation-delay: 2.61102s; animation-duration: 6.03491s;"></div><div class="star" style="height: 1.02268px; width: 1.02268px; left: 11.3251%; top: 27.5457%; animation-delay: 1.10826s; animation-duration: 3.66056s;"></div><div class="star" style="height: 1.51782px; width: 1.51782px; left: 20.0468%; top: 14.3245%; animation-delay: 1.39972s; animation-duration: 3.71387s;"></div><div class="star" style="height: 1.45209px; width: 1.45209px; left: 23.7883%; top: 92.8144%; animation-delay: 1.95124s; animation-duration: 6.75962s;"></div><div class="star" style="height: 1.34344px; width: 1.34344px; left: 53.7276%; top: 52.9726%; animation-delay: 0.509364s; animation-duration: 4.79273s;"></div><div class="star" style="height: 1.86483px; width: 1.86483px; left: 62.8675%; top: 33.6487%; animation-delay: 2.51645s; animation-duration: 3.09233s;"></div><div class="star" style="height: 1.2281px; width: 1.2281px; left: 91.4601%; top: 55.7917%; animation-delay: 0.974395s; animation-duration: 4.10468s;"></div><div class="star" style="height: 1.64022px; width: 1.64022px; left: 1.27821%; top: 99.5296%; animation-delay: 3.08949s; animation-duration: 4.84187s;"></div><div class="star" style="height: 1.9765px; width: 1.9765px; left: 3.47112%; top: 62.2894%; animation-delay: 3.86475s; animation-duration: 3.59667s;"></div><div class="star" style="height: 1.48838px; width: 1.48838px; left: 50.8336%; top: 94.9248%; animation-delay: 3.06695s; animation-duration: 6.73072s;"></div><div class="star" style="height: 1.10357px; width: 1.10357px; left: 47.922%; top: 5.31934%; animation-delay: 3.0441s; animation-duration: 4.7548s;"></div><div class="star" style="height: 0.870362px; width: 0.870362px; left: 67.8261%; top: 4.8503%; animation-delay: 0.47341s; animation-duration: 6.73255s;"></div><div class="star" style="height: 1.89138px; width: 1.89138px; left: 13.1764%; top: 57.581%; animation-delay: 3.63129s; animation-duration: 6.09407s;"></div><div class="star" style="height: 1.1783px; width: 1.1783px; left: 77.3802%; top: 33.2378%; animation-delay: 3.34856s; animation-duration: 5.75156s;"></div><div class="star" style="height: 1.83943px; width: 1.83943px; left: 2.37138%; top: 84.0763%; animation-delay: 1.69866s; animation-duration: 4.39633s;"></div><div class="star" style="height: 1.18965px; width: 1.18965px; left: 12.3767%; top: 79.5685%; animation-delay: 0.199814s; animation-duration: 3.58836s;"></div><div class="star" style="height: 2.10867px; width: 2.10867px; left: 86.4268%; top: 79.8251%; animation-delay: 0.926279s; animation-duration: 4.12119s;"></div><div class="star" style="height: 1.63508px; width: 1.63508px; left: 64.7389%; top: 35.1377%; animation-delay: 3.85001s; animation-duration: 6.62726s;"></div><div class="star" style="height: 1.58768px; width: 1.58768px; left: 97.4024%; top: 58.3378%; animation-delay: 0.91924s; animation-duration: 3.93988s;"></div></div>
+  <div class="polaris" title="Polaris"></div>
+  <div class="dusk-glow" id="duskGlow" style="opacity: 1;"></div>
+</div>
+
+<!-- ดวงจันทร์เพื่อนร่วมทาง -->
+
+
+<!-- เนื้อฟิล์ม -->
+<div class="moon" id="moon" style="translate: none; rotate: none; scale: none; transform-origin: 170px 170px; transform: translate(0px, 0px); right: 192px; top: 209.66px;"></div><div class="vignette"></div>
+<div class="grain"></div>
+
+<nav>
+  <a class="nav-logo" href="file:///C:/Users/SaChaz/Downloads/the-service-night-v4_1.html#">THE SERVICE</a>
+  <div class="nav-menu">
+    <a href="file:///C:/Users/SaChaz/Downloads/the-service-night-v4_1.html#manifesto">Studio<sup>01</sup></a>
+    <a href="file:///C:/Users/SaChaz/Downloads/the-service-night-v4_1.html#services">Services<sup>02</sup></a>
+    <a href="file:///C:/Users/SaChaz/Downloads/the-service-night-v4_1.html#work">Work<sup>03</sup></a>
+    <a href="file:///C:/Users/SaChaz/Downloads/the-service-night-v4_1.html#talk">Contact<sup>04</sup></a>
+  </div>
+  <div class="nav-right">
+    <span class="nav-seats">Bangkok · ฟ้านี้ว่างอีก <b>2</b> จาก 10 ดวง</span>
+    <a class="nav-cta" href="file:///C:/Users/SaChaz/Downloads/the-service-night-v4_1.html#talk">จองที่บนฟ้า</a>
+  </div>
+</nav>
+
+<main>
+
+<!-- ============ HERO ============ -->
+<header class="hero">
+  <!-- วิดีโอจาก Kling: วางไฟล์ hero.mp4 ข้างไฟล์นี้แล้วมันจะเล่นเอง
+       ยังไม่มีไฟล์ = ซ่อนตัวเอง ใช้ฟ้า CSS แทน -->
+  <div class="hero-video" id="heroVideo" style="opacity: 1;">
+    <video autoplay="" muted="" loop="" playsinline="" preload="auto" id="heroVid">
+      <source src="hero.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div class="hero-content">
+    <p class="hero-eyebrow reveal" data-load="" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">Content studio — 10 brands only</p>
+    <h1 class="reveal" data-load="" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">ในฟ้าที่มีดาวเป็นล้าน<br>มีไม่กี่ดวงที่<em>คนจำชื่อได้</em></h1>
+    <p class="hero-sub reveal" data-load="" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">THE SERVICE รับแบรนด์แค่ 10 ดวง
+      เพื่อทำให้แต่ละดวงเป็นดาราที่ถูกจดจำ ไม่ใช่แสงเล็กๆ ที่หายไปในฝูงดาว</p>
+  </div>
+  <div class="hero-scroll">Scroll ↓</div>
+</header>
+
+<!-- แถบตัววิ่งคั่นฉาก -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track" id="marqueeTrack">
+    <span>ดาวที่ถูกจดจำ <b>★</b></span><span>10 brands only <b>★</b></span>
+    <span class="o">Content that gets remembered</span><span>Bangkok <b>★</b></span>
+    <span>ดาวที่ถูกจดจำ <b>★</b></span><span>10 brands only <b>★</b></span>
+    <span class="o">Content that gets remembered</span><span>Bangkok <b>★</b></span>
+  </div>
+</div>
+
+<!-- ============ MANIFESTO ============ -->
+<section id="manifesto">
+  <div class="chapter reveal" style="translate: none; rotate: none; scale: none; transform: translate(0px, 36px); opacity: 0;">
+    <span class="chapter-num">01</span>
+    <span class="chapter-name">Manifesto — เราเชื่ออะไร</span>
+    <span class="chapter-hint">scroll แล้วฟ้าจะหมุนรอบดาวเหนือ ↺</span>
+  </div>
+  <div class="manifesto">
+    <p class="reveal" style="translate: none; rotate: none; scale: none; transform: translate(0px, 36px); opacity: 0;">คู่แข่งของคุณไม่ใช่แบรนด์ข้างๆ<br>แต่คือ <em>เสียงนับล้าน</em> ที่ดังพร้อมกันทุกคืน</p>
+    <p class="reveal" style="translate: none; rotate: none; scale: none; transform: translate(0px, 36px); opacity: 0;">การส่องแสงแรงขึ้นไม่ช่วยอะไร<br>ถ้าไม่มีใครรู้ว่าต้องมองมาที่ตรงไหน</p>
+    <p class="reveal" style="translate: none; rotate: none; scale: none; transform: translate(0px, 36px); opacity: 0;">ดาวที่ถูกจดจำ ไม่ใช่ดาวที่สว่างสุด<br>แต่คือดาวที่<b>มีเรื่องเล่าเป็นของตัวเอง</b></p>
+    <p class="reveal" style="translate: none; rotate: none; scale: none; transform: translate(0px, 36px); opacity: 0;">เราเลยรับแค่สิบดวง — <em>และลากเส้นให้ฟ้าทั้งผืนหันมามอง</em></p>
+  </div>
+</section>
+
+<!-- ============ SERVICES ============ -->
+<section id="services">
+  <div class="chapter reveal" style="translate: none; rotate: none; scale: none; transform: translate(0px, 36px); opacity: 0;">
+    <span class="chapter-num">02</span>
+    <span class="chapter-name">Services — กลุ่มดาวทั้งหก</span>
+    <span class="chapter-hint">แต่ละบริการมีดาวประจำตัว</span>
+  </div>
+
+  <div class="services-wrap">
+    <div class="sv-list reveal" style="translate: none; rotate: none; scale: none; transform: translate(0px, 36px); opacity: 0;">
+      <div class="sv-item active" data-scene="0">
+        <span class="sv-num">01</span>
+        <div><span class="sv-name">Content Strategy</span>
+          <span class="sv-star">ดาวเหนือ · Polaris</span></div>
+        <p class="sv-desc-mobile">ดวงเดียวบนฟ้าที่ไม่เคยขยับ ทั้งฟ้าหมุนรอบมัน — แบรนด์ส่วนใหญ่ไม่ได้ขาดคอนเทนต์ แต่ขาดทิศว่าทำไมต้องพูด</p>
+      </div>
+      <div class="sv-item" data-scene="1">
+        <span class="sv-num">02</span>
+        <div><span class="sv-name">Copywriting &amp; Brand Voice</span>
+          <span class="sv-star">ดาวซิริอุส · Sirius</span></div>
+        <p class="sv-desc-mobile">ดาวที่สว่างที่สุดทั้งฟ้า เห็นปุ๊บรู้ปั๊บว่าดวงไหน — เสียงที่อ่านสามบรรทัดแล้วรู้ว่าเป็นคุณ โดยไม่ต้องเห็นโลโก้</p>
+      </div>
+      <div class="sv-item" data-scene="2">
+        <span class="sv-num">03</span>
+        <div><span class="sv-name">AI Content Pipeline</span>
+          <span class="sv-star">ทางช้างเผือก · Milky Way</span></div>
+        <p class="sv-desc-mobile">ดาวแสนล้านดวงไหลเป็นสายเดียวกัน — ระบบที่ผลิตได้เร็วเท่าเครื่องจักร แต่เสียงไม่หลุดจากมือคุณ</p>
+      </div>
+      <div class="sv-item" data-scene="3">
+        <span class="sv-num">04</span>
+        <div><span class="sv-name">Editorial &amp; Storytelling</span>
+          <span class="sv-star">ดาวไถ · Orion</span></div>
+        <p class="sv-desc-mobile">กลุ่มดาวที่มนุษย์เล่าตำนานใส่มาหลายพันปี — ดาวที่มีเรื่องเล่า จะถูกจำได้นานกว่าดาวที่มีแต่แสง</p>
+      </div>
+      <div class="sv-item" data-scene="4">
+        <span class="sv-num">05</span>
+        <div><span class="sv-name">Social Content</span>
+          <span class="sv-star">ดาวลูกไก่ · Pleiades</span></div>
+        <p class="sv-desc-mobile">กระจุกเล็กนิดเดียวแต่คนทั้งโลกชี้ถูก — คอนเทนต์ที่เล็กแต่คนเอาไปเล่าต่อ ชนะโพสต์ใหญ่ที่ไม่มีใครจำ</p>
+      </div>
+      <div class="sv-item" data-scene="5">
+        <span class="sv-num">06</span>
+        <div><span class="sv-name">Web Copy &amp; Landing Pages</span>
+          <span class="sv-star">ดาวประจำเมือง · Venus</span></div>
+        <p class="sv-desc-mobile">ดวงแรกที่โผล่ตอนพลบค่ำ ทุกสายตาเห็นก่อนใคร — และหน้าที่คุณอ่านอยู่คือพอร์ตชิ้นแรกของเรา</p>
+      </div>
+    </div>
+
+    <div class="planetarium reveal" id="planetarium" style="translate: none; rotate: none; scale: none; transform: translate(0px, 36px); opacity: 0;">
+      <div class="p-scene active">
+        <svg viewBox="0 0 300 130">
+          <polyline class="draw" points="20,110 70,85 120,95 170,70 220,40 260,25" style="stroke-dashoffset: 0px; stroke-dasharray: 263.823;"></polyline>
+          <circle cx="20" cy="110" r="2.5"></circle><circle cx="70" cy="85" r="2.5"></circle>
+          <circle cx="120" cy="95" r="2.5"></circle><circle cx="170" cy="70" r="2.5"></circle>
+          <circle cx="220" cy="40" r="2.5"></circle>
+          <circle class="bright" cx="260" cy="25" r="4.5"></circle>
+        </svg>
+        <div class="p-starname">ดาวเหนือ — Polaris</div>
+        <p class="p-desc">ดวงเดียวบนฟ้าที่ไม่เคยขยับ ทั้งฟ้าหมุนรอบมัน
+          แบรนด์ส่วนใหญ่ไม่ได้ขาดคอนเทนต์ แต่ขาดทิศว่าทำไมต้องพูด</p>
+      </div>
+      <div class="p-scene">
+        <svg viewBox="0 0 300 130">
+          <path class="draw" d="M150,65 L150,18 M150,65 L150,112 M150,65 L105,65 M150,65 L195,65 M150,65 L118,35 M150,65 L182,95 M150,65 L182,35 M150,65 L118,95" style="stroke-dashoffset: 0px; stroke-dasharray: 359.454;"></path>
+          <circle class="bright" cx="150" cy="65" r="6"></circle>
+          <circle cx="60" cy="30" r="1.6"></circle><circle cx="245" cy="100" r="1.6"></circle><circle cx="230" cy="30" r="1.6"></circle>
+        </svg>
+        <div class="p-starname">ดาวซิริอุส — Sirius</div>
+        <p class="p-desc">ดาวที่สว่างที่สุดทั้งฟ้า เห็นปุ๊บรู้ปั๊บว่าดวงไหน
+          เสียงที่อ่านสามบรรทัดแล้วรู้ว่าเป็นคุณ โดยไม่ต้องเห็นโลโก้</p>
+      </div>
+      <div class="p-scene">
+        <svg viewBox="0 0 300 130">
+          <g class="mw">
+            <circle cx="20" cy="95" r="1.4" style="opacity: 0.9;"></circle><circle cx="42" cy="88" r="2" style="opacity: 0.9;"></circle><circle cx="66" cy="92" r="1.3" style="opacity: 0.9;"></circle>
+            <circle cx="88" cy="80" r="1.8" style="opacity: 0.9;"></circle><circle cx="108" cy="72" r="1.4" style="opacity: 0.9;"></circle><circle cx="128" cy="66" r="2.2" style="opacity: 0.9;"></circle>
+            <circle cx="150" cy="60" r="1.5" style="opacity: 0.9;"></circle><circle cx="172" cy="52" r="1.9" style="opacity: 0.9;"></circle><circle cx="192" cy="47" r="1.3" style="opacity: 0.9;"></circle>
+            <circle cx="214" cy="40" r="2" style="opacity: 0.9;"></circle><circle cx="236" cy="33" r="1.5" style="opacity: 0.9;"></circle><circle cx="258" cy="28" r="1.8" style="opacity: 0.9;"></circle>
+            <circle cx="278" cy="22" r="1.3" style="opacity: 0.9;"></circle><circle cx="55" cy="105" r="1.2" style="opacity: 0.9;"></circle><circle cx="100" cy="90" r="1.2" style="opacity: 0.9;"></circle>
+            <circle cx="140" cy="78" r="1.2" style="opacity: 0.9;"></circle><circle cx="185" cy="65" r="1.2" style="opacity: 0.9;"></circle><circle cx="228" cy="52" r="1.2" style="opacity: 0.9;"></circle>
+          </g>
+        </svg>
+        <div class="p-starname">ทางช้างเผือก — Milky Way</div>
+        <p class="p-desc">ดาวแสนล้านดวงไหลเป็นสายเดียวกัน
+          ระบบที่ผลิตได้เร็วเท่าเครื่องจักร แต่เสียงไม่หลุดจากมือคุณ</p>
+      </div>
+      <div class="p-scene">
+        <svg viewBox="0 0 300 130">
+          <polyline class="draw" points="90,20 120,60 150,64 180,68 210,110" style="stroke-dashoffset: 0px; stroke-dasharray: 162.145;"></polyline>
+          <polyline class="draw" points="210,25 180,68 120,60 88,108" style="stroke-dashoffset: 0px; stroke-dasharray: 170.651;"></polyline>
+          <circle cx="90" cy="20" r="2.6"></circle><circle cx="210" cy="25" r="2.6"></circle>
+          <circle class="bright" cx="120" cy="60" r="3.4"></circle>
+          <circle class="bright" cx="150" cy="64" r="3.4"></circle>
+          <circle class="bright" cx="180" cy="68" r="3.4"></circle>
+          <circle cx="88" cy="108" r="2.6"></circle><circle cx="210" cy="110" r="2.6"></circle>
+        </svg>
+        <div class="p-starname">ดาวไถ — Orion</div>
+        <p class="p-desc">กลุ่มดาวที่มนุษย์เล่าตำนานใส่มาหลายพันปี
+          ดาวที่มีเรื่องเล่า จะถูกจำได้นานกว่าดาวที่มีแต่แสง</p>
+      </div>
+      <div class="p-scene">
+        <svg viewBox="0 0 300 130">
+          <polyline class="draw" points="120,50 145,38 172,44 186,64 168,84 140,80 124,66 120,50" style="stroke-dashoffset: 0px; stroke-dasharray: 172.747;"></polyline>
+          <circle class="bright" cx="120" cy="50" r="2.6"></circle><circle class="bright" cx="145" cy="38" r="2.6"></circle>
+          <circle class="bright" cx="172" cy="44" r="2.6"></circle><circle class="bright" cx="186" cy="64" r="2.6"></circle>
+          <circle class="bright" cx="168" cy="84" r="2.6"></circle><circle class="bright" cx="140" cy="80" r="2.6"></circle>
+          <circle class="bright" cx="124" cy="66" r="2.6"></circle>
+        </svg>
+        <div class="p-starname">ดาวลูกไก่ — Pleiades</div>
+        <p class="p-desc">กระจุกเล็กนิดเดียวแต่คนทั้งโลกชี้ถูก
+          คอนเทนต์ที่เล็กแต่คนเอาไปเล่าต่อ ชนะโพสต์ใหญ่ที่ไม่มีใครจำ</p>
+      </div>
+      <div class="p-scene">
+        <svg viewBox="0 0 300 130">
+          <path class="draw" d="M20,100 Q150,88 280,100" style="stroke-dashoffset: 0px; stroke-dasharray: 260.369;"></path>
+          <circle class="bright" cx="228" cy="52" r="5"></circle>
+          <circle cx="60" cy="40" r="1.4"></circle><circle cx="120" cy="28" r="1.4"></circle><circle cx="170" cy="36" r="1.4"></circle>
+        </svg>
+        <div class="p-starname">ดาวประจำเมือง — Venus</div>
+        <p class="p-desc">ดวงแรกที่โผล่ตอนพลบค่ำ ทุกสายตาเห็นก่อนใคร
+          และหน้าเว็บที่คุณกำลังอ่านอยู่ คือพอร์ตชิ้นแรกของเรา</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WORKS ============ -->
+<section id="work">
+  <div class="chapter reveal" style="translate: none; rotate: none; scale: none; transform: translate(0px, 36px); opacity: 0;">
+    <span class="chapter-num">03</span>
+    <span class="chapter-name">Selected works — ดาวที่เราลากเส้นแล้ว</span>
+    <span class="chapter-hint">กดเพื่อเข้าไปดูข้างใน ↗</span>
+  </div>
+  <div class="works-grid">
+    <div class="work big reveal" data-case="refract" style="translate: none; rotate: none; scale: none; transform: translate(0px, 36px); opacity: 0;">
+      <div class="work-thumb w1-bg" data-ghost="R"><span class="work-view">View case ↗</span></div>
+      <div class="work-meta"><span class="work-name">REFRACT</span><span class="work-tag">AI content pipeline</span></div>
+    </div>
+    <div class="work small offset reveal" data-case="kamsoi" style="translate: none; rotate: none; scale: none; transform: translate(0px, 36px); opacity: 0;">
+      <div class="work-thumb w2-bg" data-ghost="ค"><span class="work-view">View case ↗</span></div>
+      <div class="work-meta"><span class="work-name">คำสร้อยปัง</span><span class="work-tag">Web app · Writing tool</span></div>
+    </div>
+    <div class="work small reveal" data-case="dessert" style="translate: none; rotate: none; scale: none; transform: translate(0px, 36px); opacity: 0;">
+      <div class="work-thumb w3-bg" data-ghost="D"><span class="work-view">View case ↗</span></div>
+      <div class="work-meta"><span class="work-name">Dessert Reviews</span><span class="work-tag">Editorial voice</span></div>
+    </div>
+    <div class="work big offset reveal" data-case="soon" style="translate: none; rotate: none; scale: none; transform: translate(0px, 36px); opacity: 0;">
+      <div class="work-thumb w4-bg" data-ghost="04"><span class="work-view">View case ↗</span></div>
+      <div class="work-meta"><span class="work-name">Project 04</span><span class="work-tag">Coming soon</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- CASE PANEL: ห้องข้างในของแต่ละผลงาน -->
+<div class="case-backdrop" id="caseBackdrop"></div>
+<aside class="case-panel" id="casePanel" aria-hidden="true">
+  <button class="case-close" id="caseClose">ปิด ✕</button>
+  <span class="case-tag" id="caseTag"></span>
+  <h3 class="case-title" id="caseTitle"></h3>
+  <div class="case-hero" id="caseHero"></div>
+  <div class="case-body" id="caseBody"></div>
+</aside>
+
+<!-- ============ AVAILABILITY ============ -->
+<div class="avail reveal" style="translate: none; rotate: none; scale: none; transform: translate(0px, 36px); opacity: 0;">
+  <span class="avail-city">Bangkok</span>
+  <span class="avail-item"><span id="bkk-time">20:31</span> ICT</span>
+  <span class="avail-item">สถานะ: <b>ฟ้านี้ว่างอีก 2 ดวงสุดท้าย</b> ของปีนี้</span>
+</div>
+
+<!-- ============ CTA ============ -->
+<section class="cta" id="talk">
+  <div class="cta-star" id="ctaStar" style="translate: none; rotate: none; scale: none; transform: scale(0.2, 0.2); opacity: 0;"></div>
+  <h2 class="reveal" style="translate: none; rotate: none; scale: none; transform: translate(0px, 36px); opacity: 0;">ที่ว่างบนฟ้านี้<br>เหลืออีก <em>2 ดวง</em></h2>
+  <p class="reveal" style="translate: none; rotate: none; scale: none; transform: translate(0px, 36px); opacity: 0;">เล่าให้ฟังว่าแบรนด์คุณอยากถูกจดจำแบบไหน
+    — ถ้าเราเห็นฟ้าผืนเดียวกัน ดวงถัดไปคือของคุณ</p>
+  <a class="cta-btn reveal" href="file:///C:/Users/SaChaz/Downloads/the-service-night-v4_1.html#" onclick="alert(&#39;เสียบลิงก์ Calendly ตรงนี้&#39;); return false;" style="translate: none; rotate: none; scale: none; transform: translate(0px, 36px); opacity: 0;">จองเวลาคุย 30 นาที</a>
+</section>
+
+</main>
+
+<div class="footer-grid">
+  <div>
+    <div class="footer-brand">THE SERVICE</div>
+    <p class="footer-note">สตูดิโอคอนเทนต์ใต้ฟ้ากรุงเทพฯ
+      รับแบรนด์ 10 ดวง เพื่อทำให้ทุกดวงถูกจดจำ</p>
+  </div>
+  <div class="footer-col">
+    <h4>Menu</h4>
+    <a href="file:///C:/Users/SaChaz/Downloads/the-service-night-v4_1.html#manifesto">Studio</a>
+    <a href="file:///C:/Users/SaChaz/Downloads/the-service-night-v4_1.html#services">Services</a>
+    <a href="file:///C:/Users/SaChaz/Downloads/the-service-night-v4_1.html#work">Work</a>
+    <a href="file:///C:/Users/SaChaz/Downloads/the-service-night-v4_1.html#talk">Contact</a>
+  </div>
+  <div class="footer-col">
+    <h4>Social</h4>
+    <a href="file:///C:/Users/SaChaz/Downloads/the-service-night-v4_1.html#">Instagram</a>
+    <a href="file:///C:/Users/SaChaz/Downloads/the-service-night-v4_1.html#">Facebook</a>
+    <a href="file:///C:/Users/SaChaz/Downloads/the-service-night-v4_1.html#">TikTok</a>
+  </div>
+  <div class="footer-col">
+    <h4>Contact</h4>
+    <a href="mailto:hello@theservice.example">hello@theservice.example</a>
+    <a href="file:///C:/Users/SaChaz/Downloads/the-service-night-v4_1.html#talk">จองเวลาคุย 30 นาที</a>
+  </div>
+</div>
+<footer>
+  <span>© 2026 THE SERVICE</span>
+  <span>Made under Bangkok sky ★</span>
+  <span><span id="bkk-time2">20:31</span> ICT</span>
+</footer>
+
+<script src="./THE SERVICE — ดาวที่ถูกจดจำ ในฟ้าที่มีดาวนับล้าน_files/gsap.min.js.ดาวน์โหลด"></script>
+<script src="./THE SERVICE — ดาวที่ถูกจดจำ ในฟ้าที่มีดาวนับล้าน_files/ScrollTrigger.min.js.ดาวน์โหลด"></script>
+<script>
+  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ---------- ทุ่งดาวบนผืนหมุน ---------- */
+  const field = document.getElementById('rotField');
+  const STAR_COUNT = 240;
+  for (let i = 0; i < STAR_COUNT; i++) {
+    const s = document.createElement('div');
+    s.className = 'star';
+    const size = Math.random() * 1.8 + 0.6;
+    s.style.width = s.style.height = size + 'px';
+    s.style.left = Math.random() * 100 + '%';
+    s.style.top = Math.random() * 100 + '%';
+    s.style.animationDelay = (Math.random() * 4) + 's';
+    s.style.animationDuration = (3 + Math.random() * 4) + 's';
+    field.appendChild(s);
+  }
+
+  /* ---------- วิดีโอ hero: มีไฟล์ = เล่น / ไม่มี = ซ่อนตัวเอง ---------- */
+  const heroVid = document.getElementById('heroVid');
+  const heroVideoWrap = document.getElementById('heroVideo');
+  heroVid.addEventListener('error', () => heroVideoWrap.style.display = 'none', true);
+  heroVid.querySelector('source').addEventListener('error',
+    () => heroVideoWrap.style.display = 'none');
+
+  /* ---------- นาฬิกา Bangkok ---------- */
+  function tick(){
+    const t = new Date().toLocaleTimeString('th-TH',{timeZone:'Asia/Bangkok',hour:'2-digit',minute:'2-digit'});
+    document.getElementById('bkk-time').textContent = t;
+    const t2 = document.getElementById('bkk-time2'); if (t2) t2.textContent = t;
+  }
+  tick(); setInterval(tick, 30000);
+
+  /* ---------- CASE PANEL ---------- */
+  const CASES = {
+    refract:{tag:'AI Content Pipeline',title:'REFRACT — ระบบรีวิวขนมที่เสียงไม่หลุด',
+      body:'<p>ระบบผลิตคอนเทนต์รีวิวขนมแบบ plot-twist ที่สร้างโครงเรื่องได้ 300 แบบโดยคุมเสียงเดียว — วางเคสเต็มตรงนี้: โจทย์ / วิธีคิด / ผลลัพธ์</p><p>ใส่ภาพจริง สถิติจริง และตัวอย่างงานจริงภายหลัง</p>',cls:'w1-bg'},
+    kamsoi:{tag:'Web App · Writing Tool',title:'คำสร้อยปัง — เครื่องมือคำเปรียบสำหรับสายกิน',
+      body:'<p>เว็บแอปสร้างคำเปรียบภาษาไทยสำหรับครีเอเตอร์สายอาหาร — วางเคสเต็มตรงนี้: ที่มา / เทคโนโลยี / ฟีดแบ็กผู้ใช้</p>',cls:'w2-bg'},
+    dessert:{tag:'Editorial Voice',title:'Dessert Reviews — รีวิวที่คนอ่านจนจบ',
+      body:'<p>งานรีวิวคาเฟ่และขนมกรุงเทพฯ ด้วยโครงเล่าเรื่องแบบวรรณกรรม — วางเคสเต็มตรงนี้: ตัวอย่างงาน / ยอด engagement</p>',cls:'w3-bg'},
+    soon:{tag:'Coming Soon',title:'ดวงถัดไปกำลังจะขึ้นฟ้า',
+      body:'<p>ที่ตรงนี้จองไว้สำหรับผลงานถัดไป — อาจเป็นแบรนด์ของคุณ</p>',cls:'w4-bg'}
+  };
+  const panel = document.getElementById('casePanel');
+  const backdrop = document.getElementById('caseBackdrop');
+  function openCase(key){
+    const c = CASES[key]; if (!c) return;
+    document.getElementById('caseTag').textContent = c.tag;
+    document.getElementById('caseTitle').textContent = c.title;
+    document.getElementById('caseBody').innerHTML = c.body;
+    document.getElementById('caseHero').className = 'case-hero ' + c.cls;
+    panel.classList.add('open'); backdrop.classList.add('open');
+    panel.setAttribute('aria-hidden','false');
+  }
+  function closeCase(){
+    panel.classList.remove('open'); backdrop.classList.remove('open');
+    panel.setAttribute('aria-hidden','true');
+  }
+  document.querySelectorAll('.work').forEach(w =>
+    w.addEventListener('click', () => openCase(w.dataset.case)));
+  document.getElementById('caseClose').addEventListener('click', closeCase);
+  backdrop.addEventListener('click', closeCase);
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeCase(); });
+
+  /* ---------- PRELOADER ---------- */
+  const pre = document.getElementById('preloader');
+  function startLoadAnims(){
+    if (!reduced && window.gsap)
+      gsap.to('[data-load]', {opacity:1,y:0,duration:.9,stagger:.16,ease:'power2.out',delay:.1});
+  }
+  if (reduced || !window.gsap) {
+    pre.style.display = 'none';
+    startLoadAnims();
+  } else {
+    let n = 0;
+    const bar = document.getElementById('preBar');
+    const cnt = document.getElementById('preCount');
+    const iv = setInterval(() => {
+      n = Math.min(100, n + Math.ceil(Math.random() * 14));
+      cnt.textContent = n;
+      bar.style.width = n + '%';
+      if (n >= 100){
+        clearInterval(iv);
+        gsap.to(pre, {opacity:0, duration:.7, delay:.25, ease:'power2.inOut',
+          onComplete(){ pre.style.display = 'none'; startLoadAnims(); }});
+      }
+    }, 90);
+  }
+
+  if (!reduced && window.gsap) {
+    gsap.registerPlugin(ScrollTrigger);
+
+    document.querySelectorAll('.reveal:not([data-load])').forEach(el => {
+      gsap.to(el,{scrollTrigger:{trigger:el,start:'top 85%'},
+        opacity:1,y:0,duration:.8,ease:'power2.out'});
+    });
+
+    /* ฟ้าหมุนรอบดาวเหนือ ผูกกับ scroll ทั้งหน้า */
+    gsap.to('#rotField',{
+      scrollTrigger:{trigger:'main',start:'top top',end:'bottom bottom',scrub:1.5},
+      rotation:14, ease:'none'
+    });
+
+    /* วิดีโอ hero จางออกเมื่อ scroll พ้น hero — ส่งไม้ให้ฟ้า CSS */
+    gsap.to('#heroVideo',{
+      scrollTrigger:{trigger:'.hero',start:'40% top',end:'bottom top',scrub:1},
+      opacity:0, ease:'none'
+    });
+
+    /* จันทร์เดินทางไปมุมขวาบน */
+    gsap.to('#moon',{
+      scrollTrigger:{trigger:'main',start:'top top',end:'25% top',scrub:1},
+      top:'9vh', right:'4vw', scale:.38, ease:'none', transformOrigin:'center'
+    });
+
+    /* แสงหัวค่ำจางลง = ยิ่งเลื่อนยิ่งดึก */
+    gsap.to('#duskGlow',{
+      scrollTrigger:{trigger:'main',start:'top top',end:'40% top',scrub:1},
+      opacity:.15, ease:'none'
+    });
+
+    /* ---------- ท้องฟ้าจำลอง ---------- */
+    const svItems = document.querySelectorAll('.sv-item');
+    const pScenes = document.querySelectorAll('.p-scene');
+    function playScene(scene){
+      scene.querySelectorAll('.draw').forEach(line => {
+        const len = line.getTotalLength ? line.getTotalLength() : 400;
+        gsap.set(line,{strokeDasharray:len,strokeDashoffset:len});
+        gsap.to(line,{strokeDashoffset:0,duration:1.6,ease:'power2.inOut',delay:.15});
+      });
+      const dots = scene.querySelectorAll('.mw circle');
+      if (dots.length){
+        gsap.set(dots,{opacity:0});
+        gsap.to(dots,{opacity:.9,duration:.5,stagger:.07,ease:'power1.out',delay:.15});
+      }
+    }
+    let svAuto = null, svIdx = 0;
+    function setScene(i){
+      svIdx = i;
+      svItems.forEach((it,k)=>it.classList.toggle('active',k===i));
+      pScenes.forEach((sc,k)=>{
+        const on = k===i;
+        sc.classList.toggle('active',on);
+        if (on) playScene(sc);
+      });
+    }
+    svItems.forEach((it,i)=>{
+      it.addEventListener('mouseenter',()=>{ clearInterval(svAuto); setScene(i); });
+      it.addEventListener('click',()=>{ clearInterval(svAuto); setScene(i); });
+    });
+    /* หมุนโชว์เองจนกว่าผู้ใช้จะแตะ */
+    svAuto = setInterval(()=>setScene((svIdx+1)%pScenes.length), 4200);
+    ScrollTrigger.create({
+      trigger:'#planetarium', start:'top 80%', once:true,
+      onEnter(){ playScene(pScenes[0]); }
+    });
+
+    /* ดาวดวงใหม่จุดสว่างตรง CTA */
+    gsap.to('#ctaStar',{
+      scrollTrigger:{trigger:'.cta',start:'top 60%'},
+      opacity:1,scale:1,duration:1.2,ease:'elastic.out(1,.5)'
+    });
+  } else {
+    document.querySelectorAll('.reveal,.cta-star').forEach(el=>{
+      el.style.opacity=1;el.style.transform='none';
+    });
+    document.querySelectorAll('.mw circle').forEach(c=>c.style.opacity=.9);
+    document.querySelectorAll('.sv-item')[0]?.classList.add('active');
+  }
+</script>
+
+
+</body></html>

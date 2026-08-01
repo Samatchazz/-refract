@@ -1,0 +1,44 @@
+[
+  {
+    "claim": "Using DSAR-obtained trip data covering 1.5 million trips from 258 UK Uber drivers (2016-2024), a longitudinal algorithm audit finds that after Uber introduced 'dynamic pricing' in London in Q1 2023, real average pay per hour was lower than the year before, even under Uber's own restricted definition of working time, while Uber's take rate rose to as high as 47-50% on some trips (up from a stable 20-25% fixed cut historically).",
+    "stance": "supports",
+    "stance_target": "existence of a documented income-cut natural experiment in gig work",
+    "evidence_type": "empirical",
+    "scope_conditions": "United Kingdom (London), Uber drivers, Q1 2023 dynamic-pricing introduction, panel 2016-2024",
+    "quoted_support": "We find that in the year following dynamic pricing, Uber took a larger median average cut, with take rates as high as 50% on some trips. In real terms, average pay per hour has been roughly stagnant since 2016, and is lower in the year following the introduction of dynamic pricing, even on Uber's own (limited) definition of working time.",
+    "numbers": ["1.5 million trips", "258 drivers", "2016-2024", "take rate up to 47-50%", "prior fixed cut 20-25%"],
+    "entities": ["Uber", "Worker Info Exchange"],
+    "time_period": "2016-2024, dynamic pricing introduced Q1 2023",
+    "region": "United Kingdom",
+    "confidence": "high",
+    "source_note_id": "arxiv250615278v1-cscy-18-jun-2025"
+  },
+  {
+    "claim": "Post-dynamic-pricing, a small minority of Uber drivers earned more per hour worked but the majority earned less; inequality between drivers increased, utilization fell (more unpaid standby time), and job-pay predictability decreased.",
+    "stance": "neutral",
+    "stance_target": "distributional effects of a documented gig-economy income shock",
+    "evidence_type": "empirical",
+    "scope_conditions": "United Kingdom, Uber drivers, post-Q1-2023",
+    "quoted_support": "While a small number of drivers are earning more per hour worked, the majority are earning less. Post-dynamic pricing, Uber's passengers now pay higher prices, but drivers are not better off. Utilisation has decreased, meaning drivers spend more time on unpaid 'standby' while waiting to be allocated a job.",
+    "numbers": [],
+    "entities": ["Uber"],
+    "time_period": "post-Q1 2023",
+    "region": "United Kingdom",
+    "confidence": "high",
+    "source_note_id": "arxiv250615278v1-cscy-18-jun-2025"
+  },
+  {
+    "claim": "Despite being a genuine before/after event study on a documented, dated income-structure shock (Uber's Q1 2023 dynamic-pricing introduction) with driver-level panel data, this audit measures pay-per-hour, take rate, utilization and predictability as outcomes and contains no attrition, retention, or platform-exit analysis of whether drivers left Uber following the pay cut.",
+    "stance": "neutral",
+    "stance_target": "whether causal income-shock-to-exit designs exist in the gig-economy literature (Gap 3)",
+    "evidence_type": "theoretical",
+    "scope_conditions": "methodological caveat, gig economy, Uber UK",
+    "quoted_support": "In this work, we present an audit of Uber's pay and work allocation algorithms, to understand: how much Uber drivers are being paid for their work...how dynamic pricing has impacted what percentage of a passenger's fare goes to the driver...and related metrics like time spent waiting for jobs, and changes in the predictability of work opportunities.",
+    "numbers": [],
+    "entities": ["Uber"],
+    "time_period": "2016-2024",
+    "region": "United Kingdom",
+    "confidence": "high",
+    "source_note_id": "arxiv250615278v1-cscy-18-jun-2025"
+  }
+]

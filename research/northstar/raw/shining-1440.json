@@ -1,0 +1,358 @@
+{
+  "slug": "shining",
+  "url": "https://shining.302chanwoo.com",
+  "name": "Shining / 302chanwoo",
+  "country": "Korea",
+  "viewport": {
+    "width": 1440,
+    "height": 900
+  },
+  "ok": false,
+  "httpStatus": 200,
+  "finalUrl": "https://shining.302chanwoo.com/",
+  "consentDismissed": [],
+  "scrollInfo": {
+    "contentHeight": 900,
+    "docScrollHeight": 900,
+    "maxElementBottom": 900,
+    "innerScrollerHeight": 0,
+    "virtualScroll": false
+  },
+  "document": {
+    "scrollHeight": 900,
+    "vhMultiple": 1,
+    "textNodeCount": 2,
+    "canvasCount": 0,
+    "elementCount": 5,
+    "title": "Shining",
+    "lang": "en",
+    "contentHeight": 900,
+    "scrollMode": "native"
+  },
+  "container": {
+    "dominantPairs": [
+      {
+        "width": 476,
+        "left": 482,
+        "count": 2,
+        "sample": {
+          "tag": "span",
+          "cls": "webgpu-unsupported__title"
+        }
+      }
+    ],
+    "containerChain": {
+      "chain": [
+        {
+          "tag": "span",
+          "cls": "webgpu-unsupported__title",
+          "width": 475.78,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "block"
+        },
+        {
+          "tag": "p",
+          "cls": "",
+          "width": 475.78,
+          "maxWidth": "520px",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "grid"
+        },
+        {
+          "tag": "main",
+          "cls": "webgpu-unsupported",
+          "width": 1440,
+          "maxWidth": "none",
+          "paddingInline": "24px / 24px",
+          "marginInline": "0px / 0px",
+          "display": "grid"
+        },
+        {
+          "tag": "div",
+          "cls": "",
+          "width": 1440,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "block"
+        }
+      ],
+      "constrained": {
+        "tag": "p",
+        "cls": "",
+        "width": 475.78,
+        "maxWidth": "520px",
+        "paddingInline": "0px / 0px",
+        "marginInline": "0px / 0px",
+        "display": "grid"
+      }
+    },
+    "grids": [],
+    "bodyPaddingInline": "0px / 0px",
+    "bodyMaxWidth": "none",
+    "htmlPaddingInline": "0px / 0px"
+  },
+  "leftEdgeTest": {
+    "layout": {
+      "n": 1,
+      "mean": 482,
+      "stdDev": 0,
+      "distinctExact": 1,
+      "distinctClustered2px": 1,
+      "clusters": [
+        {
+          "at": 482,
+          "count": 1
+        }
+      ],
+      "values": [
+        482
+      ]
+    },
+    "rect": {
+      "n": 1,
+      "mean": 482.11,
+      "stdDev": 0,
+      "distinctExact": 1,
+      "distinctClustered2px": 1,
+      "clusters": [
+        {
+          "at": 482.11,
+          "count": 1
+        }
+      ],
+      "values": [
+        482.11
+      ]
+    },
+    "headings": {
+      "n": 1,
+      "mean": 482,
+      "stdDev": 0,
+      "distinctExact": 1,
+      "distinctClustered2px": 1,
+      "clusters": [
+        {
+          "at": 482,
+          "count": 1
+        }
+      ],
+      "values": [
+        482
+      ]
+    },
+    "sectionDiscovery": "body-children"
+  },
+  "sections": [
+    {
+      "index": 0,
+      "tag": "div",
+      "id": "app",
+      "cls": "",
+      "height": 900,
+      "vhFraction": 1,
+      "paddingBlockStart": "0px",
+      "paddingBlockEnd": "0px",
+      "marginBlockStart": "0px",
+      "marginBlockEnd": "0px",
+      "firstText": {
+        "layoutLeft": 482,
+        "rectLeft": 482.11,
+        "tag": "span",
+        "fontSize": "18px",
+        "text": "This browser does not support WebGPU."
+      },
+      "heading": {
+        "layoutLeft": 482,
+        "rectLeft": 482.11,
+        "tag": "span",
+        "fontSize": "18px",
+        "text": "This browser does not support WebGPU."
+      }
+    }
+  ],
+  "verticalRhythm": {
+    "sectionCount": 1,
+    "near100vhCount": 1,
+    "near100vhPct": 100,
+    "strictGcdOfSpacing": 24,
+    "baseUnitEstimate80pct": 24,
+    "spacingHistogram": [
+      {
+        "value": 24,
+        "count": 4
+      }
+    ],
+    "spacingSampleSize": 4
+  },
+  "typeScale": {
+    "distinctFontSizeCount": 2,
+    "distinctFontSizeCount_used2plus": 0,
+    "distinctSizes": [
+      {
+        "size": 18,
+        "count": 1
+      },
+      {
+        "size": 14,
+        "count": 1
+      }
+    ],
+    "scaleSizesDesc": [],
+    "consecutiveRatios": [],
+    "roles": {
+      "h1": null,
+      "biggestText": {
+        "tag": "span",
+        "fontSize": 18,
+        "fontWeight": "700",
+        "lineHeightPx": 26.1,
+        "lineHeightRatio": 1.45,
+        "letterSpacing": "0px",
+        "letterSpacingEm": 0,
+        "fontFamily": "-apple-system",
+        "fontFamilyFull": "-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif",
+        "textTransform": "none",
+        "color": "rgb(17, 17, 17)",
+        "widthPx": 475.78,
+        "text": "This browser does not support WebGPU."
+      },
+      "h2All": [],
+      "h3": null,
+      "body": {
+        "tag": "span",
+        "fontSize": 14,
+        "fontWeight": "400",
+        "lineHeightPx": 21.7,
+        "lineHeightRatio": 1.55,
+        "letterSpacing": "0px",
+        "letterSpacingEm": 0,
+        "fontFamily": "-apple-system",
+        "fontFamilyFull": "-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif",
+        "textTransform": "none",
+        "color": "rgb(85, 85, 85)",
+        "widthPx": 475.78,
+        "text": "Please open this page in the latest version of Chrome, Edge,"
+      },
+      "small": {
+        "tag": "span",
+        "fontSize": 14,
+        "fontWeight": "400",
+        "lineHeightPx": 21.7,
+        "lineHeightRatio": 1.55,
+        "letterSpacing": "0px",
+        "letterSpacingEm": 0,
+        "fontFamily": "-apple-system",
+        "fontFamilyFull": "-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif",
+        "textTransform": "none",
+        "color": "rgb(85, 85, 85)",
+        "widthPx": 475.78,
+        "text": "Please open this page in the latest version of Chrome, Edge,"
+      },
+      "mono": null
+    },
+    "readingMeasure": {
+      "columnWidthPx": 475.78,
+      "widthOf100Chars": 647.16,
+      "measureCh_spec": 73.52,
+      "measureCh_zeroWidth": 63.04,
+      "maxWidthDeclared": "none",
+      "canvasFont": "14px -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif"
+    },
+    "readingMeasureAlternates": [
+      {
+        "tag": "span",
+        "fontSize": 14,
+        "fontWeight": "400",
+        "lineHeightPx": 21.7,
+        "lineHeightRatio": 1.55,
+        "letterSpacing": "0px",
+        "letterSpacingEm": 0,
+        "fontFamily": "-apple-system",
+        "fontFamilyFull": "-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif",
+        "textTransform": "none",
+        "color": "rgb(85, 85, 85)",
+        "widthPx": 475.78,
+        "text": "Please open this page in the latest version of Chrome, Edge,"
+      }
+    ],
+    "distinctFontFamilyCount": 1,
+    "fontFamilies": [
+      {
+        "family": "-apple-system",
+        "count": 2
+      }
+    ]
+  },
+  "color": {
+    "textColors": [
+      {
+        "value": "rgb(17,17,17)",
+        "count": 1
+      },
+      {
+        "value": "rgb(85,85,85)",
+        "count": 1
+      }
+    ],
+    "backgroundColors": [
+      {
+        "value": "rgb(255,255,255)",
+        "count": 2
+      }
+    ],
+    "distinctTextColorCount": 2,
+    "distinctBgColorCount": 1
+  },
+  "persistent": {
+    "fixedOrSticky": [
+      {
+        "tag": "div",
+        "cls": "",
+        "position": "fixed",
+        "rect": {
+          "top": 0,
+          "left": 0,
+          "width": 1440,
+          "height": 900
+        },
+        "zIndex": "auto",
+        "text": "This browser does not support WebGPU. Please open this page ",
+        "opacity": "1"
+      },
+      {
+        "tag": "main",
+        "cls": "webgpu-unsupported",
+        "position": "fixed",
+        "rect": {
+          "top": 0,
+          "left": 0,
+          "width": 1440,
+          "height": 900
+        },
+        "zIndex": "auto",
+        "text": "This browser does not support WebGPU. Please open this page ",
+        "opacity": "1"
+      }
+    ]
+  },
+  "nav": null,
+  "navState": {
+    "at0": null,
+    "at2000": null
+  },
+  "shots": [
+    "shining-1440-full.jpg",
+    "shining-1440-scroll000.jpg",
+    "shining-1440-scroll025.jpg",
+    "shining-1440-scroll050.jpg",
+    "shining-1440-scroll075.jpg",
+    "shining-1440-scroll100.jpg"
+  ],
+  "fullPageShotRepresentative": true,
+  "notMeasurable": "only 2 rendered text nodes (0 canvas element(s)) — WebGL/canvas-driven, no DOM grid to learn from",
+  "pageErrors": []
+}

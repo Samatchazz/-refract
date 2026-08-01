@@ -1,0 +1,44 @@
+[
+  {
+    "claim": "Per AKKI (Asosiasi Kreator Konten Indonesia) founding board member Adrian Zakhary, Indonesia has approximately 17 million content creators -- consistent with the '17 juta' total used as the denominator in the Menekraf's separate 8-juta/63-persen claim, but with no methodology given.",
+    "stance": "neutral",
+    "stance_target": "total size of Indonesia's content creator population",
+    "evidence_type": "expert-opinion",
+    "scope_conditions": "Indonesia, as of AKKI founding, reported 1 March 2025",
+    "quoted_support": "\"Menurut Dewan Pendiri AKKI, Adrian Zakhary, Indonesia saat ini memiliki sekitar 17 juta kreator yang berpeluang memberikan kontribusi besar di berbagai sektor.\"",
+    "numbers": ["17,000,000 total creators"],
+    "entities": ["Adrian Zakhary", "Asosiasi Kreator Konten Indonesia (AKKI)"],
+    "time_period": "as of March 2025",
+    "region": "Indonesia",
+    "confidence": "low",
+    "source_note_id": "babak-baru-profesi-kreator-konten-di-indonesia"
+  },
+  {
+    "claim": "The Google-Temasek-Bain 2021 report projected Indonesia's digital economy would reach USD 70 billion by 2025, cited as macro context for creator-economy growth.",
+    "stance": "neutral",
+    "stance_target": "overall Indonesian digital economy growth trajectory",
+    "evidence_type": "statistical",
+    "scope_conditions": "Indonesia, digital economy overall (not creator-specific), 2021 report projecting to 2025",
+    "quoted_support": "\"Laporan yang diterbitkan oleh Google, Temasek, dan Bain & Company pada 2021 memperkirakan bahwa ekonomi digital Indonesia akan mencapai nilai 70 miliar dollar AS pada 2025.\"",
+    "numbers": ["USD 70 billion digital economy by 2025"],
+    "entities": ["Google", "Temasek", "Bain & Company"],
+    "time_period": "2021 report, 2025 target year",
+    "region": "Indonesia",
+    "confidence": "medium",
+    "source_note_id": "babak-baru-profesi-kreator-konten-di-indonesia"
+  },
+  {
+    "claim": "We Are Social's 2023 report found 212 million internet users in Indonesia, averaging 8 hours per day online, cited as context for the creative fertile ground for content creators.",
+    "stance": "neutral",
+    "stance_target": "size of the Indonesian internet-using population available to content creators",
+    "evidence_type": "statistical",
+    "scope_conditions": "Indonesia, general internet population (not creator-specific), 2023",
+    "quoted_support": "\"Menurut laporan We Are Social 2023, pengguna internet di Indonesia mencapai 212 juta orang, dengan rata-rata waktu online 8 jam per hari.\"",
+    "numbers": ["212,000,000 internet users", "8 hours/day average online time"],
+    "entities": ["We Are Social"],
+    "time_period": "2023",
+    "region": "Indonesia",
+    "confidence": "medium",
+    "source_note_id": "babak-baru-profesi-kreator-konten-di-indonesia"
+  }
+]

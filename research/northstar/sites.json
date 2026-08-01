@@ -1,0 +1,275 @@
+[
+  {
+    "slug": "sakazuki",
+    "url": "https://sakazuki.io",
+    "name": "Sakazuki",
+    "country": "Japan",
+    "kind": "seed-primary"
+  },
+  {
+    "slug": "exat",
+    "url": "https://exat.hottype.co",
+    "name": "EXAT (Hot Type)",
+    "country": "Korea",
+    "kind": "seed-primary"
+  },
+  {
+    "slug": "taper",
+    "url": "https://taper.design",
+    "name": "Taper",
+    "country": "USA",
+    "kind": "seed-primary"
+  },
+  {
+    "slug": "acquisition",
+    "url": "https://www.acquisition.com",
+    "name": "Acquisition.com",
+    "country": "USA",
+    "kind": "seed-primary"
+  },
+  {
+    "slug": "nippori",
+    "url": "https://nippori.lamm.tokyo",
+    "name": "Nippori / LAMM",
+    "country": "Japan",
+    "kind": "seed-cjk"
+  },
+  {
+    "slug": "4wide",
+    "url": "https://4wide.jp",
+    "name": "4WIDE",
+    "country": "Japan",
+    "kind": "seed-cjk"
+  },
+  {
+    "slug": "tomoyaokada",
+    "url": "https://tomoyaokada.com",
+    "name": "Tomoya Okada",
+    "country": "Japan",
+    "kind": "seed-cjk"
+  },
+  {
+    "slug": "offbeat",
+    "url": "https://offbeat.kr",
+    "name": "Offbeat",
+    "country": "Korea",
+    "kind": "seed-cjk"
+  },
+  {
+    "slug": "plan-az",
+    "url": "https://plan-az.com",
+    "name": "Plan AZ",
+    "country": "Korea",
+    "kind": "seed-cjk"
+  },
+  {
+    "slug": "tamakiyoshida",
+    "url": "https://www.tamakiyoshida.com",
+    "name": "Tamaki Yoshida",
+    "country": "Japan",
+    "kind": "seed-cjk"
+  },
+  {
+    "slug": "synthetictheatre",
+    "url": "https://synthetictheatre.com",
+    "name": "Synthetic Theatre",
+    "country": "UK",
+    "kind": "seed-latin"
+  },
+  {
+    "slug": "elicyon",
+    "url": "https://elicyon.com",
+    "name": "Elicyon",
+    "country": "UK",
+    "kind": "seed-latin"
+  },
+  {
+    "slug": "museumofmoney",
+    "url": "https://www.museumofmoney.com",
+    "name": "Museum of Money",
+    "country": "USA",
+    "kind": "seed-latin"
+  },
+  {
+    "slug": "normalisboring",
+    "url": "https://normalisboring.es",
+    "name": "Normal is Boring",
+    "country": "Spain",
+    "kind": "seed-latin"
+  },
+  {
+    "slug": "igloo",
+    "url": "https://igloo.inc",
+    "name": "Igloo Inc",
+    "country": "USA",
+    "kind": "seed-unmeasured"
+  },
+  {
+    "slug": "aristidebenoist",
+    "url": "https://www.aristidebenoist.com",
+    "name": "Aristide Benoist",
+    "country": "France",
+    "kind": "seed-unmeasured"
+  },
+  {
+    "slug": "deso",
+    "url": "https://deso.studio",
+    "name": "Deso Studio",
+    "country": "?",
+    "kind": "seed-unmeasured"
+  },
+  {
+    "slug": "jungheonlee",
+    "url": "https://jungheonlee.com",
+    "name": "Jungheon Lee",
+    "country": "Korea",
+    "kind": "seed-unmeasured"
+  },
+  {
+    "slug": "plusex15",
+    "url": "https://15th.plus-ex.com",
+    "name": "PLUS-EX 15th",
+    "country": "Korea",
+    "kind": "seed-unmeasured"
+  },
+  {
+    "slug": "izanami",
+    "url": "https://izanami-official.com",
+    "name": "Izanami",
+    "country": "Japan",
+    "kind": "seed-unmeasured"
+  },
+  {
+    "slug": "shining",
+    "url": "https://shining.302chanwoo.com",
+    "name": "Shining / 302chanwoo",
+    "country": "Korea",
+    "kind": "seed-unmeasured"
+  },
+  {
+    "slug": "pendragon",
+    "url": "https://pendragoncycle.com",
+    "name": "Pendragon Cycle",
+    "country": "USA",
+    "kind": "seed-unmeasured"
+  },
+  {
+    "slug": "ironhill",
+    "url": "https://ironhill.au",
+    "name": "Iron Hill",
+    "country": "Australia",
+    "kind": "seed-unmeasured"
+  },
+  {
+    "slug": "dennissnellenberg",
+    "url": "https://dennissnellenberg.com",
+    "name": "Dennis Snellenberg",
+    "country": "Netherlands",
+    "kind": "seed-unmeasured"
+  },
+  {
+    "slug": "kprverse",
+    "url": "https://kprverse.com",
+    "name": "KPRVERSE",
+    "country": "?",
+    "kind": "seed-unmeasured"
+  },
+  {
+    "slug": "taper-philosophy",
+    "url": "https://taper.design/design-philosophy",
+    "name": "Taper — Design Philosophy",
+    "country": "Japan",
+    "kind": "r2-essay"
+  },
+  {
+    "slug": "tiktoksans",
+    "url": "https://www.tiktok.com/font",
+    "name": "TikTok Sans specimen",
+    "country": "USA/CN",
+    "kind": "r2-specimen"
+  },
+  {
+    "slug": "groteskly",
+    "url": "https://groteskly.xyz",
+    "name": "Groteskly Yours",
+    "country": "Lithuania",
+    "kind": "r2-specimen"
+  },
+  {
+    "slug": "klim-soehne",
+    "url": "https://klim.co.nz/retail-fonts/soehne/",
+    "name": "Klim — Söhne specimen",
+    "country": "New Zealand",
+    "kind": "r2-specimen"
+  },
+  {
+    "slug": "dinamo-whyte",
+    "url": "https://abcdinamo.com/typefaces/whyte",
+    "name": "ABC Dinamo — Whyte",
+    "country": "Switzerland",
+    "kind": "r2-specimen"
+  },
+  {
+    "slug": "monolog",
+    "url": "https://bymonolog.com",
+    "name": "MONOLOG",
+    "country": "?",
+    "kind": "r2-award"
+  },
+  {
+    "slug": "imnotabot",
+    "url": "https://imnotabot.sangyoungbae.com",
+    "name": "I'm not a bot",
+    "country": "Korea",
+    "kind": "r2-cjk"
+  },
+  {
+    "slug": "oji-brandbook",
+    "url": "https://www.ojiholdings.co.jp/group/brandbook/",
+    "name": "OJI Global Brand Book",
+    "country": "Japan",
+    "kind": "r2-cjk"
+  },
+  {
+    "slug": "tyo-recruit",
+    "url": "https://tyo.co.jp/recruit/",
+    "name": "TYO Recruit",
+    "country": "Japan",
+    "kind": "r2-cjk"
+  },
+  {
+    "slug": "tr-advanced",
+    "url": "https://tr-advanced.co.jp/regular/",
+    "name": "Tokai Rika Advanced Recruit",
+    "country": "Japan",
+    "kind": "r2-cjk"
+  },
+  {
+    "slug": "funtech",
+    "url": "https://ci.funtech.inc/en",
+    "name": "FUNTECH Brand Identity",
+    "country": "Japan",
+    "kind": "r2-cjk"
+  },
+  {
+    "slug": "mijiheon",
+    "url": "https://mijiheon.com",
+    "name": "MIJIHEON",
+    "country": "Korea",
+    "kind": "r2-cjk"
+  },
+  {
+    "slug": "planetono",
+    "url": "https://planetono.space",
+    "name": "Planetono",
+    "country": "?",
+    "kind": "r2-award"
+  },
+  {
+    "slug": "seasoned",
+    "url": "https://seasoned.koto.studio",
+    "name": "Seasoned (Koto)",
+    "country": "UK",
+    "kind": "r2-award"
+  }
+]

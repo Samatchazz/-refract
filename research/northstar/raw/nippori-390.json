@@ -1,0 +1,1019 @@
+{
+  "slug": "nippori",
+  "url": "https://nippori.lamm.tokyo",
+  "name": "Nippori / LAMM",
+  "country": "Japan",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "ok": true,
+  "httpStatus": 200,
+  "finalUrl": "https://nippori.lamm.tokyo/",
+  "consentDismissed": [],
+  "scrollInfo": {
+    "contentHeight": 9782,
+    "docScrollHeight": 9565,
+    "maxElementBottom": 9782,
+    "innerScrollerHeight": 2725,
+    "virtualScroll": false
+  },
+  "document": {
+    "scrollHeight": 9565,
+    "vhMultiple": 11.59,
+    "textNodeCount": 1415,
+    "canvasCount": 1,
+    "elementCount": 6268,
+    "title": "人生に「キク」ラジオ - 日暮里ゼミナール",
+    "lang": "ja",
+    "contentHeight": 9782,
+    "scrollMode": "native"
+  },
+  "container": {
+    "dominantPairs": [
+      {
+        "width": 365,
+        "left": 12,
+        "count": 6,
+        "sample": {
+          "tag": "p",
+          "cls": "font-en text-10 leading-[1.1] tracking-tighter text-white mi"
+        }
+      },
+      {
+        "width": 176,
+        "left": 8,
+        "count": 6,
+        "sample": {
+          "tag": "p",
+          "cls": "text-[calc(11/16*1rem)] md:text-14 leading-tight tracking-no"
+        }
+      },
+      {
+        "width": 92,
+        "left": 8,
+        "count": 5,
+        "sample": {
+          "tag": "p",
+          "cls": "font-black text-10 md:text-[calc(18/16*1rem)] leading-[1.1] "
+        }
+      },
+      {
+        "width": 690,
+        "left": 0,
+        "count": 5,
+        "sample": {
+          "tag": "span",
+          "cls": "block h-auto w-fit flex-[1_0_auto] animate-[marquee_var(--du"
+        }
+      },
+      {
+        "width": 690,
+        "left": 690,
+        "count": 5,
+        "sample": {
+          "tag": "span",
+          "cls": "block h-auto w-fit flex-[1_0_auto] animate-[marquee_var(--du"
+        }
+      },
+      {
+        "width": 176,
+        "left": 203,
+        "count": 5,
+        "sample": {
+          "tag": "p",
+          "cls": "text-[calc(11/16*1rem)] md:text-14 leading-tight tracking-no"
+        }
+      }
+    ],
+    "containerChain": {
+      "chain": [
+        {
+          "tag": "p",
+          "cls": "font-en text-10 leading-[1.1] tracking-tighter text-white mi",
+          "width": 365.06,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "block"
+        },
+        {
+          "tag": "div",
+          "cls": "md:hidden w-full h-auto py-1 px-3 bg-gray-main",
+          "width": 390,
+          "maxWidth": "none",
+          "paddingInline": "12.48px / 12.48px",
+          "marginInline": "0px / 0px",
+          "display": "block"
+        },
+        {
+          "tag": "div",
+          "cls": "effect-mask absolute top-0 left-0 w-full h-auto z-10",
+          "width": 390,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "block"
+        },
+        {
+          "tag": "div",
+          "cls": "relative w-full h-auto",
+          "width": 390,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "block"
+        },
+        {
+          "tag": "div",
+          "cls": "relative w-full h-auto overflow-x-clip pt-5 md:pt-0",
+          "width": 390,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "block"
+        },
+        {
+          "tag": "main",
+          "cls": "",
+          "width": 390,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "block"
+        }
+      ],
+      "constrained": null
+    },
+    "grids": [
+      {
+        "columns": 2,
+        "columnGap": "normal",
+        "rowGap": "normal",
+        "width": 390,
+        "template": "195px 195px",
+        "count": 14
+      }
+    ],
+    "bodyPaddingInline": "0px / 0px",
+    "bodyMaxWidth": "none",
+    "htmlPaddingInline": "0px / 0px"
+  },
+  "leftEdgeTest": {
+    "layout": {
+      "n": 4,
+      "mean": 76.75,
+      "stdDev": 101.27,
+      "distinctExact": 4,
+      "distinctClustered2px": 4,
+      "clusters": [
+        {
+          "at": 12,
+          "count": 1
+        },
+        {
+          "at": 19,
+          "count": 1
+        },
+        {
+          "at": 24,
+          "count": 1
+        },
+        {
+          "at": 252,
+          "count": 1
+        }
+      ],
+      "values": [
+        19,
+        252,
+        24,
+        12
+      ]
+    },
+    "rect": {
+      "n": 4,
+      "mean": 76.66,
+      "stdDev": 101.04,
+      "distinctExact": 4,
+      "distinctClustered2px": 4,
+      "clusters": [
+        {
+          "at": 12.47,
+          "count": 1
+        },
+        {
+          "at": 18.72,
+          "count": 1
+        },
+        {
+          "at": 23.91,
+          "count": 1
+        },
+        {
+          "at": 251.53,
+          "count": 1
+        }
+      ],
+      "values": [
+        18.72,
+        251.53,
+        23.91,
+        12.47
+      ]
+    },
+    "headings": {
+      "n": 4,
+      "mean": 76.75,
+      "stdDev": 101.27,
+      "distinctExact": 4,
+      "distinctClustered2px": 4,
+      "clusters": [
+        {
+          "at": 12,
+          "count": 1
+        },
+        {
+          "at": 19,
+          "count": 1
+        },
+        {
+          "at": 24,
+          "count": 1
+        },
+        {
+          "at": 252,
+          "count": 1
+        }
+      ],
+      "values": [
+        19,
+        252,
+        24,
+        12
+      ]
+    },
+    "sectionDiscovery": "semantic-siblings"
+  },
+  "sections": [
+    {
+      "index": 0,
+      "tag": "section",
+      "id": "high-light",
+      "cls": "w-full h-auto mt-6 md:mt-30 lg:mt-[calc(93/16*1rem)] overflow-x-clip",
+      "height": 2942.3,
+      "vhFraction": 3.49,
+      "paddingBlockStart": "0px",
+      "paddingBlockEnd": "0px",
+      "marginBlockStart": "24.96px",
+      "marginBlockEnd": "0px",
+      "firstText": {
+        "layoutLeft": 19,
+        "rectLeft": 18.72,
+        "tag": "span",
+        "fontSize": "78px",
+        "text": "H"
+      },
+      "heading": {
+        "layoutLeft": 19,
+        "rectLeft": 18.72,
+        "tag": "span",
+        "fontSize": "78px",
+        "text": "H"
+      }
+    },
+    {
+      "index": 1,
+      "tag": "section",
+      "id": "guest",
+      "cls": "w-full h-auto mt-4 md:mt-[calc(96/16*1rem)] overflow-x-clip",
+      "height": 1872.28,
+      "vhFraction": 2.22,
+      "paddingBlockStart": "0px",
+      "paddingBlockEnd": "0px",
+      "marginBlockStart": "16.64px",
+      "marginBlockEnd": "0px",
+      "firstText": {
+        "layoutLeft": 252,
+        "rectLeft": 251.53,
+        "tag": "span",
+        "fontSize": "78px",
+        "text": "#"
+      },
+      "heading": {
+        "layoutLeft": 252,
+        "rectLeft": 251.53,
+        "tag": "span",
+        "fontSize": "78px",
+        "text": "#"
+      }
+    },
+    {
+      "index": 2,
+      "tag": "section",
+      "id": "other-story",
+      "cls": "w-full h-auto overflow-x-clip",
+      "height": 1657.63,
+      "vhFraction": 1.96,
+      "paddingBlockStart": "0px",
+      "paddingBlockEnd": "0px",
+      "marginBlockStart": "0px",
+      "marginBlockEnd": "0px",
+      "firstText": {
+        "layoutLeft": 24,
+        "rectLeft": 23.91,
+        "tag": "span",
+        "fontSize": "78px",
+        "text": "O"
+      },
+      "heading": {
+        "layoutLeft": 24,
+        "rectLeft": 23.91,
+        "tag": "span",
+        "fontSize": "78px",
+        "text": "O"
+      }
+    },
+    {
+      "index": 3,
+      "tag": "section",
+      "id": "personality",
+      "cls": "w-full h-auto overflow-hidden bg-black",
+      "height": 1035.81,
+      "vhFraction": 1.23,
+      "paddingBlockStart": "0px",
+      "paddingBlockEnd": "0px",
+      "marginBlockStart": "0px",
+      "marginBlockEnd": "0px",
+      "firstText": {
+        "layoutLeft": 12,
+        "rectLeft": 12.47,
+        "tag": "span",
+        "fontSize": "78px",
+        "text": "P"
+      },
+      "heading": {
+        "layoutLeft": 12,
+        "rectLeft": 12.47,
+        "tag": "span",
+        "fontSize": "78px",
+        "text": "P"
+      }
+    }
+  ],
+  "verticalRhythm": {
+    "sectionCount": 4,
+    "near100vhCount": 0,
+    "near100vhPct": 0,
+    "strictGcdOfSpacing": 1,
+    "baseUnitEstimate80pct": 2,
+    "spacingHistogram": [
+      {
+        "value": 8,
+        "count": 653
+      },
+      {
+        "value": 5,
+        "count": 55
+      },
+      {
+        "value": 12,
+        "count": 41
+      },
+      {
+        "value": 6,
+        "count": 30
+      },
+      {
+        "value": 4,
+        "count": 28
+      },
+      {
+        "value": 10,
+        "count": 21
+      },
+      {
+        "value": 19,
+        "count": 15
+      },
+      {
+        "value": 15,
+        "count": 12
+      },
+      {
+        "value": 21,
+        "count": 11
+      },
+      {
+        "value": 37,
+        "count": 11
+      },
+      {
+        "value": 17,
+        "count": 9
+      },
+      {
+        "value": 7,
+        "count": 7
+      },
+      {
+        "value": 25,
+        "count": 6
+      },
+      {
+        "value": 30,
+        "count": 4
+      }
+    ],
+    "spacingSampleSize": 948
+  },
+  "typeScale": {
+    "distinctFontSizeCount": 19,
+    "distinctFontSizeCount_used2plus": 16,
+    "distinctSizes": [
+      {
+        "size": 78,
+        "count": 63
+      },
+      {
+        "size": 61.36,
+        "count": 1
+      },
+      {
+        "size": 54.08,
+        "count": 25
+      },
+      {
+        "size": 39.52,
+        "count": 7
+      },
+      {
+        "size": 39,
+        "count": 2
+      },
+      {
+        "size": 37.44,
+        "count": 12
+      },
+      {
+        "size": 36.4,
+        "count": 8
+      },
+      {
+        "size": 29.12,
+        "count": 156
+      },
+      {
+        "size": 24.96,
+        "count": 12
+      },
+      {
+        "size": 24.38,
+        "count": 10
+      },
+      {
+        "size": 20.8,
+        "count": 28
+      },
+      {
+        "size": 19.76,
+        "count": 1
+      },
+      {
+        "size": 18.72,
+        "count": 1
+      },
+      {
+        "size": 16.64,
+        "count": 16
+      },
+      {
+        "size": 14.56,
+        "count": 39
+      },
+      {
+        "size": 13.52,
+        "count": 196
+      },
+      {
+        "size": 12.48,
+        "count": 184
+      },
+      {
+        "size": 11.44,
+        "count": 183
+      },
+      {
+        "size": 10.4,
+        "count": 36
+      }
+    ],
+    "scaleSizesDesc": [
+      78,
+      54.08,
+      39.52,
+      39,
+      37.44,
+      36.4,
+      29.12,
+      24.96,
+      24.38,
+      20.8,
+      16.64,
+      14.56,
+      13.52,
+      12.48,
+      11.44,
+      10.4
+    ],
+    "consecutiveRatios": [
+      1.44,
+      1.37,
+      1.01,
+      1.04,
+      1.03,
+      1.25,
+      1.17,
+      1.02,
+      1.17,
+      1.25,
+      1.14,
+      1.08,
+      1.08,
+      1.09,
+      1.1
+    ],
+    "roles": {
+      "h1": null,
+      "biggestText": {
+        "tag": "span",
+        "fontSize": 78,
+        "fontWeight": "400",
+        "lineHeightPx": 78,
+        "lineHeightRatio": 1,
+        "letterSpacing": "-1.56px",
+        "letterSpacingEm": -0.02,
+        "fontFamily": "Helvetica",
+        "fontFamilyFull": "Helvetica, sans-serif",
+        "textTransform": "uppercase",
+        "color": "rgb(0, 0, 0)",
+        "widthPx": 54.78,
+        "text": "H"
+      },
+      "h2All": [],
+      "h3": {
+        "tag": "h3",
+        "fontSize": 24.96,
+        "fontWeight": "400",
+        "lineHeightPx": 22.46,
+        "lineHeightRatio": 0.9,
+        "letterSpacing": "-0.4992px",
+        "letterSpacingEm": -0.02,
+        "fontFamily": "Helvetica",
+        "fontFamilyFull": "Helvetica, sans-serif",
+        "textTransform": "none",
+        "color": "rgb(0, 0, 0)",
+        "widthPx": 176.38,
+        "text": "Eriko Kitao"
+      },
+      "body": {
+        "tag": "p",
+        "fontSize": 14.56,
+        "fontWeight": "400",
+        "lineHeightPx": 23.3,
+        "lineHeightRatio": 1.6,
+        "letterSpacing": "0px",
+        "letterSpacingEm": 0,
+        "fontFamily": "Helvetica",
+        "fontFamilyFull": "Helvetica, sans-serif",
+        "textTransform": "none",
+        "color": "rgb(0, 0, 0)",
+        "widthPx": 296.84,
+        "text": "Comedians, idols, athletes, actors—many people pursue their "
+      },
+      "small": {
+        "tag": "span",
+        "fontSize": 10.4,
+        "fontWeight": "400",
+        "lineHeightPx": 10.4,
+        "lineHeightRatio": 1,
+        "letterSpacing": "0px",
+        "letterSpacingEm": 0,
+        "fontFamily": "Playfair",
+        "fontFamilyFull": "Playfair, serif",
+        "textTransform": "none",
+        "color": "rgb(0, 0, 0)",
+        "widthPx": 145.17,
+        "text": "Thinking Time Nippori Seminar"
+      },
+      "mono": null
+    },
+    "readingMeasure": {
+      "columnWidthPx": 296.84,
+      "widthOf100Chars": 663.8,
+      "measureCh_spec": 44.72,
+      "measureCh_zeroWidth": 36.66,
+      "maxWidthDeclared": "none",
+      "canvasFont": "14.56px Helvetica, sans-serif"
+    },
+    "readingMeasureAlternates": [
+      {
+        "tag": "p",
+        "fontSize": 14.56,
+        "fontWeight": "400",
+        "lineHeightPx": 23.3,
+        "lineHeightRatio": 1.6,
+        "letterSpacing": "0px",
+        "letterSpacingEm": 0,
+        "fontFamily": "Helvetica",
+        "fontFamilyFull": "Helvetica, sans-serif",
+        "textTransform": "none",
+        "color": "rgb(0, 0, 0)",
+        "widthPx": 296.84,
+        "text": "Comedians, idols, athletes, actors—many people pursue their "
+      },
+      {
+        "tag": "p",
+        "fontSize": 14.56,
+        "fontWeight": "400",
+        "lineHeightPx": 23.3,
+        "lineHeightRatio": 1.6,
+        "letterSpacing": "0px",
+        "letterSpacingEm": 0,
+        "fontFamily": "Helvetica",
+        "fontFamilyFull": "Helvetica, sans-serif",
+        "textTransform": "none",
+        "color": "rgb(0, 0, 0)",
+        "widthPx": 308.25,
+        "text": "Comedians, idols, athletes, actors—many people pursue their "
+      },
+      {
+        "tag": "p",
+        "fontSize": 14.56,
+        "fontWeight": "400",
+        "lineHeightPx": 23.3,
+        "lineHeightRatio": 1.6,
+        "letterSpacing": "0px",
+        "letterSpacingEm": 0,
+        "fontFamily": "Helvetica",
+        "fontFamilyFull": "Helvetica, sans-serif",
+        "textTransform": "none",
+        "color": "rgb(0, 0, 0)",
+        "widthPx": 308.25,
+        "text": "Comedians, idols, athletes, actors—many people pursue their "
+      }
+    ],
+    "distinctFontFamilyCount": 3,
+    "fontFamilies": [
+      {
+        "family": "kozuka-mincho-pro",
+        "count": 570
+      },
+      {
+        "family": "Helvetica",
+        "count": 405
+      },
+      {
+        "family": "Playfair",
+        "count": 5
+      }
+    ]
+  },
+  "color": {
+    "textColors": [
+      {
+        "value": "rgb(0,0,0)",
+        "count": 824
+      },
+      {
+        "value": "rgb(255,255,255)",
+        "count": 156
+      }
+    ],
+    "backgroundColors": [
+      {
+        "value": "rgb(255,255,255)",
+        "count": 177
+      },
+      {
+        "value": "rgb(0,0,0)",
+        "count": 106
+      },
+      {
+        "value": "rgb(162,55,55)",
+        "count": 3
+      },
+      {
+        "value": "rgb(142,182,105)",
+        "count": 2
+      },
+      {
+        "value": "rgb(149,149,149)",
+        "count": 2
+      },
+      {
+        "value": "rgb(116,207,212)",
+        "count": 2
+      },
+      {
+        "value": "rgb(242,161,103)",
+        "count": 2
+      },
+      {
+        "value": "rgb(248,144,205)",
+        "count": 2
+      },
+      {
+        "value": "rgb(96,193,169)",
+        "count": 2
+      },
+      {
+        "value": "rgb(224,226,171)",
+        "count": 1
+      },
+      {
+        "value": "rgb(193,215,70)",
+        "count": 1
+      },
+      {
+        "value": "rgb(233,233,233)",
+        "count": 1
+      },
+      {
+        "value": "rgb(79,109,159)",
+        "count": 1
+      },
+      {
+        "value": "rgb(180,113,207)",
+        "count": 1
+      }
+    ],
+    "distinctTextColorCount": 2,
+    "distinctBgColorCount": 14
+  },
+  "persistent": {
+    "fixedOrSticky": [
+      {
+        "tag": "div",
+        "cls": "fixed top-0 left-0 w-full h-auto z-[var(--z)] flex flex-col ",
+        "position": "fixed",
+        "rect": {
+          "top": 0,
+          "left": 0,
+          "width": 390,
+          "height": 46.33
+        },
+        "zIndex": "100",
+        "text": "Thinking Time Nippori Seminar Thinking Time Nippori Seminar ",
+        "opacity": "1"
+      },
+      {
+        "tag": "div",
+        "cls": "fixed bottom-4 md:bottom-[calc(25/16*1rem)] md:left-5 left-2",
+        "position": "fixed",
+        "rect": {
+          "top": 816.97,
+          "left": 10.39,
+          "width": 118.05,
+          "height": 10.41
+        },
+        "zIndex": "100",
+        "text": "Produced by LAMM.Inc",
+        "opacity": "1"
+      },
+      {
+        "tag": "div",
+        "cls": "fixed bottom-2.5 md:bottom-5 left-1/2 -translate-x-1/2 trans",
+        "position": "fixed",
+        "rect": {
+          "top": 808.66,
+          "left": 152.74,
+          "width": 84.52,
+          "height": 24.95
+        },
+        "zIndex": "100",
+        "text": "ABOUT (5) HIGH LIGHT (38) GUEST (156) OTHER STORY PERSONALIT",
+        "opacity": "1"
+      },
+      {
+        "tag": "div",
+        "cls": "fixed bottom-2.5 md:bottom-5 right-2.5 md:right-5 z-[var(--z",
+        "position": "fixed",
+        "rect": {
+          "top": 808.67,
+          "left": 272.61,
+          "width": 107,
+          "height": 24.94
+        },
+        "zIndex": "100",
+        "text": "STAND FM SPOTIFY AMAZON APPLE",
+        "opacity": "1"
+      },
+      {
+        "tag": "div",
+        "cls": "sticky top-11 md:top-[calc(87/16*1rem)] right-0 grid grid-co",
+        "position": "sticky",
+        "rect": {
+          "top": 7056.52,
+          "left": 348.41,
+          "width": 41.59,
+          "height": 41.59
+        },
+        "zIndex": "auto",
+        "text": "",
+        "opacity": "1"
+      }
+    ]
+  },
+  "nav": {
+    "tag": "header",
+    "cls": "relative w-full h-auto",
+    "height": 0,
+    "top": 0,
+    "position": "relative",
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "backdropFilter": "none",
+    "borderBottom": "0px rgb(229, 231, 235)",
+    "paddingBlock": "0px / 0px",
+    "transform": "none",
+    "opacity": "1",
+    "mixBlendMode": "normal",
+    "color": "rgb(0, 0, 0)"
+  },
+  "navState": {
+    "at0": {
+      "nav": {
+        "height": 0,
+        "top": 0,
+        "position": "relative",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "backdropFilter": "none",
+        "borderBottom": "0px rgb(229, 231, 235)",
+        "paddingBlock": "0px / 0px",
+        "transform": "none",
+        "opacity": "1",
+        "color": "rgb(0, 0, 0)"
+      },
+      "fixedOrSticky": [
+        {
+          "tag": "div",
+          "cls": "fixed top-0 left-0 w-full h-auto z-[var(--z)] flex flex-col ",
+          "position": "fixed",
+          "rect": {
+            "top": 0,
+            "left": 0,
+            "width": 390,
+            "height": 46.33
+          },
+          "text": "Thinking Time Nippori Seminar Thinking Time Nippori Seminar ",
+          "opacity": "1"
+        },
+        {
+          "tag": "div",
+          "cls": "fixed bottom-4 md:bottom-[calc(25/16*1rem)] md:left-5 left-2",
+          "position": "fixed",
+          "rect": {
+            "top": 816.97,
+            "left": 10.39,
+            "width": 118.05,
+            "height": 10.41
+          },
+          "text": "Produced by LAMM.Inc",
+          "opacity": "1"
+        },
+        {
+          "tag": "div",
+          "cls": "fixed bottom-2.5 md:bottom-5 left-1/2 -translate-x-1/2 trans",
+          "position": "fixed",
+          "rect": {
+            "top": 808.66,
+            "left": 152.74,
+            "width": 84.52,
+            "height": 24.95
+          },
+          "text": "ABOUT (5) HIGH LIGHT (38) GUEST (156) OTHER STORY PERSONALIT",
+          "opacity": "1"
+        },
+        {
+          "tag": "div",
+          "cls": "fixed bottom-2.5 md:bottom-5 right-2.5 md:right-5 z-[var(--z",
+          "position": "fixed",
+          "rect": {
+            "top": 808.67,
+            "left": 272.61,
+            "width": 107,
+            "height": 24.94
+          },
+          "text": "STAND FM SPOTIFY AMAZON APPLE",
+          "opacity": "1"
+        },
+        {
+          "tag": "div",
+          "cls": "sticky top-11 md:top-[calc(87/16*1rem)] right-0 grid grid-co",
+          "position": "sticky",
+          "rect": {
+            "top": 7056.52,
+            "left": 348.41,
+            "width": 41.59,
+            "height": 41.59
+          },
+          "text": "",
+          "opacity": "1"
+        }
+      ]
+    },
+    "at2000": {
+      "nav": {
+        "height": 0,
+        "top": -2000,
+        "position": "relative",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "backdropFilter": "none",
+        "borderBottom": "0px rgb(229, 231, 235)",
+        "paddingBlock": "0px / 0px",
+        "transform": "none",
+        "opacity": "1",
+        "color": "rgb(0, 0, 0)"
+      },
+      "fixedOrSticky": [
+        {
+          "tag": "div",
+          "cls": "fixed top-0 left-0 w-full h-auto z-[var(--z)] flex flex-col ",
+          "position": "fixed",
+          "rect": {
+            "top": 0,
+            "left": 0,
+            "width": 390,
+            "height": 46.33
+          },
+          "text": "Thinking Time Nippori Seminar Thinking Time Nippori Seminar ",
+          "opacity": "1"
+        },
+        {
+          "tag": "div",
+          "cls": "fixed bottom-4 md:bottom-[calc(25/16*1rem)] md:left-5 left-2",
+          "position": "fixed",
+          "rect": {
+            "top": 816.97,
+            "left": 10.39,
+            "width": 118.05,
+            "height": 10.41
+          },
+          "text": "Produced by LAMM.Inc",
+          "opacity": "1"
+        },
+        {
+          "tag": "div",
+          "cls": "fixed bottom-2.5 md:bottom-5 left-1/2 -translate-x-1/2 trans",
+          "position": "fixed",
+          "rect": {
+            "top": 808.66,
+            "left": 152.74,
+            "width": 84.52,
+            "height": 24.95
+          },
+          "text": "ABOUT (5) HIGH LIGHT (38) GUEST (156) OTHER STORY PERSONALIT",
+          "opacity": "1"
+        },
+        {
+          "tag": "div",
+          "cls": "fixed bottom-2.5 md:bottom-5 right-2.5 md:right-5 z-[var(--z",
+          "position": "fixed",
+          "rect": {
+            "top": 808.67,
+            "left": 272.61,
+            "width": 107,
+            "height": 24.94
+          },
+          "text": "STAND FM SPOTIFY AMAZON APPLE",
+          "opacity": "1"
+        },
+        {
+          "tag": "div",
+          "cls": "sticky top-11 md:top-[calc(87/16*1rem)] right-0 grid grid-co",
+          "position": "sticky",
+          "rect": {
+            "top": 5056.52,
+            "left": 348.41,
+            "width": 41.59,
+            "height": 41.59
+          },
+          "text": "",
+          "opacity": "1"
+        }
+      ]
+    },
+    "changed": true,
+    "diff": {
+      "top": {
+        "at0": 0,
+        "at2000": -2000
+      }
+    }
+  },
+  "shots": [
+    "nippori-390-full.jpg"
+  ],
+  "fullPageShotRepresentative": true,
+  "pageErrors": []
+}

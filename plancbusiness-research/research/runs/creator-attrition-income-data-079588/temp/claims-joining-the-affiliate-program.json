@@ -1,0 +1,58 @@
+[
+  {
+    "claim": "Twitch's current Affiliate Program requires 25 followers, 4 total hours streamed, 4 different streaming days, and an average of 3 concurrent viewers on 4 different days, all achieved within the same rolling 30-day window, before a creator can earn any subscription, Bits, or ad revenue.",
+    "stance": "supports",
+    "stance_target": "Time-to-first-income for creators is bounded below by an explicit, quantified platform gate",
+    "evidence_type": "empirical",
+    "scope_conditions": "Twitch only; primary platform documentation retrieved July 2026; the 3-viewer test is average concurrent viewers, not total views; invitation follows automatically within 24-72 hours of eligibility",
+    "quoted_support": "To become a Twitch Affiliate, you must meet the following 4 requirements: Reach 25 Followers; Stream for 4 Hours; Stream on 4 Different Days; Reach an Average of 3 Viewers (on 4 different days)",
+    "numbers": ["25", "4", "4", "3", "30", "24-48 hours", "72 hours"],
+    "entities": ["Twitch", "Twitch Affiliate Program"],
+    "time_period": "Current as of July 2026",
+    "region": "Twitch global",
+    "confidence": "high",
+    "source_note_id": "joining-the-affiliate-program"
+  },
+  {
+    "claim": "Twitch's Affiliate thresholds have been lowered materially over time (from 50 followers, 500 broadcast minutes and 7 unique streaming days to 25 followers, 4 hours and 4 days), so monetisation-onset and first-income statistics from different cohort years are not comparable.",
+    "stance": "refutes",
+    "stance_target": "Creator monetisation rates can be compared across years without adjustment",
+    "evidence_type": "empirical",
+    "scope_conditions": "Current requirements confirmed directly from Twitch documentation; the historical figures are the widely-cited earlier thresholds and are asserted here for contrast rather than sourced from this page",
+    "quoted_support": "To become a Twitch Affiliate, you must meet the following 4 requirements: Reach 25 Followers; Stream for 4 Hours; Stream on 4 Different Days; Reach an Average of 3 Viewers (on 4 different days)",
+    "numbers": ["25", "50", "4 hours", "500 minutes", "4 days", "7 days"],
+    "entities": ["Twitch"],
+    "time_period": "2017 - 2026",
+    "region": "Twitch global",
+    "confidence": "medium",
+    "source_note_id": "joining-the-affiliate-program"
+  },
+  {
+    "claim": "Twitch publishes the exact quantitative gate for monetisation eligibility but publishes no data on what share of accounts ever clear it, how long clearing it typically takes, or what Affiliates subsequently earn.",
+    "stance": "neutral",
+    "stance_target": "Platform-published data is sufficient to measure creator monetisation rates",
+    "evidence_type": "empirical",
+    "scope_conditions": "Audited absence: the full Affiliate help article was reviewed and contains no pass-rate, no median time-to-eligibility, no payout minimum, and no earnings distribution; this is an absence of publication, not evidence that Twitch lacks the data",
+    "quoted_support": "All four achievements must be fully completed to be invited to the Affiliate program. Track progress towards your Affiliate Program invite via the Achievements section of your Creator Dashboard.",
+    "numbers": [],
+    "entities": ["Twitch"],
+    "time_period": "July 2026",
+    "region": "Twitch global",
+    "confidence": "high",
+    "source_note_id": "joining-the-affiliate-program"
+  },
+  {
+    "claim": "Creators aged 13 to 17 may monetise on Twitch with parental consent, meaning the measured creator income distribution includes minors.",
+    "stance": "neutral",
+    "stance_target": "Creator income data describes an adult labour market",
+    "evidence_type": "empirical",
+    "scope_conditions": "Twitch policy; below age of majority in most jurisdictions; affects interpretation of any living-wage benchmark applied to the population",
+    "quoted_support": "If you're 13-17 years old, you may join the Affiliate Program with parental or guardian consent and supervision.",
+    "numbers": ["13", "17"],
+    "entities": ["Twitch"],
+    "time_period": "July 2026",
+    "region": "Twitch global",
+    "confidence": "high",
+    "source_note_id": "joining-the-affiliate-program"
+  }
+]

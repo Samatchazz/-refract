@@ -1,0 +1,72 @@
+[
+  {
+    "claim": "YouTube's contractual revenue split, as disclosed by Google, pays partners 55% of net watch-page ad revenue, 45% of allocated Shorts Creator Pool revenue, and 70% of net fan-funding revenue from memberships, Super Chat, Super Stickers and Super Thanks.",
+    "stance": "neutral",
+    "stance_target": "The factual baseline for how much of gross platform revenue reaches a creator, against which all third-party earnings estimates must be calibrated",
+    "evidence_type": "legal",
+    "scope_conditions": "Google/YouTube official help documentation, fetched 27 July 2026; rates are per-module and apply only where the partner has accepted the relevant Studio module; transaction taxes are excluded from the partner revenue-share calculation",
+    "quoted_support": "YouTube will pay them 55% of net revenues from ads displayed or streamed on their public videos on their content Watch Page... YouTube will pay them 45% of the revenue allocated to them based on their share of views from the Creator Pool allocation... YouTube will pay them 70% of net revenues from channel memberships, Super Chat, Super Stickers, and Super Thanks.",
+    "numbers": ["55% watch page ads", "45% Shorts", "70% commerce/fan funding"],
+    "entities": ["YouTube", "Google", "AdSense for YouTube", "Watch Page Monetization Module", "Shorts Monetization Module", "Commerce Product Module"],
+    "time_period": "current as of 27 July 2026",
+    "region": "Global",
+    "confidence": "high",
+    "source_note_id": "youtube-partner-earnings-overview-youtube-help"
+  },
+  {
+    "claim": "YouTube explicitly disclaims any guarantee that a creator accepted into the Partner Program will be paid at all.",
+    "stance": "supports",
+    "stance_target": "The position that YPP eligibility is a permission to attempt monetization, not an income event, and that treating monetization status as a proxy for earning is a category error",
+    "evidence_type": "legal",
+    "scope_conditions": "Terms as stated in YouTube's partner earnings overview help page; applies to advertising revenue specifically",
+    "quoted_support": "There are no guarantees under the YouTube partner agreement about how much or whether you'll be paid.",
+    "numbers": [],
+    "entities": ["YouTube", "YouTube Partner Program"],
+    "time_period": "current as of 27 July 2026",
+    "region": "Global",
+    "confidence": "high",
+    "source_note_id": "youtube-partner-earnings-overview-youtube-help"
+  },
+  {
+    "claim": "Money only moves to a creator once accrued earnings clear a local payment threshold, US tax information has been filed, and no payment holds exist, adding a structural lag beyond monetization eligibility before any cash is actually received.",
+    "stance": "supports",
+    "stance_target": "The position that 'time to first meaningful income' is longer than 'time to monetization eligibility', because a payout floor and a compliance gate sit between the two",
+    "evidence_type": "legal",
+    "scope_conditions": "AdSense for YouTube payment mechanics; the threshold value is not stated on this page and is described as country-specific; US tax info is required from all monetizing creators worldwide before a first payment",
+    "quoted_support": "The earnings are paid out by the 21st-26th of the current month as long as your total balance has reached the payment threshold and if you have no payment holds... Submitting U.S. tax info is required for all monetizing creators, regardless of their location in the world. It's also required before new partners with new AdSense for YouTube accounts can get their first payments.",
+    "numbers": ["earnings posted 7th-12th of following month", "paid out 21st-26th"],
+    "entities": ["YouTube", "AdSense for YouTube", "Google"],
+    "time_period": "current as of 27 July 2026",
+    "region": "Global, with country-specific payment thresholds",
+    "confidence": "high",
+    "source_note_id": "youtube-partner-earnings-overview-youtube-help"
+  },
+  {
+    "claim": "Monthly revenue figures shown in YouTube Studio are provisional estimates revised twice before finalization, meaning creator-reported earnings screenshots circulating as evidence are not finalized payouts.",
+    "stance": "refutes",
+    "stance_target": "The evidentiary reliability of creator-reported YouTube Studio earnings screenshots used as income data in creator-economy commentary",
+    "evidence_type": "legal",
+    "scope_conditions": "YouTube Analytics revenue reporting; adjustments arise from invalid traffic, Content ID claims and disputes, and cost-per-day campaign types",
+    "quoted_support": "Monthly estimated revenue is subject to adjustments due to invalid traffic, Content ID claims and disputes, or certain ad campaign types... They happen two times after revenue generation: after 1 week (giving a more complete estimate), and in the middle of the following month reflecting your finalized earnings.",
+    "numbers": ["two adjustments", "1 week", "mid-following month"],
+    "entities": ["YouTube Analytics", "YouTube Studio", "AdSense for YouTube", "Content ID"],
+    "time_period": "current as of 27 July 2026",
+    "region": "Global",
+    "confidence": "high",
+    "source_note_id": "youtube-partner-earnings-overview-youtube-help"
+  },
+  {
+    "claim": "Creators affiliated with multi-channel networks are paid by the MCN rather than by YouTube, so their individual take-home is not visible in YouTube-side payout accounting and any MCN cut is undisclosed.",
+    "stance": "supports",
+    "stance_target": "The position that platform-disclosed aggregate payout figures overstate what reaches individual creators, because intermediaries take an unmeasured cut",
+    "evidence_type": "legal",
+    "scope_conditions": "MCN affiliate channels only; payment timeline is stated to be identical to direct channels",
+    "quoted_support": "Payments to affiliate channels partnering with multi-channel networks (MCN) are not performed by YouTube, but rather by the MCN directly to its affiliates. YouTube issues payment to the MCN and they are responsible for issuing payment to their affiliates.",
+    "numbers": [],
+    "entities": ["YouTube", "multi-channel networks (MCN)"],
+    "time_period": "current as of 27 July 2026",
+    "region": "Global",
+    "confidence": "high",
+    "source_note_id": "youtube-partner-earnings-overview-youtube-help"
+  }
+]

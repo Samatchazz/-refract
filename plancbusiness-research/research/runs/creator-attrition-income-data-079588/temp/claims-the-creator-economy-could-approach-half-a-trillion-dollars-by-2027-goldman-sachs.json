@@ -1,0 +1,58 @@
+[
+  {
+    "claim": "Goldman Sachs Research stated in April 2023 that only about 4% of global creators are deemed professionals, meaning they earn more than $100,000 a year, and expected that share to stay steady as the ecosystem expands.",
+    "stance": "supports",
+    "stance_target": "The claim that the share of creators earning a professional income is a low single-digit percentage and structurally stable",
+    "evidence_type": "statistical",
+    "scope_conditions": "Global; Goldman Sachs Research article dated 19 April 2023 summarizing Eric Sheridan's team report; note that Goldman's own March 2025 report defines professional/amateur by self-identified full-time versus part-time status rather than by any income threshold, so the $100,000 attribution is inconsistent across Goldman's own publications",
+    "quoted_support": "Only about 4% of global creators are deemed professionals, meaning they pull in more than $100,000 a year. Goldman Sachs Research expects their share of the creator universe to stay steady even as the overall ecosystem expands.",
+    "numbers": ["4% professional", "$100,000/year threshold", "50 million global creators", "10-20% CAGR"],
+    "entities": ["Goldman Sachs Research", "Eric Sheridan"],
+    "time_period": "Published 19 April 2023",
+    "region": "Global; $100,000 is a US income benchmark",
+    "confidence": "high",
+    "source_note_id": "the-creator-economy-could-approach-half-a-trillion-dollars-by-2027-goldman-sachs"
+  },
+  {
+    "claim": "Goldman Sachs projected the creator economy total addressable market roughly doubling from $250 billion in 2023 to $480 billion by 2027, growth it explicitly benchmarks to global digital advertising spend rather than to creator earnings.",
+    "stance": "neutral",
+    "stance_target": "The use of creator economy market-size projections as evidence about creator incomes",
+    "evidence_type": "statistical",
+    "scope_conditions": "Global; total addressable market, not realized revenue; growth rate tied to digital ad spend forecasts; TAM includes platform and brand spending, most of which does not reach creators",
+    "quoted_support": "the total addressable market of the creator economy could roughly double in size over the next five years to $480 billion by 2027 from $250 billion today ... That growth is roughly in line with the team's estimates for growth in global digital advertising spend over that period.",
+    "numbers": ["$250 billion in 2023", "$480 billion by 2027"],
+    "entities": ["Goldman Sachs Research", "Eric Sheridan"],
+    "time_period": "2023-2027",
+    "region": "Global",
+    "confidence": "high",
+    "source_note_id": "the-creator-economy-could-approach-half-a-trillion-dollars-by-2027-goldman-sachs"
+  },
+  {
+    "claim": "Goldman Sachs asserted that brand deals are the main creator revenue source at about 70%, attributing the figure only to unnamed 'survey data' with no sample size, fielding date, or sampling frame disclosed.",
+    "stance": "neutral",
+    "stance_target": "The evidentiary basis of the claim that brand deals dominate creator income",
+    "evidence_type": "statistical",
+    "scope_conditions": "Global; Goldman Sachs April 2023 article; the underlying survey is unnamed but the figure is close to the NeoReach/Influencer Marketing Hub 77% figure from a self-selected 2021 survey of an influencer-agency roster, and directly contradicts Linktree's finding that 70% of creators earn under 10% of income from brand deals",
+    "quoted_support": "Brand deals are the main source of revenue at about 70%, according to survey data.",
+    "numbers": ["~70% of creator revenue from brand deals"],
+    "entities": ["Goldman Sachs Research", "NeoReach", "Influencer Marketing Hub", "Linktree"],
+    "time_period": "April 2023",
+    "region": "Global",
+    "confidence": "medium",
+    "source_note_id": "the-creator-economy-could-approach-half-a-trillion-dollars-by-2027-goldman-sachs"
+  },
+  {
+    "claim": "Goldman Sachs expected the 50 million global creator population to grow at a 10-20% compound annual rate over five years from 2023, a range it narrowed to 10% in its March 2025 update.",
+    "stance": "neutral",
+    "stance_target": "The stability of institutional creator population forecasts",
+    "evidence_type": "statistical",
+    "scope_conditions": "Global; 2023 forecast of 10-20% CAGR versus 2025 forecast of ~10% CAGR to 107 million by 2030",
+    "quoted_support": "Goldman Sachs Research expects the 50 million global creators to grow at a 10-20% compound annual growth rate during the next five years.",
+    "numbers": ["50 million creators", "10-20% CAGR (2023 forecast)", "10% CAGR (2025 forecast)"],
+    "entities": ["Goldman Sachs Research"],
+    "time_period": "2023 forecast",
+    "region": "Global",
+    "confidence": "high",
+    "source_note_id": "the-creator-economy-could-approach-half-a-trillion-dollars-by-2027-goldman-sachs"
+  }
+]

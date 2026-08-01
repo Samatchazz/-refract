@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Plan C — บอร์ดทิศทางดีไซน์</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@300;400;500&family=Anuphan:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#F2EDE0;
+    --paper:#12100E;
+    --paper2:#1A1714;
+    --brass:#E8A33D;
+    --line:rgba(242,237,224,.14);
+    --dim:rgba(242,237,224,.52);
+    --dim2:rgba(242,237,224,.30);
+    --mono:"IBM Plex Mono",ui-monospace,Consolas,monospace;
+    --thai:"IBM Plex Sans Thai","Segoe UI",system-ui,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--paper);color:var(--ink);font-family:var(--thai);
+       line-height:1.75;padding:0 0 100px}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 30px}
+
+  header{padding:64px 0 44px;border-bottom:1px solid var(--line);margin-bottom:56px}
+  .kick{font-family:var(--mono);font-size:11px;letter-spacing:.28em;
+        color:var(--brass);margin-bottom:16px}
+  h1{font-size:38px;font-weight:600;letter-spacing:-.01em;line-height:1.25}
+  header p{color:var(--dim);margin-top:14px;max-width:56ch;font-size:15px}
+
+  h2{font-size:12px;font-family:var(--mono);letter-spacing:.24em;color:var(--brass);
+     margin:64px 0 22px;display:flex;align-items:center;gap:14px}
+  h2::after{content:"";flex:1;height:1px;background:var(--line)}
+
+  /* ---------- 3 ทิศทาง ---------- */
+  .dirs{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .dir{border:1px solid var(--line);position:relative;background:var(--paper2)}
+  .dir.pick{border-color:rgba(232,163,61,.55)}
+  .dir .badge{position:absolute;top:-1px;right:-1px;background:var(--brass);z-index:2;
+    color:#12100E;font-family:var(--mono);font-size:9.5px;letter-spacing:.16em;padding:5px 10px}
+  .mood{height:180px;position:relative;overflow:hidden;border-bottom:1px solid var(--line)}
+  .dir .txt{padding:20px}
+  .dir h3{font-size:17px;font-weight:600;margin-bottom:3px}
+  .dir .en{font-family:var(--mono);font-size:10px;letter-spacing:.18em;
+           color:var(--dim2);margin-bottom:12px}
+  .dir p{font-size:13.5px;color:var(--dim);line-height:1.8}
+  .dir .meta{margin-top:15px;padding-top:14px;border-top:1px solid var(--line);
+             font-size:12px;color:var(--dim2);display:grid;gap:6px}
+  .dir .meta b{color:var(--dim);font-weight:500}
+
+  /* ---------- สี ---------- */
+  .pal{display:grid;grid-template-columns:repeat(6,1fr);gap:12px}
+  .sw{border:1px solid var(--line)}
+  .sw .chip{height:78px}
+  .sw .lb{padding:10px;font-family:var(--mono);font-size:10px;color:var(--dim2);line-height:1.6}
+  .sw .lb b{display:block;color:var(--ink);font-weight:400;font-size:11px;letter-spacing:.05em}
+
+  /* ---------- ฟอนต์ ---------- */
+  .type{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+  .spec{border:1px solid var(--line);padding:26px;background:var(--paper2)}
+  .spec .lb{font-family:var(--mono);font-size:10px;letter-spacing:.2em;
+            color:var(--brass);margin-bottom:18px}
+  .spec .big{font-size:34px;font-weight:600;line-height:1.3;letter-spacing:-.01em}
+  .spec .med{font-size:15px;color:var(--dim);margin-top:14px}
+  .spec .mn{font-family:var(--mono);font-size:12px;color:var(--dim);margin-top:16px;
+            letter-spacing:.06em;line-height:2}
+  .alt{font-family:"Anuphan",var(--thai)}
+
+  /* ---------- คอมโพเนนต์ ---------- */
+  .comps{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+  .plate{border:1px solid var(--line);padding:26px;position:relative;background:var(--paper2);
+         transition:border-color .3s}
+  .plate:hover{border-color:rgba(232,163,61,.5)}
+  .plate::before,.plate::after{content:"";position:absolute;width:9px;height:9px;
+    border:1px solid var(--brass);opacity:.55;transition:width .3s,height .3s}
+  .plate::before{top:-1px;left:-1px;border-right:0;border-bottom:0}
+  .plate::after{bottom:-1px;right:-1px;border-left:0;border-top:0}
+  .plate:hover::before,.plate:hover::after{width:18px;height:18px}
+  .plate .no{font-family:var(--mono);font-size:10px;letter-spacing:.2em;color:var(--brass)}
+  .plate h4{font-size:20px;font-weight:600;margin:12px 0 8px}
+  .plate p{font-size:13.5px;color:var(--dim)}
+  .plate ul{margin-top:14px;list-style:none;display:grid;gap:8px}
+  .plate li{font-size:13px;color:var(--dim);padding-left:18px;position:relative}
+  .plate li::before{content:"";position:absolute;left:0;top:.66em;width:7px;height:1px;
+                    background:var(--brass)}
+
+  .btn{display:inline-flex;align-items:center;gap:12px;padding:14px 26px;
+       border:1px solid var(--brass);color:var(--brass);font-family:var(--mono);
+       font-size:11.5px;letter-spacing:.18em;background:transparent;cursor:pointer;
+       transition:background .25s,color .25s}
+  .btn:hover{background:var(--brass);color:#12100E}
+  .btn.ghost{border-color:var(--line);color:var(--dim)}
+  .btn.ghost:hover{background:transparent;border-color:var(--ink);color:var(--ink)}
+  .btnrow{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+
+  .note{border-left:2px solid var(--brass);padding:4px 0 4px 18px;color:var(--dim);
+        font-size:14px;margin-top:26px;max-width:70ch}
+  .cols2{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+  .rule{font-size:13.5px;color:var(--dim);display:grid;gap:11px;margin-top:6px}
+  .rule div{padding-left:20px;position:relative}
+  .rule div::before{content:"→";position:absolute;left:0;color:var(--brass);
+                    font-family:var(--mono);font-size:11px}
+  .rule b{color:var(--ink);font-weight:500}
+  .warn{color:#e9967a}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="kick">PLAN C · DESIGN DIRECTION</div>
+  <h1>เลือกธีมก่อน แล้วทุกอย่างที่เหลือจะตามมาเอง</h1>
+  <p>สามทิศทาง แต่ละอันมีระบบภาพของตัวเองที่จบในตัว ไม่ใช่แค่เปลี่ยนสี — เลือกอันเดียวแล้วผมจะเอาไปกำหนดทั้ง nav ปุ่ม การ์ด ฟอร์ม ฟุตเตอร์ ให้พูดภาษาเดียวกันหมด</p>
+</header>
+
+<h2>ทิศทาง</h2>
+<div class="dirs">
+
+  <div class="dir pick">
+    <div class="badge">ผมเชียร์อันนี้</div>
+    <div class="mood">
+      <svg viewBox="0 0 320 180" style="width:100%;height:100%;display:block">
+        <defs>
+          <linearGradient id="fg" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0%" stop-color="#12100E" stop-opacity="1"/>
+            <stop offset="52%" stop-color="#12100E" stop-opacity=".55"/>
+            <stop offset="100%" stop-color="#12100E" stop-opacity="0"/>
+          </linearGradient>
+        </defs>
+        <rect width="320" height="180" fill="#161310"/>
+        <!-- เส้นชั้นความสูง -->
+        <g fill="none" stroke="#F2EDE0" stroke-opacity=".17" stroke-width=".9">
+          <path d="M-10,150 Q70,132 130,140 T330,116"/>
+          <path d="M-10,134 Q70,113 132,122 T330,96"/>
+          <path d="M-10,118 Q72,93 134,104 T330,77"/>
+          <path d="M-10,102 Q74,74 136,86 T330,58"/>
+          <path d="M-10,86 Q76,55 138,68 T330,40"/>
+        </g>
+        <path d="M-10,150 Q70,132 130,140 T330,116" fill="none"
+              stroke="#E8A33D" stroke-opacity=".85" stroke-width="1.6"/>
+        <!-- หมุดอาณาเขต -->
+        <g stroke="#E8A33D" stroke-width="1.2" fill="none" opacity=".9">
+          <path d="M243,112 L243,88"/><path d="M243,88 L262,93 L243,99"/>
+        </g>
+        <circle cx="243" cy="112" r="2.4" fill="#E8A33D"/>
+        <!-- หมอกฝั่งซ้าย -->
+        <rect width="320" height="180" fill="url(#fg)"/>
+        <g font-family="IBM Plex Mono,monospace" font-size="6.5" fill="#F2EDE0"
+           fill-opacity=".34" letter-spacing="1">
+          <text x="272" y="26">N 13°45′</text><text x="272" y="38">E 100°30′</text>
+        </g>
+      </svg>
+    </div>
+    <div class="txt">
+      <h3>สนามหมอก</h3>
+      <div class="en">FOGGED TERRITORY</div>
+      <p>แผนที่เส้นชั้นความสูงที่ถูกหมอกบัง เดินไปหมอกเปิดไป ปลายทางคือปักหมุดอาณาเขตของตัวเอง</p>
+      <div class="meta">
+        <div><b>ให้ความรู้สึก</b> สงบ แม่นยำ พรีเมียม เหมือนเอกสารสำรวจ</div>
+        <div><b>เมตาฟอร์</b> หมากรุก = เห็นแผนที่ครบ · โป๊กเกอร์ = มีหมอก</div>
+        <div><b>ข้อดี</b> ต่อกับ Micro-Sovereignty ตรงตัว · ไม่มีใครในตลาดนี้ทำ</div>
+        <div><b>ข้อควรระวัง</b> ถ้าทำเบาไปจะดูเรียบจนจืด ต้องมีแมวถ่วงความอบอุ่น</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="dir">
+    <div class="mood">
+      <svg viewBox="0 0 320 180" style="width:100%;height:100%;display:block">
+        <rect width="320" height="180" fill="#0E1214"/>
+        <g stroke="#F2EDE0" stroke-opacity=".07" stroke-width=".8">
+          <path d="M0,36 H320"/><path d="M0,72 H320"/><path d="M0,108 H320"/><path d="M0,144 H320"/>
+          <path d="M53,0 V180"/><path d="M107,0 V180"/><path d="M160,0 V180"/>
+          <path d="M213,0 V180"/><path d="M267,0 V180"/>
+        </g>
+        <g fill="#4FD1C5" fill-opacity=".55">
+          <rect x="30" y="118" width="10" height="34"/><rect x="48" y="104" width="10" height="48"/>
+          <rect x="66" y="112" width="10" height="40"/><rect x="84" y="82" width="10" height="70"/>
+          <rect x="102" y="94" width="10" height="58"/>
+        </g>
+        <path d="M130,140 L160,116 L188,124 L216,84 L248,92 L286,56" fill="none"
+              stroke="#4FD1C5" stroke-width="1.6"/>
+        <circle cx="286" cy="56" r="3" fill="#4FD1C5"/>
+        <g font-family="IBM Plex Mono,monospace" font-size="6.5" fill="#F2EDE0" fill-opacity=".38">
+          <text x="20" y="26">ENGAGEMENT_RATE</text><text x="20" y="38" fill="#4FD1C5">+412.8%</text>
+        </g>
+      </svg>
+    </div>
+    <div class="txt">
+      <h3>ห้องวิเคราะห์</h3>
+      <div class="en">ANALYST TERMINAL</div>
+      <p>แดชบอร์ด กริด ตัวเลข โมโนสเปซ ให้ความรู้สึกว่ามีข้อมูลจริงอยู่เบื้องหลังทุกคำแนะนำ</p>
+      <div class="meta">
+        <div><b>ให้ความรู้สึก</b> เฉียบ มืออาชีพ อิงข้อมูล</div>
+        <div><b>เมตาฟอร์</b> อัลกอริทึมอ่านออกได้ ถ้ามีเครื่องมือถูก</div>
+        <div><b>ข้อดี</b> ตรงกับคำว่า Algorithm Consultant ที่สุด</div>
+        <div><b>ข้อควรระวัง</b> <span class="warn">ซ้ำกับ SaaS/เอเจนซีเป็นร้อยเจ้า</span> · เย็นเกินสำหรับครีเอเตอร์ที่หมดไฟ</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="dir">
+    <div class="mood">
+      <svg viewBox="0 0 320 180" style="width:100%;height:100%;display:block">
+        <rect width="320" height="180" fill="#171210"/>
+        <g opacity=".5">
+          <rect x="0" y="0" width="320" height="180" fill="none"
+                stroke="#C9A227" stroke-opacity=".5" stroke-width="1"
+                stroke-dasharray="0" transform="translate(0,0)"/>
+          <rect x="9" y="9" width="302" height="162" fill="none"
+                stroke="#C9A227" stroke-opacity=".3" stroke-width=".6"/>
+        </g>
+        <g fill="#F2EDE0" fill-opacity=".16">
+          <path d="M150,54 a7,7 0 1,1 -.1,0 Z M143,66 q7,4 14,0 l3,24 q-10,4 -20,0 Z M136,110 h28 l-3,-10 h-22 Z"/>
+        </g>
+        <g fill="#C9A227" fill-opacity=".72">
+          <path d="M186,50 a7,7 0 1,1 -.1,0 Z M179,62 q7,4 14,0 l3,24 q-10,4 -20,0 Z M172,106 h28 l-3,-10 h-22 Z"/>
+        </g>
+        <g font-family="Georgia,serif" font-size="9" fill="#F2EDE0" fill-opacity=".45"
+           letter-spacing="2" text-anchor="middle">
+          <text x="160" y="140">STRATEGY · IDENTITY</text>
+        </g>
+        <path d="M116,150 H204" stroke="#C9A227" stroke-opacity=".5" stroke-width=".8"/>
+      </svg>
+    </div>
+    <div class="txt">
+      <h3>สโมสรกลยุทธ์</h3>
+      <div class="en">STRATEGY CLUB</div>
+      <p>ตัวหมาก เส้นกรอบทอง เซริฟ ให้ความรู้สึกเป็นวงในที่ต้องได้รับเชิญ</p>
+      <div class="meta">
+        <div><b>ให้ความรู้สึก</b> หรู มีชั้นเชิง เก่าแก่ น่าเชื่อถือ</div>
+        <div><b>เมตาฟอร์</b> หมากรุกตรงตัว</div>
+        <div><b>ข้อดี</b> ทำให้ราคาสูงดูสมเหตุสมผล</div>
+        <div><b>ข้อควรระวัง</b> <span class="warn">แก่เกินกลุ่มครีเอเตอร์</span> · ชนกับโลโก้แมวที่เล่นๆ · ขัดกับจุดยืนที่บอกว่าหมากรุกคือเกมที่ผิด</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="note">
+  ทิศทาง C มีปัญหาเชิงตรรกะที่แก้ไม่ได้ — คอนเทนต์เราบอกว่า <b style="color:var(--ink)">“คุณเล่นหมากรุกอยู่ในเกมที่เป็นโป๊กเกอร์”</b> คือหมากรุกเป็นสิ่งที่ต้องเลิก แต่ถ้าเอาหมากรุกมาเป็นธีมทั้งเว็บ มันจะเชิดชูสิ่งที่เรากำลังบอกให้เลิกทำ
+</div>
+
+<h2>ถ้าเลือกสนามหมอก — ชุดสี</h2>
+<div class="pal">
+  <div class="sw"><div class="chip" style="background:#12100E"></div>
+    <div class="lb"><b>#12100E</b>พื้นหลังหลัก<br>ดำอมอุ่น ไม่ใช่ดำสนิท</div></div>
+  <div class="sw"><div class="chip" style="background:#1A1714"></div>
+    <div class="lb"><b>#1A1714</b>พื้นการ์ด<br>ยกจากพื้นหลัง 1 ระดับ</div></div>
+  <div class="sw"><div class="chip" style="background:#2A2521"></div>
+    <div class="lb"><b>#2A2521</b>เส้นขอบ / หมอก</div></div>
+  <div class="sw"><div class="chip" style="background:#F2EDE0"></div>
+    <div class="lb"><b>#F2EDE0</b>ตัวอักษร<br>= สีขนแมวเป๊ะ</div></div>
+  <div class="sw"><div class="chip" style="background:#E8A33D"></div>
+    <div class="lb"><b>#E8A33D</b>ทองทองเหลือง<br>สีเน้นสีเดียว</div></div>
+  <div class="sw"><div class="chip" style="background:#5C7C6F"></div>
+    <div class="lb"><b>#5C7C6F</b>เขียวแผนที่<br>ใช้น้อยมาก</div></div>
+</div>
+<div class="note">
+  วินัยสำคัญกว่าจำนวนสี — <b style="color:var(--ink)">พื้นเข้ม + ครีม + ทองหนึ่งสี</b> เท่านั้น ลำดับความสำคัญสร้างด้วยความทึบ (100% / 52% / 30%) ไม่ใช่ด้วยการเพิ่มสีใหม่ ส่วนการเปลี่ยนบรรยากาศแต่ละองก์ให้ขยับแค่<b style="color:var(--ink)">อุณหภูมิ</b> ไม่ใช่เปลี่ยนสี — เย็นตอนติดกับ อุ่นขึ้นเรื่อยๆ จนเป็นแสงทองตอนปักหมุด
+</div>
+
+<h2>ตัวอักษร</h2>
+<div class="type">
+  <div class="spec">
+    <div class="lb">IBM PLEX SANS THAI — พาดหัว + เนื้อความ</div>
+    <div class="big">เปลี่ยนครีเอเตอร์ที่หลงทาง<br>ให้เป็นอาณาจักรของตัวเอง</div>
+    <div class="med">ที่ปรึกษาเชิงกลยุทธ์แบบ 1:1 สำหรับ Micro-Influencer ที่ยอดวิวนิ่งสนิท — วรรณยุกต์ไม่ชนกัน อ่านยาวสบายตา มีน้ำหนักครบ 300–700</div>
+  </div>
+  <div class="spec">
+    <div class="lb">IBM PLEX MONO — ป้าย ตัวเลข พิกัด</div>
+    <div class="mn" style="font-size:15px;margin-top:0">
+      01 / 13 &nbsp;&nbsp; EXTRACT<br>
+      N 13°45′ &nbsp; E 100°30′<br>
+      ENGAGEMENT +412.8%<br>
+      SECTOR 03 · ESTABLISHED
+    </div>
+    <div class="med" style="margin-top:22px">ใช้เฉพาะของที่เป็น “ข้อมูล” — เลขด่าน เปอร์เซ็นต์ ป้ายกำกับ ปุ่ม ห้ามใช้กับประโยคภาษาไทย</div>
+  </div>
+</div>
+<div class="note">
+  ทั้งสองเป็นตระกูลเดียวกัน ฟรีเชิงพาณิชย์ ไทยกับอังกฤษความสูงตัวอักษรตรงกันพอดี — <b style="color:var(--ink)">การจับคู่ Sans ไทย + Mono นี่แหละคือสิ่งที่สร้างอารมณ์ “เอกสารสำรวจ” ทั้งหมด</b> ไม่ต้องพึ่งภาพประกอบเลย · ทางเลือกพาดหัวถ้าอยากได้บุคลิกกว่านี้: <span class="alt" style="font-size:17px">Anuphan โดย Cadson Demak</span>
+</div>
+
+<h2>ภาษาของคอมโพเนนต์</h2>
+<div class="comps">
+  <div class="plate">
+    <div class="no">SECTOR 01</div>
+    <h4>EXTRACT</h4>
+    <p>ขุดตัวตนจริงออกมาก่อน ไม่ใช่ตัวตนที่อัลกอริทึมสั่งให้เป็น</p>
+    <ul>
+      <li>ถอดรื้อคอนเทนต์ย้อนหลังทั้งหมด</li>
+      <li>หาจุดที่คนจำคุณได้จริง</li>
+    </ul>
+  </div>
+  <div class="plate">
+    <div class="no">รายละเอียด</div>
+    <h4>การ์ด = แผ่นแผนที่</h4>
+    <div class="rule">
+      <div>เส้นขอบ <b>1px เท่านั้น</b> ไม่มีเงา — แผนที่ไม่มีเงา ความลึกมาจากหมอกกับการซ้อนชั้น</div>
+      <div>มุมมี<b>ขีดพิกัด</b> ยืดออกตอนชี้เมาส์ (ลองชี้ที่การ์ดซ้ายดู)</div>
+      <div>มุมโค้งไม่เกิน <b>0–2px</b> ของเอกสารสำรวจต้องคม</div>
+      <div>ป้ายบนสุดเป็น<b>โมโน</b>เสมอ ทำหน้าที่เหมือนเลขระวางแผนที่</div>
+    </div>
+  </div>
+</div>
+
+<div style="margin-top:20px" class="btnrow">
+  <button class="btn">จองเซสชันแรก &nbsp;→</button>
+  <button class="btn ghost">ดูวิธีทำงาน</button>
+  <span style="font-family:var(--mono);font-size:11px;color:var(--dim2);letter-spacing:.14em">
+    ← ปุ่มใช้โมโน ตัวพิมพ์ใหญ่ ระยะห่างกว้าง</span>
+</div>
+
+<h2>สิ่งที่เปลี่ยนไปจากตอนนี้</h2>
+<div class="cols2">
+  <div class="rule">
+    <div><b>ตารางหมากรุกพื้นหลัง</b> → เส้นชั้นความสูง (contour) ที่ถี่ขึ้นตอนชันขึ้น</div>
+    <div><b>ชิป/ไพ่โป๊กเกอร์</b> → หมอกที่บังทางข้างหน้า แล้วเปิดออกเมื่อเดินถึง</div>
+    <div><b>เส้นกราฟยอดวิว</b> → เส้นสันเขาบนแผนที่ (ความหมายเดิม ภาพใหม่)</div>
+  </div>
+  <div class="rule">
+    <div><b>เสาหลัก 3 ต้น</b> → หมุดสำรวจปักดิน มีเลขระวางกำกับ</div>
+    <div><b>ธงปลายทาง</b> → เส้นประล้อมอาณาเขต + หมุดมุม = ที่ดินที่อ้างสิทธิ์แล้ว</div>
+    <div><b>ตัวหมากรุกล้ม</b> → ยังเก็บไว้ได้ แต่ย้ายไปอยู่แค่ด่านเดียวที่พูดถึงมันตรงๆ</div>
+  </div>
+</div>
+
+<div class="note" style="margin-top:34px">
+  <b style="color:var(--ink)">แมวคือตัวถ่วงสำคัญ</b> — ธีมนี้เสี่ยงจะเนี้ยบจนเย็นชา สิ่งที่กันไม่ให้เป็นแบบนั้นคือแมวที่เดินอยู่กลางแผนที่ ยิ่งฉากรอบตัวแม่นยำเป็นระเบียบเท่าไหร่ แมวยิ่งดูมีชีวิตขึ้นเท่านั้น เพราะฉะนั้นห้ามทำแมวให้เนี้ยบตาม — ให้มันกลม นุ่ม เคลื่อนไหวแบบสปริง ตัดกับเส้น 1px รอบตัว
+</div>
+
+</div>
+</body>
+</html>

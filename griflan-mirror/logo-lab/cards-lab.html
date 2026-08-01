@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Plan C — Cards Lab v2 (สแต็ค + การ์ดสีเต็มจอ)</title>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  :root{ --bg:#0f1613; --ivory:#f2efde; --gold:#f0b32e; --line:rgba(242,239,222,.14); }
+  body{background:var(--bg);color:var(--ivory);font-family:'Sarabun',sans-serif;line-height:1.7;overflow-x:hidden}
+  .wrap{max-width:1100px;margin:0 auto;padding:0 24px}
+  .lead{padding:16vh 0 8vh}
+  .lead h1{font-size:clamp(28px,5.4vw,58px);line-height:1.2;font-weight:800;letter-spacing:-.025em}
+  .lead p{color:rgba(242,239,222,.6);margin-top:14px;max-width:46rem}
+  .tag{color:var(--gold);font-size:13px;letter-spacing:.18em;font-weight:700;margin-bottom:10px}
+
+  /* reveal ตอนเลื่อนเข้ามา */
+  .rv{opacity:0;transform:translateY(26px);transition:opacity .8s cubic-bezier(.2,.8,.2,1),transform .8s cubic-bezier(.2,.8,.2,1)}
+  .rv.in{opacity:1;transform:none}
+
+  /* ═══ 1) สแต็ค ═══ */
+  .stack{padding:4vh 0 14vh}
+  .stack-card{
+    position:sticky; top:13vh;
+    background:linear-gradient(160deg,#1b2521,#141c19);
+    border:1px solid var(--line); border-radius:20px;
+    padding:40px 36px; margin-bottom:34vh;   /* ระยะห่างมาก = การย่อค่อยเป็นค่อยไป ไม่กระโดด */
+    transform-origin:50% 0%;
+    box-shadow:0 1px 1px rgba(0,0,0,.4), 0 10px 24px rgba(0,0,0,.3), 0 30px 70px rgba(0,0,0,.25);
+    will-change:transform,filter; overflow:hidden;
+  }
+  .stack-card::after{ /* แสงกวาดตอนถูกทับ */
+    content:''; position:absolute; inset:0; pointer-events:none;
+    background:linear-gradient(180deg,rgba(240,179,46,.14),transparent 60%);
+    opacity:0; transition:opacity .3s;
+  }
+  .stack-card .num{color:var(--gold);font-weight:800;font-size:13px;letter-spacing:.14em}
+  .stack-card h3{font-size:clamp(24px,3.6vw,38px);font-weight:800;margin:8px 0 12px;letter-spacing:-.015em}
+  .stack-card p{color:rgba(242,239,222,.66);max-width:44rem}
+  .stack-card .body{will-change:transform}
+
+  /* ═══ 2) การ์ดสีเต็มจอ ═══ */
+  .pin{position:relative}
+  .pin-inner{position:sticky;top:0;height:100svh;overflow:hidden}
+  .color-card{
+    position:absolute; inset:0; display:grid; place-items:center;
+    background:var(--c); color:#12100e; will-change:transform;
+    transform:translateY(100%);
+  }
+  .color-card .inner{max-width:52rem;padding:0 28px;text-align:center;will-change:transform}
+  .color-card .k{font-size:12.5px;letter-spacing:.2em;font-weight:800;opacity:.6}
+  .color-card h2{font-size:clamp(32px,6.6vw,76px);line-height:1.08;font-weight:800;letter-spacing:-.03em;margin:12px 0 16px}
+  .color-card p{font-size:clamp(15px,1.6vw,19px);opacity:.75;max-width:40rem;margin:0 auto}
+  /* คำในหัวเรื่องโผล่ทีละคำ */
+  .color-card h2 .w{display:inline-block;transform:translateY(105%);transition:transform .85s cubic-bezier(.16,1,.3,1)}
+  .color-card.on h2 .w{transform:none}
+  .color-card h2 .w:nth-child(2){transition-delay:.07s}
+  .color-card h2 .w:nth-child(3){transition-delay:.14s}
+  .color-card .k,.color-card p{opacity:0;transform:translateY(18px);transition:all .7s .18s cubic-bezier(.2,.8,.2,1)}
+  .color-card.on .k{opacity:.6;transform:none}
+  .color-card.on p{opacity:.75;transform:none}
+
+  .end{padding:18vh 0;text-align:center;color:rgba(242,239,222,.45)}
+  .hud{position:fixed;left:14px;bottom:14px;z-index:99;font-size:11px;
+    color:rgba(242,239,222,.45);background:rgba(15,22,19,.8);border:1px solid var(--line);
+    border-radius:8px;padding:6px 10px}
+</style>
+</head>
+<body>
+
+<div class="wrap lead">
+  <div class="tag rv">เอฟเฟกต์ 1</div>
+  <h1 class="rv">การ์ดสแต็ค</h1>
+  <p class="rv">เลื่อนลง — แต่ละใบหยุดค้าง ย่อลง เอียงนิด แล้วเนื้อหาข้างในขยับสวนทาง (parallax)</p>
+</div>
+
+<div class="wrap stack" id="stack">
+  <div class="stack-card">
+    <div class="body"><div class="num">01 — EXTRACT</div>
+    <h3>สกัดแก่นแท้ของตัวตน</h3>
+    <p>หา Core Identity ที่เป็นของจริง ไม่ต้องฝืน ไม่เบิร์นเอาท์ — จิตวิทยาการค้นหาตัวตนแบบ 1:1
+       ที่ทำให้คุณเขียน พูด และเล่าเป็นเสียงของตัวเองทุกคำ</p></div>
+  </div>
+  <div class="stack-card">
+    <div class="body"><div class="num">02 — ENGINEER</div>
+    <h3>วางโครงสร้างที่อัลกอริทึมหลงรัก</h3>
+    <p>สคริปต์แบบ Minto Pyramid และจังหวะคลิปที่ตรึงคนดูอยู่หมัด — เลิกเดาใจระบบ
+       แล้วหันมาออกแบบให้ระบบต้องเลือกคุณ</p></div>
+  </div>
+  <div class="stack-card">
+    <div class="body"><div class="num">03 — ESTABLISH</div>
+    <h3>สร้างวงจรแฟนคลับ</h3>
+    <p>Fandom Loop ที่ทำให้อัลกอริทึมทำงานแทนคุณ — เปลี่ยนผู้ติดตามขาจรเป็นแฟนด้อมที่รอดู
+       แชร์ และปกป้องคุณ จนกลายเป็นอาณาจักรของคุณเอง</p></div>
+  </div>
+</div>
+
+<div class="wrap lead">
+  <div class="tag rv">เอฟเฟกต์ 2</div>
+  <h1 class="rv">การ์ดสีเต็มจอ</h1>
+  <p class="rv">หน้าถูกตรึง การ์ดเลื่อนขึ้นทีละใบ + เอียง และข้อความข้างในเลื่อนช้ากว่า = ความลึก</p>
+</div>
+
+<section class="pin" id="pin">
+  <div class="pin-inner">
+    <div class="color-card" style="--c:#e8c98a">
+      <div class="inner"><div class="k">ก่อนมาหาเรา</div>
+        <h2><span class="w">ไล่ตามเทรนด์</span><br><span class="w">จนหมดไฟ</span></h2>
+        <p>ถ่ายคลิปตามกระแส ยอดขึ้นบ้างลงบ้าง แต่ไม่มีอะไรเป็นของตัวเอง</p></div>
+    </div>
+    <div class="color-card" style="--c:#c88f6a">
+      <div class="inner"><div class="k">ระหว่างทาง</div>
+        <h2><span class="w">เจอเสียง</span><br><span class="w">ของตัวเอง</span></h2>
+        <p>สกัดตัวตนออกมาได้ วางโครงสร้างเป็น เขียนเองได้เร็วขึ้นสามเท่า</p></div>
+    </div>
+    <div class="color-card" style="--c:#f0b32e">
+      <div class="inner"><div class="k">ปลายทาง</div>
+        <h2><span class="w">อาณาจักร</span><br><span class="w">ของคุณเอง</span></h2>
+        <p>แฟนด้อมที่รอดูทุกคลิป อัลกอริทึมทำงานแทนคุณ — Micro-Sovereignty</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="wrap end">— จบเดโม —</div>
+<div class="hud" id="hud">smooth scroll: on</div>
+
+<script>
+(() => {
+  const clamp01=v=>Math.max(0,Math.min(1,v));
+  const lerp=(a,b,t)=>a+(b-a)*t;
+  const easeOut=t=>1-Math.pow(1-t,3);          // ให้จังหวะไม่เป็นเส้นตรง
+
+  /* ── ตัวขับ: ค่า scroll แบบ "หน่วง" (แบบเดียวกับที่ Lenis ให้ความรู้สึก)
+        ไม่ยึด scroll ของเบราว์เซอร์ แต่ให้แอนิเมชันตามหลังแบบมีน้ำหนัก ── */
+  let target=window.scrollY, smooth=window.scrollY;
+  addEventListener('scroll',()=>{ target=window.scrollY; },{passive:true});
+
+  const stackEl=document.getElementById('stack');
+  const cards=[...document.querySelectorAll('.stack-card')];
+  const pin=document.getElementById('pin');
+  const colorCards=[...pin.querySelectorAll('.color-card')];
+  pin.style.height=(colorCards.length*100)+'svh';
+
+  let M=null;
+  // พิกัดเอกสารจริง (offsetTop เชื่อถือไม่ได้เพราะ offsetParent ไม่แน่นอน)
+  const docTop = el => el.getBoundingClientRect().top + window.scrollY;
+  function measure(){
+    // ปลด sticky ชั่วคราว เพื่อวัด "ตำแหน่งจริงในเอกสาร" (ไม่ใช่ตำแหน่งที่ถูกตรึง)
+    cards.forEach(c=>{ c.style.position='static'; c.style.transform='none'; });
+    const tops=cards.map(c=>docTop(c)), hs=cards.map(c=>c.offsetHeight);
+    cards.forEach(c=>{ c.style.position=''; });
+    M={ vh:innerHeight, sticky:innerHeight*0.13,
+      cards:cards.map((c,i)=>({el:c, top:tops[i], h:hs[i]})),
+      pinTop:docTop(pin), pinH:pin.offsetHeight };
+  }
+  measure(); addEventListener('resize',()=>{measure();apply();});
+
+  function apply(){
+    const y=smooth;
+    /* 1) สแต็ค: ย่อ + เอียง + เนื้อหาข้างในเลื่อนสวน */
+    M.cards.forEach((c,i)=>{
+      const next=M.cards[i+1];
+      const body=c.el.querySelector('.body');
+      if(!next){ c.el.style.transform='scale(1)'; c.el.style.filter='none';
+        if(body) body.style.transform='none'; c.el.style.setProperty('--sh',0); return; }
+      const stuckAt=c.top-M.sticky;                 // scrollY ที่การ์ดเริ่มค้าง
+      const coverAt=next.top-M.sticky;              // scrollY ที่ใบถัดไปมาถึง
+      const p=easeOut(clamp01((y-stuckAt)/Math.max(1,coverAt-stuckAt)));
+      c.el.style.transform=`scale(${lerp(1,.84,p)}) translateY(${lerp(0,-18,p)}px) rotate(${lerp(0,(i%2?-.9:.9),p)}deg)`;
+      c.el.style.filter=`brightness(${lerp(1,.72,p)})`;
+      if(body) body.style.transform=`translateY(${lerp(0,26,p)}px)`;   // parallax เนื้อหา
+      c.el.querySelector('::after');
+      c.el.style.setProperty('--p',p);
+      const af=c.el; af.style.setProperty('--afo',p);
+    });
+    /* 2) การ์ดสีเต็มจอ: เลื่อน + เอียง + เนื้อหาเลื่อนช้ากว่า (parallax) */
+    const total=M.pinH-M.vh;
+    const prog=clamp01((y-M.pinTop)/Math.max(1,total));
+    const seg=1/colorCards.length;
+    colorCards.forEach((c,i)=>{
+      const raw=clamp01((prog-i*seg)/seg);
+      const p=easeOut(raw);
+      c.style.transform=`translateY(${(1-p)*100}%) rotate(${(1-p)*2.3}deg)`;
+      c.style.zIndex=i+1;
+      const inner=c.querySelector('.inner');
+      if(inner) inner.style.transform=`translateY(${(1-p)*-34}px)`;   // ข้อความตามช้ากว่า
+      c.classList.toggle('on', raw>0.35);
+    });
+  }
+
+  (function loop(){
+    smooth=lerp(smooth,target,0.12);              // ← หน่วง = ความลื่น
+    if(Math.abs(smooth-target)<0.1) smooth=target;
+    apply();
+    requestAnimationFrame(loop);
+  })();
+
+  /* reveal */
+  const io=new IntersectionObserver(es=>es.forEach(e=>{ if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);} }),{threshold:.2});
+  document.querySelectorAll('.rv').forEach((e,i)=>{ e.style.transitionDelay=(i%3*0.08)+'s'; io.observe(e); });
+
+  window.__apply=()=>{ smooth=target=window.scrollY; apply(); };   // ไว้เทส
+})();
+</script>
+</body>
+</html>

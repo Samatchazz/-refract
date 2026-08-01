@@ -1,0 +1,35 @@
+/* ————————————————————————————————————————————
+   HUMAN-WRITE — design tokens
+   Colors from HUMAN_WRITE_BRIEF.md §1 (overrides spec §3).
+   Two-color discipline: bg + ink carry the site; accent is the
+   single voice color. --c-accent-deep is the same terracotta
+   darkened for small text so accent-on-bg meets WCAG 4.5:1.
+   ———————————————————————————————————————————— */
+:root {
+  /* color */
+  --c-bg:          #F6F1E7;  /* warm handmade-paper cream */
+  --c-ink:         #23201C;  /* warm near-black */
+  --c-accent:      #C4502F;  /* terracotta / marker red-orange */
+  --c-accent-deep: #9E3D1E;  /* terracotta darkened — small accent text only */
+  --c-accent-soft: #F0DCCF;
+
+  /* type */
+  --f-display: 'Instrument Serif', Georgia, serif;
+  --f-body:    'IBM Plex Sans Thai', 'Inter', sans-serif;
+
+  --fs-hero:  clamp(2.6rem, 1.4rem + 6.5vw, 7rem);
+  --fs-title: clamp(1.6rem, 1.1rem + 2.6vw, 3.2rem);
+  --fs-body:  1.0625rem;
+  --fs-label: 0.8125rem;   /* uppercase, letter-spacing .12em */
+
+  /* layout */
+  --container: 1280px;
+  --pad: clamp(20px, 4vw, 48px);
+  --sp-section: clamp(72px, 6vw + 40px, 128px);
+  --radius: 14px;
+
+  /* motion (consumed only by motion.css) */
+  --duration: 0.4s;
+  --ease:    cubic-bezier(0.34, 1.06, 0.64, 1.1);
+  --ease-in: cubic-bezier(0.36, 0, 0.66, -0.36);
+}

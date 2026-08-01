@@ -1,0 +1,72 @@
+[
+  {
+    "claim": "Streamers named in the leaked Twitch payout data gave mixed verification responses, with some confirming the figures as almost exact and others stating they were incorrect, so the leak is not uniformly accurate telemetry.",
+    "stance": "refutes",
+    "stance_target": "The October 2021 Twitch leak is exact measured platform telemetry",
+    "evidence_type": "empirical",
+    "scope_conditions": "Dexerto contacted multiple named streamers directly; number contacted not stated; no systematic verification was published by any outlet",
+    "quoted_support": "Dexerto has asked multiple streamers featured on the list if the numbers are accurate, with mixed responses. Some streamers have indicated that the leaked figures were almost exact for them, while others said they were incorrect and did not line up.",
+    "numbers": [],
+    "entities": ["Dexerto", "Twitch"],
+    "time_period": "October 2021",
+    "region": "Twitch global",
+    "confidence": "high",
+    "source_note_id": "twitch-responds-to-leak-revealing-earnings-of-top-streamers-and-more-dexerto"
+  },
+  {
+    "claim": "The leaked Twitch files contain internally inconsistent tables: a September 2021 monthly earnings list implies roughly $3.4 million for a streamer whose cumulative listed total is $2,551,618, a discrepancy too large to attribute to monthly variance alone.",
+    "stance": "refutes",
+    "stance_target": "Figures drawn from different tables within the Twitch leak can be combined or compared",
+    "evidence_type": "empirical",
+    "scope_conditions": "Single worked example (Asmongold) from Dexerto's comparison of two leaked tables; the two tables may have different definitions or coverage",
+    "quoted_support": "the list below sees Asmon earning $141k in Sept 2021, which over 24 months totals around $3.4m ... there's a notable disparity between $3.4m and $2.5m.",
+    "numbers": ["$141,000", "24", "$3.4 million", "$2,551,618.73"],
+    "entities": ["Asmongold", "Dexerto", "Twitch"],
+    "time_period": "September 2019 - September 2021",
+    "region": "Twitch global",
+    "confidence": "high",
+    "source_note_id": "twitch-responds-to-leak-revealing-earnings-of-top-streamers-and-more-dexerto"
+  },
+  {
+    "claim": "Outlets state the Twitch leak's coverage window five mutually incompatible ways — since September 2019, August 2019 to September 2021, August 2019 to October 2021, July 2019 to September 2021, and three years since October 2019 — which invalidates naive annualisation of the cumulative payout figures.",
+    "stance": "refutes",
+    "stance_target": "Annualised per-creator income figures derived from the Twitch leak are reliable",
+    "evidence_type": "empirical",
+    "scope_conditions": "Cross-source comparison across Dexerto, PC Gamer, Dot Esports, SuperJoost and Tech Times; the underlying window is a property of the data, so at most one statement can be right",
+    "quoted_support": "This leak, though, could completely blow that open, with precise figures for the biggest streamers since September 2019.",
+    "numbers": ["24 months", "26 months", "36 months"],
+    "entities": ["Dexerto", "PC Gamer", "Dot Esports", "SuperJoost Playlist", "Tech Times", "Twitch"],
+    "time_period": "2019 - 2021",
+    "region": "US/Western media",
+    "confidence": "high",
+    "source_note_id": "twitch-responds-to-leak-revealing-earnings-of-top-streamers-and-more-dexerto"
+  },
+  {
+    "claim": "Twitch officially confirmed the breach, attributing it to a server configuration error accessed by a malicious third party, and stated it had no indication that login credentials were exposed.",
+    "stance": "supports",
+    "stance_target": "The leaked payout dataset is genuine Twitch internal data rather than a fabrication",
+    "evidence_type": "empirical",
+    "scope_conditions": "Twitch's own blog statement, 6-7 October 2021; Twitch confirmed the breach but never confirmed the accuracy of the specific payout figures",
+    "quoted_support": "We have learned that some data was exposed to the internet due to an error in a Twitch server configuration change that was subsequently accessed by a malicious third party.",
+    "numbers": [],
+    "entities": ["Twitch", "Amazon"],
+    "time_period": "6-7 October 2021",
+    "region": "Global",
+    "confidence": "high",
+    "source_note_id": "twitch-responds-to-leak-revealing-earnings-of-top-streamers-and-more-dexerto"
+  },
+  {
+    "claim": "The leaked Twitch payout figures are stated before tax and after Twitch's revenue cut, and exclude donations, sponsorships and merchandise sales.",
+    "stance": "refutes",
+    "stance_target": "Leaked Twitch payout figures represent creator take-home income",
+    "evidence_type": "empirical",
+    "scope_conditions": "Applies to the whole leaked payout dataset; self-employment tax and business costs are not deducted",
+    "quoted_support": "this data only claims to be for revenue directly from Twitch, so it won't include donations, sponsorships, or merch sales ... streamers ranked with their rumored earnings before tax and after Twitch's cut.",
+    "numbers": [],
+    "entities": ["Twitch", "Dexerto"],
+    "time_period": "September 2019 - September 2021",
+    "region": "Twitch global",
+    "confidence": "high",
+    "source_note_id": "twitch-responds-to-leak-revealing-earnings-of-top-streamers-and-more-dexerto"
+  }
+]

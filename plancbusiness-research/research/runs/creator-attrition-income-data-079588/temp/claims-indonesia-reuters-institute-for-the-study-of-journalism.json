@@ -1,0 +1,44 @@
+[
+  {
+    "claim": "44% of Indonesians regularly pay attention to creators or influencers on social and video networks -- third-highest of 24 countries surveyed -- against 25% for news brands or journalists, one of the widest creator-over-institution gaps measured anywhere.",
+    "stance": "supports",
+    "stance_target": "The claim that Southeast Asian audience demand for creator content is among the highest in the world, so low measured creator income there cannot be explained by weak demand",
+    "evidence_type": "statistical",
+    "scope_conditions": "Indonesia; Reuters Institute Digital News Report 2024 and 2025 surveys, published 28 October 2025; measures news-context attention among social-media news users, so it understates total creator attention; audience-side measurement only",
+    "quoted_support": "Proportion that regularly pay attention to creators/influencers in social and video networks 44% (3/24) ... Proportion that regularly pay attention to news brands/journalists in social and video networks 25% (15/24)",
+    "numbers": ["44% creators (rank 3 of 24)", "25% news brands (rank 15 of 24)", "population 280 million", "internet penetration 69%", "57% social media for news weekly"],
+    "entities": ["Reuters Institute for the Study of Journalism", "University of Oxford", "Indonesia"],
+    "time_period": "2024-2025 surveys, published October 2025",
+    "region": "Indonesia",
+    "confidence": "high",
+    "source_note_id": "indonesia-reuters-institute-for-the-study-of-journalism"
+  },
+  {
+    "claim": "12 of the top 15 most-named Indonesian creators and news influencers are men, a measured gender concentration at the top of the Indonesian attention distribution.",
+    "stance": "supports",
+    "stance_target": "The claim that creator attention and therefore creator income concentrates along demographic lines, so aggregate creator statistics conceal systematic distributional inequality",
+    "evidence_type": "statistical",
+    "scope_conditions": "Indonesia; derived from open-text respondent naming in the 2024-2025 Digital News Report, cleaned with OpenRefine and cross-checked with an LLM recode; the institute cautions rank order is indicative not definitive; news-context naming only",
+    "quoted_support": "Gender balance 12 of the top 15 individuals are men",
+    "numbers": ["12 of top 15 are men", "80%", "24 countries in study"],
+    "entities": ["Reuters Institute for the Study of Journalism", "Indonesia"],
+    "time_period": "2024-2025",
+    "region": "Indonesia",
+    "confidence": "medium",
+    "source_note_id": "indonesia-reuters-institute-for-the-study-of-journalism"
+  },
+  {
+    "claim": "The top of the Indonesian creator distribution reaches audiences of tens of millions -- Willie Salim over 70m TikTok followers, Atta Halilintar 38m Instagram, Deddy Corbuzier 24m -- while no published data exists on what any Indonesian creator below that tier earns.",
+    "stance": "supports",
+    "stance_target": "The claim that Southeast Asian creator evidence documents only the extreme top of the distribution, leaving the median and lower tiers entirely unmeasured",
+    "evidence_type": "empirical",
+    "scope_conditions": "Indonesia, follower counts as reported October 2025; follower counts are platform-reported and not audited; no earnings data accompanies any of these figures",
+    "quoted_support": "Willie Salim is an influencer who is known for his creative short videos, comedy skits, and high engagement on TikTok where he has over 70m followers.",
+    "numbers": ["Willie Salim >70m TikTok", "Joko Widodo 59m Instagram", "Atta Halilintar 38m Instagram / 24m TikTok", "Deddy Corbuzier 24m", "Lambe Turah 12m Instagram"],
+    "entities": ["Willie Salim", "Atta Halilintar", "Deddy Corbuzier", "Ria Ricis", "Lambe Turah", "TikTok", "Instagram", "YouTube"],
+    "time_period": "October 2025",
+    "region": "Indonesia",
+    "confidence": "medium",
+    "source_note_id": "indonesia-reuters-institute-for-the-study-of-journalism"
+  }
+]

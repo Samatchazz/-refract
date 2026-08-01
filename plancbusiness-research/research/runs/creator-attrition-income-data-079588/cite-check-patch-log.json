@@ -1,0 +1,114 @@
+{
+  "total_findings": 9,
+  "applied": [
+    {
+      "finding": 1,
+      "severity": "critical",
+      "verdict": "wrong-source",
+      "section": "1B. The absence, and who holds the missing data",
+      "action": "citation-swap",
+      "from": "[[youtube-channel-survival-rates-a-7-year-creator-study-creatormap]]",
+      "to": "[[youtube-channel-lifespan-half-life-study-of-97601-creators-creatormap-creatormap]]",
+      "note": "Sentence content unchanged; the 105,891-vs-97,601 title/body mismatch and the 8.8-year median lifespan live in the Half-Life Study post, not the 7-Year Creator Study post.",
+      "word_delta": 0
+    },
+    {
+      "finding": 2,
+      "severity": "major",
+      "verdict": "partially-supported",
+      "section": "2A. Median and mean, side by side",
+      "action": "citation-removal",
+      "removed": "[[the-unbearable-lightness-of-streaming-superjoost-playlist]]",
+      "note": "The four Twitch-leak constraints (896,261 exclusion, account-not-person unit, $100 payout floor, undisclosed country composition) are all WSJ-note facts; van Dreunen supports none of them. He remains cited in 6B for the leak's denominator instability, which is his actual contribution.",
+      "word_delta": 0
+    },
+    {
+      "finding": 3,
+      "severity": "critical",
+      "verdict": "unsupported",
+      "section": "2A. Median and mean, side by side",
+      "action": "citation-removal",
+      "removed": "[[twitch-responds-to-leak-revealing-earnings-of-top-streamers-and-more-dexerto]]",
+      "note": "Washington Post note left as sole citation; it is the actual source of the 25% figure, the 8,000th-ranked account, $29,396, $14,698 and $15,080. Dexerto covers only leak verification and is not re-sited elsewhere.",
+      "word_delta": 0
+    },
+    {
+      "finding": 4,
+      "severity": "major",
+      "verdict": "partially-supported",
+      "section": "2B. The living-wage share, as a matrix rather than a number",
+      "action": "date-correction",
+      "from": "rose from 0.30 in June 2013 to 0.60 by December 2020 ... cross-topic Gini fell from 0.80 to 0.72",
+      "to": "rose from 0.30 in 2015 to 0.60 by December 2020 ... cross-topic Gini fell from 0.80 to 0.72 after mid-2015",
+      "note": "June 2013 is the Patreon dataset's collection start, not the Gini series start; the paper anchors both series to 2015 / mid-2015. End dates were already correct and were left untouched.",
+      "word_delta": 1
+    },
+    {
+      "finding": 5,
+      "severity": "critical",
+      "verdict": "wrong-source",
+      "section": "4B. What models of actual continuation find",
+      "action": "citation-removal",
+      "removed": "[[play-playbour-or-labour-the-relationships-between-perception-of]]",
+      "note": "N=377 PLS-SEM, p=0.000 and p=0.052 all belong to fame-and-fortune-or-just-fun, already co-cited and now sole citation. The ANOVA companion's own N=382 finding in section 2D retains its correct co-citation and was not touched.",
+      "word_delta": 0
+    },
+    {
+      "finding": 6,
+      "severity": "critical",
+      "verdict": "wrong-source",
+      "section": "5C. Southeast Asia is nine conditions, not one",
+      "action": "citation-swap",
+      "from": "[[tiktoks-socio-economic-impact-in-southeast-asia-a-summary-of-the-report-kadence]]",
+      "to": "[[the-tiktok-effect]]",
+      "note": "Myanmar-only disclosed sub-base, the US$216/month Indonesia benchmark and the self-selected recruitment design are all in the recovered 36-page primary report, not the vendor summary. The Kadence summary remains cited in 6C where its absence of an 8-million headcount is the load-bearing fact.",
+      "word_delta": 0
+    },
+    {
+      "finding": 7,
+      "severity": "major",
+      "verdict": "partially-supported",
+      "section": "5B. Four measured mechanisms of non-transfer",
+      "action": "date-correction",
+      "from": "[[technologies]] 2023",
+      "to": "[[technologies]] 2021",
+      "note": "Verified against the note's frontmatter: World Bank / Australian Government 'Beyond Unicorns', July 2021, on SAKERNAS 2019, SUSENAS 2019 and a Feb-Mar 2020 Digital Economy Household Survey. '2023' appears nowhere in the note.",
+      "word_delta": 0
+    },
+    {
+      "finding": 8,
+      "severity": "major",
+      "verdict": "partially-supported",
+      "section": "5D. The rest of the regional record",
+      "action": "reword",
+      "from": "Two Vietnamese-language pieces presented as local creator-income coverage paraphrase",
+      "to": "A Vietnamese-language piece presented as local creator-income coverage paraphrases",
+      "note": "No second Vietnamese-language note exists in the corpus to cite, so the count was corrected to singular rather than a citation added.",
+      "word_delta": -1
+    },
+    {
+      "finding": 9,
+      "severity": "major",
+      "verdict": "partially-supported",
+      "section": "5D. The rest of the regional record",
+      "action": "reword",
+      "from": "and regional evidence finds Southeast Asian creators with systematically worse structural access",
+      "to": "and that access is systematically worse outside the West, Indonesia and Thailand included",
+      "note": "Scoped rather than hedged. The 241234693 note samples India, Ireland and Turkey, which supports 'outside the West' but not 'Southeast Asian'; the Rieder note genuinely supplies the Indonesia/Thailand link-infrastructure gap, so both citations now match what they carry. The labelled inference that follows still stands, since Indonesia and Thailand are now named from the source that actually measures them.",
+      "word_delta": 1
+    }
+  ],
+  "skipped": [],
+  "conflicts": [],
+  "orchestrator_escalated": [],
+  "net_word_delta": 1,
+  "citations_removed": 4,
+  "citations_swapped": 2,
+  "preserved_verbatim": [
+    "six H2 headings, verbatim and in order",
+    "the labelled 0.043% / 0.43% inference sentence",
+    "the three Patreon-adjacent income medians with their inclusion floors",
+    "the corrected Indonesian reading: 63% citable with caveats, 8-million headcount an orphan",
+    "wikilink citation style, no Sources section, no YAML frontmatter"
+  ]
+}

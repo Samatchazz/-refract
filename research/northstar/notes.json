@@ -1,0 +1,332 @@
+{
+  "_intro": "Two things to know before reading.\n\n**This round asked a different question from the earlier research.** The earlier round hunted for the best individual effects across ~25 sites, which is how we ended up with 14 good modules and no skeleton. This round hunts for structural coherence on a content shape like ours — one long argued document, typography-led, little or no photography. Several sites that scored well in the earlier round score badly here, and that is the point, not a contradiction.\n\n**A large share of award-winning sites cannot teach us a grid at all.** Of 39 sites attempted, 5 render essentially no DOM text — they are WebGL or canvas compositions where the type is drawn into a texture. They are listed at the bottom with the reason. Several more render fine but are disqualified on content shape rather than on quality: a photo-led portfolio index has no structure that transfers to an 8-section argument, however good it looks. Where a site's sections are empty scroll-driver spacers, the left-edge test reports fewer sections than the page appears to have — that is the honest count of sections that actually paint text.\n\nEverything below was measured. Where something could not be read, it says so.",
+  "_recommendations": "### Recommended three — with reasons, not a decision\n\nThe client picks. These are the three the measurements support, and why.\n\n**1 · Klim — Söhne specimen.** The strongest coherence evidence in the entire set: **one left edge, standard deviation exactly 0**, sustained across 30.5 viewport-heights and 6 sections, with 9 distinct font sizes on the whole page and **zero** sections at 100vh. No photography at all. It is the cleanest available proof that a long document holds together on typography alone, and its numbers are the least ambiguous to copy. The catch is content shape: it argues for a typeface, not a service, and has no equivalent of our proof numbers or service pillars — we would inherit its spatial system and still have to invent the section anatomy ourselves.\n\n**2 · EXAT.** The closest content shape with almost as much discipline: **two left edges, σ 2.38px** — effectively one rail plus a single deliberate second column — across 8 text-bearing sections and 33.4vh, with none of them at 100vh. Its constraining container measured **1439.91px**, which independently lands on the 1440px `--page-max` the skeleton already guessed. Structurally it is our page: a sustained argument in numbered parts, mostly text, one accent element per section. It is the only candidate in the set that is both a real one-page argument and demonstrably grid-disciplined.\n\n**3 · Studio OFF-BEAT.** The best dual-script evidence. **Eight distinct font sizes** is the tightest type discipline of any editorial site measured, on a real 12-column grid with a 25.92px gutter. It runs Korean and Latin at two clearly separated hierarchy levels — the exact problem Thai + Latin gives us — and its **body leading of 1.40 already clears the Thai floor with room to spare** (its Thai minimum is 1.333). Klim scrapes past at 1.33 against a 1.333 minimum; EXAT sets body at 1.20 and would need +0.18, which lengthens every text section on the page. Its display leading (0.80) does not survive Thai, but a display system is one value to change; a body system is the whole reading experience.\n\n**Why not the others.** *Sakazuki* was the strongest seed on paper and does not survive measurement as a skeleton: five left edges with σ 68px and twenty-four distinct font sizes. Beautifully made, but closer to what we already built than to what we are missing. *taper.design*'s homepage is a short Squarespace landing, not the long essay — the essay is at `/design-philosophy` and was measured separately; its type discipline is remarkable (three font sizes) but it is centred with no grid, so there is no left-edge system to inherit. *Acquisition.com* has the right argumentative content and no imagery, but five left edges at σ 327px and a 132-character reading measure make it a counterexample, not a model.",
+  "_thaiProse": "## What this means structurally\n\nThree findings that outlive this particular decision.\n\n**1 · The Thai-safe floor is a property of the script, not of the site.** Across every candidate measured, the minimum collision-free display leading in Kanit 700 lands in a narrow band of **1.28 to 1.37**, almost regardless of what the reference site does. The number is set by the tallest upper-vowel stack meeting the deepest lower-vowel stack, and those extents belong to the font, not to the layout. Practically: no reference site can license a display leading below about 1.28, and the 1.30 already in the build sits just above that floor rather than comfortably above it.\n\n**2 · Tight display leading is the most common structurally hostile decision.** Read down the display column: 0.60, 0.75, 0.78, 0.80, 0.80, 0.80, 0.84, 0.85, 0.90. Sub-1.0 leading on very large headlines is close to a house style in this genre — it is how a two-line headline is made to read as one dense block. **Thai cannot do it at any size.** A site whose display identity depends on lines nearly touching does not have a display identity we can borrow; we would keep its proportions and lose the thing that made it look like that. This disqualifies more candidates on aesthetics than any grid measurement does.\n\n**3 · Body leading is where candidates genuinely differ.** Display leading is cheap to override — one value. Body leading is the reading experience across the whole page, and the spread there is real: sites at 1.15–1.25 need a correction that visibly lengthens every text section, while sites already at 1.40 or above cost nothing. When two candidates are otherwise equal, **prefer the one whose body leading already clears the Thai floor**, because that is the number that changes how tall the page becomes.\n\n**What this test does not prove.** It measures ink collision only — whether glyphs physically touch. It does not measure whether the result reads well. A leading that clears by 1px is legal and still cramped. The control sweep is the useful reference: at 64px, 1.30 clears by 1.2px and 1.40 by 7.6px. Both \"pass\", and they do not look the same on screen. If a section reads as cramped in Thai, the fix is more leading, not a smaller size.",
+  "klim-soehne": {
+    "rank": null,
+    "docType": "Retail typeface specimen — a long argued case for a single typeface, zero photography.",
+    "award": "No award recorded — a foundry specimen, not an award entrant",
+    "awardUrl": null,
+    "criteria": "Long ✅ (30.5vh) · typography-led ✅ · argumentative ✅ · current ✅ · one document ✅ — passes all five.",
+    "fit": "We would inherit the spatial system wholesale: one left rail that never moves, a wide display size sitting directly above a narrow meta row, and section padding that stays constant so length alone signals importance. Its 9-size scale is close to the skeleton's 9-value scale, which is quiet corroboration that the guess was the right order of magnitude. What it cannot give us is section anatomy — it has no numbered eyebrow, no proof block, no service pillar — so §4 of SITE-SKELETON stays our own invention.",
+    "shapeMatch": "specimen, not a service argument",
+    "adoptionCost": "low — grid already close"
+  },
+  "exat": {
+    "docType": "Typeface specimen built as a one-page argument: About → Type Tester → Character Set → Design Space → OpenType → Language Support.",
+    "award": "Awwwards Typography Honors Mar 2025 · Site of the Day Apr 3, 2025",
+    "awardUrl": "https://www.awwwards.com/sites/exat-typeface",
+    "criteria": "Long ✅ · typography-led ✅ · argumentative ✅ · 2025 ✅ · one document ✅ — passes all five.",
+    "fit": "The closest thing in the set to our page shape: eight text-bearing sections that each make one point and hand off to the next, held on one rail with a single second column for supporting text. We would inherit the container width (measured 1439.91px, effectively confirming --page-max: 1440px), the two-edge discipline, and the pacing evidence that a 33-viewport document needs no full-screen sections at all. Its type scale is wider than ours needs — a specimen shows off sizes by definition — so we would take its spatial system and keep the skeleton's tighter 9-value scale.",
+    "shapeMatch": "closest — argued one-pager in numbered parts",
+    "adoptionCost": "low–medium"
+  },
+  "offbeat": {
+    "docType": "Studio site written as an editorial document, Korean and Latin at separated hierarchy levels.",
+    "award": "Awwwards Honorable Mention Mar 18, 2026",
+    "awardUrl": "https://www.awwwards.com/sites/studio-off-beat",
+    "criteria": "Long ✅ · typography-led ✅ · argumentative ✅ · 2026 ✅ · one document ✅.",
+    "fit": "The dual-script evidence we actually need. It solves the same problem Thai gives us — a non-Latin body face and a Latin display face that must not compete — by putting them at clearly different sizes and letting the Latin headline own the left rail while the Korean body sits in an indented column. Its 12-column grid with a 25.92px gutter is directly transferable, and its body leading of 1.40 is the only one in the top group that needs no Thai correction. We would inherit the grid, the two-level script hierarchy, and the body leading; we would not inherit its 0.80 display leading, which Thai cannot render.",
+    "shapeMatch": "strong — studio argument, dual script",
+    "adoptionCost": "medium — grid change"
+  },
+  "sakazuki": {
+    "docType": "Membership/brand site: Philosophy → Collective → Benefits → Founder → FAQ.",
+    "award": "Awwwards Typography Honors May 2026 · Site of the Day Jun 14, 2026",
+    "awardUrl": "https://www.awwwards.com/sites/sakazuki",
+    "criteria": "Long ✅ · typography-led ⚠️ (pattern and illustration do real work) · argumentative ✅ · 2026 ✅ · one document ⚠️.",
+    "edgeNote": "This is the finding that matters most about this candidate: its section order is almost exactly ours, but its left edges are not shared, and that is precisely the failure the client described in our own build.",
+    "fit": "Useful as a content-order reference and almost useless as a skeleton. It confirms that Philosophy → pillars → founder is a workable order for this kind of page, but its measured discipline is no better than what we already have — twenty-four distinct font sizes and five unshared left edges. Adopting it would not fix the problem it was nominated to fix.",
+    "shapeMatch": "very strong on content order",
+    "adoptionCost": "high — no system to inherit"
+  },
+  "taper-philosophy": {
+    "docType": "The actual long argumentative essay — a first-person manifesto about rod design, running nine sections.",
+    "award": "Parent site listed on Awwwards (Japan)",
+    "awardUrl": "https://www.awwwards.com/websites/Japan/",
+    "criteria": "Long ✅ · typography-led ✅ (no imagery in the body) · argumentative ✅ · 2025 ✅ · one document ✅.",
+    "edgeNote": "The edge spread here is an artefact of centred text, not of drift — a centred paragraph's left edge moves with its own length. Read the font-size count instead.",
+    "fit": "One lesson, and it is a big one: **three distinct font sizes across a nine-section essay**, and it still reads as a designed document. That is a stronger discipline argument than anything else measured and it is worth quoting at the client. But it is centred, has no grid, and lets the nav overlap the text — there is no left-edge system to inherit, so it cannot be the north star even though it is the purest argument-shaped document in the set.",
+    "shapeMatch": "strong content shape, no grid",
+    "adoptionCost": "n/a — nothing structural to adopt"
+  },
+  "taper": {
+    "docType": "Squarespace homepage — a short landing page, not the essay. The essay lives at /design-philosophy and is measured separately.",
+    "award": "Listed on Awwwards (Japan)",
+    "awardUrl": "https://www.awwwards.com/websites/Japan/",
+    "criteria": "Long ❌ (1.1vh) · typography-led ❌ (photograph-led hero) · argumentative ❌ on this page · 2025 ✅ · one document ❌.",
+    "fit": "The seed brief pointed at the wrong URL. This page is a one-screen Squarespace landing with a product photograph and a nine-item nav; the long argued document the brief described is at `/design-philosophy`. Kept in the list so the record is honest about it.",
+    "shapeMatch": "none — wrong page",
+    "adoptionCost": "n/a"
+  },
+  "acquisition": {
+    "docType": "Service and credibility page — numbers-with-provenance as proof, no imagery.",
+    "award": "None — included for content structure only, as the brief specified",
+    "awardUrl": null,
+    "criteria": "Long ⚠️ (3.4vh) · typography-led ✅ · argumentative ✅ · 2025 ✅ · one document ⚠️.",
+    "fit": "Worth reading for one thing only: how a claim is bound to its evidence in the same block, which is directly relevant to our §3 proof numbers. Structurally it is a counterexample — five unshared left edges and a 132-character reading measure, which is roughly three times a comfortable one.",
+    "shapeMatch": "good on proof blocks only",
+    "adoptionCost": "high"
+  },
+  "plan-az": {
+    "docType": "Korean agency site: value words (CREATIVITY / SPEED …) each argued in a paragraph, plus numbered cases 001–004.",
+    "award": "Awwwards Honorable Mention Feb 16, 2026",
+    "awardUrl": "https://www.awwwards.com/sites/plan-a-z",
+    "criteria": "Long ✅ (32.2vh) · typography-led ⚠️ (an abstract 3D panel sits beside every value) · argumentative ✅ · 2026 ✅ · one document ✅.",
+    "fit": "The nearest content twin to our §6 and §7: a value word, a one-line gloss in a pill, then a short argued paragraph, repeated. If the client wants a model for the *value grid specifically* rather than the whole page, this is it. As a whole-page skeleton it is weaker than the top three — its left edges do not resolve to one rail, and it leans on the paired 3D panel to hold each section together, which we cannot copy with one photograph.",
+    "shapeMatch": "very strong for the value grid",
+    "adoptionCost": "medium"
+  },
+  "4wide": {
+    "docType": "Japanese studio site that declares its own system on the page — PP Neue Montreal + Noto Sans JP, 12/6 columns.",
+    "award": "Awwwards Honorable Mention Apr 13, 2026",
+    "awardUrl": "https://www.awwwards.com/sites/4wide",
+    "criteria": "Long ✅ · typography-led ✅ · argumentative ⚠️ (part studio pitch, part project index) · 2026 ✅ · one document ✅.",
+    "fit": "Valuable as documentation rather than as a north star: it states its 12/6 column system in its own copy and then visibly uses it, so it is the easiest site in the set to reverse-engineer. Its measured edge spread is wide because it deliberately centres and right-aligns whole sections. Use it to sanity-check our 12-column desktop / 4-column mobile decision, not to set the rail.",
+    "shapeMatch": "medium",
+    "adoptionCost": "medium"
+  },
+  "tomoyaokada": {
+    "docType": "A numbered index as the entire interface — a 100+ row table of experiments, zero imagery.",
+    "award": "Awwwards Honorable Mention Aug 10, 2025",
+    "awardUrl": "https://www.awwwards.com/sites/tomoya-okada-portfolio",
+    "criteria": "Long ✅ · typography-led ✅ · argumentative ❌ (an index, not an argument) · 2025 ✅ · one document ✅.",
+    "fit": "One left edge with σ 0 and four distinct font sizes — extreme restraint, and proof that a page can be entirely typographic and still feel designed. But an index has no rhetorical structure, so nothing about its section rhythm transfers to a page that has to build to a close. Read it as evidence for the discipline targets, not as a skeleton.",
+    "shapeMatch": "weak — index, not argument",
+    "adoptionCost": "n/a"
+  },
+  "tamakiyoshida": {
+    "docType": "Portfolio running Kanji and Latin at equal hierarchical weight across 17 short sections.",
+    "award": "Listed on Awwwards (Japan)",
+    "awardUrl": "https://www.awwwards.com/websites/Japan/",
+    "criteria": "Long ⚠️ (5.6vh) · typography-led ✅ · argumentative ❌ (portfolio index) · 2026 ✅ · one document ✅.",
+    "thaiNote": "Notable as one of the very few candidates whose display leading survives Thai untouched — because it sets its largest type at 16px, i.e. it has no display tier at all.",
+    "fit": "Interesting mainly as a limit case: three font sizes, seventeen sections, and no display tier whatsoever. It shows how far restraint can be pushed, but a page with no display type cannot open or close an argument, and ours has to do both.",
+    "shapeMatch": "weak",
+    "adoptionCost": "n/a"
+  },
+  "elicyon": {
+    "docType": "Interior design studio — run-together mixed-case headline system.",
+    "award": "Awwwards Typography Honors Nov 2025 · Honorable Mention Nov 3, 2025",
+    "awardUrl": "https://www.awwwards.com/sites/elicyon",
+    "criteria": "Long ✅ · typography-led ⚠️ · argumentative ⚠️ · 2025 ✅ · one document ✅.",
+    "fit": "A real 12-column grid with a 20px gutter and a 371px text column — useful corroboration for our gutter choice. The headline treatment it was nominated for does not survive Thai, which has no case distinction to run together.",
+    "shapeMatch": "medium",
+    "adoptionCost": "medium"
+  },
+  "ironhill": {
+    "docType": "Whiskey brand story — cinematic, image-led, chaptered.",
+    "award": "Awwwards Typography Honors Dec 2025 · Site of the Day Jan 22, 2026",
+    "awardUrl": "https://www.awwwards.com/sites/ironhill",
+    "criteria": "Long ✅ · typography-led ❌ (photography carries it) · argumentative ⚠️ · 2026 ✅ · one document ✅.",
+    "fit": "Included because it is the clearest counterexample to the skeleton's 100vh rule — see the contradictions section. Not a candidate: its coherence comes from photography we do not have.",
+    "shapeMatch": "weak — photo-led",
+    "adoptionCost": "n/a"
+  },
+  "izanami": {
+    "docType": "Japanese brand site — School / Craft / Retreat, very restrained.",
+    "award": "Awwwards Site of the Day Jul 18, 2026",
+    "awardUrl": "https://www.awwwards.com/sites/izanami",
+    "criteria": "Long ⚠️ (9.6vh) · typography-led ⚠️ · argumentative ⚠️ · 2026 ✅ · one document ✅.",
+    "fit": "Two left edges at σ 78px and seven font sizes — genuinely disciplined, and its body leading of 2.40 is the most generous measured, which is a useful reminder that CJK body text tolerates far more air than Latin. Too short and too sparse to model a 950–1200vh page on.",
+    "shapeMatch": "medium",
+    "adoptionCost": "medium"
+  },
+  "tiktoksans": {
+    "docType": "Typeface specimen and release page for TikTok Sans.",
+    "award": "Awwwards Typography Honors Aug 2025 · Honorable Mention Aug 5, 2025",
+    "awardUrl": "https://www.awwwards.com/sites/tiktok-sans",
+    "criteria": "Long ✅ · typography-led ✅ · argumentative ✅ · 2025 ✅ · one document ⚠️ — included largely as a measured counterexample.",
+    "fit": "A cautionary measurement. It is a typography award winner and it has the worst left-edge spread in the whole set — ten distinct edges, σ 1091px — because it alternates full-bleed and centred sections. It is proof that 'won a typography award' and 'has a coherent spatial system' are independent properties, which is exactly the confusion that produced our current problem.",
+    "shapeMatch": "specimen",
+    "adoptionCost": "high"
+  },
+  "groteskly": {
+    "docType": "Independent foundry front page — a grid of typeface cards.",
+    "award": "Awwwards Typography Honors Jun 2025 · Honorable Mention Jun 16, 2025",
+    "awardUrl": "https://www.awwwards.com/sites/groteskly-yours-studio",
+    "criteria": "Long ⚠️ (6.7vh) · typography-led ✅ · argumentative ❌ (product index) · 2025 ✅ · one document ✅.",
+    "fit": "One left edge, σ 0, five font sizes — more corroboration that the disciplined end of this genre sits at 1 edge and under 10 sizes. Too short and too index-shaped to be the north star.",
+    "shapeMatch": "weak",
+    "adoptionCost": "n/a"
+  },
+  "dinamo-whyte": {
+    "docType": "Foundry typeface page for ABC Whyte.",
+    "award": "None recorded",
+    "awardUrl": null,
+    "criteria": "Long ✅ · typography-led ✅ · argumentative ✅ · current ✅ · one document ⚠️ — measured mainly as a discipline counterexample.",
+    "fit": "Thirty-eight distinct font sizes, of which only thirteen are used more than once. A specimen legitimately needs many sizes, but the gap between 38 rendered and 13 systematic is a good illustration of why the count is measured both ways in this report.",
+    "shapeMatch": "specimen",
+    "adoptionCost": "high"
+  },
+  "plusex15": {
+    "docType": "Korean agency anniversary site — very long, project-card led.",
+    "award": "Awwwards Developer Award · Site of the Day Oct 31, 2025",
+    "awardUrl": "https://www.awwwards.com/sites/beyond-design-into-experience",
+    "criteria": "Long ✅ (81.7vh — by far the longest measured) · typography-led ❌ (project imagery throughout) · argumentative ⚠️ · 2025 ✅ · one document ✅.",
+    "fit": "Worth one look for pacing evidence at extreme length — 81.7vh with only one section near 100vh — but its structure is carried by project imagery we do not have.",
+    "shapeMatch": "weak — photo-led",
+    "adoptionCost": "n/a"
+  },
+  "monolog": {
+    "docType": "Studio site — numbered story cards with video thumbnails.",
+    "award": "Awwwards Typography Honors Jun 2026 · Site of the Day Jul 6, 2026",
+    "awardUrl": "https://www.awwwards.com/websites/winner_category_typography/",
+    "criteria": "Long ✅ · typography-led ❌ (video and image cards) · argumentative ❌ (portfolio index) · 2026 ✅ · one document ✅.",
+    "fit": "A real 12-column grid with a 16px gutter, and a numbered-row pattern (07 · View All Stories · arrow) that is close to our sec-num idea. Otherwise a portfolio index whose rhythm is set by media cards.",
+    "shapeMatch": "weak",
+    "adoptionCost": "n/a"
+  },
+  "nippori": {
+    "docType": "Japanese radio-show site — deliberately maximalist overlapping collage.",
+    "award": "Awwwards Typography Honors Jan 2026",
+    "awardUrl": "https://www.awwwards.com/websites/winner_category_typography/",
+    "criteria": "Long ✅ · typography-led ⚠️ · argumentative ❌ · 2026 ✅ · one document ❌ by intent.",
+    "fit": "Thirty distinct font sizes and elements deliberately colliding — a Typography Honors winner that is the opposite of a shared system, on purpose. Included because it is the most useful reminder in the set that 'award-winning typography' and 'a system we can inherit' are different things.",
+    "shapeMatch": "none",
+    "adoptionCost": "n/a"
+  },
+  "normalisboring": {
+    "docType": "Spanish architecture studio — photography-led project index.",
+    "award": "Awwwards Site of the Day",
+    "awardUrl": "https://www.awwwards.com/websites/sites_of_the_day/",
+    "criteria": "Long ✅ · typography-led ❌ · argumentative ❌ (project index) · 2025 ✅ · one document ✅.",
+    "fit": "Disqualified on content shape — its coherence is an image grid, which teaches us nothing with one photograph.",
+    "shapeMatch": "none",
+    "adoptionCost": "n/a"
+  },
+  "museumofmoney": {
+    "docType": "Museum site — numbered chapters, sticker/collage aesthetic, photography throughout.",
+    "award": "None recorded",
+    "awardUrl": null,
+    "criteria": "Long ⚠️ · typography-led ❌ · argumentative ⚠️ · 2025 ✅ · one document ✅.",
+    "fit": "The numbered chapter marker (▼ 03 · WHAT Y'ALL SAY) is a clean pattern and close to our eyebrow idea. Everything else about it is carried by photography and sticker graphics.",
+    "shapeMatch": "weak",
+    "adoptionCost": "n/a"
+  },
+  "tyo-recruit": {
+    "docType": "Japanese recruitment site — 3D character work carries the page.",
+    "award": "Listed on Awwwards (Japan)",
+    "awardUrl": "https://www.awwwards.com/websites/Japan/",
+    "criteria": "Long ✅ · typography-led ❌ (3D imagery) · argumentative ✅ · 2026 ✅ · one document ✅.",
+    "fit": "Japanese recruitment sites are structurally the closest commercial genre to ours — a long argued case for choosing an organisation. This one answers it with 3D characters rather than typography, so the structure does not transfer, but the genre is worth remembering if the client wants more CJK references later.",
+    "shapeMatch": "good genre, wrong execution",
+    "adoptionCost": "n/a"
+  },
+  "tr-advanced": {
+    "docType": "Japanese recruitment site.",
+    "award": "Listed on Awwwards (Japan)",
+    "awardUrl": "https://www.awwwards.com/websites/Japan/",
+    "criteria": "Long ❌ (3.4vh) · typography-led ⚠️ · argumentative ✅ · 2026 ✅ · one document ✅.",
+    "fit": "Too short to teach sustained rhythm. Its body leading of 1.78 is the kind of generous CJK setting that transfers well to Thai.",
+    "shapeMatch": "weak",
+    "adoptionCost": "n/a"
+  },
+  "oji-brandbook": {
+    "docType": "Japanese corporate brand book, presented as a slide-style viewer.",
+    "award": "Listed on Awwwards (Japan)",
+    "awardUrl": "https://www.awwwards.com/websites/Japan/",
+    "criteria": "Long ❌ (1vh measured — it pages rather than scrolls) · typography-led ⚠️ · argumentative ✅ · 2026 ✅ · one document ⚠️.",
+    "thaiNote": "One of only three candidates whose display leading needs no Thai correction — because at 1.47 it is already generous.",
+    "fit": "A paged viewer, not a scrolled document, so it has no vertical rhythm to measure. Its 1.47 display leading is a useful data point for how much air Japanese display type is given.",
+    "shapeMatch": "weak — paged, not scrolled",
+    "adoptionCost": "n/a"
+  },
+  "funtech": {
+    "docType": "Japanese brand identity site — scrolls horizontally.",
+    "award": "Awwwards Honorable Mention Jun 16, 2026",
+    "awardUrl": "https://www.awwwards.com/websites/Japan/",
+    "criteria": "Long ⚠️ · typography-led ✅ · argumentative ✅ · 2026 ✅ · one document ⚠️.",
+    "fit": "Horizontally scrolling, so its measured 10662px 'container' is a track rather than a column and its vertical rhythm is irrelevant to us. Not a candidate.",
+    "shapeMatch": "none — horizontal",
+    "adoptionCost": "n/a"
+  },
+  "seasoned": {
+    "docType": "Koto Studio product site — 3D book renders throughout.",
+    "award": "Awwwards Typography Honors Feb 2025 · Site of the Day Mar 21, 2025",
+    "awardUrl": "https://www.awwwards.com/websites/winner_category_typography/",
+    "criteria": "Long ⚠️ · typography-led ❌ (3D renders) · argumentative ⚠️ · 2025 ✅ · one document ✅.",
+    "fit": "Disqualified on imagery — the 3D renders do the structural work.",
+    "shapeMatch": "none",
+    "adoptionCost": "n/a"
+  },
+  "planetono": {
+    "docType": "Awwwards typography winner — scroll-driven brand piece.",
+    "award": "Awwwards Typography Honors Feb 2026 · Developer Award · Site of the Day Mar 14, 2026",
+    "awardUrl": "https://www.awwwards.com/websites/winner_category_typography/",
+    "criteria": "Long ✅ · typography-led ⚠️ · argumentative ⚠️ · 2026 ✅ · one document ✅.",
+    "fit": "Measured for completeness. Its declared 2000px max-width is the widest in the set and would push our reading measure well past comfort if copied.",
+    "shapeMatch": "weak",
+    "adoptionCost": "n/a"
+  },
+  "pendragon": {
+    "docType": "Book-series promotional site — cinematic WebGL over a thin DOM.",
+    "award": "Awwwards Typography Honors Dec 2025 · Developer Award · Site of the Day Jan 3, 2026",
+    "awardUrl": "https://www.awwwards.com/websites/winner_category_typography/",
+    "criteria": "Long ❌ (1vh of measurable DOM) · typography-led ❌ · argumentative ❌ · 2026 ✅ · one document ✅.",
+    "fit": "Renders enough DOM to measure but not enough to learn from — the page is a WebGL composition with a text overlay. Not a candidate.",
+    "shapeMatch": "none",
+    "adoptionCost": "n/a"
+  },
+  "synthetictheatre": {
+    "docType": "Three-item nav ending in Manifesto, sections numbered 001/002/003 — but almost all content sits outside measurable document flow.",
+    "award": "None recorded",
+    "awardUrl": null,
+    "criteria": "Long ❌ (1.1vh measurable) · typography-led ✅ · argumentative ✅ · 2025 ✅ · one document ✅.",
+    "fit": "The nav-ending-in-Manifesto and 001/002/003 numbering are worth noting as naming patterns, but there is not enough measurable layout here to extract a grid.",
+    "shapeMatch": "good naming, no measurable structure",
+    "adoptionCost": "n/a"
+  },
+  "deso": {
+    "docType": "Studio site, short.",
+    "award": "None recorded",
+    "awardUrl": null,
+    "criteria": "Long ❌ (3.7vh) · typography-led ⚠️ · argumentative ⚠️ · 2025 ✅ · one document ✅.",
+    "fit": "Too short to teach sustained rhythm. Notable only for a display leading of 1.50, generous enough to survive Thai with room to spare.",
+    "shapeMatch": "weak",
+    "adoptionCost": "n/a"
+  },
+  "aristidebenoist": {
+    "docType": "Developer portfolio — heavily scroll-driven, most content lives in a fixed render layer above empty spacer sections.",
+    "award": "None recorded",
+    "awardUrl": null,
+    "criteria": "Long ❌ (1.9vh of measurable DOM) · typography-led ⚠️ · argumentative ❌ · 2025 ✅ · one document ✅.",
+    "fit": "Now renderable with a real browser, but its sections are empty scroll-driver spacers, so there is no section-level grid to read. Not a candidate.",
+    "shapeMatch": "none",
+    "adoptionCost": "n/a"
+  },
+  "dennissnellenberg": {
+    "docType": "Designer portfolio.",
+    "award": "None recorded",
+    "awardUrl": null,
+    "criteria": "Long ⚠️ (5vh) · typography-led ⚠️ · argumentative ❌ (portfolio) · 2025 ✅ · one document ✅.",
+    "fit": "Its 1728px declared max-width and 1.66 body leading are worth noting, but a portfolio's structure does not transfer to an argument.",
+    "shapeMatch": "weak",
+    "adoptionCost": "n/a"
+  },
+  "kprverse": {
+    "docType": "Brand-universe site — scroll-driven with a thin content DOM.",
+    "award": "None recorded",
+    "awardUrl": null,
+    "criteria": "Long ✅ · typography-led ❌ · argumentative ❌ · 2024–25 ⚠️ · one document ✅.",
+    "fit": "Renderable now, but its sections are scroll-driver spacers with no text of their own. Nothing structural to inherit.",
+    "shapeMatch": "none",
+    "adoptionCost": "n/a"
+  },
+  "igloo": {
+    "failNote": "Rendered with a real browser and still produced zero text nodes — the entire page is a WebGL composition."
+  },
+  "jungheonlee": {
+    "failNote": "10 text nodes over 3 canvases. Previously listed as unmeasurable by a plain fetcher; a real browser confirms there is genuinely almost no DOM, rather than the fetcher having been at fault."
+  },
+  "shining": {
+    "failNote": "2 text nodes and no canvas — content is injected into a shadow/render layer the probe cannot read as layout."
+  },
+  "imnotabot": {
+    "failNote": "Zero text nodes at 1440. The 390 pass did render (4.9vh, 5 sections) but a candidate we can only measure on mobile cannot settle a desktop grid."
+  },
+  "mijiheon": {
+    "failNote": "7 text nodes over 1 canvas — WebGL-driven."
+  },
+  "_contradictions": "## Where the measurements disagree with SITE-SKELETON.md\n\n`planc0/research/SITE-SKELETON.md` contains guesses. These are the measurements. Where they disagree, the measurement is what happened on real sites; the guess is what we assumed.\n\n### 1 · \"One shared left edge\" — half right, and the half that is wrong matters\n\n**The guess (§1):** every zone starts at column 2, producing one virtual left edge down the whole page — *\"this is half of the feeling of being one website.\"*\n\n**The measurement:** of the 24 sites with enough text-bearing sections to run the test, only **5 have one or two left edges** (Tomoya Okada, Groteskly, Klim, EXAT, Izanami). The other 19 use three or more.\n\nSo a single left edge is **not** what most good long pages do. But before discarding the rule, the more useful test: of the 19 sites with three or more edges, do those edges at least land on a common column step? Only **5 of 19 do** (Offbeat 48px, TYO Recruit 48px, FUNTECH 58px, Museum of Money 68px, Tamaki Yoshida 169px, all within 4px). The remaining 14 are genuine drift — their edges have no arithmetic relationship to each other at all.\n\n**Net:** roughly **10 of 24** measured documents have a defensible left-edge system, by either route. The skeleton's rule is therefore *sufficient but not necessary* — one rail guarantees coherence, but a strict column step achieves it too. What no coherent site does is what our current build does: several edges with no relationship between them. **Keep the rule.** It is the cheaper of the two valid routes, and it is the one that survives having only eight sections to establish a pattern in.\n\n### 2 · \"No section may be exactly 100vh\" — contradicted as an absolute\n\n**The guess (§5):** *\"ห้าม section ไหนสูงเท่ากับ 100vh พอดี\"* — no section may be exactly one viewport tall, because that always reads as a slide.\n\n**The measurement:** **16 of 34** measured sites have at least one section within ±3% of 100vh, and that group includes Awwwards Site-of-the-Day winners. Exactly-100vh sections are common, not disqualifying.\n\nBut the distribution is the real finding. Among sites with five or more sections, **no site exceeds two** exactly-100vh sections: Offbeat 2/7, Elicyon 2/6, Plan AZ 2/5, MONOLOG 2/8, TikTok Sans 2/10, and eight more at 1. The only sites where a *majority* of sections are 100vh are the ones with just one to three sections total — the slide-style pages (Pendragon 1/1, OJI 1/1, Synthetic Theatre 1/1, Iron Hill 2/3), and those are exactly the pages that read as decks.\n\n**Net:** the mechanism the skeleton describes is real, but the threshold is wrong. **One or two full-screen sections read as punctuation; a page where most sections are full-screen reads as a deck.** The skeleton's own exception in §5.4 — three deliberate full-screen moments — already encodes the right idea; it is the blanket ban in §5.1 that overshoots. Our planned 3 of ~10 sits at the top of observed practice but inside it. Recommend relaxing §5.1 from a prohibition to a budget: *at most 3 of 8, and only where full-screen is the point.*\n\n### 3 · \"No spacing value outside the scale\" — stricter than any site measured\n\n**The guess (§2):** a fixed 11-step scale, and *\"ห้ามมีค่าระยะห่างอื่นในโค้ดทั้งหมด\"* — no other spacing value anywhere.\n\n**The measurement:** the largest divisor that explains 80% of each site's spacing values is **2px for 15 sites and 4px for 6**. Not one measured site has an 8px base unit at that coverage. Real sites use a named scale for the big decisions and then take optical liberties everywhere else.\n\n**Net:** no site earns this rule, so it cannot be justified by reference to one. It is still a good rule *for us* — the failure the client identified is inconsistency, and a hard scale is the cheapest cure — but it should be presented as our discipline, not as observed practice.\n\n### 4 · `--page-max: 1440px` — supported\n\nMeasured constraining containers: **EXAT 1439.91px**, Acquisition 1370px, Museum of Money 1280px, Iron Hill 1200px, Dennis Snellenberg 1728px, Planetono and Taper 2000px (Squarespace default). 1440 sits squarely in the middle of the band, and the closest structural match in the whole set landed on it independently. No change.\n\n### 5 · `--zone-text` at 34ch — narrow, but defensible\n\nReading measures of real body columns, in conventional ch (the width of a `0` glyph — the brief's 100-character method reads about 1.3× higher, and both are in `measurements.json`):\n\nEXAT 33.9 · Groteskly 32.4 · Iron Hill 32.9 · Offbeat 41.5 · Klim 46.5 · Elicyon 47.0 · Izanami 48.1 · Sakazuki 48.6 · Dinamo 49.3 · TikTok Sans 50.4 · Nippori 51.6 · MONOLOG 55.0 · 4WIDE 60.4\n\nMedian ≈ **47ch**. Our 34ch is at the narrow end of the band but three measured sites — including EXAT — sit right there. **Not a contradiction, but worth knowing we are choosing the tight end deliberately.** If Thai body text feels cramped in testing, there is measured precedent for going to ~45ch.\n\n### 6 · Total page length 950–1200vh — we are planning a much shorter document than the comparables\n\n**The guess (§7):** roughly 9.5 to 12 viewport-heights total.\n\n**The measurement:** the comparable long argued documents are **two to three times longer**. EXAT 33.4 · Plan AZ 32.2 · Klim 30.5 · Sakazuki 28.2 viewport-heights, with PLUS-EX at 81.7. Nothing in the set that reads as a sustained document is under about 10, and the ones we would most want to be compared to are around 30.\n\n**Net:** this is the largest single gap between the skeleton and observed practice, and it is not a formatting detail — length is how these pages earn the feeling of being a document rather than a landing page. Two honest readings: either our content genuinely is shorter and the target is right, or the target was set by what the existing 14 modules already added up to. Worth deciding on purpose. **This one should be checked against the actual Thai copy before anything else in the skeleton changes.**\n\n### 7 · Something the skeleton does not mention and probably should\n\nOf the 34 measured sites, **20 have at least one persistent fixed or sticky element**, and the ones that read most clearly as a single document have a small persistent marker rather than a large one — a section counter, a progress rail, a sticky label. The skeleton's §6.2 rail is therefore well-supported by practice. But **nav state is not**: only about half the measured sites change their nav at all between scrollY 0 and 2000, so §6.3's shrinking nav is optional, not a coherence requirement. Spend the effort on the rail.\n"
+}

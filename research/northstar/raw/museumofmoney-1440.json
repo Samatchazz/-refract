@@ -1,0 +1,978 @@
+{
+  "slug": "museumofmoney",
+  "url": "https://www.museumofmoney.com",
+  "name": "Museum of Money",
+  "country": "USA",
+  "viewport": {
+    "width": 1440,
+    "height": 900
+  },
+  "ok": true,
+  "httpStatus": 200,
+  "finalUrl": "https://museumofmoney.com/",
+  "consentDismissed": [],
+  "scrollInfo": {
+    "contentHeight": 5675,
+    "docScrollHeight": 5580,
+    "maxElementBottom": 5675,
+    "innerScrollerHeight": 0,
+    "virtualScroll": false
+  },
+  "document": {
+    "scrollHeight": 5580,
+    "vhMultiple": 6.31,
+    "textNodeCount": 184,
+    "canvasCount": 0,
+    "elementCount": 475,
+    "title": "Interactive Money Museum in Dallas | MoMoney",
+    "lang": "en",
+    "contentHeight": 5675,
+    "scrollMode": "native"
+  },
+  "container": {
+    "dominantPairs": [
+      {
+        "width": 1184,
+        "left": 128,
+        "count": 3,
+        "sample": {
+          "tag": "p",
+          "cls": "text-base md:text-lg lg:text-xl text-brand-ink/70 font-norma"
+        }
+      },
+      {
+        "width": 267,
+        "left": 195,
+        "count": 2,
+        "sample": {
+          "tag": "p",
+          "cls": "font-display text-lg md:text-xl leading-tight tracking-tight"
+        }
+      },
+      {
+        "width": 368,
+        "left": 944,
+        "count": 2,
+        "sample": {
+          "tag": "h3",
+          "cls": "mb-3 font-display text-2xl uppercase leading-tight"
+        }
+      },
+      {
+        "width": 400,
+        "left": 128,
+        "count": 2,
+        "sample": {
+          "tag": "h3",
+          "cls": "mb-1 font-display text-lg uppercase"
+        }
+      },
+      {
+        "width": 1,
+        "left": -1,
+        "count": 1,
+        "sample": {
+          "tag": "a",
+          "cls": "sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left"
+        }
+      },
+      {
+        "width": 645,
+        "left": 56,
+        "count": 1,
+        "sample": {
+          "tag": "h1",
+          "cls": "absolute z-20 bottom-6 left-4 sm:bottom-10 sm:left-6 md:bott"
+        }
+      }
+    ],
+    "containerChain": {
+      "chain": [
+        {
+          "tag": "p",
+          "cls": "text-base md:text-lg lg:text-xl text-brand-ink/70 font-norma",
+          "width": 1184,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "block"
+        },
+        {
+          "tag": "div",
+          "cls": "mx-auto max-w-7xl px-5 sm:px-8 lg:px-12",
+          "width": 1280,
+          "maxWidth": "1280px",
+          "paddingInline": "48px / 48px",
+          "marginInline": "0px / 0px",
+          "display": "block"
+        },
+        {
+          "tag": "section",
+          "cls": "bg-brand-cream text-brand-ink py-12 sm:py-16 md:py-20 lg:py-",
+          "width": 1440,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "block"
+        },
+        {
+          "tag": "main",
+          "cls": "",
+          "width": 1440,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "block"
+        }
+      ],
+      "constrained": {
+        "tag": "div",
+        "cls": "mx-auto max-w-7xl px-5 sm:px-8 lg:px-12",
+        "width": 1280,
+        "maxWidth": "1280px",
+        "paddingInline": "48px / 48px",
+        "marginInline": "0px / 0px",
+        "display": "block"
+      }
+    },
+    "grids": [
+      {
+        "columns": 3,
+        "columnGap": "12px",
+        "rowGap": "12px",
+        "width": 1280,
+        "template": "389.219px 445.562px 389.219px",
+        "count": 1
+      },
+      {
+        "columns": 2,
+        "columnGap": "64px",
+        "rowGap": "64px",
+        "width": 1184,
+        "template": "560px 560px",
+        "count": 1
+      },
+      {
+        "columns": 4,
+        "columnGap": "20px",
+        "rowGap": "20px",
+        "width": 1184,
+        "template": "281px 281px 281px 281px",
+        "count": 1
+      },
+      {
+        "columns": 3,
+        "columnGap": "40px",
+        "rowGap": "40px",
+        "width": 1184,
+        "template": "368px 368px 368px",
+        "count": 1
+      }
+    ],
+    "bodyPaddingInline": "0px / 0px",
+    "bodyMaxWidth": "none",
+    "htmlPaddingInline": "0px / 0px"
+  },
+  "leftEdgeTest": {
+    "layout": {
+      "n": 5,
+      "mean": 139.2,
+      "stdDev": 64.72,
+      "distinctExact": 3,
+      "distinctClustered2px": 3,
+      "clusters": [
+        {
+          "at": 56,
+          "count": 1
+        },
+        {
+          "at": 128,
+          "count": 3
+        },
+        {
+          "at": 256,
+          "count": 1
+        }
+      ],
+      "values": [
+        56,
+        128,
+        128,
+        128,
+        256
+      ]
+    },
+    "rect": {
+      "n": 5,
+      "mean": 138.7,
+      "stdDev": 65.37,
+      "distinctExact": 3,
+      "distinctClustered2px": 3,
+      "clusters": [
+        {
+          "at": 53.48,
+          "count": 1
+        },
+        {
+          "at": 128,
+          "count": 3
+        },
+        {
+          "at": 256,
+          "count": 1
+        }
+      ],
+      "values": [
+        53.48,
+        128,
+        128,
+        128,
+        256
+      ]
+    },
+    "headings": {
+      "n": 5,
+      "mean": 142.4,
+      "stdDev": 70.55,
+      "distinctExact": 3,
+      "distinctClustered2px": 3,
+      "clusters": [
+        {
+          "at": 56,
+          "count": 1
+        },
+        {
+          "at": 128,
+          "count": 3
+        },
+        {
+          "at": 272,
+          "count": 1
+        }
+      ],
+      "values": [
+        56,
+        128,
+        128,
+        128,
+        272
+      ]
+    },
+    "sectionDiscovery": "semantic-siblings"
+  },
+  "sections": [
+    {
+      "index": 0,
+      "tag": "section",
+      "id": "hero",
+      "cls": "relative w-full overflow-hidden bg-brand-ink aspect-[9/16] max-h-[85sv",
+      "height": 792,
+      "vhFraction": 0.88,
+      "paddingBlockStart": "0px",
+      "paddingBlockEnd": "0px",
+      "marginBlockStart": "0px",
+      "marginBlockEnd": "0px",
+      "firstText": {
+        "layoutLeft": 56,
+        "rectLeft": 53.48,
+        "tag": "h1",
+        "fontSize": "60px",
+        "text": "Dallas’s interactive money museum."
+      },
+      "heading": {
+        "layoutLeft": 56,
+        "rectLeft": 53.48,
+        "tag": "h1",
+        "fontSize": "60px",
+        "text": "Dallas’s interactive money museum."
+      }
+    },
+    {
+      "index": 1,
+      "tag": "section",
+      "id": null,
+      "cls": "bg-brand-cream text-brand-ink py-12 sm:py-16 md:py-20 lg:py-24 border-",
+      "height": 1359.33,
+      "vhFraction": 1.51,
+      "paddingBlockStart": "96px",
+      "paddingBlockEnd": "96px",
+      "marginBlockStart": "0px",
+      "marginBlockEnd": "0px",
+      "firstText": {
+        "layoutLeft": 128,
+        "rectLeft": 128,
+        "tag": "p",
+        "fontSize": "12px",
+        "text": "▼ 01 · What it is"
+      },
+      "heading": {
+        "layoutLeft": 128,
+        "rectLeft": 128,
+        "tag": "span",
+        "fontSize": "96px",
+        "text": "Money,"
+      }
+    },
+    {
+      "index": 2,
+      "tag": "section",
+      "id": null,
+      "cls": "relative bg-brand-cream py-12 sm:py-16 md:py-20 lg:py-24 border-t-[3px",
+      "height": 758,
+      "vhFraction": 0.84,
+      "paddingBlockStart": "96px",
+      "paddingBlockEnd": "96px",
+      "marginBlockStart": "0px",
+      "marginBlockEnd": "0px",
+      "firstText": {
+        "layoutLeft": 128,
+        "rectLeft": 128,
+        "tag": "p",
+        "fontSize": "12px",
+        "text": "▼ 02 · Plan your visit"
+      },
+      "heading": {
+        "layoutLeft": 128,
+        "rectLeft": 126.99,
+        "tag": "h2",
+        "fontSize": "60px",
+        "text": "Y'all street."
+      }
+    },
+    {
+      "index": 3,
+      "tag": "section",
+      "id": null,
+      "cls": "bg-halftone overflow-hidden border-b-[3px] border-brand-ink bg-brand-c",
+      "height": 1146.38,
+      "vhFraction": 1.27,
+      "paddingBlockStart": "96px",
+      "paddingBlockEnd": "96px",
+      "marginBlockStart": "0px",
+      "marginBlockEnd": "0px",
+      "firstText": {
+        "layoutLeft": 128,
+        "rectLeft": 128,
+        "tag": "p",
+        "fontSize": "12px",
+        "text": "▼ 03 · What y'all say"
+      },
+      "heading": {
+        "layoutLeft": 128,
+        "rectLeft": 128,
+        "tag": "h2",
+        "fontSize": "60px",
+        "text": "What our visitors"
+      }
+    },
+    {
+      "index": 4,
+      "tag": "section",
+      "id": null,
+      "cls": "bg-brand-blue text-white py-16 md:py-20 lg:py-28 border-b-[3px] border",
+      "height": 643,
+      "vhFraction": 0.71,
+      "paddingBlockStart": "112px",
+      "paddingBlockEnd": "112px",
+      "marginBlockStart": "0px",
+      "marginBlockEnd": "0px",
+      "firstText": {
+        "layoutLeft": 256,
+        "rectLeft": 256,
+        "tag": "p",
+        "fontSize": "12px",
+        "text": "▼ 04 · Get In"
+      },
+      "heading": {
+        "layoutLeft": 272,
+        "rectLeft": 272,
+        "tag": "span",
+        "fontSize": "72px",
+        "text": "Ready to see"
+      }
+    }
+  ],
+  "verticalRhythm": {
+    "sectionCount": 5,
+    "near100vhCount": 0,
+    "near100vhPct": 0,
+    "strictGcdOfSpacing": 2,
+    "baseUnitEstimate80pct": 4,
+    "spacingHistogram": [
+      {
+        "value": 16,
+        "count": 44
+      },
+      {
+        "value": 8,
+        "count": 42
+      },
+      {
+        "value": 12,
+        "count": 20
+      },
+      {
+        "value": 20,
+        "count": 18
+      },
+      {
+        "value": 48,
+        "count": 13
+      },
+      {
+        "value": 24,
+        "count": 9
+      },
+      {
+        "value": 40,
+        "count": 8
+      },
+      {
+        "value": 10,
+        "count": 8
+      },
+      {
+        "value": 56,
+        "count": 6
+      },
+      {
+        "value": 96,
+        "count": 6
+      },
+      {
+        "value": 4,
+        "count": 6
+      },
+      {
+        "value": 28,
+        "count": 5
+      },
+      {
+        "value": 14,
+        "count": 4
+      },
+      {
+        "value": 80,
+        "count": 4
+      }
+    ],
+    "spacingSampleSize": 203
+  },
+  "typeScale": {
+    "distinctFontSizeCount": 15,
+    "distinctFontSizeCount_used2plus": 12,
+    "distinctSizes": [
+      {
+        "size": 96,
+        "count": 2
+      },
+      {
+        "size": 72,
+        "count": 2
+      },
+      {
+        "size": 60,
+        "count": 5
+      },
+      {
+        "size": 48,
+        "count": 1
+      },
+      {
+        "size": 30,
+        "count": 1
+      },
+      {
+        "size": 24,
+        "count": 3
+      },
+      {
+        "size": 20,
+        "count": 3
+      },
+      {
+        "size": 18,
+        "count": 30
+      },
+      {
+        "size": 16,
+        "count": 17
+      },
+      {
+        "size": 15,
+        "count": 5
+      },
+      {
+        "size": 14,
+        "count": 17
+      },
+      {
+        "size": 13,
+        "count": 1
+      },
+      {
+        "size": 12,
+        "count": 37
+      },
+      {
+        "size": 10,
+        "count": 10
+      },
+      {
+        "size": 9,
+        "count": 6
+      }
+    ],
+    "scaleSizesDesc": [
+      96,
+      72,
+      60,
+      24,
+      20,
+      18,
+      16,
+      15,
+      14,
+      12,
+      10,
+      9
+    ],
+    "consecutiveRatios": [
+      1.33,
+      1.2,
+      2.5,
+      1.2,
+      1.11,
+      1.13,
+      1.07,
+      1.07,
+      1.17,
+      1.2,
+      1.11
+    ],
+    "roles": {
+      "h1": {
+        "tag": "h1",
+        "fontSize": 60,
+        "fontWeight": "400",
+        "lineHeightPx": 57,
+        "lineHeightRatio": 0.95,
+        "letterSpacing": "-1.5px",
+        "letterSpacingEm": -0.025,
+        "fontFamily": "Archivo Black",
+        "fontFamilyFull": "\"Archivo Black\", \"Archivo Black Fallback\", system-ui, sans-serif",
+        "textTransform": "uppercase",
+        "color": "rgb(17, 17, 17)",
+        "widthPx": 645.35,
+        "text": "Dallas’s interactive money museum."
+      },
+      "biggestText": {
+        "tag": "span",
+        "fontSize": 96,
+        "fontWeight": "400",
+        "lineHeightPx": 96,
+        "lineHeightRatio": 1,
+        "letterSpacing": "0px",
+        "letterSpacingEm": 0,
+        "fontFamily": "Archivo Black",
+        "fontFamilyFull": "\"Archivo Black\", \"Archivo Black Fallback\", system-ui, sans-serif",
+        "textTransform": "uppercase",
+        "color": "rgb(17, 17, 17)",
+        "widthPx": 1184,
+        "text": "Money,"
+      },
+      "h2All": [
+        {
+          "tag": "h2",
+          "fontSize": 60,
+          "fontWeight": "400",
+          "lineHeightPx": 60,
+          "lineHeightRatio": 1,
+          "letterSpacing": "-1.5px",
+          "letterSpacingEm": -0.025,
+          "fontFamily": "Archivo Black",
+          "fontFamilyFull": "\"Archivo Black\", \"Archivo Black Fallback\", system-ui, sans-serif",
+          "textTransform": "uppercase",
+          "color": "rgb(255, 255, 255)",
+          "widthPx": 506.67,
+          "text": "Y'all street."
+        },
+        {
+          "tag": "h2",
+          "fontSize": 60,
+          "fontWeight": "400",
+          "lineHeightPx": 60,
+          "lineHeightRatio": 1,
+          "letterSpacing": "0px",
+          "letterSpacingEm": 0,
+          "fontFamily": "Archivo Black",
+          "fontFamilyFull": "\"Archivo Black\", \"Archivo Black Fallback\", system-ui, sans-serif",
+          "textTransform": "uppercase",
+          "color": "rgb(17, 17, 17)",
+          "widthPx": 1184,
+          "text": "What our visitors"
+        }
+      ],
+      "h3": {
+        "tag": "h3",
+        "fontSize": 24,
+        "fontWeight": "400",
+        "lineHeightPx": 30,
+        "lineHeightRatio": 1.25,
+        "letterSpacing": "0px",
+        "letterSpacingEm": 0,
+        "fontFamily": "Archivo Black",
+        "fontFamilyFull": "\"Archivo Black\", \"Archivo Black Fallback\", system-ui, sans-serif",
+        "textTransform": "uppercase",
+        "color": "rgb(17, 17, 17)",
+        "widthPx": 368,
+        "text": "Birthdays. Offsites. Field trips."
+      },
+      "body": {
+        "tag": "p",
+        "fontSize": 14,
+        "fontWeight": "400",
+        "lineHeightPx": 19.25,
+        "lineHeightRatio": 1.38,
+        "letterSpacing": "0px",
+        "letterSpacingEm": 0,
+        "fontFamily": "Manrope",
+        "fontFamilyFull": "Manrope, \"Manrope Fallback\", system-ui, sans-serif",
+        "textTransform": "none",
+        "color": "rgb(17, 17, 17)",
+        "widthPx": 245.31,
+        "text": "\"Visited MoMoney with my fiancée and we had an amazing time."
+      },
+      "small": {
+        "tag": "div",
+        "fontSize": 9,
+        "fontWeight": "400",
+        "lineHeightPx": 13.5,
+        "lineHeightRatio": 1.5,
+        "letterSpacing": "1.6px",
+        "letterSpacingEm": 0.17778,
+        "fontFamily": "JetBrains Mono",
+        "fontFamilyFull": "\"JetBrains Mono\", \"JetBrains Mono Fallback\", ui-monospace, \"Courier New\", monospace",
+        "textTransform": "uppercase",
+        "color": "rgb(255, 245, 221)",
+        "widthPx": 56.17,
+        "text": "Live"
+      },
+      "mono": {
+        "tag": "span",
+        "fontSize": 12,
+        "fontWeight": "500",
+        "lineHeightPx": 16,
+        "lineHeightRatio": 1.33,
+        "letterSpacing": "3px",
+        "letterSpacingEm": 0.25,
+        "fontFamily": "JetBrains Mono",
+        "fontFamilyFull": "\"JetBrains Mono\", \"JetBrains Mono Fallback\", ui-monospace, \"Courier New\", monospace",
+        "textTransform": "uppercase",
+        "color": "rgb(244, 242, 66)",
+        "widthPx": 158,
+        "text": "As seen in"
+      }
+    },
+    "readingMeasure": {
+      "columnWidthPx": 245.31,
+      "widthOf100Chars": 684.25,
+      "measureCh_spec": 35.85,
+      "measureCh_zeroWidth": 28.73,
+      "maxWidthDeclared": "none",
+      "canvasFont": "14px Manrope, \"Manrope Fallback\", system-ui, sans-serif"
+    },
+    "readingMeasureAlternates": [
+      {
+        "tag": "p",
+        "fontSize": 14,
+        "fontWeight": "400",
+        "lineHeightPx": 19.25,
+        "lineHeightRatio": 1.38,
+        "letterSpacing": "0px",
+        "letterSpacingEm": 0,
+        "fontFamily": "Manrope",
+        "fontFamilyFull": "Manrope, \"Manrope Fallback\", system-ui, sans-serif",
+        "textTransform": "none",
+        "color": "rgb(17, 17, 17)",
+        "widthPx": 245.31,
+        "text": "\"Visited MoMoney with my fiancée and we had an amazing time."
+      },
+      {
+        "tag": "p",
+        "fontSize": 24,
+        "fontWeight": "500",
+        "lineHeightPx": 39,
+        "lineHeightRatio": 1.63,
+        "letterSpacing": "0px",
+        "letterSpacingEm": 0,
+        "fontFamily": "Manrope",
+        "fontFamilyFull": "Manrope, \"Manrope Fallback\", system-ui, sans-serif",
+        "textTransform": "none",
+        "color": "rgb(17, 17, 17)",
+        "widthPx": 901.44,
+        "text": "MoMoney is Dallas’s only interactive money museum. Two floor"
+      },
+      {
+        "tag": "p",
+        "fontSize": 14,
+        "fontWeight": "400",
+        "lineHeightPx": 19.25,
+        "lineHeightRatio": 1.38,
+        "letterSpacing": "0px",
+        "letterSpacingEm": 0,
+        "fontFamily": "Manrope",
+        "fontFamilyFull": "Manrope, \"Manrope Fallback\", system-ui, sans-serif",
+        "textTransform": "none",
+        "color": "rgb(17, 17, 17)",
+        "widthPx": 244.86,
+        "text": "\"PHENOMENAL experience! I recommend this to anyone who wants"
+      }
+    ],
+    "distinctFontFamilyCount": 3,
+    "fontFamilies": [
+      {
+        "family": "Manrope",
+        "count": 86
+      },
+      {
+        "family": "Archivo Black",
+        "count": 29
+      },
+      {
+        "family": "JetBrains Mono",
+        "count": 25
+      }
+    ]
+  },
+  "color": {
+    "textColors": [
+      {
+        "value": "rgb(17,17,17)",
+        "count": 35
+      },
+      {
+        "value": "rgb(255,245,221)",
+        "count": 29
+      },
+      {
+        "value": "oklab(0.9716770.001170070.0332029/0.4)",
+        "count": 28
+      },
+      {
+        "value": "rgb(255,255,255)",
+        "count": 13
+      },
+      {
+        "value": "oklab(0.1776370.000008106230.00000356138/0.6)",
+        "count": 11
+      },
+      {
+        "value": "oklab(0.1776370.000008106230.00000356138/0.7)",
+        "count": 5
+      },
+      {
+        "value": "rgb(255,184,0)",
+        "count": 5
+      },
+      {
+        "value": "oklab(0.9999940.00004556770.0000200868/0.7)",
+        "count": 5
+      },
+      {
+        "value": "oklab(0.1776370.000008106230.00000356138/0.65)",
+        "count": 3
+      },
+      {
+        "value": "rgb(244,242,66)",
+        "count": 1
+      },
+      {
+        "value": "oklab(0.1776370.000008106230.00000356138/0.75)",
+        "count": 1
+      },
+      {
+        "value": "oklab(0.9999940.00004556770.0000200868/0.8)",
+        "count": 1
+      },
+      {
+        "value": "oklab(0.1776370.000008106230.00000356138/0.8)",
+        "count": 1
+      },
+      {
+        "value": "oklab(0.9999940.00004556780.0000200868/0.5)",
+        "count": 1
+      },
+      {
+        "value": "oklab(0.9999940.00004556780.0000200868/0.65)",
+        "count": 1
+      }
+    ],
+    "backgroundColors": [
+      {
+        "value": "rgb(244,242,66)",
+        "count": 13
+      },
+      {
+        "value": "rgb(255,255,255)",
+        "count": 9
+      },
+      {
+        "value": "rgb(184,34,151)",
+        "count": 4
+      },
+      {
+        "value": "rgb(17,17,17)",
+        "count": 4
+      },
+      {
+        "value": "rgb(255,245,221)",
+        "count": 4
+      },
+      {
+        "value": "rgb(0,0,244)",
+        "count": 4
+      },
+      {
+        "value": "rgb(100,168,82)",
+        "count": 3
+      },
+      {
+        "value": "rgb(211,91,43)",
+        "count": 1
+      },
+      {
+        "value": "rgb(69,26,176)",
+        "count": 1
+      },
+      {
+        "value": "rgb(93,255,122)",
+        "count": 1
+      },
+      {
+        "value": "oklab(0.1776370.000008106230.00000356138/0.4)",
+        "count": 1
+      }
+    ],
+    "distinctTextColorCount": 15,
+    "distinctBgColorCount": 11
+  },
+  "persistent": {
+    "fixedOrSticky": [
+      {
+        "tag": "header",
+        "cls": "fixed top-[var(--banner-h,0px)] inset-x-0 z-50 px-3 sm:px-6 ",
+        "position": "fixed",
+        "rect": {
+          "top": 0,
+          "left": 0,
+          "width": 1440,
+          "height": 109
+        },
+        "zIndex": "50",
+        "text": "ExhibitsVisitEventsAboutContactTicketsTickets",
+        "opacity": "1"
+      }
+    ]
+  },
+  "nav": {
+    "tag": "header",
+    "cls": "fixed top-[var(--banner-h,0px)] inset-x-0 z-50 px-3 sm:px-6 ",
+    "height": 109,
+    "top": 0,
+    "position": "fixed",
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "backdropFilter": "none",
+    "borderBottom": "1px rgba(0, 0, 0, 0)",
+    "paddingBlock": "20px / 20px",
+    "transform": "none",
+    "opacity": "1",
+    "mixBlendMode": "normal",
+    "color": "rgb(17, 17, 17)"
+  },
+  "navState": {
+    "at0": {
+      "nav": {
+        "height": 109,
+        "top": 0,
+        "position": "fixed",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "backdropFilter": "none",
+        "borderBottom": "1px rgba(0, 0, 0, 0)",
+        "paddingBlock": "20px / 20px",
+        "transform": "none",
+        "opacity": "1",
+        "color": "rgb(17, 17, 17)"
+      },
+      "fixedOrSticky": [
+        {
+          "tag": "header",
+          "cls": "fixed top-[var(--banner-h,0px)] inset-x-0 z-50 px-3 sm:px-6 ",
+          "position": "fixed",
+          "rect": {
+            "top": 0,
+            "left": 0,
+            "width": 1440,
+            "height": 109
+          },
+          "text": "ExhibitsVisitEventsAboutContactTicketsTickets",
+          "opacity": "1"
+        }
+      ]
+    },
+    "at2000": {
+      "nav": {
+        "height": 109,
+        "top": 0,
+        "position": "fixed",
+        "backgroundColor": "oklab(0.971677 0.00117007 0.0332029 / 0.95)",
+        "backdropFilter": "blur(8px)",
+        "borderBottom": "1px oklab(0.177637 0.00000810623 0.00000356138 / 0.15)",
+        "paddingBlock": "20px / 20px",
+        "transform": "none",
+        "opacity": "1",
+        "color": "rgb(17, 17, 17)"
+      },
+      "fixedOrSticky": [
+        {
+          "tag": "header",
+          "cls": "fixed top-[var(--banner-h,0px)] inset-x-0 z-50 px-3 sm:px-6 ",
+          "position": "fixed",
+          "rect": {
+            "top": 0,
+            "left": 0,
+            "width": 1440,
+            "height": 109
+          },
+          "text": "ExhibitsVisitEventsAboutContactTicketsTickets",
+          "opacity": "1"
+        }
+      ]
+    },
+    "changed": true,
+    "diff": {
+      "backgroundColor": {
+        "at0": "rgba(0, 0, 0, 0)",
+        "at2000": "oklab(0.971677 0.00117007 0.0332029 / 0.95)"
+      },
+      "backdropFilter": {
+        "at0": "none",
+        "at2000": "blur(8px)"
+      },
+      "borderBottom": {
+        "at0": "1px rgba(0, 0, 0, 0)",
+        "at2000": "1px oklab(0.177637 0.00000810623 0.00000356138 / 0.15)"
+      }
+    }
+  },
+  "shots": [
+    "museumofmoney-1440-full.jpg",
+    "museumofmoney-1440-scroll000.jpg",
+    "museumofmoney-1440-scroll025.jpg",
+    "museumofmoney-1440-scroll050.jpg",
+    "museumofmoney-1440-scroll075.jpg",
+    "museumofmoney-1440-scroll100.jpg"
+  ],
+  "fullPageShotRepresentative": true,
+  "pageErrors": []
+}

@@ -1,0 +1,1465 @@
+{
+  "report": "Z:\\Claude Code\\plancbusiness-research\\research\\notes\\final_report_creator-attrition-income-data-079588.md",
+  "summary": {
+    "total": 163,
+    "supported_mechanical": 52,
+    "dangling": 0,
+    "needs_llm": 111
+  },
+  "sampled_for_llm": [
+    {
+      "sentence": "| Median career [[who-reaps-all-the-superchats-a-large-scale-analysis-of-income]] | 24 mo; 1,057 of 1,923 (>50%) stopped within 3 yrs; 44 / 28 / 21 mo by large-agency / independent / small-agency | Persona (VTuber) | 1,923 | Feb 2017 – Jul 2023 | YouTube | Global, Japan-origin agencies |",
+      "note_id": "who-reaps-all-the-superchats-a-large-scale-analysis-of-income",
+      "numbers": [
+        "24",
+        "1,057",
+        "1,923",
+        "50%",
+        "3",
+        "44",
+        "28",
+        "21",
+        "1,923",
+        "2017",
+        "2023"
+      ],
+      "strong": true,
+      "verdict": "needs-llm"
+    },
+    {
+      "sentence": "| Never received a pledge [[vol0123456789-3]] | 115,183 of 139,366 (82.6%) | Campaign, all registered | 139,366 | 2013–2015 | Patreon | Not reported, Western-skewed |",
+      "note_id": "vol0123456789-3",
+      "numbers": [
+        "0123456789",
+        "3",
+        "115,183",
+        "139,366",
+        "82.6%",
+        "139,366",
+        "2013",
+        "2015"
+      ],
+      "strong": true,
+      "verdict": "needs-llm"
+    },
+    {
+      "sentence": "| Churn among ever-starters [[the-creators-2025-understanding-the-modern-podcast-creator-landscape-sounds-prof]] | 32%; 23% (Asian) to 40% (55+, LGBTQ+) | Person, census-weighted | 5,034 | 2025 | Podcasting | United States |",
+      "note_id": "the-creators-2025-understanding-the-modern-podcast-creator-landscape-sounds-prof",
+      "numbers": [
+        "2025",
+        "32%",
+        "23%",
+        "40%",
+        "55",
+        "5,034",
+        "2025"
+      ],
+      "strong": true,
+      "verdict": "needs-llm"
+    },
+    {
+      "sentence": "| Weekly dropout from ranking [[vol0123456789-2]] | 0.20 (top 100); 0.135 (top 1,000) | Account rank position | 9,523 matched | 2019–2021 | Twitch | Global |",
+      "note_id": "vol0123456789-2",
+      "numbers": [
+        "0123456789",
+        "2",
+        "0.20",
+        "100",
+        "0.135",
+        "1,000",
+        "9,523",
+        "2019",
+        "2021"
+      ],
+      "strong": true,
+      "verdict": "needs-llm"
+    },
+    {
+      "sentence": "| Ever worked / worked significantly [[how-many-online-workers-are-there-in-the-open-research-europe]] | 8.6% / 2.0%; range 2.0–36.8% | Registered profile | 163m | 2020 | Online freelancing (**not** content) | Global |",
+      "note_id": "how-many-online-workers-are-there-in-the-open-research-europe",
+      "numbers": [
+        "8.6%",
+        "2.0%",
+        "2.0",
+        "36.8%",
+        "163",
+        "2020"
+      ],
+      "strong": true,
+      "verdict": "needs-llm"
+    },
+    {
+      "sentence": "| Active share of registered workers [[the-promise-and-peril]] | 37% mean, 26% median; bimodal (174 platforms 0–20%, 180 at 80–100%) | Registered profile, traffic-proxied | 503 platforms | 2023 | Online gig platforms | Global |",
+      "note_id": "the-promise-and-peril",
+      "numbers": [
+        "37%",
+        "26%",
+        "174",
+        "0",
+        "20%",
+        "180",
+        "80",
+        "100%",
+        "503",
+        "2023"
+      ],
+      "strong": true,
+      "verdict": "needs-llm"
+    },
+    {
+      "sentence": "| Retention above US$100k royalties [[takeaways-loud-and-clear]] | 8 in 10 of the 2022 cohort stayed above it since | Artists who crossed $100k | ~12,400 | 2022–2025 | Spotify | Global |",
+      "note_id": "takeaways-loud-and-clear",
+      "numbers": [
+        "100",
+        "8",
+        "10",
+        "2022",
+        "100",
+        "12,400",
+        "2022",
+        "2025"
+      ],
+      "strong": true,
+      "verdict": "needs-llm"
+    },
+    {
+      "sentence": "The Kässi figures cover freelancing marketplaces, not content platforms, and rest on seven platforms' observed activity, which is why their authors publish a range rather than a confidence interval; the World Bank's 37% sits at the top of that range [[how-many-online-workers-are-there-in-the-open-research-europe]] [[the-promise-and-peril]].",
+      "note_id": "how-many-online-workers-are-there-in-the-open-research-europe",
+      "numbers": [
+        "37%"
+      ],
+      "strong": true,
+      "verdict": "needs-llm"
+    },
+    {
+      "sentence": "The Kässi figures cover freelancing marketplaces, not content platforms, and rest on seven platforms' observed activity, which is why their authors publish a range rather than a confidence interval; the World Bank's 37% sits at the top of that range [[how-many-online-workers-are-there-in-the-open-research-europe]] [[the-promise-and-peril]].",
+      "note_id": "the-promise-and-peril",
+      "numbers": [
+        "37%"
+      ],
+      "strong": true,
+      "verdict": "needs-llm"
+    },
+    {
+      "sentence": "One vendor source claiming to be this telemetry is excluded: one post's title says 97,601 channels against its own body's 105,891 for what it presents as one 2019 cohort, no analyst or methodology is named, and its 8.8-year median lifespan is the age at death of channels that had already passed 10,000 subscribers [[youtube-channel-survival-rates-a-7-year-creator-study-creatormap]].",
+      "note_id": "youtube-channel-survival-rates-a-7-year-creator-study-creatormap",
+      "numbers": [
+        "97,601",
+        "105,891",
+        "2019",
+        "8.8",
+        "10,000",
+        "7"
+      ],
+      "strong": true,
+      "verdict": "needs-llm"
+    },
+    {
+      "sentence": "| Regner, complete Patreon record [[vol0123456789-3]] | $31/mo peak pledge | $197.88/mo | 6.4× | Campaign, active only, floor >$0 | 24,257 of 139,366 | 2013–2015 | Patreon | Not reported, Western-skewed |",
+      "note_id": "vol0123456789-3",
+      "numbers": [
+        "0123456789",
+        "3",
+        "31",
+        "197.88",
+        "6.4",
+        "0",
+        "24,257",
+        "139,366",
+        "2013",
+        "2015"
+      ],
+      "strong": true,
+      "verdict": "needs-llm"
+    },
+    {
+      "sentence": "| Zhao et al., Superchat telemetry [[who-reaps-all-the-superchats-a-large-scale-analysis-of-income]] | $127/mo | $2,667/mo | ≈21× | Persona; 25% received zero | 1,923 | 2017–2023 | YouTube | Global, 61 currencies |",
+      "note_id": "who-reaps-all-the-superchats-a-large-scale-analysis-of-income",
+      "numbers": [
+        "127",
+        "2,667",
+        "21",
+        "25%",
+        "1,923",
+        "2017",
+        "2023",
+        "61"
+      ],
+      "strong": true,
+      "verdict": "needs-llm"
+    },
+    {
+      "sentence": "| Rieder et al., tier averages [[httpsdoiorg10117720563051231180628]] | not reported | $1,707,446/yr (10m+ subs) to $295/yr (1k–10k); $0 below 1k | — | Channel, all crawled, incl. 31.7m earning nothing | ~36.1m vs $8.25bn disclosed payout | 2019 revenue | YouTube | Global, no country split |",
+      "note_id": "httpsdoiorg10117720563051231180628",
+      "numbers": [
+        "10117720563051231180628",
+        "1,707,446",
+        "10",
+        "295",
+        "1",
+        "10",
+        "0",
+        "1",
+        "31.7",
+        "36.1",
+        "8.25",
+        "2019"
+      ],
+      "strong": true,
+      "verdict": "needs-llm"
+    },
+    {
+      "sentence": "| Twitch leak, WSJ analysis [[twitch-streamer-earnings-increase-for-top-gamers-data-from-hack-shows-wsj]] | under $28 | mean not reported; 75% under $120, 5% over $1,000 | — | Account, earning accounts only | ~4.0m of 4.9m leaked | Jan–Sep 2021 | Twitch | Not disclosed |",
+      "note_id": "twitch-streamer-earnings-increase-for-top-gamers-data-from-hack-shows-wsj",
+      "numbers": [
+        "28",
+        "75%",
+        "120,",
+        "5%",
+        "1,000",
+        "4.0",
+        "4.9",
+        "2021"
+      ],
+      "strong": true,
+      "verdict": "needs-llm"
+    },
+    {
+      "sentence": "| BLS payroll, NAICS 711510 [[independent-artists-writers-and-performers-may-2022-oews-industry-specific-occup]] | $24.58/hr | $35.75/hr | 1.45× | Payroll job; excludes self-employed | 61,710 | May 2022 | Not platform-specific | United States |",
+      "note_id": "independent-artists-writers-and-performers-may-2022-oews-industry-specific-occup",
+      "numbers": [
+        "711510",
+        "2022",
+        "24.58",
+        "35.75",
+        "1.45",
+        "61,710",
+        "2022"
+      ],
+      "strong": true,
+      "verdict": "needs-llm"
+    },
+    {
+      "sentence": "| Random YouTube video sample [[journal-of-quantitative-description-digital-media-32023-185]] | 35 views; 4 subscribers | 5,868 views; 55,100 subscribers | ≈170× | Video / posting channel, random | 10,016 videos | Late 2022 | YouTube | Global (20.1% English) |",
+      "note_id": "journal-of-quantitative-description-digital-media-32023-185",
+      "numbers": [
+        "32023",
+        "185",
+        "35",
+        "4",
+        "5,868",
+        "55,100",
+        "170",
+        "10,016",
+        "2022",
+        "20.1%"
+      ],
+      "strong": true,
+      "verdict": "needs-llm"
+    },
+    {
+      "sentence": "The three Patreon-adjacent medians differ by inclusion floor, not by disagreement: Regner's $31 is the median peak among campaigns that received any money, a floor above zero [[vol0123456789-3]]; Strauss and colleagues' $42–77 excludes everyone under $10 a month [[rich-get-richer-platform-attention-and-earnings-inequality]]; Zhao's $127 is a different platform, product and population [[who-reaps-all-the-superchats-a-large-scale-analysis-of-income]].",
+      "note_id": "vol0123456789-3",
+      "numbers": [
+        "31",
+        "0123456789",
+        "3",
+        "42",
+        "77",
+        "10",
+        "127"
+      ],
+      "strong": true,
+      "verdict": "needs-llm"
+    },
+    {
+      "sentence": "The three Patreon-adjacent medians differ by inclusion floor, not by disagreement: Regner's $31 is the median peak among campaigns that received any money, a floor above zero [[vol0123456789-3]]; Strauss and colleagues' $42–77 excludes everyone under $10 a month [[rich-get-richer-platform-attention-and-earnings-inequality]]; Zhao's $127 is a different platform, product and population [[who-reaps-all-the-superchats-a-large-scale-analysis-of-income]].",
+      "note_id": "rich-get-richer-platform-attention-and-earnings-inequality",
+      "numbers": [
+        "31",
+        "0123456789",
+        "3",
+        "42",
+        "77",
+        "10",
+        "127"
+      ],
+      "strong": true,
+      "verdict": "needs-llm"
+    },
+    {
+      "sentence": "The three Patreon-adjacent medians differ by inclusion floor, not by disagreement: Regner's $31 is the median peak among campaigns that received any money, a floor above zero [[vol0123456789-3]]; Strauss and colleagues' $42–77 excludes everyone under $10 a month [[rich-get-richer-platform-attention-and-earnings-inequality]]; Zhao's $127 is a different platform, product and population [[who-reaps-all-the-superchats-a-large-scale-analysis-of-income]].",
+      "note_id": "who-reaps-all-the-superchats-a-large-scale-analysis-of-income",
+      "numbers": [
+        "31",
+        "0123456789",
+        "3",
+        "42",
+        "77",
+        "10",
+        "127"
+      ],
+      "strong": true,
+      "verdict": "needs-llm"
+    },
+    {
+      "sentence": "Four constraints travel with the October 2021 Twitch leak: 896,261 zero- or negative-revenue accounts were excluded before any percentile was computed, the unit is the account with production companies inside the top ranks, sponsorships and tips are excluded while the $100 payout floor censors the low tail, and no country composition is disclosed [[twitch-streamer-earnings-increase-for-top-gamers-data-from-hack-shows-wsj]] [[the-unbearable-lightness-of-streaming-superjoost-playlist]].",
+      "note_id": "the-unbearable-lightness-of-streaming-superjoost-playlist",
+      "numbers": [
+        "2021",
+        "896,261",
+        "100"
+      ],
+      "strong": true,
+      "verdict": "needs-llm"
+    },
+    {
+      "sentence": "The much-repeated finding that 25% of the top 10,000 highest-paid streamers do not clear US minimum wage — the 8,000th-ranked account cumulating $29,396 since 2019, roughly $14,698 a year against a $15,080 federal minimum — therefore assumes US costs for a population of unknown nationality [[many-top-twitch-streamers-dont-make-minimum-wage-and-3-new-takeaways-from-the-tw]] [[twitch-responds-to-leak-revealing-earnings-of-top-streamers-and-more-dexerto]].",
+      "note_id": "twitch-responds-to-leak-revealing-earnings-of-top-streamers-and-more-dexerto",
+      "numbers": [
+        "25%",
+        "10,000",
+        "8,000",
+        "29,396",
+        "2019,",
+        "14,698",
+        "15,080",
+        "3"
+      ],
+      "strong": true,
+      "verdict": "needs-llm"
+    },
+    {
+      "sentence": "| **0.043%** (~15,500 channels) [[httpsdoiorg10117720563051231180628]] | 2020 US median household income (~$67,521) | All crawled channels; 31.7m earn nothing | ~36.1m | 2019 revenue | YouTube | Global | Modelled from disclosed payout |",
+      "note_id": "httpsdoiorg10117720563051231180628",
+      "numbers": [
+        "0.043%",
+        "15,500",
+        "10117720563051231180628",
+        "2020",
+        "67,521",
+        "31.7",
+        "36.1",
+        "2019"
+      ],
+      "strong": true,
+      "verdict": "needs-llm"
+    },
+    {
+      "sentence": "| **0.18%** (~250 campaigns) [[vol0123456789-3]] | ≥$2,500/mo | All registered campaigns | 139,366 | 2013–2015 | Patreon | Western-skewed | Complete record |",
+      "note_id": "vol0123456789-3",
+      "numbers": [
+        "0.18%",
+        "250",
+        "0123456789",
+        "3",
+        "2,500",
+        "139,366",
+        "2013",
+        "2015"
+      ],
+      "strong": true,
+      "verdict": "needs-llm"
+    },
+    {
+      "sentence": "| **1.03%** (the same ~250) [[vol0123456789-3]] | ≥$2,500/mo | Campaigns receiving ≥1 pledge | 24,257 | 2013–2015 | Patreon | Western-skewed | Same data, denominator swapped |",
+      "note_id": "vol0123456789-3",
+      "numbers": [
+        "1.03%",
+        "250",
+        "0123456789",
+        "3",
+        "2,500",
+        "1",
+        "24,257",
+        "2013",
+        "2015"
+      ],
+      "strong": true,
+      "verdict": "needs-llm"
+    },
+    {
+      "sentence": "| **12%** [[pdf-linktree-creatorreport-2022-02f3aa05a27be6fecb3537b13d5ec9depdf]] | >$50,000/yr | Self-identified full-time creators | 9,576, composition undisclosed | 2021 | Multi-platform | Undisclosed | Self-selected vendor survey |",
+      "note_id": "pdf-linktree-creatorreport-2022-02f3aa05a27be6fecb3537b13d5ec9depdf",
+      "numbers": [
+        "12%",
+        "2022",
+        "02",
+        "3",
+        "05",
+        "27",
+        "6",
+        "3537",
+        "13",
+        "5",
+        "9",
+        "50,000",
+        "9,576,",
+        "2021"
+      ],
+      "strong": true,
+      "verdict": "needs-llm"
+    },
+    {
+      "sentence": "Regner reports the same roughly 250 creators as both the top 1% of active campaigns and 0.18% of all registered campaigns — a 5.75-fold swing from the denominator alone, numerator untouched [[vol0123456789-3]].",
+      "note_id": "vol0123456789-3",
+      "numbers": [
+        "250",
+        "1%",
+        "0.18%",
+        "5.75",
+        "0123456789",
+        "3"
+      ],
+      "strong": true,
+      "verdict": "needs-llm"
+    },
+    {
+      "sentence": "Reading Rieder's published tier table against a US-minimum-wage rather than a US-median-household threshold raises the 0.043% share to 0.43%, exactly tenfold; that recalculation is an arithmetic re-cut of the published tiers by changing the threshold parameter, not a figure the authors state [[httpsdoiorg10117720563051231180628]].",
+      "note_id": "httpsdoiorg10117720563051231180628",
+      "numbers": [
+        "0.043%",
+        "0.43%",
+        "10117720563051231180628"
+      ],
+      "strong": true,
+      "verdict": "needs-llm"
+    },
+    {
+      "sentence": "Rieder's 0.043% and TikTok's 63% are not two estimates of one quantity: the first divides by every crawled channel including the 31.7 million below the monetization gate that receive none of the ad revenue, the second by surveyed users already reporting the platform as an income source [[httpsdoiorg10117720563051231180628]] [[the-tiktok-effect]].",
+      "note_id": "httpsdoiorg10117720563051231180628",
+      "numbers": [
+        "0.043%",
+        "63%",
+        "31.7",
+        "10117720563051231180628"
+      ],
+      "strong": true,
+      "verdict": "needs-llm"
+    },
+    {
+      "sentence": "Rieder's 0.043% and TikTok's 63% are not two estimates of one quantity: the first divides by every crawled channel including the 31.7 million below the monetization gate that receive none of the ad revenue, the second by surveyed users already reporting the platform as an income source [[httpsdoiorg10117720563051231180628]] [[the-tiktok-effect]].",
+      "note_id": "the-tiktok-effect",
+      "numbers": [
+        "0.043%",
+        "63%",
+        "31.7",
+        "10117720563051231180628"
+      ],
+      "strong": true,
+      "verdict": "needs-llm"
+    },
+    {
+      "sentence": "Within-topic Patreon Gini rose from 0.30 in June 2013 to 0.60 by December 2020 across the complete transaction record, while cross-topic Gini fell from 0.80 to 0.72 [[quantifying-the-creator-economy-a-large-scale-analysis-of-patreon]]; VTuber between-creator Gini rose from 0.60 to 0.75 between 2018 and 2023 [[who-reaps-all-the-superchats-a-large-scale-analysis-of-income]]; and Pareto alpha fell across YouTube, Instagram, Facebook and Twitch between 2018 and 2024, n=104,719 [[rich-get-richer-platform-attention-and-earnings-inequality]].",
+      "note_id": "quantifying-the-creator-economy-a-large-scale-analysis-of-patreon",
+      "numbers": [
+        "0.30",
+        "2013",
+        "0.60",
+        "2020",
+        "0.80",
+        "0.72",
+        "0.60",
+        "0.75",
+        "2018",
+        "2023",
+        "2018",
+        "2024,",
+        "104,719"
+      ],
+      "strong": true,
+      "verdict": "needs-llm"
+    },
+    {
+      "sentence": "Within-topic Patreon Gini rose from 0.30 in June 2013 to 0.60 by December 2020 across the complete transaction record, while cross-topic Gini fell from 0.80 to 0.72 [[quantifying-the-creator-economy-a-large-scale-analysis-of-patreon]]; VTuber between-creator Gini rose from 0.60 to 0.75 between 2018 and 2023 [[who-reaps-all-the-superchats-a-large-scale-analysis-of-income]]; and Pareto alpha fell across YouTube, Instagram, Facebook and Twitch between 2018 and 2024, n=104,719 [[rich-get-richer-platform-attention-and-earnings-inequality]].",
+      "note_id": "who-reaps-all-the-superchats-a-large-scale-analysis-of-income",
+      "numbers": [
+        "0.30",
+        "2013",
+        "0.60",
+        "2020",
+        "0.80",
+        "0.72",
+        "0.60",
+        "0.75",
+        "2018",
+        "2023",
+        "2018",
+        "2024,",
+        "104,719"
+      ],
+      "strong": true,
+      "verdict": "needs-llm"
+    },
+    {
+      "sentence": "Within-topic Patreon Gini rose from 0.30 in June 2013 to 0.60 by December 2020 across the complete transaction record, while cross-topic Gini fell from 0.80 to 0.72 [[quantifying-the-creator-economy-a-large-scale-analysis-of-patreon]]; VTuber between-creator Gini rose from 0.60 to 0.75 between 2018 and 2023 [[who-reaps-all-the-superchats-a-large-scale-analysis-of-income]]; and Pareto alpha fell across YouTube, Instagram, Facebook and Twitch between 2018 and 2024, n=104,719 [[rich-get-richer-platform-attention-and-earnings-inequality]].",
+      "note_id": "rich-get-richer-platform-attention-and-earnings-inequality",
+      "numbers": [
+        "0.30",
+        "2013",
+        "0.60",
+        "2020",
+        "0.80",
+        "0.72",
+        "0.60",
+        "0.75",
+        "2018",
+        "2023",
+        "2018",
+        "2024,",
+        "104,719"
+      ],
+      "strong": true,
+      "verdict": "needs-llm"
+    },
+    {
+      "sentence": "Two counter-cuts belong beside it: every Patreon earnings decile grew in absolute terms over that window [[quantifying-the-creator-economy-a-large-scale-analysis-of-patreon]], and Twitch's elite tier is near-static in composition rather than churning [[vol0123456789-2]].",
+      "note_id": "quantifying-the-creator-economy-a-large-scale-analysis-of-patreon",
+      "numbers": [
+        "0123456789",
+        "2"
+      ],
+      "strong": true,
+      "verdict": "needs-llm"
+    },
+    {
+      "sentence": "Two counter-cuts belong beside it: every Patreon earnings decile grew in absolute terms over that window [[quantifying-the-creator-economy-a-large-scale-analysis-of-patreon]], and Twitch's elite tier is near-static in composition rather than churning [[vol0123456789-2]].",
+      "note_id": "vol0123456789-2",
+      "numbers": [
+        "0123456789",
+        "2"
+      ],
+      "strong": true,
+      "verdict": "needs-llm"
+    },
+    {
+      "sentence": "Off-platform income also concentrates upward, with 60.6% of YouTube channels above 10,000 subscribers using at least one off-platform strategy [[characterizing-alternative-monetization-strategies-on]] and top-2,000 Twitch channels carrying 3.7 sponsorship or affiliate links against 2.2 outside the top 10,000 [[vol0123456789-2]]; no individual-level platform-to-total ratio exists for any of these platforms.",
+      "note_id": "characterizing-alternative-monetization-strategies-on",
+      "numbers": [
+        "60.6%",
+        "10,000",
+        "2,000",
+        "3.7",
+        "2.2",
+        "10,000",
+        "0123456789",
+        "2"
+      ],
+      "strong": true,
+      "verdict": "needs-llm"
+    },
+    {
+      "sentence": "Off-platform income also concentrates upward, with 60.6% of YouTube channels above 10,000 subscribers using at least one off-platform strategy [[characterizing-alternative-monetization-strategies-on]] and top-2,000 Twitch channels carrying 3.7 sponsorship or affiliate links against 2.2 outside the top 10,000 [[vol0123456789-2]]; no individual-level platform-to-total ratio exists for any of these platforms.",
+      "note_id": "vol0123456789-2",
+      "numbers": [
+        "60.6%",
+        "10,000",
+        "2,000",
+        "3.7",
+        "2.2",
+        "10,000",
+        "0123456789",
+        "2"
+      ],
+      "strong": true,
+      "verdict": "needs-llm"
+    },
+    {
+      "sentence": "Partner Program enrolment is roughly 45–50% of eligible channels: 2 million members disclosed in August 2021 against 4,415,180 channels above 1,000 subscribers in the separate 36,336,861-channel 2020 platform census [[youtube-says-its-partner-program-now-has-2-million-members-the-verge]] [[mapping-youtube-a-quantitative-exploration-of-a-platformed-media-system]].",
+      "note_id": "youtube-says-its-partner-program-now-has-2-million-members-the-verge",
+      "numbers": [
+        "45",
+        "50%",
+        "2",
+        "2021",
+        "4,415,180",
+        "1,000",
+        "36,336,861",
+        "2020",
+        "2"
+      ],
+      "strong": true,
+      "verdict": "needs-llm"
+    },
+    {
+      "sentence": "Partner Program enrolment is roughly 45–50% of eligible channels: 2 million members disclosed in August 2021 against 4,415,180 channels above 1,000 subscribers in the separate 36,336,861-channel 2020 platform census [[youtube-says-its-partner-program-now-has-2-million-members-the-verge]] [[mapping-youtube-a-quantitative-exploration-of-a-platformed-media-system]].",
+      "note_id": "mapping-youtube-a-quantitative-exploration-of-a-platformed-media-system",
+      "numbers": [
+        "45",
+        "50%",
+        "2",
+        "2021",
+        "4,415,180",
+        "1,000",
+        "36,336,861",
+        "2020",
+        "2"
+      ],
+      "strong": true,
+      "verdict": "needs-llm"
+    },
+    {
+      "sentence": "Cross-sectional academic surveys of active creators land closer to telemetry than vendor surveys do: 45.8% of 377 respondents across 30 countries reported any income, replicated at 46.1% of 382 in a companion study where income standard deviations exceeded group means by 2.6 to 4.6 times [[fame-and-fortune-or-just-fun]] [[play-playbour-or-labour-the-relationships-between-perception-of]].",
+      "note_id": "fame-and-fortune-or-just-fun",
+      "numbers": [
+        "45.8%",
+        "377",
+        "30",
+        "46.1%",
+        "382",
+        "2.6",
+        "4.6"
+      ],
+      "strong": true,
+      "verdict": "needs-llm"
+    },
+    {
+      "sentence": "Cross-sectional academic surveys of active creators land closer to telemetry than vendor surveys do: 45.8% of 377 respondents across 30 countries reported any income, replicated at 46.1% of 382 in a companion study where income standard deviations exceeded group means by 2.6 to 4.6 times [[fame-and-fortune-or-just-fun]] [[play-playbour-or-labour-the-relationships-between-perception-of]].",
+      "note_id": "play-playbour-or-labour-the-relationships-between-perception-of",
+      "numbers": [
+        "45.8%",
+        "377",
+        "30",
+        "46.1%",
+        "382",
+        "2.6",
+        "4.6"
+      ],
+      "strong": true,
+      "verdict": "needs-llm"
+    },
+    {
+      "sentence": "US federal microdata puts the wage Gini for independent artists at 0.582 against a national 0.474 [[independent-artists-writers-and-performers-data-usa]], and the roughly 2.8-fold gap between that person count and the payroll count of 61,710 is the self-employment share payroll instruments cannot see [[independent-artists-writers-and-performers-may-2022-oews-industry-specific-occup]].",
+      "note_id": "independent-artists-writers-and-performers-data-usa",
+      "numbers": [
+        "0.582",
+        "0.474",
+        "2.8",
+        "61,710",
+        "2022"
+      ],
+      "strong": true,
+      "verdict": "needs-llm"
+    },
+    {
+      "sentence": "US federal microdata puts the wage Gini for independent artists at 0.582 against a national 0.474 [[independent-artists-writers-and-performers-data-usa]], and the roughly 2.8-fold gap between that person count and the payroll count of 61,710 is the self-employment share payroll instruments cannot see [[independent-artists-writers-and-performers-may-2022-oews-industry-specific-occup]].",
+      "note_id": "independent-artists-writers-and-performers-may-2022-oews-industry-specific-occup",
+      "numbers": [
+        "0.582",
+        "0.474",
+        "2.8",
+        "61,710",
+        "2022"
+      ],
+      "strong": true,
+      "verdict": "needs-llm"
+    },
+    {
+      "sentence": "| Eligibility [[youtube-partner-program-overview-eligibility-computer-youtube-help]] | 1,000 subscribers **and** either 4,000 valid public watch hours in 12 months **or** 10m Shorts views in 90 days; review about a month; 21/30/90-day appeal cooldowns | Platform rule | YouTube | Global | Current, Jul 2026 |",
+      "note_id": "youtube-partner-program-overview-eligibility-computer-youtube-help",
+      "numbers": [
+        "1,000",
+        "4,000",
+        "12",
+        "10",
+        "90",
+        "21",
+        "30",
+        "90",
+        "2026"
+      ],
+      "strong": true,
+      "verdict": "needs-llm"
+    },
+    {
+      "sentence": "| Eligibility [[joining-the-affiliate-program]] | 25 followers, 4 hours streamed, 4 broadcast days, 3 average concurrent viewers within 30 days; no pass rate published | Platform rule | Twitch | Global | Current, Jul 2026 |",
+      "note_id": "joining-the-affiliate-program",
+      "numbers": [
+        "25",
+        "4",
+        "4",
+        "3",
+        "30",
+        "2026"
+      ],
+      "strong": true,
+      "verdict": "needs-llm"
+    },
+    {
+      "sentence": "| Payout [[meet-youtubes-revenue-thresholds-for-payment-youtube-help]] | Five sequential thresholds; money moves only at the **$100 payment threshold**; only IDR (Rp1,300,000) and SGD (S$150) listed among SEA currencies | Platform rule | YouTube | Global | Current, Jul 2026 |",
+      "note_id": "meet-youtubes-revenue-thresholds-for-payment-youtube-help",
+      "numbers": [
+        "100",
+        "1,300,000",
+        "150",
+        "2026"
+      ],
+      "strong": true,
+      "verdict": "needs-llm"
+    },
+    {
+      "sentence": "| Income floor [[httpsdoiorg10117720563051231180628]] | Channels at 1,000–10,000 subscribers average $295/year; channels under 1,000 receive 0% | ~36.1m | YouTube | Global | 2019 revenue |",
+      "note_id": "httpsdoiorg10117720563051231180628",
+      "numbers": [
+        "10117720563051231180628",
+        "1,000",
+        "10,000",
+        "295",
+        "1,000",
+        "0%",
+        "36.1",
+        "2019"
+      ],
+      "strong": true,
+      "verdict": "needs-llm"
+    },
+    {
+      "sentence": "A channel at the eligibility line earning the modal few dollars a month would need roughly five to twenty months of accrual to cross the $100 threshold, before review-queue delay — arithmetic over the disclosed payout floor and the vendor view distribution, measured directly by no source [[meet-youtubes-revenue-thresholds-for-payment-youtube-help]] [[how-much-does-youtube-pay-for-1000-subscribers-in-2026]].",
+      "note_id": "meet-youtubes-revenue-thresholds-for-payment-youtube-help",
+      "numbers": [
+        "100",
+        "1000",
+        "2026"
+      ],
+      "strong": true,
+      "verdict": "needs-llm"
+    },
+    {
+      "sentence": "Across the 36,336,861-channel census, correlation between channel age and success was 0.082 for subscribers and 0.101 for views within the elite tier, collapsing to 0.009 and 0.003 across the full population, while elite channels averaged 940 published videos against 294 for the next tier and average days active were \"surprisingly constant between tiers\" [[mapping-youtube-a-quantitative-exploration-of-a-platformed-media-system]].",
+      "note_id": "mapping-youtube-a-quantitative-exploration-of-a-platformed-media-system",
+      "numbers": [
+        "36,336,861",
+        "0.082",
+        "0.101",
+        "0.009",
+        "0.003",
+        "940",
+        "294"
+      ],
+      "strong": true,
+      "verdict": "needs-llm"
+    },
+    {
+      "sentence": "On Twitch, a difference-in-differences design — comparing how two groups diverge after an event affecting only one — found newcomers reaching only Affiliate status streaming 15.4% less than new Partners and reverting to pre-pandemic levels within four to eight weeks (n=18,467, 2019–2020) [[vol0123456789]].",
+      "note_id": "vol0123456789",
+      "numbers": [
+        "15.4%",
+        "18,467,",
+        "2019",
+        "2020",
+        "0123456789"
+      ],
+      "strong": true,
+      "verdict": "needs-llm"
+    },
+    {
+      "sentence": "The survey figures bearing on timing describe survivors: among Linktree respondents under 12 months in, 59% had not monetized at all and 6% had earned over $10,000, computed only over creators still present to answer [[pdf-linktree-creatorreport-2022-02f3aa05a27be6fecb3537b13d5ec9depdf]].",
+      "note_id": "pdf-linktree-creatorreport-2022-02f3aa05a27be6fecb3537b13d5ec9depdf",
+      "numbers": [
+        "12",
+        "59%",
+        "6%",
+        "10,000,",
+        "2022",
+        "02",
+        "3",
+        "05",
+        "27",
+        "6",
+        "3537",
+        "13",
+        "5",
+        "9"
+      ],
+      "strong": true,
+      "verdict": "needs-llm"
+    },
+    {
+      "sentence": "| Awin [[78-of-influencers-admit-to-suffering-burnout]] | 78%, restated as 87% in Awin's 2024 release | Not asked | Constant platform changes 72%; 53% say passion decreased | Undisclosed | 2022 | Affiliate-network creators | US, UK |",
+      "note_id": "78-of-influencers-admit-to-suffering-burnout",
+      "numbers": [
+        "78",
+        "78%",
+        "87%",
+        "2024",
+        "72%",
+        "53%",
+        "2022"
+      ],
+      "strong": true,
+      "verdict": "needs-llm"
+    },
+    {
+      "sentence": "| Linktree [[pdf-linktree-creatorreport-2022-02f3aa05a27be6fecb3537b13d5ec9depdf]] | 13% of full-timers extremely/consistently stressed vs 9% part-time | Not asked | Not ranked | 9,576 | 2021 | Multi-platform, not disaggregated | Undisclosed |",
+      "note_id": "pdf-linktree-creatorreport-2022-02f3aa05a27be6fecb3537b13d5ec9depdf",
+      "numbers": [
+        "2022",
+        "02",
+        "3",
+        "05",
+        "27",
+        "6",
+        "3537",
+        "13",
+        "5",
+        "9",
+        "13%",
+        "9%",
+        "9,576",
+        "2021"
+      ],
+      "strong": true,
+      "verdict": "needs-llm"
+    },
+    {
+      "sentence": "Only one instrument ranks financial instability first, and it does so by severity while ranking creative fatigue first by frequency — different variables on different denominators [[over-half-of-creators-face-burnout-action-urged-billion-dollar-boy]].",
+      "note_id": "over-half-of-creators-face-burnout-action-urged-billion-dollar-boy",
+      "numbers": [],
+      "strong": true,
+      "verdict": "needs-llm"
+    },
+    {
+      "sentence": "That 52% has been reproduced across at least seven trade outlets reporting one survey of 1,000 people, only one of which discloses the fielding agency, July 2025 fieldwork and 500-per-market split [[52-of-content-creators-say-they-have-experienced-burnout]] [[burnout-among-creators-is-reaching-a-crisis-point]] [[the-hidden-cost-of-creator-burnout-and-what-it-means-for-your-influencer-program]].",
+      "note_id": "burnout-among-creators-is-reaching-a-crisis-point",
+      "numbers": [
+        "52%",
+        "1,000",
+        "2025",
+        "500",
+        "52"
+      ],
+      "strong": true,
+      "verdict": "needs-llm"
+    },
+    {
+      "sentence": "That 52% has been reproduced across at least seven trade outlets reporting one survey of 1,000 people, only one of which discloses the fielding agency, July 2025 fieldwork and 500-per-market split [[52-of-content-creators-say-they-have-experienced-burnout]] [[burnout-among-creators-is-reaching-a-crisis-point]] [[the-hidden-cost-of-creator-burnout-and-what-it-means-for-your-influencer-program]].",
+      "note_id": "the-hidden-cost-of-creator-burnout-and-what-it-means-for-your-influencer-program",
+      "numbers": [
+        "52%",
+        "1,000",
+        "2025",
+        "500",
+        "52"
+      ],
+      "strong": true,
+      "verdict": "needs-llm"
+    },
+    {
+      "sentence": "Zhao's Cox proportional-hazards model — a survival regression estimating how each variable multiplies the instantaneous risk of exit — returns a hazard ratio of 1.980 for small-agency affiliation (p=0.003), while stream duration (p=0.207) and gender are not significant and Superchat income shows no significant main effect (β=−0.136, p=0.111) though its interaction with time is significant (p=0.010), making its protective effect small and cumulative rather than absent [[who-reaps-all-the-superchats-a-large-scale-analysis-of-income]].",
+      "note_id": "who-reaps-all-the-superchats-a-large-scale-analysis-of-income",
+      "numbers": [
+        "1.980",
+        "0.003",
+        "0.207",
+        "0.136",
+        "0.111",
+        "0.010"
+      ],
+      "strong": true,
+      "verdict": "needs-llm"
+    },
+    {
+      "sentence": "The Twitch panel finds the Affiliate/Partner status line, not earnings, separating those who sustained effort from those who reverted at identical tenure [[vol0123456789]].",
+      "note_id": "vol0123456789",
+      "numbers": [
+        "0123456789"
+      ],
+      "strong": true,
+      "verdict": "needs-llm"
+    },
+    {
+      "sentence": "Törhönen's structural model of 377 creators finds intrinsic motivation predicting intention to continue at p=0.000 while extrinsic motivation as a block fails at p=0.052 [[fame-and-fortune-or-just-fun]] [[play-playbour-or-labour-the-relationships-between-perception-of]].",
+      "note_id": "play-playbour-or-labour-the-relationships-between-perception-of",
+      "numbers": [
+        "377",
+        "0.000",
+        "0.052"
+      ],
+      "strong": true,
+      "verdict": "needs-llm"
+    },
+    {
+      "sentence": "A census-weighted US survey of 5,034 podcast consumers reaches a genuinely lapsed creator population — 6% of the base, roughly half the size of the active creator group — and lists \"what specific factors drive creator abandonment\" as an open question rather than asking it [[the-creators-2025-understanding-the-modern-podcast-creator-landscape-sounds-prof]].",
+      "note_id": "the-creators-2025-understanding-the-modern-podcast-creator-landscape-sounds-prof",
+      "numbers": [
+        "5,034",
+        "6%",
+        "2025"
+      ],
+      "strong": true,
+      "verdict": "needs-llm"
+    },
+    {
+      "sentence": "The nearest creator-side statements are unsampled: in the 2023 Bilibili 停更 wave a creator with 1.03 million followers said on 12 January they were stopping because they could not make ends meet, and one with 3.83 million said on 31 March that creating there was unprofitable, with 1,176 viewer comments coded that August [[stop-updating-a-textual-analysis-of-chinese-viewers]] — self-announcements naming income insufficiency, not a sampled exit survey.",
+      "note_id": "stop-updating-a-textual-analysis-of-chinese-viewers",
+      "numbers": [
+        "2023",
+        "1.03",
+        "12",
+        "3.83",
+        "31",
+        "1,176"
+      ],
+      "strong": true,
+      "verdict": "needs-llm"
+    },
+    {
+      "sentence": "| Patreon income and living-wage shares [[vol0123456789-3]] [[rich-get-richer-platform-attention-and-earnings-inequality]] | Not reported; US-headquartered, Western-skewed base | No — shapes may travel, USD levels do not |",
+      "note_id": "vol0123456789-3",
+      "numbers": [
+        "0123456789",
+        "3"
+      ],
+      "strong": true,
+      "verdict": "needs-llm"
+    },
+    {
+      "sentence": "| Patreon income and living-wage shares [[vol0123456789-3]] [[rich-get-richer-platform-attention-and-earnings-inequality]] | Not reported; US-headquartered, Western-skewed base | No — shapes may travel, USD levels do not |",
+      "note_id": "rich-get-richer-platform-attention-and-earnings-inequality",
+      "numbers": [
+        "0123456789",
+        "3"
+      ],
+      "strong": true,
+      "verdict": "needs-llm"
+    },
+    {
+      "sentence": "| YouTube payout tiers, the 0.043% share [[httpsdoiorg10117720563051231180628]] | Global crawl, single Google-wide revenue sum; 53.6% of monetizable channels carry no country flag [[mapping-youtube-a-quantitative-exploration-of-a-platformed-media-system]] | Partially — country analysis covers under half the platform |",
+      "note_id": "httpsdoiorg10117720563051231180628",
+      "numbers": [
+        "0.043%",
+        "10117720563051231180628",
+        "53.6%"
+      ],
+      "strong": true,
+      "verdict": "needs-llm"
+    },
+    {
+      "sentence": "| YouTube payout tiers, the 0.043% share [[httpsdoiorg10117720563051231180628]] | Global crawl, single Google-wide revenue sum; 53.6% of monetizable channels carry no country flag [[mapping-youtube-a-quantitative-exploration-of-a-platformed-media-system]] | Partially — country analysis covers under half the platform |",
+      "note_id": "mapping-youtube-a-quantitative-exploration-of-a-platformed-media-system",
+      "numbers": [
+        "0.043%",
+        "10117720563051231180628",
+        "53.6%"
+      ],
+      "strong": true,
+      "verdict": "needs-llm"
+    },
+    {
+      "sentence": "| Twitch payout leak percentiles [[twitch-streamer-earnings-increase-for-top-gamers-data-from-hack-shows-wsj]] | No country composition disclosed | No |",
+      "note_id": "twitch-streamer-earnings-increase-for-top-gamers-data-from-hack-shows-wsj",
+      "numbers": [],
+      "strong": true,
+      "verdict": "needs-llm"
+    },
+    {
+      "sentence": "| UK music creator earnings [[music-creators-earnings-in]] | United Kingdom only | No |",
+      "note_id": "music-creators-earnings-in",
+      "numbers": [],
+      "strong": false,
+      "verdict": "needs-llm"
+    },
+    {
+      "sentence": "| NEA / ACS / BLS artist earnings [[artists-and-other-cultural-workers]] [[office-of-research-analysis]] | United States only | No |",
+      "note_id": "office-of-research-analysis",
+      "numbers": [],
+      "strong": false,
+      "verdict": "needs-llm"
+    },
+    {
+      "sentence": "| All burnout instruments [[over-half-of-creators-face-burnout-action-urged-billion-dollar-boy]] [[in-sweeping-study-89-of-creators-claim-to-lack-access-to-specialized-mental-heal]] | US, UK, France, Germany, North America | No — zero SEA presence |",
+      "note_id": "over-half-of-creators-face-burnout-action-urged-billion-dollar-boy",
+      "numbers": [
+        "89"
+      ],
+      "strong": true,
+      "verdict": "needs-llm"
+    },
+    {
+      "sentence": "| Podcast churn [[the-creators-2025-understanding-the-modern-podcast-creator-landscape-sounds-prof]] | United States | No |",
+      "note_id": "the-creators-2025-understanding-the-modern-podcast-creator-landscape-sounds-prof",
+      "numbers": [
+        "2025"
+      ],
+      "strong": true,
+      "verdict": "needs-llm"
+    },
+    {
+      "sentence": "| VTuber survival and income [[who-reaps-all-the-superchats-a-large-scale-analysis-of-income]] | Global; agencies run Japanese, English and Indonesian branches | Closest touchpoint; no country breakdown published |",
+      "note_id": "who-reaps-all-the-superchats-a-large-scale-analysis-of-income",
+      "numbers": [],
+      "strong": false,
+      "verdict": "needs-llm"
+    },
+    {
+      "sentence": "Only 20.1% of a random YouTube video sample was in English, Hindi 7.6% and Spanish 6.2%, so the English-language popularity-gated datasets underpinning most academic creator-income work describe a minority of the platform [[journal-of-quantitative-description-digital-media-32023-185]].",
+      "note_id": "journal-of-quantitative-description-digital-media-32023-185",
+      "numbers": [
+        "20.1%",
+        "7.6%",
+        "6.2%",
+        "32023",
+        "185"
+      ],
+      "strong": true,
+      "verdict": "needs-llm"
+    },
+    {
+      "sentence": "| Living wage, family of four, 48-hour week | $254.28/mo on the absolute poverty line, $414.88 on the moderate line, developing Asia | ~$1,160/mo US federal minimum; $50,000/yr; $67,521 median household | [[adbi-working-paper-series]], 2019 |",
+      "note_id": "adbi-working-paper-series",
+      "numbers": [
+        "48",
+        "254.28",
+        "414.88",
+        "1,160",
+        "50,000",
+        "67,521",
+        "2019"
+      ],
+      "strong": true,
+      "verdict": "needs-llm"
+    },
+    {
+      "sentence": "| Revenue per 1,000 views at 70% inventory fill | ~INR 30, under $1, Indian audience | ~$5, US audience | [[httpsdoiorg10117720563051241234693]], 2024 |",
+      "note_id": "httpsdoiorg10117720563051241234693",
+      "numbers": [
+        "1,000",
+        "70%",
+        "30,",
+        "1,",
+        "5,",
+        "10117720563051241234693",
+        "2024"
+      ],
+      "strong": true,
+      "verdict": "needs-llm"
+    },
+    {
+      "sentence": "| Off-platform link infrastructure | India, Indonesia and Thailand over-represented among channels carrying no links at all | — | [[httpsdoiorg10117720563051231180628]], 2019 crawl |",
+      "note_id": "httpsdoiorg10117720563051231180628",
+      "numbers": [
+        "10117720563051231180628",
+        "2019"
+      ],
+      "strong": true,
+      "verdict": "needs-llm"
+    },
+    {
+      "sentence": "| Employment counterfactual | Informal work over 70% of non-agricultural employment in Indonesia and the Philippines, over 60% Vietnam, 38% Thailand; 71% of Indonesian e-commerce sellers social/chat only, 26% blended, 3% platform only | US salaried norm | [[adbi-working-paper-series]] to 2018; [[technologies]] 2023 |",
+      "note_id": "adbi-working-paper-series",
+      "numbers": [
+        "70%",
+        "60%",
+        "38%",
+        "71%",
+        "26%",
+        "3%",
+        "2018",
+        "2023"
+      ],
+      "strong": true,
+      "verdict": "needs-llm"
+    },
+    {
+      "sentence": "| Employment counterfactual | Informal work over 70% of non-agricultural employment in Indonesia and the Philippines, over 60% Vietnam, 38% Thailand; 71% of Indonesian e-commerce sellers social/chat only, 26% blended, 3% platform only | US salaried norm | [[adbi-working-paper-series]] to 2018; [[technologies]] 2023 |",
+      "note_id": "technologies",
+      "numbers": [
+        "70%",
+        "60%",
+        "38%",
+        "71%",
+        "26%",
+        "3%",
+        "2018",
+        "2023"
+      ],
+      "strong": true,
+      "verdict": "needs-llm"
+    },
+    {
+      "sentence": "The chart is page 10 of TikTok's commissioned report, fielded by Kadence International across nine markets in August–September 2022, total quantitative sample N=3,412, published 15 June 2023 [[the-tiktok-effect]].",
+      "note_id": "the-tiktok-effect",
+      "numbers": [
+        "10",
+        "2022,",
+        "3,412,",
+        "15",
+        "2023"
+      ],
+      "strong": true,
+      "verdict": "needs-llm"
+    },
+    {
+      "sentence": "Three caveats travel with all of it: the sub-base of \"creators who use TikTok as a source of income\" — the actual denominator behind each percentage — is disclosed for no country except Myanmar; Indonesia's minimum-wage benchmark is a single blended national figure of $216 a month, erasing province-level variation; and the sample is self-selected active TikTok users recruited through the platform's own vendor [[tiktoks-socio-economic-impact-in-southeast-asia-a-summary-of-the-report-kadence]].",
+      "note_id": "tiktoks-socio-economic-impact-in-southeast-asia-a-summary-of-the-report-kadence",
+      "numbers": [
+        "216"
+      ],
+      "strong": true,
+      "verdict": "needs-llm"
+    },
+    {
+      "sentence": "Two Vietnamese-language pieces presented as local creator-income coverage paraphrase US survey data benchmarked to US living wages [[báo-cáo-thu-nhập-nhà-sáng-tạo-nội-dung-2025]].",
+      "note_id": "báo-cáo-thu-nhập-nhà-sáng-tạo-nội-dung-2025",
+      "numbers": [
+        "2025"
+      ],
+      "strong": true,
+      "verdict": "needs-llm"
+    },
+    {
+      "sentence": "Persistence models find structural access to monetization infrastructure to be the significant predictor of continuation [[who-reaps-all-the-superchats-a-large-scale-analysis-of-income]] [[vol0123456789]], and regional evidence finds Southeast Asian creators with systematically worse structural access [[httpsdoiorg10117720563051241234693]] [[httpsdoiorg10117720563051231180628]].",
+      "note_id": "who-reaps-all-the-superchats-a-large-scale-analysis-of-income",
+      "numbers": [
+        "0123456789",
+        "10117720563051241234693",
+        "10117720563051231180628"
+      ],
+      "strong": true,
+      "verdict": "needs-llm"
+    },
+    {
+      "sentence": "Persistence models find structural access to monetization infrastructure to be the significant predictor of continuation [[who-reaps-all-the-superchats-a-large-scale-analysis-of-income]] [[vol0123456789]], and regional evidence finds Southeast Asian creators with systematically worse structural access [[httpsdoiorg10117720563051241234693]] [[httpsdoiorg10117720563051231180628]].",
+      "note_id": "vol0123456789",
+      "numbers": [
+        "0123456789",
+        "10117720563051241234693",
+        "10117720563051231180628"
+      ],
+      "strong": true,
+      "verdict": "needs-llm"
+    },
+    {
+      "sentence": "Persistence models find structural access to monetization infrastructure to be the significant predictor of continuation [[who-reaps-all-the-superchats-a-large-scale-analysis-of-income]] [[vol0123456789]], and regional evidence finds Southeast Asian creators with systematically worse structural access [[httpsdoiorg10117720563051241234693]] [[httpsdoiorg10117720563051231180628]].",
+      "note_id": "httpsdoiorg10117720563051241234693",
+      "numbers": [
+        "0123456789",
+        "10117720563051241234693",
+        "10117720563051231180628"
+      ],
+      "strong": true,
+      "verdict": "needs-llm"
+    },
+    {
+      "sentence": "Persistence models find structural access to monetization infrastructure to be the significant predictor of continuation [[who-reaps-all-the-superchats-a-large-scale-analysis-of-income]] [[vol0123456789]], and regional evidence finds Southeast Asian creators with systematically worse structural access [[httpsdoiorg10117720563051241234693]] [[httpsdoiorg10117720563051231180628]].",
+      "note_id": "httpsdoiorg10117720563051231180628",
+      "numbers": [
+        "0123456789",
+        "10117720563051241234693",
+        "10117720563051231180628"
+      ],
+      "strong": true,
+      "verdict": "needs-llm"
+    },
+    {
+      "sentence": "Even a Twitch telemetry panel carries a selection floor of roughly 21 concurrent viewers [[vol0123456789]].",
+      "note_id": "vol0123456789",
+      "numbers": [
+        "21",
+        "0123456789"
+      ],
+      "strong": true,
+      "verdict": "needs-llm"
+    },
+    {
+      "sentence": "The effect is bounded but not calibrated: the clearest paired measurement concerns affiliate-link prevalence, at 36.7% on a dataset restricted to channels above 10,000 subscribers against 3.49% for the same category on a random-prefix sample of roughly 500,000 videos [[characterizing-alternative-monetization-strategies-on]] [[endorsements-on-social-media-an-empirical-study-of]].",
+      "note_id": "characterizing-alternative-monetization-strategies-on",
+      "numbers": [
+        "36.7%",
+        "10,000",
+        "3.49%",
+        "500,000"
+      ],
+      "strong": true,
+      "verdict": "needs-llm"
+    },
+    {
+      "sentence": "The effect is bounded but not calibrated: the clearest paired measurement concerns affiliate-link prevalence, at 36.7% on a dataset restricted to channels above 10,000 subscribers against 3.49% for the same category on a random-prefix sample of roughly 500,000 videos [[characterizing-alternative-monetization-strategies-on]] [[endorsements-on-social-media-an-empirical-study-of]].",
+      "note_id": "endorsements-on-social-media-an-empirical-study-of",
+      "numbers": [
+        "36.7%",
+        "10,000",
+        "3.49%",
+        "500,000"
+      ],
+      "strong": true,
+      "verdict": "needs-llm"
+    },
+    {
+      "sentence": "The Twitch leak's denominator is stated at least six incompatible ways across outlets covering one dataset, and its observation window five ways [[the-unbearable-lightness-of-streaming-superjoost-playlist]] [[many-top-twitch-streamers-dont-make-minimum-wage-and-3-new-takeaways-from-the-tw]].",
+      "note_id": "the-unbearable-lightness-of-streaming-superjoost-playlist",
+      "numbers": [
+        "3"
+      ],
+      "strong": true,
+      "verdict": "needs-llm"
+    },
+    {
+      "sentence": "The Twitch leak's denominator is stated at least six incompatible ways across outlets covering one dataset, and its observation window five ways [[the-unbearable-lightness-of-streaming-superjoost-playlist]] [[many-top-twitch-streamers-dont-make-minimum-wage-and-3-new-takeaways-from-the-tw]].",
+      "note_id": "many-top-twitch-streamers-dont-make-minimum-wage-and-3-new-takeaways-from-the-tw",
+      "numbers": [
+        "3"
+      ],
+      "strong": true,
+      "verdict": "needs-llm"
+    },
+    {
+      "sentence": "Reference period alone moves measured platform-work prevalence by a factor of three to nine — from 5.7% of Norway's working-age population over a year to 1.5% over a month [[ilo-brief]].",
+      "note_id": "ilo-brief",
+      "numbers": [
+        "5.7%",
+        "1.5%"
+      ],
+      "strong": true,
+      "verdict": "needs-llm"
+    },
+    {
+      "sentence": "Threshold changes break cohort comparability outright: YouTube's February 2018 rule change severs comparison with earlier cohorts [[el-komboz-lena-abou-kerkhof-anna-loh-johannes]], and TikTok economics are not comparable across the 16 December 2023 boundary at which the Creativity Program replaced the Creator Fund in four Western markets [[unlocking-even-more-opportunities-for-creators-with-the-creativity-program-beta]].",
+      "note_id": "el-komboz-lena-abou-kerkhof-anna-loh-johannes",
+      "numbers": [
+        "2018",
+        "16",
+        "2023"
+      ],
+      "strong": true,
+      "verdict": "needs-llm"
+    },
+    {
+      "sentence": "Threshold changes break cohort comparability outright: YouTube's February 2018 rule change severs comparison with earlier cohorts [[el-komboz-lena-abou-kerkhof-anna-loh-johannes]], and TikTok economics are not comparable across the 16 December 2023 boundary at which the Creativity Program replaced the Creator Fund in four Western markets [[unlocking-even-more-opportunities-for-creators-with-the-creativity-program-beta]].",
+      "note_id": "unlocking-even-more-opportunities-for-creators-with-the-creativity-program-beta",
+      "numbers": [
+        "2018",
+        "16",
+        "2023"
+      ],
+      "strong": true,
+      "verdict": "needs-llm"
+    },
+    {
+      "sentence": "| Origin | SignalFire venture-capital blog market analysis: 50m creators, ~2m professional, no survey disclosed, c. 2020 [[creator-economy-guide-trends-tools-monetization]] | TikTok/Kadence survey, 9 markets, N=3,412, fielded Aug–Sep 2022 [[the-tiktok-effect]] |",
+      "note_id": "creator-economy-guide-trends-tools-monetization",
+      "numbers": [
+        "50",
+        "2",
+        "2020",
+        "9",
+        "3,412,",
+        "2022"
+      ],
+      "strong": true,
+      "verdict": "needs-llm"
+    },
+    {
+      "sentence": "| Origin | SignalFire venture-capital blog market analysis: 50m creators, ~2m professional, no survey disclosed, c. 2020 [[creator-economy-guide-trends-tools-monetization]] | TikTok/Kadence survey, 9 markets, N=3,412, fielded Aug–Sep 2022 [[the-tiktok-effect]] |",
+      "note_id": "the-tiktok-effect",
+      "numbers": [
+        "50",
+        "2",
+        "2020",
+        "9",
+        "3,412,",
+        "2022"
+      ],
+      "strong": true,
+      "verdict": "needs-llm"
+    },
+    {
+      "sentence": "| Laundering step | Zippia SEO listicle, June 2023, recycling SignalFire, NeoReach and Linktree figures without attribution [[20-incredible-creator-economy-statistics-2023-facts-charts-trends-zippia]] | TikTok Indonesia communications director citing internal data, December 2023 [[63-percent-of-tiktok-creators-earn-more-than-minimum-wage]] |",
+      "note_id": "20-incredible-creator-economy-statistics-2023-facts-charts-trends-zippia",
+      "numbers": [
+        "2023,",
+        "20",
+        "2023",
+        "2023",
+        "63"
+      ],
+      "strong": true,
+      "verdict": "needs-llm"
+    },
+    {
+      "sentence": "| Institutional adoption | Goldman Sachs, April 2023: 50m creators, ~4% professional, defined as earning above $100,000 a year [[the-creator-economy-could-approach-half-a-trillion-dollars-by-2027-goldman-sachs]] | Testimony to DPR Komisi I, 15 July 2025 [[jdih-setjen-dpr-ri-jaringan-dokumentasi-dan-informasi-hukum-sekretariat-jenderal]] |",
+      "note_id": "the-creator-economy-could-approach-half-a-trillion-dollars-by-2027-goldman-sachs",
+      "numbers": [
+        "2023",
+        "50",
+        "4%",
+        "100,000",
+        "2027",
+        "15",
+        "2025"
+      ],
+      "strong": true,
+      "verdict": "needs-llm"
+    },
+    {
+      "sentence": "| Institutional adoption | Goldman Sachs, April 2023: 50m creators, ~4% professional, defined as earning above $100,000 a year [[the-creator-economy-could-approach-half-a-trillion-dollars-by-2027-goldman-sachs]] | Testimony to DPR Komisi I, 15 July 2025 [[jdih-setjen-dpr-ri-jaringan-dokumentasi-dan-informasi-hukum-sekretariat-jenderal]] |",
+      "note_id": "jdih-setjen-dpr-ri-jaringan-dokumentasi-dan-informasi-hukum-sekretariat-jenderal",
+      "numbers": [
+        "2023",
+        "50",
+        "4%",
+        "100,000",
+        "2027",
+        "15",
+        "2025"
+      ],
+      "strong": true,
+      "verdict": "needs-llm"
+    },
+    {
+      "sentence": "| Re-baselining | Goldman Sachs, March 2025: totals 50.0 / 66.6 / 80.5 / 107.2m for 2022–2030, professionals held at 2.0 / 2.0 / 2.2 / 2.7m; exhibit source line reads \"Zippia, Influencer Marketing Hub, Goldman Sachs Global Investment Research\" [[with-this-report-we-assess-the-current-state-of-the-creator-economy-including]] | Ministerial repetition as a national statistic, then across four Indonesian outlets [[menekraf-8-juta-orang-berprofesi-konten-kreatof-63-persen-gajinya-di-atas-umr-ku]] [[tiktok-buka-data-63-persen-kreator-di-indonesia-berpenghasilan-tinggi-merdekacom]] |",
+      "note_id": "with-this-report-we-assess-the-current-state-of-the-creator-economy-including",
+      "numbers": [
+        "2025",
+        "50.0",
+        "66.6",
+        "80.5",
+        "107.2",
+        "2022",
+        "2030,",
+        "2.0",
+        "2.0",
+        "2.2",
+        "2.7",
+        "8",
+        "63",
+        "63"
+      ],
+      "strong": true,
+      "verdict": "needs-llm"
+    },
+    {
+      "sentence": "| Re-baselining | Goldman Sachs, March 2025: totals 50.0 / 66.6 / 80.5 / 107.2m for 2022–2030, professionals held at 2.0 / 2.0 / 2.2 / 2.7m; exhibit source line reads \"Zippia, Influencer Marketing Hub, Goldman Sachs Global Investment Research\" [[with-this-report-we-assess-the-current-state-of-the-creator-economy-including]] | Ministerial repetition as a national statistic, then across four Indonesian outlets [[menekraf-8-juta-orang-berprofesi-konten-kreatof-63-persen-gajinya-di-atas-umr-ku]] [[tiktok-buka-data-63-persen-kreator-di-indonesia-berpenghasilan-tinggi-merdekacom]] |",
+      "note_id": "menekraf-8-juta-orang-berprofesi-konten-kreatof-63-persen-gajinya-di-atas-umr-ku",
+      "numbers": [
+        "2025",
+        "50.0",
+        "66.6",
+        "80.5",
+        "107.2",
+        "2022",
+        "2030,",
+        "2.0",
+        "2.0",
+        "2.2",
+        "2.7",
+        "8",
+        "63",
+        "63"
+      ],
+      "strong": true,
+      "verdict": "needs-llm"
+    },
+    {
+      "sentence": "| Re-baselining | Goldman Sachs, March 2025: totals 50.0 / 66.6 / 80.5 / 107.2m for 2022–2030, professionals held at 2.0 / 2.0 / 2.2 / 2.7m; exhibit source line reads \"Zippia, Influencer Marketing Hub, Goldman Sachs Global Investment Research\" [[with-this-report-we-assess-the-current-state-of-the-creator-economy-including]] | Ministerial repetition as a national statistic, then across four Indonesian outlets [[menekraf-8-juta-orang-berprofesi-konten-kreatof-63-persen-gajinya-di-atas-umr-ku]] [[tiktok-buka-data-63-persen-kreator-di-indonesia-berpenghasilan-tinggi-merdekacom]] |",
+      "note_id": "tiktok-buka-data-63-persen-kreator-di-indonesia-berpenghasilan-tinggi-merdekacom",
+      "numbers": [
+        "2025",
+        "50.0",
+        "66.6",
+        "80.5",
+        "107.2",
+        "2022",
+        "2030,",
+        "2.0",
+        "2.0",
+        "2.2",
+        "2.7",
+        "8",
+        "63",
+        "63"
+      ],
+      "strong": true,
+      "verdict": "needs-llm"
+    },
+    {
+      "sentence": "The professional count is held flat at 2.0 million from 2022 to 2025 while the total grows by 16.6 million, so every net entrant is an amateur by construction; the definition of professional slides from earning over $100,000 to self-description; and the companion statistic in wide circulation, that 3% of YouTubers take 90% of the wealth, is a unit transformation of a peer-reviewed finding that on average 85% of *views* accrue to 3% of channels [[opus-4-youtube-channels-uploads-and-views-a-statistical-analysis-of-the-past-10]].",
+      "note_id": "opus-4-youtube-channels-uploads-and-views-a-statistical-analysis-of-the-past-10",
+      "numbers": [
+        "2.0",
+        "2022",
+        "2025",
+        "16.6",
+        "100,000",
+        "3%",
+        "90%",
+        "85%",
+        "3%",
+        "4",
+        "10"
+      ],
+      "strong": true,
+      "verdict": "needs-llm"
+    },
+    {
+      "sentence": "The companion 8-million Indonesian creator headcount appears nowhere in the primary report and nowhere in the vendor's own methodology summary [[the-tiktok-effect]] [[tiktoks-socio-economic-impact-in-southeast-asia-a-summary-of-the-report-kadence]].",
+      "note_id": "the-tiktok-effect",
+      "numbers": [
+        "8"
+      ],
+      "strong": true,
+      "verdict": "needs-llm"
+    },
+    {
+      "sentence": "The companion 8-million Indonesian creator headcount appears nowhere in the primary report and nowhere in the vendor's own methodology summary [[the-tiktok-effect]] [[tiktoks-socio-economic-impact-in-southeast-asia-a-summary-of-the-report-kadence]].",
+      "note_id": "tiktoks-socio-economic-impact-in-southeast-asia-a-summary-of-the-report-kadence",
+      "numbers": [
+        "8"
+      ],
+      "strong": true,
+      "verdict": "needs-llm"
+    },
+    {
+      "sentence": "The failure is the merger: two figures from different sources, years and methods were welded into one statistic at a parliamentary hearing — where the same official, pressed for Indonesia revenue, stated on record that he did not have the data [[anggota-dpr-cecar-omzet-tiktok-mengaku-belum-siap-data-teknologi]] — and then repeated as a national statistic.",
+      "note_id": "anggota-dpr-cecar-omzet-tiktok-mengaku-belum-siap-data-teknologi",
+      "numbers": [],
+      "strong": false,
+      "verdict": "needs-llm"
+    },
+    {
+      "sentence": "One further figure cannot be converted into a per-creator quantity at all: a widely circulated channel-count composite is described by its own author as manual open-source intelligence assembled from third-party analytics vendors, because YouTube publishes neither figure [[how-many-youtube-channels-are-there-in-2026-tim-queen]].",
+      "note_id": "how-many-youtube-channels-are-there-in-2026-tim-queen",
+      "numbers": [
+        "2026"
+      ],
+      "strong": true,
+      "verdict": "needs-llm"
+    },
+    {
+      "sentence": "A YouTube channel census built from 1.21 billion Internet Archive captures, covering at least 106 million unique channels with subscriber histories back to 2006, is public and has not yet carried a survival model — though its coverage bias correlates with subscriber count and would undercount small-channel deaths, where attrition is highest [[tube-census]].",
+      "note_id": "tube-census",
+      "numbers": [
+        "1.21",
+        "106",
+        "2006,"
+      ],
+      "strong": true,
+      "verdict": "needs-llm"
+    },
+    {
+      "sentence": "Indonesia's 2026 Economic Census is billed as the first national instrument to enumerate content-creator business actors [[bps-dan-kemenekraf-bersinergi-kreator-lokal-dilibatkan-dalam-sosialisasi-se2026]], and the standard due at the 22nd International Conference of Labour Statisticians in 2028 would make national platform-work counts comparable for the first time [[ilo-brief]].",
+      "note_id": "bps-dan-kemenekraf-bersinergi-kreator-lokal-dilibatkan-dalam-sosialisasi-se2026",
+      "numbers": [
+        "2026",
+        "2026",
+        "22",
+        "2028"
+      ],
+      "strong": true,
+      "verdict": "needs-llm"
+    },
+    {
+      "sentence": "Indonesia's 2026 Economic Census is billed as the first national instrument to enumerate content-creator business actors [[bps-dan-kemenekraf-bersinergi-kreator-lokal-dilibatkan-dalam-sosialisasi-se2026]], and the standard due at the 22nd International Conference of Labour Statisticians in 2028 would make national platform-work counts comparable for the first time [[ilo-brief]].",
+      "note_id": "ilo-brief",
+      "numbers": [
+        "2026",
+        "2026",
+        "22",
+        "2028"
+      ],
+      "strong": true,
+      "verdict": "needs-llm"
+    }
+  ],
+  "dangling": []
+}

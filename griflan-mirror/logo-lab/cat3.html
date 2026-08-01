@@ -1,0 +1,378 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<title>Plan C — Living Logo v3 (หัว tilt + พฤติกรรมกลุ่ม A)</title>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  :root { --bg:#0f1613; --ivory:#f2efde; --gold:#f0b32e; }
+  body { background:var(--bg); color:var(--ivory); font-family:sans-serif;
+    min-height:100vh; display:flex; flex-direction:column; align-items:center; padding:26px 14px; }
+  h1 { font-size:17px; color:var(--gold); margin-bottom:4px; }
+  p.hint { font-size:12px; color:rgba(242,239,222,.5); margin-bottom:18px; text-align:center; }
+  .stage { width:min(760px,95vw); aspect-ratio:2/1; position:relative;
+    border:1px dashed rgba(242,239,222,.15); border-radius:12px; overflow:hidden; }
+  .cat-wrap { position:absolute; inset:0; }
+  .cat-wrap svg { position:absolute; inset:0; width:100%; height:100%; }
+
+  /* ---- breathing (เร็วขึ้นตอนตื่นตัว) ---- */
+  .cat { animation:breathe 4s ease-in-out infinite; transform-origin:50% 78%; }
+  .cat.alert { animation-duration:2.5s; }
+  @keyframes breathe { 0%,100%{transform:scaleY(1)} 50%{transform:scaleY(1.014)} }
+  .cat.squash { animation:squash .45s cubic-bezier(.3,1.6,.4,1) !important; }
+  @keyframes squash { 0%{transform:scaleY(1)} 30%{transform:scaleY(.93) scaleX(1.03)} 65%{transform:scaleY(1.04)} 100%{transform:scaleY(1)} }
+
+  /* ---- head: tilt ตามเมาส์ (set ผ่าน JS) — ไม่มี CSS transition กันชนกับ rAF ---- */
+
+  /* ---- tail: ขับด้วย spring physics ใน JS (whip เนียน) — ไม่มี CSS animation/transition ---- */
+
+  /* ---- eyes ---- */
+  .eye-open { transition:opacity .1s; transform-box:fill-box; transform-origin:50% 50%; }
+  .alert .eye-open { transform:scale(1.15); }
+  .lid-shape { opacity:0; }
+  .blink .eye-open, .sleep .eye-open { opacity:0; }
+  .blink .lid-shape, .sleep .lid-shape { opacity:1; }
+
+  /* ---- zzz ---- */
+  .zzz text { opacity:0; fill:currentColor; font-family:Georgia,serif; font-weight:bold; }
+  .zzz.on text { animation:zfloat 3s linear infinite; }
+  .zzz.on text:nth-child(2){ animation-delay:1s; }
+  .zzz.on text:nth-child(3){ animation-delay:2s; }
+  @keyframes zfloat { 0%{opacity:0; transform:translate(0,0)} 20%{opacity:.85}
+    80%{opacity:0; transform:translate(50px,-110px)} 100%{opacity:0} }
+
+  /* ---- egg wave ---- */
+  .wave { transform:translateX(-120%); }
+  .egging .wave { animation:wavesweep .8s cubic-bezier(.5,0,.3,1) forwards; }
+  @keyframes wavesweep { to { transform:translateX(120%);} }
+
+  .row { display:flex; gap:8px; flex-wrap:wrap; justify-content:center; margin-top:18px; }
+  button { background:transparent; border:1px solid rgba(240,179,46,.55); color:var(--gold);
+    border-radius:99px; padding:7px 15px; font-size:13px; cursor:pointer; }
+  button:hover { background:var(--gold); color:var(--bg); }
+  .dbg { margin-top:10px; font-size:11px; color:rgba(242,239,222,.4); }
+</style>
+</head>
+<body>
+<h1>Plan C — Living Logo v3 · หัวเอียงตามเมาส์ + พฤติกรรมกลุ่ม A</h1>
+<p class="hint">หัว "P" เป็นเลเยอร์แยก tilt ช้า / ตากลอกเร็ว = parallax · มองไปมาเองตอนว่าง · สะดุ้งเมื่อเมาส์วิ่งเร็ว</p>
+
+<div class="stage">
+  <div class="cat-wrap" id="wrap">
+    <svg viewBox="0 0 2048 1024" id="svg">
+      <g id="leanG"><g class="cat" id="cat">
+        <!-- base = ตัว+ตัวอักษร (ตัดหัว+หางออก) -->
+        <image id="baseImg" x="0" y="-512" width="2048" height="2048" />
+        <!-- หาง -->
+        <g class="tail" id="tail"><image id="tailImg" x="0" y="-512" width="2048" height="2048" /></g>
+        <!-- หัว (มีตาอยู่ข้างใน) tilt รอบคอ -->
+        <g class="head" id="headG">
+          <image id="headImg" x="0" y="-512" width="2048" height="2048" />
+          <g id="eyes"></g>
+        </g>
+        <rect class="wave" x="150" y="0" width="1750" height="1024" fill="var(--gold)" opacity=".25"/>
+      </g></g>
+      <!-- grain ย้ายไปอบในพิกเซลของแต่ละเลเยอร์แล้ว (tint()) → ขยับตามชิ้นส่วน ไม่ค้างเป็นคราบ -->
+      <!-- marker จุดหมุนหาง (ไว้ตรวจตำแหน่ง — ปิดได้ด้วยปุ่ม) -->
+      <g id="pivotMark" style="display:none">
+        <circle id="pmC" r="16" fill="none" stroke="#ff4d4d" stroke-width="4"/>
+        <line id="pmH" stroke="#ff4d4d" stroke-width="3"/>
+        <line id="pmV" stroke="#ff4d4d" stroke-width="3"/>
+      </g>
+      <g class="zzz" id="zzz" style="color:#f2efde">
+        <text x="620" y="240" font-size="60">z</text>
+        <text x="680" y="190" font-size="85">z</text>
+        <text x="760" y="130" font-size="115">z</text>
+      </g>
+    </svg>
+  </div>
+</div>
+
+<div class="row">
+  <button onclick="catAPI.begin()">begin()</button>
+  <button onmouseenter="catAPI.hover(true)" onmouseleave="catAPI.hover(false)">hover</button>
+  <button onclick="catAPI.click()">click()</button>
+  <button onclick="catAPI.egg()">egg() สี</button>
+  <button onclick="catAPI.sleep()">sleep</button>
+  <button onclick="catAPI._maxTilt()">▶ ทดสอบเอียงหัวสุด (เช็ครอยต่อ)</button>
+  <button onclick="catAPI._showPivot()">◎ โชว์จุดหมุนหาง</button>
+</div>
+<p class="dbg" id="dbg">—</p>
+
+<script>
+(() => {
+  const IMG = 'assets/logo-closed.png';
+  const Y = -512, W = 2048;
+  const cat = document.getElementById('cat');
+  const wrap = document.getElementById('wrap');
+  const zzz = document.getElementById('zzz');
+  const headG = document.getElementById('headG');
+  const leanG = document.getElementById('leanG');
+  const tailEl = document.getElementById('tail');
+
+  /* ---------- zones (อ้างอิงพิกัดภาพ 2048 ที่อนุมัติแล้วจาก v2) ---------- */
+  const EYE_ZONE = { x: 240, y: 758, w: 350, h: 112 };
+  /* ── เส้นตัดหาง: รองรับมุมเอียง ──
+     เส้นผ่านจุด (TAIL_CUT_X, CUT_REF_Y) เอียง TAIL_CUT_ANGLE องศา
+     พิกเซลที่อยู่ "ฝั่งขวา" ของเส้น = เป็นหาง (ชิ้นที่ขยับ) */
+  const TAIL_CUT_X = 1086;
+  const TAIL_CUT_ANGLE = -4;
+  const CUT_REF_Y = 1150;
+  const _cutRad = TAIL_CUT_ANGLE * Math.PI / 180;
+  const _cutCos = Math.cos(_cutRad), _cutSin = Math.sin(_cutRad);
+  const isTailPixel = (px, py) =>
+    (px - TAIL_CUT_X) * _cutCos + (py - CUT_REF_Y) * _cutSin >= 0;
+  const TAIL_ROOT = { x: 1069, y: 966 };    // จุดเด้ง — ผู้ใช้เลือกจากหน้าพรีวิว
+  const EYES = [ { cx: 335, cy: 815 }, { cx: 495, cy: 815 } ];
+  const EYE_R = { rx: 48, ry: 62 };
+  /* หัว: บล็อก P + หู + ตา ตัดที่คอ (ดำสนิท y900-960) */
+  const HEAD = { x0: 185, x1: 636, yTop: 470, featTop: 898, featBot: 962, pivX: 414, pivY: 930 };
+  const PIV_VB = { x: HEAD.pivX, y: HEAD.pivY + Y };   // จุดหมุนในพิกัด viewBox
+
+  const coats = ['#f2efde', '#151312', '#e8923a', '#e6d7ba', '#8b93a1'];
+  let ci = 0;
+
+  /* ---------- โหลด + สร้าง 3 เลเยอร์ (base/head/tail) แบบ partition-of-unity ---------- */
+  const img = new Image(); img.src = IMG;
+  let baseMask = null, headMask = null, tailMask = null;
+
+  /* หัวตัดแข็ง (ทึบเต็ม 100%) ไม่ feather — เพราะ feather ทำให้หัวโปร่งบางส่วน
+     แล้ว grain ของหัวกับของตัวผสมกัน เกิดแถบมืด/หยาบที่คอ
+     แทนด้วย: base เริ่มมีเนื้อตั้งแต่ BASE_TOP (สูงกว่าขอบล่างของหัว 40px)
+     → แถบซ้อนนั้นถูกหัวปิดสนิท (ไม่เห็น grain ซ้อน) แต่ยังรองกันช่องโหว่ตอนหัวเอียง */
+  const HEAD_BOTTOM = HEAD.featBot;        // ขอบล่างหัว (962)
+  const BASE_TOP    = HEAD.featBot - 40;   // base เริ่มที่ 922 = ซ้อนขึ้นไปใต้หัว
+  const inHeadX = px => px >= HEAD.x0 && px <= HEAD.x1;
+
+  img.onload = () => {
+    // source: โลโก้ + ถมแถบตาดำ (ลบเส้นตาหลับ)
+    const sc = document.createElement('canvas'); sc.width = W; sc.height = W;
+    const sx = sc.getContext('2d', { willReadFrequently: true });
+    sx.drawImage(img, 0, 0, W, W);
+    sx.fillStyle = '#000'; sx.fillRect(EYE_ZONE.x, EYE_ZONE.y, EYE_ZONE.w, EYE_ZONE.h);
+    const sd = sx.getImageData(0, 0, W, W).data;
+
+    const mk = () => { const c = document.createElement('canvas'); c.width = W; c.height = W;
+      return { c, d: c.getContext('2d').createImageData(W, W) }; };
+    const base = mk(), head = mk(), tail = mk();
+
+    for (let py = 0; py < W; py++) {
+      for (let px = 0; px < W; px++) {
+        const i = (py * W + px) * 4;
+        const a = 255 - (sd[i] + sd[i+1] + sd[i+2]) / 3;   // ดำ→ทึบ
+        if (a < 8) continue;
+        let ba = 0, ha = 0, ta = 0;
+        if (isTailPixel(px, py)) {
+          ta = a;
+          // (เอา stub ออก — หางแกว่งเบาแล้ว ช่องโหว่เล็กมาก ไม่ต้อง backfill ที่โผล่เป็นก้อน)
+        } else {
+          const hx = inHeadX(px);
+          ha = (hx && py >= HEAD.yTop && py <= HEAD_BOTTOM) ? a : 0;
+          // base: ตัดหัวออก (กันเงาซ้อนตอนหัวเอียง) แต่เริ่มมีเนื้อตั้งแต่ BASE_TOP
+          // → แถบ 40px นั้นถูกหัวปิดสนิท ไม่เห็น grain ซ้อน แต่ยังรองกันช่องโหว่
+          ba = (hx && py < BASE_TOP) ? 0 : a;
+        }
+        const set = (arr, al) => { if (al > 0) { arr[i]=arr[i+1]=arr[i+2]=255; arr[i+3]=al; } };
+        set(base.d.data, ba); set(head.d.data, ha); set(tail.d.data, ta);
+      }
+    }
+    base.c.getContext('2d').putImageData(base.d, 0, 0);
+    head.c.getContext('2d').putImageData(head.d, 0, 0);
+    tail.c.getContext('2d').putImageData(tail.d, 0, 0);
+    baseMask = base.c; headMask = head.c; tailMask = tail.c;
+
+    drawEyes(); applyCoat(0);
+    setTimeout(() => catAPI.begin(), 350);
+  };
+
+  /* noise tile สำหรับ grain — สร้างครั้งเดียว (Feel Lab #19) */
+  const noiseTile = (() => {
+    const n = document.createElement('canvas'); n.width = n.height = 256;
+    const nx = n.getContext('2d'); const id = nx.createImageData(256, 256);
+    for (let i = 0; i < id.data.length; i += 4) {
+      const v = 36 + Math.random() * 184;          // รอบๆ 128 = neutral ของ overlay (กว้างพอให้เห็นเนื้อ)
+      id.data[i] = id.data[i+1] = id.data[i+2] = v; id.data[i+3] = 255;
+    }
+    nx.putImageData(id, 0, 0); return n;
+  })();
+
+  function tint(mask, coat) {
+    const c = document.createElement('canvas'); c.width = W; c.height = W;
+    const x = c.getContext('2d');
+    x.drawImage(mask, 0, 0);
+    x.globalCompositeOperation = 'source-in';
+    x.fillStyle = coat; x.fillRect(0, 0, W, W);
+    // grain อบเข้าไปในพิกเซลของเลเยอร์เลย → ขยับตามชิ้นส่วน ไม่ค้างเป็นคราบตอนหาง/หัวขยับ
+    x.globalCompositeOperation = 'overlay';
+    x.globalAlpha = 0.75;
+    x.fillStyle = x.createPattern(noiseTile, 'repeat');
+    x.fillRect(0, 0, W, W);
+    x.globalAlpha = 1;
+    x.globalCompositeOperation = 'destination-in';   // clip กลับเข้ารูปทรงเดิม
+    x.drawImage(mask, 0, 0);
+    x.globalCompositeOperation = 'source-over';
+    return c.toDataURL();
+  }
+  function applyCoat(i) {
+    if (!baseMask) return;
+    const coat = coats[i % coats.length];
+    document.getElementById('baseImg').setAttribute('href', tint(baseMask, coat));
+    document.getElementById('headImg').setAttribute('href', tint(headMask, coat));
+    document.getElementById('tailImg').setAttribute('href', tint(tailMask, coat));
+    zzz.style.color = coat;
+  }
+
+  /* ---------- eyes ---------- */
+  function drawEyes() {
+    document.getElementById('eyes').innerHTML = EYES.map(e => `
+      <g class="eye" transform="translate(${e.cx} ${e.cy + Y})">
+        <g class="eye-open"><g class="track">
+          <ellipse rx="${EYE_R.rx}" ry="${EYE_R.ry}" fill="#ffffff"/>
+        </g></g>
+        <path class="lid-shape" d="M ${-EYE_R.rx} 6 Q 0 ${EYE_R.ry*0.65} ${EYE_R.rx} 6"
+          stroke="#ffffff" stroke-width="12" fill="none" stroke-linecap="round"/>
+      </g>`).join('');
+  }
+
+  /* ================= พฤติกรรม (กลุ่ม A) ================= */
+  const clamp = v => Math.max(-1, Math.min(1, v));
+  let tx = 0, ty = 0;                      // ตำแหน่งเมาส์ normalize
+  let gazeX = 0, gazeY = 0;                // มองไปมาเองตอนว่าง
+  // eyes spring (มี overshoot)
+  let ex = 0, evx = 0, ey = 0, evy = 0;
+  // head parallax (ตามช้า ไม่ overshoot)
+  let hx = 0, hy = 0;
+  let hoverHeld = false, sleeping = false, forceTilt = null;
+  // tail spring — เด้งรอบจุดเด้ง (TAIL_ROOT)
+  let tailA = 0, tailV = 0;
+  // spring integrator มาตรฐาน (Feel Lab #10: integrate per frame)
+  const DT = 1 / 60;
+  const springStep = (p, v, t, k, c) => { const a = -k * (p - t) - c * v; v += a * DT; p += v * DT; return [p, v]; };
+  // staggered entrance (Feel Lab #12): body → head → tail
+  const FROM = 240;
+  const ent = { body: {p:0,v:0,t0:null}, head: {p:0,v:0,t0:null}, tail: {p:0,v:0,t0:null} };
+  const stepEnt = e => { if (e.t0 === null || performance.now() < e.t0) return 0;
+    [e.p, e.v] = springStep(e.p, e.v, 1, 120, 14); return e.p; };
+
+  /* velocity → สะดุ้ง */
+  let lastX = null, lastY = null, lastT = 0;
+  addEventListener('mousemove', e => {
+    tx = (e.clientX / innerWidth - .5) * 2;
+    ty = (e.clientY / innerHeight - .5) * 2;
+    const now = performance.now();
+    if (lastX !== null) {
+      const sp = Math.hypot(e.clientX - lastX, e.clientY - lastY) / Math.max(1, now - lastT);
+      if (sp > 2.2) startle();
+    }
+    lastX = e.clientX; lastY = e.clientY; lastT = now;
+    gazeX = gazeY = 0;                     // มีเมาส์ = เลิกมองเอง
+    wake(); scheduleGaze();
+  });
+
+  let startleTimer;
+  function startle() {
+    if (sleeping) return;
+    cat.classList.add('alert');
+    clearTimeout(startleTimer);
+    startleTimer = setTimeout(() => { if (!hoverHeld) cat.classList.remove('alert'); }, 280);
+  }
+
+  /* มองไปมาเองตอนว่าง */
+  let gazeTimer;
+  function scheduleGaze() { clearTimeout(gazeTimer);
+    gazeTimer = setTimeout(doGaze, 3200 + Math.random() * 3000); }
+  function doGaze() {
+    if (sleeping) return;
+    gazeX = (Math.random() * 2 - 1) * 0.75; gazeY = (Math.random() * 2 - 1) * 0.5;
+    setTimeout(() => { gazeX = gazeY = 0; }, 1000 + Math.random() * 500);
+    scheduleGaze();
+  }
+
+  /* loop: eyes spring + head parallax + tail spring + staggered entrance */
+  const cl15 = v => Math.max(-1.15, Math.min(1.15, v));
+  (function loop() {
+    const tgX = clamp(tx + gazeX), tgY = clamp(ty + gazeY);
+    // eyes — spring มาตรฐาน (Feel Lab #10: stiffness 170, damping 16, per frame)
+    [ex, evx] = springStep(ex, evx, tgX, 170, 16);
+    [ey, evy] = springStep(ey, evy, tgY, 170, 16);
+    const dx = cl15(ex) * 54, dy = cl15(ey) * 30;
+    const sx = 1 + Math.abs(cl15(ex)) * 0.08, sy = 1 + Math.abs(cl15(ey)) * 0.05;
+    document.querySelectorAll('.track').forEach(p =>
+      p.setAttribute('transform', `translate(${dx} ${dy}) scale(${sx} ${sy})`));
+    // head parallax (ตามช้า) + tail spring (นุ่มกว่า = whip ลื่น)
+    hx += (tgX - hx) * 0.06; hy += (tgY - hy) * 0.06;
+    leanG.setAttribute('transform', `translate(${clamp(hx) * 6} ${clamp(hy) * 3})`);
+    let ang = clamp(hx) * 1.2;
+    if (forceTilt !== null) ang = forceTilt;
+    // tail — spring รอบจุดเด้ง: idle แกว่งเบา + สะบัดตอนคลิก
+    const swayIdle = sleeping ? 0 : Math.sin(performance.now() / 900) * 4;
+    const tailTgt = cat.classList.contains('alert') ? -6 : swayIdle;
+    [tailA, tailV] = springStep(tailA, tailV, tailTgt, 90, 11);
+    // paw — spring: idle bob เบาๆ + เด้งขึ้นตอนคลิก (ยึดล่าง, ขึ้น = ค่าลบ)
+    // staggered entrance — ประกอบ offset + fade เข้ากับ transform ปกติ
+    const entB = stepEnt(ent.body), entH = stepEnt(ent.head), entT = stepEnt(ent.tail);
+    const offY = p => (p - 1) * FROM, op = p => Math.max(0, Math.min(1, p));
+    const baseI = document.getElementById('baseImg');
+    baseI.setAttribute('transform', `translate(0 ${offY(entB)})`); baseI.setAttribute('opacity', op(entB));
+    headG.setAttribute('transform', `translate(0 ${offY(entH)}) rotate(${ang} ${PIV_VB.x} ${PIV_VB.y})`);
+    headG.setAttribute('opacity', op(entH));
+    tailEl.setAttribute('transform',
+      `translate(0 ${offY(entT)}) rotate(${tailA} ${TAIL_ROOT.x} ${TAIL_ROOT.y + Y})`);
+    tailEl.setAttribute('opacity', op(entT));
+    requestAnimationFrame(loop);
+  })();
+
+  /* blink — มี double-blink บ้าง */
+  function blink(dbl) {
+    if (!sleeping) {
+      cat.classList.add('blink'); setTimeout(() => cat.classList.remove('blink'), 140);
+      if (dbl) setTimeout(() => { cat.classList.add('blink'); setTimeout(() => cat.classList.remove('blink'), 120); }, 250);
+    }
+    scheduleBlink();
+  }
+  function scheduleBlink() { setTimeout(() => blink(Math.random() < 0.25), 2600 + Math.random() * 3600); }
+  scheduleBlink();
+
+  /* sleep */
+  let idleTimer;
+  function wake() {
+    if (sleeping) { sleeping = false; cat.classList.remove('sleep'); zzz.classList.remove('on'); }
+    clearTimeout(idleTimer);
+    idleTimer = setTimeout(() => catAPI.sleep(true), 20000);
+  }
+
+  window.catAPI = {
+    begin() { const now = performance.now();
+      ent.body = {p:0,v:0,t0:now}; ent.head = {p:0,v:0,t0:now+90}; ent.tail = {p:0,v:0,t0:now+170}; },
+    hover(on) { hoverHeld = on; cat.classList.toggle('alert', on); },
+    click() { tailV -= 230; },   // สะบัดหางรอบจุดเด้ง (peak ~-10°)
+    egg() { cat.classList.remove('egging'); void cat.offsetWidth; cat.classList.add('egging');
+      setTimeout(() => { ci++; applyCoat(ci); }, 380);
+      setTimeout(() => cat.classList.remove('egging'), 850); },
+    sleep(force) { sleeping = force === undefined ? !sleeping : force;
+      cat.classList.toggle('sleep', sleeping); zzz.classList.toggle('on', sleeping); },
+    variant(n) { ci = n; applyCoat(n); },
+    _maxTilt() { forceTilt = forceTilt === null ? 2.4 : (forceTilt > 0 ? -2.4 : null);
+      document.getElementById('dbg').textContent = 'forceTilt = ' + forceTilt; },
+    _showPivot() {
+      const m = document.getElementById('pivotMark');
+      const on = m.style.display === 'none';
+      const px = TAIL_ROOT.x, py = TAIL_ROOT.y + Y;   // แปลงเป็นพิกัด viewBox
+      document.getElementById('pmC').setAttribute('cx', px);
+      document.getElementById('pmC').setAttribute('cy', py);
+      const H = document.getElementById('pmH'), V = document.getElementById('pmV');
+      H.setAttribute('x1', px - 34); H.setAttribute('x2', px + 34);
+      H.setAttribute('y1', py); H.setAttribute('y2', py);
+      V.setAttribute('x1', px); V.setAttribute('x2', px);
+      V.setAttribute('y1', py - 34); V.setAttribute('y2', py + 34);
+      m.style.display = on ? '' : 'none';
+      document.getElementById('dbg').textContent = on
+        ? `จุดหมุนหาง = ไฟล์ (${TAIL_ROOT.x}, ${TAIL_ROOT.y}) → viewBox (${px}, ${py})`
+        : '—';
+    },
+    _state: () => ({ sleeping, hoverHeld, ex, hx }),
+  };
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+[
+  {
+    "claim": "The widely repeated '6-12 months to YouTube monetization' timeline is an unsourced advice-column assertion with no sample, cohort, or method behind it, and is presented as a typical outcome despite ignoring creators who never reach the threshold.",
+    "stance": "refutes",
+    "stance_target": "The position that published time-to-first-income figures for creators represent measured cohort data rather than survivor-framed marketing assertion",
+    "evidence_type": "anecdotal",
+    "scope_conditions": "Whop.com commercial blog post, 13 October 2025; Whop sells creator monetization tooling and has a commercial interest in an optimistic timeline; the claim appears twice, in the key-takeaways box and the body, with no citation anywhere in the ~4,800-word article; the denominator (creators who start and never arrive) is entirely absent",
+    "quoted_support": "You start earning money on YouTube once you hit 1,000 subscribers and either 4,000 watch hours (or 10 million Shorts views in 90 days)... most creators reach this point within 6-12 months of consistent posting.",
+    "numbers": ["6-12 months", "1,000 subscribers", "4,000 watch hours", "10 million Shorts views in 90 days", "130+ countries"],
+    "entities": ["Whop", "YouTube Partner Program", "Monica J. White"],
+    "time_period": "13 October 2025",
+    "region": "Not specified; YPP available in over 130 countries",
+    "confidence": "low",
+    "source_note_id": "when-do-you-start-making-money-on-youtube-how-monetization-really-works"
+  },
+  {
+    "claim": "Industry rate-of-thumb tables put nano-influencers (1,000-10,000 followers) at $20-$200 per brand deal, rising to $10,000+ for creators above one million followers, an approximately 100-fold spread across the follower distribution with no underlying data disclosed.",
+    "stance": "supports",
+    "stance_target": "The position that creator income scales super-linearly with audience size, so median and mean diverge sharply",
+    "evidence_type": "anecdotal",
+    "scope_conditions": "Whop.com blog, October 2025; explicitly hedged by the source itself as 'just general guidelines' with 'no hard and fast rule'; no survey, no sample, no geography specified; almost certainly US/Western rate assumptions",
+    "quoted_support": "Nano influencer 1,000-10,000 $20-$200. Micro influencer 10,000-100,000 $200-$2,000. Mid-tier influencer 100,000-500,000 $1,000-$7,000. Macro influencer 500,000-1,000,000 $2,000-$10,000. Mega influencer 1 million+ $10,000+.",
+    "numbers": ["$20-$200 nano", "$200-$2,000 micro", "$1,000-$7,000 mid-tier", "$2,000-$10,000 macro", "$10,000+ mega"],
+    "entities": ["Whop"],
+    "time_period": "October 2025",
+    "region": "Unspecified, presumed US/Western",
+    "confidence": "low",
+    "source_note_id": "when-do-you-start-making-money-on-youtube-how-monetization-really-works"
+  },
+  {
+    "claim": "A Google AdSense revenue-calculator estimate puts a beauty and fitness YouTuber in the Americas with 50,000 monthly views at roughly $1,500 per year, or about $125 per month, far below any living-wage threshold.",
+    "stance": "supports",
+    "stance_target": "The position that even creators substantially above the monetization threshold earn amounts incompatible with content creation as a primary occupation",
+    "evidence_type": "statistical",
+    "scope_conditions": "Output of Google's AdSense revenue calculator, not an observation of actual payouts; single niche (beauty and fitness) and single region (Americas); 50,000 monthly views is roughly ten times the volume of the 89% of 1k-sub channels vidIQ measured",
+    "quoted_support": "For example, a beauty and fitness YouTuber from the Americas with 50,000 views per month will make an estimated $1,500 a year.",
+    "numbers": ["50,000 monthly views", "$1,500/year", "~$125/month"],
+    "entities": ["Whop", "Google AdSense", "YouTube"],
+    "time_period": "October 2025",
+    "region": "Americas",
+    "confidence": "low",
+    "source_note_id": "when-do-you-start-making-money-on-youtube-how-monetization-really-works"
+  }
+]

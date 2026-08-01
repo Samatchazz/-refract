@@ -1,0 +1,95 @@
+[
+  {
+    "claim": "Pew Research Center found that only 56% of the 43,770 YouTube channels with at least 250,000 subscribers posted any video during the first week of 2019, meaning 44% of high-subscriber channels were silent for the entire observation week.",
+    "stance": "supports",
+    "stance_target": "A large share of even well-established creators are inactive at any given moment, so subscriber counts overstate the size of the working creator population",
+    "evidence_type": "empirical",
+    "scope_conditions": "Census-style platform measurement, not a survey; frame = channels with 250,000+ subscribers identified via recursive API mapping as of December 2018; observation window = 1-7 January 2019 only, so a single quiet week is not evidence of permanent exit; global channel set analysed by a US institution",
+    "quoted_support": "Just over half of these channels (56%) posted a video during the first week of 2019, and the majority of these active channels (72%) posted at least one video that was partially or completely in a language other than English.",
+    "numbers": [
+      "43,770 channels",
+      "250,000 subscriber threshold",
+      "56% posted",
+      "44% did not post",
+      "24,632 active channels",
+      "1-7 January 2019",
+      "243,254 videos"
+    ],
+    "entities": [
+      "Pew Research Center",
+      "Patrick van Kessel",
+      "Skye Toor",
+      "Aaron Smith",
+      "YouTube"
+    ],
+    "time_period": "First week of January 2019; frame built through December 2018",
+    "region": "Global channel set; report published 25 July 2019 by a US institution",
+    "confidence": "high",
+    "source_note_id": "a-week-in-the-life-of-popular-youtube-channels-pew-research-center"
+  },
+  {
+    "claim": "Pew measured extreme production and attention concentration among popular YouTube channels: 10% of channels produced 70% of all videos posted in the week, and the 10% most-viewed videos captured 79% of all views.",
+    "stance": "supports",
+    "stance_target": "Creator rewards follow a power law in which a small minority captures the overwhelming majority of attention",
+    "evidence_type": "empirical",
+    "scope_conditions": "Restricted to channels with 250,000+ subscribers, i.e. roughly the top 2.9% of the 1,525,690 channels Pew mapped; concentration measured across the full creator population would be substantially more extreme",
+    "quoted_support": "Just 10% of the popular channels identified in the Center's mapping produced 70% of all the videos posted by these channels during the first week of 2019.",
+    "numbers": [
+      "10% of channels produced 70% of videos",
+      "top 10% of videos took 79% of views",
+      "1,525,690 channels mapped",
+      "43,770 with 250k+ subs (2.9%)"
+    ],
+    "entities": [
+      "Pew Research Center",
+      "YouTube"
+    ],
+    "time_period": "First week of January 2019",
+    "region": "Global",
+    "confidence": "high",
+    "source_note_id": "a-week-in-the-life-of-popular-youtube-channels-pew-research-center"
+  },
+  {
+    "claim": "Pew found the popular-channel population growing rapidly in 2018: 9,689 channels crossed the 250,000-subscriber threshold between July and December 2018, a 32% increase in six months, while existing popular channels grew subscribers by an average of 27%.",
+    "stance": "neutral",
+    "stance_target": "Whether the professional tier of the creator population is expanding or contracting",
+    "evidence_type": "empirical",
+    "scope_conditions": "Six-month window in 2018 only; measures entry into the 250k+ tier, not entry into creation nor exit from it; pre-dates the Shorts era and the 2023-2025 attrition acceleration reported by other sources, so it is not comparable to post-2022 cohorts",
+    "quoted_support": "The Center's mapping process identified 9,689 channels that crossed the 250,000-subscriber threshold between July 2018 ... and December 2018 ... That represents a 32% increase in the total number of popular channels over that period.",
+    "numbers": [
+      "9,689 channels crossed 250k",
+      "32% increase",
+      "list grew 30,481 to 43,770 (44%)",
+      "average subscriber growth 27%",
+      "only 12% of new channels not previously identified"
+    ],
+    "entities": [
+      "Pew Research Center",
+      "YouTube"
+    ],
+    "time_period": "July-December 2018",
+    "region": "Global",
+    "confidence": "high",
+    "source_note_id": "a-week-in-the-life-of-popular-youtube-channels-pew-research-center"
+  },
+  {
+    "claim": "Pew explicitly documents the limits of its own big-data design, including the arbitrariness of the 250,000-subscriber cutoff, possible missed channels, a 4% API capture failure rate, and an express warning that the findings may not represent popular-channel activity at any other point in time.",
+    "stance": "neutral",
+    "stance_target": "How much weight a single-week platform census can bear as evidence about creator careers",
+    "evidence_type": "empirical",
+    "scope_conditions": "Pew's own 'A note on interpreting the findings' section, July 2019; this transparency is the contrast case against the vendor studies in the same evidence area",
+    "quoted_support": "Because of these and many other constantly shifting factors, the findings presented here may or may not represent the activity of popular channels at other times in the past, present or future.",
+    "numbers": [
+      "250,000 subscriber cutoff",
+      "4% of video time stamps not captured",
+      "97-98% language classifier accuracy"
+    ],
+    "entities": [
+      "Pew Research Center"
+    ],
+    "time_period": "2019",
+    "region": "Global",
+    "confidence": "high",
+    "source_note_id": "a-week-in-the-life-of-popular-youtube-channels-pew-research-center"
+  }
+]

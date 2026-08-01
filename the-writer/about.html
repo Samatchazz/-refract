@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About — The Writer</title>
+  <meta name="description" content="The invisible hand: a ghostwriting studio built on discretion, craft and NDAs." />
+  <link rel="stylesheet" href="/src/styles/main.css" />
+  <script type="module" src="/src/js/app.js"></script>
+</head>
+<body data-barba="wrapper">
+
+  <div class="poster" aria-hidden="true"></div>
+  <canvas id="gl" aria-hidden="true"></canvas>
+
+  <header class="header">
+    <a class="logo" href="/" data-nav>The <span class="it">Writer</span></a>
+    <div class="header-center">
+      <button class="label" data-read-open>Read a sample</button>
+    </div>
+    <button class="burger" aria-label="Menu" aria-expanded="false" data-menu-toggle>
+      <span></span><span></span>
+    </button>
+  </header>
+
+  <div class="site">
+    <main data-barba="container" data-barba-namespace="about" data-gl-page="about">
+
+      <section class="page-head container" data-gl-window>
+        <span class="label js-in-view" data-typewriter>About — the invisible hand</span>
+        <h1 class="page-title">Present in every sentence.<br /><span class="it">Visible in none.</span></h1>
+      </section>
+
+      <section class="page-body container">
+        <div class="prose js-in-view appear-fade-up">
+          <p><strong>The Writer exists because the people with the best stories are busy living them.</strong>
+          Founders mid-company, surgeons mid-career, families mid-history — people whose
+          material deserves better than the forty minutes a week they can spare it.</p>
+          <p>We are a small studio of former journalists, speechwriters and editors.
+          You will never see our names on anything we make, which is exactly how we
+          measure success: when your reader closes the book certain they've heard
+          <em>your</em> voice, our work is finished — and invisible.</p>
+          <p>Discretion is not a clause we add; it is the default state. Engagements
+          begin under NDA before the first conversation, working files live in an
+          enclave only two people can open, and when the project ends, our copies end
+          with it. Some of our proudest work sits on bestseller lists we cannot point to.
+          We've made our peace with that. <strong>It's the job.</strong></p>
+        </div>
+        <a class="link-u label link-more js-in-view appear-fade-up" style="--iv-delay:.15s; margin-top:3rem; display:inline-block" href="/contact.html" data-nav>Start a conversation</a>
+      </section>
+
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <a class="footer-email" href="mailto:hello@thewriter.studio">hello@<span class="it">thewriter</span>.studio</a>
+        <div class="footer-grid">
+          <div class="footer-col">
+            <span class="label" data-typewriter>Navigate</span>
+            <a href="/work.html" data-nav>Work</a>
+            <a href="/craft.html" data-nav>Craft</a>
+            <a href="/about.html" data-nav>About</a>
+            <a href="/contact.html" data-nav>Contact</a>
+          </div>
+          <div class="footer-col">
+            <span class="label" data-typewriter>Elsewhere</span>
+            <a href="#" rel="noopener">LinkedIn</a>
+            <a href="#" rel="noopener">Substack</a>
+          </div>
+          <div class="footer-col">
+            <span class="label" data-typewriter>Discretion</span>
+            <span style="color:var(--c-muted)">NDA by default. No client lists.</span>
+            <span style="color:var(--c-muted)">© 2026 The Writer</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <div class="menu-overlay" role="dialog" aria-modal="true" aria-label="Menu">
+    <nav class="menu-nav">
+      <div class="menu-item"><a href="/work.html" data-nav><span class="menu-index">01</span>Work</a></div>
+      <div class="menu-item"><a href="/craft.html" data-nav><span class="menu-index">02</span>Craft</a></div>
+      <div class="menu-item"><a href="/about.html" data-nav><span class="menu-index">03</span>About</a></div>
+      <div class="menu-item"><a href="/contact.html" data-nav><span class="menu-index">04</span>Contact</a></div>
+    </nav>
+    <div class="menu-meta">
+      <a class="label" href="mailto:hello@thewriter.studio">hello@thewriter.studio</a>
+      <button class="label" data-read-open>Read a sample</button>
+    </div>
+  </div>
+
+  <div class="read-overlay" role="dialog" aria-modal="true" aria-label="Sample excerpts">
+    <button class="read-close label" data-read-close>Close — esc</button>
+    <div class="read-inner" data-read-content></div>
+  </div>
+
+  <div class="transition-veil" aria-hidden="true"></div>
+  <div class="loader" aria-hidden="true">
+    <div class="loader-mark">The <span class="it">Writer</span></div>
+    <div class="loader-bar"><i></i></div>
+    <div class="loader-pct">0%</div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<title>Plan C — เทียบวิธีจัดการวิดีโอแมว</title>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:#0f1613;color:#f2efde;font-family:sans-serif;padding:22px;line-height:1.6}
+  h1{font-size:17px;color:#f0b32e;margin-bottom:4px}
+  p.hint{font-size:12.5px;color:rgba(242,239,222,.55);margin-bottom:18px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px;max-width:1200px}
+  .cell{border:1px solid rgba(242,239,222,.14);border-radius:12px;padding:14px;text-align:center}
+  .cell h2{font-size:13px;color:#f0b32e;margin-bottom:4px}
+  .cell p{font-size:11.5px;color:rgba(242,239,222,.5);margin-bottom:10px;min-height:32px}
+  .stage{height:220px;display:grid;place-items:center;border-radius:10px;overflow:hidden;position:relative}
+  video,canvas{width:200px;height:200px;object-fit:contain;max-width:none}
+  .onDark{background:#0f1613}
+  .onCream{background:#f2efde}
+  .onGold{background:#f0b32e}
+</style>
+</head>
+<body>
+<h1>เทียบวิธีจัดการวิดีโอแมว</h1>
+<p class="hint">ฟุตเทจต้นฉบับเป็นแมวดำบนพื้นขาว · ดูว่าวิธีไหนเข้ากับเว็บพื้นเขียวเข้มที่สุด</p>
+
+<div class="grid">
+  <div class="cell"><h2>1. ดิบ (ไม่ทำอะไร)</h2><p>พื้นขาวโพลนบนเว็บมืด</p>
+    <div class="stage onDark"><video id="v1" muted loop playsinline></video></div></div>
+
+  <div class="cell"><h2>2. invert + screen (ที่ใช้อยู่)</h2><p>แมวกลายเป็นขาว — รายละเอียดกลับด้าน</p>
+    <div class="stage onDark"><video id="v2" muted loop playsinline style="filter:invert(1);mix-blend-mode:screen"></video></div></div>
+
+  <div class="cell"><h2>3. ไดคัทพื้นขาวออก (canvas)</h2><p>คงแมวดำไว้ + พื้นใส → บนพื้นมืดจะจม</p>
+    <div class="stage onDark"><canvas id="c3" width="312" height="312"></canvas></div></div>
+
+  <div class="cell"><h2>4. ไดคัท + ย้อมครีม ⭐</h2><p>ตัดพื้นออกแล้วเปลี่ยนตัวแมวเป็นสีครีม</p>
+    <div class="stage onDark"><canvas id="c4" width="312" height="312"></canvas></div></div>
+
+  <div class="cell"><h2>5. ไดคัท วางบนการ์ดครีม</h2><p>คงแมวดำ (ตรงกับโลโก้) บนพื้นสว่าง</p>
+    <div class="stage onCream"><canvas id="c5" width="312" height="312"></canvas></div></div>
+
+  <div class="cell"><h2>6. ไดคัท วางบนวงกลมทอง</h2><p>แมวดำบนแบดจ์สีแบรนด์</p>
+    <div class="stage onGold"><canvas id="c6" width="312" height="312"></canvas></div></div>
+</div>
+
+<script>
+const SRC='/assets/video/planc-cat.mp4';
+// วิดีโอตัวเดียว ป้อนหลาย canvas
+const master=document.createElement('video');
+master.src=SRC; master.muted=true; master.loop=true; master.playsInline=true;
+master.setAttribute('playsinline','');
+[document.getElementById('v1'),document.getElementById('v2')].forEach(v=>{
+  v.src=SRC; v.play().catch(()=>{});
+});
+
+const targets=[
+  {c:document.getElementById('c3'), tint:null},
+  {c:document.getElementById('c4'), tint:[242,239,222]},
+  {c:document.getElementById('c5'), tint:null},
+  {c:document.getElementById('c6'), tint:null},
+];
+const work=document.createElement('canvas'); work.width=work.height=312;
+const wx=work.getContext('2d',{willReadFrequently:true});
+
+function frame(){
+  if(master.readyState>=2){
+    wx.clearRect(0,0,312,312);
+    wx.drawImage(master,0,0,312,312);
+    const img=wx.getImageData(0,0,312,312), d=img.data;
+    // ไดคัท: พิกเซลยิ่งสว่าง (ใกล้ขาว) ยิ่งโปร่ง
+    for(let i=0;i<d.length;i+=4){
+      const lum=(d[i]+d[i+1]+d[i+2])/3;
+      d[i+3]=Math.max(0,Math.min(255,255-lum*1.15));   // ขาว→ใส, ดำ→ทึบ
+    }
+    targets.forEach(t=>{
+      const x=t.c.getContext('2d');
+      x.clearRect(0,0,312,312);
+      if(t.tint){
+        // ย้อมสี: ใช้ alpha เดิม แต่เปลี่ยน RGB
+        const cp=new ImageData(new Uint8ClampedArray(d), 312,312);
+        for(let i=0;i<cp.data.length;i+=4){
+          cp.data[i]=t.tint[0]; cp.data[i+1]=t.tint[1]; cp.data[i+2]=t.tint[2];
+        }
+        x.putImageData(cp,0,0);
+      } else {
+        x.putImageData(new ImageData(new Uint8ClampedArray(d),312,312),0,0);
+      }
+    });
+  }
+  requestAnimationFrame(frame);
+}
+master.addEventListener('loadeddata',()=>{ master.play().catch(()=>{}); frame(); });
+master.load();
+['click','scroll','touchstart'].forEach(e=>addEventListener(e,()=>{
+  master.play().catch(()=>{});
+  document.querySelectorAll('video').forEach(v=>v.play().catch(()=>{}));
+},{once:true,passive:true}));
+</script>
+</body>
+</html>

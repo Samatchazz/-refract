@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<title>Plan C — แยกชิ้นส่วนตา</title>
+<style>
+  body{background:#0f1613;color:#f2efde;font:13px/1.7 sans-serif;padding:22px;margin:0}
+  h1{color:#f0b32e;font-size:16px;margin-bottom:2px}
+  p.sub{color:rgba(242,239,222,.5);font-size:12px;margin-bottom:14px}
+  .row{display:flex;gap:16px;flex-wrap:wrap;align-items:flex-start}
+  svg{background:#181616;border-radius:10px;width:360px}
+  pre{background:#00000055;padding:10px;border-radius:6px;font-size:11.5px;white-space:pre-wrap;max-width:640px;color:#9fd;margin-top:14px}
+  .err{color:#ff8f8f}
+</style>
+</head>
+<body>
+<h1>แยกชิ้นส่วนตา</h1>
+<p class="sub">โหลด <code>_logo_&lt;src&gt;.json</code> แล้วหาว่าชิ้นไหนคือตา (ขาวในหัว + มีลูกตาดำข้างใน)</p>
+<div class="row" id="row"></div>
+<pre id="out">…</pre>
+
+<script>
+const NS='http://www.w3.org/2000/svg';
+const src=new URLSearchParams(location.search).get('src')||'eyes';
+
+fetch(`_logo_${src}.json`).then(r=>{
+  if(!r.ok) throw new Error(`ยังไม่มีไฟล์ _logo_${src}.json — รัน trace-logo.cjs ก่อน`);
+  return r.json();
+}).then(data=>{
+  const subs=data.subpaths, vb=data.viewBox||'0 0 624 624';
+  const [,,VW,VH]=vb.split(/\s+/).map(Number);
+
+  // ---- ผังการซ้อน ----
+  const probe=document.createElementNS(NS,'svg');
+  probe.setAttribute('viewBox',vb);
+  probe.style.cssText=`position:absolute;left:-9999px;width:${VW}px;height:${VH}px`;
+  document.body.appendChild(probe);
+  const els=subs.map(d=>{const p=document.createElementNS(NS,'path');p.setAttribute('d',d);probe.appendChild(p);return p;});
+  const box=els.map(p=>p.getBBox());
+  const area=box.map(b=>b.width*b.height);
+  const innerPoint=i=>{const b=box[i];
+    for(let k=0;k<60;k++){
+      const q=probe.createSVGPoint();
+      q.x=b.x+b.width*(0.5+0.38*Math.sin(k*1.7));
+      q.y=b.y+b.height*(0.5+0.38*Math.cos(k*2.3));
+      if(els[i].isPointInFill(q)) return q;
+    }
+    const q=probe.createSVGPoint(); q.x=b.x+b.width/2; q.y=b.y+b.height/2; return q;};
+  const parent=subs.map(()=>null);
+  for(let i=0;i<subs.length;i++){const q=innerPoint(i);
+    for(let j=0;j<subs.length;j++){ if(i===j) continue;
+      if(area[j]>area[i] && els[j].isPointInFill(q))
+        if(parent[i]===null || area[j]<area[parent[i]]) parent[i]=j; }}
+  const depth=i=>{let d=0,c=i;while(parent[c]!==null){c=parent[c];d++;}return d;};
+  probe.remove();
+
+  // ---- หาตา: ชั้นลึก 1 (รูในเนื้อ) ที่มีลูกตา (ชั้น 2) อยู่ข้างใน ----
+  const kids=subs.map((_,i)=>subs.map((_,j)=>j).filter(j=>parent[j]===i));
+  const eyeWhites=subs.map((_,i)=>i).filter(i=>depth(i)===1 && kids[i].length>=1);
+  const pupils=eyeWhites.flatMap(i=>kids[i]);
+  // ปาก = รูชั้น 1 ที่ไม่มีลูก และอยู่ต่ำกว่าตา
+  const holes1=subs.map((_,i)=>i).filter(i=>depth(i)===1);
+  const mouth=holes1.filter(i=>!eyeWhites.includes(i));
+
+  // ---- วาด ----
+  const mk=(idx,fill)=>{const p=document.createElementNS(NS,'path');
+    p.setAttribute('d',idx.map(i=>subs[i]).join(' '));
+    p.setAttribute('fill',fill); p.setAttribute('fill-rule','evenodd'); return p;};
+  const roots=subs.map((_,i)=>i).filter(i=>parent[i]===null);
+
+  const s1=document.createElementNS(NS,'svg'); s1.setAttribute('viewBox',vb);
+  s1.appendChild(mk([...roots,...holes1,...pupils],'#f2efde'));
+  const w1=document.createElement('div'); w1.appendChild(s1);
+  w1.insertAdjacentHTML('beforeend','<div style="font-size:11px;color:#999;text-align:center">ทั้งหมด (evenodd)</div>');
+
+  const s2=document.createElementNS(NS,'svg'); s2.setAttribute('viewBox',vb);
+  s2.appendChild(mk([...roots,...mouth],'#f2efde'));          // ไม่มีตา
+  const w2=document.createElement('div'); w2.appendChild(s2);
+  w2.insertAdjacentHTML('beforeend','<div style="font-size:11px;color:#999;text-align:center">เอาตาออก = ท่าปกติ</div>');
+
+  const s3=document.createElementNS(NS,'svg'); s3.setAttribute('viewBox',vb);
+  s3.appendChild(mk([...roots,...holes1,...pupils],'#f2efde'));
+  eyeWhites.forEach((i,k)=>{const p=document.createElementNS(NS,'path');
+    p.setAttribute('d',subs[i]); p.setAttribute('fill','#3cb44b'); p.setAttribute('opacity','.55'); s3.appendChild(p);});
+  pupils.forEach(i=>{const p=document.createElementNS(NS,'path');
+    p.setAttribute('d',subs[i]); p.setAttribute('fill','#e6194b'); s3.appendChild(p);});
+  const w3=document.createElement('div'); w3.appendChild(s3);
+  w3.insertAdjacentHTML('beforeend','<div style="font-size:11px;color:#999;text-align:center">เขียว=ตาขาว แดง=ลูกตา</div>');
+
+  document.getElementById('row').append(w1,w2,w3);
+
+  const fmt=i=>`#${i} bbox ${Math.round(box[i].x)},${Math.round(box[i].y)} ${Math.round(box[i].width)}×${Math.round(box[i].height)}`;
+  document.getElementById('out').textContent =
+    `ไฟล์: ${data.source}   viewBox: ${vb}\n`+
+    `subpath ทั้งหมด: ${subs.length}   (เนื้อนอก ${roots.length} · รูชั้น1 ${holes1.length} · ชั้น2 ${pupils.length})\n\n`+
+    `ตาขาว (${eyeWhites.length}):\n`+eyeWhites.map(i=>'  '+fmt(i)+`  ลูกตาข้างใน ${kids[i].length}`).join('\n')+'\n\n'+
+    `ลูกตา (${pupils.length}):\n`+pupils.map(i=>'  '+fmt(i)).join('\n')+'\n\n'+
+    `ปาก/รูอื่น (${mouth.length}):\n`+mouth.map(i=>'  '+fmt(i)).join('\n');
+
+  window.__EYE={subs,vb,parent,box,roots,holes1,eyeWhites,pupils,mouth};
+}).catch(e=>{
+  document.getElementById('out').innerHTML='<span class="err">'+e.message+'</span>';
+});
+</script>
+</body>
+</html>

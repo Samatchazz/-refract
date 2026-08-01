@@ -1,0 +1,1801 @@
+{
+  "studiobjork": {
+    "url": "https://studiobjork.com",
+    "error": "Error: page.goto: net::ERR_EMPTY_RESPONSE at https://studiobjork.com/"
+  },
+  "kwokyinmak": {
+    "url": "https://www.kwokyinmak.com",
+    "desktopTop": {
+      "viewport": {
+        "vw": 1440,
+        "vh": 900
+      },
+      "inkPct": 22.3,
+      "whitespacePct": 77.7,
+      "docHeightVh": 1,
+      "displayMax": {
+        "combo": "s_h_s | 200px | 900 | normal | none",
+        "chars": 3,
+        "sizePx": 200,
+        "sample": "麥"
+      },
+      "bodyMode": {
+        "combo": "b_c_n | 20px | 400 | normal | none",
+        "chars": 785,
+        "sizePx": 20,
+        "sample": "Product design"
+      },
+      "displayToBodyRatio": 10,
+      "familiesUsed": [
+        "s_h_s",
+        "b_c_n"
+      ],
+      "weightsUsed": [
+        "900",
+        "400",
+        "700",
+        "600"
+      ],
+      "topCombos": [
+        {
+          "combo": "s_h_s | 200px | 900 | normal | none",
+          "chars": 3,
+          "sizePx": 200,
+          "sample": "麥"
+        },
+        {
+          "combo": "b_c_n | 148.333px | 400 | -5.93333px | none",
+          "chars": 10,
+          "sizePx": 148.333,
+          "sample": "10."
+        },
+        {
+          "combo": "s_h_s | 133.333px | 900 | 6.66667px | none",
+          "chars": 3,
+          "sizePx": 133.333,
+          "sample": "路透社"
+        },
+        {
+          "combo": "b_c_n | 133.333px | 400 | -1.6px | none",
+          "chars": 43,
+          "sizePx": 133.333,
+          "sample": "Chan"
+        },
+        {
+          "combo": "s_h_s | 83.3333px | 900 | normal | none",
+          "chars": 14,
+          "sizePx": 83.3333,
+          "sample": "Bedankt"
+        },
+        {
+          "combo": "s_h_s | 75px | 900 | normal | none",
+          "chars": 3,
+          "sizePx": 75,
+          "sample": "舊作品"
+        },
+        {
+          "combo": "b_c_n | 38.3333px | 400 | normal | none",
+          "chars": 31,
+          "sizePx": 38.3333,
+          "sample": "Dribbble"
+        },
+        {
+          "combo": "s_h_s | 33.3333px | 900 | 2px | none",
+          "chars": 2,
+          "sizePx": 33.3333,
+          "sample": "新聞"
+        },
+        {
+          "combo": "b_c_n | 33.3333px | 400 | normal | none",
+          "chars": 15,
+          "sizePx": 33.3333,
+          "sample": "Archive 2013–15"
+        },
+        {
+          "combo": "s_h_s | 33.3333px | 700 | normal | none",
+          "chars": 2,
+          "sizePx": 33.3333,
+          "sample": "運球"
+        },
+        {
+          "combo": "b_c_n | 22.5px | 400 | normal | none",
+          "chars": 76,
+          "sizePx": 22.5,
+          "sample": "Hi, my name is Kwok Yin Mak,"
+        },
+        {
+          "combo": "b_c_n | 21.6667px | 400 | normal | none",
+          "chars": 784,
+          "sizePx": 21.6667,
+          "sample": "Webby"
+        }
+      ],
+      "motion": {
+        "animatedEls": 2,
+        "transitionedEls": 47,
+        "fixedSticky": 6,
+        "animDurations": [
+          "1s",
+          "180s"
+        ],
+        "easings": [
+          "cubic-bezier(0.215"
+        ]
+      },
+      "bg": "rgba(0, 0, 0, 0)",
+      "fg": "rgb(0, 0, 0)",
+      "libs": {
+        "lenis": false,
+        "gsap": false,
+        "scrollTrigger": false,
+        "skrollr": false,
+        "three": false,
+        "pixi": false
+      }
+    },
+    "desktopMid": {
+      "viewport": {
+        "vw": 1440,
+        "vh": 900
+      },
+      "inkPct": 25.8,
+      "whitespacePct": 74.2,
+      "docHeightVh": 1,
+      "displayMax": {
+        "combo": "s_h_s | 200px | 900 | normal | none",
+        "chars": 3,
+        "sizePx": 200,
+        "sample": "麥"
+      },
+      "bodyMode": {
+        "combo": "b_c_n | 20px | 400 | normal | none",
+        "chars": 785,
+        "sizePx": 20,
+        "sample": "Product design"
+      },
+      "displayToBodyRatio": 10,
+      "familiesUsed": [
+        "s_h_s",
+        "b_c_n"
+      ],
+      "weightsUsed": [
+        "900",
+        "400",
+        "700",
+        "600"
+      ],
+      "topCombos": [
+        {
+          "combo": "s_h_s | 200px | 900 | normal | none",
+          "chars": 3,
+          "sizePx": 200,
+          "sample": "麥"
+        },
+        {
+          "combo": "b_c_n | 148.333px | 400 | -5.93333px | none",
+          "chars": 10,
+          "sizePx": 148.333,
+          "sample": "10."
+        },
+        {
+          "combo": "s_h_s | 133.333px | 900 | 6.66667px | none",
+          "chars": 3,
+          "sizePx": 133.333,
+          "sample": "路透社"
+        },
+        {
+          "combo": "b_c_n | 133.333px | 400 | -1.6px | none",
+          "chars": 43,
+          "sizePx": 133.333,
+          "sample": "Chan"
+        },
+        {
+          "combo": "s_h_s | 83.3333px | 900 | normal | none",
+          "chars": 14,
+          "sizePx": 83.3333,
+          "sample": "Bedankt"
+        },
+        {
+          "combo": "s_h_s | 75px | 900 | normal | none",
+          "chars": 3,
+          "sizePx": 75,
+          "sample": "舊作品"
+        },
+        {
+          "combo": "b_c_n | 38.3333px | 400 | normal | none",
+          "chars": 31,
+          "sizePx": 38.3333,
+          "sample": "Dribbble"
+        },
+        {
+          "combo": "s_h_s | 33.3333px | 900 | 2px | none",
+          "chars": 2,
+          "sizePx": 33.3333,
+          "sample": "新聞"
+        },
+        {
+          "combo": "b_c_n | 33.3333px | 400 | normal | none",
+          "chars": 15,
+          "sizePx": 33.3333,
+          "sample": "Archive 2013–15"
+        },
+        {
+          "combo": "s_h_s | 33.3333px | 700 | normal | none",
+          "chars": 2,
+          "sizePx": 33.3333,
+          "sample": "運球"
+        },
+        {
+          "combo": "b_c_n | 22.5px | 400 | normal | none",
+          "chars": 76,
+          "sizePx": 22.5,
+          "sample": "Hi, my name is Kwok Yin Mak,"
+        },
+        {
+          "combo": "b_c_n | 21.6667px | 400 | normal | none",
+          "chars": 784,
+          "sizePx": 21.6667,
+          "sample": "Webby"
+        }
+      ],
+      "motion": {
+        "animatedEls": 2,
+        "transitionedEls": 47,
+        "fixedSticky": 6,
+        "animDurations": [
+          "1s",
+          "180s"
+        ],
+        "easings": [
+          "cubic-bezier(0.215"
+        ]
+      },
+      "bg": "rgba(0, 0, 0, 0)",
+      "fg": "rgb(0, 0, 0)",
+      "libs": {
+        "lenis": false,
+        "gsap": false,
+        "scrollTrigger": false,
+        "skrollr": false,
+        "three": false,
+        "pixi": false
+      }
+    },
+    "shots": 4,
+    "mobileTop": {
+      "viewport": {
+        "vw": 390,
+        "vh": 844
+      },
+      "inkPct": 31.2,
+      "whitespacePct": 68.8,
+      "docHeightVh": 1,
+      "displayMax": {
+        "combo": "s_h_s | 68.4px | 900 | 3.42px | none",
+        "chars": 3,
+        "sizePx": 68.4,
+        "sample": "路透社"
+      },
+      "bodyMode": {
+        "combo": "b_c_n | 21.6px | 400 | normal | none",
+        "chars": 718,
+        "sizePx": 21.6,
+        "sample": "Archive 2013–15"
+      },
+      "displayToBodyRatio": 3.17,
+      "familiesUsed": [
+        "s_h_s",
+        "b_c_n",
+        "\"Times New Roman\"",
+        "-apple-system"
+      ],
+      "weightsUsed": [
+        "900",
+        "400",
+        "700",
+        "600"
+      ],
+      "topCombos": [
+        {
+          "combo": "s_h_s | 68.4px | 900 | 3.42px | none",
+          "chars": 3,
+          "sizePx": 68.4,
+          "sample": "路透社"
+        },
+        {
+          "combo": "b_c_n | 60.6px | 400 | -0.7272px | none",
+          "chars": 43,
+          "sizePx": 60.6,
+          "sample": "Chan"
+        },
+        {
+          "combo": "s_h_s | 45px | 900 | normal | none",
+          "chars": 3,
+          "sizePx": 45,
+          "sample": "舊作品"
+        },
+        {
+          "combo": "s_h_s | 37.2px | 900 | 2.232px | none",
+          "chars": 2,
+          "sizePx": 37.2,
+          "sample": "新聞"
+        },
+        {
+          "combo": "b_c_n | 37.2px | 400 | normal | none",
+          "chars": 8,
+          "sizePx": 37.2,
+          "sample": "Dribbble"
+        },
+        {
+          "combo": "s_h_s | 37.2px | 700 | normal | none",
+          "chars": 2,
+          "sizePx": 37.2,
+          "sample": "運球"
+        },
+        {
+          "combo": "b_c_n | 33.3px | 400 | -0.666px | none",
+          "chars": 76,
+          "sizePx": 33.3,
+          "sample": "Hi, my name is Kwok Yin Mak,"
+        },
+        {
+          "combo": "b_c_n | 33.3px | 400 | normal | none",
+          "chars": 23,
+          "sizePx": 33.3,
+          "sample": "White Tears/Brown Scars"
+        },
+        {
+          "combo": "s_h_s | 27.06px | 600 | -0.70356px | none",
+          "chars": 32,
+          "sizePx": 27.06,
+          "sample": "你好，我的名字是麥國然。"
+        },
+        {
+          "combo": "b_c_n | 21.6px | 400 | normal | none",
+          "chars": 718,
+          "sizePx": 21.6,
+          "sample": "Archive 2013–15"
+        },
+        {
+          "combo": "b_c_n | 17.7px | 400 | normal | none",
+          "chars": 93,
+          "sizePx": 17.7,
+          "sample": "Product design"
+        },
+        {
+          "combo": "s_h_s | 17.7px | 600 | normal | none",
+          "chars": 26,
+          "sizePx": 17.7,
+          "sample": "產品設計"
+        }
+      ],
+      "motion": {
+        "animatedEls": 2,
+        "transitionedEls": 43,
+        "fixedSticky": 6,
+        "animDurations": [
+          "1s",
+          "180s"
+        ],
+        "easings": [
+          "cubic-bezier(0.215"
+        ]
+      },
+      "bg": "rgba(0, 0, 0, 0)",
+      "fg": "rgb(0, 0, 0)",
+      "libs": {
+        "lenis": false,
+        "gsap": false,
+        "scrollTrigger": false,
+        "skrollr": false,
+        "three": false,
+        "pixi": false
+      }
+    }
+  },
+  "henriheymans": {
+    "url": "https://henriheymans.com",
+    "desktopTop": {
+      "viewport": {
+        "vw": 1440,
+        "vh": 900
+      },
+      "inkPct": 100,
+      "whitespacePct": 0,
+      "docHeightVh": 4.4,
+      "displayMax": {
+        "combo": "Montreal-Bold | 72px | 700 | -1.44px | uppercase",
+        "chars": 64,
+        "sizePx": 72,
+        "sample": "Hey. I'm Henri heymans - a 29 years"
+      },
+      "bodyMode": {
+        "combo": "Montreal-Bold | 41.4px | 300 | -1.242px | uppercase",
+        "chars": 558,
+        "sizePx": 41.4,
+        "sample": "Driven by the desire to create unique an"
+      },
+      "displayToBodyRatio": 1.74,
+      "familiesUsed": [
+        "Montreal-Bold",
+        "Montreal-Regular"
+      ],
+      "weightsUsed": [
+        "700",
+        "400",
+        "300"
+      ],
+      "topCombos": [
+        {
+          "combo": "Montreal-Bold | 72px | 700 | -1.44px | uppercase",
+          "chars": 64,
+          "sizePx": 72,
+          "sample": "Hey. I'm Henri heymans - a 29 years"
+        },
+        {
+          "combo": "Montreal-Bold | 72px | 400 | -1.44px | uppercase",
+          "chars": 321,
+          "sizePx": 72,
+          "sample": "I"
+        },
+        {
+          "combo": "Montreal-Bold | 41.4px | 300 | -1.242px | uppercase",
+          "chars": 558,
+          "sizePx": 41.4,
+          "sample": "Driven by the desire to create unique an"
+        },
+        {
+          "combo": "Montreal-Bold | 36px | 400 | -0.72px | none",
+          "chars": 50,
+          "sizePx": 36,
+          "sample": "BIO,"
+        },
+        {
+          "combo": "Montreal-Bold | 36px | 400 | -0.72px | uppercase",
+          "chars": 27,
+          "sizePx": 36,
+          "sample": "Start a project"
+        },
+        {
+          "combo": "Montreal-Bold | 31.5px | 400 | -0.945px | uppercase",
+          "chars": 9,
+          "sizePx": 31.5,
+          "sample": "Biography"
+        },
+        {
+          "combo": "Montreal-Bold | 24.3px | 400 | -0.486px | uppercase",
+          "chars": 130,
+          "sizePx": 24.3,
+          "sample": "HENRI HEYMANS — 2025"
+        },
+        {
+          "combo": "Montreal-Regular | 11.7px | 300 | -0.18px | none",
+          "chars": 25,
+          "sizePx": 11.7,
+          "sample": "MYSELF"
+        },
+        {
+          "combo": "Montreal-Regular | 11.7px | 300 | -0.18px | uppercase",
+          "chars": 26,
+          "sizePx": 11.7,
+          "sample": "Recognitions & Awards (15)"
+        },
+        {
+          "combo": "Montreal-Regular | 11.7px | 400 | -0.234px | none",
+          "chars": 56,
+          "sizePx": 11.7,
+          "sample": "CREATIVE DEVELOPMENT"
+        },
+        {
+          "combo": "Montreal-Regular | 10.8px | 400 | normal | none",
+          "chars": 32,
+          "sizePx": 10.8,
+          "sample": "A"
+        },
+        {
+          "combo": "Montreal-Bold | 9px | 400 | -0.72px | none",
+          "chars": 10,
+          "sizePx": 9,
+          "sample": "( 8 )"
+        }
+      ],
+      "motion": {
+        "animatedEls": 0,
+        "transitionedEls": 56,
+        "fixedSticky": 8,
+        "animDurations": [],
+        "easings": [
+          "cubic-bezier(0.16",
+          "ease"
+        ]
+      },
+      "bg": "rgb(255, 255, 255)",
+      "fg": "rgb(0, 0, 0)",
+      "libs": {
+        "lenis": true,
+        "gsap": false,
+        "scrollTrigger": false,
+        "skrollr": false,
+        "three": false,
+        "pixi": false
+      }
+    },
+    "desktopMid": {
+      "viewport": {
+        "vw": 1440,
+        "vh": 900
+      },
+      "inkPct": 100,
+      "whitespacePct": 0,
+      "docHeightVh": 4.4,
+      "displayMax": {
+        "combo": "Montreal-Bold | 72px | 700 | -1.44px | uppercase",
+        "chars": 64,
+        "sizePx": 72,
+        "sample": "Hey. I'm Henri heymans - a 29 years"
+      },
+      "bodyMode": {
+        "combo": "Montreal-Bold | 41.4px | 300 | -1.242px | uppercase",
+        "chars": 558,
+        "sizePx": 41.4,
+        "sample": "Driven by the desire to create unique an"
+      },
+      "displayToBodyRatio": 1.74,
+      "familiesUsed": [
+        "Montreal-Bold",
+        "Montreal-Regular"
+      ],
+      "weightsUsed": [
+        "700",
+        "400",
+        "300"
+      ],
+      "topCombos": [
+        {
+          "combo": "Montreal-Bold | 72px | 700 | -1.44px | uppercase",
+          "chars": 64,
+          "sizePx": 72,
+          "sample": "Hey. I'm Henri heymans - a 29 years"
+        },
+        {
+          "combo": "Montreal-Bold | 72px | 400 | -1.44px | uppercase",
+          "chars": 321,
+          "sizePx": 72,
+          "sample": "I"
+        },
+        {
+          "combo": "Montreal-Bold | 41.4px | 300 | -1.242px | uppercase",
+          "chars": 558,
+          "sizePx": 41.4,
+          "sample": "Driven by the desire to create unique an"
+        },
+        {
+          "combo": "Montreal-Bold | 36px | 400 | -0.72px | none",
+          "chars": 50,
+          "sizePx": 36,
+          "sample": "BIO,"
+        },
+        {
+          "combo": "Montreal-Bold | 36px | 400 | -0.72px | uppercase",
+          "chars": 27,
+          "sizePx": 36,
+          "sample": "Start a project"
+        },
+        {
+          "combo": "Montreal-Bold | 31.5px | 400 | -0.945px | uppercase",
+          "chars": 9,
+          "sizePx": 31.5,
+          "sample": "Biography"
+        },
+        {
+          "combo": "Montreal-Bold | 24.3px | 400 | -0.486px | uppercase",
+          "chars": 130,
+          "sizePx": 24.3,
+          "sample": "HENRI HEYMANS — 2025"
+        },
+        {
+          "combo": "Montreal-Regular | 11.7px | 300 | -0.18px | none",
+          "chars": 25,
+          "sizePx": 11.7,
+          "sample": "MYSELF"
+        },
+        {
+          "combo": "Montreal-Regular | 11.7px | 300 | -0.18px | uppercase",
+          "chars": 26,
+          "sizePx": 11.7,
+          "sample": "Recognitions & Awards (15)"
+        },
+        {
+          "combo": "Montreal-Regular | 11.7px | 400 | -0.234px | none",
+          "chars": 56,
+          "sizePx": 11.7,
+          "sample": "CREATIVE DEVELOPMENT"
+        },
+        {
+          "combo": "Montreal-Regular | 10.8px | 400 | normal | none",
+          "chars": 32,
+          "sizePx": 10.8,
+          "sample": "A"
+        },
+        {
+          "combo": "Montreal-Bold | 9px | 400 | -0.72px | none",
+          "chars": 10,
+          "sizePx": 9,
+          "sample": "( 8 )"
+        }
+      ],
+      "motion": {
+        "animatedEls": 0,
+        "transitionedEls": 56,
+        "fixedSticky": 8,
+        "animDurations": [],
+        "easings": [
+          "cubic-bezier(0.16",
+          "ease"
+        ]
+      },
+      "bg": "rgb(255, 255, 255)",
+      "fg": "rgb(0, 0, 0)",
+      "libs": {
+        "lenis": true,
+        "gsap": false,
+        "scrollTrigger": false,
+        "skrollr": false,
+        "three": false,
+        "pixi": false
+      }
+    },
+    "shots": 4,
+    "mobileTop": {
+      "viewport": {
+        "vw": 390,
+        "vh": 844
+      },
+      "inkPct": 100,
+      "whitespacePct": 0,
+      "docHeightVh": 4.7,
+      "displayMax": {
+        "combo": "Montreal-Bold | 39.52px | 700 | -0.7904px | uppercase",
+        "chars": 69,
+        "sizePx": 39.52,
+        "sample": "Hey. I'm Henri heymans - a 29 years old "
+      },
+      "bodyMode": {
+        "combo": "Montreal-Bold | 18.72px | 300 | -0.5616px | uppercase",
+        "chars": 537,
+        "sizePx": 18.72,
+        "sample": "Driven by the desire to create"
+      },
+      "displayToBodyRatio": 2.11,
+      "familiesUsed": [
+        "Montreal-Bold",
+        "Montreal-Regular"
+      ],
+      "weightsUsed": [
+        "700",
+        "400",
+        "300"
+      ],
+      "topCombos": [
+        {
+          "combo": "Montreal-Bold | 39.52px | 700 | -0.7904px | uppercase",
+          "chars": 69,
+          "sizePx": 39.52,
+          "sample": "Hey. I'm Henri heymans - a 29 years old "
+        },
+        {
+          "combo": "Montreal-Bold | 30.16px | 400 | -0.6032px | uppercase",
+          "chars": 182,
+          "sizePx": 30.16,
+          "sample": "S"
+        },
+        {
+          "combo": "Montreal-Bold | 28.08px | 400 | -0.5616px | uppercase",
+          "chars": 14,
+          "sizePx": 28.08,
+          "sample": "Click to enter"
+        },
+        {
+          "combo": "Montreal-Regular | 23.92px | 400 | -0.4784px | uppercase",
+          "chars": 282,
+          "sizePx": 23.92,
+          "sample": "A"
+        },
+        {
+          "combo": "Montreal-Bold | 18.72px | 300 | -0.5616px | uppercase",
+          "chars": 537,
+          "sizePx": 18.72,
+          "sample": "Driven by the desire to create"
+        },
+        {
+          "combo": "Montreal-Bold | 18.72px | 400 | -0.5616px | uppercase",
+          "chars": 29,
+          "sizePx": 18.72,
+          "sample": "TWITTER"
+        },
+        {
+          "combo": "Montreal-Bold | 18.72px | 700 | -0.5616px | none",
+          "chars": 31,
+          "sizePx": 18.72,
+          "sample": "DESIGNED BY"
+        },
+        {
+          "combo": "Montreal-Bold | 18.72px | 700 | -0.5616px | uppercase",
+          "chars": 12,
+          "sizePx": 18.72,
+          "sample": "ISAAC POWELL"
+        },
+        {
+          "combo": "Montreal-Regular | 15.2152px | 400 | -0.304304px | uppercase",
+          "chars": 4,
+          "sizePx": 15.2152,
+          "sample": "HOME"
+        },
+        {
+          "combo": "Montreal-Regular | 13.52px | 300 | -0.208px | uppercase",
+          "chars": 26,
+          "sizePx": 13.52,
+          "sample": "Recognitions & Awards (15)"
+        },
+        {
+          "combo": "Montreal-Regular | 13.52px | 400 | -0.2704px | none",
+          "chars": 40,
+          "sizePx": 13.52,
+          "sample": "PORTFOLIO 2025 SHOWCASE OF HENRI HEYMANS"
+        },
+        {
+          "combo": "Montreal-Regular | 8.32px | 300 | -0.208px | none",
+          "chars": 25,
+          "sizePx": 8.32,
+          "sample": "MYSELF"
+        }
+      ],
+      "motion": {
+        "animatedEls": 0,
+        "transitionedEls": 56,
+        "fixedSticky": 8,
+        "animDurations": [],
+        "easings": [
+          "cubic-bezier(0.16",
+          "ease"
+        ]
+      },
+      "bg": "rgb(255, 255, 255)",
+      "fg": "rgb(0, 0, 0)",
+      "libs": {
+        "lenis": true,
+        "gsap": false,
+        "scrollTrigger": false,
+        "skrollr": false,
+        "three": false,
+        "pixi": false
+      }
+    }
+  },
+  "bluxstudio": {
+    "url": "https://bluxstudio.com",
+    "desktopTop": {
+      "viewport": {
+        "vw": 1440,
+        "vh": 900
+      },
+      "inkPct": 100,
+      "whitespacePct": 0,
+      "docHeightVh": 21.8,
+      "displayMax": {
+        "combo": "\"Helvetica World Bold\" | 232.409px | 700 | -6.97228px | none",
+        "chars": 10,
+        "sizePx": 232.409,
+        "sample": "Bluxstudio"
+      },
+      "bodyMode": {
+        "combo": "\"Helvetica World Regular\" | 18px | 400 | -0.36px | none",
+        "chars": 852,
+        "sizePx": 18,
+        "sample": "\"From the first brief to the final deliv"
+      },
+      "displayToBodyRatio": 12.91,
+      "familiesUsed": [
+        "\"Helvetica World Bold\"",
+        "\"Helvetica World Regular\"",
+        "\"TASA Orbiter\"",
+        "\"DM Mono\"",
+        "\"Roboto Mono\""
+      ],
+      "weightsUsed": [
+        "700",
+        "400"
+      ],
+      "topCombos": [
+        {
+          "combo": "\"Helvetica World Bold\" | 232.409px | 700 | -6.97228px | none",
+          "chars": 10,
+          "sizePx": 232.409,
+          "sample": "Bluxstudio"
+        },
+        {
+          "combo": "\"Helvetica World Regular\" | 108px | 400 | normal | none",
+          "chars": 6,
+          "sizePx": 108,
+          "sample": "0"
+        },
+        {
+          "combo": "\"Helvetica World Regular\" | 80px | 400 | -2.4px | uppercase",
+          "chars": 70,
+          "sizePx": 80,
+          "sample": "REVIEWS"
+        },
+        {
+          "combo": "\"Helvetica World Regular\" | 64px | 400 | -1.92px | uppercase",
+          "chars": 125,
+          "sizePx": 64,
+          "sample": "I craft"
+        },
+        {
+          "combo": "\"Helvetica World Regular\" | 62px | 400 | -1.86px | uppercase",
+          "chars": 79,
+          "sizePx": 62,
+          "sample": "DesigN-driven"
+        },
+        {
+          "combo": "\"Helvetica World Regular\" | 36px | 400 | -1.08px | uppercase",
+          "chars": 3,
+          "sizePx": 36,
+          "sample": "+"
+        },
+        {
+          "combo": "\"Helvetica World Regular\" | 32px | 400 | -0.96px | uppercase",
+          "chars": 60,
+          "sizePx": 32,
+          "sample": "Discovery"
+        },
+        {
+          "combo": "\"TASA Orbiter\" | 24px | 400 | -0.48px | none",
+          "chars": 11,
+          "sizePx": 24,
+          "sample": "FEATURED IN"
+        },
+        {
+          "combo": "\"Helvetica World Regular\" | 18px | 400 | -0.54px | none",
+          "chars": 448,
+          "sizePx": 18,
+          "sample": "Your website can work as hard as your bu"
+        },
+        {
+          "combo": "\"TASA Orbiter\" | 18px | 400 | -0.54px | none",
+          "chars": 132,
+          "sizePx": 18,
+          "sample": "The right service for where you are righ"
+        },
+        {
+          "combo": "\"Helvetica World Regular\" | 18px | 400 | normal | uppercase",
+          "chars": 52,
+          "sizePx": 18,
+          "sample": "Web Strategy"
+        },
+        {
+          "combo": "\"Helvetica World Regular\" | 18px | 400 | -0.36px | none",
+          "chars": 852,
+          "sizePx": 18,
+          "sample": "\"From the first brief to the final deliv"
+        }
+      ],
+      "motion": {
+        "animatedEls": 1,
+        "transitionedEls": 13,
+        "fixedSticky": 12,
+        "animDurations": [
+          "20s"
+        ],
+        "easings": [
+          "ease"
+        ]
+      },
+      "bg": "rgb(251, 252, 253)",
+      "fg": "rgb(0, 0, 0)",
+      "libs": {
+        "lenis": true,
+        "gsap": false,
+        "scrollTrigger": false,
+        "skrollr": false,
+        "three": false,
+        "pixi": false
+      }
+    },
+    "desktopMid": {
+      "viewport": {
+        "vw": 1440,
+        "vh": 900
+      },
+      "inkPct": 20.8,
+      "whitespacePct": 79.2,
+      "docHeightVh": 21.8,
+      "displayMax": {
+        "combo": "\"Helvetica World Bold\" | 232.409px | 700 | -6.97228px | none",
+        "chars": 10,
+        "sizePx": 232.409,
+        "sample": "Bluxstudio"
+      },
+      "bodyMode": {
+        "combo": "\"Helvetica World Regular\" | 18px | 400 | -0.36px | none",
+        "chars": 852,
+        "sizePx": 18,
+        "sample": "\"From the first brief to the final deliv"
+      },
+      "displayToBodyRatio": 12.91,
+      "familiesUsed": [
+        "\"Helvetica World Bold\"",
+        "\"Helvetica World Regular\"",
+        "\"TASA Orbiter\"",
+        "\"DM Mono\"",
+        "\"Roboto Mono\""
+      ],
+      "weightsUsed": [
+        "700",
+        "400"
+      ],
+      "topCombos": [
+        {
+          "combo": "\"Helvetica World Bold\" | 232.409px | 700 | -6.97228px | none",
+          "chars": 10,
+          "sizePx": 232.409,
+          "sample": "Bluxstudio"
+        },
+        {
+          "combo": "\"Helvetica World Regular\" | 108px | 400 | normal | none",
+          "chars": 10,
+          "sizePx": 108,
+          "sample": "15"
+        },
+        {
+          "combo": "\"Helvetica World Regular\" | 80px | 400 | -2.4px | uppercase",
+          "chars": 70,
+          "sizePx": 80,
+          "sample": "REVIEWS"
+        },
+        {
+          "combo": "\"Helvetica World Regular\" | 64px | 400 | -1.92px | uppercase",
+          "chars": 125,
+          "sizePx": 64,
+          "sample": "I craft"
+        },
+        {
+          "combo": "\"Helvetica World Regular\" | 62px | 400 | -1.86px | uppercase",
+          "chars": 79,
+          "sizePx": 62,
+          "sample": "DesigN-driven"
+        },
+        {
+          "combo": "\"Helvetica World Regular\" | 36px | 400 | -1.08px | uppercase",
+          "chars": 3,
+          "sizePx": 36,
+          "sample": "+"
+        },
+        {
+          "combo": "\"Helvetica World Regular\" | 32px | 400 | -0.96px | uppercase",
+          "chars": 60,
+          "sizePx": 32,
+          "sample": "Discovery"
+        },
+        {
+          "combo": "\"TASA Orbiter\" | 24px | 400 | -0.48px | none",
+          "chars": 11,
+          "sizePx": 24,
+          "sample": "FEATURED IN"
+        },
+        {
+          "combo": "\"Helvetica World Regular\" | 18px | 400 | -0.54px | none",
+          "chars": 448,
+          "sizePx": 18,
+          "sample": "Your website can work as hard as your bu"
+        },
+        {
+          "combo": "\"TASA Orbiter\" | 18px | 400 | -0.54px | none",
+          "chars": 132,
+          "sizePx": 18,
+          "sample": "The right service for where you are righ"
+        },
+        {
+          "combo": "\"Helvetica World Regular\" | 18px | 400 | normal | uppercase",
+          "chars": 52,
+          "sizePx": 18,
+          "sample": "Web Strategy"
+        },
+        {
+          "combo": "\"Helvetica World Regular\" | 18px | 400 | -0.36px | none",
+          "chars": 852,
+          "sizePx": 18,
+          "sample": "\"From the first brief to the final deliv"
+        }
+      ],
+      "motion": {
+        "animatedEls": 1,
+        "transitionedEls": 13,
+        "fixedSticky": 13,
+        "animDurations": [
+          "20s"
+        ],
+        "easings": [
+          "ease"
+        ]
+      },
+      "bg": "rgb(251, 252, 253)",
+      "fg": "rgb(0, 0, 0)",
+      "libs": {
+        "lenis": true,
+        "gsap": false,
+        "scrollTrigger": false,
+        "skrollr": false,
+        "three": false,
+        "pixi": false
+      }
+    },
+    "shots": 14,
+    "mobileTop": {
+      "viewport": {
+        "vw": 390,
+        "vh": 844
+      },
+      "inkPct": 100,
+      "whitespacePct": 0,
+      "docHeightVh": 21.5,
+      "displayMax": {
+        "combo": "\"Helvetica World Bold\" | 232.409px | 700 | -6.97228px | none",
+        "chars": 10,
+        "sizePx": 232.409,
+        "sample": "Bluxstudio"
+      },
+      "bodyMode": {
+        "combo": "\"DM Mono\" | 14px | 400 | -0.28px | uppercase",
+        "chars": 907,
+        "sizePx": 14,
+        "sample": "Start with an audit"
+      },
+      "displayToBodyRatio": 16.6,
+      "familiesUsed": [
+        "\"Helvetica World Bold\"",
+        "\"Helvetica World Regular\"",
+        "\"TASA Orbiter\"",
+        "\"Roboto Mono\"",
+        "\"DM Mono\""
+      ],
+      "weightsUsed": [
+        "700",
+        "400"
+      ],
+      "topCombos": [
+        {
+          "combo": "\"Helvetica World Bold\" | 232.409px | 700 | -6.97228px | none",
+          "chars": 10,
+          "sizePx": 232.409,
+          "sample": "Bluxstudio"
+        },
+        {
+          "combo": "\"Helvetica World Regular\" | 80px | 400 | -2.4px | uppercase",
+          "chars": 28,
+          "sizePx": 80,
+          "sample": "REVIEWS"
+        },
+        {
+          "combo": "\"Helvetica World Regular\" | 48px | 400 | normal | none",
+          "chars": 6,
+          "sizePx": 48,
+          "sample": "0"
+        },
+        {
+          "combo": "\"Helvetica World Regular\" | 48px | 400 | -1.44px | uppercase",
+          "chars": 12,
+          "sizePx": 48,
+          "sample": "WEB"
+        },
+        {
+          "combo": "\"Helvetica World Regular\" | 36px | 400 | -1.08px | uppercase",
+          "chars": 118,
+          "sizePx": 36,
+          "sample": "I CRAFT"
+        },
+        {
+          "combo": "\"Helvetica World Regular\" | 30px | 400 | -0.9px | uppercase",
+          "chars": 77,
+          "sizePx": 30,
+          "sample": "T"
+        },
+        {
+          "combo": "\"Helvetica World Regular\" | 26px | 400 | -0.78px | uppercase",
+          "chars": 60,
+          "sizePx": 26,
+          "sample": "Discovery"
+        },
+        {
+          "combo": "\"Helvetica World Regular\" | 20px | 400 | normal | uppercase",
+          "chars": 52,
+          "sizePx": 20,
+          "sample": "Web Strategy"
+        },
+        {
+          "combo": "\"Helvetica World Regular\" | 18px | 400 | -0.54px | uppercase",
+          "chars": 29,
+          "sizePx": 18,
+          "sample": "Alaska"
+        },
+        {
+          "combo": "\"Helvetica World Regular\" | 18px | 400 | -0.54px | none",
+          "chars": 401,
+          "sizePx": 18,
+          "sample": "I turn findings into a clear plan. What "
+        },
+        {
+          "combo": "\"TASA Orbiter\" | 18px | 400 | -0.36px | none",
+          "chars": 11,
+          "sizePx": 18,
+          "sample": "FEATURED IN"
+        },
+        {
+          "combo": "\"Helvetica World Regular\" | 18px | 400 | -0.36px | none",
+          "chars": 852,
+          "sizePx": 18,
+          "sample": "\"From the first brief to the final deliv"
+        }
+      ],
+      "motion": {
+        "animatedEls": 1,
+        "transitionedEls": 13,
+        "fixedSticky": 7,
+        "animDurations": [
+          "20s"
+        ],
+        "easings": [
+          "ease"
+        ]
+      },
+      "bg": "rgb(251, 252, 253)",
+      "fg": "rgb(0, 0, 0)",
+      "libs": {
+        "lenis": true,
+        "gsap": false,
+        "scrollTrigger": false,
+        "skrollr": false,
+        "three": false,
+        "pixi": false
+      }
+    }
+  },
+  "poolsuite": {
+    "url": "https://poolsuite.net",
+    "desktopTop": {
+      "viewport": {
+        "vw": 1440,
+        "vh": 900
+      },
+      "inkPct": 9.5,
+      "whitespacePct": 90.5,
+      "docHeightVh": 1,
+      "displayMax": {
+        "combo": "Pixolde | 16px | 400 | normal | uppercase",
+        "chars": 43,
+        "sizePx": 16,
+        "sample": "Become a member"
+      },
+      "bodyMode": {
+        "combo": "Everyday | 10px | 400 | -1px | none",
+        "chars": 142,
+        "sizePx": 10,
+        "sample": "Vacation1.mpeg"
+      },
+      "displayToBodyRatio": 1.6,
+      "familiesUsed": [
+        "Pixolde",
+        "Ishmeria",
+        "ChiKareGo2",
+        "Everyday"
+      ],
+      "weightsUsed": [
+        "400"
+      ],
+      "topCombos": [
+        {
+          "combo": "Pixolde | 16px | 400 | normal | uppercase",
+          "chars": 43,
+          "sizePx": 16,
+          "sample": "Become a member"
+        },
+        {
+          "combo": "Ishmeria | 16px | 400 | -1px | uppercase",
+          "chars": 9,
+          "sizePx": 16,
+          "sample": "Poolsuite"
+        },
+        {
+          "combo": "ChiKareGo2 | 16px | 400 | -1px | none",
+          "chars": 24,
+          "sizePx": 16,
+          "sample": "Poolsuite: ON AIR"
+        },
+        {
+          "combo": "Everyday | 10px | 400 | -1px | none",
+          "chars": 142,
+          "sizePx": 10,
+          "sample": "Vacation1.mpeg"
+        },
+        {
+          "combo": "Everyday | 8px | 400 | -1px | uppercase",
+          "chars": 4,
+          "sizePx": 8,
+          "sample": "Live"
+        }
+      ],
+      "motion": {
+        "animatedEls": 52,
+        "transitionedEls": 82,
+        "fixedSticky": 1,
+        "animDurations": [
+          "1s"
+        ],
+        "easings": [
+          "cubic-bezier(0.4",
+          "linear",
+          "ease",
+          "cubic-bezier(0.23"
+        ]
+      },
+      "bg": "rgb(246, 213, 213)",
+      "fg": "rgb(0, 0, 0)",
+      "libs": {
+        "lenis": false,
+        "gsap": false,
+        "scrollTrigger": false,
+        "skrollr": false,
+        "three": false,
+        "pixi": false
+      }
+    },
+    "desktopMid": {
+      "viewport": {
+        "vw": 1440,
+        "vh": 900
+      },
+      "inkPct": 9.5,
+      "whitespacePct": 90.5,
+      "docHeightVh": 1,
+      "displayMax": {
+        "combo": "Pixolde | 16px | 400 | normal | uppercase",
+        "chars": 43,
+        "sizePx": 16,
+        "sample": "Become a member"
+      },
+      "bodyMode": {
+        "combo": "Everyday | 10px | 400 | -1px | none",
+        "chars": 138,
+        "sizePx": 10,
+        "sample": "MARUTI.avi"
+      },
+      "displayToBodyRatio": 1.6,
+      "familiesUsed": [
+        "Pixolde",
+        "Ishmeria",
+        "ChiKareGo2",
+        "Everyday"
+      ],
+      "weightsUsed": [
+        "400"
+      ],
+      "topCombos": [
+        {
+          "combo": "Pixolde | 16px | 400 | normal | uppercase",
+          "chars": 43,
+          "sizePx": 16,
+          "sample": "Become a member"
+        },
+        {
+          "combo": "Ishmeria | 16px | 400 | -1px | uppercase",
+          "chars": 9,
+          "sizePx": 16,
+          "sample": "Poolsuite"
+        },
+        {
+          "combo": "ChiKareGo2 | 16px | 400 | -1px | none",
+          "chars": 24,
+          "sizePx": 16,
+          "sample": "Poolsuite: ON AIR"
+        },
+        {
+          "combo": "Everyday | 10px | 400 | -1px | none",
+          "chars": 138,
+          "sizePx": 10,
+          "sample": "MARUTI.avi"
+        },
+        {
+          "combo": "Everyday | 8px | 400 | -1px | uppercase",
+          "chars": 4,
+          "sizePx": 8,
+          "sample": "Live"
+        }
+      ],
+      "motion": {
+        "animatedEls": 52,
+        "transitionedEls": 82,
+        "fixedSticky": 1,
+        "animDurations": [
+          "1s"
+        ],
+        "easings": [
+          "cubic-bezier(0.4",
+          "linear",
+          "ease",
+          "cubic-bezier(0.23"
+        ]
+      },
+      "bg": "rgb(246, 213, 213)",
+      "fg": "rgb(0, 0, 0)",
+      "libs": {
+        "lenis": false,
+        "gsap": false,
+        "scrollTrigger": false,
+        "skrollr": false,
+        "three": false,
+        "pixi": false
+      }
+    },
+    "shots": 4,
+    "mobileTop": {
+      "viewport": {
+        "vw": 390,
+        "vh": 844
+      },
+      "inkPct": 19.8,
+      "whitespacePct": 80.2,
+      "docHeightVh": 1,
+      "displayMax": {
+        "combo": "Pixolde | 16px | 400 | normal | uppercase",
+        "chars": 15,
+        "sizePx": 16,
+        "sample": "Become a member"
+      },
+      "bodyMode": {
+        "combo": "Everyday | 10px | 400 | -1px | none",
+        "chars": 117,
+        "sizePx": 10,
+        "sample": "McDonalds_Supersize.mov"
+      },
+      "displayToBodyRatio": 1.6,
+      "familiesUsed": [
+        "Pixolde",
+        "ChiKareGo2",
+        "Ishmeria",
+        "Everyday"
+      ],
+      "weightsUsed": [
+        "400"
+      ],
+      "topCombos": [
+        {
+          "combo": "Pixolde | 16px | 400 | normal | uppercase",
+          "chars": 15,
+          "sizePx": 16,
+          "sample": "Become a member"
+        },
+        {
+          "combo": "ChiKareGo2 | 16px | 400 | -1px | none",
+          "chars": 35,
+          "sizePx": 16,
+          "sample": "Get the app"
+        },
+        {
+          "combo": "Ishmeria | 16px | 400 | -1px | uppercase",
+          "chars": 9,
+          "sizePx": 16,
+          "sample": "Poolsuite"
+        },
+        {
+          "combo": "Everyday | 10px | 400 | -1px | none",
+          "chars": 117,
+          "sizePx": 10,
+          "sample": "McDonalds_Supersize.mov"
+        },
+        {
+          "combo": "Everyday | 8px | 400 | -1px | uppercase",
+          "chars": 4,
+          "sizePx": 8,
+          "sample": "Live"
+        }
+      ],
+      "motion": {
+        "animatedEls": 52,
+        "transitionedEls": 90,
+        "fixedSticky": 1,
+        "animDurations": [
+          "1s"
+        ],
+        "easings": [
+          "cubic-bezier(0.4",
+          "linear",
+          "ease",
+          "cubic-bezier(0.23"
+        ]
+      },
+      "bg": "rgb(246, 213, 213)",
+      "fg": "rgb(0, 0, 0)",
+      "libs": {
+        "lenis": false,
+        "gsap": false,
+        "scrollTrigger": false,
+        "skrollr": false,
+        "three": false,
+        "pixi": false
+      }
+    }
+  },
+  "rleonardi": {
+    "url": "https://www.rleonardi.com/interactive-resume/",
+    "desktopTop": {
+      "viewport": {
+        "vw": 1440,
+        "vh": 900
+      },
+      "inkPct": 4.6,
+      "whitespacePct": 95.4,
+      "docHeightVh": 31.4,
+      "displayMax": {
+        "combo": "frankfurter-plain | 120px | 400 | normal | none",
+        "chars": 6,
+        "sizePx": 120,
+        "sample": "N"
+      },
+      "bodyMode": {
+        "combo": "Arial | 18px | 400 | normal | none",
+        "chars": 298,
+        "sizePx": 18,
+        "sample": "Designed and developed diverse online ad"
+      },
+      "displayToBodyRatio": 6.67,
+      "familiesUsed": [
+        "frankfurter-plain",
+        "poster-sans-bold",
+        "frankfurter-medium-plain",
+        "lobster",
+        "Arial"
+      ],
+      "weightsUsed": [
+        "400"
+      ],
+      "topCombos": [
+        {
+          "combo": "frankfurter-plain | 120px | 400 | normal | none",
+          "chars": 6,
+          "sizePx": 120,
+          "sample": "N"
+        },
+        {
+          "combo": "frankfurter-plain | 70px | 400 | normal | none",
+          "chars": 122,
+          "sizePx": 70,
+          "sample": "WEBBY AWARDS"
+        },
+        {
+          "combo": "frankfurter-plain | 60px | 400 | normal | none",
+          "chars": 63,
+          "sizePx": 60,
+          "sample": "LEVEL 1"
+        },
+        {
+          "combo": "poster-sans-bold | 50px | 400 | normal | none",
+          "chars": 23,
+          "sizePx": 50,
+          "sample": "ANIMATION"
+        },
+        {
+          "combo": "frankfurter-plain | 48px | 400 | normal | none",
+          "chars": 15,
+          "sizePx": 48,
+          "sample": "ERROR"
+        },
+        {
+          "combo": "frankfurter-medium-plain | 40px | 400 | normal | none",
+          "chars": 9,
+          "sizePx": 40,
+          "sample": "70%"
+        },
+        {
+          "combo": "lobster | 36px | 400 | normal | none",
+          "chars": 232,
+          "sizePx": 36,
+          "sample": "Multidisciplinary Designer"
+        },
+        {
+          "combo": "poster-sans-bold | 36px | 400 | normal | none",
+          "chars": 37,
+          "sizePx": 36,
+          "sample": "GRAPHIC"
+        },
+        {
+          "combo": "frankfurter-medium-plain | 35px | 400 | normal | none",
+          "chars": 66,
+          "sizePx": 35,
+          "sample": "April 2006 - April 2010"
+        },
+        {
+          "combo": "frankfurter-plain | 35px | 400 | normal | none",
+          "chars": 9,
+          "sizePx": 35,
+          "sample": "THANK YOU"
+        },
+        {
+          "combo": "frankfurter-medium-plain | 30px | 400 | normal | none",
+          "chars": 90,
+          "sizePx": 30,
+          "sample": "Scroll down mouse OR press keyboard's do"
+        },
+        {
+          "combo": "frankfurter-medium-plain | 25px | 400 | normal | none",
+          "chars": 44,
+          "sizePx": 25,
+          "sample": "Sending..."
+        }
+      ],
+      "motion": {
+        "animatedEls": 0,
+        "transitionedEls": 0,
+        "fixedSticky": 1,
+        "animDurations": [],
+        "easings": []
+      },
+      "bg": "rgb(0, 191, 243)",
+      "fg": "rgb(0, 0, 0)",
+      "libs": {
+        "lenis": false,
+        "gsap": false,
+        "scrollTrigger": false,
+        "skrollr": false,
+        "three": false,
+        "pixi": false
+      }
+    },
+    "desktopMid": {
+      "viewport": {
+        "vw": 1440,
+        "vh": 900
+      },
+      "inkPct": 1.8,
+      "whitespacePct": 98.2,
+      "docHeightVh": 31.4,
+      "displayMax": {
+        "combo": "frankfurter-plain | 120px | 400 | normal | none",
+        "chars": 6,
+        "sizePx": 120,
+        "sample": "N"
+      },
+      "bodyMode": {
+        "combo": "Arial | 18px | 400 | normal | none",
+        "chars": 298,
+        "sizePx": 18,
+        "sample": "Designed and developed diverse online ad"
+      },
+      "displayToBodyRatio": 6.67,
+      "familiesUsed": [
+        "frankfurter-plain",
+        "poster-sans-bold",
+        "frankfurter-medium-plain",
+        "lobster",
+        "Arial"
+      ],
+      "weightsUsed": [
+        "400"
+      ],
+      "topCombos": [
+        {
+          "combo": "frankfurter-plain | 120px | 400 | normal | none",
+          "chars": 6,
+          "sizePx": 120,
+          "sample": "N"
+        },
+        {
+          "combo": "frankfurter-plain | 70px | 400 | normal | none",
+          "chars": 122,
+          "sizePx": 70,
+          "sample": "WEBBY AWARDS"
+        },
+        {
+          "combo": "frankfurter-plain | 60px | 400 | normal | none",
+          "chars": 63,
+          "sizePx": 60,
+          "sample": "LEVEL 1"
+        },
+        {
+          "combo": "poster-sans-bold | 50px | 400 | normal | none",
+          "chars": 23,
+          "sizePx": 50,
+          "sample": "ANIMATION"
+        },
+        {
+          "combo": "frankfurter-plain | 48px | 400 | normal | none",
+          "chars": 15,
+          "sizePx": 48,
+          "sample": "ERROR"
+        },
+        {
+          "combo": "frankfurter-medium-plain | 40px | 400 | normal | none",
+          "chars": 9,
+          "sizePx": 40,
+          "sample": "70%"
+        },
+        {
+          "combo": "lobster | 36px | 400 | normal | none",
+          "chars": 232,
+          "sizePx": 36,
+          "sample": "Multidisciplinary Designer"
+        },
+        {
+          "combo": "poster-sans-bold | 36px | 400 | normal | none",
+          "chars": 37,
+          "sizePx": 36,
+          "sample": "GRAPHIC"
+        },
+        {
+          "combo": "frankfurter-medium-plain | 35px | 400 | normal | none",
+          "chars": 66,
+          "sizePx": 35,
+          "sample": "April 2006 - April 2010"
+        },
+        {
+          "combo": "frankfurter-plain | 35px | 400 | normal | none",
+          "chars": 9,
+          "sizePx": 35,
+          "sample": "THANK YOU"
+        },
+        {
+          "combo": "frankfurter-medium-plain | 30px | 400 | normal | none",
+          "chars": 90,
+          "sizePx": 30,
+          "sample": "Scroll down mouse OR press keyboard's do"
+        },
+        {
+          "combo": "frankfurter-medium-plain | 25px | 400 | normal | none",
+          "chars": 44,
+          "sizePx": 25,
+          "sample": "Sending..."
+        }
+      ],
+      "motion": {
+        "animatedEls": 0,
+        "transitionedEls": 0,
+        "fixedSticky": 1,
+        "animDurations": [],
+        "easings": []
+      },
+      "bg": "rgb(0, 191, 243)",
+      "fg": "rgb(0, 0, 0)",
+      "libs": {
+        "lenis": false,
+        "gsap": false,
+        "scrollTrigger": false,
+        "skrollr": false,
+        "three": false,
+        "pixi": false
+      }
+    },
+    "shots": 14,
+    "mobileTop": {
+      "viewport": {
+        "vw": 980,
+        "vh": 2121
+      },
+      "inkPct": 2.1,
+      "whitespacePct": 97.9,
+      "docHeightVh": 14.7,
+      "displayMax": {
+        "combo": "frankfurter-plain | 120px | 400 | normal | none",
+        "chars": 6,
+        "sizePx": 120,
+        "sample": "N"
+      },
+      "bodyMode": {
+        "combo": "Arial | 18px | 400 | normal | none",
+        "chars": 298,
+        "sizePx": 18,
+        "sample": "Designed and developed diverse online ad"
+      },
+      "displayToBodyRatio": 6.67,
+      "familiesUsed": [
+        "frankfurter-plain",
+        "poster-sans-bold",
+        "frankfurter-medium-plain",
+        "lobster",
+        "Arial"
+      ],
+      "weightsUsed": [
+        "400"
+      ],
+      "topCombos": [
+        {
+          "combo": "frankfurter-plain | 120px | 400 | normal | none",
+          "chars": 6,
+          "sizePx": 120,
+          "sample": "N"
+        },
+        {
+          "combo": "frankfurter-plain | 70px | 400 | normal | none",
+          "chars": 122,
+          "sizePx": 70,
+          "sample": "WEBBY AWARDS"
+        },
+        {
+          "combo": "frankfurter-plain | 60px | 400 | normal | none",
+          "chars": 63,
+          "sizePx": 60,
+          "sample": "LEVEL 1"
+        },
+        {
+          "combo": "poster-sans-bold | 50px | 400 | normal | none",
+          "chars": 23,
+          "sizePx": 50,
+          "sample": "ANIMATION"
+        },
+        {
+          "combo": "frankfurter-plain | 48px | 400 | normal | none",
+          "chars": 15,
+          "sizePx": 48,
+          "sample": "ERROR"
+        },
+        {
+          "combo": "frankfurter-medium-plain | 40px | 400 | normal | none",
+          "chars": 9,
+          "sizePx": 40,
+          "sample": "70%"
+        },
+        {
+          "combo": "lobster | 36px | 400 | normal | none",
+          "chars": 232,
+          "sizePx": 36,
+          "sample": "Multidisciplinary Designer"
+        },
+        {
+          "combo": "poster-sans-bold | 36px | 400 | normal | none",
+          "chars": 37,
+          "sizePx": 36,
+          "sample": "GRAPHIC"
+        },
+        {
+          "combo": "frankfurter-medium-plain | 35px | 400 | normal | none",
+          "chars": 66,
+          "sizePx": 35,
+          "sample": "April 2006 - April 2010"
+        },
+        {
+          "combo": "frankfurter-plain | 35px | 400 | normal | none",
+          "chars": 9,
+          "sizePx": 35,
+          "sample": "THANK YOU"
+        },
+        {
+          "combo": "frankfurter-medium-plain | 30px | 400 | normal | none",
+          "chars": 90,
+          "sizePx": 30,
+          "sample": "Scroll down mouse OR press keyboard's do"
+        },
+        {
+          "combo": "frankfurter-medium-plain | 25px | 400 | normal | none",
+          "chars": 44,
+          "sizePx": 25,
+          "sample": "Sending..."
+        }
+      ],
+      "motion": {
+        "animatedEls": 0,
+        "transitionedEls": 0,
+        "fixedSticky": 1,
+        "animDurations": [],
+        "easings": []
+      },
+      "bg": "rgb(0, 191, 243)",
+      "fg": "rgb(0, 0, 0)",
+      "libs": {
+        "lenis": false,
+        "gsap": false,
+        "scrollTrigger": false,
+        "skrollr": false,
+        "three": false,
+        "pixi": false
+      }
+    }
+  }
+}

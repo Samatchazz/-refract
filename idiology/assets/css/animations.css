@@ -1,0 +1,108 @@
+/* ==================== LOADER ==================== */
+.loader {
+  position: fixed;
+  inset: 0;
+  z-index: 9990;
+  background: var(--c-bg-dark);
+  display: grid;
+  place-items: center;
+  transition: opacity .6s var(--ease-inout);
+}
+.loader.is-done { opacity: 0; pointer-events: none; }
+.loader.is-hidden { display: none; }
+.loader__dot {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--c-accent);
+  animation: pulse 1.2s infinite;
+}
+@keyframes pulse {
+  0%   { transform: scale(.6); opacity: .4; }
+  50%  { transform: scale(1);  opacity: 1; }
+  100% { transform: scale(.6); opacity: .4; }
+}
+
+/* ==================== PAGE TRANSITION ==================== */
+.page-transition {
+  position: fixed;
+  inset: 0;
+  z-index: 9980;
+  background: var(--c-bg-dark);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .35s var(--ease-inout), visibility 0s linear .35s;
+}
+.page-transition.is-active {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity .35s var(--ease-inout);
+}
+
+/* ==================== CUSTOM CURSOR ==================== */
+.cursor-dot, .cursor-ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  pointer-events: none;
+  border-radius: 50%;
+  mix-blend-mode: difference;
+}
+.cursor-dot {
+  width: 8px;
+  height: 8px;
+  background: #fff;
+  margin: -4px 0 0 -4px;
+}
+.cursor-ring {
+  width: 36px;
+  height: 36px;
+  border: 1px solid #fff;
+  margin: -18px 0 0 -18px;
+  transition: opacity .2s;
+}
+.cursor-ring.is-hover { animation: cursorPulse .9s infinite; }
+@keyframes cursorPulse {
+  0%   { scale: 1.6; }
+  50%  { scale: 1.75; }
+  100% { scale: 1.6; }
+}
+@media (hover: none) {
+  .cursor-dot, .cursor-ring { display: none; }
+}
+
+/* ==================== CURTAIN (block reveal) ==================== */
+[data-block-reveal] .curtain {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background: var(--curtain, var(--c-bg-dark));
+  transform: scaleX(0);
+  pointer-events: none;
+}
+.projects [data-block-reveal] { --curtain: var(--c-bg-light); }
+
+/* ==================== MARQUEE keyframes ==================== */
+@keyframes marquee {
+  to { transform: translateX(-50%); }
+}
+
+/* ==================== REDUCED MOTION ==================== */
+@media (prefers-reduced-motion: reduce) {
+  .marquee__track { animation: none; }
+  .expand-band__window { width: 100% !important; } /* width tween disabled -> rest state is full-bleed */
+  .cursor-dot, .cursor-ring { display: none; }
+  .loader { transition: none; }
+  .hero__bg svg { display: none; }
+  .hero__bg {
+    background: radial-gradient(60% 60% at 30% 40%, #00CAFF 0%, transparent 70%),
+                radial-gradient(50% 50% at 75% 60%, #4300FF 0%, transparent 70%);
+  }
+  .mobile-menu a { transition: none; }
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+  }
+}

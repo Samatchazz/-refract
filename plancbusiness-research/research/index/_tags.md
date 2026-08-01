@@ -1,0 +1,207 @@
+---
+title: "Tags Index"
+id: "_tags"
+type: index
+created: 2026-07-27T17:52:33.377385+00:00
+updated: 2026-07-27T17:52:33.377385+00:00
+---
+
+# Tags Index
+
+**192** unique tags.
+
+- **creator-attrition-income-data-079588** (198 notes) → [[_tag-creator-attrition-income-data-079588]]
+- **income-distribution** (31 notes) → [[_tag-income-distribution]]
+- **southeast-asia** (31 notes) → [[_tag-southeast-asia]]
+- **youtube** (30 notes) → [[_tag-youtube]]
+- **vendor-survey** (28 notes) → [[_tag-vendor-survey]]
+- **western-only** (27 notes) → [[_tag-western-only]]
+- **creator-income** (25 notes) → [[_tag-creator-income]]
+- **primary-source** (23 notes) → [[_tag-primary-source]]
+- **indonesia** (22 notes) → [[_tag-indonesia]]
+- **low-reliability** (19 notes) → [[_tag-low-reliability]]
+- **attrition** (17 notes) → [[_tag-attrition]]
+- **platform-telemetry** (17 notes) → [[_tag-platform-telemetry]]
+- **creator-burnout** (16 notes) → [[_tag-creator-burnout]]
+- **us-data** (16 notes) → [[_tag-us-data]]
+- **methodology-audit** (15 notes) → [[_tag-methodology-audit]]
+- **provenance-chain** (15 notes) → [[_tag-provenance-chain]]
+- **survivorship-bias** (15 notes) → [[_tag-survivorship-bias]]
+- **livestreaming** (14 notes) → [[_tag-livestreaming]]
+- **time-to-first-income** (14 notes) → [[_tag-time-to-first-income]]
+- **monetization-threshold** (12 notes) → [[_tag-monetization-threshold]]
+- **platform-disclosed** (12 notes) → [[_tag-platform-disclosed]]
+- **unsourced-figure** (12 notes) → [[_tag-unsourced-figure]]
+- **academic-paper** (11 notes) → [[_tag-academic-paper]]
+- **gig-economy** (11 notes) → [[_tag-gig-economy]]
+- **locus-sea-evidence-provenance-and-breadth** (10 notes) → [[_tag-locus-sea-evidence-provenance-and-breadth]]
+- **population-estimate** (10 notes) → [[_tag-population-estimate]]
+- **administrative-data** (9 notes) → [[_tag-administrative-data]]
+- **do-not-cite** (9 notes) → [[_tag-do-not-cite]]
+- **income-concentration** (9 notes) → [[_tag-income-concentration]]
+- **locus-attrition-telemetry-absence** (9 notes) → [[_tag-locus-attrition-telemetry-absence]]
+- **patreon** (9 notes) → [[_tag-patreon]]
+- **platform-work** (9 notes) → [[_tag-platform-work]]
+- **creator-earnings** (8 notes) → [[_tag-creator-earnings]]
+- **source-hub** (8 notes) → [[_tag-source-hub]]
+- **twitch** (8 notes) → [[_tag-twitch]]
+- **twitch-payout-leak** (8 notes) → [[_tag-twitch-payout-leak]]
+- **creator-attrition** (7 notes) → [[_tag-creator-attrition]]
+- **income-inequality** (7 notes) → [[_tag-income-inequality]]
+- **living-wage** (7 notes) → [[_tag-living-wage]]
+- **locus-quit-driver-money-vs-motivation** (7 notes) → [[_tag-locus-quit-driver-money-vs-motivation]]
+- **methodology** (7 notes) → [[_tag-methodology]]
+- **tiktok** (7 notes) → [[_tag-tiktok]]
+- **locus-time-to-income-reframe-tenure-vs-output** (6 notes) → [[_tag-locus-time-to-income-reframe-tenure-vs-output]]
+- **market-sizing** (6 notes) → [[_tag-market-sizing]]
+- **data-gaps** (5 notes) → [[_tag-data-gaps]]
+- **data-quality** (5 notes) → [[_tag-data-quality]]
+- **definitional-divergence** (5 notes) → [[_tag-definitional-divergence]]
+- **vendor-statistics** (5 notes) → [[_tag-vendor-statistics]]
+- **academic-journal** (4 notes) → [[_tag-academic-journal]]
+- **china** (4 notes) → [[_tag-china]]
+- **conflict-of-interest** (4 notes) → [[_tag-conflict-of-interest]]
+- **creative-labour** (4 notes) → [[_tag-creative-labour]]
+- **denominator** (4 notes) → [[_tag-denominator]]
+- **geographic-bias** (4 notes) → [[_tag-geographic-bias]]
+- **income-shock** (4 notes) → [[_tag-income-shock]]
+- **locus-living-wage-share-magnitude** (4 notes) → [[_tag-locus-living-wage-share-magnitude]]
+- **music-industry** (4 notes) → [[_tag-music-industry]]
+- **non-western** (4 notes) → [[_tag-non-western]]
+- **bank-estimate** (3 notes) → [[_tag-bank-estimate]]
+- **influencer-marketing** (3 notes) → [[_tag-influencer-marketing]]
+- **lapsed-creator-survey** (3 notes) → [[_tag-lapsed-creator-survey]]
+- **long-source** (3 notes) → [[_tag-long-source]]
+- **methodology-absence** (3 notes) → [[_tag-methodology-absence]]
+- **paywalled** (3 notes) → [[_tag-paywalled]]
+- **paywalled-abstract-only** (3 notes) → [[_tag-paywalled-abstract-only]]
+- **person-level-cohort-survival** (3 notes) → [[_tag-person-level-cohort-survival]]
+- **qualitative** (3 notes) → [[_tag-qualitative]]
+- **survey** (3 notes) → [[_tag-survey]]
+- **time-investment** (3 notes) → [[_tag-time-investment]]
+- **uk** (3 notes) → [[_tag-uk]]
+- **wikipedia-editor-retention** (3 notes) → [[_tag-wikipedia-editor-retention]]
+- **abstract-only** (2 notes)
+- **agency-seo** (2 notes)
+- **anecdotal** (2 notes)
+- **creator-fund** (2 notes)
+- **data-leak** (2 notes)
+- **government-data** (2 notes)
+- **indonesian-language** (2 notes)
+- **living-wage-benchmark** (2 notes)
+- **low-authority** (2 notes)
+- **methodology-recovered** (2 notes)
+- **monetization** (2 notes)
+- **monetization-change** (2 notes)
+- **natural-experiment** (2 notes)
+- **no-empirical-data** (2 notes)
+- **no-methodology** (2 notes)
+- **no-sample-size** (2 notes)
+- **onlyfans** (2 notes)
+- **pay-transparency** (2 notes)
+- **philippines** (2 notes)
+- **platform-disclosure** (2 notes)
+- **platform-economics** (2 notes)
+- **platform-labour** (2 notes)
+- **qualitative-ethnography** (2 notes)
+- **qualitative-study** (2 notes)
+- **quit-intention** (2 notes)
+- **reasons-for-quitting** (2 notes)
+- **revenue-mix** (2 notes)
+- **sampling-bias** (2 notes)
+- **streamer-economics** (2 notes)
+- **survey-data** (2 notes)
+- **trade-press** (2 notes)
+- **unit-inconsistency** (2 notes)
+- **us-only** (2 notes)
+- **vtuber** (2 notes)
+- **academic-thesis** (1 notes)
+- **affiliate-marketing** (1 notes)
+- **agency-report** (1 notes)
+- **agency-secondary** (1 notes)
+- **algorithm** (1 notes)
+- **anecdotal-only** (1 notes)
+- **archived-source** (1 notes)
+- **audience-demand** (1 notes)
+- **audience-dynamics** (1 notes)
+- **bps** (1 notes)
+- **brand-side-spend** (1 notes)
+- **brand-sponsorship** (1 notes)
+- **channel-growth** (1 notes)
+- **china-platforms** (1 notes)
+- **creator-incentives** (1 notes)
+- **creator-income-percentiles** (1 notes)
+- **creator-population** (1 notes)
+- **demonetization** (1 notes)
+- **derivative** (1 notes)
+- **descriptive-only** (1 notes)
+- **disambiguation** (1 notes)
+- **duplicate-landing-page** (1 notes)
+- **earnings-tier-cohort-not-survival** (1 notes)
+- **east-asia** (1 notes)
+- **employed-not-independent** (1 notes)
+- **errata** (1 notes)
+- **exit-survey-candidate** (1 notes)
+- **fabricated-citation** (1 notes)
+- **generalisation-caveat** (1 notes)
+- **geographic-monetization-gap** (1 notes)
+- **graphtreon** (1 notes)
+- **income-composition** (1 notes)
+- **income-insecurity** (1 notes)
+- **inequality** (1 notes)
+- **informal-employment** (1 notes)
+- **investor-disclosure-creator-retention** (1 notes)
+- **japan** (1 notes)
+- **japan-platforms** (1 notes)
+- **js-shell** (1 notes)
+- **labour-economics** (1 notes)
+- **likely-fabricated** (1 notes)
+- **living-wage-share** (1 notes)
+- **locus-unit-of-analysis-and-comparability** (1 notes)
+- **malaysia** (1 notes)
+- **market-size** (1 notes)
+- **measurement-gap** (1 notes)
+- **methodology-gap** (1 notes)
+- **microdata-available** (1 notes)
+- **ministerial-assertion** (1 notes)
+- **monetization-rate** (1 notes)
+- **motivation** (1 notes)
+- **no-creator-income-data** (1 notes)
+- **off-camera-labor** (1 notes)
+- **off-camera-labour** (1 notes)
+- **official-statistics** (1 notes)
+- **opinion-piece** (1 notes)
+- **osint-estimate** (1 notes)
+- **oss-contributor-half-life** (1 notes)
+- **oss-contributor-turnover** (1 notes)
+- **panel-data** (1 notes)
+- **partial-source** (1 notes)
+- **peer-reviewed** (1 notes)
+- **per-country-comparison** (1 notes)
+- **podcast-creators** (1 notes)
+- **power-law** (1 notes)
+- **practitioner-account** (1 notes)
+- **project-level-unit-of-analysis** (1 notes)
+- **quit-reasons** (1 notes)
+- **rate-card** (1 notes)
+- **recommender-systems** (1 notes)
+- **salary-aggregator** (1 notes)
+- **sample-size-recovery** (1 notes)
+- **secondary-commentary** (1 notes)
+- **substack** (1 notes)
+- **survival-analysis** (1 notes)
+- **tax-compliance** (1 notes)
+- **telemetry** (1 notes)
+- **thailand** (1 notes)
+- **theoretical** (1 notes)
+- **thin-evidence** (1 notes)
+- **thin-source** (1 notes)
+- **top-earner-tail** (1 notes)
+- **twitch-streamers** (1 notes)
+- **unresolved-contradiction** (1 notes)
+- **unverified-attribution** (1 notes)
+- **vc-estimate** (1 notes)
+- **youtube-creators** (1 notes)
+
+---
+*Auto-generated by hyperresearch. Do not edit manually.*

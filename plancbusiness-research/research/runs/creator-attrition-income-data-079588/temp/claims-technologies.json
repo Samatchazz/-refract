@@ -1,0 +1,72 @@
+[
+  {
+    "claim": "Indonesian internet-using gig workers earn only 6.2 per cent more per hour than otherwise identical informal workers in the same sector, while working 49 hours a week against 38 for informal workers and 39 for the average Indonesian.",
+    "stance": "refutes",
+    "stance_target": "The claim that digital platform work delivers a substantial earnings premium over informal work in Southeast Asia",
+    "evidence_type": "statistical",
+    "scope_conditions": "Indonesia; SAKERNAS national labour force survey 2019 plus a Digital Economy Household Survey conducted February-March 2020; nationally representative; digital gig work is 69 per cent transportation, storage and communications, so this is ride-hailing and delivery, NOT content creation",
+    "quoted_support": "internet-using gig workers make 6.2 percent more per hour in earnings than otherwise identical informal workers in the same sector of employment. But they also work the longest hours among all other types of workers.",
+    "numbers": ["6.2 percent hourly premium", "49 hours/week gig", "39 hours average Indonesian", "38 hours informal", "2019-2020"],
+    "entities": ["World Bank", "SAKERNAS", "Indonesia", "Australian Government"],
+    "time_period": "2019-2020",
+    "region": "Indonesia (Southeast Asia)",
+    "confidence": "high",
+    "source_note_id": "technologies"
+  },
+  {
+    "claim": "Monetised online activity in Indonesia is overwhelmingly social-commerce selling rather than content monetisation: about 71 per cent of Indonesians engaged in e-commerce sell exclusively through social media and chat messaging apps, versus 3 per cent who sell only through a platform.",
+    "stance": "supports",
+    "stance_target": "The position that the Southeast Asian model of earning money on social platforms is consumer-to-consumer selling, not the Western creator-monetisation model, so Western creator-income findings do not transfer",
+    "evidence_type": "statistical",
+    "scope_conditions": "Indonesia; SAKERNAS 2019; nationally representative; measures e-commerce sellers, not content creators; the report characterises these as casual C2C merchants comparable to TaoBao rather than Alibaba or TMall",
+    "quoted_support": "Among those engaged in e-commerce, about 71 percent reported selling exclusively via social media and chat messaging apps, 3 percent sell via a platform only, while 26 percent use a blend of the two.",
+    "numbers": ["71 percent social media only", "3 percent platform only", "26 percent blended", "13.2 million of 127 million employed", "10.4 percent of employment", "5 percent in China"],
+    "entities": ["World Bank", "SAKERNAS", "Indonesia", "TaoBao", "Alibaba"],
+    "time_period": "2019",
+    "region": "Indonesia (Southeast Asia)",
+    "confidence": "high",
+    "source_note_id": "technologies"
+  },
+  {
+    "claim": "Two Indonesian national statistical surveys in the same year disagree by more than twofold on the number of online sellers: SAKERNAS 2019 counts 12.2 million with e-commerce as a primary job, while SUSENAS March 2019 shows 5.9 million.",
+    "stance": "neutral",
+    "stance_target": "The precision achievable in any Southeast Asian headcount of people earning money online",
+    "evidence_type": "statistical",
+    "scope_conditions": "Indonesia; SAKERNAS 2019 labour force survey versus SUSENAS March 2019 national socio-economic survey; both are official Statistics Indonesia (BPS) instruments; discrepancy reported in the report's own endnotes",
+    "quoted_support": "Around 12.2 million workers alone were engaged in e-commerce activities as their primary job (SAKERNAS 2019). However, Indonesia's National Social-Economic Survey 2019 (SUSENAS 2019) shows only 5.9 million online sellers.",
+    "numbers": ["12.2 million SAKERNAS", "5.9 million SUSENAS", "2019", "2.07x discrepancy"],
+    "entities": ["SAKERNAS", "SUSENAS", "Indonesia", "World Bank"],
+    "time_period": "2019",
+    "region": "Indonesia (Southeast Asia)",
+    "confidence": "high",
+    "source_note_id": "technologies"
+  },
+  {
+    "claim": "About 33 per cent of Indonesian digital gig jobs were the worker's first ever job, and among low-skilled workers who had held a previous job, 'unsatisfactory income' was the most common stated reason for switching into digital gig work.",
+    "stance": "supports",
+    "stance_target": "The position that entry into platform earning in Southeast Asia is driven by income inadequacy in prior work and by labour-market entrants with no alternative, not by career aspiration",
+    "evidence_type": "statistical",
+    "scope_conditions": "Indonesia; SAKERNAS 2019 and the 2020 Digital Economy Household Survey; digital gig work concentrated in transportation and delivery, not content creation; entry reasons measured for low-skilled workers with prior jobs only",
+    "quoted_support": "About 33 percent of digital gig jobs were being performed by workers for whom this was their first ever job... Among the low-skilled workers who had a job before, \"unsatisfactory income\" was the most common reason for switching to digital gigs.",
+    "numbers": ["33 percent first ever job", "85 percent men", "87 percent urban", "69 percent transportation/storage/communications"],
+    "entities": ["World Bank", "SAKERNAS", "Indonesia"],
+    "time_period": "2019-2020",
+    "region": "Indonesia (Southeast Asia)",
+    "confidence": "high",
+    "source_note_id": "technologies"
+  },
+  {
+    "claim": "Indonesian e-commerce selling functions as supplementary rather than primary income and is more common among women, with 37.8 per cent of internet-using women in primary jobs active as online sellers versus 34.8 per cent of men.",
+    "stance": "supports",
+    "stance_target": "The position that online income-earning in Southeast Asia is predominantly a secondary income stream layered onto other work or unpaid household labour",
+    "evidence_type": "statistical",
+    "scope_conditions": "Indonesia; SAKERNAS 2019; measures e-commerce selling, not content creation; engagement highest among women primarily engaged in housework",
+    "quoted_support": "Among women who use the internet at work in their primary jobs, 37.8 percent of them are active online sellers (as opposed to 34.8 percent of men). E-commerce is more common as a secondary job",
+    "numbers": ["37.8 percent women", "34.8 percent men"],
+    "entities": ["World Bank", "SAKERNAS", "Indonesia"],
+    "time_period": "2019",
+    "region": "Indonesia (Southeast Asia)",
+    "confidence": "high",
+    "source_note_id": "technologies"
+  }
+]

@@ -1,0 +1,44 @@
+[
+  {
+    "claim": "In US NAICS 711500 (Independent Artists, Writers, and Performers) in May 2022, payroll employment was 61,710 with a median hourly wage of $24.58 against a mean hourly wage of $35.75, a 1.45x mean-to-median ratio indicating strong right skew even within the payrolled minority.",
+    "stance": "supports",
+    "stance_target": "The position that creative-occupation earnings are right-skewed even in administrative payroll data, so mean-based figures overstate typical earnings",
+    "evidence_type": "statistical",
+    "scope_conditions": "United States only; May 2022 reference period; BLS Occupational Employment and Wage Statistics, collected from employers of all sizes in every state and DC; employment RSE 0.1%, mean-wage RSE 17.1%",
+    "quoted_support": "| 00-0000  | All Occupations   | total  | 61,710  | 0.1%  | 100.00%  | $24.58  | $35.75  | $74,360  | 17.1%  |",
+    "numbers": ["61,710 employment", "$24.58 median hourly", "$35.75 mean hourly", "$74,360 annual mean", "17.1% mean wage RSE", "May 2022"],
+    "entities": ["Bureau of Labor Statistics", "OEWS", "NAICS 711500"],
+    "time_period": "May 2022",
+    "region": "United States",
+    "confidence": "high",
+    "source_note_id": "independent-artists-writers-and-performers-may-2022-oews-industry-specific-occup"
+  },
+  {
+    "claim": "BLS OEWS counts only 61,710 workers in the independent-artists industry because the survey is collected from employers and therefore excludes the self-employed, against roughly 172,000 people the ACS records in the same industry group.",
+    "stance": "refutes",
+    "stance_target": "The use of BLS payroll wage statistics as a measure of independent creator or artist earnings",
+    "evidence_type": "statistical",
+    "scope_conditions": "United States only; May 2022 OEWS versus 2024 ACS-based Data USA count of 172,376; the discrepancy is definitional, not temporal, since NEA/ACS shows 34-57 percent self-employment across artist occupations",
+    "quoted_support": "These national industry-specific occupational employment and wage estimates are calculated with data collected from employers of all sizes, in metropolitan and nonmetropolitan areas in every state and the District of Columbia",
+    "numbers": ["61,710 OEWS", "172,376 ACS", "roughly 2.8x gap"],
+    "entities": ["Bureau of Labor Statistics", "OEWS", "American Community Survey"],
+    "time_period": "May 2022",
+    "region": "United States",
+    "confidence": "high",
+    "source_note_id": "independent-artists-writers-and-performers-may-2022-oews-industry-specific-occup"
+  },
+  {
+    "claim": "Within the independent-artists industry the spread across creative sub-occupations is roughly three-to-one, from craft artists at a $17.00 median hourly wage and $37,070 annual mean to producers and directors at $47.69 median hourly and $116,290 annual mean.",
+    "stance": "supports",
+    "stance_target": "The position that 'creator' or 'artist' is not a single income class and aggregate creative-occupation averages conceal order-of-magnitude craft-level differences",
+    "evidence_type": "statistical",
+    "scope_conditions": "United States only; May 2022 OEWS within NAICS 711500; wage-and-salary workers only; several detail rows suppressed for small cells",
+    "quoted_support": "| 27-1012  | Craft Artists  | detail  | 1,360  | 10.6%  | 2.20%  | $17.00  | $17.82  | $37,070  | 4.0%  |",
+    "numbers": ["$17.00 craft artists median hourly", "$37,070 craft artists annual mean", "$47.69 producers/directors median hourly", "$116,290 producers/directors annual mean", "$39.82 special effects artists and animators median", "$24.53 fine artists median", "$23.70 disc jockeys median", "28,490 arts/design/entertainment/media occupations", "46.17 percent of industry"],
+    "entities": ["Bureau of Labor Statistics", "OEWS"],
+    "time_period": "May 2022",
+    "region": "United States",
+    "confidence": "high",
+    "source_note_id": "independent-artists-writers-and-performers-may-2022-oews-industry-specific-occup"
+  }
+]

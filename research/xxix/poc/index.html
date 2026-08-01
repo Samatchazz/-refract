@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>xxix mechanics — scatter grid POC</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="cursor" aria-hidden="true"></div>
+
+  <nav class="nav">
+    <a class="pill" href="index.html">POC</a>
+    <a class="pill" href="work.html">WORK</a>
+  </nav>
+
+  <p class="doc-note">Structure demo — placeholder content only. Mechanic: 2-col base grid + <code>.grid-column-2{margin-top:-8vw}</code> + per-item col-N widths &amp; negative margins.</p>
+
+  <main class="base-grid">
+    <div class="semi-fixed-base-grid">
+
+      <!-- LEFT COLUMN -->
+      <div class="grid-column grid-column-1">
+        <div class="module col-11">
+          <h1 class="display">A studio-style<br>scatter grid,<br>rebuilt from<br>the mechanics</h1>
+        </div>
+
+        <div class="module col-8 block block--yellow">
+          <p class="body">A highlight block sits at <code>.col-8</code> width. Widths come from the
+          12-column percentage utilities; nothing here is absolutely positioned.</p>
+          <p class="caption" style="margin-top:.8rem">● A yellow accent module</p>
+        </div>
+
+        <a class="module card col-9 nr-4" href="#" style="--placeholder:var(--purple)">
+          <div class="card__media"></div>
+          <div class="card__meta">Project One <span>Placeholder / Category</span></div>
+        </a>
+
+        <a class="module card card--wide col-11 nl-3" href="#" style="--placeholder:var(--red)">
+          <div class="card__media"></div>
+          <div class="card__meta">Project Two <span>Placeholder / Category</span></div>
+        </a>
+
+        <div class="module col-10 block block--dark">
+          <h2 class="h2">Work with us</h2>
+          <p class="body" style="margin-top:.6rem">A dark module. Section-level accent colors map to
+          the same palette that drives per-module hover themes.</p>
+        </div>
+
+        <a class="module card col-6 push-3" href="#" style="--placeholder:var(--beige)">
+          <div class="card__media"></div>
+          <div class="card__meta">Project Three <span>Placeholder / Category</span></div>
+        </a>
+      </div>
+
+      <!-- RIGHT COLUMN (pulled up -8vw on desktop) -->
+      <div class="grid-column grid-column-2">
+        <a class="module card col-10 nl-6" href="#" style="--placeholder:var(--gray)">
+          <div class="card__media"></div>
+          <div class="card__meta">Project Four <span>Placeholder / Category</span></div>
+        </a>
+
+        <div class="module col-8 push-2">
+          <p class="serif-accent">A serif accent line</p>
+          <p class="body">Times New Roman is used sparingly for display italics against the
+          neo-grotesque body — a two-typeface contrast.</p>
+        </div>
+
+        <a class="module card card--square col-11 nr-6" href="#" style="--placeholder:var(--purple)">
+          <div class="card__media"></div>
+          <div class="card__meta">Project Five <span>Placeholder / Category</span></div>
+        </a>
+
+        <div class="module col-9 block block--offwhite">
+          <h3 class="h3">Type scale</h3>
+          <p class="body" style="margin-top:.5rem">100 / 50 / 35 / 30 / 25 / 16 / 15px. Tight
+          leading, no tracking, no uppercasing.</p>
+        </div>
+
+        <a class="module card col-7 nl-2" href="#" style="--placeholder:var(--red)">
+          <div class="card__media"></div>
+          <div class="card__meta">Project Six <span>Placeholder / Category</span></div>
+        </a>
+
+        <a class="module card card--wide col-12 nr-8" href="#" style="--placeholder:var(--beige)">
+          <div class="card__media"></div>
+          <div class="card__meta">Project Seven <span>Placeholder / Category</span></div>
+        </a>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="foot">
+    <span>Twenty-mechanics POC</span>
+    <span>Structure study — no client assets</span>
+  </footer>
+
+  <script>
+    // Minimal stand-in for xxix's JS cursor (fixed, follows pointer, grows over links)
+    (function () {
+      var cur = document.querySelector('.cursor');
+      if (!cur || !matchMedia('(pointer:fine)').matches) { if (cur) cur.style.display='none'; return; }
+      var x = 0, y = 0, tx = 0, ty = 0;
+      addEventListener('pointermove', function (e) { tx = e.clientX; ty = e.clientY; });
+      (function loop() {
+        x += (tx - x) * 0.2; y += (ty - y) * 0.2;      // lerp / easing follow
+        cur.style.transform = 'translate(' + x + 'px,' + y + 'px) translate(-50%,-50%)';
+        requestAnimationFrame(loop);
+      })();
+      document.addEventListener('pointerover', function (e) {
+        cur.classList.toggle('is-hover', !!e.target.closest('a,button,.card,.grid-item,.list-item'));
+      });
+    })();
+  </script>
+</body>
+</html>

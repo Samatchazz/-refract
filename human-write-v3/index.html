@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Human-Write — เราขีด ให้คุณเขียนตัวตน</title>
+  <meta name="description" content="โค้ชตัวตน 1:1 สำหรับอินฟลูเอนเซอร์ — เราขีดให้ คุณเขียนเอง เราไม่เคยเขียนแทนคุณ">
+  <script>document.documentElement.classList.add('js');</script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <!-- HW type system (W1): Anuphan (company, by weight) + Inter (AI digits) -->
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Anuphan:wght@200;300;400;600;700&family=Inter:wght@400;600&display=swap">
+  <link href="https://fonts.googleapis.com/css2?family=Anuphan:wght@200;300;400;600;700&family=Inter:wght@400;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Anuphan:wght@200;300;400;600;700&family=Inter:wght@400;600&display=swap" rel="stylesheet"></noscript>
+  <link rel="stylesheet" href="assets/css/tokens.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/sections.css">
+  <link rel="stylesheet" href="assets/css/animations.css">
+  <link rel="stylesheet" href="assets/css/humanwrite.css">
+  <link rel="stylesheet" href="assets/css/eras.css">
+</head>
+<body>
+
+  <!-- Loading overlay = the SPLASH (brief §1). humanwrite.js drives it, then resolves. -->
+  <div class="loader hw-splash" data-loader data-hw-splash aria-hidden="true">
+    <div class="hw-splash__top">
+      <div class="hw-splash__number font-ai"><span data-splash-count>0</span><span class="hw-splash__cross" data-splash-cross></span><span class="hw-splash__pct font-hand" data-splash-pct>0.1%</span></div>
+      <p class="hw-splash__cap"><span class="font-body" data-splash-capa>อินฟลูเอนเซอร์ในไทย</span> <span class="font-hand" data-splash-capb>ที่ถูกเลือก</span></p>
+    </div>
+    <div class="hw-splash__logo">
+      <span class="hw-splash__ai font-ai" data-splash-ai>Ai-Write</span>
+      <span class="hw-splash__human font-hand" data-splash-human>Human-Write</span>
+      <!-- TODO: replace asset — eraser sketch line-art placeholder -->
+      <span class="hw-splash__eraser" data-splash-eraser aria-hidden="true">
+        <svg viewBox="0 0 92 48" fill="none">
+          <rect x="4" y="10" width="84" height="28" rx="7" fill="var(--c-bg-dark)" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
+          <path d="M32 11 L27 37 M37 11 L32 37" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+          <path d="M44 17 C52 15, 62 19, 78 16 M44 25 C54 23, 64 27, 78 24 M46 32 C54 30, 62 33, 74 31" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" opacity=".5"/>
+        </svg>
+      </span>
+    </div>
+  </div>
+
+  <div class="page-transition" data-page-transition aria-hidden="true"></div>
+  <div class="cursor-dot" data-cursor-dot aria-hidden="true"></div>
+  <div class="cursor-ring" data-cursor-ring aria-hidden="true"></div>
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header is-transparent" data-header>
+    <div class="container header__row">
+      <!-- TODO: replace with client logo asset when supplied. Text logo (Anuphan 700) for now. -->
+      <a class="header__logo hw-logo font-hand" href="#home">Human-Write</a>
+      <nav class="header__nav" aria-label="Main">
+        <ul class="header__menu">
+          <li><a href="#home">โฮม</a></li>
+          <li><a href="#eras">ยุคของเรา</a></li>
+          <li><a href="#footer">ติดต่อ</a></li>
+        </ul>
+      </nav>
+      <div class="header__actions">
+        <button class="header__search" aria-label="ค้นหา">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/></svg>
+        </button>
+      </div>
+      <button class="header__burger" data-burger aria-label="เมนู" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <div class="mobile-menu" data-mobile-menu aria-hidden="true">
+    <nav aria-label="Mobile">
+      <ul>
+        <li><a href="#home">โฮม</a></li>
+        <li><a href="#eras">ยุคของเรา</a></li>
+        <li><a href="#footer">ติดต่อ</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <main>
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="home">
+      <div class="hero__bg" aria-hidden="true">
+        <svg viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice">
+          <defs>
+            <radialGradient id="heroGrad" cx="50%" cy="50%" fx="0.44%" fy="50%" r=".5">
+              <animate attributeName="fx" dur="34s" values="0%;3%;0%" repeatCount="indefinite"/>
+              <stop offset="0%" stop-color="#00CAFF"/><stop offset="100%" stop-color="#00CAFF" stop-opacity="0"/>
+            </radialGradient>
+            <radialGradient id="heroGrad2" cx="50%" cy="50%" fx="0.44%" fy="50%" r=".5">
+              <animate attributeName="fx" dur="26s" values="0%;3%;0%" repeatCount="indefinite"/>
+              <stop offset="0%" stop-color="#4300FF"/><stop offset="100%" stop-color="#4300FF" stop-opacity="0"/>
+            </radialGradient>
+          </defs>
+          <rect x="13.744%" y="1.18473%" width="100%" height="100%" fill="url(#heroGrad)" transform="rotate(334.41 50 50)">
+            <animate attributeName="x" dur="20s" values="25%;0%;25%" repeatCount="indefinite"/>
+            <animate attributeName="y" dur="21s" values="0%;25%;0%" repeatCount="indefinite"/>
+            <animateTransform attributeName="transform" type="rotate" from="0 50 50" to="360 50 50" dur="7s" repeatCount="indefinite"/>
+          </rect>
+          <rect x="40%" y="20%" width="100%" height="100%" opacity=".4" fill="url(#heroGrad2)" transform="rotate(120 50 50)">
+            <animate attributeName="x" dur="26s" values="0%;25%;0%" repeatCount="indefinite"/>
+            <animate attributeName="y" dur="17s" values="25%;0%;25%" repeatCount="indefinite"/>
+            <animateTransform attributeName="transform" type="rotate" from="120 50 50" to="480 50 50" dur="9s" repeatCount="indefinite"/>
+          </rect>
+        </svg>
+      </div>
+
+      <div class="container hero__grid">
+        <div class="hero__left">
+          <h1 class="hero__title">
+            <span class="hero__intro" data-text-reveal data-duration="1" data-hero>เรา<span class="hero-kheed">ขีด</span> <span class="hero-dash" aria-hidden="true"></span> ให้คุณเขียนเอง</span>
+            <span class="hero__display" data-text-reveal data-duration="2" data-hero>ให้คุณเขียนตัวตน <em class="accent" data-shuffle>แตกต่าง</em></span>
+          </h1>
+          <p class="hero__para" data-fade-up data-hero>เราไม่ใช่โกสต์ไรเตอร์ — เราโค้ช 1:1 ให้อินฟลูเอนเซอร์เขียนด้วยตัวตนที่เป็นคุณจริง ๆ เสียงที่คนอ่านจำได้ ไม่ใช่เสียงที่กลืนหายไปกับตลาด</p>
+          <a class="link-btn" href="#footer" data-fade-up data-delay=".15">
+            จองที่นั่งฟรีของสัปดาห์นี้
+            <span class="link-btn__arrows" aria-hidden="true">
+              <svg class="arr arr--1" width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 8h11M9 3l5 5-5 5"/></svg>
+              <svg class="arr arr--2" width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 8h11M9 3l5 5-5 5"/></svg>
+            </span>
+          </a>
+        </div>
+        <div class="hero__right">
+          <ul class="hero__list">
+            <li>9,000,000+ อินฟลูเอนเซอร์ในไทย</li>
+            <li>0.1% เท่านั้นที่ถูกเลือกให้เป็นที่จดจำ</li>
+            <li>โค้ช 1:1 — เราไม่เคยเขียนแทนคุณ</li>
+          </ul>
+          <div class="hero__client-card">
+            <div class="hero__client-row">
+              <div class="hero__avatars">
+                <img src="assets/img/avatar-1.svg" width="44" height="44" alt="รูปโปรไฟล์ลูกค้า">
+                <img src="assets/img/avatar-2.svg" width="44" height="44" alt="รูปโปรไฟล์ลูกค้า">
+                <img src="assets/img/avatar-3.svg" width="44" height="44" alt="รูปโปรไฟล์ลูกค้า">
+              </div>
+              <button class="hero__plus" aria-label="ครีเอเตอร์เพิ่มเติม">
+                <svg width="16" height="16" viewBox="0 0 16 16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M8 2v12M2 8h12"/></svg>
+              </button>
+            </div>
+            <p class="hero__client-note">โค้ชตัวจริงที่อยู่มาแล้วทุกยุคของการเขียน</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ERA SECTION (brief §3) — single centered box, swap per era ============
+         Real coded retro UIs (not images), one gimmick each. The clause
+         เราเชื่อว่าการเขียน… opens every box, underlined by the sacred stroke;
+         the verb evolves เชื่อ → ยังเชื่อ → ยึดมั่น → ไม่เลิกเชื่อ → เชื่อ(คือ). -->
+    <section class="eras" id="eras" aria-label="เราอยู่มาแล้วทุกยุคของการเขียน">
+      <div class="era-stage">
+        <div class="era-track">
+
+          <!-- Box 1 — the book era -->
+          <div class="era-slide">
+            <article class="era-box era-book">
+              <span class="era-label">ยุคหนังสือ</span>
+              <div class="book-page">
+                <div class="book-runhead"><span>บทที่ ๑ · ตัวตนของนักเขียน</span><span>HUMAN-WRITE</span></div>
+                <div class="book-cols">
+                  <p class="book-copy"><span class="ph"><span class="u-clause">เราเชื่อว่าการเขียน</span>บ่งบอกตัวตน —</span> <span class="ph">เราเริ่มจากหนังสือเล่มหนา</span> <span class="ph">ตีพิมพ์เดือนละหลายแสนฉบับ</span> <span class="ph">ที่ทุกประโยคถูกตรวจสิบรอบก่อนถึงมือคนอ่าน</span></p>
+                </div>
+                <div class="book-pageno">127</div>
+                <!-- TODO: replace asset — "ผ่านการตรวจ" approval stamp placeholder -->
+                <svg class="stamp" viewBox="0 0 170 92" aria-hidden="true">
+                  <rect x="5" y="5" width="160" height="82" rx="12" fill="none" stroke="currentColor" stroke-width="4"/>
+                  <rect x="13" y="13" width="144" height="66" rx="8" fill="none" stroke="currentColor" stroke-width="1.5" opacity=".7"/>
+                  <text x="85" y="55" text-anchor="middle" font-size="24" fill="currentColor" font-weight="600">ผ่านการตรวจ</text>
+                </svg>
+              </div>
+            </article>
+          </div>
+
+          <!-- Box 2 — the 90s web era -->
+          <div class="era-slide">
+            <article class="era-box era-web90">
+              <span class="era-label">ยุคเว็บ 90s</span>
+              <div class="web-titlebar"><span class="web-title">Human-Write - Netscape</span><span class="web-btns"><i></i><i></i><i></i></span></div>
+              <div class="web-menubar"><span>File</span><span>Edit</span><span>View</span><span>Go</span><span>Communicator</span><span>Help</span></div>
+              <!-- TODO: placeholder chrome copy (URL) -->
+              <div class="web-addressbar"><span class="web-addr-label">Location:</span><span class="web-url">http://www.thaicities.co.th/soho/human-write/index.html</span><span class="web-go">Go</span></div>
+              <div class="web-body">
+                <!-- TODO: placeholder chrome copy (marquee) -->
+                <marquee class="web-marquee" scrollamount="4">~*~ Welcome to Human-Write Homepage ~*~ ยินดีต้อนรับ ~*~ Best viewed 800x600 ~*~</marquee>
+                <p class="web-copy"><span class="u-clause">เรายังเชื่อว่าการเขียน</span>บ่งบอกตัวตน — ในยุครุ่งเรืองที่เว็บไซต์นับแสนผุดขึ้น และเหล่านักสัญจรเว็บเข้าออกกันขวักไขว่ มีเพียงหลักสิบที่ยืนหยัดถึงวันนี้</p>
+                <hr class="web-rainbow">
+                <!-- TODO: placeholder chrome copy (link names) -->
+                <p class="web-links">
+                  <a class="web-link" data-visit href="#eras" onclick="return false">สมุดเยี่ยม</a>
+                  <a class="web-link" href="#eras" onclick="return false">ลิงก์เพื่อนบ้าน</a>
+                  <a class="web-link" href="#eras" onclick="return false">อีเมลถึงเรา</a>
+                </p>
+                <div class="web-counter-row">You are visitor No. <span class="hit-counter font-ai">000000</span></div>
+                <p class="web-construct">🚧 Under Construction · ปรับปรุงหน้านี้อยู่เรื่อย ๆ 🚧</p>
+                <span class="web-cursor" aria-hidden="true">👆</span>
+                <!-- popups spawn here (sites being born & dying) — brief §3 box 2 optional -->
+                <div class="web-popups" aria-hidden="true"></div>
+              </div>
+              <div class="web-statusbar"><span class="web-throbber"></span><span>Done</span><span style="flex:1"></span><span>🔒 human-write</span></div>
+            </article>
+          </div>
+
+          <!-- Box 3 — the webboard era -->
+          <div class="era-slide">
+            <article class="era-box era-board">
+              <span class="era-label">ยุคเว็บบอร์ด</span>
+              <div class="board-table">
+                <div class="board-header">
+                  <span class="board-title">กระทู้: การเขียนบ่งบอกตัวตน <span class="board-new">มาใหม่!</span></span>
+                  <span class="board-counts">อ่าน <b class="views-n">152,847</b> · ตอบ <b>486</b></span>
+                </div>
+                <div class="board-post">
+                  <div class="board-side">
+                    <!-- TODO: replace asset — pixel avatar placeholder -->
+                    <svg class="board-avatar" viewBox="0 0 10 10" aria-hidden="true" shape-rendering="crispEdges">
+                      <rect x="2" y="1" width="6" height="4" fill="#5a4632"/>
+                      <rect x="3" y="3" width="4" height="3" fill="#e8b88a"/>
+                      <rect x="3" y="4" width="1" height="1" fill="#222"/>
+                      <rect x="6" y="4" width="1" height="1" fill="#222"/>
+                      <rect x="2" y="6" width="6" height="3" fill="#3b6ea5"/>
+                    </svg>
+                    <span class="board-member">สมาชิกหมายเลข 000117</span>
+                  </div>
+                  <div class="board-main">
+                    <p class="board-copy"><span class="u-clause">เรายึดมั่นว่าการเขียน</span>บ่งบอกตัวตน — ในยุคเว็บบอร์ด ที่พักพิงของผู้คนมากหน้าหลายตา ประโยคธรรมดาของคนธรรมดา ถูกอ่านนับแสนนับล้าน</p>
+                    <div class="board-sig">~ Human-Write ~</div>
+                  </div>
+                </div>
+                <!-- replies grow one by one while on screen — brief §3 box 3 optional -->
+                <div class="board-replies">
+                  <div class="board-reply-row"><b>เด็กหลังห้อง</b> : จริงตามนั้นเลยครับ +1</div>
+                  <div class="board-reply-row"><b>สมาชิกหมายเลข 004512</b> : อ่านแล้วน้ำตาจะไหล (( ; </div>
+                  <div class="board-reply-row"><b>rock_er</b> : ปักหมุดกระทู้นี้ไว้เลย</div>
+                </div>
+                <div class="board-footer">
+                  <button class="board-reply" type="button">ตอบกลับ</button>
+                  <span class="board-pages">หน้า <a>1</a> <a>2</a> <a>3</a></span>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- Box 4 — the chat era (MSN) -->
+          <div class="era-slide">
+            <article class="era-box era-msn">
+              <span class="era-label">ยุคแชต</span>
+              <div class="msn-titlebar"><span class="msn-title">Human-Write — Conversation</span><span class="msn-btns"><i></i><i></i><i></i></span></div>
+              <div class="msn-body">
+                <div class="msn-chatcol">
+                  <div class="msn-contact"><span class="dot on"></span> Human-Write <em>(ออนไลน์)</em></div>
+                  <div class="msn-pane">
+                    <p class="msn-bubble"><span class="u-clause">เราไม่เลิกเชื่อว่าการเขียน</span>บ่งบอกตัวตน —</p>
+                    <p class="msn-bubble">แม้ในยุคที่แพลตฟอร์มเกิดเช้าตายเย็น</p>
+                    <p class="msn-bubble">เราเฝ้าดูที่พักพิงหายไปทีละแห่ง</p>
+                    <p class="msn-bubble">แต่ตัวตนย้ายบ้านได้เสมอ</p>
+                    <span class="msn-typing"><i></i><i></i><i></i></span>
+                  </div>
+                  <div class="msn-inputrow"><span class="msn-input"></span><button type="button" class="msn-send">Send</button></div>
+                </div>
+                <div class="msn-friends">
+                  <!-- TODO: placeholder contact names -->
+                  <div class="msn-friend is-us"><span class="dot on"></span>Human-Write</div>
+                  <div class="msn-friend"><span class="dot on"></span>mint~*</div>
+                  <div class="msn-friend"><span class="dot on"></span>beam_zaa</div>
+                  <div class="msn-friend"><span class="dot on"></span>nong.film</div>
+                  <div class="msn-friend"><span class="dot on"></span>jaded-writer</div>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- Box 5 — SNS (today) -->
+          <div class="era-slide">
+            <article class="era-box era-sns">
+              <span class="era-label">ยุค SNS</span>
+              <div class="sns-head">
+                <span class="sns-avatar font-hand">H</span>
+                <span class="sns-name">Human-Write <svg class="sns-verified" viewBox="0 0 24 24" aria-hidden="true"><path fill="#1d9bf0" d="M12 1l2.6 2.1 3.3-.3 1.2 3.1 3 1.5-1 3.2 1 3.2-3 1.5-1.2 3.1-3.3-.3L12 23l-2.6-2.1-3.3.3-1.2-3.1-3-1.5 1-3.2-1-3.2 3-1.5L6.1 2.8l3.3.3z"/><path fill="#fff" d="M10.6 14.6l-2.3-2.3-1.3 1.3 3.6 3.6 6-6-1.3-1.3z"/></svg> <em class="sns-time">เมื่อสักครู่ · โพสต์แนะนำ</em></span>
+              </div>
+              <p class="sns-caption"><span class="u-clause">เราเชื่อว่าการเขียนคือตัวตน</span> เพราะเรายังอยู่ตรงนี้</p>
+              <div class="sns-row font-ai">
+                <span class="sns-stat">♥ <b class="sns-hearts">12</b></span>
+                <span class="sns-stat">💬 <b class="sns-comments">3</b></span>
+                <span class="sns-stat">↗ <b class="sns-shares">1</b></span>
+              </div>
+              <div class="sns-notifs" aria-hidden="true">
+                <!-- TODO: placeholder handles -->
+                <span class="sns-notif">faifah.w ถูกใจโพสต์ของคุณ</span>
+                <span class="sns-notif">mos.writer ถูกใจโพสต์ของคุณ</span>
+                <span class="sns-notif">nlnw.jj ถูกใจโพสต์ของคุณ</span>
+                <span class="sns-notif">prim_pr ถูกใจโพสต์ของคุณ</span>
+                <span class="sns-notif">และอีก 1,024 คน ถูกใจโพสต์ของคุณ</span>
+              </div>
+            </article>
+          </div>
+
+        </div>
+        <div class="era-progress" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__col" data-fade-up data-delay="0">
+          <h5 class="footer__title">ติดต่อ</h5>
+          <p class="footer__address">ที่นั่งฟรีเปิดจองสัปดาห์ละ 1 ที่<br>เตือนฉันเมื่อเปิดจองรอบถัดไป</p>
+          <p class="footer__contact"><a href="mailto:hello@human-write.co">hello@human-write.co</a></p>
+        </div>
+        <div class="footer__col" data-fade-up data-delay=".1">
+          <h5 class="footer__title">Human-Write</h5>
+          <ul class="footer__links">
+            <li><a href="#home">โฮม</a></li>
+            <li><a href="#eras">ยุคของเรา</a></li>
+            <li><a href="#footer">จองที่นั่งฟรี</a></li>
+          </ul>
+        </div>
+        <div class="footer__col" data-fade-up data-delay=".3">
+          <h5 class="footer__title">โซเชียล</h5>
+          <div class="footer__social">
+            <a href="#" aria-label="Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.25-1.5 1.55-1.5h1.65V3.6c-.3-.04-1.3-.12-2.45-.12-2.4 0-4.05 1.5-4.05 4.2v2.3H7.5V13h2.7v8h3.3z"/></svg></a>
+            <a href="#" aria-label="X"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 3h3.1l-6.8 7.8L21.8 21h-6.3l-4.9-6.4L5 21H1.9l7.3-8.3L2.4 3h6.4l4.4 5.8L17.5 3zm-1.1 16.2h1.7L6.9 4.7H5.1l11.3 14.5z"/></svg></a>
+            <a href="#" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copy" data-text-reveal data-duration="1">เราขีด คุณเขียน คนจำ — © <span data-year>2026</span> Human-Write</p>
+      </div>
+    </div>
+  </footer>
+
+  <script defer src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/gsap@3/dist/CustomEase.min.js"></script>
+  <script type="module" src="assets/js/main.js"></script>
+</body>
+</html>

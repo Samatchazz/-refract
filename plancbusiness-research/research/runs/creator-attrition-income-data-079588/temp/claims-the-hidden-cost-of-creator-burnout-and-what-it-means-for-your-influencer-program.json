@@ -1,0 +1,30 @@
+[
+  {
+    "claim": "Later.com's June 2026 article recirculates the Billion Dollar Boy 2025 survey figures nearly a year after original publication, indicating the BDB dataset has become a standard industry citation rather than being replaced by newer data.",
+    "stance": "neutral",
+    "stance_target": "provenance and persistence of the BDB burnout figures in trade press",
+    "evidence_type": "empirical",
+    "scope_conditions": "Derivative; same n=1,000 US/UK creator sample as the original BDB press release, restated a year later with no new fieldwork. Vendor content (Later sells influencer-program software) with a commercial interest in promoting long-term creator relationships as the solution.",
+    "quoted_support": "\"A 2025 study by Billion Dollar Boy surveyed 1,000 creators across the US and UK and found that 52% have experienced burnout as a direct result of their careers. Nearly two in five said they'd considered leaving the industry entirely.\"",
+    "numbers": ["52%", "37% (\"nearly two in five\")", "n=1,000"],
+    "entities": ["Billion Dollar Boy", "Later.com"],
+    "time_period": "July 2025 (survey), June 2026 (article)",
+    "region": "US, UK",
+    "confidence": "high",
+    "source_note_id": "the-hidden-cost-of-creator-burnout-and-what-it-means-for-your-influencer-program"
+  },
+  {
+    "claim": "A 24 Hour Fitness creator program built on a stable, trust-based creator pool (rather than campaign-by-campaign sourcing) achieved 197.8K+ impressions and an 8.4% average engagement rate versus a 2.4% industry benchmark.",
+    "stance": "neutral",
+    "stance_target": "case study of reduced creator churn improving campaign performance (not a burnout/attrition rate itself)",
+    "evidence_type": "anecdotal",
+    "scope_conditions": "Single brand case study cited by vendor (Later) selling the influencer-program software used in the case; no sample size beyond one brand program, no independent verification of the benchmark source.",
+    "quoted_support": "\"The result: 197.8K+ impressions and an 8.4% average engagement rate against a 2.4% industry benchmark.\"",
+    "numbers": ["197.8K+ impressions", "8.4% engagement rate", "2.4% industry benchmark", "35+ gyms"],
+    "entities": ["24 Hour Fitness", "Later.com"],
+    "time_period": "unstated (recent, published June 2026)",
+    "region": "US (24 Hour Fitness is a US gym chain)",
+    "confidence": "low",
+    "source_note_id": "the-hidden-cost-of-creator-burnout-and-what-it-means-for-your-influencer-program"
+  }
+]

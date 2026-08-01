@@ -1,0 +1,1493 @@
+{
+  "slug": "izanami",
+  "url": "https://izanami-official.com",
+  "name": "Izanami",
+  "country": "Japan",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "ok": true,
+  "httpStatus": 200,
+  "finalUrl": "https://izanami-official.com/",
+  "consentDismissed": [],
+  "scrollInfo": {
+    "contentHeight": 7647,
+    "docScrollHeight": 7647,
+    "maxElementBottom": 7647,
+    "innerScrollerHeight": 1561,
+    "virtualScroll": false
+  },
+  "document": {
+    "scrollHeight": 7647,
+    "vhMultiple": 9.06,
+    "textNodeCount": 180,
+    "canvasCount": 2,
+    "elementCount": 583,
+    "title": "Izanami | Sharing the Japanese Spirit of Harmony",
+    "lang": "en",
+    "contentHeight": 7647,
+    "scrollMode": "native"
+  },
+  "container": {
+    "dominantPairs": [
+      {
+        "width": 252,
+        "left": 98,
+        "count": 7,
+        "sample": {
+          "tag": "p",
+          "cls": "SP_sm_R12_H240 sm_R16_H240 homeProjects_description"
+        }
+      },
+      {
+        "width": 310,
+        "left": 40,
+        "count": 3,
+        "sample": {
+          "tag": "p",
+          "cls": "SP_sm_R12_H240 sm_R16_H240 homePhilosophy_description"
+        }
+      },
+      {
+        "width": 97,
+        "left": 98,
+        "count": 1,
+        "sample": {
+          "tag": "dd",
+          "cls": "SP_cz_R11_H100 cz_R16_H100 footer_locationBody"
+        }
+      },
+      {
+        "width": 155,
+        "left": 195,
+        "count": 1,
+        "sample": {
+          "tag": "dd",
+          "cls": "SP_cz_R11_H100 cz_R16_H100 footer_locationBody"
+        }
+      }
+    ],
+    "containerChain": {
+      "chain": [
+        {
+          "tag": "p",
+          "cls": "SP_sm_R12_H240 sm_R16_H240 homeProjects_description",
+          "width": 252.27,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "block"
+        },
+        {
+          "tag": "div",
+          "cls": "homeProjects_descriptions",
+          "width": 252.27,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "block"
+        },
+        {
+          "tag": "div",
+          "cls": "SP_pfd_R30_H100 pfd_R50_H100 homeProjects_content",
+          "width": 310.47,
+          "maxWidth": "none",
+          "paddingInline": "58.209px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "block"
+        },
+        {
+          "tag": "div",
+          "cls": "sticky_main",
+          "width": 310.47,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "block"
+        },
+        {
+          "tag": "div",
+          "cls": "sticky",
+          "width": 310.47,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "grid"
+        },
+        {
+          "tag": "div",
+          "cls": "inner homeProjects_inner",
+          "width": 390,
+          "maxWidth": "none",
+          "paddingInline": "39.7761px / 39.7761px",
+          "marginInline": "0px / 0px",
+          "display": "block"
+        },
+        {
+          "tag": "div",
+          "cls": "layer homeProjects_contents",
+          "width": 390,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "block"
+        },
+        {
+          "tag": "section",
+          "cls": "homeProjects",
+          "width": 390,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "grid"
+        }
+      ],
+      "constrained": null
+    },
+    "grids": [
+      {
+        "columns": 2,
+        "columnGap": "normal",
+        "rowGap": "normal",
+        "width": 310.47,
+        "template": "135.812px 174.656px",
+        "count": 4
+      },
+      {
+        "columns": 32,
+        "columnGap": "normal",
+        "rowGap": "normal",
+        "width": 310.47,
+        "template": "9.6875px 9.6875px 9.6875px 9.6875px 9.70312px 9.70312px 9.6875px 9.6875px 9.6875px 9.6875px 9.6875px 9.6875px 9.6875px 9.6875px 9.6875px 9.6875px 9.6875px 9.6875px 9.6875px 9.70312px 9.70312px 9.70312",
+        "count": 2
+      },
+      {
+        "columns": 3,
+        "columnGap": "normal",
+        "rowGap": "normal",
+        "width": 349.28,
+        "template": "156.672px 73.0156px 107.469px",
+        "count": 1
+      },
+      {
+        "columns": 2,
+        "columnGap": "19.403px",
+        "rowGap": "19.403px",
+        "width": 217.23,
+        "template": "77.6094px 100.844px",
+        "count": 1
+      },
+      {
+        "columns": 2,
+        "columnGap": "19.403px",
+        "rowGap": "19.403px",
+        "width": 199.14,
+        "template": "77.6094px 82.75px",
+        "count": 1
+      },
+      {
+        "columns": 2,
+        "columnGap": "19.403px",
+        "rowGap": "19.403px",
+        "width": 190.42,
+        "template": "77.6094px 74.0312px",
+        "count": 1
+      }
+    ],
+    "bodyPaddingInline": "0px / 0px",
+    "bodyMaxWidth": "none",
+    "htmlPaddingInline": "0px / 0px"
+  },
+  "leftEdgeTest": {
+    "layout": {
+      "n": 4,
+      "mean": 49.75,
+      "stdDev": 16.89,
+      "distinctExact": 2,
+      "distinctClustered2px": 2,
+      "clusters": [
+        {
+          "at": 40,
+          "count": 3
+        },
+        {
+          "at": 79,
+          "count": 1
+        }
+      ],
+      "values": [
+        79,
+        40,
+        40,
+        40
+      ]
+    },
+    "rect": {
+      "n": 4,
+      "mean": 49.47,
+      "stdDev": 16.81,
+      "distinctExact": 2,
+      "distinctClustered2px": 2,
+      "clusters": [
+        {
+          "at": 39.77,
+          "count": 3
+        },
+        {
+          "at": 78.58,
+          "count": 1
+        }
+      ],
+      "values": [
+        78.58,
+        39.77,
+        39.77,
+        39.77
+      ]
+    },
+    "headings": {
+      "n": 4,
+      "mean": 64.25,
+      "stdDev": 25.16,
+      "distinctExact": 3,
+      "distinctClustered2px": 3,
+      "clusters": [
+        {
+          "at": 40,
+          "count": 2
+        },
+        {
+          "at": 79,
+          "count": 1
+        },
+        {
+          "at": 98,
+          "count": 1
+        }
+      ],
+      "values": [
+        79,
+        40,
+        98,
+        40
+      ]
+    },
+    "sectionDiscovery": "tall-children-of-wrapper"
+  },
+  "sections": [
+    {
+      "index": 0,
+      "tag": "div",
+      "id": null,
+      "cls": "homeHeader",
+      "height": 1155.44,
+      "vhFraction": 1.37,
+      "paddingBlockStart": "0px",
+      "paddingBlockEnd": "0px",
+      "marginBlockStart": "0px",
+      "marginBlockEnd": "0px",
+      "firstText": {
+        "layoutLeft": 79,
+        "rectLeft": 78.58,
+        "tag": "span",
+        "fontSize": "13.5821px",
+        "text": "Remember who you are"
+      },
+      "heading": {
+        "layoutLeft": 79,
+        "rectLeft": 78.58,
+        "tag": "span",
+        "fontSize": "13.5821px",
+        "text": "Remember who you are"
+      }
+    },
+    {
+      "index": 1,
+      "tag": "section",
+      "id": null,
+      "cls": "homePhilosophy",
+      "height": 1341.38,
+      "vhFraction": 1.59,
+      "paddingBlockStart": "97.0149px",
+      "paddingBlockEnd": "0px",
+      "marginBlockStart": "0px",
+      "marginBlockEnd": "0px",
+      "firstText": {
+        "layoutLeft": 40,
+        "rectLeft": 39.77,
+        "tag": "h2",
+        "fontSize": "11.6418px",
+        "text": "philosophy"
+      },
+      "heading": {
+        "layoutLeft": 40,
+        "rectLeft": 39.77,
+        "tag": "span",
+        "fontSize": "29.1045px",
+        "text": "Sharing"
+      }
+    },
+    {
+      "index": 2,
+      "tag": "section",
+      "id": null,
+      "cls": "homeProjects",
+      "height": 3553.47,
+      "vhFraction": 4.21,
+      "paddingBlockStart": "29.1045px",
+      "paddingBlockEnd": "0px",
+      "marginBlockStart": "0px",
+      "marginBlockEnd": "0px",
+      "firstText": {
+        "layoutLeft": 40,
+        "rectLeft": 39.77,
+        "tag": "h2",
+        "fontSize": "11.6418px",
+        "text": "projects"
+      },
+      "heading": {
+        "layoutLeft": 98,
+        "rectLeft": 97.97,
+        "tag": "span",
+        "fontSize": "29.1045px",
+        "text": "Designing"
+      }
+    },
+    {
+      "index": 3,
+      "tag": "section",
+      "id": null,
+      "cls": "homeCompany",
+      "height": 821.84,
+      "vhFraction": 0.97,
+      "paddingBlockStart": "0px",
+      "paddingBlockEnd": "0px",
+      "marginBlockStart": "0px",
+      "marginBlockEnd": "0px",
+      "firstText": {
+        "layoutLeft": 40,
+        "rectLeft": 39.77,
+        "tag": "h2",
+        "fontSize": "11.6418px",
+        "text": "company"
+      },
+      "heading": {
+        "layoutLeft": 40,
+        "rectLeft": 39.77,
+        "tag": "span",
+        "fontSize": "29.1045px",
+        "text": "Who we are"
+      }
+    }
+  ],
+  "verticalRhythm": {
+    "sectionCount": 4,
+    "near100vhCount": 1,
+    "near100vhPct": 25,
+    "strictGcdOfSpacing": 1,
+    "baseUnitEstimate80pct": null,
+    "spacingHistogram": [
+      {
+        "value": 19,
+        "count": 35
+      },
+      {
+        "value": 8,
+        "count": 21
+      },
+      {
+        "value": 12,
+        "count": 16
+      },
+      {
+        "value": 40,
+        "count": 16
+      },
+      {
+        "value": 5,
+        "count": 14
+      },
+      {
+        "value": 10,
+        "count": 8
+      },
+      {
+        "value": 97,
+        "count": 7
+      },
+      {
+        "value": 29,
+        "count": 7
+      },
+      {
+        "value": 24,
+        "count": 3
+      },
+      {
+        "value": 58,
+        "count": 3
+      },
+      {
+        "value": 20,
+        "count": 2
+      },
+      {
+        "value": 6,
+        "count": 2
+      },
+      {
+        "value": 79,
+        "count": 2
+      },
+      {
+        "value": 14,
+        "count": 2
+      }
+    ],
+    "spacingSampleSize": 155
+  },
+  "typeScale": {
+    "distinctFontSizeCount": 7,
+    "distinctFontSizeCount_used2plus": 7,
+    "distinctSizes": [
+      {
+        "size": 29.1,
+        "count": 10
+      },
+      {
+        "size": 25.22,
+        "count": 11
+      },
+      {
+        "size": 16,
+        "count": 2
+      },
+      {
+        "size": 15.52,
+        "count": 8
+      },
+      {
+        "size": 13.58,
+        "count": 74
+      },
+      {
+        "size": 11.64,
+        "count": 18
+      },
+      {
+        "size": 10.67,
+        "count": 39
+      }
+    ],
+    "scaleSizesDesc": [
+      29.1,
+      25.22,
+      16,
+      15.52,
+      13.58,
+      11.64,
+      10.67
+    ],
+    "consecutiveRatios": [
+      1.15,
+      1.58,
+      1.03,
+      1.14,
+      1.17,
+      1.09
+    ],
+    "roles": {
+      "h1": null,
+      "biggestText": {
+        "tag": "span",
+        "fontSize": 29.1,
+        "fontWeight": "400",
+        "lineHeightPx": 29.1,
+        "lineHeightRatio": 1,
+        "letterSpacing": "0px",
+        "letterSpacingEm": 0,
+        "fontFamily": "Playfair Display",
+        "fontFamilyFull": "\"Playfair Display\", serif",
+        "textTransform": "none",
+        "color": "rgba(0, 0, 0, 0)",
+        "widthPx": 310.47,
+        "text": "Sharing"
+      },
+      "h2All": [
+        {
+          "tag": "h2",
+          "fontSize": 11.64,
+          "fontWeight": "400",
+          "lineHeightPx": 11.64,
+          "lineHeightRatio": 1,
+          "letterSpacing": "0px",
+          "letterSpacingEm": 0,
+          "fontFamily": "Cinzel",
+          "fontFamilyFull": "Cinzel, serif",
+          "textTransform": "none",
+          "color": "rgb(217, 215, 212)",
+          "widthPx": 11.64,
+          "text": "philosophy"
+        },
+        {
+          "tag": "h2",
+          "fontSize": 11.64,
+          "fontWeight": "400",
+          "lineHeightPx": 11.64,
+          "lineHeightRatio": 1,
+          "letterSpacing": "0px",
+          "letterSpacingEm": 0,
+          "fontFamily": "Cinzel",
+          "fontFamilyFull": "Cinzel, serif",
+          "textTransform": "none",
+          "color": "rgb(217, 215, 212)",
+          "widthPx": 11.64,
+          "text": "projects"
+        },
+        {
+          "tag": "h2",
+          "fontSize": 11.64,
+          "fontWeight": "400",
+          "lineHeightPx": 11.64,
+          "lineHeightRatio": 1,
+          "letterSpacing": "0px",
+          "letterSpacingEm": 0,
+          "fontFamily": "Cinzel",
+          "fontFamilyFull": "Cinzel, serif",
+          "textTransform": "none",
+          "color": "rgb(217, 215, 212)",
+          "widthPx": 11.64,
+          "text": "company"
+        }
+      ],
+      "h3": null,
+      "body": null,
+      "small": {
+        "tag": "span",
+        "fontSize": 10.67,
+        "fontWeight": "400",
+        "lineHeightPx": 10.67,
+        "lineHeightRatio": 1,
+        "letterSpacing": "0px",
+        "letterSpacingEm": 0,
+        "fontFamily": "Cinzel",
+        "fontFamilyFull": "Cinzel, serif",
+        "textTransform": "none",
+        "color": "rgb(217, 215, 212)",
+        "widthPx": 32.2,
+        "text": "menu"
+      },
+      "mono": null
+    },
+    "readingMeasure": null,
+    "readingMeasureAlternates": [],
+    "distinctFontFamilyCount": 4,
+    "fontFamilies": [
+      {
+        "family": "Playfair Display",
+        "count": 95
+      },
+      {
+        "family": "Cinzel",
+        "count": 54
+      },
+      {
+        "family": "Shippori Mincho",
+        "count": 11
+      },
+      {
+        "family": "Helvetica Neue",
+        "count": 2
+      }
+    ]
+  },
+  "color": {
+    "textColors": [
+      {
+        "value": "rgb(217,215,212)",
+        "count": 154
+      },
+      {
+        "value": "rgba(0,0,0,0)",
+        "count": 7
+      },
+      {
+        "value": "rgb(255,255,255)",
+        "count": 1
+      }
+    ],
+    "backgroundColors": [
+      {
+        "value": "rgb(217,215,212)",
+        "count": 23
+      },
+      {
+        "value": "rgb(0,0,0)",
+        "count": 1
+      }
+    ],
+    "distinctTextColorCount": 3,
+    "distinctBgColorCount": 2
+  },
+  "persistent": {
+    "fixedOrSticky": [
+      {
+        "tag": "header",
+        "cls": "header",
+        "position": "fixed",
+        "rect": {
+          "top": 0,
+          "left": 0,
+          "width": 390,
+          "height": 844
+        },
+        "zIndex": "80",
+        "text": "IZANAMI enja menu close",
+        "opacity": "1"
+      },
+      {
+        "tag": "span",
+        "cls": "visuallyHidden",
+        "position": "fixed",
+        "rect": {
+          "top": 0,
+          "left": 0,
+          "width": 4,
+          "height": 4
+        },
+        "zIndex": "auto",
+        "text": "IZANAMI",
+        "opacity": "0"
+      },
+      {
+        "tag": "h2",
+        "cls": "SP_cz_R12_H100 cz_R20_H100 label homePhilosophy_label",
+        "position": "sticky",
+        "rect": {
+          "top": 1252.44,
+          "left": 39.77,
+          "width": 11.64,
+          "height": 71.02
+        },
+        "zIndex": "auto",
+        "text": "philosophy",
+        "opacity": "1"
+      },
+      {
+        "tag": "div",
+        "cls": "visuallyHidden",
+        "position": "fixed",
+        "rect": {
+          "top": 0,
+          "left": 0,
+          "width": 4,
+          "height": 4
+        },
+        "zIndex": "auto",
+        "text": "View Philosophy",
+        "opacity": "0"
+      },
+      {
+        "tag": "h2",
+        "cls": "SP_cz_R12_H100 cz_R20_H100 label homeProjects_label",
+        "position": "sticky",
+        "rect": {
+          "top": 2525.91,
+          "left": 39.77,
+          "width": 11.64,
+          "height": 52.61
+        },
+        "zIndex": "auto",
+        "text": "projects",
+        "opacity": "1"
+      },
+      {
+        "tag": "div",
+        "cls": "visuallyHidden",
+        "position": "fixed",
+        "rect": {
+          "top": 0,
+          "left": 0,
+          "width": 4,
+          "height": 4
+        },
+        "zIndex": "auto",
+        "text": "View Projects",
+        "opacity": "0"
+      },
+      {
+        "tag": "section",
+        "cls": "stickySection",
+        "position": "sticky",
+        "rect": {
+          "top": 3428.13,
+          "left": 0,
+          "width": 390,
+          "height": 856.98
+        },
+        "zIndex": "auto",
+        "text": "projects01 SchoolNurturing the foundations of life.Through \"",
+        "opacity": "1"
+      },
+      {
+        "tag": "p",
+        "cls": "SP_cz_R12_H100 cz_R20_H100 label stickySection_label",
+        "position": "sticky",
+        "rect": {
+          "top": 3525.13,
+          "left": 39.77,
+          "width": 11.64,
+          "height": 52.61
+        },
+        "zIndex": "auto",
+        "text": "projects",
+        "opacity": "1"
+      },
+      {
+        "tag": "div",
+        "cls": "visuallyHidden",
+        "position": "fixed",
+        "rect": {
+          "top": 0,
+          "left": 0,
+          "width": 4,
+          "height": 4
+        },
+        "zIndex": "auto",
+        "text": "View School",
+        "opacity": "0"
+      },
+      {
+        "tag": "section",
+        "cls": "stickySection",
+        "position": "sticky",
+        "rect": {
+          "top": 4285.11,
+          "left": 0,
+          "width": 390,
+          "height": 884.91
+        },
+        "zIndex": "auto",
+        "text": "projects02 CraftAwakening the sensesthrough Japanese aesthet",
+        "opacity": "1"
+      },
+      {
+        "tag": "p",
+        "cls": "SP_cz_R12_H100 cz_R20_H100 label stickySection_label",
+        "position": "sticky",
+        "rect": {
+          "top": 4382.11,
+          "left": 39.77,
+          "width": 11.64,
+          "height": 52.61
+        },
+        "zIndex": "auto",
+        "text": "projects",
+        "opacity": "1"
+      },
+      {
+        "tag": "div",
+        "cls": "visuallyHidden",
+        "position": "fixed",
+        "rect": {
+          "top": 0,
+          "left": 0,
+          "width": 4,
+          "height": 4
+        },
+        "zIndex": "auto",
+        "text": "View Craft",
+        "opacity": "0"
+      },
+      {
+        "tag": "section",
+        "cls": "stickySection",
+        "position": "sticky",
+        "rect": {
+          "top": 5170.02,
+          "left": 0,
+          "width": 390,
+          "height": 880.27
+        },
+        "zIndex": "auto",
+        "text": "projects03 RetreatReturning to your essence.Rooted in ancien",
+        "opacity": "1"
+      },
+      {
+        "tag": "p",
+        "cls": "SP_cz_R12_H100 cz_R20_H100 label stickySection_label",
+        "position": "sticky",
+        "rect": {
+          "top": 5267.02,
+          "left": 39.77,
+          "width": 11.64,
+          "height": 52.61
+        },
+        "zIndex": "auto",
+        "text": "projects",
+        "opacity": "1"
+      },
+      {
+        "tag": "div",
+        "cls": "visuallyHidden",
+        "position": "fixed",
+        "rect": {
+          "top": 0,
+          "left": 0,
+          "width": 4,
+          "height": 4
+        },
+        "zIndex": "auto",
+        "text": "View Retreat",
+        "opacity": "0"
+      },
+      {
+        "tag": "h2",
+        "cls": "SP_cz_R12_H100 cz_R20_H100 label",
+        "position": "sticky",
+        "rect": {
+          "top": 6156.98,
+          "left": 39.77,
+          "width": 11.64,
+          "height": 57.59
+        },
+        "zIndex": "auto",
+        "text": "company",
+        "opacity": "1"
+      },
+      {
+        "tag": "span",
+        "cls": "visuallyHidden",
+        "position": "fixed",
+        "rect": {
+          "top": 0,
+          "left": 0,
+          "width": 4,
+          "height": 4
+        },
+        "zIndex": "auto",
+        "text": "IZANAMI",
+        "opacity": "0"
+      },
+      {
+        "tag": "div",
+        "cls": "visuallyHidden",
+        "position": "fixed",
+        "rect": {
+          "top": 0,
+          "left": 0,
+          "width": 4,
+          "height": 4
+        },
+        "zIndex": "auto",
+        "text": "View Company",
+        "opacity": "0"
+      },
+      {
+        "tag": "div",
+        "cls": "visuallyHidden",
+        "position": "fixed",
+        "rect": {
+          "top": 0,
+          "left": 0,
+          "width": 4,
+          "height": 4
+        },
+        "zIndex": "auto",
+        "text": "Philosophy",
+        "opacity": "0"
+      },
+      {
+        "tag": "aside",
+        "cls": "aside",
+        "position": "fixed",
+        "rect": {
+          "top": 0,
+          "left": 0,
+          "width": 390,
+          "height": 844
+        },
+        "zIndex": "40",
+        "text": "©202611:22:11gst, dubai uae 16:22:11jst, tokyo jpnscroll",
+        "opacity": "1"
+      }
+    ]
+  },
+  "nav": {
+    "tag": "header",
+    "cls": "header",
+    "height": 844,
+    "top": 0,
+    "position": "fixed",
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "backdropFilter": "none",
+    "borderBottom": "0px rgb(217, 215, 212)",
+    "paddingBlock": "0px / 0px",
+    "transform": "matrix(1, 0, 0, 1, 0, 0)",
+    "opacity": "1",
+    "mixBlendMode": "normal",
+    "color": "rgb(217, 215, 212)"
+  },
+  "navState": {
+    "at0": {
+      "nav": {
+        "height": 844,
+        "top": 0,
+        "position": "fixed",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "backdropFilter": "none",
+        "borderBottom": "0px rgb(217, 215, 212)",
+        "paddingBlock": "0px / 0px",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)",
+        "opacity": "1",
+        "color": "rgb(217, 215, 212)"
+      },
+      "fixedOrSticky": [
+        {
+          "tag": "header",
+          "cls": "header",
+          "position": "fixed",
+          "rect": {
+            "top": 0,
+            "left": 0,
+            "width": 390,
+            "height": 844
+          },
+          "text": "IZANAMI enja menu close",
+          "opacity": "1"
+        },
+        {
+          "tag": "span",
+          "cls": "visuallyHidden",
+          "position": "fixed",
+          "rect": {
+            "top": 0,
+            "left": 0,
+            "width": 4,
+            "height": 4
+          },
+          "text": "IZANAMI",
+          "opacity": "0"
+        },
+        {
+          "tag": "h2",
+          "cls": "SP_cz_R12_H100 cz_R20_H100 label homePhilosophy_label",
+          "position": "sticky",
+          "rect": {
+            "top": 1252.44,
+            "left": 39.77,
+            "width": 11.64,
+            "height": 71.02
+          },
+          "text": "philosophy",
+          "opacity": "1"
+        },
+        {
+          "tag": "div",
+          "cls": "visuallyHidden",
+          "position": "fixed",
+          "rect": {
+            "top": 0,
+            "left": 0,
+            "width": 4,
+            "height": 4
+          },
+          "text": "View Philosophy",
+          "opacity": "0"
+        },
+        {
+          "tag": "h2",
+          "cls": "SP_cz_R12_H100 cz_R20_H100 label homeProjects_label",
+          "position": "sticky",
+          "rect": {
+            "top": 2525.91,
+            "left": 39.77,
+            "width": 11.64,
+            "height": 52.61
+          },
+          "text": "projects",
+          "opacity": "1"
+        },
+        {
+          "tag": "div",
+          "cls": "visuallyHidden",
+          "position": "fixed",
+          "rect": {
+            "top": 0,
+            "left": 0,
+            "width": 4,
+            "height": 4
+          },
+          "text": "View Projects",
+          "opacity": "0"
+        },
+        {
+          "tag": "section",
+          "cls": "stickySection",
+          "position": "sticky",
+          "rect": {
+            "top": 3428.13,
+            "left": 0,
+            "width": 390,
+            "height": 856.98
+          },
+          "text": "projects01 SchoolNurturing the foundations of life.Through \"",
+          "opacity": "1"
+        },
+        {
+          "tag": "p",
+          "cls": "SP_cz_R12_H100 cz_R20_H100 label stickySection_label",
+          "position": "sticky",
+          "rect": {
+            "top": 3525.13,
+            "left": 39.77,
+            "width": 11.64,
+            "height": 52.61
+          },
+          "text": "projects",
+          "opacity": "1"
+        },
+        {
+          "tag": "div",
+          "cls": "visuallyHidden",
+          "position": "fixed",
+          "rect": {
+            "top": 0,
+            "left": 0,
+            "width": 4,
+            "height": 4
+          },
+          "text": "View School",
+          "opacity": "0"
+        },
+        {
+          "tag": "section",
+          "cls": "stickySection",
+          "position": "sticky",
+          "rect": {
+            "top": 4285.11,
+            "left": 0,
+            "width": 390,
+            "height": 884.91
+          },
+          "text": "projects02 CraftAwakening the sensesthrough Japanese aesthet",
+          "opacity": "1"
+        },
+        {
+          "tag": "p",
+          "cls": "SP_cz_R12_H100 cz_R20_H100 label stickySection_label",
+          "position": "sticky",
+          "rect": {
+            "top": 4382.11,
+            "left": 39.77,
+            "width": 11.64,
+            "height": 52.61
+          },
+          "text": "projects",
+          "opacity": "1"
+        },
+        {
+          "tag": "div",
+          "cls": "visuallyHidden",
+          "position": "fixed",
+          "rect": {
+            "top": 0,
+            "left": 0,
+            "width": 4,
+            "height": 4
+          },
+          "text": "View Craft",
+          "opacity": "0"
+        },
+        {
+          "tag": "section",
+          "cls": "stickySection",
+          "position": "sticky",
+          "rect": {
+            "top": 5170.02,
+            "left": 0,
+            "width": 390,
+            "height": 880.27
+          },
+          "text": "projects03 RetreatReturning to your essence.Rooted in ancien",
+          "opacity": "1"
+        },
+        {
+          "tag": "p",
+          "cls": "SP_cz_R12_H100 cz_R20_H100 label stickySection_label",
+          "position": "sticky",
+          "rect": {
+            "top": 5267.02,
+            "left": 39.77,
+            "width": 11.64,
+            "height": 52.61
+          },
+          "text": "projects",
+          "opacity": "1"
+        },
+        {
+          "tag": "div",
+          "cls": "visuallyHidden",
+          "position": "fixed",
+          "rect": {
+            "top": 0,
+            "left": 0,
+            "width": 4,
+            "height": 4
+          },
+          "text": "View Retreat",
+          "opacity": "0"
+        },
+        {
+          "tag": "h2",
+          "cls": "SP_cz_R12_H100 cz_R20_H100 label",
+          "position": "sticky",
+          "rect": {
+            "top": 6156.98,
+            "left": 39.77,
+            "width": 11.64,
+            "height": 57.59
+          },
+          "text": "company",
+          "opacity": "1"
+        },
+        {
+          "tag": "span",
+          "cls": "visuallyHidden",
+          "position": "fixed",
+          "rect": {
+            "top": 0,
+            "left": 0,
+            "width": 4,
+            "height": 4
+          },
+          "text": "IZANAMI",
+          "opacity": "0"
+        },
+        {
+          "tag": "div",
+          "cls": "visuallyHidden",
+          "position": "fixed",
+          "rect": {
+            "top": 0,
+            "left": 0,
+            "width": 4,
+            "height": 4
+          },
+          "text": "View Company",
+          "opacity": "0"
+        },
+        {
+          "tag": "div",
+          "cls": "visuallyHidden",
+          "position": "fixed",
+          "rect": {
+            "top": 0,
+            "left": 0,
+            "width": 4,
+            "height": 4
+          },
+          "text": "Philosophy",
+          "opacity": "0"
+        },
+        {
+          "tag": "aside",
+          "cls": "aside",
+          "position": "fixed",
+          "rect": {
+            "top": 0,
+            "left": 0,
+            "width": 390,
+            "height": 844
+          },
+          "text": "©202611:22:11gst, dubai uae 16:22:11jst, tokyo jpnscroll",
+          "opacity": "1"
+        }
+      ]
+    },
+    "at2000": {
+      "nav": {
+        "height": 844,
+        "top": 0,
+        "position": "fixed",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "backdropFilter": "none",
+        "borderBottom": "0px rgb(217, 215, 212)",
+        "paddingBlock": "0px / 0px",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)",
+        "opacity": "1",
+        "color": "rgb(217, 215, 212)"
+      },
+      "fixedOrSticky": [
+        {
+          "tag": "header",
+          "cls": "header",
+          "position": "fixed",
+          "rect": {
+            "top": 0,
+            "left": 0,
+            "width": 390,
+            "height": 844
+          },
+          "text": "IZANAMI enja menu close",
+          "opacity": "1"
+        },
+        {
+          "tag": "span",
+          "cls": "visuallyHidden",
+          "position": "fixed",
+          "rect": {
+            "top": 0,
+            "left": 0,
+            "width": 4,
+            "height": 4
+          },
+          "text": "IZANAMI",
+          "opacity": "0"
+        },
+        {
+          "tag": "h2",
+          "cls": "SP_cz_R12_H100 cz_R20_H100 label homePhilosophy_label",
+          "position": "sticky",
+          "rect": {
+            "top": 130,
+            "left": 39.77,
+            "width": 11.64,
+            "height": 71.02
+          },
+          "text": "philosophy",
+          "opacity": "1"
+        },
+        {
+          "tag": "div",
+          "cls": "visuallyHidden",
+          "position": "fixed",
+          "rect": {
+            "top": 0,
+            "left": 0,
+            "width": 4,
+            "height": 4
+          },
+          "text": "View Philosophy",
+          "opacity": "0"
+        },
+        {
+          "tag": "h2",
+          "cls": "SP_cz_R12_H100 cz_R20_H100 label homeProjects_label",
+          "position": "sticky",
+          "rect": {
+            "top": 525.91,
+            "left": 39.77,
+            "width": 11.64,
+            "height": 52.61
+          },
+          "text": "projects",
+          "opacity": "1"
+        },
+        {
+          "tag": "div",
+          "cls": "visuallyHidden",
+          "position": "fixed",
+          "rect": {
+            "top": 0,
+            "left": 0,
+            "width": 4,
+            "height": 4
+          },
+          "text": "View Projects",
+          "opacity": "0"
+        },
+        {
+          "tag": "section",
+          "cls": "stickySection",
+          "position": "sticky",
+          "rect": {
+            "top": 1428.13,
+            "left": 0,
+            "width": 390,
+            "height": 856.98
+          },
+          "text": "projects01 SchoolNurturing the foundations of life.Through \"",
+          "opacity": "1"
+        },
+        {
+          "tag": "p",
+          "cls": "SP_cz_R12_H100 cz_R20_H100 label stickySection_label",
+          "position": "sticky",
+          "rect": {
+            "top": 1525.13,
+            "left": 39.77,
+            "width": 11.64,
+            "height": 52.61
+          },
+          "text": "projects",
+          "opacity": "1"
+        },
+        {
+          "tag": "div",
+          "cls": "visuallyHidden",
+          "position": "fixed",
+          "rect": {
+            "top": 0,
+            "left": 0,
+            "width": 4,
+            "height": 4
+          },
+          "text": "View School",
+          "opacity": "0"
+        },
+        {
+          "tag": "section",
+          "cls": "stickySection",
+          "position": "sticky",
+          "rect": {
+            "top": 2285.11,
+            "left": 0,
+            "width": 390,
+            "height": 884.91
+          },
+          "text": "projects02 CraftAwakening the sensesthrough Japanese aesthet",
+          "opacity": "1"
+        },
+        {
+          "tag": "p",
+          "cls": "SP_cz_R12_H100 cz_R20_H100 label stickySection_label",
+          "position": "sticky",
+          "rect": {
+            "top": 2382.11,
+            "left": 39.77,
+            "width": 11.64,
+            "height": 52.61
+          },
+          "text": "projects",
+          "opacity": "1"
+        },
+        {
+          "tag": "div",
+          "cls": "visuallyHidden",
+          "position": "fixed",
+          "rect": {
+            "top": 0,
+            "left": 0,
+            "width": 4,
+            "height": 4
+          },
+          "text": "View Craft",
+          "opacity": "0"
+        },
+        {
+          "tag": "section",
+          "cls": "stickySection",
+          "position": "sticky",
+          "rect": {
+            "top": 3170.02,
+            "left": 0,
+            "width": 390,
+            "height": 880.27
+          },
+          "text": "projects03 RetreatReturning to your essence.Rooted in ancien",
+          "opacity": "1"
+        },
+        {
+          "tag": "p",
+          "cls": "SP_cz_R12_H100 cz_R20_H100 label stickySection_label",
+          "position": "sticky",
+          "rect": {
+            "top": 3267.02,
+            "left": 39.77,
+            "width": 11.64,
+            "height": 52.61
+          },
+          "text": "projects",
+          "opacity": "1"
+        },
+        {
+          "tag": "div",
+          "cls": "visuallyHidden",
+          "position": "fixed",
+          "rect": {
+            "top": 0,
+            "left": 0,
+            "width": 4,
+            "height": 4
+          },
+          "text": "View Retreat",
+          "opacity": "0"
+        },
+        {
+          "tag": "h2",
+          "cls": "SP_cz_R12_H100 cz_R20_H100 label",
+          "position": "sticky",
+          "rect": {
+            "top": 4156.98,
+            "left": 39.77,
+            "width": 11.64,
+            "height": 57.59
+          },
+          "text": "company",
+          "opacity": "1"
+        },
+        {
+          "tag": "span",
+          "cls": "visuallyHidden",
+          "position": "fixed",
+          "rect": {
+            "top": 0,
+            "left": 0,
+            "width": 4,
+            "height": 4
+          },
+          "text": "IZANAMI",
+          "opacity": "0"
+        },
+        {
+          "tag": "div",
+          "cls": "visuallyHidden",
+          "position": "fixed",
+          "rect": {
+            "top": 0,
+            "left": 0,
+            "width": 4,
+            "height": 4
+          },
+          "text": "View Company",
+          "opacity": "0"
+        },
+        {
+          "tag": "div",
+          "cls": "visuallyHidden",
+          "position": "fixed",
+          "rect": {
+            "top": 0,
+            "left": 0,
+            "width": 4,
+            "height": 4
+          },
+          "text": "Philosophy",
+          "opacity": "0"
+        },
+        {
+          "tag": "div",
+          "cls": "transition",
+          "position": "fixed",
+          "rect": {
+            "top": 0,
+            "left": 0,
+            "width": 390,
+            "height": 844
+          },
+          "text": "",
+          "opacity": "0"
+        }
+      ]
+    },
+    "changed": false,
+    "diff": {}
+  },
+  "shots": [
+    "izanami-390-full.jpg"
+  ],
+  "fullPageShotRepresentative": true,
+  "pageErrors": []
+}

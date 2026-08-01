@@ -1,0 +1,929 @@
+{
+  "slug": "plan-az",
+  "url": "https://plan-az.com",
+  "name": "Plan AZ",
+  "country": "Korea",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "ok": true,
+  "httpStatus": 200,
+  "finalUrl": "https://plan-az.com/",
+  "consentDismissed": [],
+  "scrollInfo": {
+    "contentHeight": 16406,
+    "docScrollHeight": 16406,
+    "maxElementBottom": 16406,
+    "innerScrollerHeight": 3076,
+    "virtualScroll": false
+  },
+  "document": {
+    "scrollHeight": 16406,
+    "vhMultiple": 19.44,
+    "textNodeCount": 375,
+    "canvasCount": 1,
+    "elementCount": 854,
+    "title": "플랜에이제트 | PLAN-AZ",
+    "lang": "ko",
+    "contentHeight": 16406,
+    "scrollMode": "native"
+  },
+  "container": {
+    "dominantPairs": [
+      {
+        "width": 315,
+        "left": 195,
+        "count": 12,
+        "sample": {
+          "tag": "p",
+          "cls": "tit archivo visible820"
+        }
+      },
+      {
+        "width": 351,
+        "left": 20,
+        "count": 6,
+        "sample": {
+          "tag": "p",
+          "cls": "text text02"
+        }
+      },
+      {
+        "width": 278,
+        "left": 57,
+        "count": 2,
+        "sample": {
+          "tag": "p",
+          "cls": "text tit archivo"
+        }
+      },
+      {
+        "width": 390,
+        "left": 195,
+        "count": 2,
+        "sample": {
+          "tag": "p",
+          "cls": "t01 archivo visible570"
+        }
+      },
+      {
+        "width": 390,
+        "left": 0,
+        "count": 2,
+        "sample": {
+          "tag": "span",
+          "cls": "archivo"
+        }
+      },
+      {
+        "width": 336,
+        "left": 196,
+        "count": 1,
+        "sample": {
+          "tag": "p",
+          "cls": "tx03 archivo"
+        }
+      }
+    ],
+    "containerChain": {
+      "chain": [
+        {
+          "tag": "p",
+          "cls": "tit archivo visible820",
+          "width": 315,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "block"
+        },
+        {
+          "tag": "div",
+          "cls": "main__conts__stack__box__left",
+          "width": 315,
+          "maxWidth": "90%",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "block"
+        },
+        {
+          "tag": "div",
+          "cls": "main__conts__stack__box00__inbox",
+          "width": 350,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "block"
+        },
+        {
+          "tag": "div",
+          "cls": "main__conts__stack__box00 main__conts__stack__box01",
+          "width": 350,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "block"
+        },
+        {
+          "tag": "div",
+          "cls": "inner__full main__conts__stack__inner",
+          "width": 350,
+          "maxWidth": "1840px",
+          "paddingInline": "0px / 0px",
+          "marginInline": "20px / 20px",
+          "display": "block"
+        },
+        {
+          "tag": "section",
+          "cls": "main__centents__wr main__conts__stack__wr",
+          "width": 390,
+          "maxWidth": "390px",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "block"
+        },
+        {
+          "tag": "div",
+          "cls": "pin-spacer",
+          "width": 390,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "block"
+        },
+        {
+          "tag": "div",
+          "cls": "container",
+          "width": 390,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "block"
+        }
+      ],
+      "constrained": {
+        "tag": "div",
+        "cls": "main__conts__stack__box__left",
+        "width": 315,
+        "maxWidth": "90%",
+        "paddingInline": "0px / 0px",
+        "marginInline": "0px / 0px",
+        "display": "block"
+      }
+    },
+    "grids": [],
+    "bodyPaddingInline": "0px / 0px",
+    "bodyMaxWidth": "none",
+    "htmlPaddingInline": "0px / 0px"
+  },
+  "leftEdgeTest": {
+    "layout": {
+      "n": 7,
+      "mean": 46.43,
+      "stdDev": 63.52,
+      "distinctExact": 4,
+      "distinctClustered2px": 4,
+      "clusters": [
+        {
+          "at": -8,
+          "count": 1
+        },
+        {
+          "at": 20,
+          "count": 4
+        },
+        {
+          "at": 57,
+          "count": 1
+        },
+        {
+          "at": 196,
+          "count": 1
+        }
+      ],
+      "values": [
+        20,
+        20,
+        196,
+        57,
+        20,
+        20,
+        -8
+      ]
+    },
+    "rect": {
+      "n": 7,
+      "mean": 20.95,
+      "stdDev": 17.28,
+      "distinctExact": 4,
+      "distinctClustered2px": 3,
+      "clusters": [
+        {
+          "at": -8.17,
+          "count": 1
+        },
+        {
+          "at": 20.12,
+          "count": 5
+        },
+        {
+          "at": 56.06,
+          "count": 1
+        }
+      ],
+      "values": [
+        19.5,
+        19.5,
+        20.73,
+        56.06,
+        19.5,
+        19.5,
+        -8.17
+      ]
+    },
+    "headings": {
+      "n": 7,
+      "mean": 56.71,
+      "stdDev": 64.23,
+      "distinctExact": 5,
+      "distinctClustered2px": 5,
+      "clusters": [
+        {
+          "at": -8,
+          "count": 1
+        },
+        {
+          "at": 20,
+          "count": 3
+        },
+        {
+          "at": 57,
+          "count": 1
+        },
+        {
+          "at": 92,
+          "count": 1
+        },
+        {
+          "at": 196,
+          "count": 1
+        }
+      ],
+      "values": [
+        92,
+        20,
+        196,
+        57,
+        20,
+        20,
+        -8
+      ]
+    },
+    "sectionDiscovery": "semantic-siblings"
+  },
+  "sections": [
+    {
+      "index": 0,
+      "tag": "section",
+      "id": "main__intro__wr",
+      "cls": "main__intro__wr",
+      "height": 844,
+      "vhFraction": 1,
+      "paddingBlockStart": "0px",
+      "paddingBlockEnd": "0px",
+      "marginBlockStart": "0px",
+      "marginBlockEnd": "0px",
+      "firstText": {
+        "layoutLeft": 20,
+        "rectLeft": 19.5,
+        "tag": "div",
+        "fontSize": "16px",
+        "text": "14:21:12:83"
+      },
+      "heading": {
+        "layoutLeft": 92,
+        "rectLeft": 92.14,
+        "tag": "span",
+        "fontSize": "72px",
+        "text": "A"
+      }
+    },
+    {
+      "index": 1,
+      "tag": "section",
+      "id": "main__contents__wr00",
+      "cls": "main__contents__wr main__contents__wr00 h100",
+      "height": 856.23,
+      "vhFraction": 1.01,
+      "paddingBlockStart": "0px",
+      "paddingBlockEnd": "0px",
+      "marginBlockStart": "0px",
+      "marginBlockEnd": "0px",
+      "firstText": {
+        "layoutLeft": 20,
+        "rectLeft": 19.5,
+        "tag": "p",
+        "fontSize": "45px",
+        "text": "Designing"
+      },
+      "heading": {
+        "layoutLeft": 20,
+        "rectLeft": 19.5,
+        "tag": "p",
+        "fontSize": "45px",
+        "text": "Designing"
+      }
+    },
+    {
+      "index": 2,
+      "tag": "section",
+      "id": "main__contents__wr01__mo",
+      "cls": "main__contents__wr01__mo visible570",
+      "height": 2960,
+      "vhFraction": 3.51,
+      "paddingBlockStart": "0px",
+      "paddingBlockEnd": "0px",
+      "marginBlockStart": "0px",
+      "marginBlockEnd": "0px",
+      "firstText": {
+        "layoutLeft": 196,
+        "rectLeft": 20.73,
+        "tag": "p",
+        "fontSize": "14px",
+        "text": "001 /"
+      },
+      "heading": {
+        "layoutLeft": 196,
+        "rectLeft": 20.73,
+        "tag": "p",
+        "fontSize": "24px",
+        "text": "THE SPACE KIDS"
+      }
+    },
+    {
+      "index": 3,
+      "tag": "section",
+      "id": "main__contents__wr02",
+      "cls": "main__contents__wr main__contents__wr02",
+      "height": 635.39,
+      "vhFraction": 0.75,
+      "paddingBlockStart": "240px",
+      "paddingBlockEnd": "0px",
+      "marginBlockStart": "0px",
+      "marginBlockEnd": "0px",
+      "firstText": {
+        "layoutLeft": 57,
+        "rectLeft": 56.06,
+        "tag": "p",
+        "fontSize": "45px",
+        "text": "Every Plan from A-Z, Perfected in Our Projects"
+      },
+      "heading": {
+        "layoutLeft": 57,
+        "rectLeft": 56.06,
+        "tag": "p",
+        "fontSize": "45px",
+        "text": "Every Plan from A-Z, Perfected in Our Projects"
+      }
+    },
+    {
+      "index": 4,
+      "tag": "section",
+      "id": "main__contents__wr03",
+      "cls": "main__contents__wr main__contents__wr03",
+      "height": 2107,
+      "vhFraction": 2.5,
+      "paddingBlockStart": "240px",
+      "paddingBlockEnd": "0px",
+      "marginBlockStart": "0px",
+      "marginBlockEnd": "0px",
+      "firstText": {
+        "layoutLeft": 20,
+        "rectLeft": 19.5,
+        "tag": "h2",
+        "fontSize": "28px",
+        "text": "STRATEGY"
+      },
+      "heading": {
+        "layoutLeft": 20,
+        "rectLeft": 19.5,
+        "tag": "h2",
+        "fontSize": "28px",
+        "text": "STRATEGY"
+      }
+    },
+    {
+      "index": 5,
+      "tag": "section",
+      "id": "main__contents__wr05",
+      "cls": "main__contents__wr main__contents__wr05",
+      "height": 558,
+      "vhFraction": 0.66,
+      "paddingBlockStart": "240px",
+      "paddingBlockEnd": "0px",
+      "marginBlockStart": "0px",
+      "marginBlockEnd": "0px",
+      "firstText": {
+        "layoutLeft": 20,
+        "rectLeft": 19.5,
+        "tag": "p",
+        "fontSize": "45px",
+        "text": "A"
+      },
+      "heading": {
+        "layoutLeft": 20,
+        "rectLeft": 19.5,
+        "tag": "p",
+        "fontSize": "45px",
+        "text": "A"
+      }
+    },
+    {
+      "index": 6,
+      "tag": "section",
+      "id": "main__contents__wr04",
+      "cls": "main__contents__wr main__contents__wr04",
+      "height": 923.5,
+      "vhFraction": 1.09,
+      "paddingBlockStart": "240px",
+      "paddingBlockEnd": "0px",
+      "marginBlockStart": "0px",
+      "marginBlockEnd": "0px",
+      "firstText": {
+        "layoutLeft": -8,
+        "rectLeft": -8.17,
+        "tag": "p",
+        "fontSize": "120px",
+        "text": "A"
+      },
+      "heading": {
+        "layoutLeft": -8,
+        "rectLeft": -8.17,
+        "tag": "p",
+        "fontSize": "120px",
+        "text": "A"
+      }
+    }
+  ],
+  "verticalRhythm": {
+    "sectionCount": 7,
+    "near100vhCount": 2,
+    "near100vhPct": 28.57,
+    "strictGcdOfSpacing": 1,
+    "baseUnitEstimate80pct": 2,
+    "spacingHistogram": [
+      {
+        "value": 20,
+        "count": 50
+      },
+      {
+        "value": 10,
+        "count": 36
+      },
+      {
+        "value": 30,
+        "count": 28
+      },
+      {
+        "value": 12,
+        "count": 24
+      },
+      {
+        "value": 40,
+        "count": 20
+      },
+      {
+        "value": 24,
+        "count": 15
+      },
+      {
+        "value": 6,
+        "count": 14
+      },
+      {
+        "value": 8,
+        "count": 9
+      },
+      {
+        "value": 16,
+        "count": 6
+      },
+      {
+        "value": 93,
+        "count": 6
+      },
+      {
+        "value": 120,
+        "count": 4
+      },
+      {
+        "value": 240,
+        "count": 4
+      },
+      {
+        "value": 13,
+        "count": 2
+      },
+      {
+        "value": 38,
+        "count": 2
+      }
+    ],
+    "spacingSampleSize": 225
+  },
+  "typeScale": {
+    "distinctFontSizeCount": 10,
+    "distinctFontSizeCount_used2plus": 9,
+    "distinctSizes": [
+      {
+        "size": 120,
+        "count": 28
+      },
+      {
+        "size": 72,
+        "count": 4
+      },
+      {
+        "size": 48,
+        "count": 1
+      },
+      {
+        "size": 45,
+        "count": 171
+      },
+      {
+        "size": 32,
+        "count": 6
+      },
+      {
+        "size": 28,
+        "count": 8
+      },
+      {
+        "size": 24,
+        "count": 4
+      },
+      {
+        "size": 16,
+        "count": 6
+      },
+      {
+        "size": 14,
+        "count": 50
+      },
+      {
+        "size": 12,
+        "count": 10
+      }
+    ],
+    "scaleSizesDesc": [
+      120,
+      72,
+      45,
+      32,
+      28,
+      24,
+      16,
+      14,
+      12
+    ],
+    "consecutiveRatios": [
+      1.67,
+      1.6,
+      1.41,
+      1.14,
+      1.17,
+      1.5,
+      1.14,
+      1.17
+    ],
+    "roles": {
+      "h1": null,
+      "biggestText": {
+        "tag": "p",
+        "fontSize": 120,
+        "fontWeight": "400",
+        "lineHeightPx": 120,
+        "lineHeightRatio": 1,
+        "letterSpacing": "0px",
+        "letterSpacingEm": 0,
+        "fontFamily": "Archivo",
+        "fontFamilyFull": "Archivo, sans-serif",
+        "textTransform": "uppercase",
+        "color": "rgba(255, 255, 255, 0.13)",
+        "widthPx": 81.84,
+        "text": "A"
+      },
+      "h2All": [
+        {
+          "tag": "h2",
+          "fontSize": 28,
+          "fontWeight": "400",
+          "lineHeightPx": 28,
+          "lineHeightRatio": 1,
+          "letterSpacing": "0px",
+          "letterSpacingEm": 0,
+          "fontFamily": "Archivo",
+          "fontFamilyFull": "Archivo, sans-serif",
+          "textTransform": "uppercase",
+          "color": "rgb(255, 255, 255)",
+          "widthPx": 351,
+          "text": "STRATEGY"
+        },
+        {
+          "tag": "h2",
+          "fontSize": 28,
+          "fontWeight": "400",
+          "lineHeightPx": 28,
+          "lineHeightRatio": 1,
+          "letterSpacing": "0px",
+          "letterSpacingEm": 0,
+          "fontFamily": "Archivo",
+          "fontFamilyFull": "Archivo, sans-serif",
+          "textTransform": "uppercase",
+          "color": "rgb(255, 255, 255)",
+          "widthPx": 351,
+          "text": "CREATIVITY"
+        },
+        {
+          "tag": "h2",
+          "fontSize": 28,
+          "fontWeight": "400",
+          "lineHeightPx": 28,
+          "lineHeightRatio": 1,
+          "letterSpacing": "0px",
+          "letterSpacingEm": 0,
+          "fontFamily": "Archivo",
+          "fontFamilyFull": "Archivo, sans-serif",
+          "textTransform": "uppercase",
+          "color": "rgb(255, 255, 255)",
+          "widthPx": 351,
+          "text": "SPEED"
+        },
+        {
+          "tag": "h2",
+          "fontSize": 28,
+          "fontWeight": "400",
+          "lineHeightPx": 28,
+          "lineHeightRatio": 1,
+          "letterSpacing": "0px",
+          "letterSpacingEm": 0,
+          "fontFamily": "Archivo",
+          "fontFamilyFull": "Archivo, sans-serif",
+          "textTransform": "uppercase",
+          "color": "rgb(255, 255, 255)",
+          "widthPx": 351,
+          "text": "PRECISION"
+        }
+      ],
+      "h3": null,
+      "body": {
+        "tag": "p",
+        "fontSize": 14,
+        "fontWeight": "400",
+        "lineHeightPx": 21,
+        "lineHeightRatio": 1.5,
+        "letterSpacing": "0px",
+        "letterSpacingEm": 0,
+        "fontFamily": "Archivo",
+        "fontFamilyFull": "Archivo, Pretendard, dotum, sans-serif",
+        "textTransform": "none",
+        "color": "rgb(255, 255, 255)",
+        "widthPx": 315,
+        "text": "제품 스토리, 브랜드 캠페인, 전시·행사 페이지 등에서는 한 번의 스크롤과 마우스 움직임으로 기억에 남는 경"
+      },
+      "small": {
+        "tag": "p",
+        "fontSize": 12,
+        "fontWeight": "400",
+        "lineHeightPx": 16.8,
+        "lineHeightRatio": 1.4,
+        "letterSpacing": "0px",
+        "letterSpacingEm": 0,
+        "fontFamily": "Archivo",
+        "fontFamilyFull": "Archivo, Pretendard, dotum, sans-serif",
+        "textTransform": "none",
+        "color": "rgb(255, 255, 255)",
+        "widthPx": 390,
+        "text": "(SCROLL)"
+      },
+      "mono": null
+    },
+    "readingMeasure": {
+      "columnWidthPx": 315,
+      "widthOf100Chars": 643.02,
+      "measureCh_spec": 48.99,
+      "measureCh_zeroWidth": 39.27,
+      "maxWidthDeclared": "none",
+      "canvasFont": "14px Archivo, Pretendard, dotum, sans-serif"
+    },
+    "readingMeasureAlternates": [
+      {
+        "tag": "p",
+        "fontSize": 14,
+        "fontWeight": "400",
+        "lineHeightPx": 21,
+        "lineHeightRatio": 1.5,
+        "letterSpacing": "0px",
+        "letterSpacingEm": 0,
+        "fontFamily": "Archivo",
+        "fontFamilyFull": "Archivo, Pretendard, dotum, sans-serif",
+        "textTransform": "none",
+        "color": "rgb(255, 255, 255)",
+        "widthPx": 315,
+        "text": "제품 스토리, 브랜드 캠페인, 전시·행사 페이지 등에서는 한 번의 스크롤과 마우스 움직임으로 기억에 남는 경"
+      },
+      {
+        "tag": "p",
+        "fontSize": 14,
+        "fontWeight": "400",
+        "lineHeightPx": 21,
+        "lineHeightRatio": 1.5,
+        "letterSpacing": "0px",
+        "letterSpacingEm": 0,
+        "fontFamily": "Archivo",
+        "fontFamilyFull": "Archivo, Pretendard, dotum, sans-serif",
+        "textTransform": "none",
+        "color": "rgb(255, 255, 255)",
+        "widthPx": 351,
+        "text": "플랜에이제트는 픽셀 하나하나까지 신경 씁니다. 그리드와 간격부터 타이포그래피, 인터랙션 타이밍, 반응형 대응"
+      },
+      {
+        "tag": "p",
+        "fontSize": 14,
+        "fontWeight": "400",
+        "lineHeightPx": 21,
+        "lineHeightRatio": 1.5,
+        "letterSpacing": "0px",
+        "letterSpacingEm": 0,
+        "fontFamily": "Archivo",
+        "fontFamilyFull": "Archivo, Pretendard, dotum, sans-serif",
+        "textTransform": "none",
+        "color": "rgb(255, 255, 255)",
+        "widthPx": 351,
+        "text": "플랜에이제트의 크리에이티브는 브랜드를 잊지 않는 선에서 움직입니다. 3D, 모션, 인터랙션을 브랜드의 성격과"
+      }
+    ],
+    "distinctFontFamilyCount": 3,
+    "fontFamilies": [
+      {
+        "family": "Archivo",
+        "count": 275
+      },
+      {
+        "family": "Pretendard",
+        "count": 9
+      },
+      {
+        "family": "Peace Sans",
+        "count": 4
+      }
+    ]
+  },
+  "color": {
+    "textColors": [
+      {
+        "value": "rgb(255,255,255)",
+        "count": 259
+      },
+      {
+        "value": "rgba(255,255,255,0.13)",
+        "count": 28
+      },
+      {
+        "value": "rgb(0,0,0)",
+        "count": 1
+      }
+    ],
+    "backgroundColors": [
+      {
+        "value": "rgb(0,0,0)",
+        "count": 3
+      },
+      {
+        "value": "rgb(255,255,255)",
+        "count": 1
+      }
+    ],
+    "distinctTextColorCount": 3,
+    "distinctBgColorCount": 2
+  },
+  "persistent": {
+    "fixedOrSticky": [
+      {
+        "tag": "header",
+        "cls": "header",
+        "position": "fixed",
+        "rect": {
+          "top": 0,
+          "left": 0,
+          "width": 390,
+          "height": 56
+        },
+        "zIndex": "9999",
+        "text": "ABOUT PROJECT CONTACT",
+        "opacity": "0"
+      }
+    ]
+  },
+  "nav": {
+    "tag": "header",
+    "cls": "header",
+    "height": 56,
+    "top": 0,
+    "position": "fixed",
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "backdropFilter": "none",
+    "borderBottom": "0px rgb(0, 0, 0)",
+    "paddingBlock": "0px / 0px",
+    "transform": "none",
+    "opacity": "0",
+    "mixBlendMode": "normal",
+    "color": "rgb(0, 0, 0)"
+  },
+  "navState": {
+    "at0": {
+      "nav": {
+        "height": 56,
+        "top": 0,
+        "position": "fixed",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "backdropFilter": "none",
+        "borderBottom": "0px rgb(0, 0, 0)",
+        "paddingBlock": "0px / 0px",
+        "transform": "none",
+        "opacity": "0",
+        "color": "rgb(0, 0, 0)"
+      },
+      "fixedOrSticky": [
+        {
+          "tag": "header",
+          "cls": "header",
+          "position": "fixed",
+          "rect": {
+            "top": 0,
+            "left": 0,
+            "width": 390,
+            "height": 56
+          },
+          "text": "ABOUT PROJECT CONTACT",
+          "opacity": "0"
+        }
+      ]
+    },
+    "at2000": {
+      "nav": {
+        "height": 56,
+        "top": 0,
+        "position": "fixed",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "backdropFilter": "none",
+        "borderBottom": "0px rgb(0, 0, 0)",
+        "paddingBlock": "0px / 0px",
+        "transform": "none",
+        "opacity": "1",
+        "color": "rgb(0, 0, 0)"
+      },
+      "fixedOrSticky": [
+        {
+          "tag": "header",
+          "cls": "header",
+          "position": "fixed",
+          "rect": {
+            "top": 0,
+            "left": 0,
+            "width": 390,
+            "height": 56
+          },
+          "text": "ABOUT PROJECT CONTACT",
+          "opacity": "1"
+        },
+        {
+          "tag": "div",
+          "cls": "topscr__btn__wr show",
+          "position": "fixed",
+          "rect": {
+            "top": 782,
+            "left": 334,
+            "width": 32,
+            "height": 32
+          },
+          "text": "",
+          "opacity": "1"
+        }
+      ]
+    },
+    "changed": true,
+    "diff": {
+      "opacity": {
+        "at0": "0",
+        "at2000": "1"
+      }
+    }
+  },
+  "shots": [
+    "plan-az-390-full.jpg"
+  ],
+  "fullPageShotRepresentative": true,
+  "pageErrors": []
+}

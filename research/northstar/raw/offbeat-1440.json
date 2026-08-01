@@ -1,0 +1,1605 @@
+{
+  "slug": "offbeat",
+  "url": "https://offbeat.kr",
+  "name": "Offbeat",
+  "country": "Korea",
+  "viewport": {
+    "width": 1440,
+    "height": 900
+  },
+  "ok": true,
+  "httpStatus": 200,
+  "finalUrl": "https://www.offbeat.kr/",
+  "consentDismissed": [],
+  "scrollInfo": {
+    "contentHeight": 15419,
+    "docScrollHeight": 15419,
+    "maxElementBottom": 15419,
+    "innerScrollerHeight": 3055,
+    "virtualScroll": false
+  },
+  "document": {
+    "scrollHeight": 15419,
+    "vhMultiple": 17.13,
+    "textNodeCount": 259,
+    "canvasCount": 0,
+    "elementCount": 815,
+    "title": "offbeat",
+    "lang": "en",
+    "contentHeight": 15419,
+    "scrollMode": "native"
+  },
+  "container": {
+    "dominantPairs": [
+      {
+        "width": 328,
+        "left": 379,
+        "count": 3,
+        "sample": {
+          "tag": "p",
+          "cls": "type-body is-home"
+        }
+      },
+      {
+        "width": 328,
+        "left": 733,
+        "count": 2,
+        "sample": {
+          "tag": "p",
+          "cls": "type-body is-home"
+        }
+      },
+      {
+        "width": 1153,
+        "left": 262,
+        "count": 1,
+        "sample": {
+          "tag": "div",
+          "cls": "type-lead-text is-about indent-grid-3 indent-grid-m-1"
+        }
+      },
+      {
+        "width": 445,
+        "left": 733,
+        "count": 1,
+        "sample": {
+          "tag": "p",
+          "cls": "studio-home-about-description"
+        }
+      },
+      {
+        "width": 871,
+        "left": 284,
+        "count": 1,
+        "sample": {
+          "tag": "div",
+          "cls": "typo-scroll__h"
+        }
+      },
+      {
+        "width": 934,
+        "left": 253,
+        "count": 1,
+        "sample": {
+          "tag": "div",
+          "cls": "typo-scroll__h"
+        }
+      }
+    ],
+    "containerChain": {
+      "chain": [
+        {
+          "tag": "p",
+          "cls": "type-body is-home",
+          "width": 327.63,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "block"
+        },
+        {
+          "tag": "div",
+          "cls": "studio-portrait-body start-4 span-3 m-start-1 m-span-4 m-ord",
+          "width": 327.63,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "block"
+        },
+        {
+          "tag": "div",
+          "cls": "studio-portrait",
+          "width": 1440,
+          "maxWidth": "none",
+          "paddingInline": "25.92px / 25.92px",
+          "marginInline": "0px / 0px",
+          "display": "grid"
+        },
+        {
+          "tag": "div",
+          "cls": "studio-section-container",
+          "width": 1440,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "block"
+        },
+        {
+          "tag": "div",
+          "cls": "studio-home-portrait",
+          "width": 1440,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "block"
+        },
+        {
+          "tag": "div",
+          "cls": "main-wrapper",
+          "width": 1440,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "block"
+        },
+        {
+          "tag": "div",
+          "cls": "page-wrapper",
+          "width": 1440,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "block"
+        }
+      ],
+      "constrained": null
+    },
+    "grids": [
+      {
+        "columns": 12,
+        "columnGap": "25.92px",
+        "rowGap": "32px",
+        "width": 1440,
+        "template": "91.9219px 91.9219px 91.9375px 91.9375px 91.9375px 91.9375px 91.9219px 91.9219px 91.9375px 91.9375px 91.9375px 91.9375px",
+        "count": 7
+      },
+      {
+        "columns": 12,
+        "columnGap": "0px",
+        "rowGap": "0px",
+        "width": 1440,
+        "template": "120px 120px 120px 120px 120px 120px 120px 120px 120px 120px 120px 120px",
+        "count": 1
+      }
+    ],
+    "bodyPaddingInline": "0px / 0px",
+    "bodyMaxWidth": "none",
+    "htmlPaddingInline": "0px / 0px"
+  },
+  "leftEdgeTest": {
+    "layout": {
+      "n": 7,
+      "mean": 182.14,
+      "stdDev": 191.6,
+      "distinctExact": 4,
+      "distinctClustered2px": 4,
+      "clusters": [
+        {
+          "at": 26,
+          "count": 4
+        },
+        {
+          "at": 262,
+          "count": 1
+        },
+        {
+          "at": 406,
+          "count": 1
+        },
+        {
+          "at": 503,
+          "count": 1
+        }
+      ],
+      "values": [
+        26,
+        406,
+        262,
+        26,
+        26,
+        26,
+        503
+      ]
+    },
+    "rect": {
+      "n": 7,
+      "mean": 182.04,
+      "stdDev": 191.65,
+      "distinctExact": 4,
+      "distinctClustered2px": 4,
+      "clusters": [
+        {
+          "at": 25.91,
+          "count": 4
+        },
+        {
+          "at": 261.58,
+          "count": 1
+        },
+        {
+          "at": 405.75,
+          "count": 1
+        },
+        {
+          "at": 503.33,
+          "count": 1
+        }
+      ],
+      "values": [
+        25.91,
+        405.75,
+        261.58,
+        25.91,
+        25.91,
+        25.91,
+        503.33
+      ]
+    },
+    "headings": {
+      "n": 7,
+      "mean": 115.29,
+      "stdDev": 143.61,
+      "distinctExact": 4,
+      "distinctClustered2px": 4,
+      "clusters": [
+        {
+          "at": 26,
+          "count": 4
+        },
+        {
+          "at": 35,
+          "count": 1
+        },
+        {
+          "at": 262,
+          "count": 1
+        },
+        {
+          "at": 406,
+          "count": 1
+        }
+      ],
+      "values": [
+        26,
+        406,
+        262,
+        26,
+        26,
+        26,
+        35
+      ]
+    },
+    "sectionDiscovery": "tall-children-of-wrapper"
+  },
+  "sections": [
+    {
+      "index": 0,
+      "tag": "section",
+      "id": null,
+      "cls": "offbeat-hero-landing_section",
+      "height": 900,
+      "vhFraction": 1,
+      "paddingBlockStart": "0px",
+      "paddingBlockEnd": "0px",
+      "marginBlockStart": "0px",
+      "marginBlockEnd": "0px",
+      "firstText": {
+        "layoutLeft": 26,
+        "rectLeft": 25.91,
+        "tag": "span",
+        "fontSize": "56px",
+        "text": "Life"
+      },
+      "heading": {
+        "layoutLeft": 26,
+        "rectLeft": 25.91,
+        "tag": "span",
+        "fontSize": "56px",
+        "text": "Life"
+      }
+    },
+    {
+      "index": 1,
+      "tag": "div",
+      "id": null,
+      "cls": "studio-home-parallax",
+      "height": 2160,
+      "vhFraction": 2.4,
+      "paddingBlockStart": "0px",
+      "paddingBlockEnd": "0px",
+      "marginBlockStart": "0px",
+      "marginBlockEnd": "0px",
+      "firstText": {
+        "layoutLeft": 406,
+        "rectLeft": 405.75,
+        "tag": "div",
+        "fontSize": "24px",
+        "text": "정"
+      },
+      "heading": {
+        "layoutLeft": 406,
+        "rectLeft": 405.75,
+        "tag": "div",
+        "fontSize": "24px",
+        "text": "정"
+      }
+    },
+    {
+      "index": 2,
+      "tag": "div",
+      "id": null,
+      "cls": "studio-home-about-section",
+      "height": 900,
+      "vhFraction": 1,
+      "paddingBlockStart": "104px",
+      "paddingBlockEnd": "0px",
+      "marginBlockStart": "0px",
+      "marginBlockEnd": "301.76px",
+      "firstText": {
+        "layoutLeft": 262,
+        "rectLeft": 261.58,
+        "tag": "div",
+        "fontSize": "56px",
+        "text": "We listen first, observe deeply, and translate s"
+      },
+      "heading": {
+        "layoutLeft": 262,
+        "rectLeft": 261.58,
+        "tag": "div",
+        "fontSize": "56px",
+        "text": "We listen first, observe deeply, and translate s"
+      }
+    },
+    {
+      "index": 3,
+      "tag": "div",
+      "id": null,
+      "cls": "studio-home-portrait",
+      "height": 2902.77,
+      "vhFraction": 3.23,
+      "paddingBlockStart": "0px",
+      "paddingBlockEnd": "131.2px",
+      "marginBlockStart": "0px",
+      "marginBlockEnd": "301.76px",
+      "firstText": {
+        "layoutLeft": 26,
+        "rectLeft": 25.91,
+        "tag": "div",
+        "fontSize": "172.8px",
+        "text": "F"
+      },
+      "heading": {
+        "layoutLeft": 26,
+        "rectLeft": 25.91,
+        "tag": "div",
+        "fontSize": "172.8px",
+        "text": "F"
+      }
+    },
+    {
+      "index": 4,
+      "tag": "div",
+      "id": null,
+      "cls": "studio-home-project",
+      "height": 3973.75,
+      "vhFraction": 4.42,
+      "paddingBlockStart": "0px",
+      "paddingBlockEnd": "0px",
+      "marginBlockStart": "0px",
+      "marginBlockEnd": "301.76px",
+      "firstText": {
+        "layoutLeft": 26,
+        "rectLeft": 25.91,
+        "tag": "div",
+        "fontSize": "172.8px",
+        "text": "F"
+      },
+      "heading": {
+        "layoutLeft": 26,
+        "rectLeft": 25.91,
+        "tag": "div",
+        "fontSize": "172.8px",
+        "text": "F"
+      }
+    },
+    {
+      "index": 5,
+      "tag": "div",
+      "id": null,
+      "cls": "studio-home-stage is-stage",
+      "height": 1746.36,
+      "vhFraction": 1.94,
+      "paddingBlockStart": "0px",
+      "paddingBlockEnd": "0px",
+      "marginBlockStart": "0px",
+      "marginBlockEnd": "131.2px",
+      "firstText": {
+        "layoutLeft": 26,
+        "rectLeft": 25.91,
+        "tag": "div",
+        "fontSize": "172.8px",
+        "text": "F"
+      },
+      "heading": {
+        "layoutLeft": 26,
+        "rectLeft": 25.91,
+        "tag": "div",
+        "fontSize": "172.8px",
+        "text": "F"
+      }
+    },
+    {
+      "index": 6,
+      "tag": "div",
+      "id": null,
+      "cls": "section-d _wf-grid my-full-bleed-grid",
+      "height": 1800,
+      "vhFraction": 2,
+      "paddingBlockStart": "0px",
+      "paddingBlockEnd": "0px",
+      "marginBlockStart": "0px",
+      "marginBlockEnd": "0px",
+      "firstText": {
+        "layoutLeft": 503,
+        "rectLeft": 503.33,
+        "tag": "p",
+        "fontSize": "12.96px",
+        "text": "Scroll down ↓"
+      },
+      "heading": {
+        "layoutLeft": 35,
+        "rectLeft": 35,
+        "tag": "a",
+        "fontSize": "32px",
+        "text": "Home"
+      }
+    }
+  ],
+  "verticalRhythm": {
+    "sectionCount": 7,
+    "near100vhCount": 2,
+    "near100vhPct": 28.57,
+    "strictGcdOfSpacing": 1,
+    "baseUnitEstimate80pct": null,
+    "spacingHistogram": [
+      {
+        "value": 26,
+        "count": 14
+      },
+      {
+        "value": 131,
+        "count": 8
+      },
+      {
+        "value": 35,
+        "count": 8
+      },
+      {
+        "value": 27,
+        "count": 6
+      },
+      {
+        "value": 302,
+        "count": 3
+      },
+      {
+        "value": 13,
+        "count": 2
+      },
+      {
+        "value": 10,
+        "count": 2
+      },
+      {
+        "value": 104,
+        "count": 2
+      },
+      {
+        "value": 46,
+        "count": 2
+      },
+      {
+        "value": 8,
+        "count": 2
+      },
+      {
+        "value": 115,
+        "count": 1
+      },
+      {
+        "value": 20,
+        "count": 1
+      }
+    ],
+    "spacingSampleSize": 51
+  },
+  "typeScale": {
+    "distinctFontSizeCount": 8,
+    "distinctFontSizeCount_used2plus": 8,
+    "distinctSizes": [
+      {
+        "size": 172.8,
+        "count": 50
+      },
+      {
+        "size": 72,
+        "count": 53
+      },
+      {
+        "size": 56,
+        "count": 12
+      },
+      {
+        "size": 32,
+        "count": 10
+      },
+      {
+        "size": 24,
+        "count": 103
+      },
+      {
+        "size": 18.64,
+        "count": 7
+      },
+      {
+        "size": 18,
+        "count": 7
+      },
+      {
+        "size": 12.96,
+        "count": 5
+      }
+    ],
+    "scaleSizesDesc": [
+      172.8,
+      72,
+      56,
+      32,
+      24,
+      18.64,
+      18,
+      12.96
+    ],
+    "consecutiveRatios": [
+      2.4,
+      1.29,
+      1.75,
+      1.33,
+      1.29,
+      1.04,
+      1.39
+    ],
+    "roles": {
+      "h1": null,
+      "biggestText": {
+        "tag": "div",
+        "fontSize": 172.8,
+        "fontWeight": "500",
+        "lineHeightPx": 138.24,
+        "lineHeightRatio": 0.8,
+        "letterSpacing": "-10.368px",
+        "letterSpacingEm": -0.06,
+        "fontFamily": "Cabinetgrotesk",
+        "fontFamilyFull": "Cabinetgrotesk, Georgia, sans-serif",
+        "textTransform": "uppercase",
+        "color": "rgb(250, 250, 250)",
+        "widthPx": 85.55,
+        "text": "F"
+      },
+      "h2All": [],
+      "h3": null,
+      "body": {
+        "tag": "p",
+        "fontSize": 18,
+        "fontWeight": "400",
+        "lineHeightPx": 25.2,
+        "lineHeightRatio": 1.4,
+        "letterSpacing": "0px",
+        "letterSpacingEm": 0,
+        "fontFamily": "Pretendard",
+        "fontFamilyFull": "Pretendard, Arial, sans-serif",
+        "textTransform": "none",
+        "color": "rgb(250, 250, 250)",
+        "widthPx": 445.45,
+        "text": "오프비트는 당신의 진심을 시각적 언어로 번역하는 비주얼 스토리텔링 스튜디오입니다. 누군가의 이야기에는 말로 "
+      },
+      "small": {
+        "tag": "div",
+        "fontSize": 12.96,
+        "fontWeight": "400",
+        "lineHeightPx": 15.55,
+        "lineHeightRatio": 1.2,
+        "letterSpacing": "-0.2592px",
+        "letterSpacingEm": -0.02,
+        "fontFamily": "Inter",
+        "fontFamilyFull": "Inter, Arial, sans-serif",
+        "textTransform": "uppercase",
+        "color": "rgb(250, 250, 250)",
+        "widthPx": 91.92,
+        "text": "( ABOUT )"
+      },
+      "mono": null
+    },
+    "readingMeasure": {
+      "columnWidthPx": 445.45,
+      "widthOf100Chars": 844.37,
+      "measureCh_spec": 52.76,
+      "measureCh_zeroWidth": 41.54,
+      "maxWidthDeclared": "none",
+      "canvasFont": "18px Pretendard, Arial, sans-serif"
+    },
+    "readingMeasureAlternates": [
+      {
+        "tag": "p",
+        "fontSize": 18,
+        "fontWeight": "400",
+        "lineHeightPx": 25.2,
+        "lineHeightRatio": 1.4,
+        "letterSpacing": "0px",
+        "letterSpacingEm": 0,
+        "fontFamily": "Pretendard",
+        "fontFamilyFull": "Pretendard, Arial, sans-serif",
+        "textTransform": "none",
+        "color": "rgb(250, 250, 250)",
+        "widthPx": 445.45,
+        "text": "오프비트는 당신의 진심을 시각적 언어로 번역하는 비주얼 스토리텔링 스튜디오입니다. 누군가의 이야기에는 말로 "
+      },
+      {
+        "tag": "p",
+        "fontSize": 18,
+        "fontWeight": "400",
+        "lineHeightPx": 25.2,
+        "lineHeightRatio": 1.4,
+        "letterSpacing": "0px",
+        "letterSpacingEm": 0,
+        "fontFamily": "Pretendard",
+        "fontFamilyFull": "Pretendard, Arial, sans-serif",
+        "textTransform": "none",
+        "color": "rgb(250, 250, 250)",
+        "widthPx": 327.61,
+        "text": "OFF-BEAT extends the studio into a living stage for the unsc"
+      },
+      {
+        "tag": "p",
+        "fontSize": 18,
+        "fontWeight": "400",
+        "lineHeightPx": 25.2,
+        "lineHeightRatio": 1.4,
+        "letterSpacing": "0px",
+        "letterSpacingEm": 0,
+        "fontFamily": "Pretendard",
+        "fontFamilyFull": "Pretendard, Arial, sans-serif",
+        "textTransform": "none",
+        "color": "rgb(250, 250, 250)",
+        "widthPx": 327.63,
+        "text": "OFF-BEAT captures portraits in those unscripted moments—the "
+      }
+    ],
+    "distinctFontFamilyCount": 3,
+    "fontFamilies": [
+      {
+        "family": "Pretendard",
+        "count": 105
+      },
+      {
+        "family": "Inter",
+        "count": 92
+      },
+      {
+        "family": "Cabinetgrotesk",
+        "count": 50
+      }
+    ]
+  },
+  "color": {
+    "textColors": [
+      {
+        "value": "rgb(250,250,250)",
+        "count": 190
+      },
+      {
+        "value": "rgb(198,165,106)",
+        "count": 53
+      },
+      {
+        "value": "rgb(161,161,161)",
+        "count": 4
+      }
+    ],
+    "backgroundColors": [
+      {
+        "value": "rgb(10,10,10)",
+        "count": 2
+      },
+      {
+        "value": "rgb(235,106,33)",
+        "count": 1
+      },
+      {
+        "value": "rgb(250,250,250)",
+        "count": 1
+      },
+      {
+        "value": "rgb(32,29,29)",
+        "count": 1
+      }
+    ],
+    "distinctTextColorCount": 3,
+    "distinctBgColorCount": 4
+  },
+  "persistent": {
+    "fixedOrSticky": [
+      {
+        "tag": "div",
+        "cls": "",
+        "position": "fixed",
+        "rect": {
+          "top": 0,
+          "left": 0,
+          "width": 1440,
+          "height": 900
+        },
+        "zIndex": "-1",
+        "text": "",
+        "opacity": "1"
+      },
+      {
+        "tag": "div",
+        "cls": "custom-cursor",
+        "position": "fixed",
+        "rect": {
+          "top": -8.5,
+          "left": -8.5,
+          "width": 17,
+          "height": 17
+        },
+        "zIndex": "9999",
+        "text": "",
+        "opacity": "0"
+      },
+      {
+        "tag": "div",
+        "cls": "nav-bar is-visible",
+        "position": "fixed",
+        "rect": {
+          "top": 0,
+          "left": 0,
+          "width": 1440,
+          "height": 119.09
+        },
+        "zIndex": "999",
+        "text": ".offbeat-logo path, .offbeat-logo rect { fill: #fff; } HomeS",
+        "opacity": "1"
+      },
+      {
+        "tag": "div",
+        "cls": "text-sticky-wrapper",
+        "position": "sticky",
+        "rect": {
+          "top": 900,
+          "left": 0,
+          "width": 1440,
+          "height": 115.13
+        },
+        "zIndex": "10",
+        "text": "정박(On-beat)으로 흐르던 삶엔 문득 예외적인 순간이 찾아듭니다. 그 예기치 못한 엇박(OFF-BEAT",
+        "opacity": "1"
+      },
+      {
+        "tag": "div",
+        "cls": "typo-scroll__media is-middle",
+        "position": "fixed",
+        "rect": {
+          "top": 5229.44,
+          "left": 518.41,
+          "width": 403.19,
+          "height": 403.19
+        },
+        "zIndex": "1",
+        "text": "",
+        "opacity": "0"
+      },
+      {
+        "tag": "div",
+        "cls": "typo-scroll__media is-middle",
+        "position": "fixed",
+        "rect": {
+          "top": 5322.59,
+          "left": 518.41,
+          "width": 403.19,
+          "height": 403.19
+        },
+        "zIndex": "1",
+        "text": "",
+        "opacity": "0"
+      },
+      {
+        "tag": "div",
+        "cls": "typo-scroll__media is-middle",
+        "position": "fixed",
+        "rect": {
+          "top": 5415.75,
+          "left": 518.41,
+          "width": 403.19,
+          "height": 403.19
+        },
+        "zIndex": "1",
+        "text": "",
+        "opacity": "0"
+      },
+      {
+        "tag": "div",
+        "cls": "typo-scroll__media is-middle",
+        "position": "fixed",
+        "rect": {
+          "top": 5508.91,
+          "left": 518.41,
+          "width": 403.19,
+          "height": 403.19
+        },
+        "zIndex": "1",
+        "text": "",
+        "opacity": "0"
+      },
+      {
+        "tag": "div",
+        "cls": "typo-scroll__media is-middle",
+        "position": "fixed",
+        "rect": {
+          "top": 5602.06,
+          "left": 518.41,
+          "width": 403.19,
+          "height": 403.19
+        },
+        "zIndex": "1",
+        "text": "",
+        "opacity": "0"
+      },
+      {
+        "tag": "div",
+        "cls": "typo-scroll__media is-middle",
+        "position": "fixed",
+        "rect": {
+          "top": 5695.22,
+          "left": 518.41,
+          "width": 403.19,
+          "height": 403.19
+        },
+        "zIndex": "1",
+        "text": "",
+        "opacity": "0"
+      },
+      {
+        "tag": "div",
+        "cls": "typo-scroll__media is-middle",
+        "position": "fixed",
+        "rect": {
+          "top": 5788.38,
+          "left": 518.41,
+          "width": 403.19,
+          "height": 403.19
+        },
+        "zIndex": "1",
+        "text": "",
+        "opacity": "0"
+      },
+      {
+        "tag": "div",
+        "cls": "typo-scroll__media is-middle",
+        "position": "fixed",
+        "rect": {
+          "top": 5881.53,
+          "left": 518.41,
+          "width": 403.19,
+          "height": 403.19
+        },
+        "zIndex": "1",
+        "text": "",
+        "opacity": "0"
+      },
+      {
+        "tag": "div",
+        "cls": "typo-scroll__media is-middle",
+        "position": "fixed",
+        "rect": {
+          "top": 5974.69,
+          "left": 518.41,
+          "width": 403.19,
+          "height": 403.19
+        },
+        "zIndex": "1",
+        "text": "",
+        "opacity": "0"
+      },
+      {
+        "tag": "div",
+        "cls": "typo-scroll__media is-middle",
+        "position": "fixed",
+        "rect": {
+          "top": 6067.84,
+          "left": 518.41,
+          "width": 403.19,
+          "height": 403.19
+        },
+        "zIndex": "1",
+        "text": "",
+        "opacity": "0"
+      },
+      {
+        "tag": "div",
+        "cls": "typo-scroll__media is-middle",
+        "position": "fixed",
+        "rect": {
+          "top": 6161,
+          "left": 518.41,
+          "width": 403.19,
+          "height": 403.19
+        },
+        "zIndex": "1",
+        "text": "",
+        "opacity": "0"
+      },
+      {
+        "tag": "div",
+        "cls": "typo-scroll__media is-middle",
+        "position": "fixed",
+        "rect": {
+          "top": 6254.16,
+          "left": 518.41,
+          "width": 403.19,
+          "height": 403.19
+        },
+        "zIndex": "1",
+        "text": "",
+        "opacity": "0"
+      },
+      {
+        "tag": "div",
+        "cls": "typo-scroll__media is-middle",
+        "position": "fixed",
+        "rect": {
+          "top": 6347.31,
+          "left": 518.41,
+          "width": 403.19,
+          "height": 403.19
+        },
+        "zIndex": "1",
+        "text": "",
+        "opacity": "0"
+      },
+      {
+        "tag": "div",
+        "cls": "typo-scroll__media is-middle",
+        "position": "fixed",
+        "rect": {
+          "top": 6440.47,
+          "left": 518.41,
+          "width": 403.19,
+          "height": 403.19
+        },
+        "zIndex": "1",
+        "text": "",
+        "opacity": "0"
+      },
+      {
+        "tag": "div",
+        "cls": "typo-scroll__media is-middle",
+        "position": "fixed",
+        "rect": {
+          "top": 6533.63,
+          "left": 518.41,
+          "width": 403.19,
+          "height": 403.19
+        },
+        "zIndex": "1",
+        "text": "",
+        "opacity": "0"
+      },
+      {
+        "tag": "div",
+        "cls": "typo-scroll__media is-middle",
+        "position": "fixed",
+        "rect": {
+          "top": 6626.78,
+          "left": 518.41,
+          "width": 403.19,
+          "height": 403.19
+        },
+        "zIndex": "1",
+        "text": "",
+        "opacity": "0"
+      }
+    ]
+  },
+  "nav": {
+    "tag": "nav",
+    "cls": "bold-nav-full",
+    "height": 0,
+    "top": 0,
+    "position": "fixed",
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "backdropFilter": "none",
+    "borderBottom": "0px rgb(51, 51, 51)",
+    "paddingBlock": "0px / 0px",
+    "transform": "none",
+    "opacity": "1",
+    "mixBlendMode": "normal",
+    "color": "rgb(51, 51, 51)"
+  },
+  "navState": {
+    "at0": {
+      "nav": {
+        "height": 0,
+        "top": 0,
+        "position": "fixed",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "backdropFilter": "none",
+        "borderBottom": "0px rgb(51, 51, 51)",
+        "paddingBlock": "0px / 0px",
+        "transform": "none",
+        "opacity": "1",
+        "color": "rgb(51, 51, 51)"
+      },
+      "fixedOrSticky": [
+        {
+          "tag": "div",
+          "cls": "",
+          "position": "fixed",
+          "rect": {
+            "top": 0,
+            "left": 0,
+            "width": 1440,
+            "height": 900
+          },
+          "text": "",
+          "opacity": "1"
+        },
+        {
+          "tag": "div",
+          "cls": "custom-cursor",
+          "position": "fixed",
+          "rect": {
+            "top": -8.5,
+            "left": -8.5,
+            "width": 17,
+            "height": 17
+          },
+          "text": "",
+          "opacity": "0"
+        },
+        {
+          "tag": "div",
+          "cls": "nav-bar is-visible",
+          "position": "fixed",
+          "rect": {
+            "top": 0,
+            "left": 0,
+            "width": 1440,
+            "height": 119.09
+          },
+          "text": ".offbeat-logo path, .offbeat-logo rect { fill: #fff; } HomeS",
+          "opacity": "1"
+        },
+        {
+          "tag": "div",
+          "cls": "text-sticky-wrapper",
+          "position": "sticky",
+          "rect": {
+            "top": 900,
+            "left": 0,
+            "width": 1440,
+            "height": 115.13
+          },
+          "text": "정박(On-beat)으로 흐르던 삶엔 문득 예외적인 순간이 찾아듭니다. 그 예기치 못한 엇박(OFF-BEAT",
+          "opacity": "1"
+        },
+        {
+          "tag": "div",
+          "cls": "typo-scroll__media is-middle",
+          "position": "fixed",
+          "rect": {
+            "top": 5229.44,
+            "left": 518.41,
+            "width": 403.19,
+            "height": 403.19
+          },
+          "text": "",
+          "opacity": "0"
+        },
+        {
+          "tag": "div",
+          "cls": "typo-scroll__media is-middle",
+          "position": "fixed",
+          "rect": {
+            "top": 5322.59,
+            "left": 518.41,
+            "width": 403.19,
+            "height": 403.19
+          },
+          "text": "",
+          "opacity": "0"
+        },
+        {
+          "tag": "div",
+          "cls": "typo-scroll__media is-middle",
+          "position": "fixed",
+          "rect": {
+            "top": 5415.75,
+            "left": 518.41,
+            "width": 403.19,
+            "height": 403.19
+          },
+          "text": "",
+          "opacity": "0"
+        },
+        {
+          "tag": "div",
+          "cls": "typo-scroll__media is-middle",
+          "position": "fixed",
+          "rect": {
+            "top": 5508.91,
+            "left": 518.41,
+            "width": 403.19,
+            "height": 403.19
+          },
+          "text": "",
+          "opacity": "0"
+        },
+        {
+          "tag": "div",
+          "cls": "typo-scroll__media is-middle",
+          "position": "fixed",
+          "rect": {
+            "top": 5602.06,
+            "left": 518.41,
+            "width": 403.19,
+            "height": 403.19
+          },
+          "text": "",
+          "opacity": "0"
+        },
+        {
+          "tag": "div",
+          "cls": "typo-scroll__media is-middle",
+          "position": "fixed",
+          "rect": {
+            "top": 5695.22,
+            "left": 518.41,
+            "width": 403.19,
+            "height": 403.19
+          },
+          "text": "",
+          "opacity": "0"
+        },
+        {
+          "tag": "div",
+          "cls": "typo-scroll__media is-middle",
+          "position": "fixed",
+          "rect": {
+            "top": 5788.38,
+            "left": 518.41,
+            "width": 403.19,
+            "height": 403.19
+          },
+          "text": "",
+          "opacity": "0"
+        },
+        {
+          "tag": "div",
+          "cls": "typo-scroll__media is-middle",
+          "position": "fixed",
+          "rect": {
+            "top": 5881.53,
+            "left": 518.41,
+            "width": 403.19,
+            "height": 403.19
+          },
+          "text": "",
+          "opacity": "0"
+        },
+        {
+          "tag": "div",
+          "cls": "typo-scroll__media is-middle",
+          "position": "fixed",
+          "rect": {
+            "top": 5974.69,
+            "left": 518.41,
+            "width": 403.19,
+            "height": 403.19
+          },
+          "text": "",
+          "opacity": "0"
+        },
+        {
+          "tag": "div",
+          "cls": "typo-scroll__media is-middle",
+          "position": "fixed",
+          "rect": {
+            "top": 6067.84,
+            "left": 518.41,
+            "width": 403.19,
+            "height": 403.19
+          },
+          "text": "",
+          "opacity": "0"
+        },
+        {
+          "tag": "div",
+          "cls": "typo-scroll__media is-middle",
+          "position": "fixed",
+          "rect": {
+            "top": 6161,
+            "left": 518.41,
+            "width": 403.19,
+            "height": 403.19
+          },
+          "text": "",
+          "opacity": "0"
+        },
+        {
+          "tag": "div",
+          "cls": "typo-scroll__media is-middle",
+          "position": "fixed",
+          "rect": {
+            "top": 6254.16,
+            "left": 518.41,
+            "width": 403.19,
+            "height": 403.19
+          },
+          "text": "",
+          "opacity": "0"
+        },
+        {
+          "tag": "div",
+          "cls": "typo-scroll__media is-middle",
+          "position": "fixed",
+          "rect": {
+            "top": 6347.31,
+            "left": 518.41,
+            "width": 403.19,
+            "height": 403.19
+          },
+          "text": "",
+          "opacity": "0"
+        },
+        {
+          "tag": "div",
+          "cls": "typo-scroll__media is-middle",
+          "position": "fixed",
+          "rect": {
+            "top": 6440.47,
+            "left": 518.41,
+            "width": 403.19,
+            "height": 403.19
+          },
+          "text": "",
+          "opacity": "0"
+        },
+        {
+          "tag": "div",
+          "cls": "typo-scroll__media is-middle",
+          "position": "fixed",
+          "rect": {
+            "top": 6533.63,
+            "left": 518.41,
+            "width": 403.19,
+            "height": 403.19
+          },
+          "text": "",
+          "opacity": "0"
+        },
+        {
+          "tag": "div",
+          "cls": "typo-scroll__media is-middle",
+          "position": "fixed",
+          "rect": {
+            "top": 6626.78,
+            "left": 518.41,
+            "width": 403.19,
+            "height": 403.19
+          },
+          "text": "",
+          "opacity": "0"
+        }
+      ]
+    },
+    "at2000": {
+      "nav": {
+        "height": 0,
+        "top": 0,
+        "position": "fixed",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "backdropFilter": "none",
+        "borderBottom": "0px rgb(51, 51, 51)",
+        "paddingBlock": "0px / 0px",
+        "transform": "none",
+        "opacity": "1",
+        "color": "rgb(51, 51, 51)"
+      },
+      "fixedOrSticky": [
+        {
+          "tag": "div",
+          "cls": "",
+          "position": "fixed",
+          "rect": {
+            "top": 0,
+            "left": 0,
+            "width": 1440,
+            "height": 900
+          },
+          "text": "",
+          "opacity": "1"
+        },
+        {
+          "tag": "div",
+          "cls": "custom-cursor",
+          "position": "fixed",
+          "rect": {
+            "top": -8.5,
+            "left": -8.5,
+            "width": 17,
+            "height": 17
+          },
+          "text": "",
+          "opacity": "0"
+        },
+        {
+          "tag": "div",
+          "cls": "nav-bar is-hidden",
+          "position": "fixed",
+          "rect": {
+            "top": -119.09,
+            "left": 0,
+            "width": 1440,
+            "height": 119.09
+          },
+          "text": ".offbeat-logo path, .offbeat-logo rect { fill: #fff; } HomeS",
+          "opacity": "0"
+        },
+        {
+          "tag": "div",
+          "cls": "text-sticky-wrapper",
+          "position": "sticky",
+          "rect": {
+            "top": 450,
+            "left": 0,
+            "width": 1440,
+            "height": 115.13
+          },
+          "text": "정박(On-beat)으로 흐르던 삶엔 문득 예외적인 순간이 찾아듭니다. 그 예기치 못한 엇박(OFF-BEAT",
+          "opacity": "1"
+        },
+        {
+          "tag": "div",
+          "cls": "typo-scroll__media is-middle",
+          "position": "fixed",
+          "rect": {
+            "top": 3229.44,
+            "left": 518.41,
+            "width": 403.19,
+            "height": 403.19
+          },
+          "text": "",
+          "opacity": "0"
+        },
+        {
+          "tag": "div",
+          "cls": "typo-scroll__media is-middle",
+          "position": "fixed",
+          "rect": {
+            "top": 3322.59,
+            "left": 518.41,
+            "width": 403.19,
+            "height": 403.19
+          },
+          "text": "",
+          "opacity": "0"
+        },
+        {
+          "tag": "div",
+          "cls": "typo-scroll__media is-middle",
+          "position": "fixed",
+          "rect": {
+            "top": 3415.75,
+            "left": 518.41,
+            "width": 403.19,
+            "height": 403.19
+          },
+          "text": "",
+          "opacity": "0"
+        },
+        {
+          "tag": "div",
+          "cls": "typo-scroll__media is-middle",
+          "position": "fixed",
+          "rect": {
+            "top": 3508.91,
+            "left": 518.41,
+            "width": 403.19,
+            "height": 403.19
+          },
+          "text": "",
+          "opacity": "0"
+        },
+        {
+          "tag": "div",
+          "cls": "typo-scroll__media is-middle",
+          "position": "fixed",
+          "rect": {
+            "top": 3602.06,
+            "left": 518.41,
+            "width": 403.19,
+            "height": 403.19
+          },
+          "text": "",
+          "opacity": "0"
+        },
+        {
+          "tag": "div",
+          "cls": "typo-scroll__media is-middle",
+          "position": "fixed",
+          "rect": {
+            "top": 3695.22,
+            "left": 518.41,
+            "width": 403.19,
+            "height": 403.19
+          },
+          "text": "",
+          "opacity": "0"
+        },
+        {
+          "tag": "div",
+          "cls": "typo-scroll__media is-middle",
+          "position": "fixed",
+          "rect": {
+            "top": 3788.38,
+            "left": 518.41,
+            "width": 403.19,
+            "height": 403.19
+          },
+          "text": "",
+          "opacity": "0"
+        },
+        {
+          "tag": "div",
+          "cls": "typo-scroll__media is-middle",
+          "position": "fixed",
+          "rect": {
+            "top": 3881.53,
+            "left": 518.41,
+            "width": 403.19,
+            "height": 403.19
+          },
+          "text": "",
+          "opacity": "0"
+        },
+        {
+          "tag": "div",
+          "cls": "typo-scroll__media is-middle",
+          "position": "fixed",
+          "rect": {
+            "top": 3974.69,
+            "left": 518.41,
+            "width": 403.19,
+            "height": 403.19
+          },
+          "text": "",
+          "opacity": "0"
+        },
+        {
+          "tag": "div",
+          "cls": "typo-scroll__media is-middle",
+          "position": "fixed",
+          "rect": {
+            "top": 4067.84,
+            "left": 518.41,
+            "width": 403.19,
+            "height": 403.19
+          },
+          "text": "",
+          "opacity": "0"
+        },
+        {
+          "tag": "div",
+          "cls": "typo-scroll__media is-middle",
+          "position": "fixed",
+          "rect": {
+            "top": 4161,
+            "left": 518.41,
+            "width": 403.19,
+            "height": 403.19
+          },
+          "text": "",
+          "opacity": "0"
+        },
+        {
+          "tag": "div",
+          "cls": "typo-scroll__media is-middle",
+          "position": "fixed",
+          "rect": {
+            "top": 4254.16,
+            "left": 518.41,
+            "width": 403.19,
+            "height": 403.19
+          },
+          "text": "",
+          "opacity": "0"
+        },
+        {
+          "tag": "div",
+          "cls": "typo-scroll__media is-middle",
+          "position": "fixed",
+          "rect": {
+            "top": 4347.31,
+            "left": 518.41,
+            "width": 403.19,
+            "height": 403.19
+          },
+          "text": "",
+          "opacity": "0"
+        },
+        {
+          "tag": "div",
+          "cls": "typo-scroll__media is-middle",
+          "position": "fixed",
+          "rect": {
+            "top": 4440.47,
+            "left": 518.41,
+            "width": 403.19,
+            "height": 403.19
+          },
+          "text": "",
+          "opacity": "0"
+        },
+        {
+          "tag": "div",
+          "cls": "typo-scroll__media is-middle",
+          "position": "fixed",
+          "rect": {
+            "top": 4533.63,
+            "left": 518.41,
+            "width": 403.19,
+            "height": 403.19
+          },
+          "text": "",
+          "opacity": "0"
+        },
+        {
+          "tag": "div",
+          "cls": "typo-scroll__media is-middle",
+          "position": "fixed",
+          "rect": {
+            "top": 4626.78,
+            "left": 518.41,
+            "width": 403.19,
+            "height": 403.19
+          },
+          "text": "",
+          "opacity": "0"
+        }
+      ]
+    },
+    "changed": false,
+    "diff": {}
+  },
+  "shots": [
+    "offbeat-1440-full.jpg",
+    "offbeat-1440-scroll000.jpg",
+    "offbeat-1440-scroll025.jpg",
+    "offbeat-1440-scroll050.jpg",
+    "offbeat-1440-scroll075.jpg",
+    "offbeat-1440-scroll100.jpg"
+  ],
+  "fullPageShotRepresentative": true,
+  "pageErrors": []
+}

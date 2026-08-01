@@ -1,0 +1,197 @@
+/* ============================================================
+   xxix.co mechanics — proof of concept (structure only)
+   Placeholder content; no client copy or imagery reproduced.
+   Fonts: system grotesque stands in for ReplicaProTT,
+   Times New Roman for the serif accent.
+   ============================================================ */
+
+:root {
+  --black: #231f20;
+  --white: #fff;
+  --yellow: #f8e71c;
+  --beige: #ffe57b;
+  --offwhite: #f6fff1;
+  --red: #f57a5f;
+  --purple: #9984ea;
+  --gray: #f1f2f2;
+
+  --sans: "Helvetica Neue", Arial, sans-serif; /* stand-in for ReplicaProTT */
+  --serif: "Times New Roman", Times, serif;
+
+  --pad-x: 0.9375rem;   /* 15px */
+  --pad-top: 1.5625rem; /* 25px */
+}
+
+* { box-sizing: border-box; -webkit-font-smoothing: antialiased; }
+html, body { margin: 0; }
+body {
+  font-family: var(--sans);
+  color: var(--black);
+  background: var(--white);
+  font-size: 15px;
+  line-height: 1.15;
+}
+
+/* ---- custom cursor (site-wide) --------------------------------- */
+/* xxix hides the native cursor and JS-renders its own, z-index 999999 */
+@media (pointer: fine) {
+  * { cursor: none; }
+  .cursor {
+    position: fixed; top: 0; left: 0; z-index: 999999;
+    width: 14px; height: 14px; border-radius: 50%;
+    background: var(--black);
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: width .18s ease, height .18s ease, background .18s ease;
+    will-change: transform;
+  }
+  .cursor.is-hover { width: 42px; height: 42px; background: var(--purple); }
+}
+
+/* ---- base grid page skeleton ----------------------------------- */
+.base-grid { padding: var(--pad-top) var(--pad-x) var(--pad-x); }
+
+.semi-fixed-base-grid {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr)); /* mobile */
+}
+@media (min-width: 1080px) {
+  .semi-fixed-base-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  /* THE trick: pull the right column up to break the tabular rhythm */
+  .semi-fixed-base-grid .grid-column-2 { margin-top: -8vw; }
+}
+.grid-column { display: flex; flex-direction: column; }
+
+/* ---- 12-col percentage width utilities ------------------------- */
+.col-0  { width: 0 }
+.col-1  { width: 8.3333% }
+.col-2  { width: 16.6667% }
+.col-3  { width: 25% }
+.col-4  { width: 33.3333% }
+.col-5  { width: 41.6667% }
+.col-6  { width: 50% }
+.col-7  { width: 58.3333% }
+.col-8  { width: 66.6667% }
+.col-9  { width: 75% }
+.col-10 { width: 83.3333% }
+.col-11 { width: 91.6667% }
+.col-12 { width: 100% }
+
+/* horizontal scatter nudges (subset of xxix's per-breakpoint library) */
+@media (min-width: 1080px) {
+  .nl-1 { margin-left: -1rem }   .nr-1 { margin-right: -1rem }
+  .nl-2 { margin-left: -2rem }   .nr-2 { margin-right: -2rem }
+  .nl-3 { margin-left: -3rem }   .nr-3 { margin-right: -3rem }
+  .nl-4 { margin-left: -4rem }   .nr-4 { margin-right: -4rem }
+  .nl-6 { margin-left: -6rem }   .nr-6 { margin-right: -6rem }
+  .nl-8 { margin-left: -8rem }   .nr-8 { margin-right: -8rem }
+  .push-3 { margin-left: 25% }   .push-2 { margin-left: 16.6667% }
+}
+
+/* vertical rhythm between modules in a column */
+.module { margin-bottom: 5vw; }
+
+/* ---- type scale ------------------------------------------------ */
+.display   { font-size: 100px; font-weight: 500; line-height: 1.0; letter-spacing: -0.32px; margin: 0; }
+.h2        { font-size: 50px;  font-weight: 500; line-height: 1.0; margin: 0; }
+.h3        { font-size: 35px;  font-weight: 500; line-height: 1.15; margin: 0; }
+.h4        { font-size: 25px;  font-weight: 500; line-height: 1.15; margin: 0; }
+.serif-accent { font-family: var(--serif); font-style: italic; font-size: 25px; }
+.body      { font-size: 16px;  font-weight: 400; line-height: 1.35; }
+.caption   { font-size: 15px;  font-weight: 500; line-height: 1.15; }
+@media (max-width: 1079px) {
+  .display { font-size: 46px; }
+  .h2 { font-size: 34px; }
+  .h3 { font-size: 26px; }
+}
+
+/* ---- color blocks --------------------------------------------- */
+.block { padding: 1.25rem; }
+.block--yellow  { background: var(--yellow); }
+.block--offwhite{ background: var(--offwhite); }
+.block--dark    { background: var(--black); color: var(--white); }
+
+/* ---- media placeholder card (no real imagery) ------------------ */
+.card { display: block; text-decoration: none; color: inherit; }
+.card__media {
+  aspect-ratio: 8 / 10;               /* xxix portrait default */
+  border: 1px solid var(--black);
+  background:
+    repeating-linear-gradient(45deg, rgba(0,0,0,.05) 0 10px, transparent 10px 20px),
+    var(--placeholder, var(--gray));
+  display: flex; align-items: flex-end; padding: .6rem;
+}
+.card--wide .card__media { aspect-ratio: 16 / 10; }
+.card--square .card__media { aspect-ratio: 1 / 1; }
+.card__meta { font-size: 15px; font-weight: 500; margin-top: .4rem; }
+.card__meta span { display: block; opacity: .55; }
+
+/* ---- fixed nav pills ------------------------------------------- */
+.nav { position: fixed; top: 1rem; right: 1rem; z-index: 1000; display: flex; gap: .4rem; }
+.pill {
+  font-size: 15px; font-weight: 500; text-decoration: none; color: var(--black);
+  border: 1px solid var(--black); border-radius: 999px; padding: .45rem .9rem;
+  background: var(--white); transition: border-color .15s ease-in-out;
+}
+.pill:hover { border-color: var(--black); background: var(--yellow); }
+
+/* ============================================================
+   /work — CSS multi-column masonry + hover reveal
+   ============================================================ */
+.work-layout { display: grid; grid-template-columns: 1fr; gap: 2rem; }
+@media (min-width: 1080px) {
+  .work-layout { grid-template-columns: 220px 1fr; align-items: start; }
+  .index-list { position: sticky; top: 5rem; }
+}
+
+/* index list with indicator swap */
+.index-list ul { list-style: none; margin: 0; padding: 0; }
+.list-item { border-bottom: 1px solid var(--black); }
+.list-item a {
+  display: inline-flex; align-items: center; gap: .5rem;
+  text-decoration: none; color: var(--black);
+  font-size: 25px; font-weight: 500; line-height: 1.1; margin: .4rem 0;
+}
+.list-item .ind { width: 1rem; height: 1rem; flex-shrink: 0; }
+.list-item .ind--sel { display: none; }
+.list-item a:hover .ind--off { display: none; }
+.list-item a:hover .ind--sel { display: inline-block; }
+
+/* masonry */
+.image-grid {
+  column-count: 1;
+  column-gap: 0;
+  transition: all 300s ease-in-out; /* xxix "hold" trick: suppress reflow jank on filter */
+}
+@media (min-width: 768px) { .image-grid { column-count: 2; } }
+
+.grid-item {
+  break-inside: avoid; page-break-inside: avoid;
+  position: relative; display: block; text-decoration: none; color: var(--white);
+  border: 1px solid var(--black);
+}
+.grid-item__media {
+  background: var(--placeholder, var(--gray));
+  background-image: repeating-linear-gradient(-45deg, rgba(0,0,0,.06) 0 12px, transparent 12px 24px);
+  width: 100%;
+}
+.grid-item__overlay,
+.grid-item__tags {
+  position: absolute; opacity: 0; transition: .5s ease;
+}
+.grid-item__overlay {
+  inset: 0; background: rgba(35,31,32,.55);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 25px; font-weight: 500;
+}
+.grid-item__tags {
+  left: .6rem; bottom: .6rem;
+  font-size: 15px; font-weight: 500; color: var(--white);
+}
+.grid-item:hover .grid-item__overlay,
+.grid-item:hover .grid-item__tags { opacity: 1; }
+
+/* footer */
+.foot { background: var(--black); color: var(--white); padding: 1.5rem var(--pad-x); margin-top: 4rem;
+        display: flex; justify-content: space-between; font-size: 15px; font-weight: 500; }
+.doc-note { font-size: 13px; opacity: .5; padding: .5rem var(--pad-x); }

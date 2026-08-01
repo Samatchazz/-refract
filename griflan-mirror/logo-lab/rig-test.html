@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<title>Plan C — ทดสอบ rig เวกเตอร์</title>
+<style>
+  body{background:#0f1613;color:#f2efde;font:13px/1.6 sans-serif;padding:20px}
+  h1{color:#f0b32e;font-size:15px;margin-bottom:8px}
+  pre{background:#00000055;padding:10px;border-radius:6px;font-size:11.5px;white-space:pre-wrap;max-width:900px}
+  .row{display:flex;gap:14px;flex-wrap:wrap;margin:14px 0}
+  .row>div{text-align:center;font-size:11px;color:#999}
+  svg{background:#181616;border-radius:8px;width:260px}
+</style>
+</head>
+<body>
+<h1>ทดสอบ: หมุนตัว C (เวกเตอร์) แล้วเกิดรอยต่อไหม</h1>
+<div class="row" id="row"></div>
+<pre id="out">กำลังวัด…</pre>
+
+<script>
+const PIVOT = {x: 410, y: 330};   // จุดหมุนหาง ใกล้รอยต่อ n–C
+const ANGLES = [0, -6, -12, -20];
+let SUBS = null;
+
+function makeSVG(angle, size){
+  const ns='http://www.w3.org/2000/svg';
+  const s=document.createElementNS(ns,'svg');
+  s.setAttribute('viewBox','0 0 624 624');
+  s.setAttribute('width',size); s.setAttribute('height',size);
+  // ทุกชิ้นที่ไม่ใช่หาง
+  const still=document.createElementNS(ns,'path');
+  still.setAttribute('d', SUBS.filter((_,i)=>i!==1).join(' '));
+  still.setAttribute('fill','#f2efde');
+  still.setAttribute('fill-rule','evenodd');
+  s.appendChild(still);
+  // หาง (#1) หมุนรอบ PIVOT
+  const tail=document.createElementNS(ns,'path');
+  tail.setAttribute('d', SUBS[1]);
+  tail.setAttribute('fill','#f2efde');
+  tail.setAttribute('transform',`rotate(${angle} ${PIVOT.x} ${PIVOT.y})`);
+  s.appendChild(tail);
+  return s;
+}
+
+// สแกนหารอยต่อ: เรนเดอร์ SVG ลง canvas แล้วมองหาพิกเซล "กึ่งกลาง" ที่เรียงเป็นเส้นในโซนรอยต่อ
+function scan(svgEl, cb){
+  const size=624;
+  const xml=new XMLSerializer().serializeToString(svgEl);
+  const img=new Image();
+  img.onload=()=>{
+    const c=document.createElement('canvas'); c.width=c.height=size;
+    const x=c.getContext('2d',{willReadFrequently:true});
+    x.fillStyle='#181616'; x.fillRect(0,0,size,size);
+    x.drawImage(img,0,0,size,size);
+    // โซนรอยต่อ n–C : x 380–440, y 280–400
+    const zx0=380,zx1=445,zy0=275,zy1=405;
+    const d=x.getImageData(zx0,zy0,zx1-zx0,zy1-zy0).data;
+    let opaque=0, mid=0, worst=255;
+    const W=zx1-zx0;
+    for(let i=0;i<d.length;i+=4){
+      const lum=(d[i]+d[i+1]+d[i+2])/3;
+      if(lum>200) opaque++;
+      else if(lum>60){ mid++; }
+    }
+    // หาเส้นจางแนวตั้ง: สแกนแต่ละแถว มองหาพิกเซลที่มืดกว่าครีมแต่ล้อมด้วยครีมสองข้าง
+    let seamPx=0;
+    for(let yy=1;yy<(zy1-zy0)-1;yy++){
+      for(let xx=1;xx<W-1;xx++){
+        const at=(p,q)=>{const i=((q)*W+(p))*4;return (d[i]+d[i+1]+d[i+2])/3;};
+        const c0=at(xx,yy);
+        if(c0<215 && at(xx-1,yy)>235 && at(xx+1,yy)>235){ seamPx++; if(c0<worst) worst=c0; }
+      }
+    }
+    cb({opaque,mid,seamPx,worst});
+  };
+  img.src='data:image/svg+xml;base64,'+btoa(unescape(encodeURIComponent(xml)));
+}
+
+fetch('/logo-lab/_frame1.json').then(r=>r.json()).then(subs=>{
+  SUBS=subs;
+  const row=document.getElementById('row'), lines=[];
+  let done=0;
+  ANGLES.forEach((a,k)=>{
+    const wrap=document.createElement('div');
+    const s=makeSVG(a,260);
+    wrap.appendChild(s);
+    wrap.appendChild(document.createTextNode('หมุน '+a+'°'));
+    row.appendChild(wrap);
+    scan(makeSVG(a,624), r=>{
+      lines[k]=`หมุน ${String(a).padStart(4)}°  →  พิกเซลรอยต่อที่จางกว่ารอบข้าง: ${r.seamPx}` +
+               (r.seamPx? `  (จางสุด ${r.worst.toFixed(0)}/255)` : '  ✅ ไม่มีรอยต่อเลย');
+      if(++done===ANGLES.length) document.getElementById('out').textContent=
+        'จุดหมุน '+JSON.stringify(PIVOT)+'\n'+lines.join('\n');
+    });
+  });
+});
+</script>
+</body>
+</html>

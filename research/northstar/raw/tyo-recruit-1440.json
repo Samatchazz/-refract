@@ -1,0 +1,1138 @@
+{
+  "slug": "tyo-recruit",
+  "url": "https://tyo.co.jp/recruit/",
+  "name": "TYO Recruit",
+  "country": "Japan",
+  "viewport": {
+    "width": 1440,
+    "height": 900
+  },
+  "ok": true,
+  "httpStatus": 200,
+  "finalUrl": "https://tyo.co.jp/recruit/",
+  "consentDismissed": [
+    "同意"
+  ],
+  "scrollInfo": {
+    "contentHeight": 11963,
+    "docScrollHeight": 11963,
+    "maxElementBottom": 11963,
+    "innerScrollerHeight": 10801,
+    "virtualScroll": false
+  },
+  "document": {
+    "scrollHeight": 11963,
+    "vhMultiple": 13.29,
+    "textNodeCount": 348,
+    "canvasCount": 0,
+    "elementCount": 822,
+    "title": "採用情報 - TYO",
+    "lang": "ja",
+    "contentHeight": 11963,
+    "scrollMode": "native"
+  },
+  "container": {
+    "dominantPairs": [
+      {
+        "width": 445,
+        "left": 871,
+        "count": 4,
+        "sample": {
+          "tag": "span",
+          "cls": "-en"
+        }
+      },
+      {
+        "width": 450,
+        "left": 430,
+        "count": 1,
+        "sample": {
+          "tag": "p",
+          "cls": "un-cookie-notice_text"
+        }
+      },
+      {
+        "width": 587,
+        "left": 763,
+        "count": 1,
+        "sample": {
+          "tag": "p",
+          "cls": "un-recruit-whatwedo_description"
+        }
+      },
+      {
+        "width": 397,
+        "left": 669,
+        "count": 1,
+        "sample": {
+          "tag": "p",
+          "cls": "un-recruit-interview_description"
+        }
+      },
+      {
+        "width": 331,
+        "left": 0,
+        "count": 1,
+        "sample": {
+          "tag": "h3",
+          "cls": "un-recruit-interview_text"
+        }
+      },
+      {
+        "width": 331,
+        "left": 384,
+        "count": 1,
+        "sample": {
+          "tag": "h3",
+          "cls": "un-recruit-interview_text"
+        }
+      }
+    ],
+    "containerChain": {
+      "chain": [
+        {
+          "tag": "span",
+          "cls": "-en",
+          "width": 445.03,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "block"
+        },
+        {
+          "tag": "p",
+          "cls": "",
+          "width": 445.03,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "block"
+        },
+        {
+          "tag": "div",
+          "cls": "footer-recruit_linkMap-group-linkText",
+          "width": 445.03,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "flex"
+        },
+        {
+          "tag": "a",
+          "cls": "footer-recruit_linkMap-group-link -large",
+          "width": 1192,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "flex"
+        },
+        {
+          "tag": "li",
+          "cls": "footer-recruit_linkMap-group-list -large",
+          "width": 1192,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "list-item"
+        },
+        {
+          "tag": "ul",
+          "cls": "footer-recruit_linkMap-group",
+          "width": 1192,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "grid"
+        },
+        {
+          "tag": "nav",
+          "cls": "footer-recruit_linkMap",
+          "width": 1192,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "124.01px / 124.01px",
+          "display": "block"
+        },
+        {
+          "tag": "div",
+          "cls": "footer-recruit_content -medium",
+          "width": 1440,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "block"
+        }
+      ],
+      "constrained": null
+    },
+    "grids": [
+      {
+        "columns": 2,
+        "columnGap": "20.0016px",
+        "rowGap": "20.0016px",
+        "width": 1192,
+        "template": "580.031px 580.031px",
+        "count": 1
+      }
+    ],
+    "bodyPaddingInline": "0px / 0px",
+    "bodyMaxWidth": "none",
+    "htmlPaddingInline": "0px / 0px"
+  },
+  "leftEdgeTest": {
+    "layout": {
+      "n": 7,
+      "mean": 1153.29,
+      "stdDev": 769,
+      "distinctExact": 7,
+      "distinctClustered2px": 7,
+      "clusters": [
+        {
+          "at": 0,
+          "count": 1
+        },
+        {
+          "at": 384,
+          "count": 1
+        },
+        {
+          "at": 769,
+          "count": 1
+        },
+        {
+          "at": 1153,
+          "count": 1
+        },
+        {
+          "at": 1538,
+          "count": 1
+        },
+        {
+          "at": 1922,
+          "count": 1
+        },
+        {
+          "at": 2307,
+          "count": 1
+        }
+      ],
+      "values": [
+        0,
+        384,
+        769,
+        1153,
+        1538,
+        1922,
+        2307
+      ]
+    },
+    "rect": {
+      "n": 7,
+      "mean": 1275.85,
+      "stdDev": 768.97,
+      "distinctExact": 7,
+      "distinctClustered2px": 7,
+      "clusters": [
+        {
+          "at": 122.4,
+          "count": 1
+        },
+        {
+          "at": 506.88,
+          "count": 1
+        },
+        {
+          "at": 891.37,
+          "count": 1
+        },
+        {
+          "at": 1275.85,
+          "count": 1
+        },
+        {
+          "at": 1660.34,
+          "count": 1
+        },
+        {
+          "at": 2044.82,
+          "count": 1
+        },
+        {
+          "at": 2429.31,
+          "count": 1
+        }
+      ],
+      "values": [
+        122.4,
+        506.88,
+        891.37,
+        1275.85,
+        1660.34,
+        2044.82,
+        2429.31
+      ]
+    },
+    "headings": {
+      "n": 7,
+      "mean": 1153.29,
+      "stdDev": 769,
+      "distinctExact": 7,
+      "distinctClustered2px": 7,
+      "clusters": [
+        {
+          "at": 0,
+          "count": 1
+        },
+        {
+          "at": 384,
+          "count": 1
+        },
+        {
+          "at": 769,
+          "count": 1
+        },
+        {
+          "at": 1153,
+          "count": 1
+        },
+        {
+          "at": 1538,
+          "count": 1
+        },
+        {
+          "at": 1922,
+          "count": 1
+        },
+        {
+          "at": 2307,
+          "count": 1
+        }
+      ],
+      "values": [
+        0,
+        384,
+        769,
+        1153,
+        1538,
+        1922,
+        2307
+      ]
+    },
+    "sectionDiscovery": "semantic-siblings"
+  },
+  "sections": [
+    {
+      "index": 0,
+      "tag": "article",
+      "id": null,
+      "cls": "swiper-slide swiper-slide-active",
+      "height": 402.36,
+      "vhFraction": 0.45,
+      "paddingBlockStart": "0px",
+      "paddingBlockEnd": "0px",
+      "marginBlockStart": "0px",
+      "marginBlockEnd": "0px",
+      "firstText": {
+        "layoutLeft": 0,
+        "rectLeft": 122.4,
+        "tag": "h3",
+        "fontSize": "14.0011px",
+        "text": "TYOの新卒採用で大切にしていることとは？ ５つの事業部、責任者による座談会"
+      },
+      "heading": {
+        "layoutLeft": 0,
+        "rectLeft": 122.4,
+        "tag": "h3",
+        "fontSize": "14.0011px",
+        "text": "TYOの新卒採用で大切にしていることとは？ ５つの事業部、責任者による座談会"
+      }
+    },
+    {
+      "index": 1,
+      "tag": "article",
+      "id": null,
+      "cls": "swiper-slide swiper-slide-next",
+      "height": 309.98,
+      "vhFraction": 0.34,
+      "paddingBlockStart": "0px",
+      "paddingBlockEnd": "0px",
+      "marginBlockStart": "0px",
+      "marginBlockEnd": "0px",
+      "firstText": {
+        "layoutLeft": 384,
+        "rectLeft": 506.88,
+        "tag": "h3",
+        "fontSize": "14.0011px",
+        "text": "「個性はこれから愚直に探していきたい」。 2024年入社の新人PM、リアルな現在地"
+      },
+      "heading": {
+        "layoutLeft": 384,
+        "rectLeft": 506.88,
+        "tag": "h3",
+        "fontSize": "14.0011px",
+        "text": "「個性はこれから愚直に探していきたい」。 2024年入社の新人PM、リアルな現在地"
+      }
+    },
+    {
+      "index": 2,
+      "tag": "article",
+      "id": null,
+      "cls": "swiper-slide",
+      "height": 309.98,
+      "vhFraction": 0.34,
+      "paddingBlockStart": "0px",
+      "paddingBlockEnd": "0px",
+      "marginBlockStart": "0px",
+      "marginBlockEnd": "0px",
+      "firstText": {
+        "layoutLeft": 769,
+        "rectLeft": 891.37,
+        "tag": "h3",
+        "fontSize": "14.0011px",
+        "text": "「飽きないこと。そして“好き”と“仕事”が近いこと」。若手PMが感じる仕事のおもしろさ"
+      },
+      "heading": {
+        "layoutLeft": 769,
+        "rectLeft": 891.37,
+        "tag": "h3",
+        "fontSize": "14.0011px",
+        "text": "「飽きないこと。そして“好き”と“仕事”が近いこと」。若手PMが感じる仕事のおもしろさ"
+      }
+    },
+    {
+      "index": 3,
+      "tag": "article",
+      "id": null,
+      "cls": "swiper-slide",
+      "height": 309.98,
+      "vhFraction": 0.34,
+      "paddingBlockStart": "0px",
+      "paddingBlockEnd": "0px",
+      "marginBlockStart": "0px",
+      "marginBlockEnd": "0px",
+      "firstText": {
+        "layoutLeft": 1153,
+        "rectLeft": 1275.85,
+        "tag": "h3",
+        "fontSize": "14.0011px",
+        "text": "一日一日の積み重ねが未来をつくる。TYO執行役員が考える、新入社員に大切にしてほしい姿勢"
+      },
+      "heading": {
+        "layoutLeft": 1153,
+        "rectLeft": 1275.85,
+        "tag": "h3",
+        "fontSize": "14.0011px",
+        "text": "一日一日の積み重ねが未来をつくる。TYO執行役員が考える、新入社員に大切にしてほしい姿勢"
+      }
+    },
+    {
+      "index": 4,
+      "tag": "article",
+      "id": null,
+      "cls": "swiper-slide",
+      "height": 309.98,
+      "vhFraction": 0.34,
+      "paddingBlockStart": "0px",
+      "paddingBlockEnd": "0px",
+      "marginBlockStart": "0px",
+      "marginBlockEnd": "0px",
+      "firstText": {
+        "layoutLeft": 1538,
+        "rectLeft": 1660.34,
+        "tag": "h3",
+        "fontSize": "14.0011px",
+        "text": "自由に、自己流に、やりたいことには貪欲に。TYOトップディレクターのキャリアの軌跡"
+      },
+      "heading": {
+        "layoutLeft": 1538,
+        "rectLeft": 1660.34,
+        "tag": "h3",
+        "fontSize": "14.0011px",
+        "text": "自由に、自己流に、やりたいことには貪欲に。TYOトップディレクターのキャリアの軌跡"
+      }
+    },
+    {
+      "index": 5,
+      "tag": "article",
+      "id": null,
+      "cls": "swiper-slide",
+      "height": 309.98,
+      "vhFraction": 0.34,
+      "paddingBlockStart": "0px",
+      "paddingBlockEnd": "0px",
+      "marginBlockStart": "0px",
+      "marginBlockEnd": "0px",
+      "firstText": {
+        "layoutLeft": 1922,
+        "rectLeft": 2044.82,
+        "tag": "h3",
+        "fontSize": "14.0011px",
+        "text": "誰かを目指す仕事ではない。『THE FIRST TAKE』を手がけるプロデューサーの仕事哲学"
+      },
+      "heading": {
+        "layoutLeft": 1922,
+        "rectLeft": 2044.82,
+        "tag": "h3",
+        "fontSize": "14.0011px",
+        "text": "誰かを目指す仕事ではない。『THE FIRST TAKE』を手がけるプロデューサーの仕事哲学"
+      }
+    },
+    {
+      "index": 6,
+      "tag": "article",
+      "id": null,
+      "cls": "swiper-slide",
+      "height": 332.38,
+      "vhFraction": 0.37,
+      "paddingBlockStart": "0px",
+      "paddingBlockEnd": "0px",
+      "marginBlockStart": "0px",
+      "marginBlockEnd": "0px",
+      "firstText": {
+        "layoutLeft": 2307,
+        "rectLeft": 2429.31,
+        "tag": "h3",
+        "fontSize": "14.0011px",
+        "text": "「どんなことよりも\"人”を一番大切にしたい」。独自のキャリアを切り開くプロデューサーの真っ直ぐな"
+      },
+      "heading": {
+        "layoutLeft": 2307,
+        "rectLeft": 2429.31,
+        "tag": "h3",
+        "fontSize": "14.0011px",
+        "text": "「どんなことよりも\"人”を一番大切にしたい」。独自のキャリアを切り開くプロデューサーの真っ直ぐな"
+      }
+    }
+  ],
+  "verticalRhythm": {
+    "sectionCount": 7,
+    "near100vhCount": 0,
+    "near100vhPct": 0,
+    "strictGcdOfSpacing": 1,
+    "baseUnitEstimate80pct": 2,
+    "spacingHistogram": [
+      {
+        "value": 14,
+        "count": 19
+      },
+      {
+        "value": 10,
+        "count": 17
+      },
+      {
+        "value": 12,
+        "count": 11
+      },
+      {
+        "value": 30,
+        "count": 9
+      },
+      {
+        "value": 8,
+        "count": 9
+      },
+      {
+        "value": 9,
+        "count": 8
+      },
+      {
+        "value": 15,
+        "count": 8
+      },
+      {
+        "value": 20,
+        "count": 8
+      },
+      {
+        "value": 124,
+        "count": 7
+      },
+      {
+        "value": 24,
+        "count": 7
+      },
+      {
+        "value": 40,
+        "count": 7
+      },
+      {
+        "value": 50,
+        "count": 4
+      },
+      {
+        "value": 28,
+        "count": 3
+      },
+      {
+        "value": 36,
+        "count": 3
+      }
+    ],
+    "spacingSampleSize": 146
+  },
+  "typeScale": {
+    "distinctFontSizeCount": 16,
+    "distinctFontSizeCount_used2plus": 13,
+    "distinctSizes": [
+      {
+        "size": 120.01,
+        "count": 12
+      },
+      {
+        "size": 109.44,
+        "count": 27
+      },
+      {
+        "size": 100.01,
+        "count": 2
+      },
+      {
+        "size": 46,
+        "count": 3
+      },
+      {
+        "size": 40,
+        "count": 2
+      },
+      {
+        "size": 39,
+        "count": 20
+      },
+      {
+        "size": 28,
+        "count": 6
+      },
+      {
+        "size": 26,
+        "count": 19
+      },
+      {
+        "size": 20,
+        "count": 1
+      },
+      {
+        "size": 17,
+        "count": 1
+      },
+      {
+        "size": 16,
+        "count": 4
+      },
+      {
+        "size": 14,
+        "count": 22
+      },
+      {
+        "size": 12,
+        "count": 130
+      },
+      {
+        "size": 11,
+        "count": 31
+      },
+      {
+        "size": 10,
+        "count": 10
+      },
+      {
+        "size": 9,
+        "count": 1
+      }
+    ],
+    "scaleSizesDesc": [
+      120.01,
+      109.44,
+      100.01,
+      46,
+      40,
+      39,
+      28,
+      26,
+      16,
+      14,
+      12,
+      11,
+      10
+    ],
+    "consecutiveRatios": [
+      1.1,
+      1.09,
+      2.17,
+      1.15,
+      1.03,
+      1.39,
+      1.08,
+      1.63,
+      1.14,
+      1.17,
+      1.09,
+      1.1
+    ],
+    "roles": {
+      "h1": null,
+      "biggestText": {
+        "tag": "p",
+        "fontSize": 120.01,
+        "fontWeight": "400",
+        "lineHeightPx": 120.01,
+        "lineHeightRatio": 1,
+        "letterSpacing": "0px",
+        "letterSpacingEm": 0,
+        "fontFamily": "Bricolage Grotesque",
+        "fontFamilyFull": "\"Bricolage Grotesque\"",
+        "textTransform": "none",
+        "color": "rgb(255, 255, 255)",
+        "widthPx": 267.09,
+        "text": "Entry"
+      },
+      "h2All": [
+        {
+          "tag": "h2",
+          "fontSize": 100.01,
+          "fontWeight": "400",
+          "lineHeightPx": 100.01,
+          "lineHeightRatio": 1,
+          "letterSpacing": "2.00016px",
+          "letterSpacingEm": 0.02,
+          "fontFamily": "Bricolage Grotesque",
+          "fontFamilyFull": "\"Bricolage Grotesque\"",
+          "textTransform": "none",
+          "color": "rgb(75, 24, 0)",
+          "widthPx": 539.78,
+          "text": "What We Do"
+        },
+        {
+          "tag": "h2",
+          "fontSize": 100.01,
+          "fontWeight": "400",
+          "lineHeightPx": 100.01,
+          "lineHeightRatio": 1,
+          "letterSpacing": "2.00016px",
+          "letterSpacingEm": 0.02,
+          "fontFamily": "Bricolage Grotesque",
+          "fontFamilyFull": "\"Bricolage Grotesque\"",
+          "textTransform": "none",
+          "color": "rgb(241, 236, 232)",
+          "widthPx": 403.11,
+          "text": "Interview"
+        }
+      ],
+      "h3": {
+        "tag": "h3",
+        "fontSize": 14,
+        "fontWeight": "400",
+        "lineHeightPx": 22.4,
+        "lineHeightRatio": 1.6,
+        "letterSpacing": "0px",
+        "letterSpacingEm": 0,
+        "fontFamily": "YakuHanJP",
+        "fontFamilyFull": "YakuHanJP, \"Noto Sans JP\", sans-serif",
+        "textTransform": "none",
+        "color": "rgb(255, 255, 255)",
+        "widthPx": 331.2,
+        "text": "TYOの新卒採用で大切にしていることとは？ ５つの事業部、責任者による座談会"
+      },
+      "body": {
+        "tag": "p",
+        "fontSize": 17,
+        "fontWeight": "500",
+        "lineHeightPx": 27.2,
+        "lineHeightRatio": 1.6,
+        "letterSpacing": "0px",
+        "letterSpacingEm": 0,
+        "fontFamily": "YakuHanJP",
+        "fontFamilyFull": "YakuHanJP, \"Noto Sans JP\", sans-serif",
+        "textTransform": "none",
+        "color": "rgb(75, 24, 0)",
+        "widthPx": 376.56,
+        "text": "自分らしさってなんだろう。 考えすぎて、立ち止まってない？ TYOには、バックグラウンドも 価値観も違う仲間がいて、 大"
+      },
+      "small": {
+        "tag": "p",
+        "fontSize": 9,
+        "fontWeight": "400",
+        "lineHeightPx": 9,
+        "lineHeightRatio": 1,
+        "letterSpacing": "0px",
+        "letterSpacingEm": 0,
+        "fontFamily": "Bricolage Grotesque",
+        "fontFamilyFull": "\"Bricolage Grotesque\"",
+        "textTransform": "none",
+        "color": "rgb(255, 255, 255)",
+        "widthPx": 128.02,
+        "text": "All Rights Reserved © TYO Inc."
+      },
+      "mono": null
+    },
+    "readingMeasure": {
+      "columnWidthPx": 376.56,
+      "widthOf100Chars": 846.89,
+      "measureCh_spec": 44.46,
+      "measureCh_zeroWidth": 38.86,
+      "maxWidthDeclared": "none",
+      "canvasFont": "500 17.0014px YakuHanJP, \"Noto Sans JP\", sans-serif"
+    },
+    "readingMeasureAlternates": [
+      {
+        "tag": "p",
+        "fontSize": 17,
+        "fontWeight": "500",
+        "lineHeightPx": 27.2,
+        "lineHeightRatio": 1.6,
+        "letterSpacing": "0px",
+        "letterSpacingEm": 0,
+        "fontFamily": "YakuHanJP",
+        "fontFamilyFull": "YakuHanJP, \"Noto Sans JP\", sans-serif",
+        "textTransform": "none",
+        "color": "rgb(75, 24, 0)",
+        "widthPx": 376.56,
+        "text": "自分らしさってなんだろう。 考えすぎて、立ち止まってない？ TYOには、バックグラウンドも 価値観も違う仲間がいて、 大"
+      }
+    ],
+    "distinctFontFamilyCount": 4,
+    "fontFamilies": [
+      {
+        "family": "Bricolage Grotesque",
+        "count": 185
+      },
+      {
+        "family": "YakuHanJP",
+        "count": 75
+      },
+      {
+        "family": "Noto Sans JP",
+        "count": 29
+      },
+      {
+        "family": "EB Garamond",
+        "count": 2
+      }
+    ]
+  },
+  "color": {
+    "textColors": [
+      {
+        "value": "rgb(255,255,255)",
+        "count": 147
+      },
+      {
+        "value": "rgb(75,24,0)",
+        "count": 92
+      },
+      {
+        "value": "rgb(240,75,0)",
+        "count": 31
+      },
+      {
+        "value": "rgb(217,166,84)",
+        "count": 5
+      },
+      {
+        "value": "rgb(242,108,73)",
+        "count": 4
+      },
+      {
+        "value": "rgb(208,166,169)",
+        "count": 3
+      },
+      {
+        "value": "rgb(144,187,205)",
+        "count": 2
+      },
+      {
+        "value": "rgb(148,138,197)",
+        "count": 2
+      },
+      {
+        "value": "rgb(114,177,139)",
+        "count": 2
+      },
+      {
+        "value": "rgb(241,236,232)",
+        "count": 2
+      },
+      {
+        "value": "rgb(155,175,207)",
+        "count": 1
+      }
+    ],
+    "backgroundColors": [
+      {
+        "value": "rgb(255,255,255)",
+        "count": 22
+      },
+      {
+        "value": "rgba(255,255,255,0.5)",
+        "count": 9
+      },
+      {
+        "value": "rgb(75,24,0)",
+        "count": 3
+      },
+      {
+        "value": "rgb(240,75,0)",
+        "count": 2
+      },
+      {
+        "value": "rgba(75,24,0,0.3)",
+        "count": 2
+      },
+      {
+        "value": "rgb(50,45,42)",
+        "count": 2
+      },
+      {
+        "value": "rgb(232,214,203)",
+        "count": 1
+      },
+      {
+        "value": "rgb(241,236,232)",
+        "count": 1
+      },
+      {
+        "value": "rgb(190,139,107)",
+        "count": 1
+      },
+      {
+        "value": "rgba(240,75,0,0)",
+        "count": 1
+      },
+      {
+        "value": "rgb(178,178,178)",
+        "count": 1
+      }
+    ],
+    "distinctTextColorCount": 11,
+    "distinctBgColorCount": 11
+  },
+  "persistent": {
+    "fixedOrSticky": [
+      {
+        "tag": "header",
+        "cls": "global-navigation-recruit js-fade",
+        "position": "fixed",
+        "rect": {
+          "top": 0,
+          "left": 0,
+          "width": 1440,
+          "height": 108
+        },
+        "zIndex": "1000",
+        "text": "Recruit Site Interview Interview What We Do What We Do 仕事の全体",
+        "opacity": "1"
+      },
+      {
+        "tag": "div",
+        "cls": "un-cookie-notice js-cookie-notice is-top hide is-hidden",
+        "position": "fixed",
+        "rect": {
+          "top": 900,
+          "left": 0,
+          "width": 1440,
+          "height": 48
+        },
+        "zIndex": "99",
+        "text": "こんにちは！より良い情報を提供できるように、Cookieの取得と利用に同意をお願いします 同意 無効化",
+        "opacity": "0"
+      },
+      {
+        "tag": "div",
+        "cls": "un-recruit-hero_bgVideo",
+        "position": "sticky",
+        "rect": {
+          "top": 0,
+          "left": 0,
+          "width": 1440,
+          "height": 900
+        },
+        "zIndex": "auto",
+        "text": "自分らしさ、それが映像をおもしろくする。 Yourcolorslightupthescreen. Yourcolors ",
+        "opacity": "1"
+      },
+      {
+        "tag": "div",
+        "cls": "footer-recruit_bg",
+        "position": "fixed",
+        "rect": {
+          "top": 0,
+          "left": 0,
+          "width": 1440,
+          "height": 900
+        },
+        "zIndex": "-1",
+        "text": "",
+        "opacity": "0"
+      }
+    ]
+  },
+  "nav": {
+    "tag": "header",
+    "cls": "global-navigation-recruit js-fade",
+    "height": 108,
+    "top": 0,
+    "position": "fixed",
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "backdropFilter": "none",
+    "borderBottom": "0px rgb(75, 24, 0)",
+    "paddingBlock": "0px / 0px",
+    "transform": "none",
+    "opacity": "1",
+    "mixBlendMode": "normal",
+    "color": "rgb(75, 24, 0)"
+  },
+  "navState": {
+    "at0": {
+      "nav": {
+        "height": 108,
+        "top": 0,
+        "position": "fixed",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "backdropFilter": "none",
+        "borderBottom": "0px rgb(75, 24, 0)",
+        "paddingBlock": "0px / 0px",
+        "transform": "none",
+        "opacity": "1",
+        "color": "rgb(75, 24, 0)"
+      },
+      "fixedOrSticky": [
+        {
+          "tag": "header",
+          "cls": "global-navigation-recruit js-fade",
+          "position": "fixed",
+          "rect": {
+            "top": 0,
+            "left": 0,
+            "width": 1440,
+            "height": 108
+          },
+          "text": "Recruit Site Interview Interview What We Do What We Do 仕事の全体",
+          "opacity": "1"
+        },
+        {
+          "tag": "div",
+          "cls": "un-cookie-notice js-cookie-notice is-top hide is-hidden",
+          "position": "fixed",
+          "rect": {
+            "top": 900,
+            "left": 0,
+            "width": 1440,
+            "height": 48
+          },
+          "text": "こんにちは！より良い情報を提供できるように、Cookieの取得と利用に同意をお願いします 同意 無効化",
+          "opacity": "0"
+        },
+        {
+          "tag": "div",
+          "cls": "un-recruit-hero_bgVideo",
+          "position": "sticky",
+          "rect": {
+            "top": 0,
+            "left": 0,
+            "width": 1440,
+            "height": 900
+          },
+          "text": "自分らしさ、それが映像をおもしろくする。 Yourcolorslightupthescreen. Yourcolors ",
+          "opacity": "1"
+        },
+        {
+          "tag": "div",
+          "cls": "footer-recruit_bg",
+          "position": "fixed",
+          "rect": {
+            "top": 0,
+            "left": 0,
+            "width": 1440,
+            "height": 900
+          },
+          "text": "",
+          "opacity": "0"
+        }
+      ]
+    },
+    "at2000": {
+      "nav": {
+        "height": 108,
+        "top": 0,
+        "position": "fixed",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "backdropFilter": "none",
+        "borderBottom": "0px rgb(75, 24, 0)",
+        "paddingBlock": "0px / 0px",
+        "transform": "none",
+        "opacity": "0",
+        "color": "rgb(75, 24, 0)"
+      },
+      "fixedOrSticky": [
+        {
+          "tag": "header",
+          "cls": "global-navigation-recruit js-fade -hide",
+          "position": "fixed",
+          "rect": {
+            "top": 0,
+            "left": 0,
+            "width": 1440,
+            "height": 108
+          },
+          "text": "Recruit Site Interview Interview What We Do What We Do 仕事の全体",
+          "opacity": "0"
+        },
+        {
+          "tag": "div",
+          "cls": "un-cookie-notice js-cookie-notice is-top hide is-hidden",
+          "position": "fixed",
+          "rect": {
+            "top": 900,
+            "left": 0,
+            "width": 1440,
+            "height": 48
+          },
+          "text": "こんにちは！より良い情報を提供できるように、Cookieの取得と利用に同意をお願いします 同意 無効化",
+          "opacity": "0"
+        },
+        {
+          "tag": "div",
+          "cls": "un-recruit-hero_bgVideo",
+          "position": "sticky",
+          "rect": {
+            "top": 0,
+            "left": 0,
+            "width": 1440,
+            "height": 900
+          },
+          "text": "自分らしさ、それが映像をおもしろくする。 Yourcolorslightupthescreen. Yourcolors ",
+          "opacity": "1"
+        },
+        {
+          "tag": "div",
+          "cls": "footer-recruit_bg",
+          "position": "fixed",
+          "rect": {
+            "top": 0,
+            "left": 0,
+            "width": 1440,
+            "height": 900
+          },
+          "text": "",
+          "opacity": "0"
+        }
+      ]
+    },
+    "changed": true,
+    "diff": {
+      "opacity": {
+        "at0": "1",
+        "at2000": "0"
+      }
+    }
+  },
+  "shots": [
+    "tyo-recruit-1440-full.jpg",
+    "tyo-recruit-1440-scroll000.jpg",
+    "tyo-recruit-1440-scroll025.jpg",
+    "tyo-recruit-1440-scroll050.jpg",
+    "tyo-recruit-1440-scroll075.jpg",
+    "tyo-recruit-1440-scroll100.jpg"
+  ],
+  "fullPageShotRepresentative": true,
+  "pageErrors": []
+}

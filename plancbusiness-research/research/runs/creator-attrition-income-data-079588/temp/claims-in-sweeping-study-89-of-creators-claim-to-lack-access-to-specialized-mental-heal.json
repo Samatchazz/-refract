@@ -1,0 +1,72 @@
+[
+  {
+    "claim": "The Creator Mental Health Study by Creators 4 Mental Health, in partnership with Lupiani Insights & Strategies, surveyed 542 full-time and part-time creators across North America (published November 2025) and found 62% experience burnout - a genuinely independent instrument from the Billion Dollar Boy/Censuswide survey.",
+    "stance": "neutral",
+    "stance_target": "prevalence of self-reported creator burnout - independent second instrument alongside BDB",
+    "evidence_type": "statistical",
+    "scope_conditions": "Cross-sectional survey of ACTIVE full-time and part-time creators (n=542); measures self-reported distress among survivors and cannot observe anyone who already quit content creation. North America only (US/Canada implied) - no Southeast Asia coverage. Sponsor-funded by Opus, BeReal, Social Currant, Statusphere, and The AAKOMA Project; Opus is a disclosed Tubefilter partner, so the outlet reporting on it is not fully neutral. Sampling frame, recruitment method, and exact field dates are not disclosed in this write-up or the study's own landing page.",
+    "quoted_support": "\"the researchers surveyed 542 full and part-time creators across North America... 62% of respondents said they experience burnout.\"",
+    "numbers": ["n=542", "62%"],
+    "entities": ["Creators 4 Mental Health", "Lupiani Insights & Strategies", "Shira Lazar"],
+    "time_period": "November 2025",
+    "region": "North America",
+    "confidence": "medium",
+    "source_note_id": "in-sweeping-study-89-of-creators-claim-to-lack-access-to-specialized-mental-heal"
+  },
+  {
+    "claim": "89% of the 542 surveyed creators claim to lack access to specialized mental health resources or benefits, and 69% report financial insecurity as a result of their work.",
+    "stance": "supports",
+    "stance_target": "financial instability and lack of institutional support as documented burnout/quitting-adjacent pressures on creators",
+    "evidence_type": "statistical",
+    "scope_conditions": "Same n=542 North American active-creator sample; self-reported access/insecurity, not a benefits-registry or administrative measure. Cannot be generalized outside North America.",
+    "quoted_support": "\"A whopping 89% of the surveyed individuals claimed to lack access to specialized mental health resources and benefits... 69% reported financial insecurity as a result of their work.\"",
+    "numbers": ["89%", "69%"],
+    "entities": ["Creators 4 Mental Health"],
+    "time_period": "November 2025",
+    "region": "North America",
+    "confidence": "medium",
+    "source_note_id": "in-sweeping-study-89-of-creators-claim-to-lack-access-to-specialized-mental-heal"
+  },
+  {
+    "claim": "10% of surveyed creators reported having suicidal thoughts related to their work - roughly twice the NIMH-reported US adult rate, per Tubefilter's framing.",
+    "stance": "supports",
+    "stance_target": "severity of mental-health toll among creators",
+    "evidence_type": "statistical",
+    "scope_conditions": "Self-reported measure among n=542 active North American creators; comparison to NIMH adult population rate is the reporting outlet's own framing, not a matched case-control study. Should be treated as a serious but single cross-sectional estimate, not a trend.",
+    "quoted_support": "\"10% of survey respondents said they have had suicidal thoughts related to their work. That's twice the U.S. adult rate provided by the NIMH.\"",
+    "numbers": ["10%"],
+    "entities": ["Creators 4 Mental Health", "NIMH"],
+    "time_period": "November 2025",
+    "region": "North America",
+    "confidence": "medium",
+    "source_note_id": "in-sweeping-study-89-of-creators-claim-to-lack-access-to-specialized-mental-heal"
+  },
+  {
+    "claim": "Burnout and mental-health distress prevalence rise among creators who have been active for five or more years - a duration gradient not reported by the Billion Dollar Boy survey.",
+    "stance": "supports",
+    "stance_target": "tenure/duration effects on creator burnout, relevant to time-to-quit dynamics",
+    "evidence_type": "statistical",
+    "scope_conditions": "Reported only qualitatively in this write-up (no specific percentage by tenure band given); n=542, North America only. This is the only duration-gradient finding located in this batch, but it measures distress intensifying WITH tenure among survivors, not a hazard/exit rate.",
+    "quoted_support": "\"These issues become more common for creators who have been active for at least five years.\"",
+    "numbers": ["5+ years (tenure threshold)"],
+    "entities": ["Creators 4 Mental Health"],
+    "time_period": "November 2025",
+    "region": "North America",
+    "confidence": "low",
+    "source_note_id": "in-sweeping-study-89-of-creators-claim-to-lack-access-to-specialized-mental-heal"
+  },
+  {
+    "claim": "The 62% burnout figure from Creators4MentalHealth (n=542, North America, Nov 2025) and the 52% figure from Billion Dollar Boy/Censuswide (n=1,000, US+UK, July 2025) are two independent burnout-prevalence estimates that bracket a bare majority, with the gap plausibly explained by differing question wording and inclusion of part-time creators in the C4MH sample.",
+    "stance": "neutral",
+    "stance_target": "convergence/divergence across the two genuinely independent burnout prevalence studies in this batch",
+    "evidence_type": "statistical",
+    "scope_conditions": "Cross-study comparison finding. BDB asks about burnout 'as a direct result of your career' among a broader US+UK sample; C4MH asks a more general burnout question among North American full+part-time creators. Neither reports a comparable quit-intention or attrition figure to the other (C4MH reports no quit-intention rate at all, so it does not corroborate BDB's 37%).",
+    "quoted_support": "\"62% here versus 52% in BDB (n=1,000, US+UK, July 2025) are the two independent burnout prevalence estimates in this cluster, and they bracket a majority.\" [note author's cross-study synthesis]",
+    "numbers": ["62%", "52%", "n=542", "n=1,000"],
+    "entities": ["Creators 4 Mental Health", "Billion Dollar Boy"],
+    "time_period": "2025",
+    "region": "North America vs US/UK",
+    "confidence": "medium",
+    "source_note_id": "in-sweeping-study-89-of-creators-claim-to-lack-access-to-specialized-mental-heal"
+  }
+]

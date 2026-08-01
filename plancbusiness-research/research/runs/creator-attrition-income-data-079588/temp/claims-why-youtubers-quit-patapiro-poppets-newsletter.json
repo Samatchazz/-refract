@@ -1,0 +1,25 @@
+[
+  {
+    "claim": "A creator-authored essay on why YouTubers quit identifies burnout from constant uploading, algorithm changes that erase established formats, cancellation risk and loss of algorithmic relevance as the main exit drivers, but contains no sample, no survey and no quantitative evidence of any kind.",
+    "stance": "neutral",
+    "stance_target": "Documented reasons creators give for quitting",
+    "evidence_type": "anecdotal",
+    "scope_conditions": "Single-author Substack essay, 3 February 2024; the author self-describes as an observer rather than a researcher; the evidence is two named individual cases (ProJared, MatPat) plus general observation; usable as a mechanism hypothesis only, never as a measurement",
+    "quoted_support": "Creators get burned out by the burden of avoiding controversy, irrelevance, and the algorithm.",
+    "numbers": [
+      "no sample",
+      "2 named individual cases",
+      "published 3 February 2024"
+    ],
+    "entities": [
+      "Patapiro Poppet",
+      "ProJared",
+      "MatPat",
+      "YouTube"
+    ],
+    "time_period": "February 2024",
+    "region": "United States / Anglophone YouTube",
+    "confidence": "low",
+    "source_note_id": "why-youtubers-quit-patapiro-poppets-newsletter"
+  }
+]

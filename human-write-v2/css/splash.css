@@ -1,0 +1,75 @@
+/* ============================================================
+   splash.css — §1 fullscreen splash (3.0s, two parallel layers)
+   Idiology palette: --c-bg-dark is "the system world" (tokens §1 map).
+   ============================================================ */
+#splash {
+  position: fixed; inset: 0; z-index: 100;
+  background: var(--c-bg-dark);          /* deep violet-navy — the system world */
+  color: var(--c-text-light);
+  display: grid; grid-template-rows: 1fr auto; align-items: center; justify-items: center;
+  padding: 6vh 5vw; overflow: hidden;
+}
+/* When splash is bypassed (2nd visit / reduced motion), remove it from flow entirely */
+html.no-splash #splash { display: none; }
+
+/* --- top layer: the number (AI voice — geometric, tabular) --- */
+.splash-top { align-self: center; text-align: center; }
+.splash-number {
+  position: relative; display: inline-block;
+  font-family: var(--f-system); font-weight: 600;
+  font-size: var(--fs-hero-xl); line-height: .95;
+  font-variant-numeric: tabular-nums; letter-spacing: -.02em;
+  color: var(--c-text-light);
+}
+.splash-cross {                          /* sacred stroke draws here (--c-text-light on dark) */
+  position: absolute; left: -3%; top: 42%; width: 106%; height: 40%;
+  pointer-events: none;
+}
+.splash-percent {                        /* 0.1% — the human hand, over the crossed number */
+  position: absolute; left: 50%; top: 46%; transform: translate(-50%, -50%) rotate(-4deg);
+  font-family: var(--f-accent); font-size: .32em; color: var(--c-text-light);
+  opacity: 0; white-space: nowrap;
+}
+.splash-caption { margin: .6em 0 0; min-height: 1.4em; font-size: clamp(.95rem, 2.4vw, 1.5rem); }
+.splash-caption .cap-a { font-family: var(--f-display); color: var(--c-text-muted-inv); opacity: 0; }
+.splash-caption .cap-b { font-family: var(--f-accent); color: var(--c-text-light); opacity: 0; margin-inline-start: .4em; }
+
+/* --- bottom layer: the logo (~30%) --- */
+.splash-logo {
+  position: relative; align-self: end; margin-bottom: 2vh;
+  height: clamp(3rem, 9vw, 6rem); display: flex; align-items: center; justify-content: center;
+}
+.logo-ai {
+  position: absolute; font-family: var(--f-system); font-weight: 600;
+  font-size: clamp(2rem, 7vw, 4.5rem); letter-spacing: -.01em; color: var(--c-text-muted-inv);
+}
+.logo-ai .ai-ghost, .logo-ai .ai-crisp { grid-area: 1/1; }
+.logo-ai .ai-ghost { position: absolute; inset: 0; opacity: 0; color: var(--c-text-muted); }
+.logo-ai .ai-crisp { position: relative; clip-path: inset(0 0 0 0); color: var(--c-text-muted-inv); }
+
+.logo-human {                            /* Human-Write — alive, full contrast */
+  position: absolute; font-family: var(--f-accent); font-weight: 600;
+  font-size: clamp(2.1rem, 7.4vw, 4.7rem); color: var(--c-text-light); opacity: 0;
+  display: inline-flex; gap: .01em;
+}
+.logo-human .lh-ch { display: inline-block; opacity: 0; transform-origin: 50% 80%; white-space: pre; }
+
+/* eraser sprite (TODO: replace asset) */
+.splash-eraser {
+  position: absolute; top: 50%; left: 0; width: clamp(54px, 9vw, 92px); height: auto;
+  transform: translate(-120%, -55%) rotate(-8deg); color: var(--c-text-muted-inv); opacity: 0;
+  pointer-events: none;
+}
+
+/* skip button (tiny, bottom-right) — accent is interaction-only, so it belongs here */
+#splash-skip {
+  position: fixed; right: 16px; bottom: 14px; z-index: 101;
+  font-family: var(--f-system); font-size: .78rem; letter-spacing: .12em;
+  color: var(--c-text-muted-inv); background: transparent; border: 1px solid var(--c-border-dark);
+  border-radius: 999px; padding: 5px 14px; cursor: pointer; opacity: .8;
+  transition: color var(--dur-fast) var(--ease-inout), border-color var(--dur-fast) var(--ease-inout);
+}
+#splash-skip:hover { opacity: 1; color: var(--c-accent); border-color: var(--c-accent); }
+
+/* hard cut to black */
+#splash-black { position: fixed; inset: 0; background: #000; opacity: 0; pointer-events: none; z-index: 102; }

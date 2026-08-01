@@ -1,0 +1,125 @@
+/* ============================================================
+   xxix.co faithful reference build — REFERENCE / STUDY ONLY.
+   Copy, imagery, and fonts are © XXIX (Twenty Nine). Replace all
+   content (edit ../content/home.json) and license/remove the fonts
+   before any non-private use. See README.md.
+   ============================================================ */
+
+@font-face { font-family: ReplicaProTT; font-display: swap;
+  src: url(../assets/font/ReplicaProTT.woff2) format("woff2"),
+       url(../assets/font/ReplicaProTT.woff)  format("woff"),
+       url(../assets/font/ReplicaProTT.ttf)   format("truetype"); }
+@font-face { font-family: TimesNewRomanMTStd; font-display: swap;
+  src: url(../assets/font/TimesNewRomanMTStd.woff2) format("woff2"),
+       url(../assets/font/TimesNewRomanMTStd.woff)  format("woff"),
+       url(../assets/font/TimesNewRomanMTStd.ttf)   format("truetype"); }
+
+:root {
+  --black:#231f20; --white:#fff; --yellow:#f8e71c; --beige:#ffe57b;
+  --offwhite:#f6fff1; --red:#f57a5f; --purple:#9984ea; --gray:#f1f2f2;
+  --pad-x:.9375rem; --gap:.9375rem;
+}
+* { box-sizing:border-box; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale; }
+@media (pointer:fine){ *{cursor:none;} }
+html,body{margin:0;}
+body{ font-family:ReplicaProTT,"Helvetica Neue",Arial,sans-serif; color:var(--black);
+  background:var(--white); font-size:15px; line-height:1.15; }
+a{color:inherit;text-decoration:none;}
+img,video{display:block;max-width:100%;}
+
+/* custom cursor */
+.cursor{position:fixed;top:0;left:0;z-index:999999;width:12px;height:12px;border-radius:50%;
+  background:var(--black);pointer-events:none;transform:translate(-50%,-50%);
+  transition:width .18s ease,height .18s ease,background .18s ease;will-change:transform;}
+.cursor.is-hover{width:40px;height:40px;background:var(--purple);mix-blend-mode:normal;}
+
+/* fixed nav */
+.nav{position:fixed;top:1rem;right:1rem;z-index:1000;display:flex;gap:.4rem;}
+.pill{border:1px solid var(--black);border-radius:999px;padding:.4rem .85rem;background:var(--white);
+  font-weight:500;transition:background .15s;}
+.pill:hover{background:var(--yellow);}
+
+.ref-banner{background:var(--black);color:var(--yellow);font-size:12px;font-weight:500;
+  padding:.4rem var(--pad-x);letter-spacing:.02em;}
+
+/* ---- the grid: 12 columns, mirrors CMS colStart/colEnd + offsets ---- */
+main{padding:1.5625rem var(--pad-x) var(--pad-x);}
+.grid{
+  display:grid;
+  grid-template-columns:repeat(1,minmax(0,1fr));   /* mobile: single column */
+  gap:2.5rem var(--gap);
+}
+@media (min-width:1080px){
+  .grid{ grid-template-columns:repeat(12,minmax(0,1fr)); gap:0 var(--gap); align-items:start; }
+}
+.module{ min-width:0; }
+/* mobile: neutralise desktop grid placement + scatter (inline styles) */
+@media (max-width:1079px){
+  .module{ margin:0 !important; grid-column:1 / -1 !important; width:100% !important; }
+}
+
+/* text / master blocks */
+.block{ padding:0; }
+.block .pad{ padding:1.15rem 1.25rem 1.35rem; }
+.hero h1, .block h1{ font-size:100px; font-weight:500; line-height:1.0; letter-spacing:-.32px; margin:0; }
+.block h2{ font-size:50px; font-weight:500; line-height:1.0; margin:0; }
+.block h3{ font-size:25px; font-weight:500; line-height:1.15; margin:0; }
+.block h4{ font-size:15px; font-weight:500; line-height:1.35; margin:0; }
+.block h3 a, .block h4 a{ text-decoration:none; }
+.block h3 br + *, .block br{ }
+@media (max-width:1079px){
+  .hero h1,.block h1{font-size:44px;} .block h2{font-size:32px;} .block h3{font-size:22px;}
+}
+
+/* media modules */
+.media{ position:relative; }
+.media img, .media video{ width:100%; height:100%; object-fit:cover; }
+.media--ar-square{ aspect-ratio:1/1; }
+.media--ar-portrait{ aspect-ratio:8/10; }
+.media--ar-landscape{ aspect-ratio:16/10; }
+.media--shadow{ box-shadow:0 30px 60px rgba(0,0,0,.18); }
+
+.caption{ font-size:15px; font-weight:500; line-height:1.3; white-space:pre-line; }
+.caption--top-left{ position:absolute; top:.55rem; left:.6rem; }
+.caption--bottom-left{ position:absolute; bottom:.55rem; left:.6rem; }
+.caption--below{ margin-top:.5rem; }
+.caption--light{ color:var(--white); }
+
+/* email signup */
+.signup{ padding:1.15rem 1.25rem 1.35rem; }
+.signup input{ width:100%; border:0; background:transparent; font:inherit; font-size:25px;
+  font-weight:500; border-bottom:1px solid var(--black); padding:.2rem 0 .6rem; cursor:none; }
+.signup input::placeholder{ color:var(--black); opacity:1; }
+.signup .cta{ display:inline-block; margin-top:.9rem; font-size:25px; font-weight:500; }
+
+/* footer */
+.foot{ background:var(--black); color:var(--white); margin-top:6rem;
+  padding:1.5rem var(--pad-x); display:flex; flex-wrap:wrap; gap:2rem; justify-content:space-between;
+  font-size:15px; font-weight:500; }
+.foot .cols{ display:flex; gap:3rem; flex-wrap:wrap; }
+.foot .loc b{ display:block; font-weight:500; } .foot .loc span{ opacity:.6; }
+
+/* ============================================================
+   Project detail (case-study) layout — build-project.js
+   ============================================================ */
+.proj-hero{ width:100%; }
+.proj-hero img, .proj-hero video{ width:100%; height:auto; display:block; }
+.proj main{ padding:0; }
+.proj-intro{ padding:2.5rem var(--pad-x) 1rem; }
+.proj-intro h1{ font-size:100px; font-weight:500; line-height:1.0; letter-spacing:-.32px; margin:0 0 2rem; }
+.proj-intro .cols{ display:grid; grid-template-columns:1fr; gap:1.5rem; }
+@media (min-width:1080px){ .proj-intro .cols{ grid-template-columns:2fr 1fr; gap:3rem; } }
+.detail-row{ font-size:25px; font-weight:500; line-height:1.25; margin-bottom:1rem; }
+.detail-row .label{ display:block; font-size:15px; opacity:.55; margin-bottom:.35rem; }
+.callout{ font-size:15px; font-weight:500; line-height:1.4; margin-bottom:1rem; }
+.callout.serif{ font-family:TimesNewRomanMTStd,Times,serif; font-size:22px; font-style:italic; }
+.callout a{ text-decoration:underline; }
+@media (max-width:1079px){ .proj-intro h1{ font-size:44px; } .detail-row{ font-size:20px; } }
+
+.oneUp{ margin:1.25rem 0; }
+.oneUp img, .oneUp video{ width:100%; height:auto; display:block; }
+.twoUp{ display:grid; grid-template-columns:1fr; gap:1.25rem; margin:1.25rem 0; }
+@media (min-width:768px){ .twoUp{ grid-template-columns:1fr 1fr; gap:var(--gap); } }
+.twoUp img, .twoUp video{ width:100%; height:auto; display:block; }
+.twoUp .cap{ font-size:15px; font-weight:500; margin-top:.5rem; }
+.proj-back{ display:inline-block; margin:2rem var(--pad-x); font-size:25px; font-weight:500; }

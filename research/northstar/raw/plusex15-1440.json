@@ -1,0 +1,918 @@
+{
+  "slug": "plusex15",
+  "url": "https://15th.plus-ex.com",
+  "name": "PLUS-EX 15th",
+  "country": "Korea",
+  "viewport": {
+    "width": 1440,
+    "height": 900
+  },
+  "ok": true,
+  "httpStatus": 200,
+  "finalUrl": "https://15th.plus-ex.com/",
+  "consentDismissed": [],
+  "scrollInfo": {
+    "contentHeight": 73532,
+    "docScrollHeight": 73532,
+    "maxElementBottom": 73523,
+    "innerScrollerHeight": 73532,
+    "virtualScroll": false
+  },
+  "document": {
+    "scrollHeight": 73532,
+    "vhMultiple": 81.7,
+    "textNodeCount": 788,
+    "canvasCount": 1,
+    "elementCount": 2348,
+    "title": "15th Anniversary",
+    "lang": "ko",
+    "contentHeight": 73532,
+    "scrollMode": "native"
+  },
+  "container": {
+    "dominantPairs": [
+      {
+        "width": 340,
+        "left": 961,
+        "count": 4,
+        "sample": {
+          "tag": "div",
+          "cls": "sc-GjvTv frWRwK"
+        }
+      },
+      {
+        "width": 661,
+        "left": 753,
+        "count": 3,
+        "sample": {
+          "tag": "div",
+          "cls": "sc-fhfEft dwujYq sub-title animate"
+        }
+      },
+      {
+        "width": 453,
+        "left": 182,
+        "count": 3,
+        "sample": {
+          "tag": "div",
+          "cls": "sc-gDzyrw bMZWfX sub-title animate"
+        }
+      },
+      {
+        "width": 595,
+        "left": 718,
+        "count": 3,
+        "sample": {
+          "tag": "div",
+          "cls": "sc-gJUwzu hHGMax sub-title animate"
+        }
+      },
+      {
+        "width": 469,
+        "left": 795,
+        "count": 2,
+        "sample": {
+          "tag": "div",
+          "cls": "sc-gDzyrw bMZWfX sub-title animate"
+        }
+      },
+      {
+        "width": 744,
+        "left": 348,
+        "count": 2,
+        "sample": {
+          "tag": "div",
+          "cls": "sc-jjDSqR gJdAXp sub-title animate"
+        }
+      }
+    ],
+    "containerChain": {
+      "chain": [
+        {
+          "tag": "div",
+          "cls": "sc-GjvTv frWRwK",
+          "width": 340,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "block"
+        },
+        {
+          "tag": "div",
+          "cls": "sc-fSwKIM bCqVJd",
+          "width": 469.33,
+          "maxWidth": "none",
+          "paddingInline": "16px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "flex"
+        },
+        {
+          "tag": "div",
+          "cls": "sc-cbrqwu ibGkiM project-list ",
+          "width": 1430,
+          "maxWidth": "none",
+          "paddingInline": "16px / 16px",
+          "marginInline": "0px / 0px",
+          "display": "flex"
+        },
+        {
+          "tag": "div",
+          "cls": "sc-eHqVIu ivUkAY",
+          "width": 1430,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "flex"
+        },
+        {
+          "tag": "div",
+          "cls": "pin-inner",
+          "width": 1430,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "block"
+        },
+        {
+          "tag": "div",
+          "cls": "sc-cokDIm dcFRaS",
+          "width": 1430,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "flex"
+        },
+        {
+          "tag": "div",
+          "cls": "project-list-pin",
+          "width": 1430,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "block"
+        },
+        {
+          "tag": "div",
+          "cls": "",
+          "width": 1430,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "block"
+        }
+      ],
+      "constrained": null
+    },
+    "grids": [
+      {
+        "columns": 4,
+        "columnGap": "16px",
+        "rowGap": "16px",
+        "width": 1430,
+        "template": "329.5px 329.5px 329.5px 329.5px",
+        "count": 1
+      }
+    ],
+    "bodyPaddingInline": "0px / 0px",
+    "bodyMaxWidth": "none",
+    "htmlPaddingInline": "0px / 0px"
+  },
+  "leftEdgeTest": {
+    "layout": {
+      "n": 10,
+      "mean": 177.2,
+      "stdDev": 287.48,
+      "distinctExact": 4,
+      "distinctClustered2px": 4,
+      "clusters": [
+        {
+          "at": 16,
+          "count": 7
+        },
+        {
+          "at": 198,
+          "count": 1
+        },
+        {
+          "at": 607,
+          "count": 1
+        },
+        {
+          "at": 855,
+          "count": 1
+        }
+      ],
+      "values": [
+        16,
+        607,
+        16,
+        16,
+        16,
+        855,
+        16,
+        198,
+        16,
+        16
+      ]
+    },
+    "rect": {
+      "n": 10,
+      "mean": 224.5,
+      "stdDev": 276.43,
+      "distinctExact": 5,
+      "distinctClustered2px": 5,
+      "clusters": [
+        {
+          "at": 16,
+          "count": 5
+        },
+        {
+          "at": 198,
+          "count": 1
+        },
+        {
+          "at": 252.16,
+          "count": 2
+        },
+        {
+          "at": 607.33,
+          "count": 1
+        },
+        {
+          "at": 855.34,
+          "count": 1
+        }
+      ],
+      "values": [
+        16,
+        607.33,
+        16,
+        16,
+        16,
+        855.34,
+        16,
+        198,
+        252.16,
+        252.16
+      ]
+    },
+    "headings": {
+      "n": 10,
+      "mean": 229.8,
+      "stdDev": 289.35,
+      "distinctExact": 5,
+      "distinctClustered2px": 5,
+      "clusters": [
+        {
+          "at": 0,
+          "count": 1
+        },
+        {
+          "at": 16,
+          "count": 5
+        },
+        {
+          "at": 429,
+          "count": 1
+        },
+        {
+          "at": 459,
+          "count": 2
+        },
+        {
+          "at": 871,
+          "count": 1
+        }
+      ],
+      "values": [
+        16,
+        0,
+        16,
+        16,
+        16,
+        871,
+        16,
+        429,
+        459,
+        459
+      ]
+    },
+    "sectionDiscovery": "tall-children-of-wrapper"
+  },
+  "sections": [
+    {
+      "index": 0,
+      "tag": "div",
+      "id": null,
+      "cls": "",
+      "height": 900,
+      "vhFraction": 1,
+      "paddingBlockStart": "16px",
+      "paddingBlockEnd": "16px",
+      "marginBlockStart": "0px",
+      "marginBlockEnd": "180px",
+      "firstText": {
+        "layoutLeft": 16,
+        "rectLeft": 16,
+        "tag": "div",
+        "fontSize": "230.4px",
+        "text": "BEYOND"
+      },
+      "heading": {
+        "layoutLeft": 16,
+        "rectLeft": 16,
+        "tag": "div",
+        "fontSize": "230.4px",
+        "text": "BEYOND"
+      }
+    },
+    {
+      "index": 1,
+      "tag": "div",
+      "id": null,
+      "cls": "bg-dark",
+      "height": 4893.92,
+      "vhFraction": 5.44,
+      "paddingBlockStart": "0px",
+      "paddingBlockEnd": "0px",
+      "marginBlockStart": "0px",
+      "marginBlockEnd": "0px",
+      "firstText": {
+        "layoutLeft": 607,
+        "rectLeft": 607.33,
+        "tag": "div",
+        "fontSize": "20px",
+        "text": "Watch full video"
+      },
+      "heading": {
+        "layoutLeft": 0,
+        "rectLeft": 144,
+        "tag": "div",
+        "fontSize": "105.12px",
+        "text": "PLUS"
+      }
+    },
+    {
+      "index": 2,
+      "tag": "div",
+      "id": null,
+      "cls": "bg-light",
+      "height": 5161.42,
+      "vhFraction": 5.73,
+      "paddingBlockStart": "0px",
+      "paddingBlockEnd": "0px",
+      "marginBlockStart": "0px",
+      "marginBlockEnd": "0px",
+      "firstText": {
+        "layoutLeft": 16,
+        "rectLeft": 16,
+        "tag": "div",
+        "fontSize": "230.4px",
+        "text": "RE"
+      },
+      "heading": {
+        "layoutLeft": 16,
+        "rectLeft": 16,
+        "tag": "div",
+        "fontSize": "230.4px",
+        "text": "RE"
+      }
+    },
+    {
+      "index": 3,
+      "tag": "div",
+      "id": null,
+      "cls": "bg-dark",
+      "height": 14795.23,
+      "vhFraction": 16.44,
+      "paddingBlockStart": "0px",
+      "paddingBlockEnd": "0px",
+      "marginBlockStart": "0px",
+      "marginBlockEnd": "0px",
+      "firstText": {
+        "layoutLeft": 16,
+        "rectLeft": 16,
+        "tag": "div",
+        "fontSize": "230.4px",
+        "text": "RE"
+      },
+      "heading": {
+        "layoutLeft": 16,
+        "rectLeft": 16,
+        "tag": "div",
+        "fontSize": "230.4px",
+        "text": "RE"
+      }
+    },
+    {
+      "index": 4,
+      "tag": "div",
+      "id": null,
+      "cls": "",
+      "height": 981.25,
+      "vhFraction": 1.09,
+      "paddingBlockStart": "0px",
+      "paddingBlockEnd": "0px",
+      "marginBlockStart": "0px",
+      "marginBlockEnd": "0px",
+      "firstText": {
+        "layoutLeft": 16,
+        "rectLeft": 16,
+        "tag": "div",
+        "fontSize": "230.4px",
+        "text": "RE"
+      },
+      "heading": {
+        "layoutLeft": 16,
+        "rectLeft": 16,
+        "tag": "div",
+        "fontSize": "230.4px",
+        "text": "RE"
+      }
+    },
+    {
+      "index": 5,
+      "tag": "div",
+      "id": null,
+      "cls": "bg-light has-bg",
+      "height": 16620.2,
+      "vhFraction": 18.47,
+      "paddingBlockStart": "0px",
+      "paddingBlockEnd": "0px",
+      "marginBlockStart": "-900px",
+      "marginBlockEnd": "0px",
+      "firstText": {
+        "layoutLeft": 855,
+        "rectLeft": 855.34,
+        "tag": "div",
+        "fontSize": "37.44px",
+        "text": "True design is born"
+      },
+      "heading": {
+        "layoutLeft": 871,
+        "rectLeft": 548.38,
+        "tag": "div",
+        "fontSize": "105.12px",
+        "text": "DESIGN AS"
+      }
+    },
+    {
+      "index": 6,
+      "tag": "div",
+      "id": null,
+      "cls": "",
+      "height": 865.25,
+      "vhFraction": 0.96,
+      "paddingBlockStart": "0px",
+      "paddingBlockEnd": "0px",
+      "marginBlockStart": "-720px",
+      "marginBlockEnd": "0px",
+      "firstText": {
+        "layoutLeft": 16,
+        "rectLeft": 16,
+        "tag": "div",
+        "fontSize": "230.4px",
+        "text": "RE"
+      },
+      "heading": {
+        "layoutLeft": 16,
+        "rectLeft": 16,
+        "tag": "div",
+        "fontSize": "230.4px",
+        "text": "RE"
+      }
+    },
+    {
+      "index": 7,
+      "tag": "div",
+      "id": null,
+      "cls": "bg-dark",
+      "height": 12072.02,
+      "vhFraction": 13.41,
+      "paddingBlockStart": "0px",
+      "paddingBlockEnd": "0px",
+      "marginBlockStart": "0px",
+      "marginBlockEnd": "0px",
+      "firstText": {
+        "layoutLeft": 198,
+        "rectLeft": 198,
+        "tag": "div",
+        "fontSize": "37.44px",
+        "text": "We believe growing"
+      },
+      "heading": {
+        "layoutLeft": 429,
+        "rectLeft": 428.92,
+        "tag": "div",
+        "fontSize": "105.12px",
+        "text": "invesT"
+      }
+    },
+    {
+      "index": 8,
+      "tag": "div",
+      "id": null,
+      "cls": "bg-dark",
+      "height": 6767.08,
+      "vhFraction": 7.52,
+      "paddingBlockStart": "0px",
+      "paddingBlockEnd": "0px",
+      "marginBlockStart": "0px",
+      "marginBlockEnd": "0px",
+      "firstText": {
+        "layoutLeft": 16,
+        "rectLeft": 252.16,
+        "tag": "div",
+        "fontSize": "230.4px",
+        "text": "FROM"
+      },
+      "heading": {
+        "layoutLeft": 459,
+        "rectLeft": 458.81,
+        "tag": "div",
+        "fontSize": "400px",
+        "text": "5"
+      }
+    },
+    {
+      "index": 9,
+      "tag": "div",
+      "id": null,
+      "cls": "bg-light light-last",
+      "height": 11381.54,
+      "vhFraction": 12.65,
+      "paddingBlockStart": "0px",
+      "paddingBlockEnd": "0px",
+      "marginBlockStart": "0px",
+      "marginBlockEnd": "0px",
+      "firstText": {
+        "layoutLeft": 16,
+        "rectLeft": 252.16,
+        "tag": "div",
+        "fontSize": "230.4px",
+        "text": "SELECTED"
+      },
+      "heading": {
+        "layoutLeft": 459,
+        "rectLeft": 458.81,
+        "tag": "div",
+        "fontSize": "400px",
+        "text": "9"
+      }
+    }
+  ],
+  "verticalRhythm": {
+    "sectionCount": 10,
+    "near100vhCount": 1,
+    "near100vhPct": 10,
+    "strictGcdOfSpacing": 1,
+    "baseUnitEstimate80pct": 2,
+    "spacingHistogram": [
+      {
+        "value": 16,
+        "count": 244
+      },
+      {
+        "value": 4,
+        "count": 196
+      },
+      {
+        "value": 14,
+        "count": 180
+      },
+      {
+        "value": 13,
+        "count": 92
+      },
+      {
+        "value": 7,
+        "count": 61
+      },
+      {
+        "value": 20,
+        "count": 48
+      },
+      {
+        "value": 32,
+        "count": 25
+      },
+      {
+        "value": 166,
+        "count": 20
+      },
+      {
+        "value": 180,
+        "count": 15
+      },
+      {
+        "value": 64,
+        "count": 15
+      },
+      {
+        "value": 182,
+        "count": 14
+      },
+      {
+        "value": 24,
+        "count": 11
+      },
+      {
+        "value": 961,
+        "count": 11
+      },
+      {
+        "value": 300,
+        "count": 10
+      }
+    ],
+    "spacingSampleSize": 1069
+  },
+  "typeScale": {
+    "distinctFontSizeCount": 10,
+    "distinctFontSizeCount_used2plus": 10,
+    "distinctSizes": [
+      {
+        "size": 400,
+        "count": 4
+      },
+      {
+        "size": 230.4,
+        "count": 66
+      },
+      {
+        "size": 105.12,
+        "count": 46
+      },
+      {
+        "size": 37.44,
+        "count": 57
+      },
+      {
+        "size": 36,
+        "count": 7
+      },
+      {
+        "size": 28,
+        "count": 7
+      },
+      {
+        "size": 23.04,
+        "count": 138
+      },
+      {
+        "size": 20,
+        "count": 180
+      },
+      {
+        "size": 18,
+        "count": 97
+      },
+      {
+        "size": 17.28,
+        "count": 27
+      }
+    ],
+    "scaleSizesDesc": [
+      400,
+      230.4,
+      105.12,
+      37.44,
+      36,
+      28,
+      23.04,
+      20,
+      18,
+      17.28
+    ],
+    "consecutiveRatios": [
+      1.74,
+      2.19,
+      2.81,
+      1.04,
+      1.29,
+      1.22,
+      1.15,
+      1.11,
+      1.04
+    ],
+    "roles": {
+      "h1": null,
+      "biggestText": {
+        "tag": "div",
+        "fontSize": 400,
+        "fontWeight": "700",
+        "lineHeightPx": 320,
+        "lineHeightRatio": 0.8,
+        "letterSpacing": "-12px",
+        "letterSpacingEm": -0.03,
+        "fontFamily": "neue-haas-grotesk-display",
+        "fontFamilyFull": "neue-haas-grotesk-display, sans-serif",
+        "textTransform": "none",
+        "color": "rgb(255, 255, 255)",
+        "widthPx": 261.19,
+        "text": "5"
+      },
+      "h2All": [],
+      "h3": null,
+      "body": null,
+      "small": {
+        "tag": "div",
+        "fontSize": 17.28,
+        "fontWeight": "500",
+        "lineHeightPx": 20.74,
+        "lineHeightRatio": 1.2,
+        "letterSpacing": "0.5px",
+        "letterSpacingEm": 0.02894,
+        "fontFamily": "neue-haas-grotesk-display",
+        "fontFamilyFull": "neue-haas-grotesk-display, sans-serif",
+        "textTransform": "uppercase",
+        "color": "rgb(255, 255, 255)",
+        "widthPx": 148.47,
+        "text": "Explorative"
+      },
+      "mono": null
+    },
+    "readingMeasure": null,
+    "readingMeasureAlternates": [],
+    "distinctFontFamilyCount": 2,
+    "fontFamilies": [
+      {
+        "family": "neue-haas-grotesk-display",
+        "count": 508
+      },
+      {
+        "family": "neue-haas-grotesk-text",
+        "count": 121
+      }
+    ]
+  },
+  "color": {
+    "textColors": [
+      {
+        "value": "rgb(0,0,0)",
+        "count": 275
+      },
+      {
+        "value": "rgb(255,255,255)",
+        "count": 135
+      },
+      {
+        "value": "rgb(76,76,76)",
+        "count": 115
+      },
+      {
+        "value": "rgb(187,187,187)",
+        "count": 46
+      },
+      {
+        "value": "rgba(0,0,0,0)",
+        "count": 29
+      },
+      {
+        "value": "rgb(77,77,77)",
+        "count": 12
+      },
+      {
+        "value": "rgb(202,202,202)",
+        "count": 11
+      },
+      {
+        "value": "rgb(128,128,128)",
+        "count": 6
+      }
+    ],
+    "backgroundColors": [
+      {
+        "value": "rgb(255,255,255)",
+        "count": 81
+      },
+      {
+        "value": "rgb(0,0,0)",
+        "count": 45
+      },
+      {
+        "value": "rgb(76,76,76)",
+        "count": 11
+      }
+    ],
+    "distinctTextColorCount": 8,
+    "distinctBgColorCount": 3
+  },
+  "persistent": {
+    "fixedOrSticky": [
+      {
+        "tag": "div",
+        "cls": "",
+        "position": "fixed",
+        "rect": {
+          "top": 0,
+          "left": 0,
+          "width": 1430,
+          "height": 900
+        },
+        "zIndex": "auto",
+        "text": "BEYOND DESIGNINTO EXPERIENCEBEYONDDESIGNINTOEXPERIENCEBEYOND",
+        "opacity": "1"
+      },
+      {
+        "tag": "div",
+        "cls": "",
+        "position": "fixed",
+        "rect": {
+          "top": 0,
+          "left": 0,
+          "width": 1440,
+          "height": 900
+        },
+        "zIndex": "-1",
+        "text": "",
+        "opacity": "1"
+      },
+      {
+        "tag": "div",
+        "cls": "manifesto-hidden",
+        "position": "fixed",
+        "rect": {
+          "top": 0,
+          "left": 0,
+          "width": 1440,
+          "height": 900
+        },
+        "zIndex": "10",
+        "text": "It aligns values,emotions, and interactionsinto a cohesive w",
+        "opacity": "0"
+      },
+      {
+        "tag": "div",
+        "cls": "manifesto-hidden",
+        "position": "fixed",
+        "rect": {
+          "top": 0,
+          "left": 0,
+          "width": 1440,
+          "height": 900
+        },
+        "zIndex": "10",
+        "text": "They shape not just looks,but how it works and feels.Narrati",
+        "opacity": "0"
+      },
+      {
+        "tag": "div",
+        "cls": "manifesto-hidden",
+        "position": "fixed",
+        "rect": {
+          "top": 0,
+          "left": 0,
+          "width": 1440,
+          "height": 900
+        },
+        "zIndex": "10",
+        "text": "Design moveswhen knowledge moves.Design moveswhen knowledgem",
+        "opacity": "0"
+      },
+      {
+        "tag": "div",
+        "cls": "sc-gFqXPY enIkku award-pin hideall",
+        "position": "fixed",
+        "rect": {
+          "top": 147.84,
+          "left": 0,
+          "width": 1430,
+          "height": 604.31
+        },
+        "zIndex": "10",
+        "text": "312315142020 - 21EpisodeCafe DelaluzPlus XPlus X WebsiteANOR",
+        "opacity": "0"
+      },
+      {
+        "tag": "div",
+        "cls": "sc-kSaXSp jJMoGc project-list-pin-image",
+        "position": "fixed",
+        "rect": {
+          "top": -43.34,
+          "left": 272,
+          "width": 600,
+          "height": 986.69
+        },
+        "zIndex": "1000",
+        "text": "",
+        "opacity": "0"
+      }
+    ]
+  },
+  "nav": null,
+  "navState": {
+    "at0": null,
+    "at2000": null
+  },
+  "shots": [
+    "plusex15-1440-full.jpg",
+    "plusex15-1440-scroll000.jpg",
+    "plusex15-1440-scroll025.jpg",
+    "plusex15-1440-scroll050.jpg",
+    "plusex15-1440-scroll075.jpg",
+    "plusex15-1440-scroll100.jpg"
+  ],
+  "fullPageShotRepresentative": true,
+  "pageErrors": []
+}

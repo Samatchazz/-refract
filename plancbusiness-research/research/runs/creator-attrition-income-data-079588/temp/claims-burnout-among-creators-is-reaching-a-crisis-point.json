@@ -1,0 +1,16 @@
+[
+  {
+    "claim": "Hello Partner's July 2025 article is a truncated/paywalled recirculation of the Billion Dollar Boy burnout survey, confirming only the headline set (n=1,000 creators + 1,000 marketers, US/UK, 52% burnout, 37% quit consideration) before the content is paywalled.",
+    "stance": "neutral",
+    "stance_target": "provenance of the 52%/37% burnout figures",
+    "evidence_type": "empirical",
+    "scope_conditions": "Derivative, not independent; does not name Censuswide as fielding agency. Included in this batch only to document breadth of recirculation, not as an independent data point. US/UK only.",
+    "quoted_support": "\"The study, which surveyed 1,000 creators and 1,000 senior marketers across the US and UK, found that more than half (52%) of creators have experienced burnout as a direct result of their work, with almost two in five (37%) considering quitting the industry altogether.\"",
+    "numbers": ["52%", "37%", "n=1,000 creators", "n=1,000 marketers"],
+    "entities": ["Billion Dollar Boy", "Hello Partner"],
+    "time_period": "July 2025",
+    "region": "US, UK",
+    "confidence": "high",
+    "source_note_id": "burnout-among-creators-is-reaching-a-crisis-point"
+  }
+]

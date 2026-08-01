@@ -1,0 +1,5216 @@
+[
+  {
+    "slug": "4wide",
+    "name": "4WIDE",
+    "url": "https://4wide.jp",
+    "systems": {
+      "display": {
+        "fontSize": 464,
+        "weight": "400",
+        "lineHeightRatio": 0.8,
+        "lineHeightPx": 371.2,
+        "letterSpacingEm": -0.02,
+        "widthPx": 451,
+        "sourceFontFamily": "pp-fragment-glare-light",
+        "sourceTag": "span"
+      },
+      "h2": {
+        "fontSize": 13,
+        "weight": "400",
+        "lineHeightRatio": 1.3,
+        "lineHeightPx": 16.9,
+        "letterSpacingEm": 0,
+        "widthPx": 400,
+        "sourceFontFamily": "PP Neue Montreal Medium",
+        "sourceTag": "h2"
+      },
+      "body": {
+        "fontSize": 12,
+        "weight": "400",
+        "lineHeightRatio": 1.2,
+        "lineHeightPx": 14.4,
+        "letterSpacingEm": 0,
+        "widthPx": 460,
+        "sourceFontFamily": "PP Neue Montreal Medium",
+        "sourceTag": "p"
+      }
+    },
+    "tests": {
+      "display": {
+        "applied": {
+          "family": "Kanit",
+          "weight": 700,
+          "fontSizePx": 464,
+          "lineHeightRatio": 0.8,
+          "declaredNormal": false,
+          "lineHeightPx": 371.2,
+          "letterSpacingPx": -9.28,
+          "widthPx": 451
+        },
+        "sourceSystem": {
+          "fontFamily": "pp-fragment-glare-light",
+          "tag": "span",
+          "weight": "400"
+        },
+        "asIs": {
+          "collides": true,
+          "minGapPx": -216.05,
+          "perString": [
+            {
+              "id": "h-1",
+              "lines": 24,
+              "minGap": -92.8,
+              "collides": true,
+              "requiredLineHeightPx": 464
+            },
+            {
+              "id": "h-2",
+              "lines": 19,
+              "minGap": -114.55,
+              "collides": true,
+              "requiredLineHeightPx": 485.75
+            },
+            {
+              "id": "h-3",
+              "lines": 21,
+              "minGap": -114.55,
+              "collides": true,
+              "requiredLineHeightPx": 485.75
+            },
+            {
+              "id": "stress",
+              "lines": 24,
+              "minGap": -216.05,
+              "collides": true,
+              "requiredLineHeightPx": 587.25
+            }
+          ]
+        },
+        "minThaiSafeRatio": 1.266,
+        "notViable": false,
+        "leadingCorrection": 0.466
+      },
+      "h2": {
+        "applied": {
+          "family": "Kanit",
+          "weight": 700,
+          "fontSizePx": 13,
+          "lineHeightRatio": 1.3,
+          "declaredNormal": false,
+          "lineHeightPx": 16.9,
+          "letterSpacingPx": 0,
+          "widthPx": 400
+        },
+        "sourceSystem": {
+          "fontFamily": "PP Neue Montreal Medium",
+          "tag": "h2",
+          "weight": "400"
+        },
+        "asIs": {
+          "collides": true,
+          "minGapPx": -1.09,
+          "perString": [
+            {
+              "id": "h-1",
+              "lines": 2,
+              "minGap": 6.91,
+              "collides": false,
+              "requiredLineHeightPx": 10
+            },
+            {
+              "id": "h-2",
+              "lines": 2,
+              "minGap": 6.91,
+              "collides": false,
+              "requiredLineHeightPx": 10
+            },
+            {
+              "id": "h-3",
+              "lines": 2,
+              "minGap": 1.91,
+              "collides": false,
+              "requiredLineHeightPx": 15
+            },
+            {
+              "id": "stress",
+              "lines": 2,
+              "minGap": -1.09,
+              "collides": true,
+              "requiredLineHeightPx": 18
+            }
+          ]
+        },
+        "minThaiSafeRatio": 1.384,
+        "notViable": false,
+        "leadingCorrection": 0.084
+      },
+      "body": {
+        "applied": {
+          "family": "Anuphan",
+          "weight": 400,
+          "fontSizePx": 12,
+          "lineHeightRatio": 1.2,
+          "declaredNormal": false,
+          "lineHeightPx": 14.4,
+          "letterSpacingPx": 0,
+          "widthPx": 460
+        },
+        "sourceSystem": {
+          "fontFamily": "PP Neue Montreal Medium",
+          "tag": "p",
+          "weight": "400"
+        },
+        "asIs": {
+          "collides": false,
+          "minGapPx": 0.41,
+          "perString": [
+            {
+              "id": "h-1",
+              "lines": 2,
+              "minGap": 1.82,
+              "collides": false,
+              "requiredLineHeightPx": 12.59
+            },
+            {
+              "id": "h-2",
+              "lines": 2,
+              "minGap": 4.41,
+              "collides": false,
+              "requiredLineHeightPx": 10
+            },
+            {
+              "id": "h-3",
+              "lines": 2,
+              "minGap": 1.41,
+              "collides": false,
+              "requiredLineHeightPx": 13
+            },
+            {
+              "id": "stress",
+              "lines": 2,
+              "minGap": 0.41,
+              "collides": false,
+              "requiredLineHeightPx": 14
+            }
+          ]
+        },
+        "minThaiSafeRatio": 1.2,
+        "notViable": false,
+        "leadingCorrection": 0
+      }
+    }
+  },
+  {
+    "slug": "acquisition",
+    "name": "Acquisition.com",
+    "url": "https://www.acquisition.com",
+    "systems": {
+      "display": {
+        "fontSize": 50,
+        "weight": "800",
+        "lineHeightRatio": 1.15,
+        "lineHeightPx": 57.5,
+        "letterSpacingEm": 0,
+        "widthPx": 612,
+        "sourceFontFamily": "Poppins",
+        "sourceTag": "span"
+      },
+      "h2": {
+        "fontSize": 26,
+        "weight": "700",
+        "lineHeightRatio": 1.73,
+        "lineHeightPx": 45,
+        "letterSpacingEm": 0,
+        "widthPx": 1110,
+        "sourceFontFamily": "Poppins",
+        "sourceTag": "h2"
+      },
+      "body": {
+        "fontSize": 16,
+        "weight": "200",
+        "lineHeightRatio": 0.98,
+        "lineHeightPx": 15.6,
+        "letterSpacingEm": 0,
+        "widthPx": 1129,
+        "sourceFontFamily": "Poppins",
+        "sourceTag": "span"
+      }
+    },
+    "tests": {
+      "display": {
+        "applied": {
+          "family": "Kanit",
+          "weight": 700,
+          "fontSizePx": 50,
+          "lineHeightRatio": 1.15,
+          "declaredNormal": false,
+          "lineHeightPx": 57.5,
+          "letterSpacingPx": 0,
+          "widthPx": 612
+        },
+        "sourceSystem": {
+          "fontFamily": "Poppins",
+          "tag": "span",
+          "weight": "800"
+        },
+        "asIs": {
+          "collides": true,
+          "minGapPx": -8.5,
+          "perString": [
+            {
+              "id": "h-1",
+              "lines": 2,
+              "minGap": 4.5,
+              "collides": false,
+              "requiredLineHeightPx": 53
+            },
+            {
+              "id": "h-2",
+              "lines": 2,
+              "minGap": 4.5,
+              "collides": false,
+              "requiredLineHeightPx": 53
+            },
+            {
+              "id": "h-3",
+              "lines": 2,
+              "minGap": 2.5,
+              "collides": false,
+              "requiredLineHeightPx": 55
+            },
+            {
+              "id": "stress",
+              "lines": 2,
+              "minGap": -8.5,
+              "collides": true,
+              "requiredLineHeightPx": 66
+            }
+          ]
+        },
+        "minThaiSafeRatio": 1.32,
+        "notViable": false,
+        "leadingCorrection": 0.17
+      },
+      "h2": {
+        "applied": {
+          "family": "Kanit",
+          "weight": 700,
+          "fontSizePx": 26,
+          "lineHeightRatio": 1.73,
+          "declaredNormal": false,
+          "lineHeightPx": 44.98,
+          "letterSpacingPx": 0,
+          "widthPx": 1110
+        },
+        "sourceSystem": {
+          "fontFamily": "Poppins",
+          "tag": "h2",
+          "weight": "700"
+        },
+        "asIs": {
+          "collides": false,
+          "minGapPx": 11.98,
+          "perString": [
+            {
+              "id": "h-1",
+              "lines": 2,
+              "minGap": 23.98,
+              "collides": false,
+              "requiredLineHeightPx": 21
+            },
+            {
+              "id": "h-2",
+              "lines": 2,
+              "minGap": 24.98,
+              "collides": false,
+              "requiredLineHeightPx": 20
+            },
+            {
+              "id": "h-3",
+              "lines": 2,
+              "minGap": 17.98,
+              "collides": false,
+              "requiredLineHeightPx": 27
+            },
+            {
+              "id": "stress",
+              "lines": 2,
+              "minGap": 11.98,
+              "collides": false,
+              "requiredLineHeightPx": 33
+            }
+          ]
+        },
+        "minThaiSafeRatio": 1.269,
+        "notViable": false,
+        "leadingCorrection": -0.461
+      },
+      "body": {
+        "applied": {
+          "family": "Anuphan",
+          "weight": 400,
+          "fontSizePx": 16,
+          "lineHeightRatio": 0.98,
+          "declaredNormal": false,
+          "lineHeightPx": 15.68,
+          "letterSpacingPx": 0,
+          "widthPx": 1129
+        },
+        "sourceSystem": {
+          "fontFamily": "Poppins",
+          "tag": "span",
+          "weight": "200"
+        },
+        "asIs": {
+          "collides": true,
+          "minGapPx": -6.31,
+          "perString": [
+            {
+              "id": "h-1",
+              "lines": 2,
+              "minGap": -0.31,
+              "collides": true,
+              "requiredLineHeightPx": 16
+            },
+            {
+              "id": "h-2",
+              "lines": 2,
+              "minGap": 1.69,
+              "collides": false,
+              "requiredLineHeightPx": 14
+            },
+            {
+              "id": "h-3",
+              "lines": 2,
+              "minGap": -4.31,
+              "collides": true,
+              "requiredLineHeightPx": 20
+            },
+            {
+              "id": "stress",
+              "lines": 2,
+              "minGap": -6.31,
+              "collides": true,
+              "requiredLineHeightPx": 22
+            }
+          ]
+        },
+        "minThaiSafeRatio": 1.375,
+        "notViable": false,
+        "leadingCorrection": 0.395
+      }
+    }
+  },
+  {
+    "slug": "aristidebenoist",
+    "name": "Aristide Benoist",
+    "url": "https://www.aristidebenoist.com",
+    "systems": {
+      "display": {
+        "fontSize": 337.5,
+        "weight": "400",
+        "lineHeightRatio": 0.75,
+        "lineHeightPx": 253.13,
+        "letterSpacingEm": -0.024,
+        "widthPx": 136,
+        "sourceFontFamily": "TNY",
+        "sourceTag": "div"
+      },
+      "h2": null,
+      "body": null
+    },
+    "tests": {
+      "display": {
+        "applied": {
+          "family": "Kanit",
+          "weight": 700,
+          "fontSizePx": 337.5,
+          "lineHeightRatio": 0.75,
+          "declaredNormal": false,
+          "lineHeightPx": 253.13,
+          "letterSpacingPx": -8.1,
+          "widthPx": 240
+        },
+        "sourceSystem": {
+          "fontFamily": "TNY",
+          "tag": "div",
+          "weight": "400"
+        },
+        "asIs": {
+          "collides": true,
+          "minGapPx": -100.2,
+          "perString": [
+            {
+              "id": "h-1",
+              "lines": 29,
+              "minGap": -84.38,
+              "collides": true,
+              "requiredLineHeightPx": 337.5
+            },
+            {
+              "id": "h-2",
+              "lines": 21,
+              "minGap": -100.19,
+              "collides": true,
+              "requiredLineHeightPx": 353.32
+            },
+            {
+              "id": "h-3",
+              "lines": 26,
+              "minGap": -100.19,
+              "collides": true,
+              "requiredLineHeightPx": 353.32
+            },
+            {
+              "id": "stress",
+              "lines": 26,
+              "minGap": -100.2,
+              "collides": true,
+              "requiredLineHeightPx": 353.32
+            }
+          ]
+        },
+        "minThaiSafeRatio": 1.047,
+        "notViable": false,
+        "leadingCorrection": 0.297
+      },
+      "h2": {
+        "skipped": "no measurable type role"
+      },
+      "body": {
+        "skipped": "no measurable type role"
+      }
+    }
+  },
+  {
+    "slug": "dennissnellenberg",
+    "name": "Dennis Snellenberg",
+    "url": "https://dennissnellenberg.com",
+    "systems": {
+      "display": {
+        "fontSize": 216,
+        "weight": "450",
+        "lineHeightRatio": 1,
+        "lineHeightPx": 216,
+        "letterSpacingEm": 0,
+        "widthPx": 2085,
+        "sourceFontFamily": "Dennis Sans",
+        "sourceTag": "h1"
+      },
+      "h2": {
+        "fontSize": 54,
+        "weight": "450",
+        "lineHeightRatio": 1.07,
+        "lineHeightPx": 57.51,
+        "letterSpacingEm": 0,
+        "widthPx": 171,
+        "sourceFontFamily": "Dennis Sans",
+        "sourceTag": "h2"
+      },
+      "body": {
+        "fontSize": 17.28,
+        "weight": "450",
+        "lineHeightRatio": 1.66,
+        "lineHeightPx": 28.68,
+        "letterSpacingEm": 0,
+        "widthPx": 242,
+        "sourceFontFamily": "Dennis Sans",
+        "sourceTag": "p"
+      }
+    },
+    "tests": {
+      "display": {
+        "applied": {
+          "family": "Kanit",
+          "weight": 700,
+          "fontSizePx": 216,
+          "lineHeightRatio": 1,
+          "declaredNormal": false,
+          "lineHeightPx": 216,
+          "letterSpacingPx": 0,
+          "widthPx": 1400
+        },
+        "sourceSystem": {
+          "fontFamily": "Dennis Sans",
+          "tag": "h1",
+          "weight": "450"
+        },
+        "asIs": {
+          "collides": true,
+          "minGapPx": -63,
+          "perString": [
+            {
+              "id": "h-1",
+              "lines": 3,
+              "minGap": -13,
+              "collides": true,
+              "requiredLineHeightPx": 229
+            },
+            {
+              "id": "h-2",
+              "lines": 2,
+              "minGap": 41,
+              "collides": false,
+              "requiredLineHeightPx": 175
+            },
+            {
+              "id": "h-3",
+              "lines": 3,
+              "minGap": -51,
+              "collides": true,
+              "requiredLineHeightPx": 267
+            },
+            {
+              "id": "stress",
+              "lines": 3,
+              "minGap": -63,
+              "collides": true,
+              "requiredLineHeightPx": 279
+            }
+          ]
+        },
+        "minThaiSafeRatio": 1.292,
+        "notViable": false,
+        "leadingCorrection": 0.292
+      },
+      "h2": {
+        "applied": {
+          "family": "Kanit",
+          "weight": 700,
+          "fontSizePx": 54,
+          "lineHeightRatio": 1.07,
+          "declaredNormal": false,
+          "lineHeightPx": 57.78,
+          "letterSpacingPx": 0,
+          "widthPx": 240
+        },
+        "sourceSystem": {
+          "fontFamily": "Dennis Sans",
+          "tag": "h2",
+          "weight": "450"
+        },
+        "asIs": {
+          "collides": true,
+          "minGapPx": -11.22,
+          "perString": [
+            {
+              "id": "h-1",
+              "lines": 5,
+              "minGap": 0.78,
+              "collides": false,
+              "requiredLineHeightPx": 57
+            },
+            {
+              "id": "h-2",
+              "lines": 4,
+              "minGap": 0.78,
+              "collides": false,
+              "requiredLineHeightPx": 57
+            },
+            {
+              "id": "h-3",
+              "lines": 4,
+              "minGap": -10.22,
+              "collides": true,
+              "requiredLineHeightPx": 68
+            },
+            {
+              "id": "stress",
+              "lines": 5,
+              "minGap": -11.22,
+              "collides": true,
+              "requiredLineHeightPx": 69
+            }
+          ]
+        },
+        "minThaiSafeRatio": 1.278,
+        "notViable": false,
+        "leadingCorrection": 0.208
+      },
+      "body": {
+        "applied": {
+          "family": "Anuphan",
+          "weight": 400,
+          "fontSizePx": 17.28,
+          "lineHeightRatio": 1.66,
+          "declaredNormal": false,
+          "lineHeightPx": 28.68,
+          "letterSpacingPx": 0,
+          "widthPx": 242
+        },
+        "sourceSystem": {
+          "fontFamily": "Dennis Sans",
+          "tag": "p",
+          "weight": "450"
+        },
+        "asIs": {
+          "collides": false,
+          "minGapPx": 5.69,
+          "perString": [
+            {
+              "id": "h-1",
+              "lines": 2,
+              "minGap": 9.69,
+              "collides": false,
+              "requiredLineHeightPx": 19
+            },
+            {
+              "id": "h-2",
+              "lines": 2,
+              "minGap": 13.69,
+              "collides": false,
+              "requiredLineHeightPx": 15
+            },
+            {
+              "id": "h-3",
+              "lines": 2,
+              "minGap": 7.69,
+              "collides": false,
+              "requiredLineHeightPx": 21
+            },
+            {
+              "id": "stress",
+              "lines": 2,
+              "minGap": 5.69,
+              "collides": false,
+              "requiredLineHeightPx": 23
+            }
+          ]
+        },
+        "minThaiSafeRatio": 1.331,
+        "notViable": false,
+        "leadingCorrection": -0.329
+      }
+    }
+  },
+  {
+    "slug": "deso",
+    "name": "Deso Studio",
+    "url": "https://deso.studio",
+    "systems": {
+      "display": {
+        "fontSize": 100.8,
+        "weight": "700",
+        "lineHeightRatio": 1.5,
+        "lineHeightPx": 151.2,
+        "letterSpacingEm": 0,
+        "widthPx": 1440,
+        "sourceFontFamily": "Barlow",
+        "sourceTag": "div"
+      },
+      "h2": null,
+      "body": {
+        "fontSize": 14,
+        "weight": "400",
+        "lineHeightRatio": 1.57,
+        "lineHeightPx": 22,
+        "letterSpacingEm": 0.00714,
+        "widthPx": 431,
+        "sourceFontFamily": "Barlow",
+        "sourceTag": "span"
+      }
+    },
+    "tests": {
+      "display": {
+        "applied": {
+          "family": "Kanit",
+          "weight": 700,
+          "fontSizePx": 100.8,
+          "lineHeightRatio": 1.5,
+          "declaredNormal": false,
+          "lineHeightPx": 151.2,
+          "letterSpacingPx": 0,
+          "widthPx": 1400
+        },
+        "sourceSystem": {
+          "fontFamily": "Barlow",
+          "tag": "div",
+          "weight": "700"
+        },
+        "asIs": {
+          "collides": false,
+          "minGapPx": 24.25,
+          "perString": [
+            {
+              "id": "h-1",
+              "lines": 2,
+              "minGap": 45.2,
+              "collides": false,
+              "requiredLineHeightPx": 106
+            },
+            {
+              "id": "h-2",
+              "lines": 2,
+              "minGap": 70.2,
+              "collides": false,
+              "requiredLineHeightPx": 81
+            },
+            {
+              "id": "h-3",
+              "lines": 2,
+              "minGap": 43.2,
+              "collides": false,
+              "requiredLineHeightPx": 108
+            },
+            {
+              "id": "stress",
+              "lines": 2,
+              "minGap": 24.25,
+              "collides": false,
+              "requiredLineHeightPx": 126.95
+            }
+          ]
+        },
+        "minThaiSafeRatio": 1.259,
+        "notViable": false,
+        "leadingCorrection": -0.241
+      },
+      "h2": {
+        "skipped": "no measurable type role"
+      },
+      "body": {
+        "applied": {
+          "family": "Anuphan",
+          "weight": 400,
+          "fontSizePx": 14,
+          "lineHeightRatio": 1.57,
+          "declaredNormal": false,
+          "lineHeightPx": 21.98,
+          "letterSpacingPx": 0.1,
+          "widthPx": 431
+        },
+        "sourceSystem": {
+          "fontFamily": "Barlow",
+          "tag": "span",
+          "weight": "400"
+        },
+        "asIs": {
+          "collides": false,
+          "minGapPx": 2.98,
+          "perString": [
+            {
+              "id": "h-1",
+              "lines": 2,
+              "minGap": 7.98,
+              "collides": false,
+              "requiredLineHeightPx": 14
+            },
+            {
+              "id": "h-2",
+              "lines": 2,
+              "minGap": 8.98,
+              "collides": false,
+              "requiredLineHeightPx": 13
+            },
+            {
+              "id": "h-3",
+              "lines": 2,
+              "minGap": 4.98,
+              "collides": false,
+              "requiredLineHeightPx": 17
+            },
+            {
+              "id": "stress",
+              "lines": 2,
+              "minGap": 2.98,
+              "collides": false,
+              "requiredLineHeightPx": 19
+            }
+          ]
+        },
+        "minThaiSafeRatio": 1.357,
+        "notViable": false,
+        "leadingCorrection": -0.213
+      }
+    }
+  },
+  {
+    "slug": "dinamo-whyte",
+    "name": "ABC Dinamo — Whyte",
+    "url": "https://abcdinamo.com/typefaces/whyte",
+    "systems": {
+      "display": {
+        "fontSize": 425.66,
+        "weight": "400",
+        "lineHeightRatio": 0.8,
+        "lineHeightPx": 340.53,
+        "letterSpacingEm": 0,
+        "widthPx": 229,
+        "sourceFontFamily": "ABCWhytePlusVariable-A",
+        "sourceTag": "em"
+      },
+      "h2": {
+        "fontSize": 19.13,
+        "weight": "400",
+        "lineHeightRatio": 1.1,
+        "lineHeightPx": 21.04,
+        "letterSpacingEm": 0,
+        "widthPx": 1072,
+        "sourceFontFamily": "Monument Grotesk",
+        "sourceTag": "h2"
+      },
+      "body": {
+        "fontSize": 19.13,
+        "weight": "400",
+        "lineHeightRatio": 1.1,
+        "lineHeightPx": 21.04,
+        "letterSpacingEm": 0,
+        "widthPx": 553,
+        "sourceFontFamily": "Monument Grotesk",
+        "sourceTag": "p"
+      }
+    },
+    "tests": {
+      "display": {
+        "applied": {
+          "family": "Kanit",
+          "weight": 700,
+          "fontSizePx": 425.66,
+          "lineHeightRatio": 0.8,
+          "declaredNormal": false,
+          "lineHeightPx": 340.53,
+          "letterSpacingPx": 0,
+          "widthPx": 240
+        },
+        "sourceSystem": {
+          "fontFamily": "ABCWhytePlusVariable-A",
+          "tag": "em",
+          "weight": "400"
+        },
+        "asIs": {
+          "collides": true,
+          "minGapPx": -105.09,
+          "perString": [
+            {
+              "id": "h-1",
+              "lines": 29,
+              "minGap": -85.13,
+              "collides": true,
+              "requiredLineHeightPx": 425.66
+            },
+            {
+              "id": "h-2",
+              "lines": 21,
+              "minGap": -105.09,
+              "collides": true,
+              "requiredLineHeightPx": 445.62
+            },
+            {
+              "id": "h-3",
+              "lines": 26,
+              "minGap": -105.09,
+              "collides": true,
+              "requiredLineHeightPx": 445.62
+            },
+            {
+              "id": "stress",
+              "lines": 26,
+              "minGap": -105.08,
+              "collides": true,
+              "requiredLineHeightPx": 445.61
+            }
+          ]
+        },
+        "minThaiSafeRatio": 1.047,
+        "notViable": false,
+        "leadingCorrection": 0.247
+      },
+      "h2": {
+        "applied": {
+          "family": "Kanit",
+          "weight": 700,
+          "fontSizePx": 19.13,
+          "lineHeightRatio": 1.1,
+          "declaredNormal": false,
+          "lineHeightPx": 21.04,
+          "letterSpacingPx": 0,
+          "widthPx": 1072
+        },
+        "sourceSystem": {
+          "fontFamily": "Monument Grotesk",
+          "tag": "h2",
+          "weight": "400"
+        },
+        "asIs": {
+          "collides": true,
+          "minGapPx": -4.95,
+          "perString": [
+            {
+              "id": "h-1",
+              "lines": 2,
+              "minGap": 5.05,
+              "collides": false,
+              "requiredLineHeightPx": 16
+            },
+            {
+              "id": "h-2",
+              "lines": 2,
+              "minGap": 5.05,
+              "collides": false,
+              "requiredLineHeightPx": 16
+            },
+            {
+              "id": "h-3",
+              "lines": 2,
+              "minGap": 0.05,
+              "collides": false,
+              "requiredLineHeightPx": 21
+            },
+            {
+              "id": "stress",
+              "lines": 2,
+              "minGap": -4.95,
+              "collides": true,
+              "requiredLineHeightPx": 26
+            }
+          ]
+        },
+        "minThaiSafeRatio": 1.359,
+        "notViable": false,
+        "leadingCorrection": 0.259
+      },
+      "body": {
+        "applied": {
+          "family": "Anuphan",
+          "weight": 400,
+          "fontSizePx": 19.13,
+          "lineHeightRatio": 1.1,
+          "declaredNormal": false,
+          "lineHeightPx": 21.04,
+          "letterSpacingPx": 0,
+          "widthPx": 553
+        },
+        "sourceSystem": {
+          "fontFamily": "Monument Grotesk",
+          "tag": "p",
+          "weight": "400"
+        },
+        "asIs": {
+          "collides": true,
+          "minGapPx": -4.95,
+          "perString": [
+            {
+              "id": "h-1",
+              "lines": 2,
+              "minGap": 2.05,
+              "collides": false,
+              "requiredLineHeightPx": 19
+            },
+            {
+              "id": "h-2",
+              "lines": 2,
+              "minGap": 4.05,
+              "collides": false,
+              "requiredLineHeightPx": 17
+            },
+            {
+              "id": "h-3",
+              "lines": 2,
+              "minGap": -2.95,
+              "collides": true,
+              "requiredLineHeightPx": 24
+            },
+            {
+              "id": "stress",
+              "lines": 2,
+              "minGap": -4.95,
+              "collides": true,
+              "requiredLineHeightPx": 26
+            }
+          ]
+        },
+        "minThaiSafeRatio": 1.359,
+        "notViable": false,
+        "leadingCorrection": 0.259
+      }
+    }
+  },
+  {
+    "slug": "elicyon",
+    "name": "Elicyon",
+    "url": "https://elicyon.com",
+    "systems": {
+      "display": {
+        "fontSize": 285.12,
+        "weight": "400",
+        "lineHeightRatio": 1,
+        "lineHeightPx": 285.12,
+        "letterSpacingEm": 0,
+        "widthPx": 183,
+        "sourceFontFamily": "__elicyon_df1f4c",
+        "sourceTag": "span"
+      },
+      "h2": null,
+      "body": {
+        "fontSize": 14,
+        "weight": "400",
+        "lineHeightRatio": 1.15,
+        "lineHeightPx": 16.1,
+        "letterSpacingEm": 0,
+        "widthPx": 387,
+        "sourceFontFamily": "__antiqueLegacy_623eb9",
+        "sourceTag": "p"
+      }
+    },
+    "tests": {
+      "display": {
+        "applied": {
+          "family": "Kanit",
+          "weight": 700,
+          "fontSizePx": 285.12,
+          "lineHeightRatio": 1,
+          "declaredNormal": false,
+          "lineHeightPx": 285.12,
+          "letterSpacingPx": 0,
+          "widthPx": 240
+        },
+        "sourceSystem": {
+          "fontFamily": "__elicyon_df1f4c",
+          "tag": "span",
+          "weight": "400"
+        },
+        "asIs": {
+          "collides": true,
+          "minGapPx": -75.74,
+          "perString": [
+            {
+              "id": "h-1",
+              "lines": 29,
+              "minGap": 0,
+              "collides": false,
+              "requiredLineHeightPx": 285.13
+            },
+            {
+              "id": "h-2",
+              "lines": 21,
+              "minGap": -13.35,
+              "collides": true,
+              "requiredLineHeightPx": 298.48
+            },
+            {
+              "id": "h-3",
+              "lines": 26,
+              "minGap": -13.35,
+              "collides": true,
+              "requiredLineHeightPx": 298.48
+            },
+            {
+              "id": "stress",
+              "lines": 25,
+              "minGap": -75.74,
+              "collides": true,
+              "requiredLineHeightPx": 360.86
+            }
+          ]
+        },
+        "minThaiSafeRatio": 1.266,
+        "notViable": false,
+        "leadingCorrection": 0.266
+      },
+      "h2": {
+        "skipped": "no measurable type role"
+      },
+      "body": {
+        "applied": {
+          "family": "Anuphan",
+          "weight": 400,
+          "fontSizePx": 14,
+          "lineHeightRatio": 1.15,
+          "declaredNormal": false,
+          "lineHeightPx": 16.1,
+          "letterSpacingPx": 0,
+          "widthPx": 387
+        },
+        "sourceSystem": {
+          "fontFamily": "__antiqueLegacy_623eb9",
+          "tag": "p",
+          "weight": "400"
+        },
+        "asIs": {
+          "collides": true,
+          "minGapPx": -2.91,
+          "perString": [
+            {
+              "id": "h-1",
+              "lines": 2,
+              "minGap": 2.09,
+              "collides": false,
+              "requiredLineHeightPx": 14
+            },
+            {
+              "id": "h-2",
+              "lines": 2,
+              "minGap": 3.09,
+              "collides": false,
+              "requiredLineHeightPx": 13
+            },
+            {
+              "id": "h-3",
+              "lines": 2,
+              "minGap": -0.91,
+              "collides": true,
+              "requiredLineHeightPx": 17
+            },
+            {
+              "id": "stress",
+              "lines": 2,
+              "minGap": -2.91,
+              "collides": true,
+              "requiredLineHeightPx": 19
+            }
+          ]
+        },
+        "minThaiSafeRatio": 1.357,
+        "notViable": false,
+        "leadingCorrection": 0.207
+      }
+    }
+  },
+  {
+    "slug": "exat",
+    "name": "EXAT (Hot Type)",
+    "url": "https://exat.hottype.co",
+    "systems": {
+      "display": {
+        "fontSize": 654.13,
+        "weight": "400",
+        "lineHeightRatio": 0.78,
+        "lineHeightPx": 510.22,
+        "letterSpacingEm": -0.04,
+        "widthPx": 1045,
+        "sourceFontFamily": "Exat Variable",
+        "sourceTag": "div"
+      },
+      "h2": null,
+      "body": {
+        "fontSize": 16,
+        "weight": "400",
+        "lineHeightRatio": 1.2,
+        "lineHeightPx": 19.2,
+        "letterSpacingEm": -0.01,
+        "widthPx": 335,
+        "sourceFontFamily": "Exat",
+        "sourceTag": "div"
+      }
+    },
+    "tests": {
+      "display": {
+        "applied": {
+          "family": "Kanit",
+          "weight": 700,
+          "fontSizePx": 654.13,
+          "lineHeightRatio": 0.78,
+          "declaredNormal": false,
+          "lineHeightPx": 510.22,
+          "letterSpacingPx": -26.17,
+          "widthPx": 1045
+        },
+        "sourceSystem": {
+          "fontFamily": "Exat Variable",
+          "tag": "div",
+          "weight": "400"
+        },
+        "asIs": {
+          "collides": true,
+          "minGapPx": -317.66,
+          "perString": [
+            {
+              "id": "h-1",
+              "lines": 15,
+              "minGap": -143.91,
+              "collides": true,
+              "requiredLineHeightPx": 654.13
+            },
+            {
+              "id": "h-2",
+              "lines": 11,
+              "minGap": -174.57,
+              "collides": true,
+              "requiredLineHeightPx": 684.79
+            },
+            {
+              "id": "h-3",
+              "lines": 11,
+              "minGap": -184.79,
+              "collides": true,
+              "requiredLineHeightPx": 695.01
+            },
+            {
+              "id": "stress",
+              "lines": 14,
+              "minGap": -317.66,
+              "collides": true,
+              "requiredLineHeightPx": 827.88
+            }
+          ]
+        },
+        "minThaiSafeRatio": 1.266,
+        "notViable": false,
+        "leadingCorrection": 0.486
+      },
+      "h2": {
+        "skipped": "no measurable type role"
+      },
+      "body": {
+        "applied": {
+          "family": "Anuphan",
+          "weight": 400,
+          "fontSizePx": 16,
+          "lineHeightRatio": 1.2,
+          "declaredNormal": false,
+          "lineHeightPx": 19.2,
+          "letterSpacingPx": -0.16,
+          "widthPx": 335
+        },
+        "sourceSystem": {
+          "fontFamily": "Exat",
+          "tag": "div",
+          "weight": "400"
+        },
+        "asIs": {
+          "collides": true,
+          "minGapPx": -2.8,
+          "perString": [
+            {
+              "id": "h-1",
+              "lines": 2,
+              "minGap": 3.2,
+              "collides": false,
+              "requiredLineHeightPx": 16
+            },
+            {
+              "id": "h-2",
+              "lines": 2,
+              "minGap": 5.2,
+              "collides": false,
+              "requiredLineHeightPx": 14
+            },
+            {
+              "id": "h-3",
+              "lines": 2,
+              "minGap": -0.8,
+              "collides": true,
+              "requiredLineHeightPx": 20
+            },
+            {
+              "id": "stress",
+              "lines": 2,
+              "minGap": -2.8,
+              "collides": true,
+              "requiredLineHeightPx": 22
+            }
+          ]
+        },
+        "minThaiSafeRatio": 1.375,
+        "notViable": false,
+        "leadingCorrection": 0.175
+      }
+    }
+  },
+  {
+    "slug": "funtech",
+    "name": "FUNTECH Brand Identity",
+    "url": "https://ci.funtech.inc/en",
+    "systems": {
+      "display": {
+        "fontSize": 313.5,
+        "weight": "900",
+        "lineHeightRatio": 1,
+        "lineHeightPx": 313.5,
+        "letterSpacingEm": 0,
+        "widthPx": 10662,
+        "sourceFontFamily": "elevon",
+        "sourceTag": "span"
+      },
+      "h2": null,
+      "body": null
+    },
+    "tests": {
+      "display": {
+        "applied": {
+          "family": "Kanit",
+          "weight": 700,
+          "fontSizePx": 313.5,
+          "lineHeightRatio": 1,
+          "declaredNormal": false,
+          "lineHeightPx": 313.5,
+          "letterSpacingPx": 0,
+          "widthPx": 1400
+        },
+        "sourceSystem": {
+          "fontFamily": "elevon",
+          "tag": "span",
+          "weight": "900"
+        },
+        "asIs": {
+          "collides": true,
+          "minGapPx": -84.06,
+          "perString": [
+            {
+              "id": "h-1",
+              "lines": 5,
+              "minGap": -19.59,
+              "collides": true,
+              "requiredLineHeightPx": 333.09
+            },
+            {
+              "id": "h-2",
+              "lines": 4,
+              "minGap": -14.69,
+              "collides": true,
+              "requiredLineHeightPx": 328.19
+            },
+            {
+              "id": "h-3",
+              "lines": 4,
+              "minGap": -78.37,
+              "collides": true,
+              "requiredLineHeightPx": 391.87
+            },
+            {
+              "id": "stress",
+              "lines": 5,
+              "minGap": -84.06,
+              "collides": true,
+              "requiredLineHeightPx": 397.56
+            }
+          ]
+        },
+        "minThaiSafeRatio": 1.268,
+        "notViable": false,
+        "leadingCorrection": 0.268
+      },
+      "h2": {
+        "skipped": "no measurable type role"
+      },
+      "body": {
+        "skipped": "no measurable type role"
+      }
+    }
+  },
+  {
+    "slug": "groteskly",
+    "name": "Groteskly Yours",
+    "url": "https://groteskly.xyz",
+    "systems": {
+      "display": {
+        "fontSize": 72,
+        "weight": "400",
+        "lineHeightRatio": 1.2,
+        "lineHeightPx": 86.4,
+        "letterSpacingEm": 0,
+        "widthPx": 812,
+        "sourceFontFamily": "Groteskly Sans 1.02 100",
+        "sourceTag": "p"
+      },
+      "h2": {
+        "fontSize": 20,
+        "weight": "400",
+        "lineHeightRatio": 1.1,
+        "lineHeightPx": 22,
+        "letterSpacingEm": 0,
+        "widthPx": 1360,
+        "sourceFontFamily": "Groteskly Sans 1.02 108",
+        "sourceTag": "h2"
+      },
+      "body": {
+        "fontSize": 14,
+        "weight": "400",
+        "lineHeightRatio": 1.2,
+        "lineHeightPx": 16.8,
+        "letterSpacingEm": 0,
+        "widthPx": 298,
+        "sourceFontFamily": "Groteskly Sans 1.02 100",
+        "sourceTag": "p"
+      }
+    },
+    "tests": {
+      "display": {
+        "applied": {
+          "family": "Kanit",
+          "weight": 700,
+          "fontSizePx": 72,
+          "lineHeightRatio": 1.2,
+          "declaredNormal": false,
+          "lineHeightPx": 86.4,
+          "letterSpacingPx": 0,
+          "widthPx": 812
+        },
+        "sourceSystem": {
+          "fontFamily": "Groteskly Sans 1.02 100",
+          "tag": "p",
+          "weight": "400"
+        },
+        "asIs": {
+          "collides": true,
+          "minGapPx": -7.59,
+          "perString": [
+            {
+              "id": "h-1",
+              "lines": 2,
+              "minGap": 9.41,
+              "collides": false,
+              "requiredLineHeightPx": 77
+            },
+            {
+              "id": "h-2",
+              "lines": 2,
+              "minGap": 11.41,
+              "collides": false,
+              "requiredLineHeightPx": 75
+            },
+            {
+              "id": "h-3",
+              "lines": 2,
+              "minGap": 8.41,
+              "collides": false,
+              "requiredLineHeightPx": 78
+            },
+            {
+              "id": "stress",
+              "lines": 2,
+              "minGap": -7.59,
+              "collides": true,
+              "requiredLineHeightPx": 94
+            }
+          ]
+        },
+        "minThaiSafeRatio": 1.305,
+        "notViable": false,
+        "leadingCorrection": 0.105
+      },
+      "h2": {
+        "applied": {
+          "family": "Kanit",
+          "weight": 700,
+          "fontSizePx": 20,
+          "lineHeightRatio": 1.1,
+          "declaredNormal": false,
+          "lineHeightPx": 22,
+          "letterSpacingPx": 0,
+          "widthPx": 1360
+        },
+        "sourceSystem": {
+          "fontFamily": "Groteskly Sans 1.02 108",
+          "tag": "h2",
+          "weight": "400"
+        },
+        "asIs": {
+          "collides": true,
+          "minGapPx": -4,
+          "perString": [
+            {
+              "id": "h-1",
+              "lines": 2,
+              "minGap": 6,
+              "collides": false,
+              "requiredLineHeightPx": 16
+            },
+            {
+              "id": "h-2",
+              "lines": 2,
+              "minGap": 6,
+              "collides": false,
+              "requiredLineHeightPx": 16
+            },
+            {
+              "id": "h-3",
+              "lines": 2,
+              "minGap": 1,
+              "collides": false,
+              "requiredLineHeightPx": 21
+            },
+            {
+              "id": "stress",
+              "lines": 2,
+              "minGap": -4,
+              "collides": true,
+              "requiredLineHeightPx": 26
+            }
+          ]
+        },
+        "minThaiSafeRatio": 1.3,
+        "notViable": false,
+        "leadingCorrection": 0.2
+      },
+      "body": {
+        "applied": {
+          "family": "Anuphan",
+          "weight": 400,
+          "fontSizePx": 14,
+          "lineHeightRatio": 1.2,
+          "declaredNormal": false,
+          "lineHeightPx": 16.8,
+          "letterSpacingPx": 0,
+          "widthPx": 298
+        },
+        "sourceSystem": {
+          "fontFamily": "Groteskly Sans 1.02 100",
+          "tag": "p",
+          "weight": "400"
+        },
+        "asIs": {
+          "collides": true,
+          "minGapPx": -2.2,
+          "perString": [
+            {
+              "id": "h-1",
+              "lines": 2,
+              "minGap": 2.8,
+              "collides": false,
+              "requiredLineHeightPx": 14
+            },
+            {
+              "id": "h-2",
+              "lines": 2,
+              "minGap": 3.8,
+              "collides": false,
+              "requiredLineHeightPx": 13
+            },
+            {
+              "id": "h-3",
+              "lines": 2,
+              "minGap": -0.2,
+              "collides": true,
+              "requiredLineHeightPx": 17
+            },
+            {
+              "id": "stress",
+              "lines": 2,
+              "minGap": -2.2,
+              "collides": true,
+              "requiredLineHeightPx": 19
+            }
+          ]
+        },
+        "minThaiSafeRatio": 1.357,
+        "notViable": false,
+        "leadingCorrection": 0.157
+      }
+    }
+  },
+  {
+    "slug": "ironhill",
+    "name": "Iron Hill",
+    "url": "https://ironhill.au",
+    "systems": {
+      "display": {
+        "fontSize": 260,
+        "weight": "300",
+        "lineHeightRatio": 1,
+        "lineHeightPx": 260,
+        "letterSpacingEm": -0.03,
+        "widthPx": 145,
+        "sourceFontFamily": "PP Woodland",
+        "sourceTag": "div"
+      },
+      "h2": {
+        "fontSize": 18,
+        "weight": "400",
+        "lineHeightRatio": 1,
+        "lineHeightPx": 18,
+        "letterSpacingEm": 0,
+        "widthPx": 1344,
+        "sourceFontFamily": "PP Woodland",
+        "sourceTag": "h2"
+      },
+      "body": {
+        "fontSize": 16,
+        "weight": "500",
+        "lineHeightRatio": 1.35,
+        "lineHeightPx": 21.6,
+        "letterSpacingEm": 0,
+        "widthPx": 335,
+        "sourceFontFamily": "GT America",
+        "sourceTag": "p"
+      }
+    },
+    "tests": {
+      "display": {
+        "applied": {
+          "family": "Kanit",
+          "weight": 700,
+          "fontSizePx": 260,
+          "lineHeightRatio": 1,
+          "declaredNormal": false,
+          "lineHeightPx": 260,
+          "letterSpacingPx": -7.8,
+          "widthPx": 240
+        },
+        "sourceSystem": {
+          "fontFamily": "PP Woodland",
+          "tag": "div",
+          "weight": "300"
+        },
+        "asIs": {
+          "collides": true,
+          "minGapPx": -69.07,
+          "perString": [
+            {
+              "id": "h-1",
+              "lines": 24,
+              "minGap": 0,
+              "collides": false,
+              "requiredLineHeightPx": 260
+            },
+            {
+              "id": "h-2",
+              "lines": 19,
+              "minGap": -12.19,
+              "collides": true,
+              "requiredLineHeightPx": 272.19
+            },
+            {
+              "id": "h-3",
+              "lines": 23,
+              "minGap": -12.19,
+              "collides": true,
+              "requiredLineHeightPx": 272.19
+            },
+            {
+              "id": "stress",
+              "lines": 24,
+              "minGap": -69.07,
+              "collides": true,
+              "requiredLineHeightPx": 329.07
+            }
+          ]
+        },
+        "minThaiSafeRatio": 1.266,
+        "notViable": false,
+        "leadingCorrection": 0.266
+      },
+      "h2": {
+        "applied": {
+          "family": "Kanit",
+          "weight": 700,
+          "fontSizePx": 18,
+          "lineHeightRatio": 1,
+          "declaredNormal": false,
+          "lineHeightPx": 18,
+          "letterSpacingPx": 0,
+          "widthPx": 1344
+        },
+        "sourceSystem": {
+          "fontFamily": "PP Woodland",
+          "tag": "h2",
+          "weight": "400"
+        },
+        "asIs": {
+          "collides": true,
+          "minGapPx": -6,
+          "perString": [
+            {
+              "id": "h-1",
+              "lines": 2,
+              "minGap": 3,
+              "collides": false,
+              "requiredLineHeightPx": 15
+            },
+            {
+              "id": "h-2",
+              "lines": 2,
+              "minGap": 3,
+              "collides": false,
+              "requiredLineHeightPx": 15
+            },
+            {
+              "id": "h-3",
+              "lines": 2,
+              "minGap": -2,
+              "collides": true,
+              "requiredLineHeightPx": 20
+            },
+            {
+              "id": "stress",
+              "lines": 2,
+              "minGap": -6,
+              "collides": true,
+              "requiredLineHeightPx": 24
+            }
+          ]
+        },
+        "minThaiSafeRatio": 1.333,
+        "notViable": false,
+        "leadingCorrection": 0.333
+      },
+      "body": {
+        "applied": {
+          "family": "Anuphan",
+          "weight": 400,
+          "fontSizePx": 16,
+          "lineHeightRatio": 1.35,
+          "declaredNormal": false,
+          "lineHeightPx": 21.6,
+          "letterSpacingPx": 0,
+          "widthPx": 335
+        },
+        "sourceSystem": {
+          "fontFamily": "GT America",
+          "tag": "p",
+          "weight": "500"
+        },
+        "asIs": {
+          "collides": true,
+          "minGapPx": -0.41,
+          "perString": [
+            {
+              "id": "h-1",
+              "lines": 2,
+              "minGap": 5.59,
+              "collides": false,
+              "requiredLineHeightPx": 16
+            },
+            {
+              "id": "h-2",
+              "lines": 2,
+              "minGap": 7.59,
+              "collides": false,
+              "requiredLineHeightPx": 14
+            },
+            {
+              "id": "h-3",
+              "lines": 2,
+              "minGap": 1.59,
+              "collides": false,
+              "requiredLineHeightPx": 20
+            },
+            {
+              "id": "stress",
+              "lines": 2,
+              "minGap": -0.41,
+              "collides": true,
+              "requiredLineHeightPx": 22
+            }
+          ]
+        },
+        "minThaiSafeRatio": 1.375,
+        "notViable": false,
+        "leadingCorrection": 0.025
+      }
+    }
+  },
+  {
+    "slug": "izanami",
+    "name": "Izanami",
+    "url": "https://izanami-official.com",
+    "systems": {
+      "display": {
+        "fontSize": 45,
+        "weight": "400",
+        "lineHeightRatio": 1,
+        "lineHeightPx": 45,
+        "letterSpacingEm": 0,
+        "widthPx": 648,
+        "sourceFontFamily": "Playfair Display",
+        "sourceTag": "span"
+      },
+      "h2": {
+        "fontSize": 18,
+        "weight": "400",
+        "lineHeightRatio": 1,
+        "lineHeightPx": 18,
+        "letterSpacingEm": 0,
+        "widthPx": 18,
+        "sourceFontFamily": "Cinzel",
+        "sourceTag": "h2"
+      },
+      "body": {
+        "fontSize": 14.4,
+        "weight": "400",
+        "lineHeightRatio": 2.4,
+        "lineHeightPx": 34.56,
+        "letterSpacingEm": 0,
+        "widthPx": 360,
+        "sourceFontFamily": "Shippori Mincho",
+        "sourceTag": "p"
+      }
+    },
+    "tests": {
+      "display": {
+        "applied": {
+          "family": "Kanit",
+          "weight": 700,
+          "fontSizePx": 45,
+          "lineHeightRatio": 1,
+          "declaredNormal": false,
+          "lineHeightPx": 45,
+          "letterSpacingPx": 0,
+          "widthPx": 648
+        },
+        "sourceSystem": {
+          "fontFamily": "Playfair Display",
+          "tag": "span",
+          "weight": "400"
+        },
+        "asIs": {
+          "collides": true,
+          "minGapPx": -12.3,
+          "perString": [
+            {
+              "id": "h-1",
+              "lines": 2,
+              "minGap": -2,
+              "collides": true,
+              "requiredLineHeightPx": 47
+            },
+            {
+              "id": "h-2",
+              "lines": 2,
+              "minGap": 9,
+              "collides": false,
+              "requiredLineHeightPx": 36
+            },
+            {
+              "id": "h-3",
+              "lines": 2,
+              "minGap": -3,
+              "collides": true,
+              "requiredLineHeightPx": 48
+            },
+            {
+              "id": "stress",
+              "lines": 2,
+              "minGap": -12.3,
+              "collides": true,
+              "requiredLineHeightPx": 57.3
+            }
+          ]
+        },
+        "minThaiSafeRatio": 1.273,
+        "notViable": false,
+        "leadingCorrection": 0.273
+      },
+      "h2": {
+        "applied": {
+          "family": "Kanit",
+          "weight": 700,
+          "fontSizePx": 18,
+          "lineHeightRatio": 1,
+          "declaredNormal": false,
+          "lineHeightPx": 18,
+          "letterSpacingPx": 0,
+          "widthPx": 240
+        },
+        "sourceSystem": {
+          "fontFamily": "Cinzel",
+          "tag": "h2",
+          "weight": "400"
+        },
+        "asIs": {
+          "collides": true,
+          "minGapPx": -5,
+          "perString": [
+            {
+              "id": "h-1",
+              "lines": 2,
+              "minGap": -2,
+              "collides": true,
+              "requiredLineHeightPx": 20
+            },
+            {
+              "id": "h-2",
+              "lines": 2,
+              "minGap": 3,
+              "collides": false,
+              "requiredLineHeightPx": 15
+            },
+            {
+              "id": "h-3",
+              "lines": 2,
+              "minGap": -1,
+              "collides": true,
+              "requiredLineHeightPx": 19
+            },
+            {
+              "id": "stress",
+              "lines": 2,
+              "minGap": -5,
+              "collides": true,
+              "requiredLineHeightPx": 23
+            }
+          ]
+        },
+        "minThaiSafeRatio": 1.278,
+        "notViable": false,
+        "leadingCorrection": 0.278
+      },
+      "body": {
+        "applied": {
+          "family": "Anuphan",
+          "weight": 400,
+          "fontSizePx": 14.4,
+          "lineHeightRatio": 2.4,
+          "declaredNormal": false,
+          "lineHeightPx": 34.56,
+          "letterSpacingPx": 0,
+          "widthPx": 360
+        },
+        "sourceSystem": {
+          "fontFamily": "Shippori Mincho",
+          "tag": "p",
+          "weight": "400"
+        },
+        "asIs": {
+          "collides": false,
+          "minGapPx": 15.56,
+          "perString": [
+            {
+              "id": "h-1",
+              "lines": 2,
+              "minGap": 19.56,
+              "collides": false,
+              "requiredLineHeightPx": 15
+            },
+            {
+              "id": "h-2",
+              "lines": 2,
+              "minGap": 21.56,
+              "collides": false,
+              "requiredLineHeightPx": 13
+            },
+            {
+              "id": "h-3",
+              "lines": 2,
+              "minGap": 16.56,
+              "collides": false,
+              "requiredLineHeightPx": 18
+            },
+            {
+              "id": "stress",
+              "lines": 2,
+              "minGap": 15.56,
+              "collides": false,
+              "requiredLineHeightPx": 19
+            }
+          ]
+        },
+        "minThaiSafeRatio": 1.319,
+        "notViable": false,
+        "leadingCorrection": -1.081
+      }
+    }
+  },
+  {
+    "slug": "klim-soehne",
+    "name": "Klim — Söhne specimen",
+    "url": "https://klim.co.nz/retail-fonts/soehne/",
+    "systems": {
+      "display": {
+        "fontSize": 218,
+        "weight": "400",
+        "lineHeightRatio": 1,
+        "lineHeightPx": 218,
+        "letterSpacingEm": 0,
+        "widthPx": 1385,
+        "sourceFontFamily": "k-sohne-extraleicht",
+        "sourceTag": "span"
+      },
+      "h2": null,
+      "body": {
+        "fontSize": 24,
+        "weight": "400",
+        "lineHeightRatio": 1.33,
+        "lineHeightPx": 32,
+        "letterSpacingEm": 0,
+        "widthPx": 695,
+        "sourceFontFamily": "SOEHNE",
+        "sourceTag": "p"
+      }
+    },
+    "tests": {
+      "display": {
+        "applied": {
+          "family": "Kanit",
+          "weight": 700,
+          "fontSizePx": 218,
+          "lineHeightRatio": 1,
+          "declaredNormal": false,
+          "lineHeightPx": 218,
+          "letterSpacingPx": 0,
+          "widthPx": 1385
+        },
+        "sourceSystem": {
+          "fontFamily": "k-sohne-extraleicht",
+          "tag": "span",
+          "weight": "400"
+        },
+        "asIs": {
+          "collides": true,
+          "minGapPx": -63,
+          "perString": [
+            {
+              "id": "h-1",
+              "lines": 4,
+              "minGap": -12,
+              "collides": true,
+              "requiredLineHeightPx": 230
+            },
+            {
+              "id": "h-2",
+              "lines": 2,
+              "minGap": 42,
+              "collides": false,
+              "requiredLineHeightPx": 176
+            },
+            {
+              "id": "h-3",
+              "lines": 3,
+              "minGap": -51,
+              "collides": true,
+              "requiredLineHeightPx": 269
+            },
+            {
+              "id": "stress",
+              "lines": 3,
+              "minGap": -63,
+              "collides": true,
+              "requiredLineHeightPx": 281
+            }
+          ]
+        },
+        "minThaiSafeRatio": 1.289,
+        "notViable": false,
+        "leadingCorrection": 0.289
+      },
+      "h2": {
+        "skipped": "no measurable type role"
+      },
+      "body": {
+        "applied": {
+          "family": "Anuphan",
+          "weight": 400,
+          "fontSizePx": 24,
+          "lineHeightRatio": 1.33,
+          "declaredNormal": false,
+          "lineHeightPx": 31.92,
+          "letterSpacingPx": 0,
+          "widthPx": 695
+        },
+        "sourceSystem": {
+          "fontFamily": "SOEHNE",
+          "tag": "p",
+          "weight": "400"
+        },
+        "asIs": {
+          "collides": true,
+          "minGapPx": -0.08,
+          "perString": [
+            {
+              "id": "h-1",
+              "lines": 2,
+              "minGap": 7.92,
+              "collides": false,
+              "requiredLineHeightPx": 24
+            },
+            {
+              "id": "h-2",
+              "lines": 2,
+              "minGap": 10.92,
+              "collides": false,
+              "requiredLineHeightPx": 21
+            },
+            {
+              "id": "h-3",
+              "lines": 2,
+              "minGap": 1.92,
+              "collides": false,
+              "requiredLineHeightPx": 30
+            },
+            {
+              "id": "stress",
+              "lines": 2,
+              "minGap": -0.08,
+              "collides": true,
+              "requiredLineHeightPx": 32
+            }
+          ]
+        },
+        "minThaiSafeRatio": 1.333,
+        "notViable": false,
+        "leadingCorrection": 0.003
+      }
+    }
+  },
+  {
+    "slug": "kprverse",
+    "name": "KPRVERSE",
+    "url": "https://kprverse.com",
+    "systems": {
+      "display": {
+        "fontSize": 159.12,
+        "weight": "350",
+        "lineHeightRatio": 0.84,
+        "lineHeightPx": 133.66,
+        "letterSpacingEm": -0.08,
+        "widthPx": 387,
+        "sourceFontFamily": "ABCWhytePlus",
+        "sourceTag": "h1"
+      },
+      "h2": null,
+      "body": {
+        "fontSize": 13.5,
+        "weight": "400",
+        "lineHeightRatio": 1.3,
+        "lineHeightPx": 17.55,
+        "letterSpacingEm": -0.02,
+        "widthPx": 266,
+        "sourceFontFamily": "ABCWhytePlus",
+        "sourceTag": "span"
+      }
+    },
+    "tests": {
+      "display": {
+        "applied": {
+          "family": "Kanit",
+          "weight": 700,
+          "fontSizePx": 159.12,
+          "lineHeightRatio": 0.84,
+          "declaredNormal": false,
+          "lineHeightPx": 133.66,
+          "letterSpacingPx": -12.73,
+          "widthPx": 387
+        },
+        "sourceSystem": {
+          "fontFamily": "ABCWhytePlus",
+          "tag": "h1",
+          "weight": "350"
+        },
+        "asIs": {
+          "collides": true,
+          "minGapPx": -66.34,
+          "perString": [
+            {
+              "id": "h-1",
+              "lines": 8,
+              "minGap": -35.34,
+              "collides": true,
+              "requiredLineHeightPx": 169
+            },
+            {
+              "id": "h-2",
+              "lines": 5,
+              "minGap": -5.34,
+              "collides": true,
+              "requiredLineHeightPx": 139
+            },
+            {
+              "id": "h-3",
+              "lines": 7,
+              "minGap": -37.34,
+              "collides": true,
+              "requiredLineHeightPx": 171
+            },
+            {
+              "id": "stress",
+              "lines": 8,
+              "minGap": -66.34,
+              "collides": true,
+              "requiredLineHeightPx": 200
+            }
+          ]
+        },
+        "minThaiSafeRatio": 1.257,
+        "notViable": false,
+        "leadingCorrection": 0.417
+      },
+      "h2": {
+        "skipped": "no measurable type role"
+      },
+      "body": {
+        "applied": {
+          "family": "Anuphan",
+          "weight": 400,
+          "fontSizePx": 13.5,
+          "lineHeightRatio": 1.3,
+          "declaredNormal": false,
+          "lineHeightPx": 17.55,
+          "letterSpacingPx": -0.27,
+          "widthPx": 266
+        },
+        "sourceSystem": {
+          "fontFamily": "ABCWhytePlus",
+          "tag": "span",
+          "weight": "400"
+        },
+        "asIs": {
+          "collides": true,
+          "minGapPx": -0.45,
+          "perString": [
+            {
+              "id": "h-1",
+              "lines": 2,
+              "minGap": 3.55,
+              "collides": false,
+              "requiredLineHeightPx": 14
+            },
+            {
+              "id": "h-2",
+              "lines": 2,
+              "minGap": 5.55,
+              "collides": false,
+              "requiredLineHeightPx": 12
+            },
+            {
+              "id": "h-3",
+              "lines": 2,
+              "minGap": 0.55,
+              "collides": false,
+              "requiredLineHeightPx": 17
+            },
+            {
+              "id": "stress",
+              "lines": 2,
+              "minGap": -0.45,
+              "collides": true,
+              "requiredLineHeightPx": 18
+            }
+          ]
+        },
+        "minThaiSafeRatio": 1.333,
+        "notViable": false,
+        "leadingCorrection": 0.033
+      }
+    }
+  },
+  {
+    "slug": "monolog",
+    "name": "MONOLOG",
+    "url": "https://bymonolog.com",
+    "systems": {
+      "display": {
+        "fontSize": 139.5,
+        "weight": "500",
+        "lineHeightRatio": 0.9,
+        "lineHeightPx": 125.55,
+        "letterSpacingEm": -0.03,
+        "widthPx": 90,
+        "sourceFontFamily": "Animo",
+        "sourceTag": "div"
+      },
+      "h2": {
+        "fontSize": 23.75,
+        "weight": "500",
+        "lineHeightRatio": 1.1,
+        "lineHeightPx": 26.13,
+        "letterSpacingEm": -0.015,
+        "widthPx": 72,
+        "sourceFontFamily": "Khteka",
+        "sourceTag": "h2"
+      },
+      "body": {
+        "fontSize": 17.75,
+        "weight": "500",
+        "lineHeightRatio": 1.3,
+        "lineHeightPx": 23.08,
+        "letterSpacingEm": -0.01,
+        "widthPx": 612,
+        "sourceFontFamily": "Khteka",
+        "sourceTag": "p"
+      }
+    },
+    "tests": {
+      "display": {
+        "applied": {
+          "family": "Kanit",
+          "weight": 700,
+          "fontSizePx": 139.5,
+          "lineHeightRatio": 0.9,
+          "declaredNormal": false,
+          "lineHeightPx": 125.55,
+          "letterSpacingPx": -4.18,
+          "widthPx": 240
+        },
+        "sourceSystem": {
+          "fontFamily": "Animo",
+          "tag": "div",
+          "weight": "500"
+        },
+        "asIs": {
+          "collides": true,
+          "minGapPx": -50.08,
+          "perString": [
+            {
+              "id": "h-1",
+              "lines": 12,
+              "minGap": -22.45,
+              "collides": true,
+              "requiredLineHeightPx": 148
+            },
+            {
+              "id": "h-2",
+              "lines": 9,
+              "minGap": -19.45,
+              "collides": true,
+              "requiredLineHeightPx": 145
+            },
+            {
+              "id": "h-3",
+              "lines": 11,
+              "minGap": -23.45,
+              "collides": true,
+              "requiredLineHeightPx": 149
+            },
+            {
+              "id": "stress",
+              "lines": 14,
+              "minGap": -50.08,
+              "collides": true,
+              "requiredLineHeightPx": 175.63
+            }
+          ]
+        },
+        "minThaiSafeRatio": 1.259,
+        "notViable": false,
+        "leadingCorrection": 0.359
+      },
+      "h2": {
+        "applied": {
+          "family": "Kanit",
+          "weight": 700,
+          "fontSizePx": 23.75,
+          "lineHeightRatio": 1.1,
+          "declaredNormal": false,
+          "lineHeightPx": 26.13,
+          "letterSpacingPx": -0.36,
+          "widthPx": 240
+        },
+        "sourceSystem": {
+          "fontFamily": "Khteka",
+          "tag": "h2",
+          "weight": "500"
+        },
+        "asIs": {
+          "collides": true,
+          "minGapPx": -5.87,
+          "perString": [
+            {
+              "id": "h-1",
+              "lines": 2,
+              "minGap": 0.13,
+              "collides": false,
+              "requiredLineHeightPx": 26
+            },
+            {
+              "id": "h-2",
+              "lines": 2,
+              "minGap": 8.13,
+              "collides": false,
+              "requiredLineHeightPx": 18
+            },
+            {
+              "id": "h-3",
+              "lines": 2,
+              "minGap": 0.13,
+              "collides": false,
+              "requiredLineHeightPx": 26
+            },
+            {
+              "id": "stress",
+              "lines": 2,
+              "minGap": -5.87,
+              "collides": true,
+              "requiredLineHeightPx": 32
+            }
+          ]
+        },
+        "minThaiSafeRatio": 1.347,
+        "notViable": false,
+        "leadingCorrection": 0.247
+      },
+      "body": {
+        "applied": {
+          "family": "Anuphan",
+          "weight": 400,
+          "fontSizePx": 17.75,
+          "lineHeightRatio": 1.3,
+          "declaredNormal": false,
+          "lineHeightPx": 23.08,
+          "letterSpacingPx": -0.18,
+          "widthPx": 612
+        },
+        "sourceSystem": {
+          "fontFamily": "Khteka",
+          "tag": "p",
+          "weight": "500"
+        },
+        "asIs": {
+          "collides": false,
+          "minGapPx": 0.08,
+          "perString": [
+            {
+              "id": "h-1",
+              "lines": 2,
+              "minGap": 5.08,
+              "collides": false,
+              "requiredLineHeightPx": 18
+            },
+            {
+              "id": "h-2",
+              "lines": 2,
+              "minGap": 7.08,
+              "collides": false,
+              "requiredLineHeightPx": 16
+            },
+            {
+              "id": "h-3",
+              "lines": 2,
+              "minGap": 1.08,
+              "collides": false,
+              "requiredLineHeightPx": 22
+            },
+            {
+              "id": "stress",
+              "lines": 2,
+              "minGap": 0.08,
+              "collides": false,
+              "requiredLineHeightPx": 23
+            }
+          ]
+        },
+        "minThaiSafeRatio": 1.295,
+        "notViable": false,
+        "leadingCorrection": -0.005
+      }
+    }
+  },
+  {
+    "slug": "museumofmoney",
+    "name": "Museum of Money",
+    "url": "https://www.museumofmoney.com",
+    "systems": {
+      "display": {
+        "fontSize": 96,
+        "weight": "400",
+        "lineHeightRatio": 1,
+        "lineHeightPx": 96,
+        "letterSpacingEm": 0,
+        "widthPx": 1184,
+        "sourceFontFamily": "Archivo Black",
+        "sourceTag": "span"
+      },
+      "h2": {
+        "fontSize": 60,
+        "weight": "400",
+        "lineHeightRatio": 1,
+        "lineHeightPx": 60,
+        "letterSpacingEm": -0.025,
+        "widthPx": 507,
+        "sourceFontFamily": "Archivo Black",
+        "sourceTag": "h2"
+      },
+      "body": {
+        "fontSize": 14,
+        "weight": "400",
+        "lineHeightRatio": 1.38,
+        "lineHeightPx": 19.25,
+        "letterSpacingEm": 0,
+        "widthPx": 245,
+        "sourceFontFamily": "Manrope",
+        "sourceTag": "p"
+      }
+    },
+    "tests": {
+      "display": {
+        "applied": {
+          "family": "Kanit",
+          "weight": 700,
+          "fontSizePx": 96,
+          "lineHeightRatio": 1,
+          "declaredNormal": false,
+          "lineHeightPx": 96,
+          "letterSpacingPx": 0,
+          "widthPx": 1184
+        },
+        "sourceSystem": {
+          "fontFamily": "Archivo Black",
+          "tag": "span",
+          "weight": "400"
+        },
+        "asIs": {
+          "collides": true,
+          "minGapPx": -25.24,
+          "perString": [
+            {
+              "id": "h-1",
+              "lines": 2,
+              "minGap": -6,
+              "collides": true,
+              "requiredLineHeightPx": 102
+            },
+            {
+              "id": "h-2",
+              "lines": 2,
+              "minGap": -3,
+              "collides": true,
+              "requiredLineHeightPx": 99
+            },
+            {
+              "id": "h-3",
+              "lines": 2,
+              "minGap": -8,
+              "collides": true,
+              "requiredLineHeightPx": 104
+            },
+            {
+              "id": "stress",
+              "lines": 2,
+              "minGap": -25.24,
+              "collides": true,
+              "requiredLineHeightPx": 121.24
+            }
+          ]
+        },
+        "minThaiSafeRatio": 1.263,
+        "notViable": false,
+        "leadingCorrection": 0.263
+      },
+      "h2": {
+        "applied": {
+          "family": "Kanit",
+          "weight": 700,
+          "fontSizePx": 60,
+          "lineHeightRatio": 1,
+          "declaredNormal": false,
+          "lineHeightPx": 60,
+          "letterSpacingPx": -1.5,
+          "widthPx": 507
+        },
+        "sourceSystem": {
+          "fontFamily": "Archivo Black",
+          "tag": "h2",
+          "weight": "400"
+        },
+        "asIs": {
+          "collides": true,
+          "minGapPx": -17,
+          "perString": [
+            {
+              "id": "h-1",
+              "lines": 2,
+              "minGap": 11,
+              "collides": false,
+              "requiredLineHeightPx": 49
+            },
+            {
+              "id": "h-2",
+              "lines": 2,
+              "minGap": 13,
+              "collides": false,
+              "requiredLineHeightPx": 47
+            },
+            {
+              "id": "h-3",
+              "lines": 2,
+              "minGap": -4,
+              "collides": true,
+              "requiredLineHeightPx": 64
+            },
+            {
+              "id": "stress",
+              "lines": 3,
+              "minGap": -17,
+              "collides": true,
+              "requiredLineHeightPx": 77
+            }
+          ]
+        },
+        "minThaiSafeRatio": 1.283,
+        "notViable": false,
+        "leadingCorrection": 0.283
+      },
+      "body": {
+        "applied": {
+          "family": "Anuphan",
+          "weight": 400,
+          "fontSizePx": 14,
+          "lineHeightRatio": 1.38,
+          "declaredNormal": false,
+          "lineHeightPx": 19.32,
+          "letterSpacingPx": 0,
+          "widthPx": 245
+        },
+        "sourceSystem": {
+          "fontFamily": "Manrope",
+          "tag": "p",
+          "weight": "400"
+        },
+        "asIs": {
+          "collides": false,
+          "minGapPx": 0.31,
+          "perString": [
+            {
+              "id": "h-1",
+              "lines": 2,
+              "minGap": 5.31,
+              "collides": false,
+              "requiredLineHeightPx": 14
+            },
+            {
+              "id": "h-2",
+              "lines": 2,
+              "minGap": 6.31,
+              "collides": false,
+              "requiredLineHeightPx": 13
+            },
+            {
+              "id": "h-3",
+              "lines": 2,
+              "minGap": 2.31,
+              "collides": false,
+              "requiredLineHeightPx": 17
+            },
+            {
+              "id": "stress",
+              "lines": 2,
+              "minGap": 0.31,
+              "collides": false,
+              "requiredLineHeightPx": 19
+            }
+          ]
+        },
+        "minThaiSafeRatio": 1.357,
+        "notViable": false,
+        "leadingCorrection": -0.023
+      }
+    }
+  },
+  {
+    "slug": "nippori",
+    "name": "Nippori / LAMM",
+    "url": "https://nippori.lamm.tokyo",
+    "systems": {
+      "display": {
+        "fontSize": 300,
+        "weight": "400",
+        "lineHeightRatio": 1,
+        "lineHeightPx": 300,
+        "letterSpacingEm": -0.02,
+        "widthPx": 211,
+        "sourceFontFamily": "Helvetica",
+        "sourceTag": "span"
+      },
+      "h2": null,
+      "body": {
+        "fontSize": 19,
+        "weight": "400",
+        "lineHeightRatio": 1.25,
+        "lineHeightPx": 23.75,
+        "letterSpacingEm": 0,
+        "widthPx": 545,
+        "sourceFontFamily": "Helvetica",
+        "sourceTag": "p"
+      }
+    },
+    "tests": {
+      "display": {
+        "applied": {
+          "family": "Kanit",
+          "weight": 700,
+          "fontSizePx": 300,
+          "lineHeightRatio": 1,
+          "declaredNormal": false,
+          "lineHeightPx": 300,
+          "letterSpacingPx": -6,
+          "widthPx": 240
+        },
+        "sourceSystem": {
+          "fontFamily": "Helvetica",
+          "tag": "span",
+          "weight": "400"
+        },
+        "asIs": {
+          "collides": true,
+          "minGapPx": -79.69,
+          "perString": [
+            {
+              "id": "h-1",
+              "lines": 29,
+              "minGap": 0,
+              "collides": false,
+              "requiredLineHeightPx": 300
+            },
+            {
+              "id": "h-2",
+              "lines": 21,
+              "minGap": -14.07,
+              "collides": true,
+              "requiredLineHeightPx": 314.07
+            },
+            {
+              "id": "h-3",
+              "lines": 26,
+              "minGap": -14.07,
+              "collides": true,
+              "requiredLineHeightPx": 314.07
+            },
+            {
+              "id": "stress",
+              "lines": 25,
+              "minGap": -79.69,
+              "collides": true,
+              "requiredLineHeightPx": 379.69
+            }
+          ]
+        },
+        "minThaiSafeRatio": 1.266,
+        "notViable": false,
+        "leadingCorrection": 0.266
+      },
+      "h2": {
+        "skipped": "no measurable type role"
+      },
+      "body": {
+        "applied": {
+          "family": "Anuphan",
+          "weight": 400,
+          "fontSizePx": 19,
+          "lineHeightRatio": 1.25,
+          "declaredNormal": false,
+          "lineHeightPx": 23.75,
+          "letterSpacingPx": 0,
+          "widthPx": 545
+        },
+        "sourceSystem": {
+          "fontFamily": "Helvetica",
+          "tag": "p",
+          "weight": "400"
+        },
+        "asIs": {
+          "collides": true,
+          "minGapPx": -1.25,
+          "perString": [
+            {
+              "id": "h-1",
+              "lines": 2,
+              "minGap": 4.75,
+              "collides": false,
+              "requiredLineHeightPx": 19
+            },
+            {
+              "id": "h-2",
+              "lines": 2,
+              "minGap": 6.75,
+              "collides": false,
+              "requiredLineHeightPx": 17
+            },
+            {
+              "id": "h-3",
+              "lines": 2,
+              "minGap": 0.75,
+              "collides": false,
+              "requiredLineHeightPx": 23
+            },
+            {
+              "id": "stress",
+              "lines": 2,
+              "minGap": -1.25,
+              "collides": true,
+              "requiredLineHeightPx": 25
+            }
+          ]
+        },
+        "minThaiSafeRatio": 1.316,
+        "notViable": false,
+        "leadingCorrection": 0.066
+      }
+    }
+  },
+  {
+    "slug": "normalisboring",
+    "name": "Normal is Boring",
+    "url": "https://normalisboring.es",
+    "systems": {
+      "display": {
+        "fontSize": 180,
+        "weight": "400",
+        "lineHeightRatio": 1.23,
+        "lineHeightPx": 220.5,
+        "letterSpacingEm": -0.006889999999999999,
+        "widthPx": 131,
+        "sourceFontFamily": "Juana-Regular",
+        "sourceTag": "div"
+      },
+      "h2": null,
+      "body": {
+        "fontSize": 12.75,
+        "weight": "400",
+        "lineHeightRatio": 1.35,
+        "lineHeightPx": 17.25,
+        "letterSpacingEm": 0,
+        "widthPx": 319,
+        "sourceFontFamily": "Izmir-Regular",
+        "sourceTag": "p"
+      }
+    },
+    "tests": {
+      "display": {
+        "applied": {
+          "family": "Kanit",
+          "weight": 700,
+          "fontSizePx": 180,
+          "lineHeightRatio": 1.23,
+          "declaredNormal": false,
+          "lineHeightPx": 221.4,
+          "letterSpacingPx": -1.24,
+          "widthPx": 240
+        },
+        "sourceSystem": {
+          "fontFamily": "Juana-Regular",
+          "tag": "div",
+          "weight": "400"
+        },
+        "asIs": {
+          "collides": true,
+          "minGapPx": -2.79,
+          "perString": [
+            {
+              "id": "h-1",
+              "lines": 17,
+              "minGap": 45.41,
+              "collides": false,
+              "requiredLineHeightPx": 176
+            },
+            {
+              "id": "h-2",
+              "lines": 11,
+              "minGap": 35.41,
+              "collides": false,
+              "requiredLineHeightPx": 186
+            },
+            {
+              "id": "h-3",
+              "lines": 15,
+              "minGap": 35.41,
+              "collides": false,
+              "requiredLineHeightPx": 186
+            },
+            {
+              "id": "stress",
+              "lines": 18,
+              "minGap": -2.79,
+              "collides": true,
+              "requiredLineHeightPx": 224.2
+            }
+          ]
+        },
+        "minThaiSafeRatio": 1.246,
+        "notViable": false,
+        "leadingCorrection": 0.016
+      },
+      "h2": {
+        "skipped": "no measurable type role"
+      },
+      "body": {
+        "applied": {
+          "family": "Anuphan",
+          "weight": 400,
+          "fontSizePx": 12.75,
+          "lineHeightRatio": 1.35,
+          "declaredNormal": false,
+          "lineHeightPx": 17.21,
+          "letterSpacingPx": 0,
+          "widthPx": 319
+        },
+        "sourceSystem": {
+          "fontFamily": "Izmir-Regular",
+          "tag": "p",
+          "weight": "400"
+        },
+        "asIs": {
+          "collides": false,
+          "minGapPx": 0.2,
+          "perString": [
+            {
+              "id": "h-1",
+              "lines": 2,
+              "minGap": 4.2,
+              "collides": false,
+              "requiredLineHeightPx": 13
+            },
+            {
+              "id": "h-2",
+              "lines": 2,
+              "minGap": 5.2,
+              "collides": false,
+              "requiredLineHeightPx": 12
+            },
+            {
+              "id": "h-3",
+              "lines": 2,
+              "minGap": 1.2,
+              "collides": false,
+              "requiredLineHeightPx": 16
+            },
+            {
+              "id": "stress",
+              "lines": 2,
+              "minGap": 0.2,
+              "collides": false,
+              "requiredLineHeightPx": 17
+            }
+          ]
+        },
+        "minThaiSafeRatio": 1.333,
+        "notViable": false,
+        "leadingCorrection": -0.017
+      }
+    }
+  },
+  {
+    "slug": "offbeat",
+    "name": "Offbeat",
+    "url": "https://offbeat.kr",
+    "systems": {
+      "display": {
+        "fontSize": 172.8,
+        "weight": "500",
+        "lineHeightRatio": 0.8,
+        "lineHeightPx": 138.24,
+        "letterSpacingEm": -0.06,
+        "widthPx": 86,
+        "sourceFontFamily": "Cabinetgrotesk",
+        "sourceTag": "div"
+      },
+      "h2": null,
+      "body": {
+        "fontSize": 18,
+        "weight": "400",
+        "lineHeightRatio": 1.4,
+        "lineHeightPx": 25.2,
+        "letterSpacingEm": 0,
+        "widthPx": 445,
+        "sourceFontFamily": "Pretendard",
+        "sourceTag": "p"
+      }
+    },
+    "tests": {
+      "display": {
+        "applied": {
+          "family": "Kanit",
+          "weight": 700,
+          "fontSizePx": 172.8,
+          "lineHeightRatio": 0.8,
+          "declaredNormal": false,
+          "lineHeightPx": 138.24,
+          "letterSpacingPx": -10.37,
+          "widthPx": 240
+        },
+        "sourceSystem": {
+          "fontFamily": "Cabinetgrotesk",
+          "tag": "div",
+          "weight": "500"
+        },
+        "asIs": {
+          "collides": true,
+          "minGapPx": -76.77,
+          "perString": [
+            {
+              "id": "h-1",
+              "lines": 16,
+              "minGap": -30.77,
+              "collides": true,
+              "requiredLineHeightPx": 169
+            },
+            {
+              "id": "h-2",
+              "lines": 11,
+              "minGap": -40.77,
+              "collides": true,
+              "requiredLineHeightPx": 179
+            },
+            {
+              "id": "h-3",
+              "lines": 13,
+              "minGap": -40.77,
+              "collides": true,
+              "requiredLineHeightPx": 179
+            },
+            {
+              "id": "stress",
+              "lines": 15,
+              "minGap": -76.77,
+              "collides": true,
+              "requiredLineHeightPx": 215
+            }
+          ]
+        },
+        "minThaiSafeRatio": 1.244,
+        "notViable": false,
+        "leadingCorrection": 0.444
+      },
+      "h2": {
+        "skipped": "no measurable type role"
+      },
+      "body": {
+        "applied": {
+          "family": "Anuphan",
+          "weight": 400,
+          "fontSizePx": 18,
+          "lineHeightRatio": 1.4,
+          "declaredNormal": false,
+          "lineHeightPx": 25.2,
+          "letterSpacingPx": 0,
+          "widthPx": 445
+        },
+        "sourceSystem": {
+          "fontFamily": "Pretendard",
+          "tag": "p",
+          "weight": "400"
+        },
+        "asIs": {
+          "collides": false,
+          "minGapPx": 1.2,
+          "perString": [
+            {
+              "id": "h-1",
+              "lines": 2,
+              "minGap": 7.2,
+              "collides": false,
+              "requiredLineHeightPx": 18
+            },
+            {
+              "id": "h-2",
+              "lines": 2,
+              "minGap": 9.2,
+              "collides": false,
+              "requiredLineHeightPx": 16
+            },
+            {
+              "id": "h-3",
+              "lines": 2,
+              "minGap": 3.2,
+              "collides": false,
+              "requiredLineHeightPx": 22
+            },
+            {
+              "id": "stress",
+              "lines": 2,
+              "minGap": 1.2,
+              "collides": false,
+              "requiredLineHeightPx": 24
+            }
+          ]
+        },
+        "minThaiSafeRatio": 1.333,
+        "notViable": false,
+        "leadingCorrection": -0.067
+      }
+    }
+  },
+  {
+    "slug": "oji-brandbook",
+    "name": "OJI Global Brand Book",
+    "url": "https://www.ojiholdings.co.jp/group/brandbook/",
+    "systems": {
+      "display": {
+        "fontSize": 18.84,
+        "weight": "700",
+        "lineHeightRatio": 1.47,
+        "lineHeightPx": 27.61,
+        "letterSpacingEm": 0.016280000000000003,
+        "widthPx": 75,
+        "sourceFontFamily": "YakuHanJP",
+        "sourceTag": "span"
+      },
+      "h2": null,
+      "body": null
+    },
+    "tests": {
+      "display": {
+        "applied": {
+          "family": "Kanit",
+          "weight": 700,
+          "fontSizePx": 18.84,
+          "lineHeightRatio": 1.47,
+          "declaredNormal": false,
+          "lineHeightPx": 27.69,
+          "letterSpacingPx": 0.31,
+          "widthPx": 240
+        },
+        "sourceSystem": {
+          "fontFamily": "YakuHanJP",
+          "tag": "span",
+          "weight": "700"
+        },
+        "asIs": {
+          "collides": false,
+          "minGapPx": 1.82,
+          "perString": [
+            {
+              "id": "h-1",
+              "lines": 2,
+              "minGap": 6.69,
+              "collides": false,
+              "requiredLineHeightPx": 21
+            },
+            {
+              "id": "h-2",
+              "lines": 2,
+              "minGap": 11.69,
+              "collides": false,
+              "requiredLineHeightPx": 16
+            },
+            {
+              "id": "h-3",
+              "lines": 2,
+              "minGap": 6.69,
+              "collides": false,
+              "requiredLineHeightPx": 21
+            },
+            {
+              "id": "stress",
+              "lines": 2,
+              "minGap": 1.82,
+              "collides": false,
+              "requiredLineHeightPx": 25.87
+            }
+          ]
+        },
+        "minThaiSafeRatio": 1.373,
+        "notViable": false,
+        "leadingCorrection": -0.097
+      },
+      "h2": {
+        "skipped": "no measurable type role"
+      },
+      "body": {
+        "skipped": "no measurable type role"
+      }
+    }
+  },
+  {
+    "slug": "pendragon",
+    "name": "Pendragon Cycle",
+    "url": "https://pendragoncycle.com",
+    "systems": {
+      "display": {
+        "fontSize": 32,
+        "weight": "400",
+        "lineHeightRatio": 1.15,
+        "lineHeightPx": 36.8,
+        "letterSpacingEm": 0,
+        "widthPx": 1440,
+        "sourceFontFamily": "gryphius-mvb",
+        "sourceTag": "h1"
+      },
+      "h2": {
+        "fontSize": 20,
+        "weight": "400",
+        "lineHeightRatio": 1.15,
+        "lineHeightPx": 23,
+        "letterSpacingEm": 0,
+        "widthPx": 210,
+        "sourceFontFamily": "gryphius-mvb",
+        "sourceTag": "h2"
+      },
+      "body": {
+        "fontSize": 13.01,
+        "weight": "400",
+        "lineHeightRatio": 1.5,
+        "lineHeightPx": 19.51,
+        "letterSpacingEm": 0,
+        "widthPx": 700,
+        "sourceFontFamily": "ltc-goudy-oldstyle-pro",
+        "sourceTag": "div"
+      }
+    },
+    "tests": {
+      "display": {
+        "applied": {
+          "family": "Kanit",
+          "weight": 700,
+          "fontSizePx": 32,
+          "lineHeightRatio": 1.15,
+          "declaredNormal": false,
+          "lineHeightPx": 36.8,
+          "letterSpacingPx": 0,
+          "widthPx": 1400
+        },
+        "sourceSystem": {
+          "fontFamily": "gryphius-mvb",
+          "tag": "h1",
+          "weight": "400"
+        },
+        "asIs": {
+          "collides": true,
+          "minGapPx": -5.2,
+          "perString": [
+            {
+              "id": "h-1",
+              "lines": 2,
+              "minGap": 10.8,
+              "collides": false,
+              "requiredLineHeightPx": 26
+            },
+            {
+              "id": "h-2",
+              "lines": 2,
+              "minGap": 10.8,
+              "collides": false,
+              "requiredLineHeightPx": 26
+            },
+            {
+              "id": "h-3",
+              "lines": 2,
+              "minGap": 0.8,
+              "collides": false,
+              "requiredLineHeightPx": 36
+            },
+            {
+              "id": "stress",
+              "lines": 2,
+              "minGap": -5.2,
+              "collides": true,
+              "requiredLineHeightPx": 42
+            }
+          ]
+        },
+        "minThaiSafeRatio": 1.312,
+        "notViable": false,
+        "leadingCorrection": 0.162
+      },
+      "h2": {
+        "applied": {
+          "family": "Kanit",
+          "weight": 700,
+          "fontSizePx": 20,
+          "lineHeightRatio": 1.15,
+          "declaredNormal": false,
+          "lineHeightPx": 23,
+          "letterSpacingPx": 0,
+          "widthPx": 240
+        },
+        "sourceSystem": {
+          "fontFamily": "gryphius-mvb",
+          "tag": "h2",
+          "weight": "400"
+        },
+        "asIs": {
+          "collides": true,
+          "minGapPx": -3,
+          "perString": [
+            {
+              "id": "h-1",
+              "lines": 2,
+              "minGap": 2,
+              "collides": false,
+              "requiredLineHeightPx": 21
+            },
+            {
+              "id": "h-2",
+              "lines": 2,
+              "minGap": 3,
+              "collides": false,
+              "requiredLineHeightPx": 20
+            },
+            {
+              "id": "h-3",
+              "lines": 2,
+              "minGap": 2,
+              "collides": false,
+              "requiredLineHeightPx": 21
+            },
+            {
+              "id": "stress",
+              "lines": 2,
+              "minGap": -3,
+              "collides": true,
+              "requiredLineHeightPx": 26
+            }
+          ]
+        },
+        "minThaiSafeRatio": 1.3,
+        "notViable": false,
+        "leadingCorrection": 0.15
+      },
+      "body": {
+        "applied": {
+          "family": "Anuphan",
+          "weight": 400,
+          "fontSizePx": 13.01,
+          "lineHeightRatio": 1.5,
+          "declaredNormal": false,
+          "lineHeightPx": 19.52,
+          "letterSpacingPx": 0,
+          "widthPx": 700
+        },
+        "sourceSystem": {
+          "fontFamily": "ltc-goudy-oldstyle-pro",
+          "tag": "div",
+          "weight": "400"
+        },
+        "asIs": {
+          "collides": false,
+          "minGapPx": 1.52,
+          "perString": [
+            {
+              "id": "h-1",
+              "lines": 2,
+              "minGap": 6.52,
+              "collides": false,
+              "requiredLineHeightPx": 13
+            },
+            {
+              "id": "h-2",
+              "lines": 2,
+              "minGap": 7.52,
+              "collides": false,
+              "requiredLineHeightPx": 12
+            },
+            {
+              "id": "h-3",
+              "lines": 2,
+              "minGap": 3.52,
+              "collides": false,
+              "requiredLineHeightPx": 16
+            },
+            {
+              "id": "stress",
+              "lines": 2,
+              "minGap": 1.52,
+              "collides": false,
+              "requiredLineHeightPx": 18
+            }
+          ]
+        },
+        "minThaiSafeRatio": 1.383,
+        "notViable": false,
+        "leadingCorrection": -0.117
+      }
+    }
+  },
+  {
+    "slug": "plan-az",
+    "name": "Plan AZ",
+    "url": "https://plan-az.com",
+    "systems": {
+      "display": {
+        "fontSize": 288,
+        "weight": "400",
+        "lineHeightRatio": null,
+        "lineHeightPx": null,
+        "letterSpacingEm": 0,
+        "widthPx": 238,
+        "sourceFontFamily": "Archivo",
+        "sourceTag": "p"
+      },
+      "h2": {
+        "fontSize": 60,
+        "weight": "400",
+        "lineHeightRatio": 1,
+        "lineHeightPx": 60,
+        "letterSpacingEm": 0,
+        "widthPx": 840,
+        "sourceFontFamily": "Archivo",
+        "sourceTag": "h2"
+      },
+      "body": {
+        "fontSize": 16,
+        "weight": "400",
+        "lineHeightRatio": 1.25,
+        "lineHeightPx": 20,
+        "letterSpacingEm": 0,
+        "widthPx": 1231,
+        "sourceFontFamily": "Archivo",
+        "sourceTag": "p"
+      }
+    },
+    "tests": {
+      "display": {
+        "applied": {
+          "family": "Kanit",
+          "weight": 700,
+          "fontSizePx": 288,
+          "lineHeightRatio": 1.497,
+          "declaredNormal": true,
+          "lineHeightPx": null,
+          "letterSpacingPx": 0,
+          "widthPx": 240
+        },
+        "sourceSystem": {
+          "fontFamily": "Archivo",
+          "tag": "p",
+          "weight": "400"
+        },
+        "asIs": {
+          "collides": false,
+          "minGapPx": 66.5,
+          "perString": [
+            {
+              "id": "h-1",
+              "lines": 29,
+              "minGap": 143,
+              "collides": false,
+              "requiredLineHeightPx": 288
+            },
+            {
+              "id": "h-2",
+              "lines": 21,
+              "minGap": 129.5,
+              "collides": false,
+              "requiredLineHeightPx": 301.5
+            },
+            {
+              "id": "h-3",
+              "lines": 26,
+              "minGap": 129.5,
+              "collides": false,
+              "requiredLineHeightPx": 301.5
+            },
+            {
+              "id": "stress",
+              "lines": 25,
+              "minGap": 66.5,
+              "collides": false,
+              "requiredLineHeightPx": 364.5
+            }
+          ]
+        },
+        "minThaiSafeRatio": 1.266,
+        "notViable": false,
+        "leadingCorrection": -0.231
+      },
+      "h2": {
+        "applied": {
+          "family": "Kanit",
+          "weight": 700,
+          "fontSizePx": 60,
+          "lineHeightRatio": 1,
+          "declaredNormal": false,
+          "lineHeightPx": 60,
+          "letterSpacingPx": 0,
+          "widthPx": 840
+        },
+        "sourceSystem": {
+          "fontFamily": "Archivo",
+          "tag": "h2",
+          "weight": "400"
+        },
+        "asIs": {
+          "collides": true,
+          "minGapPx": -15.4,
+          "perString": [
+            {
+              "id": "h-1",
+              "lines": 2,
+              "minGap": -1,
+              "collides": true,
+              "requiredLineHeightPx": 61
+            },
+            {
+              "id": "h-2",
+              "lines": 2,
+              "minGap": 12,
+              "collides": false,
+              "requiredLineHeightPx": 48
+            },
+            {
+              "id": "h-3",
+              "lines": 2,
+              "minGap": -4,
+              "collides": true,
+              "requiredLineHeightPx": 64
+            },
+            {
+              "id": "stress",
+              "lines": 2,
+              "minGap": -15.4,
+              "collides": true,
+              "requiredLineHeightPx": 75.41
+            }
+          ]
+        },
+        "minThaiSafeRatio": 1.257,
+        "notViable": false,
+        "leadingCorrection": 0.257
+      },
+      "body": {
+        "applied": {
+          "family": "Anuphan",
+          "weight": 400,
+          "fontSizePx": 16,
+          "lineHeightRatio": 1.25,
+          "declaredNormal": false,
+          "lineHeightPx": 20,
+          "letterSpacingPx": 0,
+          "widthPx": 1231
+        },
+        "sourceSystem": {
+          "fontFamily": "Archivo",
+          "tag": "p",
+          "weight": "400"
+        },
+        "asIs": {
+          "collides": true,
+          "minGapPx": -2,
+          "perString": [
+            {
+              "id": "h-1",
+              "lines": 2,
+              "minGap": 4,
+              "collides": false,
+              "requiredLineHeightPx": 16
+            },
+            {
+              "id": "h-2",
+              "lines": 2,
+              "minGap": 6,
+              "collides": false,
+              "requiredLineHeightPx": 14
+            },
+            {
+              "id": "h-3",
+              "lines": 2,
+              "minGap": 0,
+              "collides": false,
+              "requiredLineHeightPx": 20
+            },
+            {
+              "id": "stress",
+              "lines": 2,
+              "minGap": -2,
+              "collides": true,
+              "requiredLineHeightPx": 22
+            }
+          ]
+        },
+        "minThaiSafeRatio": 1.375,
+        "notViable": false,
+        "leadingCorrection": 0.125
+      }
+    }
+  },
+  {
+    "slug": "planetono",
+    "name": "Planetono",
+    "url": "https://planetono.space",
+    "systems": {
+      "display": {
+        "fontSize": 60,
+        "weight": "700",
+        "lineHeightRatio": 1,
+        "lineHeightPx": 60,
+        "letterSpacingEm": -0.04,
+        "widthPx": 169,
+        "sourceFontFamily": "Futura Passata",
+        "sourceTag": "div"
+      },
+      "h2": {
+        "fontSize": 60,
+        "weight": "700",
+        "lineHeightRatio": 1,
+        "lineHeightPx": 60,
+        "letterSpacingEm": -0.04,
+        "widthPx": 372,
+        "sourceFontFamily": "Futura Passata",
+        "sourceTag": "h2"
+      },
+      "body": null
+    },
+    "tests": {
+      "display": {
+        "applied": {
+          "family": "Kanit",
+          "weight": 700,
+          "fontSizePx": 60,
+          "lineHeightRatio": 1,
+          "declaredNormal": false,
+          "lineHeightPx": 60,
+          "letterSpacingPx": -2.4,
+          "widthPx": 240
+        },
+        "sourceSystem": {
+          "fontFamily": "Futura Passata",
+          "tag": "div",
+          "weight": "700"
+        },
+        "asIs": {
+          "collides": true,
+          "minGapPx": -15,
+          "perString": [
+            {
+              "id": "h-1",
+              "lines": 5,
+              "minGap": -3,
+              "collides": true,
+              "requiredLineHeightPx": 63
+            },
+            {
+              "id": "h-2",
+              "lines": 4,
+              "minGap": -2,
+              "collides": true,
+              "requiredLineHeightPx": 62
+            },
+            {
+              "id": "h-3",
+              "lines": 4,
+              "minGap": -14,
+              "collides": true,
+              "requiredLineHeightPx": 74
+            },
+            {
+              "id": "stress",
+              "lines": 6,
+              "minGap": -15,
+              "collides": true,
+              "requiredLineHeightPx": 75
+            }
+          ]
+        },
+        "minThaiSafeRatio": 1.25,
+        "notViable": false,
+        "leadingCorrection": 0.25
+      },
+      "h2": {
+        "applied": {
+          "family": "Kanit",
+          "weight": 700,
+          "fontSizePx": 60,
+          "lineHeightRatio": 1,
+          "declaredNormal": false,
+          "lineHeightPx": 60,
+          "letterSpacingPx": -2.4,
+          "widthPx": 372
+        },
+        "sourceSystem": {
+          "fontFamily": "Futura Passata",
+          "tag": "h2",
+          "weight": "700"
+        },
+        "asIs": {
+          "collides": true,
+          "minGapPx": -17,
+          "perString": [
+            {
+              "id": "h-1",
+              "lines": 3,
+              "minGap": -3,
+              "collides": true,
+              "requiredLineHeightPx": 63
+            },
+            {
+              "id": "h-2",
+              "lines": 2,
+              "minGap": 11,
+              "collides": false,
+              "requiredLineHeightPx": 49
+            },
+            {
+              "id": "h-3",
+              "lines": 3,
+              "minGap": -14,
+              "collides": true,
+              "requiredLineHeightPx": 74
+            },
+            {
+              "id": "stress",
+              "lines": 3,
+              "minGap": -17,
+              "collides": true,
+              "requiredLineHeightPx": 77
+            }
+          ]
+        },
+        "minThaiSafeRatio": 1.283,
+        "notViable": false,
+        "leadingCorrection": 0.283
+      },
+      "body": {
+        "skipped": "no measurable type role"
+      }
+    }
+  },
+  {
+    "slug": "plusex15",
+    "name": "PLUS-EX 15th",
+    "url": "https://15th.plus-ex.com",
+    "systems": {
+      "display": {
+        "fontSize": 400,
+        "weight": "700",
+        "lineHeightRatio": 0.8,
+        "lineHeightPx": 320,
+        "letterSpacingEm": -0.03,
+        "widthPx": 261,
+        "sourceFontFamily": "neue-haas-grotesk-display",
+        "sourceTag": "div"
+      },
+      "h2": null,
+      "body": null
+    },
+    "tests": {
+      "display": {
+        "applied": {
+          "family": "Kanit",
+          "weight": 700,
+          "fontSizePx": 400,
+          "lineHeightRatio": 0.8,
+          "declaredNormal": false,
+          "lineHeightPx": 320,
+          "letterSpacingPx": -12,
+          "widthPx": 261
+        },
+        "sourceSystem": {
+          "fontFamily": "neue-haas-grotesk-display",
+          "tag": "div",
+          "weight": "700"
+        },
+        "asIs": {
+          "collides": true,
+          "minGapPx": -98.75,
+          "perString": [
+            {
+              "id": "h-1",
+              "lines": 29,
+              "minGap": -80,
+              "collides": true,
+              "requiredLineHeightPx": 400
+            },
+            {
+              "id": "h-2",
+              "lines": 21,
+              "minGap": -98.75,
+              "collides": true,
+              "requiredLineHeightPx": 418.75
+            },
+            {
+              "id": "h-3",
+              "lines": 26,
+              "minGap": -98.75,
+              "collides": true,
+              "requiredLineHeightPx": 418.75
+            },
+            {
+              "id": "stress",
+              "lines": 26,
+              "minGap": -98.75,
+              "collides": true,
+              "requiredLineHeightPx": 418.75
+            }
+          ]
+        },
+        "minThaiSafeRatio": 1.047,
+        "notViable": false,
+        "leadingCorrection": 0.247
+      },
+      "h2": {
+        "skipped": "no measurable type role"
+      },
+      "body": {
+        "skipped": "no measurable type role"
+      }
+    }
+  },
+  {
+    "slug": "sakazuki",
+    "name": "Sakazuki",
+    "url": "https://sakazuki.io",
+    "systems": {
+      "display": {
+        "fontSize": 316.8,
+        "weight": "400",
+        "lineHeightRatio": 0.8,
+        "lineHeightPx": 253.44,
+        "letterSpacingEm": -0.02,
+        "widthPx": 872,
+        "sourceFontFamily": "hagrid",
+        "sourceTag": "span"
+      },
+      "h2": {
+        "fontSize": 190.59,
+        "weight": "400",
+        "lineHeightRatio": 1,
+        "lineHeightPx": 190.59,
+        "letterSpacingEm": 0,
+        "widthPx": 1372,
+        "sourceFontFamily": "hagrid",
+        "sourceTag": "h2"
+      },
+      "body": {
+        "fontSize": 16.94,
+        "weight": "400",
+        "lineHeightRatio": 1.4,
+        "lineHeightPx": 23.72,
+        "letterSpacingEm": 0,
+        "widthPx": 593,
+        "sourceFontFamily": "hagrid-text",
+        "sourceTag": "p"
+      }
+    },
+    "tests": {
+      "display": {
+        "applied": {
+          "family": "Kanit",
+          "weight": 700,
+          "fontSizePx": 316.8,
+          "lineHeightRatio": 0.8,
+          "declaredNormal": false,
+          "lineHeightPx": 253.44,
+          "letterSpacingPx": -6.34,
+          "widthPx": 872
+        },
+        "sourceSystem": {
+          "fontFamily": "hagrid",
+          "tag": "span",
+          "weight": "400"
+        },
+        "asIs": {
+          "collides": true,
+          "minGapPx": -147.5,
+          "perString": [
+            {
+              "id": "h-1",
+              "lines": 8,
+              "minGap": -83.15,
+              "collides": true,
+              "requiredLineHeightPx": 336.59
+            },
+            {
+              "id": "h-2",
+              "lines": 5,
+              "minGap": -28.7,
+              "collides": true,
+              "requiredLineHeightPx": 282.14
+            },
+            {
+              "id": "h-3",
+              "lines": 7,
+              "minGap": -88.1,
+              "collides": true,
+              "requiredLineHeightPx": 341.54
+            },
+            {
+              "id": "stress",
+              "lines": 8,
+              "minGap": -147.5,
+              "collides": true,
+              "requiredLineHeightPx": 400.94
+            }
+          ]
+        },
+        "minThaiSafeRatio": 1.266,
+        "notViable": false,
+        "leadingCorrection": 0.466
+      },
+      "h2": {
+        "applied": {
+          "family": "Kanit",
+          "weight": 700,
+          "fontSizePx": 190.59,
+          "lineHeightRatio": 1,
+          "declaredNormal": false,
+          "lineHeightPx": 190.59,
+          "letterSpacingPx": 0,
+          "widthPx": 1372
+        },
+        "sourceSystem": {
+          "fontFamily": "hagrid",
+          "tag": "h2",
+          "weight": "400"
+        },
+        "asIs": {
+          "collides": true,
+          "minGapPx": -56.41,
+          "perString": [
+            {
+              "id": "h-1",
+              "lines": 3,
+              "minGap": -7.41,
+              "collides": true,
+              "requiredLineHeightPx": 198
+            },
+            {
+              "id": "h-2",
+              "lines": 2,
+              "minGap": 39.59,
+              "collides": false,
+              "requiredLineHeightPx": 151
+            },
+            {
+              "id": "h-3",
+              "lines": 3,
+              "minGap": -46.41,
+              "collides": true,
+              "requiredLineHeightPx": 237
+            },
+            {
+              "id": "stress",
+              "lines": 3,
+              "minGap": -56.41,
+              "collides": true,
+              "requiredLineHeightPx": 247
+            }
+          ]
+        },
+        "minThaiSafeRatio": 1.296,
+        "notViable": false,
+        "leadingCorrection": 0.296
+      },
+      "body": {
+        "applied": {
+          "family": "Anuphan",
+          "weight": 400,
+          "fontSizePx": 16.94,
+          "lineHeightRatio": 1.4,
+          "declaredNormal": false,
+          "lineHeightPx": 23.72,
+          "letterSpacingPx": 0,
+          "widthPx": 593
+        },
+        "sourceSystem": {
+          "fontFamily": "hagrid-text",
+          "tag": "p",
+          "weight": "400"
+        },
+        "asIs": {
+          "collides": false,
+          "minGapPx": 1.72,
+          "perString": [
+            {
+              "id": "h-1",
+              "lines": 2,
+              "minGap": 6.72,
+              "collides": false,
+              "requiredLineHeightPx": 17
+            },
+            {
+              "id": "h-2",
+              "lines": 2,
+              "minGap": 8.72,
+              "collides": false,
+              "requiredLineHeightPx": 15
+            },
+            {
+              "id": "h-3",
+              "lines": 2,
+              "minGap": 2.72,
+              "collides": false,
+              "requiredLineHeightPx": 21
+            },
+            {
+              "id": "stress",
+              "lines": 2,
+              "minGap": 1.72,
+              "collides": false,
+              "requiredLineHeightPx": 22
+            }
+          ]
+        },
+        "minThaiSafeRatio": 1.298,
+        "notViable": false,
+        "leadingCorrection": -0.102
+      }
+    }
+  },
+  {
+    "slug": "seasoned",
+    "name": "Seasoned (Koto)",
+    "url": "https://seasoned.koto.studio",
+    "systems": {
+      "display": {
+        "fontSize": 96,
+        "weight": "500",
+        "lineHeightRatio": 0.85,
+        "lineHeightPx": 81.6,
+        "letterSpacingEm": -0.02,
+        "widthPx": 452,
+        "sourceFontFamily": "Gooper Condensed",
+        "sourceTag": "h2"
+      },
+      "h2": {
+        "fontSize": 96,
+        "weight": "500",
+        "lineHeightRatio": 0.85,
+        "lineHeightPx": 81.6,
+        "letterSpacingEm": -0.02,
+        "widthPx": 452,
+        "sourceFontFamily": "Gooper Condensed",
+        "sourceTag": "h2"
+      },
+      "body": {
+        "fontSize": 22,
+        "weight": "400",
+        "lineHeightRatio": 1.2,
+        "lineHeightPx": 26.4,
+        "letterSpacingEm": -0.04,
+        "widthPx": 452,
+        "sourceFontFamily": "STIXTwoText",
+        "sourceTag": "p"
+      }
+    },
+    "tests": {
+      "display": {
+        "applied": {
+          "family": "Kanit",
+          "weight": 700,
+          "fontSizePx": 96,
+          "lineHeightRatio": 0.85,
+          "declaredNormal": false,
+          "lineHeightPx": 81.6,
+          "letterSpacingPx": -1.92,
+          "widthPx": 452
+        },
+        "sourceSystem": {
+          "fontFamily": "Gooper Condensed",
+          "tag": "h2",
+          "weight": "500"
+        },
+        "asIs": {
+          "collides": true,
+          "minGapPx": -39.65,
+          "perString": [
+            {
+              "id": "h-1",
+              "lines": 4,
+              "minGap": -18.41,
+              "collides": true,
+              "requiredLineHeightPx": 100
+            },
+            {
+              "id": "h-2",
+              "lines": 3,
+              "minGap": -2.41,
+              "collides": true,
+              "requiredLineHeightPx": 84
+            },
+            {
+              "id": "h-3",
+              "lines": 4,
+              "minGap": -38.41,
+              "collides": true,
+              "requiredLineHeightPx": 120
+            },
+            {
+              "id": "stress",
+              "lines": 5,
+              "minGap": -39.65,
+              "collides": true,
+              "requiredLineHeightPx": 121.24
+            }
+          ]
+        },
+        "minThaiSafeRatio": 1.263,
+        "notViable": false,
+        "leadingCorrection": 0.413
+      },
+      "h2": {
+        "applied": {
+          "family": "Kanit",
+          "weight": 700,
+          "fontSizePx": 96,
+          "lineHeightRatio": 0.85,
+          "declaredNormal": false,
+          "lineHeightPx": 81.6,
+          "letterSpacingPx": -1.92,
+          "widthPx": 452
+        },
+        "sourceSystem": {
+          "fontFamily": "Gooper Condensed",
+          "tag": "h2",
+          "weight": "500"
+        },
+        "asIs": {
+          "collides": true,
+          "minGapPx": -39.65,
+          "perString": [
+            {
+              "id": "h-1",
+              "lines": 4,
+              "minGap": -18.41,
+              "collides": true,
+              "requiredLineHeightPx": 100
+            },
+            {
+              "id": "h-2",
+              "lines": 3,
+              "minGap": -2.41,
+              "collides": true,
+              "requiredLineHeightPx": 84
+            },
+            {
+              "id": "h-3",
+              "lines": 4,
+              "minGap": -38.41,
+              "collides": true,
+              "requiredLineHeightPx": 120
+            },
+            {
+              "id": "stress",
+              "lines": 5,
+              "minGap": -39.65,
+              "collides": true,
+              "requiredLineHeightPx": 121.24
+            }
+          ]
+        },
+        "minThaiSafeRatio": 1.263,
+        "notViable": false,
+        "leadingCorrection": 0.413
+      },
+      "body": {
+        "applied": {
+          "family": "Anuphan",
+          "weight": 400,
+          "fontSizePx": 22,
+          "lineHeightRatio": 1.2,
+          "declaredNormal": false,
+          "lineHeightPx": 26.4,
+          "letterSpacingPx": -0.88,
+          "widthPx": 452
+        },
+        "sourceSystem": {
+          "fontFamily": "STIXTwoText",
+          "tag": "p",
+          "weight": "400"
+        },
+        "asIs": {
+          "collides": true,
+          "minGapPx": -2.59,
+          "perString": [
+            {
+              "id": "h-1",
+              "lines": 2,
+              "minGap": 4.41,
+              "collides": false,
+              "requiredLineHeightPx": 22
+            },
+            {
+              "id": "h-2",
+              "lines": 2,
+              "minGap": 7.41,
+              "collides": false,
+              "requiredLineHeightPx": 19
+            },
+            {
+              "id": "h-3",
+              "lines": 2,
+              "minGap": -0.59,
+              "collides": true,
+              "requiredLineHeightPx": 27
+            },
+            {
+              "id": "stress",
+              "lines": 2,
+              "minGap": -2.59,
+              "collides": true,
+              "requiredLineHeightPx": 29
+            }
+          ]
+        },
+        "minThaiSafeRatio": 1.318,
+        "notViable": false,
+        "leadingCorrection": 0.118
+      }
+    }
+  },
+  {
+    "slug": "synthetictheatre",
+    "name": "Synthetic Theatre",
+    "url": "https://synthetictheatre.com",
+    "systems": {
+      "display": {
+        "fontSize": 144,
+        "weight": "400",
+        "lineHeightRatio": 0.6,
+        "lineHeightPx": 86.4,
+        "letterSpacingEm": 0,
+        "widthPx": 62,
+        "sourceFontFamily": "__PPNeueBit_58ac9d",
+        "sourceTag": "div"
+      },
+      "h2": null,
+      "body": null
+    },
+    "tests": {
+      "display": {
+        "applied": {
+          "family": "Kanit",
+          "weight": 700,
+          "fontSizePx": 144,
+          "lineHeightRatio": 0.6,
+          "declaredNormal": false,
+          "lineHeightPx": 86.4,
+          "letterSpacingPx": 0,
+          "widthPx": 240
+        },
+        "sourceSystem": {
+          "fontFamily": "__PPNeueBit_58ac9d",
+          "tag": "div",
+          "weight": "400"
+        },
+        "asIs": {
+          "collides": true,
+          "minGapPx": -92.59,
+          "perString": [
+            {
+              "id": "h-1",
+              "lines": 15,
+              "minGap": -54.59,
+              "collides": true,
+              "requiredLineHeightPx": 141
+            },
+            {
+              "id": "h-2",
+              "lines": 11,
+              "minGap": -62.59,
+              "collides": true,
+              "requiredLineHeightPx": 149
+            },
+            {
+              "id": "h-3",
+              "lines": 11,
+              "minGap": -65.59,
+              "collides": true,
+              "requiredLineHeightPx": 152
+            },
+            {
+              "id": "stress",
+              "lines": 14,
+              "minGap": -92.59,
+              "collides": true,
+              "requiredLineHeightPx": 179
+            }
+          ]
+        },
+        "minThaiSafeRatio": 1.243,
+        "notViable": false,
+        "leadingCorrection": 0.643
+      },
+      "h2": {
+        "skipped": "no measurable type role"
+      },
+      "body": {
+        "skipped": "no measurable type role"
+      }
+    }
+  },
+  {
+    "slug": "tamakiyoshida",
+    "name": "Tamaki Yoshida",
+    "url": "https://www.tamakiyoshida.com",
+    "systems": {
+      "display": {
+        "fontSize": 15,
+        "weight": "500",
+        "lineHeightRatio": 1.45,
+        "lineHeightPx": 21.75,
+        "letterSpacingEm": -0.005,
+        "widthPx": 314,
+        "sourceFontFamily": "YakuHanMPs",
+        "sourceTag": "h2"
+      },
+      "h2": {
+        "fontSize": 15,
+        "weight": "500",
+        "lineHeightRatio": 1.45,
+        "lineHeightPx": 21.75,
+        "letterSpacingEm": -0.005,
+        "widthPx": 314,
+        "sourceFontFamily": "YakuHanMPs",
+        "sourceTag": "h2"
+      },
+      "body": null
+    },
+    "tests": {
+      "display": {
+        "applied": {
+          "family": "Kanit",
+          "weight": 700,
+          "fontSizePx": 15,
+          "lineHeightRatio": 1.45,
+          "declaredNormal": false,
+          "lineHeightPx": 21.75,
+          "letterSpacingPx": -0.07,
+          "widthPx": 314
+        },
+        "sourceSystem": {
+          "fontFamily": "YakuHanMPs",
+          "tag": "h2",
+          "weight": "500"
+        },
+        "asIs": {
+          "collides": false,
+          "minGapPx": 2.75,
+          "perString": [
+            {
+              "id": "h-1",
+              "lines": 2,
+              "minGap": 9.75,
+              "collides": false,
+              "requiredLineHeightPx": 12
+            },
+            {
+              "id": "h-2",
+              "lines": 2,
+              "minGap": 9.75,
+              "collides": false,
+              "requiredLineHeightPx": 12
+            },
+            {
+              "id": "h-3",
+              "lines": 2,
+              "minGap": 5.75,
+              "collides": false,
+              "requiredLineHeightPx": 16
+            },
+            {
+              "id": "stress",
+              "lines": 2,
+              "minGap": 2.75,
+              "collides": false,
+              "requiredLineHeightPx": 19
+            }
+          ]
+        },
+        "minThaiSafeRatio": 1.266,
+        "notViable": false,
+        "leadingCorrection": -0.184
+      },
+      "h2": {
+        "applied": {
+          "family": "Kanit",
+          "weight": 700,
+          "fontSizePx": 15,
+          "lineHeightRatio": 1.45,
+          "declaredNormal": false,
+          "lineHeightPx": 21.75,
+          "letterSpacingPx": -0.07,
+          "widthPx": 314
+        },
+        "sourceSystem": {
+          "fontFamily": "YakuHanMPs",
+          "tag": "h2",
+          "weight": "500"
+        },
+        "asIs": {
+          "collides": false,
+          "minGapPx": 2.75,
+          "perString": [
+            {
+              "id": "h-1",
+              "lines": 2,
+              "minGap": 9.75,
+              "collides": false,
+              "requiredLineHeightPx": 12
+            },
+            {
+              "id": "h-2",
+              "lines": 2,
+              "minGap": 9.75,
+              "collides": false,
+              "requiredLineHeightPx": 12
+            },
+            {
+              "id": "h-3",
+              "lines": 2,
+              "minGap": 5.75,
+              "collides": false,
+              "requiredLineHeightPx": 16
+            },
+            {
+              "id": "stress",
+              "lines": 2,
+              "minGap": 2.75,
+              "collides": false,
+              "requiredLineHeightPx": 19
+            }
+          ]
+        },
+        "minThaiSafeRatio": 1.266,
+        "notViable": false,
+        "leadingCorrection": -0.184
+      },
+      "body": {
+        "skipped": "no measurable type role"
+      }
+    }
+  },
+  {
+    "slug": "taper",
+    "name": "Taper",
+    "url": "https://taper.design",
+    "systems": {
+      "display": {
+        "fontSize": 51.1,
+        "weight": "700",
+        "lineHeightRatio": 1.11,
+        "lineHeightPx": 56.91,
+        "letterSpacingEm": -0.02,
+        "widthPx": 351,
+        "sourceFontFamily": "Manrope",
+        "sourceTag": "strong"
+      },
+      "h2": null,
+      "body": null
+    },
+    "tests": {
+      "display": {
+        "applied": {
+          "family": "Kanit",
+          "weight": 700,
+          "fontSizePx": 51.1,
+          "lineHeightRatio": 1.11,
+          "declaredNormal": false,
+          "lineHeightPx": 56.72,
+          "letterSpacingPx": -1.02,
+          "widthPx": 351
+        },
+        "sourceSystem": {
+          "fontFamily": "Manrope",
+          "tag": "strong",
+          "weight": "700"
+        },
+        "asIs": {
+          "collides": true,
+          "minGapPx": -9.28,
+          "perString": [
+            {
+              "id": "h-1",
+              "lines": 3,
+              "minGap": 4.72,
+              "collides": false,
+              "requiredLineHeightPx": 52
+            },
+            {
+              "id": "h-2",
+              "lines": 2,
+              "minGap": 15.72,
+              "collides": false,
+              "requiredLineHeightPx": 41
+            },
+            {
+              "id": "h-3",
+              "lines": 3,
+              "minGap": -6.28,
+              "collides": true,
+              "requiredLineHeightPx": 63
+            },
+            {
+              "id": "stress",
+              "lines": 3,
+              "minGap": -9.28,
+              "collides": true,
+              "requiredLineHeightPx": 66
+            }
+          ]
+        },
+        "minThaiSafeRatio": 1.291,
+        "notViable": false,
+        "leadingCorrection": 0.181
+      },
+      "h2": {
+        "skipped": "no measurable type role"
+      },
+      "body": {
+        "skipped": "no measurable type role"
+      }
+    }
+  },
+  {
+    "slug": "taper-philosophy",
+    "name": "Taper — Design Philosophy",
+    "url": "https://taper.design/design-philosophy",
+    "systems": {
+      "display": {
+        "fontSize": 51.1,
+        "weight": "700",
+        "lineHeightRatio": 1.11,
+        "lineHeightPx": 56.91,
+        "letterSpacingEm": -0.02,
+        "widthPx": 1040,
+        "sourceFontFamily": "Manrope",
+        "sourceTag": "strong"
+      },
+      "h2": null,
+      "body": null
+    },
+    "tests": {
+      "display": {
+        "applied": {
+          "family": "Kanit",
+          "weight": 700,
+          "fontSizePx": 51.1,
+          "lineHeightRatio": 1.11,
+          "declaredNormal": false,
+          "lineHeightPx": 56.72,
+          "letterSpacingPx": -1.02,
+          "widthPx": 1040
+        },
+        "sourceSystem": {
+          "fontFamily": "Manrope",
+          "tag": "strong",
+          "weight": "700"
+        },
+        "asIs": {
+          "collides": true,
+          "minGapPx": -9.28,
+          "perString": [
+            {
+              "id": "h-1",
+              "lines": 2,
+              "minGap": 15.72,
+              "collides": false,
+              "requiredLineHeightPx": 41
+            },
+            {
+              "id": "h-2",
+              "lines": 2,
+              "minGap": 15.72,
+              "collides": false,
+              "requiredLineHeightPx": 41
+            },
+            {
+              "id": "h-3",
+              "lines": 2,
+              "minGap": 2.72,
+              "collides": false,
+              "requiredLineHeightPx": 54
+            },
+            {
+              "id": "stress",
+              "lines": 2,
+              "minGap": -9.28,
+              "collides": true,
+              "requiredLineHeightPx": 66
+            }
+          ]
+        },
+        "minThaiSafeRatio": 1.291,
+        "notViable": false,
+        "leadingCorrection": 0.181
+      },
+      "h2": {
+        "skipped": "no measurable type role"
+      },
+      "body": {
+        "skipped": "no measurable type role"
+      }
+    }
+  },
+  {
+    "slug": "tiktoksans",
+    "name": "TikTok Sans specimen",
+    "url": "https://www.tiktok.com/font",
+    "systems": {
+      "display": {
+        "fontSize": 475.2,
+        "weight": "100",
+        "lineHeightRatio": 1.3,
+        "lineHeightPx": 617.76,
+        "letterSpacingEm": 0,
+        "widthPx": 1079,
+        "sourceFontFamily": "TikTokSans",
+        "sourceTag": "span"
+      },
+      "h2": {
+        "fontSize": 79.2,
+        "weight": "100",
+        "lineHeightRatio": 1.09,
+        "lineHeightPx": 86.4,
+        "letterSpacingEm": 0,
+        "widthPx": 778,
+        "sourceFontFamily": "TikTokSans",
+        "sourceTag": "h2"
+      },
+      "body": {
+        "fontSize": 14,
+        "weight": "100",
+        "lineHeightRatio": 1.3,
+        "lineHeightPx": 18.2,
+        "letterSpacingEm": 0,
+        "widthPx": 443,
+        "sourceFontFamily": "TikTokSans",
+        "sourceTag": "span"
+      }
+    },
+    "tests": {
+      "display": {
+        "applied": {
+          "family": "Kanit",
+          "weight": 700,
+          "fontSizePx": 475.2,
+          "lineHeightRatio": 1.3,
+          "declaredNormal": false,
+          "lineHeightPx": 617.76,
+          "letterSpacingPx": 0,
+          "widthPx": 1079
+        },
+        "sourceSystem": {
+          "fontFamily": "TikTokSans",
+          "tag": "span",
+          "weight": "100"
+        },
+        "asIs": {
+          "collides": false,
+          "minGapPx": 16.34,
+          "perString": [
+            {
+              "id": "h-1",
+              "lines": 10,
+              "minGap": 112.86,
+              "collides": false,
+              "requiredLineHeightPx": 504.91
+            },
+            {
+              "id": "h-2",
+              "lines": 9,
+              "minGap": 120.29,
+              "collides": false,
+              "requiredLineHeightPx": 497.48
+            },
+            {
+              "id": "h-3",
+              "lines": 9,
+              "minGap": 112.86,
+              "collides": false,
+              "requiredLineHeightPx": 504.91
+            },
+            {
+              "id": "stress",
+              "lines": 11,
+              "minGap": 16.34,
+              "collides": false,
+              "requiredLineHeightPx": 601.43
+            }
+          ]
+        },
+        "minThaiSafeRatio": 1.266,
+        "notViable": false,
+        "leadingCorrection": -0.034
+      },
+      "h2": {
+        "applied": {
+          "family": "Kanit",
+          "weight": 700,
+          "fontSizePx": 79.2,
+          "lineHeightRatio": 1.09,
+          "declaredNormal": false,
+          "lineHeightPx": 86.33,
+          "letterSpacingPx": 0,
+          "widthPx": 778
+        },
+        "sourceSystem": {
+          "fontFamily": "TikTokSans",
+          "tag": "h2",
+          "weight": "100"
+        },
+        "asIs": {
+          "collides": true,
+          "minGapPx": -15.67,
+          "perString": [
+            {
+              "id": "h-1",
+              "lines": 2,
+              "minGap": 21.33,
+              "collides": false,
+              "requiredLineHeightPx": 65
+            },
+            {
+              "id": "h-2",
+              "lines": 2,
+              "minGap": 23.33,
+              "collides": false,
+              "requiredLineHeightPx": 63
+            },
+            {
+              "id": "h-3",
+              "lines": 2,
+              "minGap": 0.33,
+              "collides": false,
+              "requiredLineHeightPx": 86
+            },
+            {
+              "id": "stress",
+              "lines": 3,
+              "minGap": -15.67,
+              "collides": true,
+              "requiredLineHeightPx": 102
+            }
+          ]
+        },
+        "minThaiSafeRatio": 1.288,
+        "notViable": false,
+        "leadingCorrection": 0.198
+      },
+      "body": {
+        "applied": {
+          "family": "Anuphan",
+          "weight": 400,
+          "fontSizePx": 14,
+          "lineHeightRatio": 1.3,
+          "declaredNormal": false,
+          "lineHeightPx": 18.2,
+          "letterSpacingPx": 0,
+          "widthPx": 443
+        },
+        "sourceSystem": {
+          "fontFamily": "TikTokSans",
+          "tag": "span",
+          "weight": "100"
+        },
+        "asIs": {
+          "collides": true,
+          "minGapPx": -0.8,
+          "perString": [
+            {
+              "id": "h-1",
+              "lines": 2,
+              "minGap": 4.2,
+              "collides": false,
+              "requiredLineHeightPx": 14
+            },
+            {
+              "id": "h-2",
+              "lines": 2,
+              "minGap": 5.2,
+              "collides": false,
+              "requiredLineHeightPx": 13
+            },
+            {
+              "id": "h-3",
+              "lines": 2,
+              "minGap": 1.2,
+              "collides": false,
+              "requiredLineHeightPx": 17
+            },
+            {
+              "id": "stress",
+              "lines": 2,
+              "minGap": -0.8,
+              "collides": true,
+              "requiredLineHeightPx": 19
+            }
+          ]
+        },
+        "minThaiSafeRatio": 1.357,
+        "notViable": false,
+        "leadingCorrection": 0.057
+      }
+    }
+  },
+  {
+    "slug": "tomoyaokada",
+    "name": "Tomoya Okada",
+    "url": "https://tomoyaokada.com",
+    "systems": {
+      "display": {
+        "fontSize": 120,
+        "weight": "400",
+        "lineHeightRatio": 1,
+        "lineHeightPx": 120,
+        "letterSpacingEm": -0.02,
+        "widthPx": 343,
+        "sourceFontFamily": "PP Neue Montreal Medium",
+        "sourceTag": "span"
+      },
+      "h2": null,
+      "body": {
+        "fontSize": 12,
+        "weight": "400",
+        "lineHeightRatio": 0.9,
+        "lineHeightPx": 10.8,
+        "letterSpacingEm": 0,
+        "widthPx": 343,
+        "sourceFontFamily": "PP Neue Montreal Medium",
+        "sourceTag": "p"
+      }
+    },
+    "tests": {
+      "display": {
+        "applied": {
+          "family": "Kanit",
+          "weight": 700,
+          "fontSizePx": 120,
+          "lineHeightRatio": 1,
+          "declaredNormal": false,
+          "lineHeightPx": 120,
+          "letterSpacingPx": -2.4,
+          "widthPx": 343
+        },
+        "sourceSystem": {
+          "fontFamily": "PP Neue Montreal Medium",
+          "tag": "span",
+          "weight": "400"
+        },
+        "asIs": {
+          "collides": true,
+          "minGapPx": -29,
+          "perString": [
+            {
+              "id": "h-1",
+              "lines": 8,
+              "minGap": -6,
+              "collides": true,
+              "requiredLineHeightPx": 126
+            },
+            {
+              "id": "h-2",
+              "lines": 5,
+              "minGap": 16,
+              "collides": false,
+              "requiredLineHeightPx": 104
+            },
+            {
+              "id": "h-3",
+              "lines": 6,
+              "minGap": -8,
+              "collides": true,
+              "requiredLineHeightPx": 128
+            },
+            {
+              "id": "stress",
+              "lines": 8,
+              "minGap": -29,
+              "collides": true,
+              "requiredLineHeightPx": 149
+            }
+          ]
+        },
+        "minThaiSafeRatio": 1.242,
+        "notViable": false,
+        "leadingCorrection": 0.242
+      },
+      "h2": {
+        "skipped": "no measurable type role"
+      },
+      "body": {
+        "applied": {
+          "family": "Anuphan",
+          "weight": 400,
+          "fontSizePx": 12,
+          "lineHeightRatio": 0.9,
+          "declaredNormal": false,
+          "lineHeightPx": 10.8,
+          "letterSpacingPx": 0,
+          "widthPx": 343
+        },
+        "sourceSystem": {
+          "fontFamily": "PP Neue Montreal Medium",
+          "tag": "p",
+          "weight": "400"
+        },
+        "asIs": {
+          "collides": true,
+          "minGapPx": -6.2,
+          "perString": [
+            {
+              "id": "h-1",
+              "lines": 2,
+              "minGap": -4.2,
+              "collides": true,
+              "requiredLineHeightPx": 15
+            },
+            {
+              "id": "h-2",
+              "lines": 2,
+              "minGap": -0.2,
+              "collides": true,
+              "requiredLineHeightPx": 11
+            },
+            {
+              "id": "h-3",
+              "lines": 2,
+              "minGap": -4.2,
+              "collides": true,
+              "requiredLineHeightPx": 15
+            },
+            {
+              "id": "stress",
+              "lines": 2,
+              "minGap": -6.2,
+              "collides": true,
+              "requiredLineHeightPx": 17
+            }
+          ]
+        },
+        "minThaiSafeRatio": 1.416,
+        "notViable": false,
+        "leadingCorrection": 0.516
+      }
+    }
+  },
+  {
+    "slug": "tr-advanced",
+    "name": "Tokai Rika Advanced Recruit",
+    "url": "https://tr-advanced.co.jp/regular/",
+    "systems": {
+      "display": {
+        "fontSize": 104,
+        "weight": "400",
+        "lineHeightRatio": 1.15,
+        "lineHeightPx": 120,
+        "letterSpacingEm": 0.1,
+        "widthPx": 74,
+        "sourceFontFamily": "Aoboshi One",
+        "sourceTag": "span"
+      },
+      "h2": null,
+      "body": null
+    },
+    "tests": {
+      "display": {
+        "applied": {
+          "family": "Kanit",
+          "weight": 700,
+          "fontSizePx": 104,
+          "lineHeightRatio": 1.15,
+          "declaredNormal": false,
+          "lineHeightPx": 119.6,
+          "letterSpacingPx": 10.4,
+          "widthPx": 240
+        },
+        "sourceSystem": {
+          "fontFamily": "Aoboshi One",
+          "tag": "span",
+          "weight": "400"
+        },
+        "asIs": {
+          "collides": true,
+          "minGapPx": -10.41,
+          "perString": [
+            {
+              "id": "h-1",
+              "lines": 10,
+              "minGap": 10.59,
+              "collides": false,
+              "requiredLineHeightPx": 109
+            },
+            {
+              "id": "h-2",
+              "lines": 9,
+              "minGap": 11.59,
+              "collides": false,
+              "requiredLineHeightPx": 108
+            },
+            {
+              "id": "h-3",
+              "lines": 10,
+              "minGap": 9.59,
+              "collides": false,
+              "requiredLineHeightPx": 110
+            },
+            {
+              "id": "stress",
+              "lines": 14,
+              "minGap": -10.41,
+              "collides": true,
+              "requiredLineHeightPx": 130
+            }
+          ]
+        },
+        "minThaiSafeRatio": 1.25,
+        "notViable": false,
+        "leadingCorrection": 0.1
+      },
+      "h2": {
+        "skipped": "no measurable type role"
+      },
+      "body": {
+        "skipped": "no measurable type role"
+      }
+    }
+  },
+  {
+    "slug": "tyo-recruit",
+    "name": "TYO Recruit",
+    "url": "https://tyo.co.jp/recruit/",
+    "systems": {
+      "display": {
+        "fontSize": 120.01,
+        "weight": "400",
+        "lineHeightRatio": 1,
+        "lineHeightPx": 120.01,
+        "letterSpacingEm": 0,
+        "widthPx": 267,
+        "sourceFontFamily": "Bricolage Grotesque",
+        "sourceTag": "p"
+      },
+      "h2": {
+        "fontSize": 100.01,
+        "weight": "400",
+        "lineHeightRatio": 1,
+        "lineHeightPx": 100.01,
+        "letterSpacingEm": 0.02,
+        "widthPx": 540,
+        "sourceFontFamily": "Bricolage Grotesque",
+        "sourceTag": "h2"
+      },
+      "body": {
+        "fontSize": 17,
+        "weight": "500",
+        "lineHeightRatio": 1.6,
+        "lineHeightPx": 27.2,
+        "letterSpacingEm": 0,
+        "widthPx": 377,
+        "sourceFontFamily": "YakuHanJP",
+        "sourceTag": "p"
+      }
+    },
+    "tests": {
+      "display": {
+        "applied": {
+          "family": "Kanit",
+          "weight": 700,
+          "fontSizePx": 120.01,
+          "lineHeightRatio": 1,
+          "declaredNormal": false,
+          "lineHeightPx": 120.01,
+          "letterSpacingPx": 0,
+          "widthPx": 267
+        },
+        "sourceSystem": {
+          "fontFamily": "Bricolage Grotesque",
+          "tag": "p",
+          "weight": "400"
+        },
+        "asIs": {
+          "collides": true,
+          "minGapPx": -28.98,
+          "perString": [
+            {
+              "id": "h-1",
+              "lines": 10,
+              "minGap": -5.98,
+              "collides": true,
+              "requiredLineHeightPx": 126
+            },
+            {
+              "id": "h-2",
+              "lines": 9,
+              "minGap": -3.98,
+              "collides": true,
+              "requiredLineHeightPx": 124
+            },
+            {
+              "id": "h-3",
+              "lines": 9,
+              "minGap": -6.98,
+              "collides": true,
+              "requiredLineHeightPx": 127
+            },
+            {
+              "id": "stress",
+              "lines": 11,
+              "minGap": -28.98,
+              "collides": true,
+              "requiredLineHeightPx": 149
+            }
+          ]
+        },
+        "minThaiSafeRatio": 1.242,
+        "notViable": false,
+        "leadingCorrection": 0.242
+      },
+      "h2": {
+        "applied": {
+          "family": "Kanit",
+          "weight": 700,
+          "fontSizePx": 100.01,
+          "lineHeightRatio": 1,
+          "declaredNormal": false,
+          "lineHeightPx": 100.01,
+          "letterSpacingPx": 2,
+          "widthPx": 540
+        },
+        "sourceSystem": {
+          "fontFamily": "Bricolage Grotesque",
+          "tag": "h2",
+          "weight": "400"
+        },
+        "asIs": {
+          "collides": true,
+          "minGapPx": -25.98,
+          "perString": [
+            {
+              "id": "h-1",
+              "lines": 4,
+              "minGap": -1.98,
+              "collides": true,
+              "requiredLineHeightPx": 102
+            },
+            {
+              "id": "h-2",
+              "lines": 3,
+              "minGap": 13.02,
+              "collides": false,
+              "requiredLineHeightPx": 87
+            },
+            {
+              "id": "h-3",
+              "lines": 4,
+              "minGap": -22.98,
+              "collides": true,
+              "requiredLineHeightPx": 123
+            },
+            {
+              "id": "stress",
+              "lines": 5,
+              "minGap": -25.98,
+              "collides": true,
+              "requiredLineHeightPx": 126
+            }
+          ]
+        },
+        "minThaiSafeRatio": 1.26,
+        "notViable": false,
+        "leadingCorrection": 0.26
+      },
+      "body": {
+        "applied": {
+          "family": "Anuphan",
+          "weight": 400,
+          "fontSizePx": 17,
+          "lineHeightRatio": 1.6,
+          "declaredNormal": false,
+          "lineHeightPx": 27.2,
+          "letterSpacingPx": 0,
+          "widthPx": 377
+        },
+        "sourceSystem": {
+          "fontFamily": "YakuHanJP",
+          "tag": "p",
+          "weight": "500"
+        },
+        "asIs": {
+          "collides": false,
+          "minGapPx": 4.2,
+          "perString": [
+            {
+              "id": "h-1",
+              "lines": 2,
+              "minGap": 10.2,
+              "collides": false,
+              "requiredLineHeightPx": 17
+            },
+            {
+              "id": "h-2",
+              "lines": 2,
+              "minGap": 12.2,
+              "collides": false,
+              "requiredLineHeightPx": 15
+            },
+            {
+              "id": "h-3",
+              "lines": 2,
+              "minGap": 6.2,
+              "collides": false,
+              "requiredLineHeightPx": 21
+            },
+            {
+              "id": "stress",
+              "lines": 2,
+              "minGap": 4.2,
+              "collides": false,
+              "requiredLineHeightPx": 23
+            }
+          ]
+        },
+        "minThaiSafeRatio": 1.353,
+        "notViable": false,
+        "leadingCorrection": -0.247
+      }
+    }
+  }
+]

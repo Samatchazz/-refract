@@ -1,0 +1,133 @@
+{
+  "vault_tag": "creator-attrition-income-data-079588",
+  "independence_method": "`hyperresearch sources independence` scored 146 sources and returned ZERO syndication clusters — it detects near-duplicate bodies and shared canonical URLs, which this corpus does not contain (the derivative sources here paraphrase rather than republish). Independence was therefore computed from the step 2.6 redundancy audit, which traced each figure to its INSTRUMENT (fielding organisation, sample size, fielding date). A claim counts as consensus only when three or more distinct instruments agree — outlets recirculating one survey count as one voice.",
+  "consensus_claims": [
+    {
+      "claim": "Creator income distributions are extreme right-skewed power laws in which the mean is several times the median, on every platform where both statistics have been measured.",
+      "independent_instruments": 6,
+      "supporting_evidence": [
+        "Strauss, Yang & Mazzucato 2026, official Patreon data, n=104,719 sampled Mar 2018/2021/2024: mean is 4-6x median on every platform examined",
+        "Zhao et al. 2025, n=1,923 VTubers, YouTube, 2017-2023: mean $2,667/month against median $127/month, a ratio of 21",
+        "Rieder et al. 2023, 36,336,861 YouTube channels against Google's disclosed $8.25bn 2019 payout: per-channel averages span $1,707,446/year (10M+ subscribers) down to $295 (1k-10k) and $0 (sub-1k)",
+        "Houssard et al. 2023, Scientific Reports, Twitch: Gini 0.57 across the top 10,000, extrapolating to approximately 0.93 across all 9.2 million streamers",
+        "Twitch October 2021 payout leak: 81 accounts cleared $1M while rank 8,000 cumulated $29,396 over the whole window",
+        "UK Intellectual Property Office 2021, n=708 UK music creators: 37% earned £5,000 or less and 62% £20,000 or less in 2019, against a small tail above £50,000"
+      ],
+      "confidence": "high",
+      "usable_without_hedging": true
+    },
+    {
+      "claim": "A majority of people who attempt content creation earn zero or near-zero from it.",
+      "independent_instruments": 5,
+      "supporting_evidence": [
+        "Regner 2021, complete Patreon transaction record 2013-2015, n=139,366 campaigns: 115,183 (82.6%) never received a single pledge",
+        "Rieder et al. 2023: 31,727,531 YouTube channels under 1,000 subscribers receive 0% of channel revenue",
+        "Zhao et al. 2025: 25% of sampled VTubers received zero Superchats",
+        "Törhönen et al. 2019, n=377 and n=382 independently: only 45.8% and 46.1% respectively earn ANY income — and this is the optimistic figure, from a survey of active creators",
+        "Kässi, Lehdonvirta & Stephany 2021: of 163 million registered online-labour accounts, only 2.0% completed ten or more projects or earned $1,000 or more"
+      ],
+      "confidence": "high",
+      "usable_without_hedging": true
+    },
+    {
+      "claim": "Samples recruited from currently-active creators systematically overstate income and understate attrition. The direction and approximate scale of this bias are well evidenced; its exact magnitude for income specifically has never been measured.",
+      "independent_instruments": 5,
+      "supporting_evidence": [
+        "The sampling-frame mechanism is directly measured, though on a different quantity: Hua et al. 2022 report 36.7% affiliate-link prevalence in Howto & Style descriptions on a popularity-gated sample (YouNiverse, channels >=10,000 subscribers) against 3.49% from Mathur, Narayanan & Chetty 2018 on a random-prefix sample of ~500K videos — roughly tenfold, from sampling frame alone. This bounds the mechanism's plausible scale; it is NOT a coefficient for income and must not be applied to income figures as if it were",
+        "ILO states of its own platform-work instrument that 'there was no sampling base from which a random sample could be drawn'",
+        "World Bank found self-identified gig workers were the most likely to drop out mid-survey; a footnote reveals permanently-deactivated workers were only reachable because they had moved to another platform",
+        "Wollborn et al. 2023 concede a selection floor even in their Twitch telemetry panel (one hourly top-500 placement, approximately 21 concurrent viewers)",
+        "Every burnout instrument in the corpus (Censuswide/BDB n=1,000; Awin n>300; Vibely n=150; Creators 4 Mental Health n=542) recruited exclusively from active creators and therefore cannot observe anyone who already left"
+      ],
+      "confidence": "high",
+      "usable_without_hedging": true
+    },
+    {
+      "claim": "No major platform publishes a creator-level earnings distribution. Aggregate payout totals are disclosed without the denominator needed to convert them into per-creator figures.",
+      "independent_instruments": 4,
+      "supporting_evidence": [
+        "YouTube support and blog documentation discloses eligibility thresholds, payout mechanics and revenue splits, but no median payout, no earnings distribution, and no count of monetized channels",
+        "YouTube's 'over $100 billion 2022-2025' is stated for creators, artists and media companies combined, with no split and no headcount; its 2 million YPP figure (2021) was disclosed with no payout total",
+        "Twitch's creator-level distribution became public only through a data breach, not disclosure; the company declined to confirm the leaked tables",
+        "TikTok Indonesia declined to disclose its Indonesia revenue when directly asked at a DPR Komisi I hearing on 15 July 2025",
+        "KPMG's $210bn 2024 content-spend figure covers 12 US companies with no creator-count denominator anywhere"
+      ],
+      "confidence": "high",
+      "usable_without_hedging": true
+    },
+    {
+      "claim": "Widely-circulated creator-economy statistics frequently have no traceable methodology, and several trace to no original study at all.",
+      "independent_instruments": 4,
+      "supporting_evidence": [
+        "The Goldman Sachs creator-population figure traces backwards through Zippia (an SEO careers listicle) to SignalFire (a venture-capital blog, c. 2020); Goldman's own exhibit source line names Zippia",
+        "The '3% of channels take 90% of the wealth' statistic is a transformation error: Bärtl 2018 measured 85% of VIEWS going to 3% of channels",
+        "A 'Creator Economy Research Institute' is credited with a Q1 2026 study of 2,400 full-time creators and, separately, an audit of 14,200 TikTok creators across 11 countries. No such organisation is findable; its headline 62% exactly matches the real n=542 Creators 4 Mental Health study published three months earlier",
+        "The frequently-quoted Twitch percentile figures ($120, $28, 0.06%) could not be pinned to any citable source across an entire dedicated fetch batch",
+        "'73% of creators quit within their first year' is a corrupted restatement of an Awin burnout-frequency figure and measures nobody quitting"
+      ],
+      "confidence": "high",
+      "usable_without_hedging": true
+    },
+    {
+      "claim": "Living-wage thresholds used in Western creator research are roughly an order of magnitude above Southeast Asian equivalents, so 'share earning a living wage' is not a transferable quantity.",
+      "independent_instruments": 3,
+      "supporting_evidence": [
+        "ADBI: developing-Asia living wage of USD 254.28/month (absolute) and USD 414.88/month (moderate), family of four, 48-hour week",
+        "Western creator studies benchmark against the US federal monthly minimum wage of $1,160, a $15/hour equivalent, $50,000/year, $100,000/year, and the US median household income of $67,521",
+        "UK IPO benchmarks against the UK minimum wage of £8.21/hour",
+        "Indonesian provincial UMR levels sit far below all of the above, making a 63%-above-UMR figure non-comparable with any Western living-wage share"
+      ],
+      "confidence": "high",
+      "usable_without_hedging": true
+    },
+    {
+      "claim": "Income concentration among creators has increased measurably over the past decade, confirmed independently across three platforms and three research groups.",
+      "independent_instruments": 3,
+      "supporting_evidence": [
+        "Patreon within-topic Gini rose from 0.30 to 0.60 between 2015 and 2020 (El Sanyoura & Anderson, ICWSM)",
+        "VTuber between-creator Gini rose from 0.60 to 0.75 between 2018 and 2023 (Zhao et al.)",
+        "Pareto alpha fell across YouTube, Instagram, Facebook and Twitch between 2018 and 2024 (Strauss, Yang & Mazzucato, official Patreon data n=104,719)"
+      ],
+      "confidence": "high",
+      "usable_without_hedging": true,
+      "caveat": "Houssard et al. 2023 find the Twitch elite tier internally stable (weekly ranking dropout flux 0.2 for the top 100). This is compatible rather than contradictory: the top can be stable while the gap between top and bottom widens."
+    },
+    {
+      "claim": "Southeast Asian creator populations are effectively unmeasured. The region's institutional data covers platform gig work, which is a different population from content creation.",
+      "independent_instruments": 4,
+      "supporting_evidence": [
+        "ILO: of 133 countries responding to a review, only 40 have ever measured digital platform employment, mostly EU/EFTA, 17 of them within a single Eurostat pilot; no international statistical standard will exist before the 22nd ICLS in 2028",
+        "Indonesia's BPS publishes no content-creator count; its 'creative economy workforce' series (27.4 million in 2025) is a substantially broader category, and BPS states the 2026 Economic Census will be the first instrument to make content-creator business actors visible",
+        "Indonesian administrative measurement of adjacent categories is itself unstable: SAKERNAS 2019 counts 12.2 million online sellers while SUSENAS March 2019 counts 5.9 million — same country, same year, a factor of 2.07 apart",
+        "Indonesia's nationally-representative gig-work data (SAKERNAS 2019) describes a population that is 85% men, 87% urban and 69% in transportation — ride-hailing drivers, not creators",
+        "The impact.com/Cube Southeast Asia influencer report contains no creator income, attrition, survival or time-to-income data; its only quantified instrument is a demand-side consumer survey (n=2,400)"
+      ],
+      "confidence": "high",
+      "usable_without_hedging": true
+    },
+    {
+      "claim": "Reaching a platform's monetization eligibility threshold does not correspond to reaching meaningful income.",
+      "independent_instruments": 3,
+      "supporting_evidence": [
+        "vidIQ analysis of channels at 1,000-1,100 subscribers: 89% have under 5,000 monthly views, a volume at which ad revenue is negligible regardless of Partner Program status",
+        "Rieder et al. 2023: channels in the 1,000-10,000 subscriber band average $295/year",
+        "Twitch's Affiliate gate requires only 25 followers, 4 hours streamed, 4 distinct days and 3 average concurrent viewers within a 30-day window; Twitch's own disclosed aggregate implies approximately $143 per streamer per year",
+        "YouTube additionally requires a $100 balance before any payment is issued, so eligibility and payment are separated by a further threshold"
+      ],
+      "confidence": "high",
+      "usable_without_hedging": true
+    },
+    {
+      "claim": "Revenue per view varies by a factor of roughly five to six depending on audience geography, independently of creator skill or output.",
+      "independent_instruments": 2,
+      "supporting_evidence": [
+        "Peripheral Creator Cultures study (India n=45 creators, Ireland n=7, Turkey n=9, interviews 2017-2023): 1,000 views at 70% inventory fill yields INR 30 (under USD 1) from an Indian audience against USD 5 from a US audience",
+        "The same study documents a Turkish channel drawing 10% of its views but 30% of its income from Germany",
+        "Rieder et al. 2020: Indonesia and Brazil achieve far fewer views than their channel share predicts"
+      ],
+      "confidence": "medium",
+      "usable_without_hedging": false,
+      "note": "Two independent instruments rather than three, and the primary source is a qualitative interview study reporting a quantitative figure. Assert with attribution rather than as settled ground."
+    }
+  ]
+}

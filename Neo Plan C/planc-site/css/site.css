@@ -1,0 +1,320 @@
+/* ============================================================
+   planc* — scrollytelling site
+   B&W only. Two tokens: --ink / --paper. Dark level swaps them
+   via body.inverted, so every rule below must state BOTH sides.
+   ============================================================ */
+:root{
+  --ink:#111;
+  --paper:#fcfcfa;
+  --ground-h:22dvh;
+  --nav-h:56px;
+  --hud-h:38px;
+  --ease:cubic-bezier(.22,.61,.36,1);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:auto}
+body{
+  font-family:'Sarabun',system-ui,sans-serif;
+  background:var(--paper);color:var(--ink);
+  overscroll-behavior-y:none;
+  transition:background .6s ease,color .6s ease;
+}
+h1,h2,h3,.display,.brand,.logo,.cta,.flag,.block,.hud-world{font-family:'Prompt','Sarabun',sans-serif}
+img{display:block}
+
+/* ============ PRELOADER ============ */
+#preload{
+  position:fixed;inset:0;z-index:100;background:var(--paper);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1.1rem;
+  transition:opacity .5s ease,visibility .5s;
+}
+#preload.gone{opacity:0;visibility:hidden;pointer-events:none}
+.pl-mark{font-size:clamp(2.2rem,9vw,3.4rem);font-weight:800;letter-spacing:-.02em}
+.pl-mark span{display:inline-block;animation:spin 2.4s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.pl-bar{width:min(180px,44vw);height:3px;background:rgba(17,17,17,.14);overflow:hidden}
+.pl-bar i{display:block;height:100%;width:0;background:var(--ink);transition:width .3s var(--ease)}
+.pl-txt{font-size:.68rem;letter-spacing:.34em;opacity:.5}
+
+/* ============ TOP NAV ============ */
+#nav{
+  position:fixed;top:0;left:0;right:0;height:var(--nav-h);z-index:40;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 max(18px,4vw);mix-blend-mode:normal;
+  transition:transform .45s var(--ease);
+}
+#nav::after{
+  content:'';position:absolute;left:max(18px,4vw);right:max(18px,4vw);bottom:0;height:1px;
+  background:currentColor;opacity:.14;
+}
+body.nav-hidden #nav{transform:translateY(-100%)}
+.brand{
+  font-size:1.35rem;font-weight:800;letter-spacing:-.02em;
+  color:inherit;text-decoration:none;line-height:1;
+}
+.brand span{display:inline-block;transition:transform .5s var(--ease)}
+.brand:hover span{transform:rotate(90deg)}
+#menuBtn{
+  display:flex;align-items:center;gap:.6rem;background:none;border:0;color:inherit;
+  font-family:'Sarabun',sans-serif;font-size:.7rem;letter-spacing:.28em;cursor:pointer;padding:.4rem 0;
+}
+.mb-ico{display:block;width:22px}
+.mb-ico i{display:block;height:1.5px;background:currentColor;margin:4px 0;transition:transform .35s var(--ease)}
+body.menu-open .mb-ico i:first-child{transform:translateY(2.75px) rotate(45deg)}
+body.menu-open .mb-ico i:last-child{transform:translateY(-2.75px) rotate(-45deg)}
+
+/* ============ MENU OVERLAY ============ */
+#menu{
+  position:fixed;inset:0;z-index:38;background:var(--paper);
+  padding:calc(var(--nav-h) + 6dvh) max(18px,4vw) 4dvh;
+  display:flex;flex-direction:column;justify-content:space-between;
+  clip-path:inset(0 0 100% 0);transition:clip-path .6s var(--ease);
+}
+body.menu-open #menu{clip-path:inset(0 0 0 0)}
+#menuList{list-style:none;counter-reset:m}
+#menuList li{overflow:hidden;border-bottom:1px solid rgba(17,17,17,.12)}
+#menuList button{
+  display:flex;align-items:baseline;gap:1rem;width:100%;padding:.75rem 0;
+  background:none;border:0;color:inherit;cursor:pointer;text-align:left;
+  font-family:'Prompt','Sarabun',sans-serif;font-size:clamp(1.5rem,7vw,2.4rem);font-weight:800;
+  transform:translateY(105%);transition:transform .55s var(--ease),opacity .3s;
+}
+body.menu-open #menuList button{transform:translateY(0)}
+#menuList .num{font-family:'Sarabun',sans-serif;font-size:.7rem;font-weight:600;letter-spacing:.2em;opacity:.45}
+#menuList li.here button{opacity:.42}
+.menu-foot{display:flex;justify-content:space-between;font-size:.75rem;letter-spacing:.06em;opacity:.6;gap:1rem;flex-wrap:wrap}
+.menu-foot a{color:inherit}
+
+/* ============ STAGE + PARALLAX LAYERS ============ */
+#stage{position:fixed;inset:0;overflow:hidden;background:var(--paper);transition:background .6s ease}
+.layer{position:absolute;top:0;left:0;height:100%;will-change:transform}
+#lSky{z-index:1}
+#lMid{z-index:2}
+#lWorld{z-index:3}
+#lFore{z-index:6;pointer-events:none}
+#world{position:absolute;top:0;left:0;height:100%}
+
+.sky-grad{
+  position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(17,17,17,.055) 0%,rgba(17,17,17,0) 42%);
+}
+/* every tile is rooted on the GROUND LINE, not the viewport floor —
+   anchored to the floor they hid behind the 22dvh ground and never showed */
+.tile{position:absolute;bottom:var(--ground-h);left:0;width:100%;
+      background-repeat:repeat-x;background-position:left bottom}
+
+/* far hills — one 1200px tile, low contrast so it reads as distance */
+.hills{
+  height:30dvh;background-size:1200px 100%;opacity:.15;
+  background-image:url("data:image/svg+xml;utf8,\
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 300' preserveAspectRatio='none'>\
+<path d='M0 300 L0 190 Q90 120 180 178 Q260 228 330 168 Q420 92 520 172 Q600 236 690 176 Q780 116 880 186 Q960 242 1050 172 Q1130 112 1200 178 L1200 300 Z' fill='%23111'/>\
+</svg>");
+}
+/* mid city — taller contrast, still flat black */
+.city{
+  height:23dvh;background-size:900px 100%;opacity:.3;
+  background-image:url("data:image/svg+xml;utf8,\
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 900 260' preserveAspectRatio='none'>\
+<g fill='%23111'>\
+<rect x='0' y='150' width='90' height='110'/><rect x='100' y='96' width='64' height='164'/>\
+<rect x='176' y='170' width='110' height='90'/><rect x='298' y='60' width='52' height='200'/>\
+<rect x='362' y='134' width='86' height='126'/><rect x='460' y='182' width='120' height='78'/>\
+<rect x='592' y='104' width='70' height='156'/><rect x='674' y='158' width='58' height='102'/>\
+<rect x='744' y='78' width='46' height='182'/><rect x='802' y='166' width='98' height='94'/>\
+</g></svg>");
+}
+/* foreground grass — sits ON the ground line and passes in FRONT of the
+   cat's feet. Black on the black ground is invisible, so it has to grow
+   upward into the paper, not downward into the ground. */
+.grass{
+  height:4.2dvh;background-size:520px 100%;opacity:1;
+  background-image:url("data:image/svg+xml;utf8,\
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 520 90' preserveAspectRatio='none'>\
+<g fill='%23111'>\
+<path d='M8 90 Q10 40 18 8 Q24 44 30 90 Z'/><path d='M40 90 Q44 52 54 26 Q54 58 60 90 Z'/>\
+<path d='M96 90 Q98 34 108 4 Q112 46 118 90 Z'/><path d='M132 90 Q138 56 146 32 Q146 62 152 90 Z'/>\
+<path d='M206 90 Q208 42 218 12 Q222 50 228 90 Z'/><path d='M248 90 Q252 58 262 30 Q262 60 268 90 Z'/>\
+<path d='M318 90 Q320 36 330 6 Q334 48 340 90 Z'/><path d='M358 90 Q364 54 372 28 Q372 60 378 90 Z'/>\
+<path d='M436 90 Q438 44 448 14 Q452 50 458 90 Z'/><path d='M474 90 Q480 58 488 34 Q488 62 494 90 Z'/>\
+</g></svg>");
+}
+.clouds{position:absolute;top:0;left:0;height:100%;width:100%;pointer-events:none}
+.cloud{
+  position:absolute;display:block;opacity:.16;
+  background:var(--ink);border-radius:999px;
+  box-shadow:34px 6px 0 -4px var(--ink), -30px 8px 0 -6px var(--ink), 12px -10px 0 -8px var(--ink);
+  animation:drift linear infinite;
+  transition:background .6s ease,box-shadow .6s ease;
+}
+@keyframes drift{from{transform:translateX(0)}to{transform:translateX(-46vw)}}
+.c1{width:70px;height:22px;top:14dvh;left:14vw;animation-duration:62s}
+.c2{width:52px;height:17px;top:24dvh;left:58vw;animation-duration:88s;animation-delay:-20s}
+.c3{width:86px;height:26px;top:9dvh;left:104vw;animation-duration:74s;animation-delay:-40s}
+.c4{width:60px;height:19px;top:29dvh;left:158vw;animation-duration:96s;animation-delay:-10s}
+
+/* ============ GROUND ============ */
+.ground{position:absolute;bottom:0;height:var(--ground-h);background:var(--ink);transition:background .6s ease}
+.ground::before{ /* bright top edge — reads as a lit surface */
+  content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--paper);opacity:.85;
+}
+.ground::after{ /* brick texture, drawn not imaged */
+  content:'';position:absolute;top:3px;left:0;right:0;height:calc(100% - 3px);opacity:.16;
+  background-image:
+    repeating-linear-gradient(90deg,var(--paper) 0 1px,transparent 1px 44px),
+    repeating-linear-gradient(180deg,var(--paper) 0 1px,transparent 1px 22px);
+}
+
+/* ============ BEATS ============ */
+.beat{position:absolute;top:calc(var(--nav-h) + 5dvh);width:78vw;max-width:34rem;transition:color .6s ease}
+.beat .kicker{font-size:.72rem;letter-spacing:.34em;text-transform:uppercase;margin-bottom:.6rem;font-weight:600;opacity:.62}
+.beat h2{font-size:clamp(1.6rem,6.5vw,3.2rem);font-weight:800;line-height:1.15;letter-spacing:-.01em}
+.beat p{margin-top:.7rem;font-size:clamp(.95rem,3.6vw,1.15rem);line-height:1.65;max-width:30rem}
+#hero .logo{font-size:clamp(2.4rem,10vw,5rem);font-weight:800;letter-spacing:-.02em;line-height:1}
+#hero .logo span{display:inline-block}
+#hero .tag{margin-top:.5rem;font-size:clamp(1rem,4vw,1.3rem)}
+/* per-word entry — filled in by scene.js using Intl.Segmenter so Thai stays intact */
+.w{display:inline-block;transform:translateY(.42em);opacity:0;
+   transition:transform .55s var(--ease),opacity .45s ease}
+.beat.lit .w{transform:none;opacity:1}
+
+/* a chip, not bare text — the parallax city behind it made plain type unreadable */
+#hint{position:absolute;z-index:7;left:50%;bottom:calc(var(--ground-h) + 17dvh);transform:translateX(-50%);
+      padding:.6rem 1.1rem;background:var(--paper);box-shadow:0 0 0 1px rgba(17,17,17,.16);
+      font-size:.74rem;letter-spacing:.25em;text-align:center;line-height:1.9;white-space:nowrap;
+      animation:bob 1.4s ease-in-out infinite;transition:opacity .4s}
+#hint span{letter-spacing:.05em}
+@keyframes bob{50%{transform:translateX(-50%) translateY(8px)}}
+
+/* ============ PROPS ============ */
+.prop{position:absolute;transition:color .6s ease}
+.enemy{bottom:var(--ground-h);width:clamp(70px,13vw,100px)}
+.enemy .label{display:block;text-align:center;margin-bottom:.35rem;font-weight:600;font-size:.72rem;letter-spacing:.2em;transition:opacity .4s}
+.enemy svg{transform-origin:bottom center;transition:transform .45s cubic-bezier(.6,0,.8,.2)}
+.enemy .pupil{transition:transform .18s ease-out}
+.enemy:not(.squashed) svg{animation:patrol 1.6s ease-in-out infinite}
+@keyframes patrol{0%,100%{transform:translateX(-5px) scaleY(1)}50%{transform:translateX(5px) scaleY(.94)}}
+.squashed svg{transform:scaleY(.16)!important;animation:none}
+.squashed .label{text-decoration:line-through;opacity:.4}
+
+.block{bottom:calc(var(--ground-h) + 32dvh);width:clamp(58px,10vw,80px);aspect-ratio:1;
+       border:4px solid var(--ink);display:flex;align-items:center;justify-content:center;
+       font-weight:800;font-size:1.8rem;transition:border-color .6s ease,transform .3s ease}
+.block .star{position:absolute;left:50%;top:-.6rem;transform:translate(-50%,0) scale(0);font-size:2rem;line-height:1;
+             transition:transform .7s cubic-bezier(.2,1.6,.4,1)}
+.block.hit{transform:translateY(-14px)}
+.block.hit .star{transform:translate(-50%,-3.4rem) scale(1) rotate(180deg)}
+
+.flagpole{bottom:var(--ground-h);width:8px;height:31dvh;background:var(--ink);transition:background .6s ease}
+.flag{position:absolute;top:0;left:8px;padding:.5rem .9rem;background:var(--ink);color:var(--paper);
+      font-weight:800;letter-spacing:.05em;white-space:nowrap;transition:background .6s ease,color .6s ease}
+
+.cta{display:inline-block;margin-top:1.1rem;padding:.8rem 1.6rem;background:var(--ink);color:var(--paper);
+     text-decoration:none;font-weight:600;letter-spacing:.08em;transition:background .6s ease,color .6s ease,transform .3s var(--ease)}
+.cta:hover{transform:translateX(4px)}
+.cta.big{margin-top:1.6rem;padding:1rem 2rem;font-size:1.05rem}
+
+/* ============ CAT RIG ============
+   #catWrap : jump arc + step bob (translateY)
+   #catLean : body tilt (rotate)
+   #catSq   : squash/stretch + facing flip (scale)
+   Three nested nodes so the signals never fight over one matrix. */
+#catWrap{position:absolute;left:24vw;bottom:calc(var(--ground-h) - 6px);
+         width:clamp(104px,18vw,150px);z-index:5;will-change:transform}
+#catLean{transform-origin:50% 100%;will-change:transform}
+#catSq{transform-origin:50% 100%;will-change:transform}
+#catSq img{width:100%;transform:scaleX(-1)}   /* art faces left; the walk goes right */
+/* Dark level: do NOT invert the cat to white — the ground inverts to white too
+   and the cat's lower half would vanish into it. Keep it black, add a rim. */
+body.inverted #catSq img{
+  filter:drop-shadow(2px 0 0 var(--paper)) drop-shadow(-2px 0 0 var(--paper))
+         drop-shadow(0 2px 0 var(--paper)) drop-shadow(0 -2px 0 var(--paper));
+}
+#shadow{position:absolute;left:24vw;bottom:calc(var(--ground-h) - 10px);
+        width:clamp(104px,18vw,150px);height:16px;z-index:4;pointer-events:none}
+#shadow i{display:block;width:62%;height:100%;margin:0 auto;border-radius:50%;
+          background:var(--ink);opacity:.18;transform-origin:50% 50%;transition:background .6s ease}
+
+/* ============ MICRO LABELS ============ */
+.micro{position:absolute;z-index:7;font-size:.6rem;letter-spacing:.24em;line-height:1.7;opacity:.4;
+       pointer-events:none;transition:opacity .4s,color .6s ease}
+/* above the ground line — sitting on the black ground they were ink-on-ink */
+.micro-l{left:max(18px,4vw);bottom:calc(var(--ground-h) + 5.5dvh)}
+.micro-r{right:max(18px,4vw);bottom:calc(var(--ground-h) + 5.5dvh);text-align:right}
+
+/* ============ GAME HUD ============ */
+#hud{
+  position:fixed;left:0;right:0;bottom:0;height:var(--hud-h);z-index:30;
+  display:flex;align-items:center;gap:.7rem;padding:0 max(18px,4vw);
+  background:var(--paper);border-top:1px solid rgba(17,17,17,.14);
+  transition:background .6s ease,border-color .6s ease,transform .45s var(--ease);
+}
+body.hud-hidden #hud{transform:translateY(100%)}
+.hud-world{font-size:.62rem;letter-spacing:.24em;white-space:nowrap;opacity:.75}
+.hud-world b{font-weight:800}
+.hud-rail{position:relative;flex:1;height:2px;background:currentColor;opacity:1}
+.hud-rail::before{content:'';position:absolute;inset:0;background:currentColor;opacity:.16}
+#hudFill{position:absolute;left:0;top:0;height:100%;width:100%;background:currentColor;
+         transform-origin:left center;transform:scaleX(0)}
+#hudPins{position:absolute;inset:0}
+#hudPins b{position:absolute;top:50%;width:7px;height:7px;margin:-3.5px 0 0 -3.5px;border-radius:50%;
+           background:var(--paper);box-shadow:0 0 0 1.5px currentColor;transition:background .3s,transform .3s var(--ease)}
+#hudPins b.on{background:currentColor;transform:scale(1.25)}
+.hud-scene{font-size:.66rem;letter-spacing:.1em;white-space:nowrap;min-width:4.5rem;text-align:right;opacity:.8}
+
+/* ============ CLOSING PANEL ============ */
+#end{position:relative;z-index:35;background:var(--ink);color:var(--paper);
+     padding:14dvh max(18px,4vw) calc(var(--hud-h) + 6dvh)}
+.end-in{max-width:60rem;margin:0 auto}
+.end-kick{font-size:.68rem;letter-spacing:.34em;opacity:.55;margin-bottom:1rem}
+#end h2{font-size:clamp(1.9rem,7.5vw,3.6rem);font-weight:800;line-height:1.18}
+#end .cta{background:var(--paper);color:var(--ink)}
+.end-cols{display:flex;flex-wrap:wrap;gap:2.4rem 3.5rem;margin-top:9dvh}
+.end-cols h3{font-size:.68rem;letter-spacing:.28em;opacity:.55;margin-bottom:.8rem;font-weight:600}
+.end-cols a,.end-cols span{display:block;color:inherit;text-decoration:none;line-height:1.9;font-size:.98rem}
+.end-cols a{transition:opacity .25s}
+.end-cols a:hover{opacity:.6}
+.end-bar{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;
+         margin-top:8dvh;padding-top:1.2rem;border-top:1px solid rgba(252,252,250,.2);
+         font-size:.7rem;letter-spacing:.08em;opacity:.5}
+
+/* ============ DARK LEVEL SWAP ============ */
+body.inverted{background:var(--ink)}
+body.inverted #stage{background:var(--ink)}
+body.inverted{color:var(--paper)}
+body.inverted .ground{background:var(--paper)}
+body.inverted .ground::before,body.inverted .ground::after{background:var(--ink)}
+body.inverted .ground::after{
+  background-image:
+    repeating-linear-gradient(90deg,var(--ink) 0 1px,transparent 1px 44px),
+    repeating-linear-gradient(180deg,var(--ink) 0 1px,transparent 1px 22px);
+}
+body.inverted .hills,body.inverted .city,body.inverted .grass{filter:invert(1)}
+body.inverted .sky-grad{background:linear-gradient(180deg,rgba(252,252,250,.06) 0%,rgba(252,252,250,0) 42%)}
+body.inverted .cloud{background:var(--paper);
+  box-shadow:34px 6px 0 -4px var(--paper), -30px 8px 0 -6px var(--paper), 12px -10px 0 -8px var(--paper)}
+body.inverted #shadow i{background:var(--paper)}
+body.inverted .block{border-color:var(--paper)}
+body.inverted .flagpole{background:var(--paper)}
+body.inverted .flag{background:var(--paper);color:var(--ink)}
+body.inverted .cta{background:var(--paper);color:var(--ink)}
+body.inverted #hud{background:var(--ink);border-color:rgba(252,252,250,.2)}
+body.inverted #hudPins b{background:var(--ink)}
+body.inverted #menu{background:var(--ink)}
+body.inverted #menuList li{border-color:rgba(252,252,250,.16)}
+body.inverted #nav::after{opacity:.24}
+
+/* nav has to survive sitting on top of the dark closing panel */
+body.on-end #nav{color:var(--paper)}
+body.on-end #nav::after{opacity:.26}
+
+/* ============ FALLBACK ============ */
+#fallback{display:none;padding:14dvh 8vw;max-width:40rem}
+#fallback h1{font-size:2.2rem;margin-bottom:1rem}
+#fallback p{line-height:1.8;margin-bottom:.8rem}
+#fallback a{color:inherit}
+@media (prefers-reduced-motion: reduce){
+  #stage,#spacer,#hud,#preload{display:none!important}
+  #fallback{display:block}
+  #end{margin-top:0}
+}

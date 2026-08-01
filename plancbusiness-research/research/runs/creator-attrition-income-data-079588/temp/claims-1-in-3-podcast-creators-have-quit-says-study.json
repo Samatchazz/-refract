@@ -1,0 +1,44 @@
+[
+  {
+    "claim": "Most industry research on content creators focuses either on active creators or on listeners/consumers, meaning people who have already quit creating are structurally unlikely to appear in typical surveys -- a gap the Sounds Profitable Creator Survey is unusual in filling.",
+    "stance": "supports",
+    "stance_target": "the general absence of exit-survey instruments for content creators",
+    "evidence_type": "expert-opinion",
+    "scope_conditions": "podcast creator industry research generally",
+    "quoted_support": "\"Most industry research focuses either on listeners (so the survey won't be asking questions about making shows), or on active creators (which means anyone who has already quit is unlikely to be taking the survey).\"",
+    "numbers": [],
+    "entities": ["Sounds Profitable"],
+    "time_period": "2025",
+    "region": "primarily US industry commentary",
+    "confidence": "medium",
+    "source_note_id": "1-in-3-podcast-creators-have-quit-says-study"
+  },
+  {
+    "claim": "A separate 'Independent Podcaster Survey 2025' by Alitu/The Podcast Host (a survey of active independent podcasters, not people who quit) found the biggest self-reported challenges were struggling to grow an audience, lack of time, financial difficulties, and inability to monetize the show.",
+    "stance": "neutral",
+    "stance_target": "self-reported challenges among currently active creators, conflated in secondary commentary with reasons for quitting",
+    "evidence_type": "statistical",
+    "scope_conditions": "independent podcasters, active creators, 2025 survey",
+    "quoted_support": "\"the biggest challenges for podcasters were struggling to grow an audience, lack of time, financial difficulties and the inability to monetise their show\"",
+    "numbers": ["47% of podcasters spend <$50/month producing their show", "17% run their show for free"],
+    "entities": ["Alitu", "The Podcast Host"],
+    "time_period": "2025",
+    "region": "not specified, likely global/English-speaking indie podcasters",
+    "confidence": "medium",
+    "source_note_id": "1-in-3-podcast-creators-have-quit-says-study"
+  },
+  {
+    "claim": "The article conflates two distinct data sources -- the Sounds Profitable lapsed-creator churn statistic and the separate Alitu active-creator challenges survey -- presenting the latter's findings as if they explain the former's quitters, without the lapsed creators having been asked their reasons directly.",
+    "stance": "refutes",
+    "stance_target": "the claim that 'why podcasters quit' is empirically established by directly asking quitters",
+    "evidence_type": "empirical",
+    "scope_conditions": "methodological critique of secondary trade-press commentary",
+    "quoted_support": "\"Of course, there are a whole load of different reasons why creators might give up podcasting. In our survey, we learned that...\" (shifts from discussing the Sounds Profitable lapsed-creator data to citing The Podcast Host's own separate active-creator survey)",
+    "numbers": [],
+    "entities": ["Sounds Profitable", "Alitu", "The Podcast Host"],
+    "time_period": "2025",
+    "region": "US/global",
+    "confidence": "high",
+    "source_note_id": "1-in-3-podcast-creators-have-quit-says-study"
+  }
+]

@@ -1,0 +1,30 @@
+[
+  {
+    "claim": "BPS RI Chief Amalia Adininggar Widyasanti confirmed on 13 July 2026 that Sensus Ekonomi 2026 explicitly counts home-based economic activity -- naming content creators, videographers, and online sellers specifically -- via door-to-door enumeration, because such activity has no visible physical premises.",
+    "stance": "supports",
+    "stance_target": "SE2026 is the first BPS instrument designed to make Indonesian content creators statistically visible",
+    "evidence_type": "empirical",
+    "scope_conditions": "Statement made in the context of Jakarta (DKI) enumeration specifically; national rollout is the same census but this article's context and the 1.5 million figure are Jakarta-specific",
+    "quoted_support": "\"Karena sensus ini kami tidak hanya mendata pelaku usaha saja, karena aktivitas ekonomi ini juga terjadi di rumah tangga. Banyak sekali sekarang content creator, videographer, lalu kemudian online shopping dilakukan di rumah, tidak terlihat fisiknya,\" kata Amalia di Balai Kota Jakarta, Senin (13/7/2026).",
+    "numbers": ["15 June - 31 August 2026 fieldwork window"],
+    "entities": ["Badan Pusat Statistik (BPS)", "Amalia Adininggar Widyasanti", "Sensus Ekonomi 2026 (SE2026)"],
+    "time_period": "13 July 2026",
+    "region": "Indonesia (Jakarta context)",
+    "confidence": "high",
+    "source_note_id": "bps-kreator-konten-hingga-penjual-online-rumahan-ikut-didata-dalam-sensus-ekonom"
+  },
+  {
+    "claim": "As of 13 July 2026, no final content-creator count from SE2026 exists: BPS's only disclosed figure is a pre-census provisional baseline of approximately 1.5 million business actors in DKI Jakarta specifically (not content creators specifically, and not national), with the census only 45.17% complete in Jakarta at that date and subject to revision after the 31 August 2026 fieldwork deadline.",
+    "stance": "supports",
+    "stance_target": "the absence of any current, methodologically disclosed national content-creator count for Indonesia persists as of mid-2026",
+    "evidence_type": "empirical",
+    "scope_conditions": "Jakarta-specific provisional figure, described explicitly by BPS as subject to change once the census is complete; not a content-creator-specific count",
+    "quoted_support": "Ia mengungkapkan, berdasarkan pendataan awal, saat ini terdapat sekitar 1,5 juta pelaku usaha di DKI Jakarta. ... \"Saat ini di dalam daftar awal kami sebelum sensus ada 1,5 juta usaha, dan ini nanti akan tentunya kami update sesuai dengan kondisi lapangan nanti yang hasil sensusnya,\" ujar Amalia. ... Hingga 13 Juli 2026, capaian pendataan di DKI Jakarta telah mencapai 45,17 persen.",
+    "numbers": ["~1,500,000 provisional business actors (DKI Jakarta only)", "45.17% census completion in DKI Jakarta as of 13 July 2026"],
+    "entities": ["Badan Pusat Statistik (BPS)", "Amalia Adininggar Widyasanti", "DKI Jakarta"],
+    "time_period": "as of 13 July 2026; census concludes 31 August 2026",
+    "region": "DKI Jakarta, Indonesia",
+    "confidence": "high",
+    "source_note_id": "bps-kreator-konten-hingga-penjual-online-rumahan-ikut-didata-dalam-sensus-ekonom"
+  }
+]

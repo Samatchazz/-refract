@@ -1,0 +1,410 @@
+{
+  "slug": "oji-brandbook",
+  "url": "https://www.ojiholdings.co.jp/group/brandbook/",
+  "name": "OJI Global Brand Book",
+  "country": "Japan",
+  "viewport": {
+    "width": 1440,
+    "height": 900
+  },
+  "ok": true,
+  "httpStatus": 200,
+  "finalUrl": "https://www.ojiholdings.co.jp/group/brandbook/",
+  "consentDismissed": [
+    "Deny"
+  ],
+  "scrollInfo": {
+    "contentHeight": 900,
+    "docScrollHeight": 900,
+    "maxElementBottom": 900,
+    "innerScrollerHeight": 0,
+    "virtualScroll": false
+  },
+  "document": {
+    "scrollHeight": 900,
+    "vhMultiple": 1,
+    "textNodeCount": 281,
+    "canvasCount": 1,
+    "elementCount": 647,
+    "title": "GLOBAL BRAND BOOK | 会社情報",
+    "lang": "ja",
+    "contentHeight": 900,
+    "scrollMode": "native"
+  },
+  "container": {
+    "dominantPairs": [
+      {
+        "width": 248,
+        "left": 135,
+        "count": 1,
+        "sample": {
+          "tag": "div",
+          "cls": "gl-info-ring"
+        }
+      },
+      {
+        "width": 95,
+        "left": 1087,
+        "count": 1,
+        "sample": {
+          "tag": "div",
+          "cls": "gl-info-ring-R"
+        }
+      },
+      {
+        "width": 133,
+        "left": 193,
+        "count": 1,
+        "sample": {
+          "tag": "div",
+          "cls": "gl-info-ring-L"
+        }
+      },
+      {
+        "width": 110,
+        "left": 1087,
+        "count": 1,
+        "sample": {
+          "tag": "div",
+          "cls": "gl-info-ring-R"
+        }
+      },
+      {
+        "width": 130,
+        "left": 193,
+        "count": 1,
+        "sample": {
+          "tag": "div",
+          "cls": "gl-info-ring-L"
+        }
+      },
+      {
+        "width": 7,
+        "left": 1368,
+        "count": 1,
+        "sample": {
+          "tag": "div",
+          "cls": "gl-page-current"
+        }
+      }
+    ],
+    "containerChain": {
+      "chain": [
+        {
+          "tag": "div",
+          "cls": "gl-info-ring",
+          "width": 247.95,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "block"
+        },
+        {
+          "tag": "div",
+          "cls": "gl-info",
+          "width": 1440,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "block"
+        }
+      ],
+      "constrained": null
+    },
+    "grids": [],
+    "bodyPaddingInline": "0px / 0px",
+    "bodyMaxWidth": "none",
+    "htmlPaddingInline": "0px / 0px"
+  },
+  "leftEdgeTest": {
+    "layout": {
+      "n": 1,
+      "mean": 768,
+      "stdDev": 0,
+      "distinctExact": 1,
+      "distinctClustered2px": 1,
+      "clusters": [
+        {
+          "at": 768,
+          "count": 1
+        }
+      ],
+      "values": [
+        768
+      ]
+    },
+    "rect": {
+      "n": 1,
+      "mean": 652.38,
+      "stdDev": 0,
+      "distinctExact": 1,
+      "distinctClustered2px": 1,
+      "clusters": [
+        {
+          "at": 652.38,
+          "count": 1
+        }
+      ],
+      "values": [
+        652.38
+      ]
+    },
+    "headings": {
+      "n": 1,
+      "mean": 1089,
+      "stdDev": 0,
+      "distinctExact": 1,
+      "distinctClustered2px": 1,
+      "clusters": [
+        {
+          "at": 1089,
+          "count": 1
+        }
+      ],
+      "values": [
+        1089
+      ]
+    },
+    "sectionDiscovery": "body-children"
+  },
+  "sections": [
+    {
+      "index": 0,
+      "tag": "div",
+      "id": null,
+      "cls": "gl-info",
+      "height": 900,
+      "vhFraction": 1,
+      "paddingBlockStart": "0px",
+      "paddingBlockEnd": "0px",
+      "marginBlockStart": "0px",
+      "marginBlockEnd": "0px",
+      "firstText": {
+        "layoutLeft": 768,
+        "rectLeft": 652.38,
+        "tag": "span",
+        "fontSize": "18px",
+        "text": "スクロールして進む"
+      },
+      "heading": {
+        "layoutLeft": 1089,
+        "rectLeft": 1089.45,
+        "tag": "span",
+        "fontSize": "18.8397px",
+        "text": "“GROW”"
+      }
+    }
+  ],
+  "verticalRhythm": {
+    "sectionCount": 1,
+    "near100vhCount": 1,
+    "near100vhPct": 100,
+    "strictGcdOfSpacing": 2,
+    "baseUnitEstimate80pct": 4,
+    "spacingHistogram": [
+      {
+        "value": 8,
+        "count": 4
+      },
+      {
+        "value": 12,
+        "count": 2
+      },
+      {
+        "value": 48,
+        "count": 1
+      },
+      {
+        "value": 18,
+        "count": 1
+      }
+    ],
+    "spacingSampleSize": 8
+  },
+  "typeScale": {
+    "distinctFontSizeCount": 5,
+    "distinctFontSizeCount_used2plus": 3,
+    "distinctSizes": [
+      {
+        "size": 18.84,
+        "count": 4
+      },
+      {
+        "size": 18,
+        "count": 1
+      },
+      {
+        "size": 17,
+        "count": 2
+      },
+      {
+        "size": 16.67,
+        "count": 1
+      },
+      {
+        "size": 15.34,
+        "count": 4
+      }
+    ],
+    "scaleSizesDesc": [
+      18.84,
+      17,
+      15.34
+    ],
+    "consecutiveRatios": [
+      1.11,
+      1.11
+    ],
+    "roles": {
+      "h1": null,
+      "biggestText": {
+        "tag": "span",
+        "fontSize": 18.84,
+        "fontWeight": "700",
+        "lineHeightPx": 27.61,
+        "lineHeightRatio": 1.47,
+        "letterSpacing": "0.306771px",
+        "letterSpacingEm": 0.016280000000000003,
+        "fontFamily": "YakuHanJP",
+        "fontFamilyFull": "YakuHanJP, \"Zen Kaku Gothic New\", sans-serif",
+        "textTransform": "none",
+        "color": "rgb(0, 100, 61)",
+        "widthPx": 74.97,
+        "text": "“GROW”"
+      },
+      "h2All": [],
+      "h3": null,
+      "body": null,
+      "small": {
+        "tag": "div",
+        "fontSize": 15.34,
+        "fontWeight": "700",
+        "lineHeightPx": 27.61,
+        "lineHeightRatio": 1.8,
+        "letterSpacing": "0.306771px",
+        "letterSpacingEm": 0.02,
+        "fontFamily": "YakuHanJP",
+        "fontFamilyFull": "YakuHanJP, \"Zen Kaku Gothic New\", sans-serif",
+        "textTransform": "none",
+        "color": "rgb(0, 100, 61)",
+        "widthPx": 95.14,
+        "text": "のその先は？"
+      },
+      "mono": null
+    },
+    "readingMeasure": null,
+    "readingMeasureAlternates": [],
+    "distinctFontFamilyCount": 2,
+    "fontFamilies": [
+      {
+        "family": "YakuHanJP",
+        "count": 10
+      },
+      {
+        "family": "Google Sans",
+        "count": 2
+      }
+    ]
+  },
+  "color": {
+    "textColors": [
+      {
+        "value": "rgb(0,100,61)",
+        "count": 8
+      },
+      {
+        "value": "rgb(0,101,62)",
+        "count": 2
+      },
+      {
+        "value": "rgb(255,255,255)",
+        "count": 1
+      },
+      {
+        "value": "rgb(0,86,53)",
+        "count": 1
+      }
+    ],
+    "backgroundColors": [
+      {
+        "value": "rgb(255,255,255)",
+        "count": 2
+      },
+      {
+        "value": "rgb(0,100,61)",
+        "count": 1
+      },
+      {
+        "value": "rgba(255,255,255,0.8)",
+        "count": 1
+      },
+      {
+        "value": "rgb(0,86,53)",
+        "count": 1
+      }
+    ],
+    "distinctTextColorCount": 4,
+    "distinctBgColorCount": 4
+  },
+  "persistent": {
+    "fixedOrSticky": [
+      {
+        "tag": "div",
+        "cls": "",
+        "position": "fixed",
+        "rect": {
+          "top": 0,
+          "left": 0,
+          "width": 1440,
+          "height": 900
+        },
+        "zIndex": "auto",
+        "text": "",
+        "opacity": "1"
+      },
+      {
+        "tag": "div",
+        "cls": "gl-info",
+        "position": "fixed",
+        "rect": {
+          "top": 0,
+          "left": 0,
+          "width": 1440,
+          "height": 900
+        },
+        "zIndex": "auto",
+        "text": "スクロールして進む 王子ホールディングスHP OJIの向こうに広がるのは、 豊かな森林の風景。 そしてその先に続く、 ワ",
+        "opacity": "1"
+      },
+      {
+        "tag": "div",
+        "cls": "",
+        "position": "fixed",
+        "rect": {
+          "top": 842,
+          "left": 10,
+          "width": 48,
+          "height": 48
+        },
+        "zIndex": "2147483631",
+        "text": "",
+        "opacity": "1"
+      }
+    ]
+  },
+  "nav": null,
+  "navState": {
+    "at0": null,
+    "at2000": null
+  },
+  "shots": [
+    "oji-brandbook-1440-full.jpg",
+    "oji-brandbook-1440-scroll000.jpg",
+    "oji-brandbook-1440-scroll025.jpg",
+    "oji-brandbook-1440-scroll050.jpg",
+    "oji-brandbook-1440-scroll075.jpg",
+    "oji-brandbook-1440-scroll100.jpg"
+  ],
+  "fullPageShotRepresentative": true,
+  "pageErrors": []
+}

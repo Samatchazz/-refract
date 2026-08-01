@@ -1,0 +1,72 @@
+[
+  {
+    "claim": "Only 59.8 percent of US artists worked full-year and full-time versus 66.0 percent of all US workers, and for the performing occupations closest to content creation the share collapses to 23.5 percent for actors, 32.6 percent for musicians and 37.5 percent for entertainers.",
+    "stance": "supports",
+    "stance_target": "The position that creative occupations sustain full-time work at far lower rates than the general workforce, so headline creative earnings describe a minority who survived",
+    "evidence_type": "statistical",
+    "scope_conditions": "United States only; American Community Survey PUMS 2015-2019, more than 119,000 artists unweighted; nationally representative; pre-COVID; full-year/full-time defined as 50+ weeks at 35+ hours; occupation-based, not platform-based",
+    "quoted_support": "Fewer than 60 percent of artists worked \"full-year, full time\" (defined as working 50-52 weeks for at least 35 hours per week). This compared with 66 percent of all U.S. workers.",
+    "numbers": ["59.8 percent all artists", "66.0 percent US labour force", "23.5 percent actors", "32.6 percent musicians", "36.8 percent dancers/choreographers", "37.5 percent entertainers", "46.5 percent photographers", "119,000 unweighted", "2015-2019"],
+    "entities": ["National Endowment for the Arts", "US Census Bureau", "American Community Survey"],
+    "time_period": "2015-2019",
+    "region": "United States",
+    "confidence": "high",
+    "source_note_id": "office-of-research-analysis"
+  },
+  {
+    "claim": "Median annual earnings of US artists working full-year and full-time were $58,005 in 2015-2019, about $10,000 above the $48,305 median for all US workers, but this figure is conditioned on full-time survival and therefore excludes the 40 percent of artists who did not achieve it.",
+    "stance": "refutes",
+    "stance_target": "The claim that creative occupations are inherently low-paid, and simultaneously the claim that reported creative-occupation medians describe typical creative earners",
+    "evidence_type": "statistical",
+    "scope_conditions": "United States only; ACS PUMS 2015-2019, more than 119,000 artists unweighted; restricted to full-year/full-time workers with $1 or more in earnings; constant dollars; excludes part-year and part-time artists entirely",
+    "quoted_support": "the median annual earnings of full-year, full-time artists in 2015-2019 were $58,005, about $10,000 greater than for all workers ($48,305).",
+    "numbers": ["$58,005 all artists", "$48,305 US labour force", "$83,195 architects", "$69,605 producers/directors", "$60,115 writers and authors", "$55,560 designers", "$45,875 musicians", "$42,940 photographers", "$41,260 entertainers", "$41,060 actors", "$36,365 dancers/choreographers"],
+    "entities": ["National Endowment for the Arts", "US Census Bureau"],
+    "time_period": "2015-2019",
+    "region": "United States",
+    "confidence": "high",
+    "source_note_id": "office-of-research-analysis"
+  },
+  {
+    "claim": "US artists are self-employed at 33.6 percent versus 9.3 percent for the entire US labour force, and above 45 percent for photographers, fine artists, entertainers and musicians, which is why payroll-based statistics systematically miss most creative earners.",
+    "stance": "supports",
+    "stance_target": "The position that administrative payroll data undercounts creative and creator workers, making household surveys the only viable administrative source",
+    "evidence_type": "statistical",
+    "scope_conditions": "United States only; ACS PUMS 2015-2019; self-employment measured as primary-job status",
+    "quoted_support": "nearly 34 percent of artists were self-employed, compared with just over 9 percent of all workers.",
+    "numbers": ["33.6 percent all artists", "9.3 percent US labour force", "56.8 percent photographers", "53.8 percent fine artists/art directors/animators", "45.9 percent entertainers", "45.0 percent musicians", "41.8 percent writers and authors", "37.8 percent actors"],
+    "entities": ["National Endowment for the Arts", "US Census Bureau"],
+    "time_period": "2015-2019",
+    "region": "United States",
+    "confidence": "high",
+    "source_note_id": "office-of-research-analysis"
+  },
+  {
+    "claim": "The US artist workforce numbered 2.4 million people across 11 occupations, of whom 247,570 were writers and authors, 216,065 musicians, 190,154 photographers and 171,273 producers and directors.",
+    "stance": "neutral",
+    "stance_target": "The size of the administratively-measured creative occupational workforce in the United States",
+    "evidence_type": "statistical",
+    "scope_conditions": "United States only; ACS PUMS 2015-2019; workers classified by primary job in hours worked, so anyone whose creative work is secondary is excluded from these counts",
+    "quoted_support": "In 2015-2019, the U.S. workforce contained 2.4 million artists--defined as workers whose primary job (in terms of number of hours worked on a given week) fell into one of 11 distinct occupations.",
+    "numbers": ["2.4 million artists", "933,156 designers", "247,570 writers and authors", "232,092 fine artists/art directors/animators", "216,065 musicians", "208,008 architects", "190,154 photographers", "171,273 producers and directors", "72,128 announcers", "60,986 actors", "49,025 entertainers", "23,385 dancers/choreographers"],
+    "entities": ["National Endowment for the Arts", "US Census Bureau"],
+    "time_period": "2015-2019",
+    "region": "United States",
+    "confidence": "high",
+    "source_note_id": "office-of-research-analysis"
+  },
+  {
+    "claim": "Women artists working full-year and full-time earned $0.80 for every dollar earned by men artists, exactly matching the economy-wide ratio, so creative work confers no gender-equity advantage in the United States.",
+    "stance": "refutes",
+    "stance_target": "The claim that creative and independent work reduces gendered earnings inequality",
+    "evidence_type": "statistical",
+    "scope_conditions": "United States only; ACS PUMS 2015-2019; full-year/full-time workers with $1 or more in earnings; ratios computed on unrounded data; dancers/choreographers suppressed for small sample",
+    "quoted_support": "In 2015-2019, women artists (working full-year, full-time) earned $0.80 for every dollar earned by men artists; the same ratio is reported for all women workers in the labor force",
+    "numbers": ["$0.80 all artists", "$0.80 entire labour force", "$0.65 entertainers", "$0.77 photographers", "$0.81 architects", "$0.91 producers/directors", "$0.92 musicians", "$0.92 announcers"],
+    "entities": ["National Endowment for the Arts", "US Census Bureau"],
+    "time_period": "2015-2019",
+    "region": "United States",
+    "confidence": "high",
+    "source_note_id": "office-of-research-analysis"
+  }
+]

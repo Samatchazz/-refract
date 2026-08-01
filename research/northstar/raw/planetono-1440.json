@@ -1,0 +1,740 @@
+{
+  "slug": "planetono",
+  "url": "https://planetono.space",
+  "name": "Planetono",
+  "country": "?",
+  "viewport": {
+    "width": 1440,
+    "height": 900
+  },
+  "ok": true,
+  "httpStatus": 200,
+  "finalUrl": "https://www.planetono.space/",
+  "consentDismissed": [],
+  "scrollInfo": {
+    "contentHeight": 8948,
+    "docScrollHeight": 8948,
+    "maxElementBottom": 8948,
+    "innerScrollerHeight": 2570,
+    "virtualScroll": false
+  },
+  "document": {
+    "scrollHeight": 8948,
+    "vhMultiple": 9.94,
+    "textNodeCount": 60,
+    "canvasCount": 10,
+    "elementCount": 1488,
+    "title": "Planetoño",
+    "lang": "en_US",
+    "contentHeight": 8948,
+    "scrollMode": "native"
+  },
+  "container": {
+    "dominantPairs": [
+      {
+        "width": 456,
+        "left": 468,
+        "count": 1,
+        "sample": {
+          "tag": "span",
+          "cls": ""
+        }
+      },
+      {
+        "width": 212,
+        "left": 959,
+        "count": 1,
+        "sample": {
+          "tag": "div",
+          "cls": "line"
+        }
+      },
+      {
+        "width": 195,
+        "left": 1211,
+        "count": 1,
+        "sample": {
+          "tag": "div",
+          "cls": "line"
+        }
+      },
+      {
+        "width": 225,
+        "left": 1406,
+        "count": 1,
+        "sample": {
+          "tag": "div",
+          "cls": "line"
+        }
+      },
+      {
+        "width": 335,
+        "left": 553,
+        "count": 1,
+        "sample": {
+          "tag": "p",
+          "cls": "section-location__caption"
+        }
+      }
+    ],
+    "containerChain": {
+      "chain": [
+        {
+          "tag": "span",
+          "cls": "",
+          "width": 455.94,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "block"
+        },
+        {
+          "tag": "p",
+          "cls": "the-preloader__message",
+          "width": 503.94,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "flex"
+        },
+        {
+          "tag": "div",
+          "cls": "the-preloader__content",
+          "width": 571.94,
+          "maxWidth": "none",
+          "paddingInline": "34px / 34px",
+          "marginInline": "0px / 0px",
+          "display": "flex"
+        },
+        {
+          "tag": "div",
+          "cls": "the-preloader is-loaded",
+          "width": 1440,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "flex"
+        },
+        {
+          "tag": "div",
+          "cls": "__app",
+          "width": 1440,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "block"
+        },
+        {
+          "tag": "div",
+          "cls": "",
+          "width": 1440,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "block"
+        }
+      ],
+      "constrained": null
+    },
+    "grids": [
+      {
+        "columns": 2,
+        "columnGap": "16px",
+        "rowGap": "16px",
+        "width": 1266,
+        "template": "625px 625px",
+        "count": 1
+      }
+    ],
+    "bodyPaddingInline": "0px / 0px",
+    "bodyMaxWidth": "none",
+    "htmlPaddingInline": "0px / 0px"
+  },
+  "leftEdgeTest": {
+    "layout": {
+      "n": 4,
+      "mean": 493.25,
+      "stdDev": 327.08,
+      "distinctExact": 4,
+      "distinctClustered2px": 4,
+      "clusters": [
+        {
+          "at": 34,
+          "count": 1
+        },
+        {
+          "at": 484,
+          "count": 1
+        },
+        {
+          "at": 496,
+          "count": 1
+        },
+        {
+          "at": 959,
+          "count": 1
+        }
+      ],
+      "values": [
+        959,
+        34,
+        484,
+        496
+      ]
+    },
+    "rect": {
+      "n": 4,
+      "mean": 493.43,
+      "stdDev": 327.2,
+      "distinctExact": 4,
+      "distinctClustered2px": 4,
+      "clusters": [
+        {
+          "at": 34,
+          "count": 1
+        },
+        {
+          "at": 484.19,
+          "count": 1
+        },
+        {
+          "at": 496.17,
+          "count": 1
+        },
+        {
+          "at": 959.34,
+          "count": 1
+        }
+      ],
+      "values": [
+        959.34,
+        34,
+        484.19,
+        496.17
+      ]
+    },
+    "headings": {
+      "n": 4,
+      "mean": 493.25,
+      "stdDev": 327.08,
+      "distinctExact": 4,
+      "distinctClustered2px": 4,
+      "clusters": [
+        {
+          "at": 34,
+          "count": 1
+        },
+        {
+          "at": 484,
+          "count": 1
+        },
+        {
+          "at": 496,
+          "count": 1
+        },
+        {
+          "at": 959,
+          "count": 1
+        }
+      ],
+      "values": [
+        959,
+        34,
+        484,
+        496
+      ]
+    },
+    "sectionDiscovery": "semantic-siblings"
+  },
+  "sections": [
+    {
+      "index": 0,
+      "tag": "section",
+      "id": "hero",
+      "cls": "section-hero container",
+      "height": 900,
+      "vhFraction": 1,
+      "paddingBlockStart": "45px",
+      "paddingBlockEnd": "0px",
+      "marginBlockStart": "0px",
+      "marginBlockEnd": "0px",
+      "firstText": {
+        "layoutLeft": 959,
+        "rectLeft": 959.34,
+        "tag": "div",
+        "fontSize": "60px",
+        "text": "BiGger"
+      },
+      "heading": {
+        "layoutLeft": 959,
+        "rectLeft": 959.34,
+        "tag": "div",
+        "fontSize": "60px",
+        "text": "BiGger"
+      }
+    },
+    {
+      "index": 1,
+      "tag": "section",
+      "id": "how",
+      "cls": "section-process",
+      "height": 6520,
+      "vhFraction": 7.24,
+      "paddingBlockStart": "0px",
+      "paddingBlockEnd": "0px",
+      "marginBlockStart": "0px",
+      "marginBlockEnd": "200px",
+      "firstText": {
+        "layoutLeft": 34,
+        "rectLeft": 34,
+        "tag": "h2",
+        "fontSize": "60px",
+        "text": "HOW iT worKS"
+      },
+      "heading": {
+        "layoutLeft": 34,
+        "rectLeft": 34,
+        "tag": "h2",
+        "fontSize": "60px",
+        "text": "HOW iT worKS"
+      }
+    },
+    {
+      "index": 2,
+      "tag": "section",
+      "id": "locations",
+      "cls": "section-location container",
+      "height": 765,
+      "vhFraction": 0.85,
+      "paddingBlockStart": "0px",
+      "paddingBlockEnd": "0px",
+      "marginBlockStart": "0px",
+      "marginBlockEnd": "200px",
+      "firstText": {
+        "layoutLeft": 484,
+        "rectLeft": 484.19,
+        "tag": "span",
+        "fontSize": "60px",
+        "text": "WhERE TO FIND uS"
+      },
+      "heading": {
+        "layoutLeft": 484,
+        "rectLeft": 484.19,
+        "tag": "span",
+        "fontSize": "60px",
+        "text": "WhERE TO FIND uS"
+      }
+    },
+    {
+      "index": 3,
+      "tag": "section",
+      "id": "contacts",
+      "cls": "section-contacts container",
+      "height": 362.58,
+      "vhFraction": 0.4,
+      "paddingBlockStart": "0px",
+      "paddingBlockEnd": "0px",
+      "marginBlockStart": "0px",
+      "marginBlockEnd": "0px",
+      "firstText": {
+        "layoutLeft": 496,
+        "rectLeft": 496.17,
+        "tag": "span",
+        "fontSize": "24px",
+        "text": "We tried maKing this real. NaSA said nO."
+      },
+      "heading": {
+        "layoutLeft": 496,
+        "rectLeft": 496.17,
+        "tag": "span",
+        "fontSize": "24px",
+        "text": "We tried maKing this real. NaSA said nO."
+      }
+    }
+  ],
+  "verticalRhythm": {
+    "sectionCount": 4,
+    "near100vhCount": 1,
+    "near100vhPct": 25,
+    "strictGcdOfSpacing": 1,
+    "baseUnitEstimate80pct": 2,
+    "spacingHistogram": [
+      {
+        "value": 34,
+        "count": 18
+      },
+      {
+        "value": 4,
+        "count": 6
+      },
+      {
+        "value": 6,
+        "count": 6
+      },
+      {
+        "value": 120,
+        "count": 6
+      },
+      {
+        "value": 11,
+        "count": 2
+      },
+      {
+        "value": 200,
+        "count": 2
+      },
+      {
+        "value": 30,
+        "count": 2
+      },
+      {
+        "value": 256,
+        "count": 2
+      },
+      {
+        "value": 45,
+        "count": 1
+      },
+      {
+        "value": 20,
+        "count": 1
+      }
+    ],
+    "spacingSampleSize": 46
+  },
+  "typeScale": {
+    "distinctFontSizeCount": 7,
+    "distinctFontSizeCount_used2plus": 5,
+    "distinctSizes": [
+      {
+        "size": 60,
+        "count": 23
+      },
+      {
+        "size": 33,
+        "count": 1
+      },
+      {
+        "size": 24,
+        "count": 5
+      },
+      {
+        "size": 21,
+        "count": 3
+      },
+      {
+        "size": 18,
+        "count": 20
+      },
+      {
+        "size": 16,
+        "count": 3
+      },
+      {
+        "size": 14,
+        "count": 1
+      }
+    ],
+    "scaleSizesDesc": [
+      60,
+      24,
+      21,
+      18,
+      16
+    ],
+    "consecutiveRatios": [
+      2.5,
+      1.14,
+      1.17,
+      1.13
+    ],
+    "roles": {
+      "h1": null,
+      "biggestText": {
+        "tag": "div",
+        "fontSize": 60,
+        "fontWeight": "700",
+        "lineHeightPx": 60,
+        "lineHeightRatio": 1,
+        "letterSpacing": "-2.4px",
+        "letterSpacingEm": -0.04,
+        "fontFamily": "Futura Passata",
+        "fontFamilyFull": "\"Futura Passata\"",
+        "textTransform": "none",
+        "color": "rgb(0, 0, 0)",
+        "widthPx": 169.23,
+        "text": "BiGger"
+      },
+      "h2All": [
+        {
+          "tag": "h2",
+          "fontSize": 60,
+          "fontWeight": "700",
+          "lineHeightPx": 60,
+          "lineHeightRatio": 1,
+          "letterSpacing": "-2.4px",
+          "letterSpacingEm": -0.04,
+          "fontFamily": "Futura Passata",
+          "fontFamilyFull": "\"Futura Passata\"",
+          "textTransform": "none",
+          "color": "rgb(247, 242, 229)",
+          "widthPx": 372.28,
+          "text": "HOW iT worKS"
+        }
+      ],
+      "h3": null,
+      "body": null,
+      "small": {
+        "tag": "div",
+        "fontSize": 14,
+        "fontWeight": "500",
+        "lineHeightPx": 16.8,
+        "lineHeightRatio": 1.2,
+        "letterSpacing": "0px",
+        "letterSpacingEm": 0,
+        "fontFamily": "Poppins",
+        "fontFamilyFull": "Poppins",
+        "textTransform": "none",
+        "color": "rgb(247, 242, 229)",
+        "widthPx": 48.81,
+        "text": "© 2026"
+      },
+      "mono": null
+    },
+    "readingMeasure": null,
+    "readingMeasureAlternates": [],
+    "distinctFontFamilyCount": 2,
+    "fontFamilies": [
+      {
+        "family": "Futura Passata",
+        "count": 29
+      },
+      {
+        "family": "Poppins",
+        "count": 27
+      }
+    ]
+  },
+  "color": {
+    "textColors": [
+      {
+        "value": "rgb(0,0,0)",
+        "count": 43
+      },
+      {
+        "value": "rgb(247,242,229)",
+        "count": 13
+      }
+    ],
+    "backgroundColors": [
+      {
+        "value": "rgb(0,0,0)",
+        "count": 3
+      },
+      {
+        "value": "rgb(235,51,34)",
+        "count": 2
+      }
+    ],
+    "distinctTextColorCount": 2,
+    "distinctBgColorCount": 2
+  },
+  "persistent": {
+    "fixedOrSticky": [
+      {
+        "tag": "div",
+        "cls": "the-preloader is-loaded",
+        "position": "fixed",
+        "rect": {
+          "top": 0,
+          "left": 0,
+          "width": 1440,
+          "height": 900
+        },
+        "zIndex": "5",
+        "text": "StArtImmersive sound ahead. Use headphones for best effect",
+        "opacity": "1"
+      },
+      {
+        "tag": "header",
+        "cls": "the-header",
+        "position": "fixed",
+        "rect": {
+          "top": 0,
+          "left": 0,
+          "width": 1440,
+          "height": 120
+        },
+        "zIndex": "4",
+        "text": "How it worksLocationsContactmenuHow it worksLocationsContact",
+        "opacity": "1"
+      },
+      {
+        "tag": "div",
+        "cls": "stepper",
+        "position": "fixed",
+        "rect": {
+          "top": 1216.5,
+          "left": 0,
+          "width": 1440,
+          "height": 211
+        },
+        "zIndex": "5",
+        "text": "HOW iT worKS",
+        "opacity": "1"
+      }
+    ]
+  },
+  "nav": {
+    "tag": "header",
+    "cls": "the-header",
+    "height": 120,
+    "top": 0,
+    "position": "fixed",
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "backdropFilter": "none",
+    "borderBottom": "0px rgb(0, 0, 0)",
+    "paddingBlock": "0px / 0px",
+    "transform": "none",
+    "opacity": "1",
+    "mixBlendMode": "normal",
+    "color": "rgb(0, 0, 0)"
+  },
+  "navState": {
+    "at0": {
+      "nav": {
+        "height": 120,
+        "top": 0,
+        "position": "fixed",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "backdropFilter": "none",
+        "borderBottom": "0px rgb(0, 0, 0)",
+        "paddingBlock": "0px / 0px",
+        "transform": "none",
+        "opacity": "1",
+        "color": "rgb(0, 0, 0)"
+      },
+      "fixedOrSticky": [
+        {
+          "tag": "div",
+          "cls": "the-preloader is-loaded",
+          "position": "fixed",
+          "rect": {
+            "top": 0,
+            "left": 0,
+            "width": 1440,
+            "height": 900
+          },
+          "text": "StArtImmersive sound ahead. Use headphones for best effect",
+          "opacity": "1"
+        },
+        {
+          "tag": "header",
+          "cls": "the-header",
+          "position": "fixed",
+          "rect": {
+            "top": 0,
+            "left": 0,
+            "width": 1440,
+            "height": 120
+          },
+          "text": "How it worksLocationsContactmenuHow it worksLocationsContact",
+          "opacity": "1"
+        },
+        {
+          "tag": "div",
+          "cls": "stepper",
+          "position": "fixed",
+          "rect": {
+            "top": 1216.5,
+            "left": 0,
+            "width": 1440,
+            "height": 211
+          },
+          "text": "HOW iT worKS",
+          "opacity": "1"
+        }
+      ]
+    },
+    "at2000": {
+      "nav": {
+        "height": 120,
+        "top": 0,
+        "position": "fixed",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "backdropFilter": "none",
+        "borderBottom": "0px rgb(0, 0, 0)",
+        "paddingBlock": "0px / 0px",
+        "transform": "none",
+        "opacity": "1",
+        "color": "rgb(0, 0, 0)"
+      },
+      "fixedOrSticky": [
+        {
+          "tag": "div",
+          "cls": "the-preloader is-loaded",
+          "position": "fixed",
+          "rect": {
+            "top": 0,
+            "left": 0,
+            "width": 1440,
+            "height": 900
+          },
+          "text": "StArtImmersive sound ahead. Use headphones for best effect",
+          "opacity": "1"
+        },
+        {
+          "tag": "header",
+          "cls": "the-header",
+          "position": "fixed",
+          "rect": {
+            "top": 0,
+            "left": 0,
+            "width": 1440,
+            "height": 120
+          },
+          "text": "How it worksLocationsContactmenuHow it worksLocationsContact",
+          "opacity": "1"
+        },
+        {
+          "tag": "div",
+          "cls": "stepper",
+          "position": "fixed",
+          "rect": {
+            "top": 689,
+            "left": 0,
+            "width": 1440,
+            "height": 211
+          },
+          "text": "HOW iT worKS",
+          "opacity": "1"
+        },
+        {
+          "tag": "div",
+          "cls": "canvas is-view-process",
+          "position": "fixed",
+          "rect": {
+            "top": 0,
+            "left": 0,
+            "width": 1440,
+            "height": 900
+          },
+          "text": "",
+          "opacity": "1"
+        }
+      ]
+    },
+    "changed": false,
+    "diff": {}
+  },
+  "shots": [
+    "planetono-1440-full.jpg",
+    "planetono-1440-scroll000.jpg",
+    "planetono-1440-scroll025.jpg",
+    "planetono-1440-scroll050.jpg",
+    "planetono-1440-scroll075.jpg",
+    "planetono-1440-scroll100.jpg"
+  ],
+  "fullPageShotRepresentative": true,
+  "pageErrors": []
+}

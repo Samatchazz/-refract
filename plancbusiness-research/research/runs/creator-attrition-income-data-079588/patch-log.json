@@ -1,0 +1,221 @@
+{
+  "total_findings": 46,
+  "applied": [
+    {
+      "finding": "width-1 (critical) — Patreon net paid-creator contraction absent from section 1",
+      "action": "Added one row to the section 1A table: 25,646 (Feb 2017) to a 295,083 peak (Oct 2025) to 286,287 (Feb 2026), -3% in four months, cited [[patreon-subscriber-and-creator-statistics-for-2026]]. The net-count caveat (exit inseparable from losing a last patron) was folded into the Unit cell rather than added as a separate sentence, to hold the word budget. Lede and section 1 preamble updated from four to five measurements / five incompatible units.",
+      "words_delta": "+55"
+    },
+    {
+      "finding": "width-2 + instruction-1 (both critical, merged) — OnlyFans / subscription-content platforms absent",
+      "action": "Added one row to the section 2A median/mean table carrying the Fenix International Ltd audited filing: mean $1,253/yr ($5.80bn payouts / ~4.63m registered accounts, FY2024), stated as sitting above the estimated top-quartile threshold, with the Median cell reading 'None traceable to any study' — the audited absence carried in-cell rather than as prose. Cited [[onlyfans-creator-income-distribution-report-2026]].",
+      "words_delta": "+45"
+    },
+    {
+      "finding": "instruction-2 (critical) — Instagram / Facebook (Meta) absent as a required entity",
+      "action": "Two edits. (a) The Strauss row in section 2A now names the linked platforms explicitly and carries the Instagram-linked 2024 median of $53/mo alongside the YouTube- and X-linked figures, so Meta's platforms now carry a figure rather than nothing. (b) One clause appended to the section 1B search record: Meta publishes no per-creator payout distribution and no Instagram or Facebook creator attrition or income figure with a stated sample size appears in the academic, telemetry or platform-disclosure record.",
+      "words_delta": "+38"
+    },
+    {
+      "finding": "depth-1 (critical) — 'Investor filings were checked' asserted without a search record",
+      "action": "APPLIED WITH MODIFICATION, in the opposite direction from the critic's recommendation, per the binding correction in temp/post-critic-fetch-log.md. The critic read a stale interim artifact; a follow-up fetcher completed the filings search and the result is recorded in comparisons.md under the step 6 revision. The sentence was not deleted. It was expanded to name all five disclosure channels checked and what each yields: Bilibili's 20-F (twelfth-month retention for users, not up-hosts), Kuaishou's Hong Kong prospectus (monetization and GMV), Roblox's S-1 and 10-K (developer counts and payouts, no cohort framing), Patreon's State of Create (cross-sectional), Spotify's Loud & Clear (retention of a tier, not of participation). This converts an assertion into the audited search record the run directives require.",
+      "words_delta": "+70"
+    },
+    {
+      "finding": "dialectic-2 (critical) — absolute claim that quit reasons have never been elicited from anyone who quit",
+      "action": "Narrowed the claim in three places rather than deleting it. Lede: 'Reasons for quitting have never been elicited from anyone who quit' becomes 'No instrument has ever put the reasons for quitting to a sample of creators who quit'. Section 4 opener: 'Every instrument here does the opposite' becomes 'No instrument here does that'. Section 4C: inserted the 2023 Bilibili quit statements — a 1.03m-follower creator on 12 January and a 3.83m-follower creator on 31 March, plus 1,176 viewer comments coded that August — labelled as self-announcements naming income insufficiency, not a sampled exit survey. Cited [[stop-updating-a-textual-analysis-of-chinese-viewers]]. The Niconico sentence is rescoped to 'the closest sampled exit-reason elicitation'.",
+      "words_delta": "+70"
+    },
+    {
+      "finding": "dialectic-1 + depth-7 (critical + major, merged) — Zhao's significant income-by-time interaction dropped",
+      "action": "Appended the interaction to the existing parenthetical: no significant main effect (b=-0.136, p=0.111) though its interaction with time is significant (p=0.010), making the protective effect small and cumulative rather than absent. The framing sentence was softened from 'none finds income level operative' to 'none finds income level a strong or immediate predictor'. Partial: the p=0.302 independents-versus-large-agency figure and the Superchat-understates-income clause were not added (no word offset).",
+      "words_delta": "+22"
+    },
+    {
+      "finding": "width-8 (major, word-negative) — section 5B comparisons left in prose",
+      "action": "Converted the four-mechanism paragraph into a four-row table (Mechanism | SEA/peripheral value | Western/core value | Source and year), applied FIRST as the word-freeing edit. Social-commerce composition was folded into the employment-counterfactual row to keep the count at the four the H3 heading names. A short lead and closing sentence preserve the analytic content.",
+      "words_delta": "-29"
+    },
+    {
+      "finding": "width-10 (minor, word-negative) — triple statement of the same absence",
+      "action": "Cut the closing clause of section 6E from '— the second already half-built' onward. Section 4C carries the Sounds Profitable near-miss with its full apparatus.",
+      "words_delta": "-24"
+    },
+    {
+      "finding": "depth-2 (major) — vague 'roughly an order of magnitude' where the exact recut exists",
+      "action": "PARTIAL. Prose now reads 'raises the 0.043% share to 0.43%, exactly tenfold', with the inference-shape framing preserved verbatim. The proposed additional 0.43% matrix row was not added (no word offset).",
+      "words_delta": "-2"
+    },
+    {
+      "finding": "depth-4 (major) — derived claim not naming its arithmetic",
+      "action": "Replaced 'account for much of the apparent hundredfold gap' with the named product: the two levers, each demonstrated within one study's own data, multiply to roughly 58-fold, with the third component (sampling frame) stated as known in direction and unmeasured for income. The interim note's 250-600x figure was deliberately NOT imported, per the evidence digest's standing correction.",
+      "words_delta": "+8"
+    },
+    {
+      "finding": "depth-11 (major) — creatormap disqualification less precise than the record supports",
+      "action": "Narrowed to the dispositive charge: one post's title says 97,601 channels against its own body's 105,891 for what it presents as one 2019 cohort. The 'over 50,000' third figure, which reconciles arithmetically, is no longer cited as a contradiction.",
+      "words_delta": "+3"
+    },
+    {
+      "finding": "depth-8 (major) — non-supporting third leg in section 3's tenure reframe",
+      "action": "PARTIAL. Removed the Patreon one-pledge clause, which does not bear on tenure versus output, and changed 'Three independent measurements' to 'Two'. The Baertl leg with its access status was not added (no word offset).",
+      "words_delta": "-13"
+    },
+    {
+      "finding": "depth-12 (minor) — vague accrual duration",
+      "action": "Replaced 'on the order of a year and a half' with the sourced 'roughly five to twenty months', consistent with the vidIQ row already in the gate table.",
+      "words_delta": "-4"
+    },
+    {
+      "finding": "instruction-7 (major) — median/mean pair silently broken",
+      "action": "PARTIAL. The Twitch row's Mean cell now reads 'mean not reported; 75% under $120, 5% over $1,000', matching the explicit 'not reported' used by the Rieder and ACS rows. The UK IPO row and the $295/yr and 6% means outside section 2A were not annotated (no word offset).",
+      "words_delta": "+3"
+    },
+    {
+      "finding": "instruction-11 (minor) — PPP basis of the living-wage comparison never stated",
+      "action": "The new section 5B table lead states that every figure in it is nominal USD rather than PPP-adjusted.",
+      "words_delta": "included in width-8"
+    },
+    {
+      "finding": "instruction-6 (major) — section 5B prose figures carried no year",
+      "action": "PARTIAL, absorbed by the width-8 tabulation: the ADBI living-wage thresholds (2019), the RPM comparison (2024), the off-platform link crawl (2019) and the informality shares (to 2018) plus the social-commerce share (2023) now all carry a dated source column. The section 6A, 6B, 4A and 4B prose figures named in the same finding were not annotated (no word offset).",
+      "words_delta": "included in width-8"
+    },
+    {
+      "finding": "dialectic-4 (major) — 'both bias directions known and unquantified' contradicts the report's own bounding",
+      "action": "PARTIAL. The headline sentence now reads 'with one bias direction bounded and the other unquantified'. The conditional five- to sevenfold music-ratio magnitude and the 2.55%-versus-49% link-prevalence datapoint were not added (no word offset).",
+      "words_delta": "-2"
+    }
+  ],
+  "skipped": [
+    {
+      "finding": "dialectic-5 + width-6 (major, duplicate) — Hall & Krueger paid-platform cohort curve absent from section 1C",
+      "reason": "Genuinely valuable and dual-flagged, but ~45 words with no remaining offset after the seven criticals. Section 1C was compressed rather than expanded, because the instruction critic's word_budget_note names 1C as the weakest claim on the budget and the two directives cannot both be honoured at a hard ceiling. RECOMMEND the orchestrator restore this if any length headroom appears in step 15: the Uber cohort (n=11,267, first trip Jan-Jun 2013, 11% inactive at one month, 70% active at six, over half at twelve, inactivity defined as no trip in six months, sponsor-authored and contested by Berg & Johnston) is the closest published template for the design the report says the field lacks."
+    },
+    {
+      "finding": "dialectic-6 (major) — concentration/Gini time series absent",
+      "reason": "The critic itself flags this as borderline structural, needing a new four-sentence paragraph. That is regeneration scale at a net-zero budget, and it is the single largest additive finding in the set. Escalated below rather than silently dropped."
+    },
+    {
+      "finding": "dialectic-3 (major) — strongest case for the survey denominator never stated",
+      "reason": "Two-sentence insert with no offset. The report already labels the survey rows by denominator in the matrix and states that the rows must not be ranked."
+    },
+    {
+      "finding": "dialectic-7 (major) — asymmetry conclusion not scoped to the quantity traced",
+      "reason": "No offset. The table's own column labels ('Western population chain' / 'Southeast Asian income chain') carry the scoping, though less explicitly than the critic wants."
+    },
+    {
+      "finding": "dialectic-8 (major) — Twitch leak provenance dispute (fifth constraint)",
+      "reason": "No offset. Section 6B already records that the leak's denominator is stated six incompatible ways, which carries part of the same warning."
+    },
+    {
+      "finding": "dialectic-9 (major) — NeoReach/Linktree recruitment natural experiment",
+      "reason": "No offset. Both rows already carry 'Self-selected vendor survey' in the Type column and NeoReach's row already names the recruitment channel."
+    },
+    {
+      "finding": "dialectic-10 (minor) — Uber tenure earnings gradient",
+      "reason": "Depends on the Hall & Krueger addition, which was skipped for budget."
+    },
+    {
+      "finding": "dialectic-11 (minor) — 63% verdict sentence does not restate the undisclosed denominator",
+      "reason": "No offset. Section 5C states all three caveats in full, and the preserve list fixes the corrected Indonesian reading as it stands."
+    },
+    {
+      "finding": "depth-3 (major) — Graphtreon numerators and the second threshold lever",
+      "reason": "No offset. The row already carries both shares and both thresholds; only the numerators and the convergence clause are missing."
+    },
+    {
+      "finding": "depth-5 (major) — UK IPO n=197 sole-income cut",
+      "reason": "No offset. High value if headroom appears: among the 197 respondents whose only income was music, 43% earned GBP 20,000 or less against a GBP 17,076 minimum-wage-equivalent salary."
+    },
+    {
+      "finding": "depth-6 (major) — Toerhoenen companion ANOVA tenure test",
+      "reason": "No offset."
+    },
+    {
+      "finding": "depth-9 (major) — Indonesian denominator recut (8m/125m MAU, then 63% of that, ~4% of all accounts)",
+      "reason": "Rejected on substance as well as budget. The recut takes the 8-million headcount as an input, and the preserve list fixes that headcount as an orphan figure that appears in neither the primary report nor the vendor's methodology summary. Building an arithmetic result on it would contradict section 6C's own verdict."
+    },
+    {
+      "finding": "depth-10 (major) — per-country audited-absence search records; Singapore split out",
+      "reason": "No offset. The Singapore IMDA lead is explicitly recorded in the interim note as unverified and paywalled, so adding it as a row would introduce a non-citable figure into a table where every other cell is sourced."
+    },
+    {
+      "finding": "width-3 (major) — Twitch mean from platform disclosure (~$143/yr)",
+      "reason": "CONFLICT, see below. Resolved toward instruction-7."
+    },
+    {
+      "finding": "width-4 (major) — El Sanyoura & Anderson Patreon Gini series",
+      "reason": "No offset. Same underlying gap as dialectic-6; escalated together."
+    },
+    {
+      "finding": "width-5 (major) — China livestreaming distribution",
+      "reason": "No offset. The report does now cite a Chinese source (the Bilibili quit statements) via the dialectic-2 patch, so the zero-China-mentions complaint is partly answered."
+    },
+    {
+      "finding": "width-7 (major) — PIDS Philippine/Indonesian online-workforce composition",
+      "reason": "No offset, and the source measures online freelancing rather than content creation, which the report already flags as a different population in section 1A."
+    },
+    {
+      "finding": "width-9 (minor) — competing Indonesian '14% profiting' figure",
+      "reason": "No offset."
+    },
+    {
+      "finding": "instruction-3 (major) — TikTok row in the section 3 gate table",
+      "reason": "No offset. TikTok's Creativity Program boundary is already carried in section 6B."
+    },
+    {
+      "finding": "instruction-4 (major) — Platform column missing from the section 4A table",
+      "reason": "REJECTED on a hard preserve rule: table column counts must not be changed. Adding a seventh-to-eighth column to the burnout table is exactly that. Flagged for the orchestrator as the one four-field breach that survives this pass."
+    },
+    {
+      "finding": "instruction-5 (major) — four-field annotations on section 2C and 2D prose figures",
+      "reason": "No offset. Roughly 45 words across five sentences."
+    },
+    {
+      "finding": "instruction-8 (major) — scope-flag rows for the section 1 attrition findings",
+      "reason": "No offset (two table rows, ~40 words). The section 1A table already carries a Country column on every row, so the geographic information is present even though the transferability verdict is not."
+    },
+    {
+      "finding": "instruction-9 (minor) — top-decile income share",
+      "reason": "No offset."
+    },
+    {
+      "finding": "instruction-10 (minor) — full-time versus part-time share",
+      "reason": "No offset."
+    },
+    {
+      "finding": "instruction-12 (minor) — Substack audited absence",
+      "reason": "No offset. The corpus holds only Substack's 10% fee and no distribution, so the row would have carried no figure."
+    }
+  ],
+  "conflicts": [
+    {
+      "finding_a": "width-3 — fill the Twitch Mean cell with ~$143/yr (platform-disclosed $1bn+ 2022 payouts / ~7m monthly live streamers)",
+      "finding_b": "instruction-7 — prefix the Twitch Mean cell with 'mean not reported'",
+      "resolution": "Applied instruction-7. The width critic's mean has a different denominator (all monthly-active streamers) from the row's median (earning accounts only, Jan-Sep 2021), so printing them side by side in a table built to enforce comparability would manufacture exactly the denominator confusion section 6B indicts. The honest cell is 'mean not reported'."
+    },
+    {
+      "finding_a": "instruction-1 — record OnlyFans in section 6D as an audited absence",
+      "finding_b": "width-2 — carry the OnlyFans audited aggregate as a section 2A table row",
+      "resolution": "Applied width-2, per the orchestrator's directive that the Fenix filing is the same evidence type the report already accepts for YouTube. The audited absence (no traceable median) is carried inside the row's Median cell, so both findings are served by one row."
+    },
+    {
+      "finding_a": "instruction word_budget_note (a) — section 1C is the weakest claim on the word budget and should be displaced",
+      "finding_b": "dialectic-5 / width-6 — section 1C should gain the Hall & Krueger cohort curve",
+      "resolution": "Applied the displacement, skipped the addition. At a hard ceiling both cannot hold, and the criticals had first call on the freed words. Section 1C was compressed by roughly 20 words and its framing left as 'Two unpaid-contributor literatures'."
+    },
+    {
+      "finding_a": "depth-1 — delete the investor-filings sentence as an unsupported assertion",
+      "finding_b": "post-critic-fetch-log binding correction — the search was completed and the claim is true",
+      "resolution": "Applied the binding correction. The sentence was expanded, not deleted. Logged above as applied-with-modification."
+    }
+  ],
+  "orchestrator_escalated": [
+    {
+      "finding": "dialectic-6 + width-4 (major, same gap) — the concentration/inequality time series the report itself licenses and then never uses",
+      "issue": "Section 2B rules that only two comparison classes survive — within-instrument time series with a constant denominator, and dimensionless shape statistics. The corpus holds exactly that artefact and the report cites none of it: El Sanyoura & Anderson (complete Patreon transaction record, Jun 2013 - Dec 2020, within-topic Gini 0.30 to 0.60, cross-topic 0.80 to 0.72), Zhao's VTuber between-creator Gini 0.60 to 0.75 (2018-2023), and the Strauss Pareto-alpha series across YouTube, Instagram, Facebook and Twitch (n=104,719, 2018-2024), with the counter-cut that every Patreon earnings decile grew in absolute terms.",
+      "why_escalated": "It needs a new paragraph of roughly four sentences plus a table row, which is regeneration scale rather than a surgical hunk, and there is no word offset left at the ceiling. It is also the highest-value remaining improvement in the set: it would turn a stipulated methodological rule into a demonstrated one, and it is the only place a pre-committed reconciliation (Houssard's elite-tier flux versus the widening across-population distribution measure different things and are compatible) sits unstated. Resolving it requires an orchestrator decision about length, not a patcher edit."
+    }
+  ]
+}

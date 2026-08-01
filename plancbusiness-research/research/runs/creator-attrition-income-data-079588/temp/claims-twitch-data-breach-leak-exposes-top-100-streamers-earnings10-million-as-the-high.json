@@ -1,0 +1,44 @@
+[
+  {
+    "claim": "Only 3% of the top 100 earning accounts in the leaked Twitch payout data were women.",
+    "stance": "supports",
+    "stance_target": "Top-tail creator income is demographically concentrated as well as numerically concentrated",
+    "evidence_type": "statistical",
+    "scope_conditions": "Top 100 accounts only; gender inferred from public identity, not recorded in the leaked data; originally reported by Kotaku, restated here",
+    "quoted_support": "The news site further noted that the list confirmed that only 3% of the top earners on Twitch are women.",
+    "numbers": ["3%", "100", "39", "48", "71"],
+    "entities": ["Kotaku", "Twitch", "Pokimane", "Amouranth", "Sintica"],
+    "time_period": "August 2019 - October 2021",
+    "region": "Twitch global",
+    "confidence": "medium",
+    "source_note_id": "twitch-data-breach-leak-exposes-top-100-streamers-earnings10-million-as-the-high"
+  },
+  {
+    "claim": "Secondary reporting on the Twitch leak states mutually incompatible figures for the same accounts, using cumulative, annual and average units interchangeably within a single article.",
+    "stance": "refutes",
+    "stance_target": "Press-cited creator income figures can be pooled or compared across outlets",
+    "evidence_type": "empirical",
+    "scope_conditions": "Documented instance in one aggregator article; illustrates a general failure mode across leak coverage",
+    "quoted_support": "The leaked payout document also disclosed that 'Critical Role' earned an average of $370,000 in a year. The magazine further highlighted that 13 out of the 100 accounts in the top earnings list generated an income of a whopping average of $108,000 annually.",
+    "numbers": ["$9.6 million", "$370,000", "13", "$108,000", "80%"],
+    "entities": ["Tech Times", "Time", "CriticalRole", "Twitch"],
+    "time_period": "October 2021 reporting",
+    "region": "US/Western media",
+    "confidence": "high",
+    "source_note_id": "twitch-data-breach-leak-exposes-top-100-streamers-earnings10-million-as-the-high"
+  },
+  {
+    "claim": "The October 2021 Twitch breach released 125 GB of internal data including the full creator payout spreadsheet, source code and encrypted passwords, published by an anonymous actor whose stated motive was to increase competition in online video streaming.",
+    "stance": "neutral",
+    "stance_target": "Provenance of the Twitch payout dataset",
+    "evidence_type": "empirical",
+    "scope_conditions": "Size reported as 125 GB here versus 128 GB elsewhere; leaked 6 October 2021",
+    "quoted_support": "The Twitch leaker uploaded 125GB worth of data from the popular streaming platform. ... the purpose is to 'foster more disruption and competition in the online video streaming space.'",
+    "numbers": ["125 GB", "100"],
+    "entities": ["Twitch", "Amazon"],
+    "time_period": "6 October 2021",
+    "region": "Global",
+    "confidence": "medium",
+    "source_note_id": "twitch-data-breach-leak-exposes-top-100-streamers-earnings10-million-as-the-high"
+  }
+]

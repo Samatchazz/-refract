@@ -1,0 +1,58 @@
+[
+  {
+    "claim": "YouTube's own 2018 blog post announcing the Partner Program eligibility tightening disclosed that 99% of the creators expelled from the program for not meeting the new bar had earned less than USD 100 in the preceding year, and 90% had earned less than USD 2.50 in the preceding month -- yet these were creators who had already cleared the OLD, much looser 10,000-lifetime-views monetization bar.",
+    "stance": "refutes",
+    "stance_target": "Narrowing the denominator from 'all registered accounts' to 'creators who already qualified for monetization' would substantially raise the measured living-wage share, because even a much looser historical monetization threshold was already dominated by near-zero earners",
+    "evidence_type": "empirical",
+    "scope_conditions": "Platform-disclosed statement by YouTube (Mohan and Kyncl, 2018 company blog post), cited secondhand in this academic paper; covers the population of channels that had qualified for the pre-2018 YPP (10,000 lifetime views bar) and were subsequently expelled in February 2018 for not meeting the new 1,000-subscriber/4,000-watch-hour bar; no independent audit of YouTube's self-reported figures exists",
+    "quoted_support": "it was also noted that - while affecting a 'significant number of channels' - the financial ramifications of this 'demonetization' would be mild as '99% of those affected were making less than 100 [USD] per year in the last year, with 90% earning less than 2.50 [USD] in the last month' (Mohan and Kyncl, 2018)",
+    "numbers": ["99% earned <USD 100/year", "90% earned <USD 2.50/month", "10,000 lifetime views (old threshold)", "1,000 subscribers + 4,000 watch-hours (new threshold, Feb 2018)"],
+    "entities": ["YouTube", "Neal Mohan", "Robert Kyncl", "YouTube Partner Program"],
+    "time_period": "rule change effective February 2018; earnings data for the preceding year/month",
+    "region": "Global (YouTube platform-wide disclosure)",
+    "confidence": "high",
+    "source_note_id": "el-komboz-lena-abou-kerkhof-anna-loh-johannes"
+  },
+  {
+    "claim": "In a regression discontinuity design around the 1,000-subscriber YPP eligibility threshold, German YouTube creators who lost monetization access uploaded 2.816 fewer videos per month than a matched sample mean of 3.248 -- an approximately 87% collapse in output -- and cut content diversity (unique keywords/month) by 25.38 against a mean of 41.62, roughly 61%.",
+    "stance": "supports",
+    "stance_target": "Loss of platform monetization eligibility is a causally-identified, quantified driver of reduced creator activity, providing a measured mechanism for why unmonetized creators disproportionately stop producing content",
+    "evidence_type": "empirical",
+    "scope_conditions": "n=484 German YouTube creators within a 900-1,200-subscriber regression-discontinuity bandwidth, drawn from a broader 500-5,000-subscriber population that held YPP status as of December 2017; outcome measured over the six months following the February 2018 rule change; continuity/manipulation tests passed (p=0.99), supporting a causal (not merely correlational) interpretation; German market only, not necessarily generalisable to other Western markets or Southeast Asia",
+    "quoted_support": "creators who lost access to the partner program uploaded significantly fewer videos to the platform... they uploaded 2.816 fewer videos, which - considering the sample mean of 3.248 - is a sizable effect... affected creators use 25.38 fewer unique keywords per month to describe their videos... considering the sample mean of 41.62, this implies a sizeable reduction",
+    "numbers": ["beta=-2.816 videos/month, p<0.05", "sample mean 3.248 videos/month", "like-share beta=-0.048pp, p<0.1, mean 91%", "keyword diversity beta=-25.38, p<0.05, mean 41.62", "n=484 creators", "bandwidth 900-1,200 subscribers"],
+    "entities": ["YouTube", "YouTube Partner Program", "Germany"],
+    "time_period": "rule change February 2018; outcomes measured over 6 months post-change; data collected via API snapshots Dec 2017 and Sep-Nov 2020",
+    "region": "Germany (Western, but explicitly NOT US/UK -- a useful additional non-US Western data point)",
+    "confidence": "high",
+    "source_note_id": "el-komboz-lena-abou-kerkhof-anna-loh-johannes"
+  },
+  {
+    "claim": "Approximately 46% of an established cohort of German YouTube creators (500-5,000 subscribers, already YPP members as of December 2017) had exited the platform entirely within about three years (by the September-November 2020 snapshot), and exiting creators had HIGHER average subscribers and watchtime than those who stayed, undercutting a simple narrative that demonetization alone drives platform abandonment.",
+    "stance": "neutral",
+    "stance_target": "Providing a rare directly-measured multi-year channel-level attrition rate for an established (not brand-new) Western creator cohort, and testing whether losing monetization access is the primary driver of exit",
+    "evidence_type": "empirical",
+    "scope_conditions": "Same n=484-creator RDD sample's parent population (broader 500-5,000 subscriber 'at risk' cohort) tracked via two YouTube Data API snapshots, December 2017 to September-November 2020 (~3 years); 'exit' is defined as no longer appearing/active in the second API snapshot, which conflates true abandonment with channel deletion, renaming, or API-visibility changes; German market only",
+    "quoted_support": "roughly 46% had exited the platform by the time of the second wave... we observe that creators who exited had even more subscribers and watchtime on average than creators who stayed; similarly, they had on average a higher like share and a smaller proportion lost access to the YPP",
+    "numbers": ["~46% exited over ~3 years", "exiting creators had higher subscribers/watchtime than stayers", "smaller proportion of exiters had lost YPP access vs. stayers"],
+    "entities": ["YouTube", "Germany"],
+    "time_period": "December 2017 to September-November 2020 (~3 years)",
+    "region": "Germany -- Western, but explicitly NOT US/UK",
+    "confidence": "medium",
+    "source_note_id": "el-komboz-lena-abou-kerkhof-anna-loh-johannes"
+  },
+  {
+    "claim": "Effect heterogeneity shows the reaction to losing monetization access is driven more by non-pecuniary status/identity motivations than by lost income: more-experienced creators (longer platform tenure) reacted more strongly than less-experienced ones, and mainstream creators reacted more strongly than niche creators, even though financial stakes were near-identical (and near-zero) across groups.",
+    "stance": "supports",
+    "stance_target": "Documented reasons creators reduce or cease activity include loss of platform status/endorsement, not only direct income loss, complicating any simple income-threshold explanation for attrition",
+    "evidence_type": "empirical",
+    "scope_conditions": "Same n=484 German RDD sample; experience measured by channel age and pre-change upload count; 'mainstream' vs 'niche' classified by content-category concentration; authors' causal interpretation of heterogeneity, not a randomized manipulation of motivation type",
+    "quoted_support": "we find that only more, and not less experienced creators show a reaction to losing access to the partner program. Because financial considerations are unlikely to be a function of experience, we attribute this to identity- and attachment-related motivations... mainstream creators showed a stronger negative reaction than niche creators in terms of their activity and content quality, but not diversity",
+    "numbers": [],
+    "entities": ["YouTube", "Germany"],
+    "time_period": "2018-2020",
+    "region": "Germany -- Western only",
+    "confidence": "medium",
+    "source_note_id": "el-komboz-lena-abou-kerkhof-anna-loh-johannes"
+  }
+]

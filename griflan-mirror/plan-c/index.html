@@ -1,0 +1,565 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Plan C — เดินทางแนวนอน</title>
+<style>
+  :root{
+    --ink:#f5f2e4;
+    --gold:#f0b32e;
+    --dim:rgba(245,242,228,.50);
+    --dim2:rgba(245,242,228,.30);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    color:var(--ink); background:#0a0c0e;
+    font-family:"Segoe UI",system-ui,sans-serif;
+    height:var(--scroll-h,900vh);
+  }
+
+  #stage{position:fixed;inset:0;overflow:hidden;background:#0a0c0e}
+
+  /* ฟ้า = ไล่สีที่เปลี่ยนไปตามองก์ */
+  #sky{position:absolute;inset:0;z-index:0}
+
+  .layer{position:absolute;top:0;left:0;height:100%;will-change:transform}
+  #dust  {z-index:1}
+  #far   {z-index:2}
+  #mid   {z-index:3}
+  #ground{z-index:4}
+  #props {z-index:5}
+  #copy  {z-index:6}
+  #cat   {z-index:7;position:absolute;will-change:transform}
+
+  /* บรรยากาศทับหน้า */
+  #vig{position:absolute;inset:0;z-index:8;pointer-events:none;
+       background:radial-gradient(130% 95% at 50% 45%,transparent 42%,rgba(0,0,0,.62) 100%)}
+  #grain{position:absolute;inset:0;z-index:8;pointer-events:none;opacity:.055;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E")}
+
+  /* ---------- ข้อความ ---------- */
+  .panel{position:absolute;top:0;height:100%;display:flex;flex-direction:column;
+         justify-content:center;padding:0 6vw;pointer-events:none}
+  .panel .num{position:absolute;top:11%;left:5.2vw;font-size:clamp(90px,15vw,230px);
+              font-weight:800;line-height:.86;letter-spacing:-.04em;
+              -webkit-text-stroke:1.4px rgba(245,242,228,.10);color:transparent}
+  .panel .tag{font-size:11.5px;letter-spacing:.38em;color:var(--gold);
+              align-self:flex-start;margin-bottom:16px;text-transform:uppercase;
+              display:flex;align-items:center;gap:11px;white-space:nowrap}
+  .panel .tag::before{content:"";width:26px;height:1px;background:var(--gold);opacity:.7}
+  .panel h2{font-size:clamp(30px,4.6vw,66px);line-height:1.2;font-weight:700;
+            max-width:min(15em,44vw);letter-spacing:-.015em}
+  .panel h2 em{font-style:normal;color:var(--gold)}
+  .panel p{margin-top:19px;font-size:clamp(14px,1.22vw,18.5px);line-height:1.9;
+           max-width:min(30em,42vw);color:var(--dim)}
+  .panel ul{margin-top:22px;list-style:none;display:grid;gap:10px;max-width:min(30em,42vw)}
+  .panel li{font-size:14.5px;line-height:1.6;color:var(--dim);padding-left:21px;position:relative}
+  .panel li::before{content:"";position:absolute;left:0;top:.6em;width:6px;height:6px;
+                    background:var(--gold);transform:rotate(45deg)}
+  .panel .quote{margin-top:8px;font-size:clamp(17px,1.9vw,26px);line-height:1.75;
+                font-weight:500;max-width:min(20em,42vw);color:var(--ink)}
+  /* flex item ยืดเต็มความกว้างเอง — ต้อง flex-start ไม่งั้นกล่องล้ำไปทับแมว */
+  .panel .who{margin-top:14px;font-size:12px;letter-spacing:.2em;color:var(--dim2);
+              align-self:flex-start}
+  /* แท็กยาว (พาดหัวรอง hero) บีบระยะตัวอักษรลง ไม่ให้ชนแมว */
+  .panel .tag.long{letter-spacing:.16em;font-size:10.5px}
+  .panel .cta{margin-top:30px;align-self:flex-start;display:inline-flex;align-items:center;
+              gap:12px;padding:15px 30px;border:1px solid rgba(240,179,46,.55);
+              border-radius:999px;color:var(--gold);font-size:14px;letter-spacing:.13em;
+              background:rgba(240,179,46,.05)}
+  /* ทยอยโผล่ทีละบรรทัด */
+  .panel>*{transition:opacity .55s ease,transform .55s cubic-bezier(.2,.8,.25,1)}
+  .panel .tag{transition-delay:.02s}   .panel h2{transition-delay:.07s}
+  .panel p{transition-delay:.13s}      .panel ul,.panel .quote{transition-delay:.18s}
+  .panel .who,.panel .cta{transition-delay:.24s}
+
+  /* ---------- HUD ---------- */
+  #hud{position:absolute;left:0;right:0;bottom:0;z-index:9;padding:0 5vw 26px;
+       display:flex;align-items:flex-end;gap:20px;pointer-events:none}
+  #chapwrap{min-width:15em}
+  #chapno{font-size:10.5px;letter-spacing:.3em;color:var(--gold);margin-bottom:5px}
+  #chap{font-size:12.5px;letter-spacing:.16em;color:var(--dim)}
+  #barwrap{flex:1;padding-bottom:6px}
+  #bar{height:1px;background:rgba(245,242,228,.14);position:relative}
+  #bar i{position:absolute;left:0;top:0;height:100%;background:var(--gold);width:0;
+         box-shadow:0 0 9px rgba(240,179,46,.85)}
+  #bar b{position:absolute;top:-2.5px;width:6px;height:6px;border-radius:50%;
+         background:#0a0c0e;border:1px solid rgba(245,242,228,.3);
+         transform:translateX(-50%);transition:background .3s,border-color .3s,box-shadow .3s}
+  #bar b.on{background:var(--gold);border-color:var(--gold);box-shadow:0 0 8px rgba(240,179,46,.8)}
+  #pct{font-size:11px;color:var(--dim2);font-variant-numeric:tabular-nums;
+       padding-bottom:4px;min-width:3.4em;text-align:right}
+
+  #brand{position:absolute;top:26px;left:5vw;z-index:9;font-size:11px;
+         letter-spacing:.42em;color:var(--dim2)}
+  #hint{position:absolute;left:50%;bottom:76px;transform:translateX(-50%);z-index:9;
+        font-size:11px;letter-spacing:.28em;color:var(--dim2);transition:opacity .6s}
+
+  #rigbox{width:100%;height:100%}
+</style>
+</head>
+<body>
+
+<div id="stage">
+  <div id="sky"></div>
+  <div class="layer" id="dust"></div>
+  <div class="layer" id="far"></div>
+  <div class="layer" id="mid"></div>
+  <div class="layer" id="ground"></div>
+  <div class="layer" id="props"></div>
+  <div class="layer" id="copy"></div>
+  <div id="cat"><div id="rigbox"></div></div>
+  <div id="vig"></div><div id="grain"></div>
+  <div id="brand">PLAN&nbsp;&nbsp;C</div>
+  <div id="hud">
+    <div id="chapwrap"><div id="chapno">01 / 12</div><div id="chap">ยอดวิวนิ่งสนิท</div></div>
+    <div id="barwrap"><div id="bar"><i></i></div></div>
+    <div id="pct">0%</div>
+  </div>
+  <div id="hint">เลื่อนเพื่อออกเดินทาง&nbsp;&nbsp;→</div>
+</div>
+
+<script src="/assets/plan-c-rig.js"></script>
+<script>
+(function(){
+'use strict';
+const NS='http://www.w3.org/2000/svg';
+
+/* ======================================================================
+   12 ด่าน — เดินเรื่อง: ติดกับ → รู้ว่าเล่นเกมผิด → 3 เสา → ได้ดินแดน
+   h = ความสูงพื้น (กราฟยอดวิว) · sky = สีองก์ · การจัดวางคือเนื้อเรื่อง
+   ====================================================================== */
+const STAGES=[
+{ x:0.000,h:0.09,sky:['#0a0c0e','#151a1e'],chap:'ยอดวิวนิ่งสนิท',
+  tag:'Strategic Algorithm &amp; Identity Consultant',
+  title:'เปลี่ยนครีเอเตอร์ที่หลงทาง<br>ให้เป็น<em>อาณาจักรของตัวเอง</em>',
+  body:'ที่ปรึกษาเชิงกลยุทธ์แบบ 1:1 สำหรับ Micro-Influencer ที่ยอดวิวนิ่งสนิท' },
+
+{ x:0.075,h:0.09,sky:['#0a0c0e','#151a1e'],chap:'เส้นที่ไม่ขยับ',
+  tag:'จุดที่คุณยืนอยู่',
+  title:'เส้นนี้คือ<em>ยอดวิวของคุณ</em>',
+  body:'ราบเรียบมาหลายเดือน ไม่ใช่เพราะคุณขี้เกียจ แต่เพราะคุณกำลังเช่าพื้นที่บนอัลกอริทึมของคนอื่น — และค่าเช่าขึ้นทุกปี' },
+
+{ x:0.155,h:0.10,sky:['#0c1013','#1a2026'],chap:'เราปั้นอาณาจักร',
+  tag:'สิ่งที่เราทำ',
+  title:'เราไม่ปั้นคอนเทนต์<br>เรา<em>ปั้นอาณาจักร</em>',
+  body:'คอนเทนต์คือผลลัพธ์ ไม่ใช่ต้นทาง สิ่งที่ต้องแก้อยู่ลึกกว่านั้นหนึ่งชั้นเสมอ' },
+
+{ x:0.235,h:0.13,sky:['#0e1319','#1c242c'],chap:'เกมที่คุณกำลังเล่น',
+  tag:'ปัญหา', num:'',
+  title:'คุณเล่น<em>หมากรุก</em>อยู่<br>ในเกมที่เป็นโป๊กเกอร์',
+  body:'หมากรุกคือเกมข้อมูลสมบูรณ์ — เห็นกระดานครบ วางแผนได้ยาว แต่อัลกอริทึมไม่ให้คุณเห็นไพ่ของมัน คุณเล่นด้วยข้อมูลไม่ครบทุกวัน แล้วโทษตัวเองว่าวางแผนไม่ดีพอ' },
+
+{ x:0.330,h:0.29,sky:['#0a1614','#12241f'],chap:'EXTRACT',num:'01',
+  tag:'เสาที่ 1',
+  title:'EXTRACT',
+  body:'ขุดตัวตนจริงออกมาก่อน ไม่ใช่ตัวตนที่อัลกอริทึมสั่งให้เป็น',
+  list:['ถอดรื้อคอนเทนต์ย้อนหลังทั้งหมด หาจุดที่คนจำคุณได้จริง',
+        'แยกสิ่งที่คุณทำเพราะอยากทำ ออกจากสิ่งที่ทำเพราะยอด',
+        'หา 3 อย่างที่คุณพูดได้ดีกว่าคนอื่นในประเทศนี้'] },
+
+{ x:0.415,h:0.38,sky:['#0a1614','#132720'],chap:'สิ่งที่ขุดเจอ',
+  tag:'ผลจากเสาที่ 1',
+  title:'ของที่คุณ<em>ทิ้งไว้</em><br>มักคือของที่ใช่',
+  body:'ลูกค้าส่วนใหญ่มีคลิปที่ตัวเองชอบที่สุดอยู่แล้ว — แต่มันยอดไม่ดี เลยไม่ทำต่อ นั่นแหละคือจุดที่เราเริ่ม' },
+
+{ x:0.500,h:0.53,sky:['#16120c','#261d13'],chap:'ENGINEER',num:'02',
+  tag:'เสาที่ 2',
+  title:'ENGINEER',
+  body:'ออกแบบระบบให้ตัวตนนั้นทำงานกับอัลกอริทึมได้ โดยไม่ต้องยอมมัน',
+  list:['วางโครงคอนเทนต์ที่ผลิตซ้ำได้ ไม่ต้องรอแรงบันดาลใจ',
+        'จังหวะปล่อยที่คำนวณจากข้อมูลช่องคุณเอง',
+        'ระบบวัดผลที่บอกว่าอะไรได้ผล ไม่ใช่แค่อะไรยอดดี'] },
+
+{ x:0.585,h:0.60,sky:['#1a0f10','#2c1719'],chap:'เลิกหมากรุก เริ่มโป๊กเกอร์',
+  tag:'เปลี่ยนเกม',
+  title:'เลิกเดา<br>เริ่ม<em>อ่านกระดาน</em>',
+  body:'โป๊กเกอร์ไม่ได้ชนะด้วยไพ่ดี แต่ชนะด้วยการเดิมพันถูกขนาดเมื่อโอกาสเข้าข้าง — คอนเทนต์ก็เหมือนกัน คุณไม่ต้องถูกทุกคลิป คุณแค่ต้องลงหนักตอนที่รู้ว่าถืออะไรอยู่' },
+
+{ x:0.670,h:0.76,sky:['#1a1408','#2c2210'],chap:'ESTABLISH',num:'03',
+  tag:'เสาที่ 3',
+  title:'ESTABLISH',
+  body:'ปักหมุดเป็นดินแดนของตัวเอง — Micro-Sovereignty ที่ไม่มีใครปิดได้',
+  list:['ช่องทางที่คุณเป็นเจ้าของเอง ไม่ใช่เช่าเขาอยู่',
+        'ฐานคนที่ตามมาเพราะคุณ ไม่ใช่เพราะฟีดพามา',
+        'รายได้ที่ไม่ผูกกับยอดวิวเดือนต่อเดือน'] },
+
+{ x:0.760,h:0.86,sky:['#141a0c','#232c14'],chap:'Micro-Sovereignty',
+  tag:'เป้าหมาย',
+  title:'อาณาจักรเล็ก<br>ที่<em>ไม่มีใครปิดได้</em>',
+  body:'ไม่ต้องใหญ่ ขอแค่เป็นของคุณจริงๆ วันที่แพลตฟอร์มเปลี่ยนกติกา คุณจะเป็นคนที่ไม่ต้องเริ่มใหม่' },
+
+{ x:0.850,h:0.90,sky:['#0e1a13','#182a1d'],chap:'คุณชนะ เรายิ้ม',
+  tag:'ผลลัพธ์จริง',
+  title:'คุณชนะ. <em>เรายิ้ม.</em>',
+  list:['@ครัวหลังบ้าน โตจาก 8K เป็น 210K follower ใน 10 เดือน',
+        'คลิปแรกหลังปรับตัวตนของ @หมอยิ้มเล่าเคส แตะ 2.4M วิว',
+        '@สายเดินป่า ปิดดีลสปอนเซอร์รายปีรายแรก หลังปั้นตัวตนได้ 6 เดือน',
+        '@นักอ่านตัวยง เปิด membership เดือนแรกมีผู้สมัคร 1,200 คน',
+        'ลูกค้า Plan C รุ่นแรกทั้ง 12 คน ยังทำคอนเทนต์อยู่ครบทุกคน'] },
+
+{ x:0.935,h:0.93,sky:['#0f1214','#1e1a18'],chap:'คำสารภาพจากลูกค้า',
+  tag:'Client Confessions',
+  quote:'“เลิกเช่าพื้นที่อัลกอริทึม แล้วเริ่มสร้างที่ของตัวเอง — ประโยคเดียวที่เปลี่ยนทั้งปีของเรา”',
+  who:'— ลูกค้ารุ่นแรก' },
+
+{ x:1.000,h:0.97,sky:['#131010','#241d18'],chap:'จองเซสชันแรก',
+  tag:'ก้าวแรก',
+  title:'จอง<em>เซสชันแรก</em>',
+  body:'คุยกันหนึ่งชั่วโมง ว่ากระดานของคุณตอนนี้หน้าตาเป็นยังไง ไม่มีการขายอะไรทั้งนั้น',
+  cta:'เริ่มคุยกับเรา' }
+];
+
+/* ---------- ของที่วางบนเส้นทาง — เล่าเรื่องด้วยวัตถุ ---------- */
+const PROPS=[
+  // หมากรุกยุคแรก: ตั้งตรง แล้วล้มเมื่อแมวเดินผ่าน (เกมเก่าจบแล้ว)
+  {x:0.205,t:'pawn',  s:0.62,fall:1}, {x:0.245,t:'rook',s:0.80,fall:1},
+  {x:0.272,t:'pawn',  s:0.55,fall:1}, {x:0.300,t:'king',s:0.95,fall:1},
+  // เสาหลัก 3 ต้น
+  {x:0.330,t:'pillar',s:1.0,label:'01'},
+  {x:0.500,t:'pillar',s:1.0,label:'02'},
+  {x:0.670,t:'pillar',s:1.0,label:'03'},
+  // โป๊กเกอร์: ชิป + ไพ่ ลอยขึ้นเมื่อเข้าใกล้
+  {x:0.560,t:'chip',s:0.5,rise:1}, {x:0.583,t:'card',s:0.7,rise:1},
+  {x:0.602,t:'chip',s:0.62,rise:1},{x:0.622,t:'card',s:0.6,rise:1},
+  {x:0.640,t:'chip',s:0.44,rise:1},
+  // ดินแดน
+  {x:0.745,t:'tower',s:0.7},{x:0.775,t:'tower',s:1.0},{x:0.800,t:'tower',s:0.55},
+  {x:0.760,t:'flag', s:1.0},
+  // ปลายทาง
+  {x:1.000,t:'flag', s:1.25}
+];
+
+/* ---------- คณิตพื้นดิน ---------- */
+function heightAt(t){
+  t=Math.max(0,Math.min(1,t));
+  for(let i=0;i<STAGES.length-1;i++){
+    const a=STAGES[i],b=STAGES[i+1];
+    if(t>=a.x&&t<=b.x){
+      const u=(b.x-a.x)?(t-a.x)/(b.x-a.x):0;
+      return a.h+(b.h-a.h)*(u*u*(3-2*u));
+    }
+  }
+  return STAGES[STAGES.length-1].h;
+}
+let VW=0,VH=0,WORLD=0,BASE=0,CLIMB=0;
+const SCREEN_X=0.715;
+function groundY(t){ return BASE-heightAt(t)*CLIMB; }
+
+/* ---------- สี ---------- */
+function hex(c){return [parseInt(c.substr(1,2),16),parseInt(c.substr(3,2),16),parseInt(c.substr(5,2),16)];}
+function mix(a,b,u){const A=hex(a),B=hex(b);
+  return `rgb(${Math.round(A[0]+(B[0]-A[0])*u)},${Math.round(A[1]+(B[1]-A[1])*u)},${Math.round(A[2]+(B[2]-A[2])*u)})`;}
+function skyAt(t){
+  for(let i=0;i<STAGES.length-1;i++){
+    const a=STAGES[i],b=STAGES[i+1];
+    if(t>=a.x&&t<=b.x){
+      const u=(b.x-a.x)?(t-a.x)/(b.x-a.x):0, s=u*u*(3-2*u);
+      return [mix(a.sky[0],b.sky[0],s),mix(a.sky[1],b.sky[1],s)];
+    }
+  }
+  const L=STAGES[STAGES.length-1]; return [L.sky[0],L.sky[1]];
+}
+
+/* ======================================================================
+   สร้างฉาก
+   ====================================================================== */
+const $=s=>document.querySelector(s);
+const sky=$('#sky'),dust=$('#dust'),far=$('#far'),mid=$('#mid'),ground=$('#ground'),
+      props=$('#props'),copy=$('#copy'),cat=$('#cat'),
+      bar=$('#bar'),barFill=$('#bar i'),chap=$('#chap'),chapno=$('#chapno'),
+      pct=$('#pct'),hint=$('#hint');
+
+function mkSvg(w,h){const s=document.createElementNS(NS,'svg');
+  s.setAttribute('width',w);s.setAttribute('height',h);
+  s.setAttribute('viewBox',`0 0 ${w} ${h}`);s.style.display='block';return s;}
+function E(n,a,p){const e=document.createElementNS(NS,n);
+  for(const k in a)e.setAttribute(k,a[k]); if(p)p.appendChild(e); return e;}
+
+/* --- ฝุ่น/ดาว: จุดสุ่มแบบกำหนดเมล็ด ให้เหมือนเดิมทุกครั้ง --- */
+let seed=7;
+const rnd=()=>{seed=(seed*1103515245+12345)&0x7fffffff;return seed/0x7fffffff;};
+
+/* เลเยอร์พารัลแลกซ์ f เลื่อนแค่ f เท่าของระยะจริง →
+   กว้างแค่ f*(WORLD-VW)+VW พอ  และเนื้อหาที่พิกัด x จะถูกเห็นตอน cur = seenAt(x,f)
+   ถ้าไม่แปลงกลับ การจาง/รูปทรงจะไม่ตรงกับองก์ที่ผู้ใช้กำลังดู */
+const spanOf=f=>f*(WORLD-VW)+VW;
+const seenAt=(x,f)=>{const d=f*(WORLD-VW);return d>0?Math.max(0,Math.min(1,(x-VW/2)/d)):0;};
+
+function buildDust(){
+  seed=7; dust.innerHTML='';
+  const W=spanOf(0.16), s=mkSvg(W,VH);
+  for(let i=0;i<230;i++){
+    const x=rnd()*W, y=rnd()*VH*0.72, r=rnd()*1.5+0.35;
+    E('circle',{cx:x.toFixed(0),cy:y.toFixed(0),r:r.toFixed(2),
+      fill:'#f5f2e4','fill-opacity':(0.05+rnd()*0.22).toFixed(3)},s);
+  }
+  dust.appendChild(s);
+}
+
+/* --- ชั้นไกล: ตารางหมากรุกช่วงต้น แล้วจางเป็นเส้นกริดเรียบ --- */
+function buildFar(){
+  far.innerHTML='';
+  const W=spanOf(0.34), s=mkSvg(W,VH), c=Math.round(VH*0.09);
+  for(let x=0;x<W;x+=c){
+    const t=seenAt(x,0.34);
+    const chess=Math.max(0,1-Math.max(0,(t-0.20))/0.28);   // จางหายหลังเลิกหมากรุก
+    if(chess<=0.02) continue;
+    for(let y=VH*0.10;y<VH*0.95;y+=c)
+      if(((x/c|0)+(y/c|0))%2===0)
+        E('rect',{x,y,width:c,height:c,fill:'#f5f2e4',
+          'fill-opacity':(0.030*chess).toFixed(4)},s);
+  }
+  // เส้นกริดแนวตั้งบางๆ ตลอดทาง = ระบบที่เข้ามาแทน
+  for(let x=0;x<W;x+=c*2){
+    const t=seenAt(x,0.34), g=Math.min(1,Math.max(0,(t-0.34)/0.3));
+    if(g<=0.02) continue;
+    E('line',{x1:x,y1:0,x2:x,y2:VH,stroke:'#f5f2e4',
+      'stroke-opacity':(0.035*g).toFixed(4),'stroke-width':1},s);
+  }
+  far.appendChild(s);
+}
+
+/* --- ชั้นกลาง: เงาภูเขา/ตึกไกลๆ ให้มีความลึก --- */
+function buildMid(){
+  mid.innerHTML='';
+  const W=spanOf(0.58), s=mkSvg(W,VH);
+  seed=91;
+  let d=`M0,${VH}`;
+  const step=Math.round(VW*0.16);
+  for(let x=0;x<=W;x+=step){
+    const t=seenAt(x,0.58);
+    const base=VH-(0.10+heightAt(t)*0.30)*VH*0.62;
+    const jag=(rnd()-0.5)*VH*0.055;
+    d+=` L${x},${(base+jag).toFixed(0)}`;
+  }
+  d+=` L${W},${VH} Z`;
+  E('path',{d,fill:'#f5f2e4','fill-opacity':.035},s);
+  mid.appendChild(s);
+}
+
+/* --- พื้นดิน: เส้นกราฟเรืองแสง + พื้นที่ใต้กราฟ --- */
+function buildGround(){
+  ground.innerHTML='';
+  const s=mkSvg(WORLD,VH);
+  const defs=E('defs',{},s);
+  const lg=E('linearGradient',{id:'gfill',x1:0,y1:0,x2:0,y2:1},defs);
+  E('stop',{offset:'0%','stop-color':'#f0b32e','stop-opacity':.14},lg);
+  E('stop',{offset:'55%','stop-color':'#f0b32e','stop-opacity':.03},lg);
+  E('stop',{offset:'100%','stop-color':'#f0b32e','stop-opacity':0},lg);
+  const f=E('filter',{id:'glow',x:'-12%',y:'-60%',width:'124%',height:'320%'},defs);
+  E('feGaussianBlur',{stdDeviation:9,result:'b'},f);
+  const m=E('feMerge',{},f); E('feMergeNode',{in:'b'},m); E('feMergeNode',{in:'SourceGraphic'},m);
+
+  const N=Math.max(600,Math.round(WORLD/10));
+  let top='';
+  for(let i=0;i<=N;i++){
+    const t=i/N;
+    top+=(i?' L':'M')+(t*WORLD).toFixed(1)+','+groundY(t).toFixed(1);
+  }
+  E('path',{d:top+` L${WORLD},${VH} L0,${VH} Z`,fill:'url(#gfill)'},s);
+  E('path',{d:top,fill:'none',stroke:'#f0b32e','stroke-width':6,
+    'stroke-opacity':.20,filter:'url(#glow)'},s);
+  E('path',{d:top,fill:'none',stroke:'#f5f2e4','stroke-width':1.7,
+    'stroke-opacity':.92,'stroke-linecap':'round'},s);
+  // ขีดสเกลเหมือนแกนกราฟ
+  const tk=Math.round(WORLD/110);
+  for(let i=0;i<=110;i++){
+    const t=i/110,x=t*WORLD,y=groundY(t);
+    E('line',{x1:x,y1:y+7,x2:x,y2:y+15,stroke:'#f5f2e4',
+      'stroke-opacity':.13,'stroke-width':1},s);
+  }
+  ground.appendChild(s);
+}
+
+/* --- รูปทรงของประกอบ (พิกัด 0..100 กว้าง, ฐานอยู่ y=100) --- */
+function shape(type){
+  switch(type){
+    case 'pawn': return 'M50,8 A11,11 0 1,1 49.9,8 Z M39,26 Q50,32 61,26 L66,66 Q50,72 34,66 Z M26,100 L74,100 L69,84 L31,84 Z';
+    case 'rook': return 'M28,20 L34,20 L34,29 L42,29 L42,20 L58,20 L58,29 L66,29 L66,20 L72,20 L72,38 L65,44 L67,80 L33,80 L35,44 L28,38 Z M24,100 L76,100 L72,84 L28,84 Z';
+    case 'king': return 'M46,0 L54,0 L54,8 L62,8 L62,16 L54,16 L54,26 L46,26 L46,16 L38,16 L38,8 L46,8 Z M37,32 Q50,40 63,32 L68,68 Q50,76 32,68 Z M24,100 L76,100 L71,84 L29,84 Z';
+    case 'tower':return 'M30,100 L30,34 L38,34 L38,24 L46,24 L46,34 L54,34 L54,20 L62,20 L62,34 L70,34 L70,100 Z';
+    default: return '';
+  }
+}
+function buildProps(){
+  props.innerHTML='';
+  const s=mkSvg(WORLD,VH);
+  const defs=E('defs',{},s);
+  const f=E('filter',{id:'pglow',x:'-70%',y:'-70%',width:'240%',height:'240%'},defs);
+  E('feGaussianBlur',{stdDeviation:6},f);
+
+  PROPS.forEach((p,i)=>{
+    const x=p.x*WORLD, y=groundY(p.x);
+    const g=E('g',{'data-i':i,'data-x':p.x},s);
+    g.style.transformOrigin=`${x}px ${y}px`;
+    g.style.transition='transform .8s cubic-bezier(.3,1.4,.5,1), opacity .6s';
+
+    if(p.t==='pillar'){
+      const h=VH*0.30*p.s;
+      E('rect',{x:x-1.5,y:y-h,width:3,height:h,fill:'#f5f2e4','fill-opacity':.22},g);
+      E('circle',{cx:x,cy:y-h,r:14,fill:'#f0b32e','fill-opacity':.18,filter:'url(#pglow)'},g);
+      E('circle',{cx:x,cy:y-h,r:5.5,fill:'#f0b32e'},g);
+      const tx=E('text',{x:x+16,y:y-h+5,fill:'#f0b32e','font-size':13,
+        'font-family':'Segoe UI, sans-serif','font-weight':700,'letter-spacing':2},g);
+      tx.textContent=p.label;
+    }
+    else if(p.t==='flag'){
+      const h=VH*0.20*p.s;
+      E('rect',{x:x-1.5,y:y-h,width:3,height:h,fill:'#f5f2e4','fill-opacity':.5},g);
+      E('path',{d:`M${x+1.5},${y-h} L${x+58*p.s},${y-h+13*p.s} L${x+1.5},${y-h+26*p.s} Z`,
+        fill:'#f0b32e','fill-opacity':.85},g);
+    }
+    else if(p.t==='chip'){
+      const r=VH*0.05*p.s;
+      E('circle',{cx:x,cy:y-r*1.15,r,fill:'none',stroke:'#f0b32e',
+        'stroke-width':2,'stroke-opacity':.65},g);
+      E('circle',{cx:x,cy:y-r*1.15,r:r*0.58,fill:'none',stroke:'#f0b32e',
+        'stroke-width':1.2,'stroke-opacity':.4,'stroke-dasharray':'4 5'},g);
+    }
+    else if(p.t==='card'){
+      const w=VH*0.055*p.s,h=w*1.42;
+      E('rect',{x:x-w/2,y:y-h,width:w,height:h,rx:w*0.10,fill:'none',
+        stroke:'#f5f2e4','stroke-width':1.5,'stroke-opacity':.55,
+        transform:`rotate(${(i%2?-11:9)} ${x} ${y})`},g);
+    }
+    else{
+      const h=VH*0.155*p.s, w=h;
+      E('path',{d:shape(p.t),fill:'#f5f2e4','fill-opacity':p.t==='tower'?.10:.30,
+        transform:`translate(${x-w/2} ${y-h}) scale(${w/100} ${h/100})`},g);
+    }
+  });
+  props.appendChild(s);
+}
+
+function buildCopy(){
+  copy.innerHTML='';
+  STAGES.forEach((st,i)=>{
+    const d=document.createElement('div');
+    d.className='panel';
+    d.style.left=(st.x*(WORLD-VW)*0.94)+'px';
+    d.style.width=VW+'px';
+    // ยกข้อความให้ลอยเหนือพื้นเสมอ — พอกราฟไต่ขึ้น ข้อความต้องขึ้นตาม ไม่งั้นเส้นพาดทับ
+    d.style.paddingBottom=(heightAt(st.x)*CLIMB+VH*0.13)+'px';
+    d.innerHTML =
+      (st.num?`<span class="num">${st.num}</span>`:'')+
+      `<span class="tag${st.tag.length>26?' long':''}">${st.tag}</span>`+
+      (st.title?`<h2>${st.title}</h2>`:'')+
+      (st.quote?`<div class="quote">${st.quote}</div>`:'')+
+      (st.body?`<p>${st.body}</p>`:'')+
+      (st.list?`<ul>${st.list.map(x=>`<li>${x}</li>`).join('')}</ul>`:'')+
+      (st.who?`<div class="who">${st.who}</div>`:'')+
+      (st.cta?`<span class="cta">${st.cta} &nbsp;→</span>`:'');
+    copy.appendChild(d);
+  });
+}
+
+function buildHud(){
+  bar.querySelectorAll('b').forEach(b=>b.remove());
+  STAGES.forEach(st=>{
+    const b=document.createElement('b');
+    b.style.left=(st.x*100)+'%'; bar.appendChild(b);
+  });
+}
+
+/* ---------- แมว ---------- */
+const INK_BOT=406.5/624, INK_H=(406.5-166.1)/624;   // วัดจาก getBBox จริงของ rig
+let rig=null,CAT=110;
+function buildCat(){
+  CAT=Math.round(Math.max(58,Math.min(122,VH*0.132))/INK_H);
+  cat.style.width=CAT+'px'; cat.style.height=CAT+'px';
+  if(!rig&&window.PlanCRig){
+    rig=window.PlanCRig.mount($('#rigbox'),{coat:'#f5f2e4',openMs:1600,hitArea:cat});
+    cat.style.pointerEvents='auto'; cat.style.cursor='pointer';
+  }
+}
+
+/* ======================================================================
+   ลูป
+   ====================================================================== */
+let target=0,cur=0,dist=0,last=0;
+
+function layout(){
+  VW=innerWidth; VH=innerHeight;
+  WORLD=Math.round(VW*(STAGES.length*0.95));
+  BASE=VH*0.845; CLIMB=VH*0.47;
+  document.body.style.setProperty('--scroll-h',Math.round(WORLD*0.95)+'px');
+  buildDust();buildFar();buildMid();buildGround();buildProps();buildCopy();buildHud();buildCat();
+}
+function onScroll(){
+  const m=document.body.scrollHeight-innerHeight;
+  target=m>0?scrollY/m:0;
+}
+
+const propG=()=>props.querySelectorAll('g[data-i]');
+let propEls=[];
+
+function frame(){
+  cur+=(target-cur)*0.082;
+  const travel=cur*(WORLD-VW);
+  const speed=Math.abs(cur-last)*(WORLD-VW);
+  dist+=speed; last=cur;
+
+  const [c0,c1]=skyAt(cur);
+  sky.style.background=`linear-gradient(175deg,${c0} 0%,${c1} 100%)`;
+
+  dust.style.transform  =`translate3d(${-travel*0.16}px,0,0)`;
+  far.style.transform   =`translate3d(${-travel*0.34}px,0,0)`;
+  mid.style.transform   =`translate3d(${-travel*0.58}px,0,0)`;
+  ground.style.transform=`translate3d(${-travel}px,0,0)`;
+  props.style.transform =`translate3d(${-travel}px,0,0)`;
+  copy.style.transform  =`translate3d(${-travel*0.94}px,0,0)`;
+
+  // แมวเกาะเส้นพอดี
+  const catT=WORLD?(travel+VW*SCREEN_X)/WORLD:0;
+  const gy=groundY(catT);
+  const dx=VW*0.004;
+  const slope=Math.atan2(groundY(catT+dx/WORLD)-groundY(catT-dx/WORLD),dx*2)*180/Math.PI;
+  const bob=Math.sin(dist/25)*Math.min(7,speed*0.5);
+  const lean=Math.max(-9,Math.min(9,(target-cur)*88));
+  cat.style.transform=
+    `translate3d(${VW*SCREEN_X-CAT*0.5}px,${gy-CAT*INK_BOT+bob}px,0) `+
+    `rotate(${(slope*0.55+lean*0.4).toFixed(2)}deg)`;
+
+  // ของบนเส้นทางตอบสนอง: หมากรุกล้มหลังแมวผ่าน · ชิป/ไพ่ลอยขึ้นตอนเข้าใกล้
+  for(let i=0;i<propEls.length;i++){
+    const el=propEls[i],p=PROPS[i],d=catT-p.x;
+    if(p.fall)      el.style.transform = d>0 ? 'rotate(78deg) translateY(4px)' : 'none';
+    else if(p.rise){const n=Math.max(0,1-Math.abs(d)/0.055);
+                    el.style.transform=`translateY(${((1-n)*40).toFixed(1)}px)`;
+                    el.style.opacity=(0.15+n*0.85).toFixed(2);}
+  }
+
+  // แผงข้อความ
+  const ps=copy.children; let near=0,nd=9;
+  for(let i=0;i<ps.length;i++){
+    const dd=Math.abs(STAGES[i].x-cur);
+    if(dd<nd){nd=dd;near=i;}
+    const o=Math.max(0,1-Math.pow(dd/0.058,2));
+    ps[i].style.opacity=o.toFixed(3);
+    for(let k=0;k<ps[i].children.length;k++){
+      ps[i].children[k].style.opacity=o.toFixed(3);
+      ps[i].children[k].style.transform=`translateY(${((1-o)*30).toFixed(1)}px)`;
+    }
+  }
+  chap.textContent=STAGES[near].chap;
+  chapno.textContent=String(near+1).padStart(2,'0')+' / '+String(STAGES.length).padStart(2,'0');
+  bar.querySelectorAll('b').forEach((b,i)=>b.classList.toggle('on',i<=near));
+  barFill.style.width=(cur*100).toFixed(1)+'%';
+  pct.textContent=Math.round(cur*100)+'%';
+  hint.style.opacity=cur>0.008?0:1;
+
+  requestAnimationFrame(frame);
+}
+
+addEventListener('resize',()=>{layout();propEls=[...propG()];onScroll();});
+addEventListener('scroll',onScroll,{passive:true});
+layout(); propEls=[...propG()]; onScroll(); cur=target; last=target;
+requestAnimationFrame(frame);
+
+window.__planc={STAGES,PROPS,heightAt,get cur(){return cur;},get world(){return WORLD;}};
+})();
+</script>
+</body>
+</html>

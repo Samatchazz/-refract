@@ -1,0 +1,155 @@
+{
+  "meta": {
+    "source": "xxix.co /work/aplos (Sanity CMS) — REFERENCE ONLY, replace before use"
+  },
+  "name": "Aplós",
+  "hero": {
+    "kind": "image",
+    "src": "assets/img/4660cc169018792eda7f974b9cd6f97c90c20529-2160x2160.png"
+  },
+  "modules": [
+    {
+      "type": "intro",
+      "heading": "APLÓS",
+      "details": [
+        {
+          "copy": "Brief",
+          "font": "sans-serif"
+        },
+        {
+          "copy": "Create an elevated digital experience and flexible e-commerce solution that can adapt to the evolving needs of Aplós and the growing audience for non-alcoholic drinks.<br><br>",
+          "font": "serif"
+        },
+        {
+          "copy": "Solution",
+          "font": "sans-serif"
+        },
+        {
+          "copy": "The site evokes natural luxury. Influenced by an editorial balance between expansive and intimate photography, the layouts invite the curious to sit, stay a while, and consider something new.",
+          "font": "serif"
+        }
+      ],
+      "callouts": [
+        {
+          "copy": "Website Design<br><br>\n",
+          "font": "serif"
+        },
+        {
+          "copy": "Branding, Creative Direction & Product Design<br>\n[Pure Magenta](https://www.instagram.com/puremagenta/?hl=en)<br><br>",
+          "font": "serif"
+        },
+        {
+          "copy": "Development<br>\n[gardener.nyc](https://gardener.nyc/)\n<br><br>",
+          "font": "serif"
+        },
+        {
+          "copy": "Campaign & Photography Creative Direction<br>\nAnia et Lucie<br><br>",
+          "font": "serif"
+        },
+        {
+          "copy": "Renders<br>\nNeil Jackson",
+          "font": "serif"
+        }
+      ],
+      "media": {
+        "kind": "image",
+        "src": "assets/img/bab1df4d268bec0e3b779641f2acc40c2181deab-1440x1800.jpg"
+      },
+      "link": "https://www.aplos.world/"
+    },
+    {
+      "type": "oneUp",
+      "media": {
+        "kind": "video",
+        "src": "assets/video/ace388fa92b3371df4ebef75d0a8cf29d88812e1.mp4"
+      }
+    },
+    {
+      "type": "oneUp",
+      "media": {
+        "kind": "image",
+        "src": "assets/img/3c8785e7f3197b760a92f0246fe3dc3bfd993498-2880x1800.jpg"
+      }
+    },
+    {
+      "type": "oneUp",
+      "media": {
+        "kind": "video",
+        "src": "assets/video/34c3f361bc9e497039271fcba1bfba02d936a074.mp4"
+      }
+    },
+    {
+      "type": "oneUp",
+      "media": {
+        "kind": "image",
+        "src": "assets/img/b8ba31a5c287e691dba46599ba0f9347a8effd2d-2880x1800.jpg"
+      }
+    },
+    {
+      "type": "oneUp",
+      "media": {
+        "kind": "video",
+        "src": "assets/video/9e2aeeed3455ef03060965270cd75ee6c8db16b0.mp4"
+      }
+    },
+    {
+      "type": "twoUp",
+      "left": {
+        "media": {
+          "kind": "video",
+          "src": "assets/video/fdd7e09784917e00262711611e901efa092323b4.mp4"
+        },
+        "caption": null,
+        "link": null
+      },
+      "right": {
+        "media": {
+          "kind": "image",
+          "src": "assets/img/0d5a2677add4dd90384822bcacdd80123104b984-1440x1800.jpg"
+        },
+        "caption": null,
+        "link": null
+      }
+    },
+    {
+      "type": "oneUp",
+      "media": {
+        "kind": "video",
+        "src": "assets/video/5f70ce900a15271bc4448f16b0324bfdfbd634ec.mp4"
+      }
+    },
+    {
+      "type": "oneUp",
+      "media": {
+        "kind": "video",
+        "src": "assets/video/7157f99ffd451f86157528818a8c3b59d7f1bcc9.mp4"
+      }
+    },
+    {
+      "type": "oneUp",
+      "media": {
+        "kind": "video",
+        "src": "assets/video/b381b4c78f9e159775bb1b531a21c685bb82c095.mp4"
+      }
+    },
+    {
+      "type": "twoUp",
+      "left": {
+        "media": {
+          "kind": "image",
+          "src": "assets/img/711aa8a4d5e6b2205fc2df08fbcffee3fa7eec71-1440x1800.jpg"
+        },
+        "caption": null,
+        "link": null
+      },
+      "right": {
+        "media": {
+          "kind": "video",
+          "src": "assets/video/3d6636570d1530ba98f3836403cf241daf2bd862.mp4"
+        },
+        "caption": null,
+        "link": null
+      }
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+[
+  {
+    "claim": "An intermediary market of self-styled algorithmic experts sells optimisation advice, analytics and services to creators for fees and percentages, imposing an unmeasured drag on net creator income that gross-earnings statistics ignore.",
+    "stance": "supports",
+    "stance_target": "The claim that gross creator earnings systematically overstate net creator income because of unrecorded costs paid to intermediaries",
+    "evidence_type": "empirical",
+    "scope_conditions": "YouTube, UK/US ecosystem, three years of ethnographic fieldwork published 2020; qualitative, no sample size given for the expert population and no cost figures quantified; WESTERN-ONLY",
+    "quoted_support": "advertising, brand deals, and analytics in return for a percent-",
+    "numbers": ["three years of fieldwork", "no cost figures quantified"],
+    "entities": ["YouTube", "Sophie Bishop", "MatPat"],
+    "time_period": "circa 2017-2020",
+    "region": "United Kingdom and United States",
+    "confidence": "low",
+    "source_note_id": "kings-research-portal"
+  },
+  {
+    "claim": "Algorithmic-expert discourse frames platform visibility as meritocratic and offers only individualised solutions, so creators who fail are supplied with an explanatory frame that attributes failure to their own insufficient optimisation rather than to structural distribution.",
+    "stance": "refutes",
+    "stance_target": "The reliability of creator self-reported quit reasons, which are shaped by an industry discourse that systematically relocates causation from platform structure to individual effort",
+    "evidence_type": "empirical",
+    "scope_conditions": "YouTube, UK/US, ethnographic study published 2020; interpretive claim from qualitative fieldwork, not a measured effect on reported quit reasons; WESTERN-ONLY",
+    "quoted_support": "their meritocratic framing offers only individualized solutions that ignore systemic inequalities on social media platforms",
+    "numbers": ["3 years fieldwork"],
+    "entities": ["YouTube", "Sophie Bishop"],
+    "time_period": "2017-2020",
+    "region": "United Kingdom and United States",
+    "confidence": "medium",
+    "source_note_id": "kings-research-portal"
+  },
+  {
+    "claim": "Creators lack visibility into their own audience composition, as illustrated by a creator discovering her audience was 90% men despite content aimed elsewhere -- so creator-reported explanations of performance are built on incomplete information.",
+    "stance": "supports",
+    "stance_target": "The claim that creators cannot accurately diagnose why their content does or does not monetise, which undermines the evidentiary value of self-reported quit reasons",
+    "evidence_type": "anecdotal",
+    "scope_conditions": "YouTube, single case within a qualitative ethnography; WESTERN-ONLY",
+    "quoted_support": "the audience was 90% men. She was frustrated: How could",
+    "numbers": ["90% male audience", "1 case"],
+    "entities": ["YouTube"],
+    "time_period": "2017-2020",
+    "region": "United Kingdom and United States",
+    "confidence": "low",
+    "source_note_id": "kings-research-portal"
+  }
+]

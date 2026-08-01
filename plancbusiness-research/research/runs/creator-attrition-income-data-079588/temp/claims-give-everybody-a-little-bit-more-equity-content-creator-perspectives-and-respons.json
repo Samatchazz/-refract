@@ -1,0 +1,72 @@
+[
+  {
+    "claim": "Kingsley et al. (2022) interviewed 20 YouTube creators (recruited from a screening pool that explicitly included both current and former creators) about demonetization but the resulting paper contains zero references to creators quitting, stopping, giving up, leaving the platform, or burnout.",
+    "stance": "supports",
+    "stance_target": "the absence of any instrument in the creator-economy literature that surveys people who have already quit content creation about their reasons",
+    "evidence_type": "empirical",
+    "scope_conditions": "YouTube creators, US-centric with some international respondents, screening survey Aug-Sep 2021",
+    "quoted_support": "Full-text keyword search for \"quit,\" \"stopped creating,\" \"gave up,\" \"left the platform,\" and \"burnout\" returned zero hits in the 37-page paper, despite recruiting eligibility explicitly including \"a current or former YouTube creator.\"",
+    "numbers": ["20 interviews", "60 of 66 screening respondents were current/former YouTube creators", "37 eligible invited, 20 completed"],
+    "entities": ["Sara Kingsley", "YouTube", "Carnegie Mellon University"],
+    "time_period": "screening Aug 2, 2021 - Sep 6, 2021; published November 2022",
+    "region": "primarily USA, also Belgium, Malaysia, Pakistan, UK among survey respondents",
+    "confidence": "high",
+    "source_note_id": "give-everybody-a-little-bit-more-equity-content-creator-perspectives-and-respons"
+  },
+  {
+    "claim": "Creators interviewed by Kingsley et al. described YouTube ad income as fundamentally unpredictable and proposed a platform-provided minimum/base payment, health insurance benefits, and a labor union as concrete fixes for income insecurity.",
+    "stance": "supports",
+    "stance_target": "creators framing income unpredictability as a structural, employment-like harm",
+    "evidence_type": "anecdotal",
+    "scope_conditions": "20 YouTube creator interviews, 2021",
+    "quoted_support": "\"When you reach a certain threshold or like you get a certain number of views, you should just have a base income. That would be a good idea, because then it would be a more reliable source of income\" (P16).",
+    "numbers": ["$8,000 per sponsored video (one creator's reported lost sponsor income)"],
+    "entities": ["YouTube", "YouTube Partner Program"],
+    "time_period": "2021",
+    "region": "USA and international",
+    "confidence": "medium",
+    "source_note_id": "give-everybody-a-little-bit-more-equity-content-creator-perspectives-and-respons"
+  },
+  {
+    "claim": "Creators in the study explicitly frame their economic position as structurally akin to gig-economy workers who lack adequate mechanisms to protect against economic harms from algorithmic decisions.",
+    "stance": "supports",
+    "stance_target": "parallel between content-creator income precarity and gig-economy worker precarity",
+    "evidence_type": "theoretical",
+    "scope_conditions": "YouTube creators, demonetization context, 2021-2022",
+    "quoted_support": "\"content creators are akin to the millions of gig economy workers who lack adequate mechanisms to protect them against economic harms of their work\"",
+    "numbers": [],
+    "entities": ["YouTube", "gig economy"],
+    "time_period": "2022",
+    "region": "USA-centric",
+    "confidence": "high",
+    "source_note_id": "give-everybody-a-little-bit-more-equity-content-creator-perspectives-and-respons"
+  },
+  {
+    "claim": "The demographic/socioeconomic survey accompanying the interviews (n=21) found a gap between creators reporting they had ever earned money from YouTube content and those reporting how much, with only 17 of the sample confirming they had earned income from creating YouTube content.",
+    "stance": "neutral",
+    "stance_target": "extent of monetization among YouTube creator study samples",
+    "evidence_type": "statistical",
+    "scope_conditions": "21 survey respondents, YouTube creators, 2021",
+    "quoted_support": "\"17 respondents said they had earned money for creating YouTube content. Of these, 12 reported...\"",
+    "numbers": ["21 survey respondents", "17 reported earning money from YouTube content"],
+    "entities": ["YouTube"],
+    "time_period": "2021",
+    "region": "USA and international",
+    "confidence": "medium",
+    "source_note_id": "give-everybody-a-little-bit-more-equity-content-creator-perspectives-and-respons"
+  },
+  {
+    "claim": "Interviewees were skeptical that a content-creator labor union could succeed against YouTube, citing a prior failed German union effort and a suspected scam 'creator union' that charged fees without delivering results.",
+    "stance": "refutes",
+    "stance_target": "feasibility of collective bargaining as a near-term solution to creator income insecurity",
+    "evidence_type": "anecdotal",
+    "scope_conditions": "single creator interview accounts, 2021",
+    "quoted_support": "\"they created this creator Union thing that you had to pay, you know $60 a year to be a part of, and they would lobby YouTube and they made all these grand promises and then they did nothing\" (P9).",
+    "numbers": ["$60/year union membership fee cited"],
+    "entities": ["YouTube", "IG Metall (German labor union)"],
+    "time_period": "2021",
+    "region": "Germany (cited example), USA (main interviews)",
+    "confidence": "medium",
+    "source_note_id": "give-everybody-a-little-bit-more-equity-content-creator-perspectives-and-respons"
+  }
+]

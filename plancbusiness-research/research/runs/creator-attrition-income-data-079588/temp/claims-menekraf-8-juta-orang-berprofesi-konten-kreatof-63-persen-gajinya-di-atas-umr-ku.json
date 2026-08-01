@@ -1,0 +1,72 @@
+[
+  {
+    "claim": "Indonesia's Minister of Creative Economy asserted that 8 million of Indonesia's 17 million content creators now treat content creation as their main profession, with no disclosed methodology.",
+    "stance": "neutral",
+    "stance_target": "size of Indonesia's professional content-creator population",
+    "evidence_type": "expert-opinion",
+    "scope_conditions": "Indonesia, national, as of ministerial speech (no year stated in article body, event dated 18/12)",
+    "quoted_support": "\"Jadi 8 juta di Indonesia profesinya adalah konten kreator.\" (\"So 8 million in Indonesia have content creator as their profession.\")",
+    "numbers": ["8,000,000 creators with content creation as main profession", "17,000,000 total content creators"],
+    "entities": ["Teuku Riefky Harsya", "Kementerian Ekonomi Kreatif (Kemenekraf)"],
+    "time_period": "undated ministerial speech, likely December 2024/2025",
+    "region": "Indonesia",
+    "confidence": "low",
+    "source_note_id": "menekraf-8-juta-orang-berprofesi-konten-kreatof-63-persen-gajinya-di-atas-umr-ku"
+  },
+  {
+    "claim": "The Menekraf claimed 63% of Indonesia's 8 million professional content creators earn more than the regional minimum wage (UMR), with no methodology, sample, or data source disclosed.",
+    "stance": "supports",
+    "stance_target": "high share of Indonesian creators earning above minimum wage",
+    "evidence_type": "expert-opinion",
+    "scope_conditions": "Indonesia, national, undated ministerial claim, no survey methodology given",
+    "quoted_support": "\"Dan juga 63 persen di antaranya mendapatkan penghasilan lebih dari UMR.\" (\"And also 63 percent of them earn income above the UMR.\")",
+    "numbers": ["63%"],
+    "entities": ["Teuku Riefky Harsya", "Kemenekraf", "UMR (Upah Minimum Regional)"],
+    "time_period": "undated ministerial speech",
+    "region": "Indonesia",
+    "confidence": "low",
+    "source_note_id": "menekraf-8-juta-orang-berprofesi-konten-kreatof-63-persen-gajinya-di-atas-umr-ku"
+  },
+  {
+    "claim": "Kemenekraf's internal monitoring reportedly tracked over 1,100 Indonesian content creators with a combined 3.1 billion YouTube subscribers, with no methodology disclosed for how creators or subscriber totals were counted.",
+    "stance": "neutral",
+    "stance_target": "scale of tracked Indonesian YouTube creator ecosystem",
+    "evidence_type": "expert-opinion",
+    "scope_conditions": "Indonesia, YouTube platform, ministry internal survey, undated",
+    "quoted_support": "\"terdapat terhadap data konten kreator nasional, tercatat lebih dari 1.100 konten kreator telah muncul dengan subscriber mencapai totalnya mencapai 3,1 miliar\" (\"national content creator data recorded more than 1,100 content creators with subscribers totaling 3.1 billion\")",
+    "numbers": ["1,100+ tracked creators", "3.1 billion combined subscribers"],
+    "entities": ["Kemenekraf", "YouTube"],
+    "time_period": "undated",
+    "region": "Indonesia",
+    "confidence": "low",
+    "source_note_id": "menekraf-8-juta-orang-berprofesi-konten-kreatof-63-persen-gajinya-di-atas-umr-ku"
+  },
+  {
+    "claim": "The YouTube ecosystem in Indonesia was reported by the Menekraf to contribute approximately Rp7.4 trillion to national GDP and create over 400,000 jobs, with no methodology cited.",
+    "stance": "neutral",
+    "stance_target": "economic contribution of YouTube in Indonesia",
+    "evidence_type": "expert-opinion",
+    "scope_conditions": "Indonesia, YouTube ecosystem, undated",
+    "quoted_support": "\"ekosistem YouTube yang telah berkontribusi sekitar Rp7,4 triliun terhadap Produk Domestik Bruto (PDB) nasional dan menciptakan lebih dari 400 ribu lapangan pekerjaan\"",
+    "numbers": ["Rp 7.4 trillion GDP contribution", "400,000+ jobs created"],
+    "entities": ["YouTube", "Kemenekraf"],
+    "time_period": "undated",
+    "region": "Indonesia",
+    "confidence": "low",
+    "source_note_id": "menekraf-8-juta-orang-berprofesi-konten-kreatof-63-persen-gajinya-di-atas-umr-ku"
+  },
+  {
+    "claim": "Kemenekraf projects Indonesia's content-creator population will grow 3-5x within six years, motivating creation of a new Direktorat Konten Digital.",
+    "stance": "neutral",
+    "stance_target": "future growth trajectory of Indonesia's creator economy",
+    "evidence_type": "expert-opinion",
+    "scope_conditions": "Indonesia, forward-looking ministerial projection, no base year given",
+    "quoted_support": "\"Kemenekraf memperkirakan pertumbuhan 3 hingga 5 kali lipat dalam enam tahun ke depan.\"",
+    "numbers": ["3x to 5x growth over 6 years"],
+    "entities": ["Kemenekraf", "Direktorat Konten Digital"],
+    "time_period": "6-year forward projection from undated speech",
+    "region": "Indonesia",
+    "confidence": "low",
+    "source_note_id": "menekraf-8-juta-orang-berprofesi-konten-kreatof-63-persen-gajinya-di-atas-umr-ku"
+  }
+]

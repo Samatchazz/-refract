@@ -1,0 +1,568 @@
+<!doctype html>
+<!-- PlanC — PICKSET M4-T*(PATH A)-A5-B2-C1-D2-E1-P2-G2-K3-F1-Q2-H1-I1-J1-L3 -->
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+<title>PlanC — สร้างตัวตนที่เป็นของคุณ | ที่ปรึกษา 1:1 สำหรับครีเอเตอร์</title>
+<meta name="description" content="ที่ปรึกษา 1:1 โดยอินฟลูเอนเซอร์ที่ยังลงสนามจริง หยุดวิ่งตามเทรนด์ ขุดตัวตน วิศวกรรมอัลกอริทึมรอบสิ่งที่คุณเป็น แล้วสร้างอาณาจักรของตัวเอง จองคุยฟรี 30 นาที">
+<link rel="canonical" href="https://planc.example/">
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="th_TH">
+<meta property="og:site_name" content="PlanC">
+<meta property="og:url" content="https://planc.example/">
+<meta property="og:title" content="เทรนด์มาแล้วก็ไป ตัวตนอยู่ต่อ">
+<meta property="og:description" content="EXTRACT · ENGINEER · ESTABLISH — สามขั้นจากใครก็ได้ สู่ตัวจริง">
+<!-- slot-og-image 1200×630 -->
+<meta property="og:image" content="assets/slot-og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+
+<!-- favicon: SVG, theme tokens only, no file -->
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23ffffff'/%3E%3Crect x='4' y='23' width='24' height='4' fill='%23FF9398'/%3E%3Ctext x='16' y='20' font-family='sans-serif' font-size='19' font-weight='700' text-anchor='middle' fill='%23111111'%3EC%3C/text%3E%3C/svg%3E">
+
+<!-- FONT LOADING (PATH A) — the ONLY place font files are referenced.
+     Swapping to PATH B (Aperçu Thai Pro / Thonglor Soi 4) = replace this block
+     + the two --font-* tokens in style.css. No JS knows a font name. -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;500;700&family=Anuphan:wght@100..700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;500;700&family=Anuphan:wght@100..700&display=swap">
+
+<link rel="stylesheet" href="style.css">
+<script>document.documentElement.className += ' js';</script>
+</head>
+<body>
+
+<!-- ══ [I1] PRELOADER ══ JS-only. Without JS this element never displays. ══ -->
+<div class="pre" id="pre" aria-hidden="true">
+  <div class="pre__stage">
+    <span class="pre__word" id="preWord"></span>
+    <svg class="pre__strike" id="preStrike" viewBox="0 0 100 2" preserveAspectRatio="none" aria-hidden="true">
+      <line x1="0" y1="1" x2="100" y2="1" />
+    </svg>
+  </div>
+</div>
+
+<!-- ══ [B2] BACK PARALLAX LAYER — trend words, 1.15×, blur, .35 ══ -->
+<div class="px-back" id="pxBack" aria-hidden="true"></div>
+
+<!-- ══ [L3] CURSOR TRAIL LAYER ══ -->
+<div class="trail" id="trail" aria-hidden="true"></div>
+
+<!-- ══ [J1] NAV ══ -->
+<header class="nav" id="nav">
+  <a class="nav__mark" href="#s1"><span data-c="brand">PlanC</span></a>
+  <nav class="nav__links" aria-label="เมนูหลัก">
+    <a href="#s1" data-c="nav.0">เราคือใคร</a>
+    <a href="#s6" data-c="nav.1">สามขั้น</a>
+    <a href="#s3" data-c="nav.2">ผลงาน</a>
+    <a href="#s8" data-c="nav.3">จองเลย</a>
+  </nav>
+  <button class="nav__burger" id="burger" type="button" aria-expanded="false" aria-controls="navOverlay" aria-label="เปิดเมนู">
+    <span></span><span></span>
+  </button>
+</header>
+
+<div class="navov" id="navOverlay" hidden>
+  <nav class="navov__list" aria-label="เมนู">
+    <a href="#s1" data-c="nav.0">เราคือใคร</a>
+    <a href="#s6" data-c="nav.1">สามขั้น</a>
+    <a href="#s3" data-c="nav.2">ผลงาน</a>
+    <a href="#s8" data-c="nav.3">จองเลย</a>
+  </nav>
+  <button class="navov__close" id="navClose" type="button">ปิด</button>
+</div>
+
+<main id="main">
+
+<!-- ════════ 1 · เราคือใคร (HERO) — [A5] ════════ -->
+<section class="s s1" id="s1" aria-labelledby="h1">
+  <div class="wrap wrap--grid">
+
+    <p class="mark px-front"><span lang="en">01 / 08</span> · <span data-c="sections.1.kicker">เราคือใคร</span></p>
+
+    <h1 class="hl" id="h1" data-specimen>
+      <span class="hl__line" data-c="hero.lines.0">สร้างตัวตน</span>
+      <span class="hl__line" data-c="hero.lines.1">ที่เป็นของคุณ</span>
+      <span class="hl__line" data-c="hero.lines.2">ไม่ใช่ของเทรนด์</span>
+    </h1>
+
+    <div class="s1__lower">
+      <div class="s1__lead">
+    <p class="sub" data-c="hero.sub">ที่ปรึกษา 1:1 สำหรับครีเอเตอร์ที่เบื่อการวิ่งตามเทรนด์ ดูแลโดยอินฟลูเอนเซอร์ที่ยังลงสนามอยู่ทุกวัน ไม่ใช่นักทฤษฎี</p>
+
+    <p class="en" lang="en" data-c="hero.en">EN: stop chasing. start being.</p>
+
+    <!-- [C1] dual-voice #5 -->
+    <p class="voice-line">
+      <button class="voice" type="button" aria-expanded="false" data-voice="4">
+        <span class="voice__a" data-c="voicePairs.4.0">บริการที่ปรึกษาแบบตัวต่อตัว</span>
+        <span class="voice__mask"><span class="voice__b" data-c="voicePairs.4.1">คุยกันสองคน ไม่มีสไลด์ ไม่มีศัพท์สวยๆ</span></span>
+      </button>
+    </p>
+
+      </div>
+
+    <!-- [A5] type-specimen control panel -->
+    <div class="spec" role="group" aria-labelledby="specLabel">
+      <p class="spec__label mono" id="specLabel">
+        <span lang="en">TYPE SPECIMEN</span> · <span data-c="hero.specimen.label">ลองปรับดู — นี่คือฟอนต์จริงของเว็บนี้</span>
+      </p>
+      <div class="spec__row">
+        <label class="spec__ctl spec__ctl--stops" for="specWeight">
+          <span class="mono"><span lang="en">WEIGHT</span> <output id="specWeightOut" for="specWeight">500</output></span>
+          <input type="range" id="specWeight" min="0" max="2" step="1" value="1"
+                 aria-describedby="specWeightHint">
+          <span class="spec__stops" aria-hidden="true"><span>400</span><span>500</span><span>700</span></span>
+          <span class="spec__hint mono" id="specWeightHint" data-c="hero.specimen.weightHint">3 ระดับ — ฟอนต์หัวเรื่องเป็นแบบสแตติก</span>
+        </label>
+        <label class="spec__ctl" for="specSize">
+          <span class="mono"><span lang="en">SIZE</span> <output id="specSizeOut" for="specSize">64</output><span lang="en">px</span></span>
+          <input type="range" id="specSize" min="34" max="96" step="1" value="64">
+          <span class="spec__hint mono" data-c="hero.specimen.sizeHint">34–96 พิกเซล ปรับได้ต่อเนื่อง</span>
+        </label>
+      </div>
+      <p class="spec__cap mono" lang="en" data-c="hero.specimen.en">EN: type specimen, not a hero image</p>
+    </div>
+
+    </div>
+
+    <p class="scrollcue mono px-front"><span data-c="hero.cue">เลื่อนลง</span> <span aria-hidden="true">↓</span></p>
+
+    <!-- boundary 1→2 : teal rule under hero, hands off to the manifesto's left rule -->
+    <div class="bnd bnd--h" data-grow="x" aria-hidden="true"><i></i></div>
+  </div>
+</section>
+
+<!-- ════════ 2 · ทำไมต้องเรา (MANIFESTO) — [E1] ════════ -->
+<section class="s s2" id="s2" aria-labelledby="h2">
+  <div class="wrap wrap--grid">
+    <!-- boundary 1→2 receiving end: vertical rule descending from the hero rule -->
+    <div class="bnd bnd--v s2__rule" data-grow="y" aria-hidden="true"><i></i></div>
+
+    <p class="mark px-front"><span lang="en">02 / 08</span> · <span data-c="sections.2.kicker">ทำไมต้องเรา</span></p>
+
+    <h2 class="hl hl--2" id="h2" data-reveal data-accent="ตัวตน" data-c="sections.2.head">เทรนด์มาแล้วก็ไป ตัวตนอยู่ต่อ</h2>
+
+    <p class="fill" data-fill data-c="manifesto.body">ทุกคนบอกให้คุณตามเทรนด์ เต้นตามเพลงเดิม พูดมุกเดียวกัน ทำคลิปหน้าตาเหมือนกันทั้งฟีด แล้วสงสัยว่าทำไมคนจำเราไม่ได้ ความจริงคืออัลกอริทึมไม่ได้รักคนที่เหมือนใคร มันรักคนที่ชัด เราไม่สอนคุณเลียนแบบใคร เราขุดสิ่งที่คุณมีอยู่แล้ว แล้ววิศวกรรมทุกอย่างรอบมัน จนโลกเลื่อนผ่านคุณไม่ได้</p>
+
+    <p class="en en--mid" lang="en" data-c="manifesto.en">EN: trends expire. you don't.</p>
+
+    <!-- [C1] dual-voice #2 -->
+    <p class="voice-line">
+      <button class="voice" type="button" aria-expanded="false" data-voice="1">
+        <span class="voice__a" data-c="voicePairs.1.0">ปรึกษาการเติบโตอย่างยั่งยืน</span>
+        <span class="voice__mask"><span class="voice__b" data-c="voicePairs.1.1">โตแบบไม่ต้องเสแสร้ง เหนื่อยน้อยกว่าเยอะ</span></span>
+      </button>
+    </p>
+
+    <p class="fill fill--land" data-fill data-fill-slow data-c="manifesto.land">คนที่ชัด ไม่ต้องตะโกน</p>
+  </div>
+</section>
+
+<!-- ══ [D2] SET PIECE 1 — boundary 2→3 ══ -->
+<div class="wall on-ink" data-wall="0" aria-hidden="true">
+  <div class="wall__sticky">
+    <div class="wall__pane wall__pane--a"><span class="wall__word" data-c="walls.0.0">หลงทาง</span></div>
+    <div class="wall__mask"><div class="wall__inner"><div class="wall__pane wall__pane--b"><span class="wall__word" data-c="walls.0.1">เจอตัวเอง</span></div></div></div>
+  </div>
+</div>
+
+<!-- ════════ 3 · เราทำอะไรมา (ผลงาน) — [P2] ════════ -->
+<section class="s s3" id="s3" aria-labelledby="h3">
+  <div class="wrap wrap--grid">
+    <p class="mark px-front"><span lang="en">03 / 08</span> · <span data-c="sections.3.kicker">เราทำอะไรมา</span></p>
+    <h2 class="hl hl--2" id="h3" data-reveal data-c="sections.3.head">ตัวเลขที่ไม่ได้มาจากโชค</h2>
+    <p class="sub" data-c="sections.3.sub">ทุกตัวเลขข้างล่างมีที่มา และเป็นของครีเอเตอร์ที่เราดูแล ไม่ใช่ของเราเอง</p>
+    <p class="en" lang="en" data-c="sections.3.en">EN: receipts, not promises.</p>
+
+    <ol class="nums">
+      <li class="num" data-curtain>
+        <span class="num__v px-front" data-count data-c="numbers.0.v">[N]</span>
+        <span class="num__u mono" data-c="numbers.0.u">ผู้ติดตาม</span>
+        <span class="num__p" data-c="numbers.0.p">ที่เพิ่มให้ครีเอเตอร์ในเครือ — จาก [N] บัญชี ภายใน [N] เดือน</span>
+      </li>
+      <li class="num" data-curtain>
+        <span class="num__v px-front" data-count data-c="numbers.1.v">[N]</span>
+        <span class="num__u mono" data-c="numbers.1.u">คลิป</span>
+        <span class="num__p" data-c="numbers.1.p">ที่ทะลุ [N] ล้านวิว — ทำจากแกนตัวตนเดียว ไม่ใช่จากการตามเทรนด์</span>
+      </li>
+      <li class="num" data-curtain>
+        <span class="num__v px-front" data-count data-c="numbers.2.v">[N]</span>
+        <span class="num__u mono" data-c="numbers.2.u">แบรนด์</span>
+        <span class="num__p" data-c="numbers.2.p">ที่กลับมาจ้างซ้ำ — ตัวเลขที่บอกอะไรมากกว่ายอดวิว</span>
+      </li>
+      <li class="num" data-curtain>
+        <span class="num__v px-front" data-count data-c="numbers.3.v">[N]</span>
+        <span class="num__u mono" data-c="numbers.3.u">ครีเอเตอร์</span>
+        <span class="num__p" data-c="numbers.3.p">ที่เลิกทำคอนเทนต์ที่ไม่ใช่ตัวเอง — ตัวเลขที่เราภูมิใจที่สุด</span>
+      </li>
+    </ol>
+
+    <p class="ba mono">
+      <span data-c="beforeAfter.0">จาก [N] → [N] ใน [N] วัน</span>
+      <span class="ba__note" data-c="beforeAfter.1">[หนึ่งบรรทัดว่าเปลี่ยนอะไร — รอเจ้าของเขียน]</span>
+    </p>
+
+    <!-- [C1] dual-voice #6 -->
+    <p class="voice-line">
+      <button class="voice" type="button" aria-expanded="false" data-voice="5">
+        <span class="voice__a" data-c="voicePairs.5.0">วิเคราะห์ข้อมูลเชิงลึก</span>
+        <span class="voice__mask"><span class="voice__b" data-c="voicePairs.5.1">ดูเลขแล้วบอกตรงๆ ว่าอันไหนคุณหลอกตัวเอง</span></span>
+      </button>
+    </p>
+
+    <!-- boundary 3→4 : rule under the last number continues into §4's timeline axis -->
+    <div class="bnd bnd--h" data-grow="x" aria-hidden="true"><i></i></div>
+  </div>
+</section>
+
+<!-- ════════ 4 · ประสบการณ์ของเรา (ผู้ก่อตั้ง) — [G2] ════════ -->
+<section class="s s4" id="s4" aria-labelledby="h4">
+  <div class="wrap wrap--grid">
+    <p class="mark px-front"><span lang="en">04 / 08</span> · <span data-c="sections.4.kicker">ประสบการณ์ของเรา</span></p>
+    <h2 class="hl hl--2" id="h4" data-reveal data-c="sections.4.head">คนที่สอน ยังลงสนามอยู่ทุกวัน</h2>
+    <p class="sub" data-c="sections.4.sub">ไม่ใช่โค้ชที่เลิกทำมาห้าปีแล้วมาเล่าความหลัง ทุกอย่างที่คุณจะได้ ผ่านการทดลองบนช่องจริง เงินจริง ยอดจริง ของเราเอง</p>
+    <p class="en" lang="en" data-c="sections.4.en">EN: still in the game.</p>
+
+    <div class="founder">
+      <figure class="portrait" data-curtain>
+        <!-- slot-founder-portrait 800×1000 (4:5) — the only photograph on the site -->
+        <div class="portrait__slot" role="img" aria-label="ที่ว่างสำหรับรูปผู้ก่อตั้ง ยังไม่มีไฟล์จริง">
+          <span class="mono" lang="en">slot-founder-portrait</span>
+          <span class="mono">800 × 1000</span>
+        </div>
+        <figcaption data-c="founder.caption">กว่าจะชัดว่าตัวเองเป็นใคร ก็ใช้เวลาเหมือนกัน</figcaption>
+      </figure>
+
+      <ol class="tl" id="timeline">
+        <!-- boundary 3→4 receiving end: the axis grows down out of §3's rule -->
+        <div class="bnd bnd--v tl__axis" data-grow="y" aria-hidden="true"><i></i></div>
+
+        <li class="tl__row">
+          <span class="tl__dot" aria-hidden="true"></span>
+          <span class="tl__y mono" data-step data-c="founder.rows.0.y">[ปี]</span>
+          <span class="tl__t" data-c="founder.rows.0.t">เริ่มทำคอนเทนต์ครั้งแรก</span>
+        </li>
+
+        <li class="tl__row tl__row--fail">
+          <span class="tl__dot" aria-hidden="true"></span>
+          <span class="tl__y mono" data-step data-c="founder.rows.1.y">[ปี]</span>
+          <button class="tl__t tl__reveal" type="button" aria-expanded="false"
+                  aria-label="กดค้าง หรือกด Enter เพื่ออ่านสิ่งที่เกิดขึ้นจริงในปีที่เจ๊ง">
+            <span data-c="founder.rows.1.t">เจ๊งครั้งแรก — ทำ [N] คลิปติดกันแล้วไม่มีใครดู</span>
+            <span class="tl__more mono" aria-hidden="true">กดค้าง</span>
+          </button>
+          <div class="tl__hidden"><p data-c="founder.rows.1.more">[ประโยคจริงของปีที่เจ๊ง — รอเจ้าของเขียน]</p></div>
+        </li>
+
+        <li class="tl__row">
+          <span class="tl__dot" aria-hidden="true"></span>
+          <span class="tl__y mono" data-step data-c="founder.rows.2.y">[ปี]</span>
+          <span class="tl__t" data-c="founder.rows.2.t">เข้าใจว่าปัญหาไม่ใช่อัลกอริทึม แต่เป็นการไม่รู้ว่าตัวเองคือใคร</span>
+        </li>
+
+        <li class="tl__row tl__row--here">
+          <span class="tl__dot tl__dot--here" aria-hidden="true"></span>
+          <span class="tl__y mono" data-c="founder.here.y">ตอนนี้</span>
+          <span class="tl__t mono" lang="en" data-c="founder.here.t">you are here<span class="tl__caret" aria-hidden="true"></span></span>
+        </li>
+
+        <li class="tl__row tl__row--now">
+          <span class="tl__dot" aria-hidden="true"></span>
+          <span class="tl__y mono" data-step data-c="founder.rows.3.y">[N]</span>
+          <span class="tl__t" data-c="founder.rows.3.t">ผู้ติดตามที่ปั้นด้วยมือตัวเอง บนแพลตฟอร์ม [IG/TikTok/YouTube]</span>
+        </li>
+        <li class="tl__row tl__row--now">
+          <span class="tl__dot" aria-hidden="true"></span>
+          <span class="tl__y mono" data-step data-c="founder.rows.4.y">[N]</span>
+          <span class="tl__t" data-c="founder.rows.4.t">แบรนด์ที่ทำงานด้วย</span>
+        </li>
+        <li class="tl__row tl__row--now">
+          <span class="tl__dot" aria-hidden="true"></span>
+          <span class="tl__y mono" data-step data-c="founder.rows.5.y">[N]</span>
+          <span class="tl__t" data-c="founder.rows.5.t">ครีเอเตอร์ที่ดูแลแบบ 1:1 จนถึงวันนี้</span>
+        </li>
+      </ol>
+    </div>
+
+    <!-- boundary 4→5 : the axis runs past "you are here" and thickens -->
+    <div class="bnd bnd--v bnd--tail" data-grow="y" aria-hidden="true"><i></i></div>
+  </div>
+</section>
+
+<!-- ════════ 5 · พาร์ทเนอร์ของเรา — [K3] ════════ -->
+<section class="s s5" id="s5" aria-labelledby="h5">
+  <!-- boundary 4→5 receiving end: top rule, thicker than the axis -->
+  <div class="bnd bnd--h bnd--thick" data-grow="x" aria-hidden="true"><i></i></div>
+
+  <div class="wrap wrap--grid">
+    <p class="mark px-front"><span lang="en">05 / 08</span> · <span data-c="sections.5.kicker">พาร์ทเนอร์ของเรา</span></p>
+    <h2 class="hl hl--2" id="h5" data-reveal data-c="sections.5.head">คนที่ทำงานด้วยกัน</h2>
+    <p class="sub" data-c="sections.5.sub">ไม่ได้เยอะ แต่เลือกแล้วทุกราย</p>
+
+    <p class="groups mono" data-c="partnersGroups">แพลตฟอร์ม · เอเจนซี · แบรนด์</p>
+
+    <!-- [C1] dual-voice #3 -->
+    <p class="voice-line">
+      <button class="voice" type="button" aria-expanded="false" data-voice="2">
+        <span class="voice__a" data-c="voicePairs.2.0">เข้าใจกลไกของแพลตฟอร์ม</span>
+        <span class="voice__mask"><span class="voice__b" data-c="voicePairs.2.1">อัลกอริทึมไม่ใช่ผี มันแค่ชอบคนที่ชัด</span></span>
+      </button>
+    </p>
+  </div>
+
+  <div class="mq" id="marquee">
+    <div class="mq__viewport" data-curtain>
+      <div class="mq__track" id="mqTrack">
+        <ul class="mq__set">
+          <li data-c="partners.0">[ชื่อพาร์ทเนอร์ 1]</li>
+          <li data-c="partners.1">[ชื่อพาร์ทเนอร์ 2]</li>
+          <li data-c="partners.2">[ชื่อพาร์ทเนอร์ 3]</li>
+          <li data-c="partners.3">[ชื่อพาร์ทเนอร์ 4]</li>
+          <li data-c="partners.4">[ชื่อพาร์ทเนอร์ 5]</li>
+          <li data-c="partners.5">[ชื่อพาร์ทเนอร์ 6]</li>
+        </ul>
+      </div>
+    </div>
+    <div class="wrap mq__bar">
+      <button class="mq__pause" id="mqPause" type="button" aria-pressed="false" data-c="partnersPause">หยุด</button>
+      <span class="en mono" lang="en" data-c="sections.5.en">EN: few, chosen.</span>
+    </div>
+  </div>
+
+  <!-- boundary 5→6 : bottom rule of the strip drops and becomes pillar 1's 00m marker -->
+  <div class="bnd bnd--h bnd--thick" data-grow="x" aria-hidden="true"><i></i></div>
+  <div class="bnd bnd--v bnd--drop" data-grow="y" aria-hidden="true"><i></i></div>
+</section>
+
+<!-- ════════ 6 · เราช่วยคุณได้ยังไง (3 เสา) — [F1] ════════ -->
+<section class="s s6" id="s6" aria-labelledby="h6">
+  <div class="wrap wrap--grid">
+    <p class="mark px-front"><span lang="en">06 / 08</span> · <span data-c="sections.6.kicker">เราช่วยคุณได้ยังไง</span></p>
+    <h2 class="hl hl--2" id="h6" data-reveal data-c="sections.6.head">สามขั้น จากใครก็ได้ สู่ตัวจริง</h2>
+
+    <!-- [C1] dual-voice #1 -->
+    <p class="voice-line">
+      <button class="voice" type="button" aria-expanded="false" data-voice="0">
+        <span class="voice__a" data-c="voicePairs.0.0">เราช่วยวางกลยุทธ์คอนเทนต์ระดับมืออาชีพ</span>
+        <span class="voice__mask"><span class="voice__b" data-c="voicePairs.0.1">เลิกก๊อปสูตรคนอื่นสักที มาขุดของจริงในตัวคุณ</span></span>
+      </button>
+    </p>
+  </div>
+
+  <div class="pillars" id="pillars">
+
+    <article class="pil" data-curtain data-pillar="0">
+      <h3 class="pil__h">
+        <button class="pil__btn" type="button" aria-expanded="true" aria-controls="pilBody0">
+          <span class="pil__lv mono px-front" lang="en" data-c="pillars.0.lv">LV.1 — EXTRACT</span>
+          <span class="pil__name" data-reveal data-c="pillars.0.name">ขุดตัวตน</span>
+          <span class="pil__depth mono px-front" lang="en" data-c="pillars.0.depth">00m</span>
+        </button>
+      </h3>
+      <div class="pil__wrap" id="pilBody0">
+        <div class="pil__inner">
+          <p class="pil__sub" data-c="pillars.0.sub">คุยลึกแบบ 1:1 จนเจอว่าอะไรคือเสียงของคุณจริงๆ ไม่ใช่เสียงที่ยืมคนอื่นมา</p>
+          <p class="pil__body" data-c="pillars.0.body">เซสชันขุดตัวตน — เรื่องที่คุณเล่าได้ทั้งคืนโดยไม่เบื่อ มุมที่คนรอบตัวบอกว่า "อันนี้แหละคือแก" เอามากางให้เห็นเป็นข้อๆ แล้วเลือกอันที่จะเป็นแกนของทุกคอนเทนต์</p>
+          <p class="pil__next mono" data-c="pillarNext">ต่อไป ↓</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="pil" data-curtain data-pillar="1">
+      <h3 class="pil__h">
+        <button class="pil__btn" type="button" aria-expanded="false" aria-controls="pilBody1">
+          <span class="pil__lv mono px-front" lang="en" data-c="pillars.1.lv">LV.2 — ENGINEER</span>
+          <span class="pil__name" data-reveal data-c="pillars.1.name">วิศวกรรมอัลกอริทึม</span>
+          <span class="pil__depth mono px-front" lang="en" data-c="pillars.1.depth">-12m</span>
+        </button>
+      </h3>
+      <div class="pil__wrap" id="pilBody1">
+        <div class="pil__inner">
+          <p class="pil__sub" data-c="pillars.1.sub">ออกแบบระบบคอนเทนต์รอบตัวตนของคุณ ให้อัลกอริทึมทำงานให้คุณ ไม่ใช่คุณทำงานให้มัน</p>
+          <p class="pil__body" data-c="pillars.1.body">โครงคอนเทนต์ จังหวะลง รูปแบบซีรีส์ hook ที่เป็นภาษาคุณเอง วัดผล ปรับ วนซ้ำ — ทุกอย่างสร้างรอบแกนเดียวที่ขุดเจอใน LV.1 ไม่ใช่รอบเทรนด์ของสัปดาห์นี้</p>
+          <p class="pil__next mono" data-c="pillarNext">ต่อไป ↓</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="pil" data-curtain data-pillar="2">
+      <h3 class="pil__h">
+        <button class="pil__btn" type="button" aria-expanded="false" aria-controls="pilBody2">
+          <span class="pil__lv mono px-front" lang="en" data-c="pillars.2.lv">LV.3 — ESTABLISH</span>
+          <span class="pil__name" data-reveal data-c="pillars.2.name">สร้างอาณาจักรของตัวเอง</span>
+          <span class="pil__depth mono px-front" lang="en" data-c="pillars.2.depth">-30m</span>
+        </button>
+      </h3>
+      <div class="pil__wrap" id="pilBody2">
+        <div class="pil__inner">
+          <p class="pil__sub" data-c="pillars.2.sub">จากครีเอเตอร์ที่คนตาม เป็นเจ้าของพื้นที่ที่คนต้องมาหา</p>
+          <p class="pil__body" data-c="pillars.2.body">พอตัวตนชัดและระบบหมุนได้เอง ขั้นต่อไปคือทำให้มันเป็นทรัพย์สิน — คอมมูนิตี้ ช่องทางรายได้ แบรนด์ของตัวเอง อาณาจักรที่อยู่ได้แม้อัลกอริทึมจะเปลี่ยนใจพรุ่งนี้</p>
+          <p class="pil__next mono" data-c="pillarNext">ต่อไป ↓</p>
+        </div>
+      </div>
+    </article>
+  </div>
+
+  <div class="wrap wrap--narrow">
+    <h3 class="faq__h mono" data-c="faq.head">คำถามที่คนมักไม่กล้าถาม</h3>
+    <div class="faq" data-curtain>
+      <details><summary data-c="faq.items.0.q">ราคาเท่าไหร่</summary><p data-c="faq.items.0.a">[คำตอบ — รอเจ้าของเขียน]</p></details>
+      <details><summary data-c="faq.items.1.q">ใช้เวลานานแค่ไหน</summary><p data-c="faq.items.1.a">[คำตอบ — รอเจ้าของเขียน]</p></details>
+      <details><summary data-c="faq.items.2.q">ต้องมีผู้ติดตามเท่าไหร่ถึงเริ่มได้</summary><p data-c="faq.items.2.a">[คำตอบ — รอเจ้าของเขียน]</p></details>
+      <details><summary data-c="faq.items.3.q">ถ้าไม่เวิร์กจะรู้เมื่อไหร่</summary><p data-c="faq.items.3.a">[คำตอบ — รอเจ้าของเขียน]</p></details>
+      <details><summary data-c="faq.items.4.q">ทำเองได้ไหมโดยไม่ต้องจ้าง</summary><p data-c="faq.items.4.a">[คำตอบ — รอเจ้าของเขียน]</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- ══ [D2] SET PIECE 2 — boundary 6→7 ══ -->
+<div class="wall on-ink" data-wall="1" aria-hidden="true">
+  <div class="wall__sticky">
+    <div class="wall__pane wall__pane--a"><span class="wall__word" data-c="walls.1.0">ตัวคนเดียว</span></div>
+    <div class="wall__mask"><div class="wall__inner"><div class="wall__pane wall__pane--b"><span class="wall__word" data-c="walls.1.1">มีทีม</span></div></div></div>
+  </div>
+</div>
+
+<!-- ════════ 7 · อะไรทำให้คุณต่าง — [Q2] ════════ -->
+<section class="s s7" id="s7" aria-labelledby="h7">
+  <div class="wrap">
+    <p class="mark px-front"><span lang="en">07 / 08</span> · <span data-c="sections.7.kicker">อะไรทำให้คุณต่าง</span></p>
+    <h2 class="hl hl--2" id="h7" data-reveal data-c="sections.7.head">คุณตอนนี้ กับคุณอีกสามเดือน</h2>
+    <p class="sub" data-c="sections.7.sub">ไม่ใช่คำสัญญา แต่เป็นสิ่งที่เกิดขึ้นจริงกับคนที่ทำครบสามขั้น</p>
+    <p class="en" lang="en" data-c="sections.7.en">EN: same you. finally legible.</p>
+  </div>
+
+  <div class="pin" id="pin">
+    <div class="pin__sticky">
+      <p class="pin__sentence">
+        <span data-c="pinned.frame">คุณคือครีเอเตอร์ที่</span>
+        <span class="pin__slot" id="pinSlot">
+          <span class="pin__w is-on" data-c="pinned.words.0">ตามเทรนด์</span>
+          <span class="pin__w" data-c="pinned.words.1">รู้ว่าตัวเองคือใคร</span>
+          <span class="pin__w" data-c="pinned.words.2">คนอื่นตาม</span>
+        </span>
+      </p>
+    </div>
+  </div>
+
+  <div class="wrap wrap--grid">
+    <!-- [C1] dual-voice #4 -->
+    <p class="voice-line">
+      <button class="voice" type="button" aria-expanded="false" data-voice="3">
+        <span class="voice__a" data-c="voicePairs.3.0">พัฒนาแบรนด์บุคคลของคุณ</span>
+        <span class="voice__mask"><span class="voice__b" data-c="voicePairs.3.1">ให้คนจำคุณได้ โดยไม่ต้องตะโกน</span></span>
+      </button>
+    </p>
+
+    <div class="diff" id="diff">
+      <div class="diff__head mono" aria-hidden="true">
+        <span data-c="diff.head.0">ตอนนี้</span><span data-c="diff.head.1">หลังจากนี้</span>
+      </div>
+      <!-- boundary 7→8 : this centre axis thickens into §8's top edge -->
+      <div class="bnd bnd--v diff__axis" data-grow="y" aria-hidden="true"><i></i></div>
+      <dl class="diff__rows">
+        <div class="diff__pair" data-curtain><dt data-c="diff.rows.0.0">เปิดแอปแล้วดูว่าใครทำอะไร แล้วทำตาม</dt><dd data-c="diff.rows.0.1">เปิดแอปแล้วรู้ว่าวันนี้ตัวเองจะพูดเรื่องอะไร</dd></div>
+        <div class="diff__pair" data-curtain><dt data-c="diff.rows.1.0">ยอดดีบ้างไม่ดีบ้าง ไม่รู้ว่าเพราะอะไร</dt><dd data-c="diff.rows.1.1">รู้ว่าคลิปไหนจะทำงาน ก่อนกดโพสต์</dd></div>
+        <div class="diff__pair" data-curtain><dt data-c="diff.rows.2.0">คนจำคลิปได้ แต่จำคุณไม่ได้</dt><dd data-c="diff.rows.2.1">คนเห็นสามวินาทีแรกแล้วรู้ว่าเป็นคุณ</dd></div>
+        <div class="diff__pair" data-curtain><dt data-c="diff.rows.3.0">กลัวหยุดโพสต์แล้วหายไปเลย</dt><dd data-c="diff.rows.3.1">หยุดหนึ่งอาทิตย์ก็ยังมีคนรอ</dd></div>
+        <div class="diff__pair" data-curtain><dt data-c="diff.rows.4.0">รับงานที่ได้เงินแต่ไม่ใช่ตัวเอง</dt><dd data-c="diff.rows.4.1">ปฏิเสธงานได้ เพราะมีงานที่ใช่เข้ามา</dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 8 · จองเลย — [H1] ════════ -->
+<section class="s s8" id="s8" aria-labelledby="h8">
+  <!-- boundary 7→8 receiving end -->
+  <div class="bnd bnd--h bnd--edge" data-grow="x" aria-hidden="true"><i></i></div>
+
+  <div class="wrap wrap--grid">
+    <p class="mark px-front"><span lang="en">08 / 08</span> · <span data-c="sections.8.kicker">จองเลย</span></p>
+    <h2 class="hl hl--close" id="h8" data-reveal data-c="sections.8.head">พร้อมจะเป็นตัวเองหรือยัง</h2>
+    <p class="sub" data-c="sections.8.sub">คุยกันก่อนได้ ไม่มีสคริปต์ขาย ไม่มีคำสัญญาเว่อร์ๆ มีแต่คำถามที่ตรงมาก</p>
+
+    <div class="doors">
+      <div class="door door--main" data-curtain>
+        <a class="door__a" id="calLink" href="#" target="_blank" rel="noopener" data-c="cta.mainLabel">จองคุยฟรี 30 นาที</a>
+        <p class="door__sub" data-c="cta.mainSub">ไม่มีค่าใช้จ่าย ไม่ต้องเตรียมอะไร มาคุยว่าตอนนี้ติดอะไรอยู่</p>
+      </div>
+
+      <div class="door door--alt">
+        <p class="door__q">
+          <span data-c="cta.altLead">ยังไม่พร้อมคุย?</span>
+          <a class="door__line" id="lineLink" href="#" target="_blank" rel="noopener" data-c="cta.altLabel">แอดไลน์มาถามก่อนได้</a>
+        </p>
+        <figure class="qr">
+          <!-- slot-line-qr 240×240 — deliberately NOT a scannable code. The LINE OA
+               ID is still a placeholder, so any QR generated now would encode a dead
+               URL that looks legitimate. This tile is built from theme tokens and
+               reads as a slot. Replace the <g> children with a real QR (generated
+               offline, inlined as static <rect>s — never a runtime QR library) once
+               CONTENT.cta.lineId is supplied. -->
+          <svg class="qr__svg" viewBox="0 0 240 240" role="img" aria-labelledby="qrTitle">
+            <title id="qrTitle">ที่ว่างสำหรับ QR ไลน์ ยังไม่มีไอดีจริง</title>
+            <rect x="0" y="0" width="240" height="240" fill="var(--bg-2)"/>
+            <g fill="none" stroke="var(--ac1)" stroke-width="8">
+              <rect x="24" y="24" width="52" height="52"/><rect x="164" y="24" width="52" height="52"/><rect x="24" y="164" width="52" height="52"/>
+            </g>
+            <g fill="var(--ac1)">
+              <rect x="42" y="42" width="16" height="16"/><rect x="182" y="42" width="16" height="16"/><rect x="42" y="182" width="16" height="16"/>
+            </g>
+            <rect x="96" y="112" width="48" height="8" fill="var(--ac2)"/>
+          </svg>
+          <figcaption class="mono" data-c="cta.qrCaption">สแกนเพื่อแอดไลน์</figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap foot__in">
+    <nav class="foot__nav" aria-label="เมนูท้ายหน้า">
+      <a href="#s1" data-c="nav.0">เราคือใคร</a>
+      <a href="#s6" data-c="nav.1">สามขั้น</a>
+      <a href="#s3" data-c="nav.2">ผลงาน</a>
+      <a href="#s8" data-c="nav.3">จองเลย</a>
+    </nav>
+    <nav class="foot__soc" aria-label="โซเชียล">
+      <a href="#" rel="noopener" lang="en" data-c="socials.0">IG</a>
+      <a href="#" rel="noopener" lang="en" data-c="socials.1">TikTok</a>
+      <a href="#" rel="noopener" lang="en" data-c="socials.2">YouTube</a>
+      <a href="#" rel="noopener" lang="en" data-c="socials.3">LINE</a>
+    </nav>
+    <p class="foot__micro mono">
+      <span data-c="footMicro">© PlanC</span> ·
+      <span lang="en" data-c="footMicroEn">EN: made for people who refuse to be a copy</span>
+    </p>
+  </div>
+</footer>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "PlanC",
+  "description": "ที่ปรึกษา 1:1 โดยอินฟลูเอนเซอร์ที่ยังลงสนามจริง หยุดวิ่งตามเทรนด์ ขุดตัวตน วิศวกรรมอัลกอริทึมรอบสิ่งที่คุณเป็น แล้วสร้างอาณาจักรของตัวเอง",
+  "url": "https://planc.example/",
+  "inLanguage": "th",
+  "areaServed": { "@type": "Country", "name": "TH" },
+  "founder": { "@type": "Person", "name": "[ชื่อผู้ก่อตั้ง]" },
+  "sameAs": [],
+  "makesOffer": [
+    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "EXTRACT — ขุดตัวตน" } },
+    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "ENGINEER — วิศวกรรมอัลกอริทึม" } },
+    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "ESTABLISH — สร้างอาณาจักรของตัวเอง" } }
+  ]
+}
+</script>
+
+<script src="app.js" defer></script>
+</body>
+</html>

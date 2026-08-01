@@ -1,0 +1,44 @@
+[
+  {
+    "claim": "YouTube creators receive a fixed 55% share of advertising revenue, but the absolute payout is set entirely by advertiser valuation of the audience, so per-view earnings are not a creator-controllable variable.",
+    "stance": "supports",
+    "stance_target": "The claim that creator income inequality is driven by audience commercial value rather than by content quality or effort",
+    "evidence_type": "empirical",
+    "scope_conditions": "YouTube, global platform policy as documented circa 2021-2022; documentary analysis of platform materials, not measurement of actual payouts; Western/EU authorship and framing",
+    "quoted_support": "Although producers receive a set share (55%) of advertising revenue, the actual payout from content-adjacent ads depends solely on the advertisers' valuation of the parameters described.",
+    "numbers": ["55% revenue share to creator", "45% to platform"],
+    "entities": ["YouTube", "Google Ads", "Jacob Ormen", "Andreas Gregersen"],
+    "time_period": "circa 2021-2022",
+    "region": "Global platform policy, Western framing",
+    "confidence": "high",
+    "source_note_id": "university-of-copenhagen"
+  },
+  {
+    "claim": "Creators serving poorer audiences or non-commercial content niches earn structurally less per view than those in commercial niches serving affluent-country audiences, because the ad auction prices audiences rather than content.",
+    "stance": "supports",
+    "stance_target": "The claim that Western creator income benchmarks cannot be transferred to Southeast Asia, because the same view count monetises at a systematically lower rate for lower-CPM audiences",
+    "evidence_type": "theoretical",
+    "scope_conditions": "YouTube advertising auction; mechanism argued from documentary analysis of the ad system; the authors do NOT test or quantify the geographic implication, and no CPM figures are given",
+    "quoted_support": "To earn high revenues through Google Ads, producers must try to stay within commercial niches (such as fashion or tech) and attract high-income users (either from more affluent countries or from the elite in less affluent ones), since these are valued highly by YouTube's advertisers.",
+    "numbers": ["no CPM figures provided"],
+    "entities": ["YouTube", "Google Ads"],
+    "time_period": "circa 2021-2022",
+    "region": "Global, Western framing",
+    "confidence": "medium",
+    "source_note_id": "university-of-copenhagen"
+  },
+  {
+    "claim": "YouTube Select, the premium advertiser inventory tier, is restricted to the top 5% of popular channels using an undisclosed proprietary P-score, creating an explicit two-tier market in which 95% of channels are excluded from premium advertiser demand.",
+    "stance": "supports",
+    "stance_target": "The claim that platform design deliberately concentrates the highest-value revenue on a small minority of creators, structurally capping the income ceiling for the remainder",
+    "evidence_type": "empirical",
+    "scope_conditions": "YouTube, circa 2019-2022; based on Google's own public description plus secondary reporting on the P-score (Stanford 2019); ranking criteria not officially disclosed",
+    "quoted_support": "YouTube Select is ostensibly exclusive to 'the top 5% of popular channels' (Google, n.d.), and while criteria for this ranking have not been communicated directly, sources indicate that a proprietary algorithm called 'P-score' plays an important role",
+    "numbers": ["top 5% of channels", "95% excluded", "P-score indicators: Popularity, Passion, Protection, Platform"],
+    "entities": ["YouTube Select", "Google Preferred", "MCNs"],
+    "time_period": "2019-2022",
+    "region": "Global platform policy",
+    "confidence": "high",
+    "source_note_id": "university-of-copenhagen"
+  }
+]

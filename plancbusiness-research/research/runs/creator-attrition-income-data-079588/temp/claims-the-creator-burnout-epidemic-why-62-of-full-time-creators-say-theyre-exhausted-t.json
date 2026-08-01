@@ -1,0 +1,44 @@
+[
+  {
+    "claim": "TheCreatorEconomy.com attributes a battery of statistics (62% burnout, 47% considered leaving in past six months, 71% workload increase, platform breakdown, financial-instability battery) to a 'Creator Economy Research Institute Q1 2026 study of 2,400 full-time creators' - but no organization by that name, no website, no report, and no independent citation of it exists anywhere on the web.",
+    "stance": "refutes",
+    "stance_target": "reliability of the '2,400 full-time creators' attribution as a real, citable instrument",
+    "evidence_type": "empirical",
+    "scope_conditions": "AUDITED ABSENCE finding, recorded per run directive: targeted search for 'Creator Economy Research Institute' returns no hits besides this article itself. This claim documents that the cited instrument cannot be verified to exist, not a substantive burnout finding. Do not cite the 62%/47%/71% figures as sourced to a real n=2,400 study.",
+    "quoted_support": "\"Creator Economy Research Institute's Q1 2026 study of full-time creators revealed: 62% report experiencing burnout symptoms...\" [no link, methodology, sampling frame, field dates, or country given anywhere in the article; independent search found no organization by this name]",
+    "numbers": ["2,400 (claimed sample size, unverifiable)", "62%", "47%", "71%"],
+    "entities": ["Creator Economy Research Institute (unverifiable)", "TheCreatorEconomy.com"],
+    "time_period": "claimed Q1 2026",
+    "region": "unstated",
+    "confidence": "low",
+    "source_note_id": "the-creator-burnout-epidemic-why-62-of-full-time-creators-say-theyre-exhausted-t"
+  },
+  {
+    "claim": "The article's headline 62% burnout figure and its 58%/depression framing closely mirror the independently-verified Creators4MentalHealth/Lupiani Insights study (n=542, North America, published November 2025) published roughly three months earlier, suggesting the '2,400 full-time creators' attribution may be a garbled or fabricated restatement of that real, smaller study rather than independent research.",
+    "stance": "refutes",
+    "stance_target": "independence of the claimed 'Creator Economy Research Institute' figures from the real Creators4MentalHealth study",
+    "evidence_type": "empirical",
+    "scope_conditions": "Cross-source provenance comparison. The genuine C4MH study (source note in-sweeping-study-89-of-creators-claim-to-lack-access-to-specialized-mental-heal) reports 62% burnout among n=542 North American creators (published Nov 2025); this article's near-identical 62% figure attributed to an unverifiable n=2,400 'Q1 2026' instrument is the strongest evidence that the latter attribution is unreliable.",
+    "quoted_support": "\"The headline 62% is exactly the burnout figure published three months earlier by the Creators 4 Mental Health / Lupiani Insights study (n=542, North America, Nov 2025)\" [note author's own cross-check, documented in the note summary]",
+    "numbers": ["62%", "n=542 (real prior study)", "n=2,400 (claimed, unverifiable)"],
+    "entities": ["Creators 4 Mental Health", "Lupiani Insights & Strategies", "Creator Economy Research Institute (unverifiable)"],
+    "time_period": "November 2025 (real study) vs claimed Q1 2026 (unverifiable)",
+    "region": "North America",
+    "confidence": "medium",
+    "source_note_id": "the-creator-burnout-epidemic-why-62-of-full-time-creators-say-theyre-exhausted-t"
+  },
+  {
+    "claim": "The article cites uncheckable named sources ('Dr. Sarah Chen' at Stanford studying creator mental health; creators '@sarahmakes' and 'Tom Henderson') and describes specific platform programs (YouTube 'Creator Wellness Program' launched January 2026, TikTok 'Creator Sabbaticals') as established fact with no citation or corroboration found elsewhere.",
+    "stance": "refutes",
+    "stance_target": "reliability of named experts and platform-program claims in this article",
+    "evidence_type": "anecdotal",
+    "scope_conditions": "Documents a pattern of unverifiable named-source and program citations consistent with fabricated or unreliable content. Not evidence of any real burnout/attrition figure.",
+    "quoted_support": "\"'Offering six therapy sessions doesn't fix an algorithm that punishes people for taking weekends off,' argues Dr. Sarah Chen, who studies creator mental health at Stanford.\"",
+    "numbers": [],
+    "entities": ["Dr. Sarah Chen", "YouTube", "TikTok", "Instagram"],
+    "time_period": "January 2026 (claimed)",
+    "region": "unstated",
+    "confidence": "low",
+    "source_note_id": "the-creator-burnout-epidemic-why-62-of-full-time-creators-say-theyre-exhausted-t"
+  }
+]

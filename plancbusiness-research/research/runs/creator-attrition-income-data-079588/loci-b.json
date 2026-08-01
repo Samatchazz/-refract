@@ -1,0 +1,144 @@
+{
+  "analyst_id": "b",
+  "loci": [
+    {
+      "name": "sea-creator-evidence-beyond-indonesia",
+      "flavor": "convergent",
+      "one_line": "What creator-specific (not brand-spend, not gig-work, not tiny-cell-survey) quantitative evidence exists for Vietnam, Thailand, Malaysia, Singapore, and the rest of ASEAN — the countries the current corpus has essentially skipped in favour of Indonesia?",
+      "rationale": "The corpus has 14 Indonesia-tagged notes and 2 Philippines-tagged notes but ZERO notes tagged vietnam, thailand, malaysia, or singapore (verified by tag search against all 146 notes). The only multi-country SEA creator-side survey, Vero's white paper (id: impact-engagement-and-the-future-of-influencer-marketing-in-southeast-asia), has n~150 across five countries (~30/country per the NetInfluencer write-up) — too small for any country-level inference — and measures income COMPOSITION (90% brand-sponsorship) and attitudes, not income distribution, attrition, or time-to-income. The Creative For More and AnyMind/impact.com-Cube notes give brand-paid rate cards and demand-side consumer surveys respectively, explicitly NOT creator earnings data. YouTube's own payment-threshold page (meet-youtubes-revenue-thresholds-for-payment-youtube-help) discloses local-currency thresholds only for Indonesia and Singapore, leaving Thailand/Philippines/Vietnam/Malaysia undefined by omission. The prompt decomposition requires 'full ASEAN scope... must not be collapsed to a single country' — the corpus currently does exactly that collapse. One promising method already validated in this corpus: a named-practitioner blog (penghasilan-content-creator-tiktok-indonesia-2026-real-data-benx32) supplied Indonesia's only living-wage-share and time-to-income figures via informal practitioner conversation; the same practitioner-forum method should be tried for Vietnamese, Thai, Malaysian and Filipino creators.",
+      "corpus_evidence": [
+        "impact-engagement-and-the-future-of-influencer-marketing-in-southeast-asia",
+        "meet-youtubes-revenue-thresholds-for-payment-youtube-help",
+        "penghasilan-content-creator-tiktok-indonesia-2026-real-data-benx32",
+        "discussion-paper-series-no-2020-29",
+        "bps-dan-kemenekraf-bersinergi-kreator-lokal-dilibatkan-dalam-sosialisasi-se2026"
+      ],
+      "suggested_starting_urls": [
+        "https://www.ilo.org/asia/publications",
+        "https://www.gso.gov.vn/en/homepage/",
+        "https://www.nso.go.th/nsopublish/",
+        "https://www.dosm.gov.my/portal-main/",
+        "https://www.singstat.gov.sg/",
+        "https://www.oxfordinternetinstitute.ox.ac.uk/research/online-labour-index/"
+      ],
+      "suggested_searches": [
+        "Vietnam TikTok YouTube creator income survey site:.vn OR academic",
+        "Thailand streamer content creator income NSO Thailand labour force survey classification",
+        "Malaysia influencer content creator DOSM occupational classification self-employed digital content",
+        "Singapore content creator income MOM labour force survey gig economy report",
+        "GSO Vietnam creative economy digital content workforce statistics",
+        "named practitioner blog Vietnamese Thai Malaysian creator monthly income real data (forum/Reddit/local blog equivalents to benx32)"
+      ]
+    },
+    {
+      "name": "unit-of-analysis-comparison-table-feasibility",
+      "flavor": "convergent",
+      "one_line": "Given that the corpus's core quantitative studies use incompatible units of analysis (person vs. channel/account vs. campaign vs. platform-worker-account), incompatible time windows (lifetime cumulative vs. annual vs. monthly vs. point-in-time snapshot), and incompatible currencies/PPP bases, can a genuinely defensible like-for-like comparison table be constructed across platforms and studies — and if not, what is the correct crosswalk/legend that prevents the report from silently conflating them?",
+      "rationale": "The required_formats field explicitly demands 'tabular presentation... the four-field metadata requirement is table-shaped', but the underlying studies do not share a denominator. Zhao et al. measure VTuber PERSONS (n=1,923) with monthly income; Rieder et al. 2023 measure YouTube CHANNELS (36,336,861) with annual averages built from a single-year 2019 aggregate divided across a subscriber-tier snapshot; Regner measures Patreon CAMPAIGNS (n=139,366, some creators run multiple) over a fixed 2013-2015 window; Kässi/Lehdonvirta/Stephany measure online-labour ACCOUNTS (163M) that can be held by one worker across platforms; the Twitch payout leak is quoted with SIX incompatible denominators (2.4M-9M) and FIVE incompatible windows per the redundancy audit. The redundancy audit itself states pooling the Twitch figures 'produces nonsense' and that YouTube's own payment thresholds are stated in at least four different currencies with no PPP note. This is a live, unresolved methodological gap: no note in the corpus attempts a formal crosswalk of unit/window/currency across the corpus's headline figures, and the report's central table cannot be built responsibly without one.",
+      "corpus_evidence": [
+        "vol0123456789-3",
+        "httpsdoiorg10117720563051231180628",
+        "the-unbearable-lightness-of-streaming-superjoost-playlist",
+        "meet-youtubes-revenue-thresholds-for-payment-youtube-help"
+      ],
+      "suggested_starting_urls": [
+        "https://www.oecd.org/en/topics/purchasing-power-parities-ppp.html",
+        "https://www.bls.gov/data/inflation_calculator.htm"
+      ],
+      "suggested_searches": [
+        "creator economy income studies unit of analysis person versus account versus channel methodology critique",
+        "cross-platform creator income comparison methodology PPP currency normalization academic",
+        "Twitch leak denominator reconciliation van Dreunen NYU Stern methodology",
+        "how to compare gig worker platform worker earnings across countries PPP living wage methodology ILO"
+      ]
+    },
+    {
+      "name": "time-to-income-reframe-tenure-vs-output",
+      "flavor": "dialectical",
+      "one_line": "Does elapsed time since starting predict reaching meaningful income (the sub-question as literally posed), or is time-since-start not the operative variable at all — with output volume/consistency and structural affiliation status doing the actual predictive work — and does this finding replicate outside YouTube?",
+      "rationale": "This is the corpus's own step-3 contradiction cluster 'time-predicts-success' (decision_relevance: high), directly on point for sub-Q5. Side A (advice-column sources with no sample or method) claims a knowable 3-18 month monetization timeline. Side B is a 36,336,861-channel census (Rieder et al. 2020, id: mapping-youtube-a-quantitative-exploration-of-a-platformed-media-system): elite channels average 940 videos vs 294 for the tier below, but 'the average number of days active is surprisingly constant between tiers' — tenure does not distinguish successful from unsuccessful channels, output volume does. vidIQ's threshold-band analysis corroborates from a different angle: 89% of channels AT the 1,000-subscriber eligibility gate have under 5,000 monthly views, meaning reaching the time-gated threshold does not reach income. The contradiction graph itself concludes 'the honest answer is a reframing plus an audited absence, not a number of months' but this reframing is currently evidenced by ONE platform (YouTube) and needs depth investigation to test whether output-volume-over-tenure holds on TikTok, Twitch, and Instagram too, and to pin down what the actual gap is between 'reaching eligibility' (a time/threshold event, well documented per platform, e.g. meet-youtubes-revenue-thresholds-for-payment-youtube-help's five sequential USD gates) and 'reaching income' (an output/audience event, poorly documented outside YouTube).",
+      "corpus_evidence": [
+        "mapping-youtube-a-quantitative-exploration-of-a-platformed-media-system",
+        "httpsdoiorg10117720563051231180628",
+        "youtube-partner-program-overview-eligibility-computer-youtube-help",
+        "meet-youtubes-revenue-thresholds-for-payment-youtube-help"
+      ],
+      "opposing_positions": [
+        {
+          "position": "Monetization/meaningful income follows a knowable elapsed-time timeline (3-18 months to threshold, 6-12 months for committed creators) — the sub-question as posed can be answered with a number of months.",
+          "sources": ["how-long-does-it-take-to-get-monetized-on-youtube-lenostube", "when-do-you-start-making-money-on-youtube-whop"]
+        },
+        {
+          "position": "Elapsed time since starting does not distinguish successful from unsuccessful channels; output volume/consistency (and, per Zhao et al. and Wollborn et al., structural affiliation/partner status) is the operative variable, and 'time to first meaningful income' should be reframed as 'output/threshold events required', not a duration.",
+          "sources": ["mapping-youtube-a-quantitative-exploration-of-a-platformed-media-system", "how-much-does-youtube-pay-for-1000-subscribers-vidiq"]
+        }
+      ],
+      "suggested_starting_urls": [],
+      "suggested_searches": [
+        "TikTok Creator Rewards Program eligibility to first payout time academic OR platform-disclosed",
+        "Twitch Affiliate Partner time to sustained income output volume study",
+        "posting frequency consistency predicts subscriber growth income academic study YouTube TikTok",
+        "does channel age or tenure predict monetization success controlling for output volume"
+      ]
+    },
+    {
+      "name": "exit-survey-absence-actual-quitters",
+      "flavor": "convergent",
+      "one_line": "Does any instrument exist that surveys or interviews creators AFTER they have actually stopped creating — as opposed to surveying still-active creators about their intention to quit or their burnout symptoms — and if none exists, what is the closest obtainable proxy (forum retrospectives, practitioner interviews, platform exit-flow data)?",
+      "rationale": "Coverage-gaps.md states explicitly: 'every one of them measures intention to quit among still-active creators, which cannot by construction sample anyone who already left. No exit survey of former creators was found in any batch.' The redundancy audit confirms sub-Q6's 42 raw sources reduce to just 4 independent instruments (Censuswide/Billion Dollar Boy, Awin, Vibely, Creators 4 Mental Health), all recruited from active-creator panels. This is a structural, not a volume, gap — more of the same instrument type will not fix it. Deep-inference search (per this run's directive: theses, forum/mailing-list posts, named-practitioner threads are in scope) for retrospective ex-creator accounts — e.g., r/PartneredYouTube or r/Twitch 'why I quit' threads with any quantifiable pattern, academic interview studies of platform-work attrition, business-press profiles of creators who left and stated a reason with a number attached (hours worked, income at exit, tenure at exit) — would materially strengthen the weakest-instrumented sub-question in the corpus. If genuinely nothing better exists, the audited absence itself (what was searched, why active-creator sampling cannot answer this) is the deliverable.",
+      "corpus_evidence": [
+        "over-half-of-creators-face-burnout-action-urged-billion-dollar-boy",
+        "in-sweeping-study-89-of-creators-claim-to-lack-access-to-specialized-mental-heal"
+      ],
+      "suggested_starting_urls": [],
+      "suggested_searches": [
+        "former creator interview why I quit content creation retrospective study",
+        "ex-YouTuber ex-streamer exit interview academic thesis attrition reasons",
+        "platform work attrition qualitative interview study people who stopped freelancing gig platform",
+        "\"I quit YouTube\" OR \"why I stopped streaming\" reasons forum thread analysis sample"
+      ]
+    },
+    {
+      "name": "tiktok-nontransparency-benchmark-vs-other-platforms",
+      "flavor": "convergent",
+      "one_line": "TikTok's Creator Fund/Creator Rewards program has a confirmed 10-40x undisclosed rate discontinuity across the 2023 boundary and a fabricated 'Creator Economy Research Institute' study already flagged in this corpus — does any credible instrument (regulatory filing, leaked data, academic study) exist that discloses actual TikTok per-creator payout distributions the way the Twitch leak and Rieder et al. did for Twitch/YouTube?",
+      "rationale": "The corpus documents that TikTok's Creator Fund paid ~$0.01-0.04/1,000 views while its successor Creator Rewards Program pays ~$0.40-1.00+/1,000 views (note: penghasilan-content-creator-tiktok-indonesia-2026-real-data-benx32 and the Murf AI corroboration note), a 10-40x discontinuity that breaks comparability of TikTok income figures across the boundary — but no source in the batch supplies an actual payout DISTRIBUTION (median, mean, percentile) for TikTok creators the way Rieder et al. and the Twitch leak do for YouTube and Twitch. A confirmed fabrication (the 'Creator Economy Research Institute' 14,200-creator, 11-country audit, flagged do-not-cite in this corpus) shows how badly this gap gets papered over with invented authority. TikTok is one of the three platforms the prompt decomposition explicitly requires coverage for (alongside YouTube and Twitch), and it is currently the weakest-evidenced of the three on income distribution specifically. Depth investigation should search for TikTok's own transparency reports, any regulatory disclosure (EU DSA transparency reports, US congressional testimony, the DPR Komisi I hearing record itself), and any leaked or litigation-disclosed payout data.",
+      "corpus_evidence": [
+        "penghasilan-content-creator-tiktok-indonesia-2026-real-data-benx32",
+        "78-of-influencers-admit-to-suffering-burnout"
+      ],
+      "suggested_starting_urls": [
+        "https://www.tiktok.com/transparency",
+        "https://ec.europa.eu/digital-services-act-transparency-database/"
+      ],
+      "suggested_searches": [
+        "TikTok Creator Fund Creator Rewards payout distribution leaked data academic",
+        "TikTok DSA transparency report creator monetization disclosure EU",
+        "TikTok congressional testimony creator payout data United States",
+        "TikTok creator income percentile median analysis independent"
+      ]
+    }
+  ],
+  "skip_loci": [
+    {
+      "slug": "living-wage-share-survey-vs-telemetry",
+      "reason": "Real, high-relevance contradiction (step-3 cluster 'living-wage-share', side_a survey 4-63% vs side_b telemetry 0.04-1.6%) but it is the corpus's single most heavily-argued fight, already fully structured with opposing_positions in contradiction-graph.json, and is the most obvious pick for the sibling analyst. My angle guidance directs me toward parts the corpus answers worst rather than argues about most, so I leave this for analyst A / direct promotion by the orchestrator rather than duplicating it."
+    },
+    {
+      "slug": "quit-driver-money-vs-motivation",
+      "reason": "Also a fully-structured, high-relevance step-3 cluster (financial-attribution surveys vs statistically-modelled continuation predictors) with its own opposing_positions already written. Strong candidate, but per angle guidance I am prioritising the exit-survey-absence locus instead, which targets a gap this cluster does not resolve: both sides in the existing cluster sample only currently-active creators, so neither side can speak to actual quitters. That gap is the more load-bearing depth target."
+    },
+    {
+      "slug": "creator-population-denominator-50m-vs-400m",
+      "reason": "Real definitional dispute (step-3 cluster), but resolving it would not change any share statistic's numerator, only its denominator's label, and the corpus has already traced the Goldman/Zippia/SignalFire provenance chain fully. Diminishing marginal value for report quality relative to the SEA and unit-of-analysis gaps; leaving to analyst A or orchestrator judgment."
+    },
+    {
+      "slug": "indonesia-63-percent-re-verification",
+      "reason": "Already fully traced by the width sweep (coverage-gaps.md and contradiction-graph.json cluster 'indonesia-63-percent'): origin is TikTok's DPR testimony, not a national statistic; BPS has no content-creator count; the 14% figure is an unrelated Linktree-derived quantity. Re-investigating would waste depth budget on a question the corpus has already settled with primary-source tracing."
+    },
+    {
+      "slug": "attrition-survival-telemetry-non-english-literature",
+      "reason": "Considered proposing a locus to search Chinese/Korean/Japanese-language academic literature (Bilibili, Douyin, Afreeca) for platform-scale survival telemetry the three OpenAlex sweeps missed. Rejected in favor of keeping loci focused on my assigned angle (SEA/time-to-income/unit-of-analysis); attrition-rate-and-timing is also a top-ranked step-3 contradiction cluster likely to be picked by the sibling analyst, and adding a sixth near-duplicate-domain locus would crowd out the SEA-breadth and TikTok-distribution gaps that are currently unclaimed by anyone."
+    }
+  ]
+}

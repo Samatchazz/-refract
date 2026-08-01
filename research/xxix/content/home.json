@@ -1,0 +1,709 @@
+{
+  "meta": {
+    "source": "xxix.co homePage (Sanity CMS) — REFERENCE ONLY, replace before any use",
+    "buildId": "lHdfwMT6D2QzeKATZXRXL"
+  },
+  "hero": {
+    "type": "master",
+    "name": "Master - Home - Intro ",
+    "pos": {
+      "colStart": 1,
+      "colEnd": 6,
+      "offsetX": 0,
+      "offsetY": 5
+    },
+    "style": {
+      "bg": "#FFFFFF",
+      "fontColor": "dark",
+      "hover": "red",
+      "width": "75%"
+    },
+    "link": null,
+    "body": "<h1>Twenty Nine is a people-first brand, product, and web studio<br><br></h1>\n#### ⬤ Start a project → [studio@xxix.co](mailto:studio@xxix.co)"
+  },
+  "modules": [
+    {
+      "type": "master",
+      "name": "Master - Client List",
+      "pos": {
+        "colStart": 5,
+        "colEnd": 10,
+        "offsetX": 0,
+        "offsetY": 270
+      },
+      "style": {
+        "bg": "#F8E71C",
+        "fontColor": "dark",
+        "hover": null,
+        "width": "75%"
+      },
+      "link": null,
+      "body": "<h4>Our clients include –</h4>\n<h3><br>Air Company, Brooklyn Museum, Dropbox, Etsy, Figma, Google, Hinge, IBM, Ironman, Light Phone, Mailchimp, Mac Miller, Magic Leap, MIT, Mozilla, Pinterest, Pratt Institute, Salt & Stone, Stripe</h3>\n<h4><br><a href=\"/work\">⬤ View our work</a></h4>"
+    },
+    {
+      "type": "media",
+      "name": null,
+      "pos": {
+        "colStart": null,
+        "colEnd": null,
+        "offsetX": 0,
+        "offsetY": 0
+      },
+      "style": {
+        "bg": "#000000",
+        "fontColor": "dark",
+        "hover": null,
+        "width": "100%"
+      },
+      "link": "/work/williamstowntheatrefestival",
+      "media": {
+        "kind": "video",
+        "src": "assets/video/146228848dfd813eb2c15f267f1512b5c86a2728.mp4",
+        "poster": null
+      },
+      "captions": [
+        {
+          "text": "⬤ WILLIAMSTOWN THEATRE FESTIVAL<br>Website Design and Development",
+          "position": "top-left",
+          "fontColor": "dark"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "name": "Image - Home - Oh to be Known by my Computer",
+      "pos": {
+        "colStart": null,
+        "colEnd": null,
+        "offsetX": 0,
+        "offsetY": 0
+      },
+      "style": {
+        "bg": null,
+        "fontColor": "dark",
+        "hover": null,
+        "width": "75%"
+      },
+      "link": "https://garden3d.substack.com/p/oh-to-be-known-by-my-computer",
+      "media": {
+        "kind": "image",
+        "src": "assets/img/8392554c7d3ceadf6a83268693d17e853da7c857-1921x1921.png",
+        "ext": "png"
+      },
+      "aspectRatio": "square",
+      "disableShadow": true,
+      "captions": [
+        {
+          "text": "⬤ OH, TO BE KNOWN BY MY COMPUTER!<br>A pattern for designing intelligent products",
+          "position": "bottom-left",
+          "fontColor": "dark"
+        }
+      ]
+    },
+    {
+      "type": "master",
+      "name": "Master - Studio - Jobs",
+      "pos": {
+        "colStart": 1,
+        "colEnd": 4,
+        "offsetX": 0,
+        "offsetY": 180
+      },
+      "style": {
+        "bg": "#F8E71C",
+        "fontColor": "dark",
+        "hover": null,
+        "width": "75%"
+      },
+      "link": null,
+      "body": "<h2>WORK WITH US</h2>\n<h4><br><span>We think of our studio as a refuge for creative people. We provide free health insurance, generous time off, freedom to work when and where you choose, share company profits, make everything happening in the studio transparent, and even offset our carbon footprint.</span></h4>\n<h3><br><a href=\"/jobs\">⬤ OPEN POSITIONS</a></h3>"
+    },
+    {
+      "type": "image",
+      "name": "Image - Home - Sustainability Report",
+      "pos": {
+        "colStart": 5,
+        "colEnd": 10,
+        "offsetX": 80,
+        "offsetY": 300
+      },
+      "style": {
+        "bg": null,
+        "fontColor": "dark",
+        "hover": null,
+        "width": "100%"
+      },
+      "link": "https://garden3d.substack.com/p/garden3d-2023-sustainability-report",
+      "media": {
+        "kind": "image",
+        "src": "assets/img/39785940c535cf89f66368c1b570e06b62dd5a20-897x517.png",
+        "ext": "png"
+      },
+      "disableShadow": true,
+      "captions": [
+        {
+          "text": "⬤ 2024 REPORT<br>Sustainability",
+          "position": "bottom-left",
+          "fontColor": "dark"
+        }
+      ]
+    },
+    {
+      "type": "media",
+      "name": null,
+      "pos": {
+        "colStart": null,
+        "colEnd": null,
+        "offsetX": 0,
+        "offsetY": 0
+      },
+      "style": {
+        "bg": null,
+        "fontColor": "dark",
+        "hover": null,
+        "width": "100%"
+      },
+      "link": "/work/mac-miller-swimming",
+      "media": {
+        "kind": "video",
+        "src": "assets/video/5547b065b49a113c4de3ddcf528258374c67d316.mp4",
+        "poster": null
+      },
+      "captions": [
+        {
+          "text": "⬤ MAC MILLER<br>Website Design and Development",
+          "position": "bottom-left",
+          "fontColor": "dark"
+        }
+      ]
+    },
+    {
+      "type": "media",
+      "name": null,
+      "pos": {
+        "colStart": null,
+        "colEnd": null,
+        "offsetX": 0,
+        "offsetY": 0
+      },
+      "style": {
+        "bg": null,
+        "fontColor": "dark",
+        "hover": null,
+        "width": "75%"
+      },
+      "link": "/work/aplos",
+      "media": {
+        "kind": "video",
+        "src": "assets/video/8df10eb6c850f2d89c9a687b79eec991c4e74d89.mp4",
+        "poster": null
+      },
+      "captions": [
+        {
+          "text": "⬤ APLOS<br>Website Design for Ecommerce",
+          "position": "bottom-left",
+          "fontColor": "dark"
+        }
+      ]
+    },
+    {
+      "type": "media",
+      "name": null,
+      "pos": {
+        "colStart": null,
+        "colEnd": null,
+        "offsetX": 0,
+        "offsetY": 0
+      },
+      "style": {
+        "bg": null,
+        "fontColor": "dark",
+        "hover": null,
+        "width": "100%"
+      },
+      "link": "/work/presq",
+      "media": {
+        "kind": "video",
+        "src": "assets/video/ebe0b8e770b3e02b976f790a6dd8a1ecb1296d73.mp4",
+        "poster": null
+      },
+      "captions": [
+        {
+          "text": "⬤ PRESQ<br>Website Design and Development for Ecommerce",
+          "position": "top-left",
+          "fontColor": "dark"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "name": "Image - Home - Index interior",
+      "pos": {
+        "colStart": 6,
+        "colEnd": 9,
+        "offsetX": -20,
+        "offsetY": 70
+      },
+      "style": {
+        "bg": null,
+        "fontColor": "dark",
+        "hover": null,
+        "width": "100%"
+      },
+      "link": "/work/index",
+      "media": {
+        "kind": "image",
+        "src": "assets/img/3af3adc89c4fcc1abe6ac342debe5fc19b824ad7-1440x1800.png",
+        "ext": "png"
+      },
+      "captions": [
+        {
+          "text": "⬤ INDEX NYC<br>Shared Work and Community Space",
+          "position": "top-left",
+          "fontColor": "dark"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "name": "Image - Home - Air Bottle",
+      "pos": {
+        "colStart": 2,
+        "colEnd": 8,
+        "offsetX": 0,
+        "offsetY": 365
+      },
+      "style": {
+        "bg": null,
+        "fontColor": "light",
+        "hover": "white",
+        "width": "75%"
+      },
+      "link": "/work/air-company",
+      "media": {
+        "kind": "image",
+        "src": "assets/img/279304f94866c9ed72be659b184d88eae9dafb9b-1397x1995.png",
+        "ext": "png"
+      },
+      "disableShadow": true,
+      "captions": [
+        {
+          "text": "⬤ AIR COMPANY<br>Website Design and <br>Art Direction for Ecommerce",
+          "position": "top-left",
+          "fontColor": "dark"
+        }
+      ]
+    },
+    {
+      "type": "media",
+      "name": null,
+      "pos": {
+        "colStart": null,
+        "colEnd": null,
+        "offsetX": 0,
+        "offsetY": 0
+      },
+      "style": {
+        "bg": null,
+        "fontColor": "dark",
+        "hover": null,
+        "width": "75%"
+      },
+      "link": "/work/salt-and-stone",
+      "media": {
+        "kind": "video",
+        "src": "assets/video/5169a042ae2f139fb601eb49f4161aa3bf416bb2.mp4",
+        "poster": null
+      },
+      "captions": [
+        {
+          "text": "⬤ SALT & STONE<br>Campaign and Packaging",
+          "position": "bottom-left",
+          "fontColor": "light"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "name": "Image - Home - Pratt Cactus",
+      "pos": {
+        "colStart": 8,
+        "colEnd": 11,
+        "offsetX": 35,
+        "offsetY": 570
+      },
+      "style": {
+        "bg": null,
+        "fontColor": "light",
+        "hover": "white",
+        "width": "75%"
+      },
+      "link": "/work/pratt-soa",
+      "media": {
+        "kind": "image",
+        "src": "assets/img/9f6d555abadaa8dd8f9496cd1b2a67700f2de052-823x1227.png",
+        "ext": "png"
+      },
+      "disableShadow": true,
+      "captions": [
+        {
+          "text": "⬤ Pratt SoA<br>Website Design and Development",
+          "position": "bottom-left",
+          "fontColor": "dark"
+        }
+      ]
+    },
+    {
+      "type": "media",
+      "name": "Video - Home - Thea",
+      "pos": {
+        "colStart": null,
+        "colEnd": null,
+        "offsetX": 0,
+        "offsetY": 0
+      },
+      "style": {
+        "bg": null,
+        "fontColor": "light",
+        "hover": "offwhite",
+        "width": "75%"
+      },
+      "link": "/work/thea",
+      "media": {
+        "kind": "video",
+        "src": "assets/video/bd50c872a82fa0b27f62721b8db7a13e440b9f68.mp4",
+        "poster": null
+      },
+      "captions": [
+        {
+          "text": "⬤ THEA<br>Product Design and Art Direction",
+          "position": "top-left",
+          "fontColor": "light"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "name": "Image – Home – Aplós",
+      "pos": {
+        "colStart": 8,
+        "colEnd": 11,
+        "offsetX": 40,
+        "offsetY": 390
+      },
+      "style": {
+        "bg": "Black",
+        "fontColor": "light",
+        "hover": "white",
+        "width": "75%"
+      },
+      "link": "/work/aplos",
+      "media": {
+        "kind": "image",
+        "src": "assets/img/098da5712d44b623bdc11f2fa7192bb237d0e865-1080x1080.gif",
+        "ext": "gif"
+      },
+      "aspectRatio": "square",
+      "disableShadow": false,
+      "captions": [
+        {
+          "text": "⬤ APLÓS<br>Website and procedural design tooling",
+          "position": "top-left",
+          "fontColor": "light"
+        }
+      ]
+    },
+    {
+      "type": "media",
+      "name": "Arena",
+      "pos": {
+        "colStart": 1,
+        "colEnd": 4,
+        "offsetX": 0,
+        "offsetY": 335
+      },
+      "style": {
+        "bg": null,
+        "fontColor": "dark",
+        "hover": null,
+        "width": "100%"
+      },
+      "link": "/work/arena",
+      "media": {
+        "kind": "video",
+        "src": "assets/video/3cebc5a7c9fcb0ad6fc99c92ff8547023f348ebd.mp4",
+        "poster": null
+      },
+      "captions": [
+        {
+          "text": "⬤ ARENA<br>Brand Design and Strategy",
+          "position": "top-left",
+          "fontColor": "dark"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "name": "Image - Home - Product Design",
+      "pos": {
+        "colStart": null,
+        "colEnd": null,
+        "offsetX": 0,
+        "offsetY": 0
+      },
+      "style": {
+        "bg": null,
+        "fontColor": "dark",
+        "hover": null,
+        "width": "75%"
+      },
+      "link": "/capabilities/digital-product",
+      "media": {
+        "kind": "image",
+        "src": "assets/img/89abbdf7209bb1589b2fbffb23f3d01780be0996-1232x1540.jpg",
+        "ext": "jpg"
+      },
+      "disableShadow": false,
+      "captions": [
+        {
+          "text": "⬤ CAPABILITIES<br>Product Design",
+          "position": "bottom-left",
+          "fontColor": "dark"
+        }
+      ]
+    },
+    {
+      "type": "media",
+      "name": null,
+      "pos": {
+        "colStart": null,
+        "colEnd": null,
+        "offsetX": 0,
+        "offsetY": 0
+      },
+      "style": {
+        "bg": null,
+        "fontColor": "dark",
+        "hover": null,
+        "width": "100%"
+      },
+      "link": "/work/workmade",
+      "media": {
+        "kind": "video",
+        "src": "assets/video/cf4f8e76152ed2532b992e5b396bc9a1b9527efe.mp4",
+        "poster": null
+      },
+      "captions": [
+        {
+          "text": "⬤ WORKMADE<br>Product Design and Strategy",
+          "position": "top-left",
+          "fontColor": "dark"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "name": "Image - Home - Rock & Expansive Brands",
+      "pos": {
+        "colStart": 2,
+        "colEnd": 6,
+        "offsetX": 0,
+        "offsetY": 440
+      },
+      "style": {
+        "bg": null,
+        "fontColor": "light",
+        "hover": "white",
+        "width": "75%"
+      },
+      "link": "https://garden3d.substack.com/p/expansive-brands",
+      "media": {
+        "kind": "image",
+        "src": "assets/img/de2195a10dda4a9c0b55fe0af71c6c79cbfc7cbc-840x718.png",
+        "ext": "png"
+      },
+      "disableShadow": true,
+      "captions": [
+        {
+          "text": "⬤ EXPANSIVE BRANDS<br>Centering humanity when building brands",
+          "position": "top-left",
+          "fontColor": "dark"
+        }
+      ]
+    },
+    {
+      "type": "emailSignup",
+      "name": "Email Signup",
+      "pos": {
+        "colStart": 8,
+        "colEnd": 12,
+        "offsetX": 0,
+        "offsetY": 135
+      },
+      "style": {
+        "bg": "#F8E71C",
+        "fontColor": "dark",
+        "hover": "black",
+        "width": "100%"
+      },
+      "link": null,
+      "placeholder": "Get email updates",
+      "cta": "Subscribe →"
+    },
+    {
+      "type": "image",
+      "name": "Image - Home - Modern Life",
+      "pos": {
+        "colStart": 2,
+        "colEnd": 6,
+        "offsetX": -20,
+        "offsetY": 110
+      },
+      "style": {
+        "bg": null,
+        "fontColor": "dark",
+        "hover": null,
+        "width": "100%"
+      },
+      "link": "/work/modern-life",
+      "media": {
+        "kind": "image",
+        "src": "assets/img/481cd7db79e021e71fe332225c4264648f97444e-960x1106.webp",
+        "ext": "webp"
+      },
+      "disableShadow": false,
+      "captions": [
+        {
+          "text": "⬤ MODERN LIFE<br>Brand, Website and Art Direction",
+          "position": "top-left",
+          "fontColor": "light"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "name": "Image - Home - Firefly Health",
+      "pos": {
+        "colStart": 8,
+        "colEnd": 11,
+        "offsetX": 50,
+        "offsetY": 160
+      },
+      "style": {
+        "bg": null,
+        "fontColor": "dark",
+        "hover": "white",
+        "width": "75%"
+      },
+      "link": "/work/firefly-health",
+      "media": {
+        "kind": "image",
+        "src": "assets/img/8f2bde96a97ca7b931d1ecaeaffcc2555dc933dd-1920x2160.webp",
+        "ext": "webp"
+      },
+      "disableShadow": true,
+      "captions": [
+        {
+          "text": "⬤ FIREFLY HEALTH<br>Brand, Website and Art Direction",
+          "position": "bottom-left",
+          "fontColor": "dark"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "name": "Image - Home - Earth Masked",
+      "pos": {
+        "colStart": 9,
+        "colEnd": 12,
+        "offsetX": 50,
+        "offsetY": 480
+      },
+      "style": {
+        "bg": null,
+        "fontColor": "light",
+        "hover": "white",
+        "width": "100%"
+      },
+      "link": "https://garden3d.substack.com/p/garden3d-dei-report-2023",
+      "media": {
+        "kind": "image",
+        "src": "assets/img/a7efe413ac3e03485263838797bc977b76662b96-954x958.png",
+        "ext": "png"
+      },
+      "disableShadow": true,
+      "captions": [
+        {
+          "text": "⬤ 2024 REPORT<br>Diversity, Equity, and Inclusion",
+          "position": "bottom-left",
+          "fontColor": "dark"
+        }
+      ]
+    },
+    {
+      "type": "media",
+      "name": null,
+      "pos": {
+        "colStart": null,
+        "colEnd": null,
+        "offsetX": 0,
+        "offsetY": 0
+      },
+      "style": {
+        "bg": null,
+        "fontColor": "dark",
+        "hover": null,
+        "width": "75%"
+      },
+      "link": "/work/modern-life",
+      "media": {
+        "kind": "video",
+        "src": "assets/video/36291f62dc042fca057dd039ddb10ae8e2737e26.mp4",
+        "poster": null
+      },
+      "captions": [
+        {
+          "text": "⬤ MODERN LIFE<br>Brand, Website and Art Direction",
+          "position": "top-left",
+          "fontColor": "light"
+        }
+      ]
+    }
+  ],
+  "projectCategoryTags": [
+    "Web",
+    "Strategy",
+    "Product",
+    "Brand"
+  ],
+  "footer": {
+    "locations": [
+      {
+        "city": "EST",
+        "neighborhood": "New York City"
+      },
+      {
+        "city": "CT",
+        "neighborhood": "Chicago"
+      },
+      {
+        "city": "CET",
+        "neighborhood": "Berlin"
+      }
+    ],
+    "socialLinks": [
+      {
+        "label": "Email studio@xxix.co",
+        "url": "mailto:studio@xxix.co"
+      },
+      {
+        "label": "Instagram @xxix_co",
+        "url": "https://www.instagram.com/xxix_co"
+      },
+      {
+        "label": "Substack @garden3d",
+        "url": "https://garden3d.substack.com/"
+      }
+    ]
+  }
+}

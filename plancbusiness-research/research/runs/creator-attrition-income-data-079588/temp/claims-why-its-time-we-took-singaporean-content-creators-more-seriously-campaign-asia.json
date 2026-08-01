@@ -1,0 +1,30 @@
+[
+  {
+    "claim": "An IMDA (Infocomm Media Development Authority) 2024 survey reportedly found that about 8% of Singaporeans aged 18-35 identify content creation as either their primary income source or their career goal.",
+    "stance": "neutral",
+    "stance_target": "prevalence of content creation as a stated occupation/income source among young Singaporeans",
+    "evidence_type": "statistical",
+    "scope_conditions": "Singapore; ages 18-35; year 2024; UNCONFIRMED - statistic recoverable only from Google search-result snippets of a paywalled Campaign Asia/Campaign US article, not from the article's full text, and the original IMDA report/publication itself could not be located or fetched (IMDA's public Survey Reports and Research & Statistics pages did not surface a direct link in search).",
+    "quoted_support": "According to a 2024 survey by the Infocomm Media Development Authority (IMDA), around 8% of Singaporeans aged 18 to 35 identify content creation as either their primary income source or career goal.",
+    "numbers": ["8%", "ages 18-35", "2024"],
+    "entities": ["IMDA", "Singapore", "Campaign Asia"],
+    "time_period": "2024",
+    "region": "Singapore",
+    "confidence": "low",
+    "source_note_id": "why-its-time-we-took-singaporean-content-creators-more-seriously-campaign-asia"
+  },
+  {
+    "claim": "Singaporean content creators commonly earn between S$2,500 and S$6,000 per month, comparable to a fresh graduate's starting salary, and typically lack CPF contributions, paid leave, or employer-sponsored health insurance.",
+    "stance": "supports",
+    "stance_target": "content creation as a precarious/entry-level-equivalent income stream in Singapore, lacking standard employment benefits",
+    "evidence_type": "anecdotal",
+    "scope_conditions": "Singapore; UNCONFIRMED beyond search-snippet level - the underlying Campaign Asia/Campaign US article was paywalled and its full text (including sourcing/methodology for this income range) could not be retrieved.",
+    "quoted_support": "A common experience involves creators earning enough to scrape by-typically between S$2,500 and S$6,000 per month, roughly equivalent to a fresh graduate's starting pay.",
+    "numbers": ["S$2,500-S$6,000/month"],
+    "entities": ["Singapore", "CPF"],
+    "time_period": "2024-2025",
+    "region": "Singapore",
+    "confidence": "low",
+    "source_note_id": "why-its-time-we-took-singaporean-content-creators-more-seriously-campaign-asia"
+  }
+]

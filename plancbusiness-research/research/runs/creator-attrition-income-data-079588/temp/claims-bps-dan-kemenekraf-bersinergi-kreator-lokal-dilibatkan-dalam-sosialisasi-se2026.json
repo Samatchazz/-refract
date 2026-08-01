@@ -1,0 +1,44 @@
+[
+  {
+    "claim": "BPS (Indonesia's official statistics agency) reports the CREATIVE ECONOMY workforce broadly -- not 'content creators' as a discrete category -- was 27.40 million people in 2025 (18.70% of national workforce), up from 26.48 million (18.30%) in 2024. This is a fundamentally different, much broader occupational category than the 'content creator' figures used elsewhere in this batch.",
+    "stance": "refutes",
+    "stance_target": "the notion that any government 'content creator' figure (8 juta, 17 juta) traces to an official BPS census or survey",
+    "evidence_type": "statistical",
+    "scope_conditions": "Indonesia, national creative-economy workforce (culinary, fashion, gaming, music, film, design, digital content, etc. combined), 2024-2025",
+    "quoted_support": "\"Tahun 2025, tenaga kerja ekonomi kreatif mencakup sekitar 18,70 persen dari total tenaga kerja nasional atau mencapai sekitar 27,40 juta jiwa. Angka ini naik dari tahun sebelumnya, di mana tahun 2024 jumlah tenaga kerja ekonomi kreatif capai 26,48 juta jiwa (18,30 persen).\"",
+    "numbers": ["27,400,000 creative-economy workers (2025)", "18.70% of national workforce (2025)", "26,480,000 creative-economy workers (2024)", "18.30% of national workforce (2024)"],
+    "entities": ["Badan Pusat Statistik (BPS)", "Amalia Adininggar Widyasanti", "Kemenekraf"],
+    "time_period": "2024-2025, reported November 2025",
+    "region": "Indonesia",
+    "confidence": "high",
+    "source_note_id": "bps-dan-kemenekraf-bersinergi-kreator-lokal-dilibatkan-dalam-sosialisasi-se2026"
+  },
+  {
+    "claim": "As of November 2025, BPS's chief statistician stated that the 2026 Economic Census (SE2026) would be the FIRST census to give a complete picture of creative-economy business actors including digital content creators -- confirming that no prior dedicated census-based count of Indonesian content creators exists.",
+    "stance": "supports",
+    "stance_target": "absence of an official, methodologically disclosed BPS count of content creators specifically",
+    "evidence_type": "empirical",
+    "scope_conditions": "Indonesia, national statistical infrastructure, as of Nov 2025 with SE2026 still pending",
+    "quoted_support": "\"SE2026 nantinya akan memberikan gambaran lengkap pelaku usaha kreatif di berbagai subsektor, seperti kuliner, fesyen, gim, musik, film, desain, hingga konten digital, termasuk lokasi dan skala usaha.\"",
+    "numbers": [],
+    "entities": ["Badan Pusat Statistik (BPS)", "Amalia Adininggar Widyasanti", "Sensus Ekonomi 2026 (SE2026)"],
+    "time_period": "as of November 2025, SE2026 conducted in 2026",
+    "region": "Indonesia",
+    "confidence": "high",
+    "source_note_id": "bps-dan-kemenekraf-bersinergi-kreator-lokal-dilibatkan-dalam-sosialisasi-se2026"
+  },
+  {
+    "claim": "West Java alone accounts for 6.24 million creative-economy workers, and West Java, Central Java, and East Java combined account for 57.81% of Indonesia's total creative-economy workforce -- indicating strong geographic concentration in Java.",
+    "stance": "neutral",
+    "stance_target": "geographic distribution of Indonesia's creative-economy workforce",
+    "evidence_type": "statistical",
+    "scope_conditions": "Indonesia, provincial breakdown, 2025",
+    "quoted_support": "\"Provinsi Jawa Barat (Jabar) tercatat sebagai wilayah dengan tenaga kerja ekonomi kreatif terbesar, yaitu 6,24 juta jiwa. Jika digabungkan, Jabar, Jawa Tengah (Jateng), dan Jawa Timur (Jateng) menyumbang 57,81 persen dari total tenaga kerja ekonomi kreatif nasional.\"",
+    "numbers": ["6,240,000 workers in West Java", "57.81% combined share for West Java, Central Java, East Java"],
+    "entities": ["Badan Pusat Statistik (BPS)", "Jawa Barat", "Jawa Tengah", "Jawa Timur"],
+    "time_period": "2025",
+    "region": "Indonesia (Java provinces)",
+    "confidence": "high",
+    "source_note_id": "bps-dan-kemenekraf-bersinergi-kreator-lokal-dilibatkan-dalam-sosialisasi-se2026"
+  }
+]

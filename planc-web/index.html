@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>planc* — ชีวิตครีเอเตอร์ ก็เหมือนเกมด่านนึง</title>
+<meta name="description" content="planc* digital — เอเจนซี่ครีเอทีฟ. เลื่อนลงเพื่อเดินไปกับเรา ทีละด่าน ทีละอุปสรรค">
+<meta name="theme-color" content="#111111">
+<meta property="og:type" content="website">
+<meta property="og:title" content="planc* — ชีวิตครีเอเตอร์ ก็เหมือนเกมด่านนึง">
+<meta property="og:description" content="เลื่อนลงเพื่อเดินไปกับเรา ทีละด่าน ทีละอุปสรรค">
+<meta property="og:image" content="assets/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@600;800&family=Sarabun:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/site.css">
+</head>
+<body>
+
+<!-- ============ PRELOADER ============ -->
+<div id="preload" aria-hidden="true">
+  <div class="pl-mark">planc<span>*</span></div>
+  <div class="pl-bar"><i></i></div>
+  <div class="pl-txt">LOADING WORLD 1-1</div>
+</div>
+
+<!-- ============ SITE CHROME — TOP ============ -->
+<header id="nav">
+  <a class="brand" href="#top">planc<span>*</span></a>
+  <button id="menuBtn" aria-expanded="false" aria-controls="menu">
+    <span class="mb-txt">MENU</span><span class="mb-ico"><i></i><i></i></span>
+  </button>
+</header>
+
+<nav id="menu" aria-hidden="true">
+  <ol id="menuList"></ol>
+  <div class="menu-foot">
+    <span>planc* digital · Bangkok</span>
+    <a href="mailto:hello@planc.studio">hello@planc.studio</a>
+  </div>
+</nav>
+
+<!-- ============ THE WORLD ============ -->
+<main id="stage">
+
+  <!-- depth 1 — sky + far hills, 0.12x -->
+  <div class="layer" id="lSky" data-f="0.12">
+    <div class="sky-grad"></div>
+    <div class="tile hills"></div>
+  </div>
+
+  <!-- depth 2 — city + clouds, 0.35x -->
+  <div class="layer" id="lMid" data-f="0.35">
+    <div class="tile city"></div>
+    <div class="clouds">
+      <span class="cloud c1"></span><span class="cloud c2"></span>
+      <span class="cloud c3"></span><span class="cloud c4"></span>
+    </div>
+  </div>
+
+  <!-- depth 3 — the level itself, 1.0x -->
+  <div class="layer" id="lWorld" data-f="1">
+    <div id="world">
+      <section class="beat" id="hero" data-p="0" data-name="เริ่มต้น">
+        <div class="logo">planc<span>*</span></div>
+        <p class="tag">ชีวิตครีเอเตอร์ ก็เหมือนเกมด่านนึง</p>
+      </section>
+
+      <section class="beat" data-p="0.16" data-name="ออกเดิน">
+        <div class="kicker">The Journey</div>
+        <h2>เดินหน้าอย่างเดียว<br>คือกติกาข้อแรก</h2>
+        <p>การเลื่อนนิ้วของคุณคือก้าวเดินของเรา — ทุกโปรเจกต์คือฉากใหม่ที่ไม่เคยซ้ำ</p>
+      </section>
+
+      <section class="beat" data-p="0.335" data-name="อุปสรรค">
+        <div class="kicker">Pain Point</div>
+        <h2>อุปสรรค มีไว้เหยียบ</h2>
+        <p>เดดไลน์ งบจำกัด บรีฟไม่ชัด — เราจัดการให้ราบเป็นหน้ากลอง</p>
+      </section>
+
+      <section class="beat" data-p="0.535" data-name="บริการ">
+        <div class="kicker">Service</div>
+        <h2>เก็บของดีระหว่างทาง</h2>
+        <p>ทุกช่วงของด่าน คือหนึ่งบริการของ planc ที่ปลดล็อกให้ธุรกิจคุณ</p>
+      </section>
+
+      <section class="beat" data-p="0.715" data-name="ด่านมืด">
+        <div class="kicker">The Dark Level</div>
+        <h2>บางช่วงของทาง<br>มันมืดจริงๆ</h2>
+        <p>และนั่นแหละคือตอนที่ครีเอทีฟดีๆ ส่องแสงที่สุด</p>
+      </section>
+
+      <section class="beat" data-p="0.90" data-hold="0.13" data-name="เสาธง">
+        <div class="kicker">Goal</div>
+        <h2>ถึงเสาธงแล้ว</h2>
+        <p>ท่าเดินทั้งหมดนี้สร้างด้วยโค้ดจากภาพนิ่งใบเดียว ไม่ได้ใช้คลิปเดิน</p>
+        <a class="cta" href="#end">คุยกับเรา →</a>
+      </section>
+
+      <div class="prop enemy" data-p="0.415" id="enemy">
+        <span class="label">DEADLINE</span>
+        <svg viewBox="0 0 100 60" aria-hidden="true">
+          <ellipse cx="50" cy="38" rx="42" ry="22" fill="currentColor"/>
+          <circle cx="38" cy="32" r="5" fill="#fcfcfa"/><circle cx="62" cy="32" r="5" fill="#fcfcfa"/>
+          <circle class="pupil" cx="38" cy="32" r="2" fill="#111"/>
+          <circle class="pupil" cx="62" cy="32" r="2" fill="#111"/>
+        </svg>
+      </div>
+      <div class="prop block" data-p="0.615" id="block">!<span class="star">★</span></div>
+      <div class="prop flagpole" data-p="0.995"><div class="flag">planc*</div></div>
+    </div>
+  </div>
+
+  <!-- hint lives on the stage, not in #world: left:50% of a 7,590px world
+       would put it 3,795px off-screen -->
+  <div id="hint">SCROLL ↓<br><span>เลื่อนลง แล้วดูว่าเกิดอะไรขึ้น</span></div>
+
+  <!-- the cat sits between the level and the foreground -->
+  <div id="shadow"><i></i></div>
+  <div id="catWrap"><div id="catLean"><div id="catSq">
+    <img id="catImg" src="assets/cat.png" alt="แมวดำมาสคอตของ planc กำลังเดิน">
+  </div></div></div>
+
+  <!-- depth 4 — foreground grass, 1.25x, passes in FRONT of the cat -->
+  <div class="layer" id="lFore" data-f="1.25"><div class="tile grass"></div></div>
+
+  <!-- award-site micro labels -->
+  <span class="micro micro-l">PLANC* DIGITAL<br>BANGKOK · EST. 2019</span>
+  <span class="micro micro-r">SCROLL<br>TO WALK</span>
+</main>
+
+<div id="spacer"></div>
+
+<!-- ============ GAME HUD ============ -->
+<div id="hud">
+  <span class="hud-world">WORLD <b>1-1</b></span>
+  <div class="hud-rail"><i id="hudFill"></i><div id="hudPins"></div></div>
+  <span class="hud-scene" id="hudScene">เริ่มต้น</span>
+</div>
+
+<!-- ============ REAL CLOSING PANEL ============ -->
+<footer id="end">
+  <div class="end-in">
+    <p class="end-kick">END OF WORLD 1-1</p>
+    <h2>ด่านต่อไปเป็นของคุณ<br>เราเดินไปด้วย</h2>
+    <a class="cta big" href="mailto:hello@planc.studio">เริ่มคุยกับ planc*</a>
+
+    <div class="end-cols">
+      <div>
+        <h3>ติดต่อ</h3>
+        <a href="mailto:hello@planc.studio">hello@planc.studio</a>
+        <a href="tel:+6620000000">+66 2 000 0000</a>
+      </div>
+      <div>
+        <h3>โซเชียล</h3>
+        <a href="#">Instagram</a><a href="#">Facebook</a><a href="#">Behance</a>
+      </div>
+      <div>
+        <h3>ที่อยู่</h3>
+        <span>กรุงเทพมหานคร<br>ประเทศไทย</span>
+      </div>
+    </div>
+
+    <div class="end-bar">
+      <span>© 2026 planc* digital</span>
+      <span>Made with scroll, not with a game engine</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ NO-MOTION / NO-JS FALLBACK ============ -->
+<article id="fallback">
+  <h1>planc* digital</h1>
+  <p>ชีวิตครีเอเตอร์ ก็เหมือนเกมด่านนึง — เดินหน้าอย่างเดียวคือกติกาข้อแรก</p>
+  <p>อุปสรรคมีไว้เหยียบ: เดดไลน์ งบจำกัด บรีฟไม่ชัด เราจัดการให้ราบเป็นหน้ากลอง</p>
+  <p>ทุกช่วงของด่านคือหนึ่งบริการของ planc ที่ปลดล็อกให้ธุรกิจคุณ</p>
+  <p>บางช่วงของทางมันมืดจริงๆ — และนั่นคือตอนที่ครีเอทีฟดีๆ ส่องแสงที่สุด</p>
+  <p><strong><a href="mailto:hello@planc.studio">ถึงเสาธงแล้ว — คุยกับเรา</a></strong></p>
+</article>
+
+<script src="js/scene.js"></script>
+<script src="js/cat.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

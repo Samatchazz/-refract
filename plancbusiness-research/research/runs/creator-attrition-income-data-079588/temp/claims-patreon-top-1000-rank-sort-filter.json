@@ -1,0 +1,58 @@
+[
+  {
+    "claim": "Graphtreon's daily-updated Patreon Top 1000 shows that the platform's highest-earning creators are overwhelmingly long-tenured, with leading pages running 2,000 to 3,700 days (roughly 5.5 to 10 years), indicating that top-of-distribution creator income is a function of accumulated tenure rather than recent entry.",
+    "stance": "supports",
+    "stance_target": "The claim that top creator earnings accrue to long-surviving incumbents rather than to new entrants",
+    "evidence_type": "empirical",
+    "scope_conditions": "Patreon top 1000 creators only, accessed July 2026; extreme survivorship selection by construction — this is the surviving elite tail, not a cohort; launch dates cluster 2016-2020",
+    "quoted_support": "Sortable list of Patreon top 1000 creators. Sort by clicking on the the top of each column. Filter by typing in the filter box. Updated daily.",
+    "numbers": ["Chapo Trap House 3,717 days running, launched May 2016", "TrueAnon 2,559 days, Jul 2019", "x4fab 2,974 days, Jun 2018", "Jenny Nicholson 3,539 days, Nov 2016"],
+    "entities": ["Graphtreon", "Patreon", "Tom Boruta"],
+    "time_period": "Accessed July 2026; launches 2016-2025",
+    "region": "Global",
+    "confidence": "high",
+    "source_note_id": "patreon-top-1000-rank-sort-filter"
+  },
+  {
+    "claim": "Per-patron monthly revenue varies by roughly an order of magnitude among Patreon's largest creators, from $0.71-$0.72 for software-mod creators to $4.21-$6.21 for podcasts, so patron counts are a poor proxy for creator income.",
+    "stance": "supports",
+    "stance_target": "The claim that audience size is a weak predictor of creator earnings",
+    "evidence_type": "empirical",
+    "scope_conditions": "Patreon top-1000 creators only, accessed July 2026; publicly disclosed earnings only",
+    "quoted_support": "Peter Boese ... 88,017 | $62,413 per month | $0.71 per month ... the yard ... 44,057 | $273,713 per month | $6.21 per month",
+    "numbers": ["$0.71/patron (peterboese, 88,017 members, $62,413/mo)", "$0.72/patron (x4fab, 71,585 members, $51,654/mo)", "$4.21/patron (Chapo Trap House, 46,397 members, $195,369/mo)", "$6.21/patron (the yard, 44,057 members, $273,713/mo)"],
+    "entities": ["Graphtreon", "Patreon"],
+    "time_period": "July 2026",
+    "region": "Global",
+    "confidence": "high",
+    "source_note_id": "patreon-top-1000-rank-sort-filter"
+  },
+  {
+    "claim": "Chapo Trap House's Patreon earnings grew from $88,074 per month with 19,837 patrons in December 2017 to $195,369 per month with 46,397 patrons by July 2026, showing that established top-decile creators compound while the platform median stays near zero.",
+    "stance": "supports",
+    "stance_target": "The claim that creator earnings inequality widens over time rather than converging",
+    "evidence_type": "empirical",
+    "scope_conditions": "Single creator tracked across two observation points nearly nine years apart; 2017 figure from The Outline, 2026 figure from Graphtreon; nominal dollars, not inflation-adjusted",
+    "quoted_support": "Chapo Trap House is Creating Chapo Trap House Podcast (chapotraphouse) | 46,397 | $195,369 per month | $4.21 per month | 3717 | May 2016",
+    "numbers": ["$88,074/month with 19,837 patrons (Dec 2017)", "$195,369/month with 46,397 patrons (Jul 2026)", "2.2x earnings growth over ~8.6 years"],
+    "entities": ["Graphtreon", "Patreon", "Chapo Trap House"],
+    "time_period": "December 2017 to July 2026",
+    "region": "United States",
+    "confidence": "high",
+    "source_note_id": "patreon-top-1000-rank-sort-filter"
+  },
+  {
+    "claim": "Graphtreon publishes only a top-1000 ranking on its public creator page, so the full Patreon earnings distribution that underpinned the 2017 minimum-wage analysis is no longer straightforwardly reproducible from the public interface.",
+    "stance": "neutral",
+    "stance_target": "The reproducibility of the widely-cited Patreon minimum-wage statistic",
+    "evidence_type": "empirical",
+    "scope_conditions": "graphtreon.com/patreon-creators accessed July 2026; audited absence — the site exposes category-filtered top-1000 lists but no aggregate distribution or total creator count on this page",
+    "quoted_support": "Sortable list of Patreon top 1000 creators.",
+    "numbers": ["1,000 creators listed", "79,420 total creators as of 2017"],
+    "entities": ["Graphtreon", "Patreon"],
+    "time_period": "July 2026",
+    "region": "Global",
+    "confidence": "medium",
+    "source_note_id": "patreon-top-1000-rank-sort-filter"
+  }
+]

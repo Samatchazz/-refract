@@ -1,0 +1,44 @@
+[
+ {
+  "claim": "An Indonesian marketing agency publishes monthly creator income tiers of Rp 500,000-3,000,000 (0-10K followers), Rp 3,000,000-15,000,000 (10K-100K), and Rp 15,000,000-50,000,000+ (100K+), while explicitly labelling them estimates with no stated data source.",
+  "stance": "neutral",
+  "stance_target": "The position that widely circulated Indonesian creator-income figures are agency assertions rather than measurements, and that the apparent availability of SEA income data is an artefact of unsourced content marketing",
+  "evidence_type": "expert-opinion",
+  "scope_conditions": "Indonesia; 2026; Rocket Digital Agency SEO article; self-declared estimates; no sample, no survey, no methodology; article illustration credited to ChatGPT",
+  "quoted_support": "Perlu diingat, angka tersebut merupakan estimasi. Gaji seorang content creator bisa beragam tergantung dari kualitas kontennya dan bidang yang dipilih.",
+  "numbers": ["Rp 500,000-3,000,000 at 0-10K followers", "Rp 3,000,000-15,000,000 at 10K-100K", "Rp 15,000,000-50,000,000+ at 100K+"],
+  "entities": ["Rocket Digital Agency", "Indonesia"],
+  "time_period": "2026",
+  "region": "Indonesia",
+  "confidence": "low",
+  "source_note_id": "gaji-content-creator-ini-faktanya-di-indonesia-pada-2026"
+ },
+ {
+  "claim": "The same agency states that Indonesian creators typically take from several months to more than a year to begin earning, with no supporting data.",
+  "stance": "supports",
+  "stance_target": "The position that time from starting to first meaningful income in Southeast Asia is consistently described as months-to-a-year across independent low-authority sources, but has never been measured",
+  "evidence_type": "expert-opinion",
+  "scope_conditions": "Indonesia; 2026; FAQ answer in an agency SEO article; no data source",
+  "quoted_support": "Berapa lama content creator bisa mulai menghasilkan? Biasanya membutuhkan waktu beberapa bulan hingga lebih dari satu tahun, tergantung pada proses yang dilalui.",
+  "numbers": ["several months to more than one year"],
+  "entities": ["Rocket Digital Agency", "Indonesia"],
+  "time_period": "2026",
+  "region": "Indonesia",
+  "confidence": "low",
+  "source_note_id": "gaji-content-creator-ini-faktanya-di-indonesia-pada-2026"
+ },
+ {
+  "claim": "Impatience with the delay before results is named as a reason Indonesian beginner creators stop, listed among common beginner mistakes rather than derived from any exit survey.",
+  "stance": "supports",
+  "stance_target": "The position that no documented, survey-based reasons for quitting exist for Southeast Asian creators, leaving only unsourced practitioner and agency assertions that the unpaid build period drives exit",
+  "evidence_type": "expert-opinion",
+  "scope_conditions": "Indonesia; 2026; single unsourced sentence within a list of beginner errors; not an exit survey",
+  "quoted_support": "Ingin Cepat Mendapatkan Hasil. Banyak yang berhenti karena belum melihat hasil dalam waktu singkat.",
+  "numbers": ["no quantified attrition rate given"],
+  "entities": ["Rocket Digital Agency", "Indonesia"],
+  "time_period": "2026",
+  "region": "Indonesia",
+  "confidence": "low",
+  "source_note_id": "gaji-content-creator-ini-faktanya-di-indonesia-pada-2026"
+ }
+]

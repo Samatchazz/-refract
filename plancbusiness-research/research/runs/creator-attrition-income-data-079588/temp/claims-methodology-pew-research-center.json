@@ -1,0 +1,72 @@
+[
+  {
+    "claim": "Pew's sampling frame was a constructed census rather than a sample: recursive traversal of YouTube API recommendations over nearly a year identified 1,525,690 channels as of January 2019, of which 43,770 had at least 250,000 subscribers, and every video these channels published 1-7 January 2019 was tracked daily for seven days.",
+    "stance": "supports",
+    "stance_target": "Platform-telemetry census designs give attrition and concentration estimates that self-selected creator surveys cannot",
+    "evidence_type": "empirical",
+    "scope_conditions": "Because no official channel list exists, the frame is Pew's own construction; the Center reports the frame expanded 44% (30,481 to 43,770) in its final six months, of which only 12% were genuinely newly discovered channels, which it offers as evidence the frame was near-complete at that subscriber threshold",
+    "quoted_support": "Because there is no exhaustive or officially sanctioned list of all videos or channels (of any size) on YouTube, Pew Research Center developed its own custom list of 43,770 channels that had at least 250,000 subscribers.",
+    "numbers": [
+      "1,525,690 channels mapped",
+      "43,770 with 250,000+ subscribers",
+      "243,254 videos",
+      "7-day tracking per video",
+      "average video observed 22 hours after upload",
+      "1,946,032 intended time stamps"
+    ],
+    "entities": [
+      "Pew Research Center",
+      "YouTube Data API"
+    ],
+    "time_period": "Frame built to December 2018; videos 1-7 January 2019",
+    "region": "Global",
+    "confidence": "high",
+    "source_note_id": "methodology-pew-research-center"
+  },
+  {
+    "claim": "Pew reports that country of origin was available for only 73% of the 24,632 channels that uploaded during the study week and primary language for only 8%, and the report never publishes a country composition for its channel population.",
+    "stance": "refutes",
+    "stance_target": "That the Pew YouTube census can be read as evidence about creators in any specific country, including the United States or the countries of Southeast Asia",
+    "evidence_type": "empirical",
+    "scope_conditions": "Pew methodology page, July 2019; this is an audited absence rather than a missing-data problem - the metadata existed for roughly three-quarters of active channels but no country breakdown is published anywhere in the report series",
+    "quoted_support": "Of the 24,632 channels that uploaded a video in the first week of 2019, 73% had available information on their country of origin, and 8% had information on the channel's primary language.",
+    "numbers": [
+      "24,632 uploading channels",
+      "73% with country metadata",
+      "8% with channel language metadata",
+      "61% of videos with audio-track language",
+      "26% with default language"
+    ],
+    "entities": [
+      "Pew Research Center",
+      "YouTube Data API"
+    ],
+    "time_period": "January-April 2019",
+    "region": "Country composition not reported",
+    "confidence": "high",
+    "source_note_id": "methodology-pew-research-center"
+  },
+  {
+    "claim": "Within-study losses in the Pew census were small and documented: 78,273 of 1,946,032 intended time stamps (4%) failed, and after interpolation fewer than 2% of videos (4,262) remained incomplete, most likely because those videos were removed during the week.",
+    "stance": "neutral",
+    "stance_target": "Whether within-study disappearance materially biases the Pew estimates",
+    "evidence_type": "empirical",
+    "scope_conditions": "Video-level, not channel-level, attrition; Pew checked the API for removed videos on 10 April 2019; the study reports no channel deletions or channel exits at all because its observation window is only seven days, so it cannot speak to creator quitting",
+    "quoted_support": "However, due to infrequent API errors and videos being removed, 78,273 time stamps (4%) were not captured successfully.",
+    "numbers": [
+      "78,273 failed time stamps (4%)",
+      "4,262 videos still incomplete (under 2%)",
+      "41,883 videos missing one time stamp (17%)",
+      "13,704 missing more than one day (6%)",
+      "42,558 English videos coded 12-14 April 2019"
+    ],
+    "entities": [
+      "Pew Research Center",
+      "Amazon Mechanical Turk"
+    ],
+    "time_period": "January-April 2019",
+    "region": "Global",
+    "confidence": "high",
+    "source_note_id": "methodology-pew-research-center"
+  }
+]

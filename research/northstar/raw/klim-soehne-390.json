@@ -1,0 +1,944 @@
+{
+  "slug": "klim-soehne",
+  "url": "https://klim.co.nz/retail-fonts/soehne/",
+  "name": "Klim — Söhne specimen",
+  "country": "New Zealand",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "ok": true,
+  "httpStatus": 200,
+  "finalUrl": "https://klim.co.nz/fonts/soehne/",
+  "consentDismissed": [],
+  "scrollInfo": {
+    "contentHeight": 14258,
+    "docScrollHeight": 14258,
+    "maxElementBottom": 14258,
+    "innerScrollerHeight": 0,
+    "virtualScroll": false
+  },
+  "document": {
+    "scrollHeight": 14258,
+    "vhMultiple": 16.89,
+    "textNodeCount": 414,
+    "canvasCount": 1,
+    "elementCount": 3421,
+    "title": "Söhne fonts · Klim Type Foundry",
+    "lang": "en",
+    "contentHeight": 14258,
+    "scrollMode": "native"
+  },
+  "container": {
+    "dominantPairs": [
+      {
+        "width": 370,
+        "left": 10,
+        "count": 4,
+        "sample": {
+          "tag": "p",
+          "cls": ""
+        }
+      },
+      {
+        "width": 128,
+        "left": 18,
+        "count": 1,
+        "sample": {
+          "tag": "span",
+          "cls": ""
+        }
+      },
+      {
+        "width": 132,
+        "left": 822,
+        "count": 1,
+        "sample": {
+          "tag": "h6",
+          "cls": "GlyphInspectorGlyphList__Heading-sc-k9pp0j-4 fZdAzM"
+        }
+      },
+      {
+        "width": 350,
+        "left": 4920,
+        "count": 1,
+        "sample": {
+          "tag": "h6",
+          "cls": "GlyphInspectorGlyphList__Heading-sc-k9pp0j-4 fZdAzM"
+        }
+      },
+      {
+        "width": 150,
+        "left": 5706,
+        "count": 1,
+        "sample": {
+          "tag": "h6",
+          "cls": "GlyphInspectorGlyphList__Heading-sc-k9pp0j-4 fZdAzM"
+        }
+      },
+      {
+        "width": 204,
+        "left": 5911,
+        "count": 1,
+        "sample": {
+          "tag": "h6",
+          "cls": "GlyphInspectorGlyphList__Heading-sc-k9pp0j-4 fZdAzM"
+        }
+      }
+    ],
+    "containerChain": {
+      "chain": [
+        {
+          "tag": "p",
+          "cls": "",
+          "width": 370,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "block"
+        },
+        {
+          "tag": "div",
+          "cls": "FontIntroduction__InformationWrapper-sc-13l13rj-1 llYEFV",
+          "width": 370,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "block"
+        },
+        {
+          "tag": "div",
+          "cls": "FontIntroduction__Container-sc-13l13rj-0 cOjBhA",
+          "width": 370,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "grid"
+        },
+        {
+          "tag": "div",
+          "cls": "FontInformation__IntroWrapper-sc-vjipvi-0 ljPEhD",
+          "width": 370,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "block"
+        },
+        {
+          "tag": "div",
+          "cls": "TitledSection__Content-sc-4a4d8n-2 ekmLzK",
+          "width": 370,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "grid"
+        },
+        {
+          "tag": "div",
+          "cls": "TitledSection__Container-sc-4a4d8n-0 ibXsuc FontFamilyPage__",
+          "width": 370,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "grid"
+        },
+        {
+          "tag": "div",
+          "cls": "FontFamilyPage__Sections-sc-nofxhh-1 isobRJ",
+          "width": 370,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "flex"
+        },
+        {
+          "tag": "div",
+          "cls": "FontFamilyPage__Container-sc-nofxhh-0 htTWHD",
+          "width": 370,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "10px / 10px",
+          "display": "block"
+        }
+      ],
+      "constrained": null
+    },
+    "grids": [
+      {
+        "columns": 6,
+        "columnGap": "10px",
+        "rowGap": "0px",
+        "width": 370,
+        "template": "53.3281px 53.3281px 53.3281px 53.3281px 53.3281px 53.3281px",
+        "count": 10
+      },
+      {
+        "columns": 3,
+        "columnGap": "1px",
+        "rowGap": "1px",
+        "width": 150,
+        "template": "50px 50px 50px",
+        "count": 8
+      },
+      {
+        "columns": 7,
+        "columnGap": "1px",
+        "rowGap": "1px",
+        "width": 350,
+        "template": "50px 50px 50px 50px 50px 50px 50px",
+        "count": 4
+      },
+      {
+        "columns": 38,
+        "columnGap": "1px",
+        "rowGap": "1px",
+        "width": 1900,
+        "template": "50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px",
+        "count": 2
+      },
+      {
+        "columns": 5,
+        "columnGap": "1px",
+        "rowGap": "1px",
+        "width": 250,
+        "template": "50px 50px 50px 50px 50px",
+        "count": 2
+      },
+      {
+        "columns": 6,
+        "columnGap": "29.0233px",
+        "rowGap": "29.0233px",
+        "width": 370,
+        "template": "37.4844px 37.4844px 37.4844px 37.4844px 37.4844px 37.4844px",
+        "count": 1
+      }
+    ],
+    "bodyPaddingInline": "0px / 0px",
+    "bodyMaxWidth": "none",
+    "htmlPaddingInline": "0px / 0px"
+  },
+  "leftEdgeTest": {
+    "layout": {
+      "n": 6,
+      "mean": 10,
+      "stdDev": 0,
+      "distinctExact": 1,
+      "distinctClustered2px": 1,
+      "clusters": [
+        {
+          "at": 10,
+          "count": 6
+        }
+      ],
+      "values": [
+        10,
+        10,
+        10,
+        10,
+        10,
+        10
+      ]
+    },
+    "rect": {
+      "n": 6,
+      "mean": 10,
+      "stdDev": 0,
+      "distinctExact": 1,
+      "distinctClustered2px": 1,
+      "clusters": [
+        {
+          "at": 10,
+          "count": 6
+        }
+      ],
+      "values": [
+        10,
+        10,
+        10,
+        10,
+        10,
+        10
+      ]
+    },
+    "headings": {
+      "n": 6,
+      "mean": 10,
+      "stdDev": 0,
+      "distinctExact": 1,
+      "distinctClustered2px": 1,
+      "clusters": [
+        {
+          "at": 10,
+          "count": 6
+        }
+      ],
+      "values": [
+        10,
+        10,
+        10,
+        10,
+        10,
+        10
+      ]
+    },
+    "sectionDiscovery": "tall-children-of-wrapper"
+  },
+  "sections": [
+    {
+      "index": 0,
+      "tag": "div",
+      "id": "information",
+      "cls": "TitledSection__Container-sc-4a4d8n-0 ibXsuc FontFamilyPage__TitledSect",
+      "height": 784.3,
+      "vhFraction": 0.93,
+      "paddingBlockStart": "72.5581px",
+      "paddingBlockEnd": "0px",
+      "marginBlockStart": "0px",
+      "marginBlockEnd": "0px",
+      "firstText": {
+        "layoutLeft": 10,
+        "rectLeft": 10,
+        "tag": "h5",
+        "fontSize": "18px",
+        "text": "Information"
+      },
+      "heading": {
+        "layoutLeft": 10,
+        "rectLeft": 10,
+        "tag": "h5",
+        "fontSize": "18px",
+        "text": "Information"
+      }
+    },
+    {
+      "index": 1,
+      "tag": "div",
+      "id": "styles",
+      "cls": "TitledSection__Container-sc-4a4d8n-0 ibXsuc FontFamilyPage__TitledSect",
+      "height": 663.95,
+      "vhFraction": 0.79,
+      "paddingBlockStart": "72.5581px",
+      "paddingBlockEnd": "0px",
+      "marginBlockStart": "211px",
+      "marginBlockEnd": "0px",
+      "firstText": {
+        "layoutLeft": 10,
+        "rectLeft": 10,
+        "tag": "h5",
+        "fontSize": "18px",
+        "text": "16 styles"
+      },
+      "heading": {
+        "layoutLeft": 10,
+        "rectLeft": 10,
+        "tag": "span",
+        "fontSize": "27.2093px",
+        "text": "Extraleicht"
+      }
+    },
+    {
+      "index": 2,
+      "tag": "div",
+      "id": "specimens",
+      "cls": "TitledSection__Container-sc-4a4d8n-0 gMCBNs FontFamilyPage__TitledSect",
+      "height": 7108.31,
+      "vhFraction": 8.42,
+      "paddingBlockStart": "72.5581px",
+      "paddingBlockEnd": "0px",
+      "marginBlockStart": "211px",
+      "marginBlockEnd": "0px",
+      "firstText": {
+        "layoutLeft": 10,
+        "rectLeft": 10,
+        "tag": "h5",
+        "fontSize": "18px",
+        "text": "Specimens"
+      },
+      "heading": {
+        "layoutLeft": 10,
+        "rectLeft": 10,
+        "tag": "span",
+        "fontSize": "57px",
+        "text": "Horselaughter"
+      }
+    },
+    {
+      "index": 3,
+      "tag": "div",
+      "id": "open-type",
+      "cls": "TitledSection__Container-sc-4a4d8n-0 gMCBNs FontFamilyPage__TitledSect",
+      "height": 415.64,
+      "vhFraction": 0.49,
+      "paddingBlockStart": "72.5581px",
+      "paddingBlockEnd": "0px",
+      "marginBlockStart": "211px",
+      "marginBlockEnd": "0px",
+      "firstText": {
+        "layoutLeft": 10,
+        "rectLeft": 10,
+        "tag": "h5",
+        "fontSize": "18px",
+        "text": "OpenType features"
+      },
+      "heading": {
+        "layoutLeft": 10,
+        "rectLeft": 10,
+        "tag": "span",
+        "fontSize": "43.5349px",
+        "text": "Rect"
+      }
+    },
+    {
+      "index": 4,
+      "tag": "div",
+      "id": "glyphs",
+      "cls": "TitledSection__Container-sc-4a4d8n-0 gMCBNs FontFamilyPage__TitledSect",
+      "height": 871.58,
+      "vhFraction": 1.03,
+      "paddingBlockStart": "72.5581px",
+      "paddingBlockEnd": "0px",
+      "marginBlockStart": "211px",
+      "marginBlockEnd": "0px",
+      "firstText": {
+        "layoutLeft": 10,
+        "rectLeft": 10,
+        "tag": "h5",
+        "fontSize": "18px",
+        "text": "Glyphs"
+      },
+      "heading": {
+        "layoutLeft": 10,
+        "rectLeft": 10,
+        "tag": "h5",
+        "fontSize": "18px",
+        "text": "Glyphs"
+      }
+    },
+    {
+      "index": 5,
+      "tag": "div",
+      "id": "in-use",
+      "cls": "TitledSection__Container-sc-4a4d8n-0 gMCBNs FontFamilyPage__TitledSect",
+      "height": 1249.08,
+      "vhFraction": 1.48,
+      "paddingBlockStart": "72.5581px",
+      "paddingBlockEnd": "0px",
+      "marginBlockStart": "211px",
+      "marginBlockEnd": "0px",
+      "firstText": {
+        "layoutLeft": 10,
+        "rectLeft": 10,
+        "tag": "h5",
+        "fontSize": "18px",
+        "text": "Söhne in use"
+      },
+      "heading": {
+        "layoutLeft": 10,
+        "rectLeft": 10,
+        "tag": "h5",
+        "fontSize": "18px",
+        "text": "Söhne in use"
+      }
+    }
+  ],
+  "verticalRhythm": {
+    "sectionCount": 6,
+    "near100vhCount": 0,
+    "near100vhPct": 0,
+    "strictGcdOfSpacing": 1,
+    "baseUnitEstimate80pct": null,
+    "spacingHistogram": [
+      {
+        "value": 8,
+        "count": 176
+      },
+      {
+        "value": 15,
+        "count": 66
+      },
+      {
+        "value": 5,
+        "count": 60
+      },
+      {
+        "value": 54,
+        "count": 27
+      },
+      {
+        "value": 11,
+        "count": 24
+      },
+      {
+        "value": 10,
+        "count": 19
+      },
+      {
+        "value": 22,
+        "count": 17
+      },
+      {
+        "value": 7,
+        "count": 17
+      },
+      {
+        "value": 6,
+        "count": 16
+      },
+      {
+        "value": 29,
+        "count": 9
+      },
+      {
+        "value": 73,
+        "count": 8
+      },
+      {
+        "value": 4,
+        "count": 7
+      },
+      {
+        "value": 211,
+        "count": 6
+      },
+      {
+        "value": 14,
+        "count": 3
+      }
+    ],
+    "spacingSampleSize": 461
+  },
+  "typeScale": {
+    "distinctFontSizeCount": 8,
+    "distinctFontSizeCount_used2plus": 8,
+    "distinctSizes": [
+      {
+        "size": 57,
+        "count": 16
+      },
+      {
+        "size": 43.53,
+        "count": 3
+      },
+      {
+        "size": 33,
+        "count": 8
+      },
+      {
+        "size": 27.21,
+        "count": 16
+      },
+      {
+        "size": 21,
+        "count": 6
+      },
+      {
+        "size": 18,
+        "count": 16
+      },
+      {
+        "size": 14,
+        "count": 135
+      },
+      {
+        "size": 12,
+        "count": 16
+      }
+    ],
+    "scaleSizesDesc": [
+      57,
+      43.53,
+      33,
+      27.21,
+      21,
+      18,
+      14,
+      12
+    ],
+    "consecutiveRatios": [
+      1.31,
+      1.32,
+      1.21,
+      1.3,
+      1.17,
+      1.29,
+      1.17
+    ],
+    "roles": {
+      "h1": null,
+      "biggestText": {
+        "tag": "span",
+        "fontSize": 57,
+        "fontWeight": "400",
+        "lineHeightPx": 57,
+        "lineHeightRatio": 1,
+        "letterSpacing": "0px",
+        "letterSpacingEm": 0,
+        "fontFamily": "k-sohne-extraleicht",
+        "fontFamilyFull": "k-sohne-extraleicht",
+        "textTransform": "none",
+        "color": "rgb(255, 255, 255)",
+        "widthPx": 362.02,
+        "text": "Horselaughter"
+      },
+      "h2All": [],
+      "h3": null,
+      "body": {
+        "tag": "p",
+        "fontSize": 18,
+        "fontWeight": "400",
+        "lineHeightPx": 24,
+        "lineHeightRatio": 1.33,
+        "letterSpacing": "0px",
+        "letterSpacingEm": 0,
+        "fontFamily": "SOEHNE",
+        "fontFamilyFull": "SOEHNE, -apple-system, system-ui, blinkmacsystemfont, Helvetica, Arial, sans-serif",
+        "textTransform": "none",
+        "color": "rgb(255, 255, 255)",
+        "widthPx": 370,
+        "text": "Söhne is the memory of Akzidenz-Grotesk framed through the r"
+      },
+      "small": {
+        "tag": "a",
+        "fontSize": 14,
+        "fontWeight": "400",
+        "lineHeightPx": 21,
+        "lineHeightRatio": 1.5,
+        "letterSpacing": "0px",
+        "letterSpacingEm": 0,
+        "fontFamily": "SOEHNE",
+        "fontFamilyFull": "SOEHNE, -apple-system, system-ui, blinkmacsystemfont, Helvetica, Arial, sans-serif",
+        "textTransform": "none",
+        "color": "rgb(255, 255, 255)",
+        "widthPx": 131.92,
+        "text": "Klim"
+      },
+      "mono": {
+        "tag": "div",
+        "fontSize": 14,
+        "fontWeight": "400",
+        "lineHeightPx": 21,
+        "lineHeightRatio": 1.5,
+        "letterSpacing": "0px",
+        "letterSpacingEm": 0,
+        "fontFamily": "SOEHNE_MONO",
+        "fontFamilyFull": "SOEHNE_MONO, \"Lucida Console\", monaco, monospace",
+        "textTransform": "none",
+        "color": "rgb(0, 0, 0)",
+        "widthPx": 49.61,
+        "text": "ss01"
+      }
+    },
+    "readingMeasure": {
+      "columnWidthPx": 370,
+      "widthOf100Chars": 847.98,
+      "measureCh_spec": 43.63,
+      "measureCh_zeroWidth": 32.99,
+      "maxWidthDeclared": "none",
+      "canvasFont": "18px SOEHNE, -apple-system, system-ui, blinkmacsystemfont, Helvetica, Arial, sans-serif"
+    },
+    "readingMeasureAlternates": [
+      {
+        "tag": "p",
+        "fontSize": 18,
+        "fontWeight": "400",
+        "lineHeightPx": 24,
+        "lineHeightRatio": 1.33,
+        "letterSpacing": "0px",
+        "letterSpacingEm": 0,
+        "fontFamily": "SOEHNE",
+        "fontFamilyFull": "SOEHNE, -apple-system, system-ui, blinkmacsystemfont, Helvetica, Arial, sans-serif",
+        "textTransform": "none",
+        "color": "rgb(255, 255, 255)",
+        "widthPx": 370,
+        "text": "Söhne is the memory of Akzidenz-Grotesk framed through the r"
+      },
+      {
+        "tag": "span",
+        "fontSize": 14,
+        "fontWeight": "400",
+        "lineHeightPx": 21,
+        "lineHeightRatio": 1.5,
+        "letterSpacing": "0px",
+        "letterSpacingEm": 0,
+        "fontFamily": "SOEHNE",
+        "fontFamilyFull": "SOEHNE, -apple-system, system-ui, blinkmacsystemfont, Helvetica, Arial, sans-serif",
+        "textTransform": "none",
+        "color": "rgb(255, 255, 255)",
+        "widthPx": 357.59,
+        "text": "An alternate tail-less a. Inspired by the bolder styles of t"
+      }
+    ],
+    "distinctFontFamilyCount": 19,
+    "fontFamilies": [
+      {
+        "family": "SOEHNE",
+        "count": 133
+      },
+      {
+        "family": "SOEHNE_IKON",
+        "count": 34
+      },
+      {
+        "family": "k-sohne-halbfett",
+        "count": 7
+      },
+      {
+        "family": "k-sohne-leicht",
+        "count": 4
+      },
+      {
+        "family": "k-sohne-buch",
+        "count": 4
+      },
+      {
+        "family": "k-sohne-kraftig",
+        "count": 4
+      },
+      {
+        "family": "k-sohne-dreiviertelfett",
+        "count": 4
+      },
+      {
+        "family": "k-sohne-extraleicht",
+        "count": 3
+      }
+    ]
+  },
+  "color": {
+    "textColors": [
+      {
+        "value": "rgb(255,255,255)",
+        "count": 140
+      },
+      {
+        "value": "rgb(85,85,85)",
+        "count": 59
+      },
+      {
+        "value": "rgb(56,56,56)",
+        "count": 10
+      },
+      {
+        "value": "rgb(141,141,141)",
+        "count": 3
+      },
+      {
+        "value": "rgb(0,0,0)",
+        "count": 2
+      },
+      {
+        "value": "rgb(113,113,113)",
+        "count": 2
+      }
+    ],
+    "backgroundColors": [
+      {
+        "value": "rgb(0,0,0)",
+        "count": 20
+      },
+      {
+        "value": "rgb(28,28,28)",
+        "count": 14
+      },
+      {
+        "value": "rgb(255,255,255)",
+        "count": 5
+      },
+      {
+        "value": "rgb(113,113,113)",
+        "count": 2
+      },
+      {
+        "value": "rgb(228,0,28)",
+        "count": 1
+      }
+    ],
+    "distinctTextColorCount": 6,
+    "distinctBgColorCount": 5
+  },
+  "persistent": {
+    "fixedOrSticky": [
+      {
+        "tag": "nav",
+        "cls": "Navbar__MenuRoot-sc-qnggft-2 Navbar__LeftMenuRoot-sc-qnggft-",
+        "position": "sticky",
+        "rect": {
+          "top": 0,
+          "left": 0,
+          "width": 390,
+          "height": 147
+        },
+        "zIndex": "5",
+        "text": "Klim Type FoundryFontsSöhne CollectionSöhne ▼",
+        "opacity": "1"
+      },
+      {
+        "tag": "nav",
+        "cls": "Navbar__MenuRoot-sc-qnggft-2 Navbar__RightMenuRoot-sc-qnggft",
+        "position": "fixed",
+        "rect": {
+          "top": 0,
+          "left": 259.03,
+          "width": 130.97,
+          "height": 48
+        },
+        "zIndex": "5",
+        "text": "In use ⭥◑Download test fontsBuy fonts☰",
+        "opacity": "1"
+      },
+      {
+        "tag": "div",
+        "cls": "GlyphInspector__Inner-sc-1dtsabe-2 jrzXkM",
+        "position": "sticky",
+        "rect": {
+          "top": 10856.81,
+          "left": 10,
+          "width": 370,
+          "height": 398
+        },
+        "zIndex": "auto",
+        "text": "Halbfett ▼Show outlinesU+0053SC718X526B0D-178",
+        "opacity": "1"
+      }
+    ]
+  },
+  "nav": {
+    "tag": "nav",
+    "cls": "Navbar__MenuRoot-sc-qnggft-2 Navbar__LeftMenuRoot-sc-qnggft-",
+    "height": 147,
+    "top": 0,
+    "position": "sticky",
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "backdropFilter": "none",
+    "borderBottom": "0px rgb(255, 255, 255)",
+    "paddingBlock": "10px / 10px",
+    "transform": "none",
+    "opacity": "1",
+    "mixBlendMode": "normal",
+    "color": "rgb(255, 255, 255)"
+  },
+  "navState": {
+    "at0": {
+      "nav": {
+        "height": 147,
+        "top": 0,
+        "position": "sticky",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "backdropFilter": "none",
+        "borderBottom": "0px rgb(255, 255, 255)",
+        "paddingBlock": "10px / 10px",
+        "transform": "none",
+        "opacity": "1",
+        "color": "rgb(255, 255, 255)"
+      },
+      "fixedOrSticky": [
+        {
+          "tag": "nav",
+          "cls": "Navbar__MenuRoot-sc-qnggft-2 Navbar__LeftMenuRoot-sc-qnggft-",
+          "position": "sticky",
+          "rect": {
+            "top": 0,
+            "left": 0,
+            "width": 390,
+            "height": 147
+          },
+          "text": "Klim Type FoundryFontsSöhne CollectionSöhne ▼",
+          "opacity": "1"
+        },
+        {
+          "tag": "nav",
+          "cls": "Navbar__MenuRoot-sc-qnggft-2 Navbar__RightMenuRoot-sc-qnggft",
+          "position": "fixed",
+          "rect": {
+            "top": 0,
+            "left": 259.03,
+            "width": 130.97,
+            "height": 48
+          },
+          "text": "In use ⭥◑Download test fontsBuy fonts☰",
+          "opacity": "1"
+        },
+        {
+          "tag": "div",
+          "cls": "GlyphInspector__Inner-sc-1dtsabe-2 jrzXkM",
+          "position": "sticky",
+          "rect": {
+            "top": 10856.81,
+            "left": 10,
+            "width": 370,
+            "height": 398
+          },
+          "text": "Halbfett ▼Show outlinesU+0053SC718X526B0D-178",
+          "opacity": "1"
+        }
+      ]
+    },
+    "at2000": {
+      "nav": {
+        "height": 147,
+        "top": -99,
+        "position": "sticky",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "backdropFilter": "none",
+        "borderBottom": "0px rgb(255, 255, 255)",
+        "paddingBlock": "10px / 10px",
+        "transform": "none",
+        "opacity": "1",
+        "color": "rgb(255, 255, 255)"
+      },
+      "fixedOrSticky": [
+        {
+          "tag": "nav",
+          "cls": "Navbar__MenuRoot-sc-qnggft-2 Navbar__LeftMenuRoot-sc-qnggft-",
+          "position": "sticky",
+          "rect": {
+            "top": -99,
+            "left": 0,
+            "width": 390,
+            "height": 147
+          },
+          "text": "Klim Type FoundryFontsSöhne CollectionSöhne ▼",
+          "opacity": "1"
+        },
+        {
+          "tag": "nav",
+          "cls": "Navbar__MenuRoot-sc-qnggft-2 Navbar__RightMenuRoot-sc-qnggft",
+          "position": "fixed",
+          "rect": {
+            "top": 0,
+            "left": 259.03,
+            "width": 130.97,
+            "height": 48
+          },
+          "text": "In use ⭥◑Download test fontsBuy fonts☰",
+          "opacity": "1"
+        },
+        {
+          "tag": "div",
+          "cls": "GlyphInspector__Inner-sc-1dtsabe-2 jrzXkM",
+          "position": "sticky",
+          "rect": {
+            "top": 8856.81,
+            "left": 10,
+            "width": 370,
+            "height": 398
+          },
+          "text": "Halbfett ▼Show outlinesU+0053SC718X526B0D-178",
+          "opacity": "1"
+        }
+      ]
+    },
+    "changed": true,
+    "diff": {
+      "top": {
+        "at0": 0,
+        "at2000": -99
+      }
+    }
+  },
+  "shots": [
+    "klim-soehne-390-full.jpg"
+  ],
+  "fullPageShotRepresentative": true,
+  "pageErrors": []
+}

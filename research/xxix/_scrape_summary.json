@@ -1,0 +1,208 @@
+{
+  "pages": [
+    {
+      "slug": "home",
+      "url": "https://www.xxix.co/",
+      "ok": true,
+      "cards": 14,
+      "grids": 1,
+      "blends": 0,
+      "typeVariants": 10
+    },
+    {
+      "slug": "studio@xxix.co",
+      "url": "mailto:studio@xxix.co",
+      "ok": false,
+      "error": "Error: page.goto: net::ERR_ABORTED at mailto:studio@xxix.co\nCall log:\n\u001b[2m  - navigating to \"mailto:studio@xxix.co\", waiting until \"domcontentloaded\"\u001b[22m\n"
+    },
+    {
+      "slug": "work",
+      "url": "https://www.xxix.co/work",
+      "ok": true,
+      "cards": 14,
+      "grids": 0,
+      "blends": 0,
+      "typeVariants": 4
+    },
+    {
+      "slug": "work_williamstowntheatrefestival",
+      "url": "https://www.xxix.co/work/williamstowntheatrefestival",
+      "ok": true,
+      "cards": 14,
+      "grids": 0,
+      "blends": 0,
+      "typeVariants": 6
+    },
+    {
+      "slug": "work_mac-miller-swimming",
+      "url": "https://www.xxix.co/work/mac-miller-swimming",
+      "ok": true,
+      "cards": 14,
+      "grids": 0,
+      "blends": 0,
+      "typeVariants": 6
+    },
+    {
+      "slug": "work_aplos",
+      "url": "https://www.xxix.co/work/aplos",
+      "ok": true,
+      "cards": 14,
+      "grids": 0,
+      "blends": 0,
+      "typeVariants": 6
+    }
+  ],
+  "css": {
+    "home": [
+      {
+        "href": "https://www.xxix.co/_next/static/css/798121b41b247b70.css",
+        "file": "798121b41b247b70.css",
+        "bytes": 149116
+      }
+    ],
+    "work": [
+      {
+        "href": "https://www.xxix.co/_next/static/css/798121b41b247b70.css",
+        "file": "798121b41b247b70.css",
+        "bytes": 149116
+      }
+    ],
+    "work_williamstowntheatrefestival": [
+      {
+        "href": "https://www.xxix.co/_next/static/css/798121b41b247b70.css",
+        "file": "798121b41b247b70.css",
+        "bytes": 149116
+      }
+    ],
+    "work_mac-miller-swimming": [
+      {
+        "href": "https://www.xxix.co/_next/static/css/798121b41b247b70.css",
+        "file": "798121b41b247b70.css",
+        "bytes": 149116
+      }
+    ],
+    "work_aplos": [
+      {
+        "href": "https://www.xxix.co/_next/static/css/798121b41b247b70.css",
+        "file": "798121b41b247b70.css",
+        "bytes": 149116
+      }
+    ]
+  },
+  "links": {
+    "home": [
+      {
+        "href": "https://www.xxix.co/",
+        "text": "XXIX"
+      },
+      {
+        "href": "mailto:studio@xxix.co",
+        "text": "studio@xxix.co"
+      },
+      {
+        "href": "https://www.xxix.co/work",
+        "text": "⬤ View our work"
+      },
+      {
+        "href": "https://www.xxix.co/work/williamstowntheatrefestival",
+        "text": "⬤ WILLIAMSTOWN THEATRE FESTIVALWebsite D"
+      },
+      {
+        "href": "https://garden3d.substack.com/p/oh-to-be-known-by-my-computer",
+        "text": "⬤ OH, TO BE KNOWN BY MY COMPUTER!A patte"
+      },
+      {
+        "href": "https://www.xxix.co/jobs",
+        "text": "⬤ OPEN POSITIONS"
+      },
+      {
+        "href": "https://garden3d.substack.com/p/garden3d-2023-sustainability-report",
+        "text": "⬤ 2024 REPORTSustainability"
+      },
+      {
+        "href": "https://www.xxix.co/work/mac-miller-swimming",
+        "text": "⬤ MAC MILLERWebsite Design and Developme"
+      },
+      {
+        "href": "https://www.xxix.co/work/aplos",
+        "text": "⬤ APLOSWebsite Design for Ecommerce"
+      },
+      {
+        "href": "https://www.xxix.co/work/presq",
+        "text": "⬤ PRESQWebsite Design and Development fo"
+      },
+      {
+        "href": "https://www.xxix.co/work/index",
+        "text": "⬤ INDEX NYCShared Work and Community Spa"
+      },
+      {
+        "href": "https://www.xxix.co/work/air-company",
+        "text": "⬤ AIR COMPANYWebsite Design and Art Dire"
+      },
+      {
+        "href": "https://www.xxix.co/work/salt-and-stone",
+        "text": "⬤ SALT & STONECampaign and Packaging"
+      },
+      {
+        "href": "https://www.xxix.co/work/pratt-soa",
+        "text": "⬤ Pratt SoAWebsite Design and Developmen"
+      },
+      {
+        "href": "https://www.xxix.co/work/thea",
+        "text": "⬤ THEAProduct Design and Art Direction"
+      },
+      {
+        "href": "https://www.xxix.co/work/aplos",
+        "text": "⬤ APLÓSWebsite and procedural design too"
+      },
+      {
+        "href": "https://www.xxix.co/work/arena",
+        "text": "⬤ ARENABrand Design and Strategy"
+      },
+      {
+        "href": "https://www.xxix.co/capabilities/digital-product",
+        "text": "⬤ CAPABILITIESProduct Design"
+      },
+      {
+        "href": "https://www.xxix.co/work/workmade",
+        "text": "⬤ WORKMADEProduct Design and Strategy"
+      },
+      {
+        "href": "https://garden3d.substack.com/p/expansive-brands",
+        "text": "⬤ EXPANSIVE BRANDSCentering humanity whe"
+      },
+      {
+        "href": "https://www.xxix.co/work/modern-life",
+        "text": "⬤ MODERN LIFEBrand, Website and Art Dire"
+      },
+      {
+        "href": "https://www.xxix.co/work/firefly-health",
+        "text": "⬤ FIREFLY HEALTHBrand, Website and Art D"
+      },
+      {
+        "href": "https://garden3d.substack.com/p/garden3d-dei-report-2023",
+        "text": "⬤ 2024 REPORTDiversity, Equity, and Incl"
+      },
+      {
+        "href": "https://www.xxix.co/work/modern-life",
+        "text": "⬤ MODERN LIFEBrand, Website and Art Dire"
+      },
+      {
+        "href": "https://garden3d.net/",
+        "text": "garden3d"
+      },
+      {
+        "href": "mailto:studio@xxix.co",
+        "text": "Email studio@xxix.co"
+      },
+      {
+        "href": "https://www.instagram.com/xxix_co",
+        "text": "Instagram @xxix_co"
+      },
+      {
+        "href": "https://garden3d.substack.com/",
+        "text": "Substack @garden3d"
+      }
+    ]
+  }
+}

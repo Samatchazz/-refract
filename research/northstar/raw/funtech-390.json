@@ -1,0 +1,803 @@
+{
+  "slug": "funtech",
+  "url": "https://ci.funtech.inc/en",
+  "name": "FUNTECH Brand Identity",
+  "country": "Japan",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "ok": true,
+  "httpStatus": 200,
+  "finalUrl": "https://ci.funtech.inc/en",
+  "consentDismissed": [],
+  "scrollInfo": {
+    "contentHeight": 1602,
+    "docScrollHeight": 844,
+    "maxElementBottom": 1602,
+    "innerScrollerHeight": 1096,
+    "virtualScroll": true
+  },
+  "document": {
+    "scrollHeight": 844,
+    "vhMultiple": 1.9,
+    "textNodeCount": 154,
+    "canvasCount": 3,
+    "elementCount": 705,
+    "title": "FUNTECH BRAND IDENTITY",
+    "lang": "en",
+    "contentHeight": 1602,
+    "scrollMode": "virtual (transformed wrapper / JS scroller)"
+  },
+  "container": {
+    "dominantPairs": [
+      {
+        "width": 3265,
+        "left": -78,
+        "count": 11,
+        "sample": {
+          "tag": "span",
+          "cls": "font-black whitespace-nowrap leading-none"
+        }
+      },
+      {
+        "width": 3265,
+        "left": 3276,
+        "count": 11,
+        "sample": {
+          "tag": "span",
+          "cls": "font-black whitespace-nowrap leading-none"
+        }
+      },
+      {
+        "width": 115,
+        "left": 263,
+        "count": 1,
+        "sample": {
+          "tag": "div",
+          "cls": "pointer-events-none absolute top-[calc(100%+8px)] right-1 z-"
+        }
+      },
+      {
+        "width": 124,
+        "left": 918,
+        "count": 1,
+        "sample": {
+          "tag": "span",
+          "cls": "min-w-0 truncate text-foreground transition-colors transitio"
+        }
+      },
+      {
+        "width": 126,
+        "left": 232,
+        "count": 1,
+        "sample": {
+          "tag": "span",
+          "cls": "min-w-0 truncate text-foreground transition-colors transitio"
+        }
+      }
+    ],
+    "containerChain": {
+      "chain": [
+        {
+          "tag": "span",
+          "cls": "font-black whitespace-nowrap leading-none",
+          "width": 3264.8,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "block"
+        },
+        {
+          "tag": "div",
+          "cls": "",
+          "width": 6504.76,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "flex"
+        },
+        {
+          "tag": "div",
+          "cls": "",
+          "width": 552.24,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "block"
+        },
+        {
+          "tag": "div",
+          "cls": "w-full",
+          "width": 552.24,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "block"
+        },
+        {
+          "tag": "div",
+          "cls": "w-[140%]",
+          "width": 552.24,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "block"
+        },
+        {
+          "tag": "div",
+          "cls": "absolute inset-0 flex flex-col items-center justify-center g",
+          "width": 390,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "flex"
+        },
+        {
+          "tag": "div",
+          "cls": "pointer-events-none absolute inset-0 isolate overflow-hidden",
+          "width": 390,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "block"
+        },
+        {
+          "tag": "div",
+          "cls": "fixed inset-0 z-[9999] isolate overflow-hidden bg-black text",
+          "width": 390,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "block"
+        }
+      ],
+      "constrained": null
+    },
+    "grids": [
+      {
+        "columns": 3,
+        "columnGap": "8px",
+        "rowGap": "normal",
+        "width": 350,
+        "template": "111px 112px 111px",
+        "count": 2
+      },
+      {
+        "columns": 2,
+        "columnGap": "12px",
+        "rowGap": "12px",
+        "width": 330.24,
+        "template": "166px 166px",
+        "count": 1
+      },
+      {
+        "columns": 2,
+        "columnGap": "12px",
+        "rowGap": "12px",
+        "width": 344,
+        "template": "166px 166px",
+        "count": 1
+      }
+    ],
+    "bodyPaddingInline": "0px / 0px",
+    "bodyMaxWidth": "none",
+    "htmlPaddingInline": "0px / 0px"
+  },
+  "leftEdgeTest": {
+    "layout": {
+      "n": 11,
+      "mean": -78,
+      "stdDev": 0,
+      "distinctExact": 1,
+      "distinctClustered2px": 1,
+      "clusters": [
+        {
+          "at": -78,
+          "count": 11
+        }
+      ],
+      "values": [
+        -78,
+        -78,
+        -78,
+        -78,
+        -78,
+        -78,
+        -78,
+        -78,
+        -78,
+        -78,
+        -78
+      ]
+    },
+    "rect": {
+      "n": 11,
+      "mean": -2035.51,
+      "stdDev": 1382.72,
+      "distinctExact": 3,
+      "distinctClustered2px": 3,
+      "clusters": [
+        {
+          "at": -4051.42,
+          "count": 3
+        },
+        {
+          "at": -2544.57,
+          "count": 2
+        },
+        {
+          "at": -857.87,
+          "count": 6
+        }
+      ],
+      "values": [
+        -857.87,
+        -4051.42,
+        -857.87,
+        -4051.42,
+        -857.87,
+        -4051.42,
+        -857.87,
+        -2544.57,
+        -857.87,
+        -2544.57,
+        -857.87
+      ]
+    },
+    "headings": {
+      "n": 11,
+      "mean": -78,
+      "stdDev": 0,
+      "distinctExact": 1,
+      "distinctClustered2px": 1,
+      "clusters": [
+        {
+          "at": -78,
+          "count": 11
+        }
+      ],
+      "values": [
+        -78,
+        -78,
+        -78,
+        -78,
+        -78,
+        -78,
+        -78,
+        -78,
+        -78,
+        -78,
+        -78
+      ]
+    },
+    "sectionDiscovery": "tall-children-of-wrapper"
+  },
+  "sections": [
+    {
+      "index": 0,
+      "tag": "div",
+      "id": null,
+      "cls": "w-[140%]",
+      "height": 234.04,
+      "vhFraction": 0.28,
+      "paddingBlockStart": "0px",
+      "paddingBlockEnd": "0px",
+      "marginBlockStart": "0px",
+      "marginBlockEnd": "0px",
+      "firstText": {
+        "layoutLeft": -78,
+        "rectLeft": -857.87,
+        "tag": "span",
+        "fontSize": "96px",
+        "text": "FUNTECHBRANDIDENTITYFUNTECHBRANDIDENTITY"
+      },
+      "heading": {
+        "layoutLeft": -78,
+        "rectLeft": -857.87,
+        "tag": "span",
+        "fontSize": "96px",
+        "text": "FUNTECHBRANDIDENTITYFUNTECHBRANDIDENTITY"
+      }
+    },
+    {
+      "index": 1,
+      "tag": "div",
+      "id": null,
+      "cls": "w-[140%]",
+      "height": 234.04,
+      "vhFraction": 0.28,
+      "paddingBlockStart": "0px",
+      "paddingBlockEnd": "0px",
+      "marginBlockStart": "0px",
+      "marginBlockEnd": "0px",
+      "firstText": {
+        "layoutLeft": -78,
+        "rectLeft": -4051.42,
+        "tag": "span",
+        "fontSize": "96px",
+        "text": "FUNTECHBRANDIDENTITYFUNTECHBRANDIDENTITY"
+      },
+      "heading": {
+        "layoutLeft": -78,
+        "rectLeft": -4051.42,
+        "tag": "span",
+        "fontSize": "96px",
+        "text": "FUNTECHBRANDIDENTITYFUNTECHBRANDIDENTITY"
+      }
+    },
+    {
+      "index": 2,
+      "tag": "div",
+      "id": null,
+      "cls": "w-[140%]",
+      "height": 234.04,
+      "vhFraction": 0.28,
+      "paddingBlockStart": "0px",
+      "paddingBlockEnd": "0px",
+      "marginBlockStart": "0px",
+      "marginBlockEnd": "0px",
+      "firstText": {
+        "layoutLeft": -78,
+        "rectLeft": -857.87,
+        "tag": "span",
+        "fontSize": "96px",
+        "text": "FUNTECHBRANDIDENTITYFUNTECHBRANDIDENTITY"
+      },
+      "heading": {
+        "layoutLeft": -78,
+        "rectLeft": -857.87,
+        "tag": "span",
+        "fontSize": "96px",
+        "text": "FUNTECHBRANDIDENTITYFUNTECHBRANDIDENTITY"
+      }
+    },
+    {
+      "index": 3,
+      "tag": "div",
+      "id": null,
+      "cls": "w-[140%]",
+      "height": 234.04,
+      "vhFraction": 0.28,
+      "paddingBlockStart": "0px",
+      "paddingBlockEnd": "0px",
+      "marginBlockStart": "0px",
+      "marginBlockEnd": "0px",
+      "firstText": {
+        "layoutLeft": -78,
+        "rectLeft": -4051.42,
+        "tag": "span",
+        "fontSize": "96px",
+        "text": "FUNTECHBRANDIDENTITYFUNTECHBRANDIDENTITY"
+      },
+      "heading": {
+        "layoutLeft": -78,
+        "rectLeft": -4051.42,
+        "tag": "span",
+        "fontSize": "96px",
+        "text": "FUNTECHBRANDIDENTITYFUNTECHBRANDIDENTITY"
+      }
+    },
+    {
+      "index": 4,
+      "tag": "div",
+      "id": null,
+      "cls": "w-[140%]",
+      "height": 234.04,
+      "vhFraction": 0.28,
+      "paddingBlockStart": "0px",
+      "paddingBlockEnd": "0px",
+      "marginBlockStart": "0px",
+      "marginBlockEnd": "0px",
+      "firstText": {
+        "layoutLeft": -78,
+        "rectLeft": -857.87,
+        "tag": "span",
+        "fontSize": "96px",
+        "text": "FUNTECHBRANDIDENTITYFUNTECHBRANDIDENTITY"
+      },
+      "heading": {
+        "layoutLeft": -78,
+        "rectLeft": -857.87,
+        "tag": "span",
+        "fontSize": "96px",
+        "text": "FUNTECHBRANDIDENTITYFUNTECHBRANDIDENTITY"
+      }
+    },
+    {
+      "index": 5,
+      "tag": "div",
+      "id": null,
+      "cls": "w-[140%]",
+      "height": 234.04,
+      "vhFraction": 0.28,
+      "paddingBlockStart": "0px",
+      "paddingBlockEnd": "0px",
+      "marginBlockStart": "0px",
+      "marginBlockEnd": "0px",
+      "firstText": {
+        "layoutLeft": -78,
+        "rectLeft": -4051.42,
+        "tag": "span",
+        "fontSize": "96px",
+        "text": "FUNTECHBRANDIDENTITYFUNTECHBRANDIDENTITY"
+      },
+      "heading": {
+        "layoutLeft": -78,
+        "rectLeft": -4051.42,
+        "tag": "span",
+        "fontSize": "96px",
+        "text": "FUNTECHBRANDIDENTITYFUNTECHBRANDIDENTITY"
+      }
+    },
+    {
+      "index": 6,
+      "tag": "div",
+      "id": null,
+      "cls": "w-[140%]",
+      "height": 234.04,
+      "vhFraction": 0.28,
+      "paddingBlockStart": "0px",
+      "paddingBlockEnd": "0px",
+      "marginBlockStart": "0px",
+      "marginBlockEnd": "0px",
+      "firstText": {
+        "layoutLeft": -78,
+        "rectLeft": -857.87,
+        "tag": "span",
+        "fontSize": "96px",
+        "text": "FUNTECHBRANDIDENTITYFUNTECHBRANDIDENTITY"
+      },
+      "heading": {
+        "layoutLeft": -78,
+        "rectLeft": -857.87,
+        "tag": "span",
+        "fontSize": "96px",
+        "text": "FUNTECHBRANDIDENTITYFUNTECHBRANDIDENTITY"
+      }
+    },
+    {
+      "index": 7,
+      "tag": "div",
+      "id": null,
+      "cls": "w-[140%]",
+      "height": 234.04,
+      "vhFraction": 0.28,
+      "paddingBlockStart": "0px",
+      "paddingBlockEnd": "0px",
+      "marginBlockStart": "0px",
+      "marginBlockEnd": "0px",
+      "firstText": {
+        "layoutLeft": -78,
+        "rectLeft": -2544.57,
+        "tag": "span",
+        "fontSize": "96px",
+        "text": "FUNTECHBRANDIDENTITYFUNTECHBRANDIDENTITY"
+      },
+      "heading": {
+        "layoutLeft": -78,
+        "rectLeft": -2544.57,
+        "tag": "span",
+        "fontSize": "96px",
+        "text": "FUNTECHBRANDIDENTITYFUNTECHBRANDIDENTITY"
+      }
+    },
+    {
+      "index": 8,
+      "tag": "div",
+      "id": null,
+      "cls": "w-[140%]",
+      "height": 234.04,
+      "vhFraction": 0.28,
+      "paddingBlockStart": "0px",
+      "paddingBlockEnd": "0px",
+      "marginBlockStart": "0px",
+      "marginBlockEnd": "0px",
+      "firstText": {
+        "layoutLeft": -78,
+        "rectLeft": -857.87,
+        "tag": "span",
+        "fontSize": "96px",
+        "text": "FUNTECHBRANDIDENTITYFUNTECHBRANDIDENTITY"
+      },
+      "heading": {
+        "layoutLeft": -78,
+        "rectLeft": -857.87,
+        "tag": "span",
+        "fontSize": "96px",
+        "text": "FUNTECHBRANDIDENTITYFUNTECHBRANDIDENTITY"
+      }
+    },
+    {
+      "index": 9,
+      "tag": "div",
+      "id": null,
+      "cls": "w-[140%]",
+      "height": 234.04,
+      "vhFraction": 0.28,
+      "paddingBlockStart": "0px",
+      "paddingBlockEnd": "0px",
+      "marginBlockStart": "0px",
+      "marginBlockEnd": "0px",
+      "firstText": {
+        "layoutLeft": -78,
+        "rectLeft": -2544.57,
+        "tag": "span",
+        "fontSize": "96px",
+        "text": "FUNTECHBRANDIDENTITYFUNTECHBRANDIDENTITY"
+      },
+      "heading": {
+        "layoutLeft": -78,
+        "rectLeft": -2544.57,
+        "tag": "span",
+        "fontSize": "96px",
+        "text": "FUNTECHBRANDIDENTITYFUNTECHBRANDIDENTITY"
+      }
+    },
+    {
+      "index": 10,
+      "tag": "div",
+      "id": null,
+      "cls": "w-[140%]",
+      "height": 234.04,
+      "vhFraction": 0.28,
+      "paddingBlockStart": "0px",
+      "paddingBlockEnd": "0px",
+      "marginBlockStart": "0px",
+      "marginBlockEnd": "0px",
+      "firstText": {
+        "layoutLeft": -78,
+        "rectLeft": -857.87,
+        "tag": "span",
+        "fontSize": "96px",
+        "text": "FUNTECHBRANDIDENTITYFUNTECHBRANDIDENTITY"
+      },
+      "heading": {
+        "layoutLeft": -78,
+        "rectLeft": -857.87,
+        "tag": "span",
+        "fontSize": "96px",
+        "text": "FUNTECHBRANDIDENTITYFUNTECHBRANDIDENTITY"
+      }
+    }
+  ],
+  "verticalRhythm": {
+    "sectionCount": 11,
+    "near100vhCount": 0,
+    "near100vhPct": 0,
+    "strictGcdOfSpacing": 2,
+    "baseUnitEstimate80pct": 6,
+    "spacingHistogram": [
+      {
+        "value": 6,
+        "count": 45
+      },
+      {
+        "value": 12,
+        "count": 27
+      },
+      {
+        "value": 4,
+        "count": 8
+      },
+      {
+        "value": 8,
+        "count": 5
+      },
+      {
+        "value": 24,
+        "count": 3
+      },
+      {
+        "value": 20,
+        "count": 2
+      },
+      {
+        "value": 16,
+        "count": 1
+      },
+      {
+        "value": 56,
+        "count": 1
+      },
+      {
+        "value": 32,
+        "count": 1
+      }
+    ],
+    "spacingSampleSize": 93
+  },
+  "typeScale": {
+    "distinctFontSizeCount": 7,
+    "distinctFontSizeCount_used2plus": 6,
+    "distinctSizes": [
+      {
+        "size": 108.11,
+        "count": 12
+      },
+      {
+        "size": 96,
+        "count": 22
+      },
+      {
+        "size": 18,
+        "count": 5
+      },
+      {
+        "size": 15,
+        "count": 4
+      },
+      {
+        "size": 13,
+        "count": 4
+      },
+      {
+        "size": 12,
+        "count": 58
+      },
+      {
+        "size": 10,
+        "count": 1
+      }
+    ],
+    "scaleSizesDesc": [
+      108.11,
+      96,
+      18,
+      15,
+      13,
+      12
+    ],
+    "consecutiveRatios": [
+      1.13,
+      5.33,
+      1.2,
+      1.15,
+      1.08
+    ],
+    "roles": {
+      "h1": null,
+      "biggestText": {
+        "tag": "span",
+        "fontSize": 108.11,
+        "fontWeight": "900",
+        "lineHeightPx": 108.11,
+        "lineHeightRatio": 1,
+        "letterSpacing": "0px",
+        "letterSpacingEm": 0,
+        "fontFamily": "elevon",
+        "fontFamilyFull": "elevon, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, \"Noto Sans\", \"Apple Color ",
+        "textTransform": "none",
+        "color": "rgb(255, 72, 27)",
+        "widthPx": 811.53,
+        "text": "HOMEHOME"
+      },
+      "h2All": [],
+      "h3": null,
+      "body": null,
+      "small": {
+        "tag": "div",
+        "fontSize": 10,
+        "fontWeight": "700",
+        "lineHeightPx": 10,
+        "lineHeightRatio": 1,
+        "letterSpacing": "0px",
+        "letterSpacingEm": 0,
+        "fontFamily": "proxima-nova",
+        "fontFamilyFull": "proxima-nova, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, \"Noto Sans\", \"Apple ",
+        "textTransform": "none",
+        "color": "oklab(0.951371 0.00302792 0.00511611 / 0.9)",
+        "widthPx": 114.77,
+        "text": "Best viewed in landscape"
+      },
+      "mono": null
+    },
+    "readingMeasure": null,
+    "readingMeasureAlternates": [],
+    "distinctFontFamilyCount": 2,
+    "fontFamilies": [
+      {
+        "family": "proxima-nova",
+        "count": 68
+      },
+      {
+        "family": "elevon",
+        "count": 38
+      }
+    ]
+  },
+  "color": {
+    "textColors": [
+      {
+        "value": "rgb(242,238,235)",
+        "count": 57
+      },
+      {
+        "value": "rgb(255,72,27)",
+        "count": 45
+      },
+      {
+        "value": "rgb(28,29,30)",
+        "count": 2
+      },
+      {
+        "value": "oklab(0.9513710.003027920.00511611/0.9)",
+        "count": 1
+      },
+      {
+        "value": "oklab(0.9513710.003027920.00511611/0.5)",
+        "count": 1
+      }
+    ],
+    "backgroundColors": [
+      {
+        "value": "rgb(255,72,27)",
+        "count": 39
+      },
+      {
+        "value": "oklab(0.9513710.003027920.00511611/0.1)",
+        "count": 14
+      },
+      {
+        "value": "rgb(28,29,30)",
+        "count": 8
+      },
+      {
+        "value": "oklab(0.9999940.00004556780.0000200868/0.15)",
+        "count": 4
+      },
+      {
+        "value": "rgb(0,0,0)",
+        "count": 2
+      },
+      {
+        "value": "rgb(242,238,235)",
+        "count": 1
+      }
+    ],
+    "distinctTextColorCount": 5,
+    "distinctBgColorCount": 6
+  },
+  "persistent": {
+    "fixedOrSticky": [
+      {
+        "tag": "div",
+        "cls": "fixed inset-0 z-[9000] bg-background transition-opacity will",
+        "position": "fixed",
+        "rect": {
+          "top": 0,
+          "left": 0,
+          "width": 390,
+          "height": 844
+        },
+        "zIndex": "9000",
+        "text": "",
+        "opacity": "0"
+      },
+      {
+        "tag": "div",
+        "cls": "fixed inset-0 z-[9999] isolate overflow-hidden bg-black text",
+        "position": "fixed",
+        "rect": {
+          "top": 0,
+          "left": 0,
+          "width": 390,
+          "height": 844
+        },
+        "zIndex": "9999",
+        "text": "FUNTECHBRANDIDENTITYFUNTECHBRANDIDENTITYFUNTECHBRANDIDENTITY",
+        "opacity": "1"
+      }
+    ]
+  },
+  "nav": null,
+  "navState": {
+    "at0": null,
+    "at2000": null
+  },
+  "shots": [
+    "funtech-390-full.jpg"
+  ],
+  "fullPageShotRepresentative": false,
+  "pageErrors": []
+}

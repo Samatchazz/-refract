@@ -1,0 +1,44 @@
+[
+  {
+    "claim": "TikTok Indonesia's Director of Communications, Anggini Setiawan, explicitly separated the '8 million creators' figure from the '63% above minimum wage' figure into two distinct sources on 10 July 2024: the 8 million count is TikTok's own internal data as of December 2023, while the 63% figure is explicitly attributed to the June 2023 'The TikTok Effect' Kadence-fielded survey report.",
+    "stance": "refutes",
+    "stance_target": "the '8 million creators, 63% above minimum wage' figure is a single unified statistic from one study",
+    "evidence_type": "empirical",
+    "scope_conditions": "Kompas.id, AI-translated English version of a 10 July 2024 Indonesian-language article; primary quote from TikTok Indonesia's own communications director at a press event (Creator House launch), not an independent audit",
+    "quoted_support": "Director of Communications Tiktok Indonesia Anggini Setiawan said, based on internal data as of December 2023, there were more than 8 million creators from Indonesia who received income from Tiktok. Then, according to the research report \"The TikTok Effect: Accelerating Southeast Asia's Businesses, Education and Community Report\" which Tiktok released in June 2023, as many as 63 percent of Indonesian creators on Tiktok earn income above the minimum wage.",
+    "numbers": ["8,000,000+ creators (TikTok internal data, December 2023 snapshot)", "63% above minimum wage (June 2023 Kadence survey)"],
+    "entities": ["Anggini Setiawan", "TikTok Indonesia", "Kadence International", "Kompas.id"],
+    "time_period": "TikTok internal count as of December 2023; survey report published June 2023; disclosed at press event 10 July 2024",
+    "region": "Indonesia",
+    "confidence": "high",
+    "source_note_id": "63-percent-of-tiktok-creators-earn-more-than-minimum-wage"
+  },
+  {
+    "claim": "The '8 million creators receiving income from TikTok' figure, as of this article, has no disclosed methodology whatsoever -- no survey, no census, no definition of 'received income' or 'creator' -- and remains, even after the full primary report was recovered, a purely unaudited platform self-disclosure distinct from and unrelated to the Kadence survey.",
+    "stance": "supports",
+    "stance_target": "the 8-million-creators figure specifically (as opposed to the 63% figure) remains an untraceable, unauditable statistic",
+    "evidence_type": "empirical",
+    "scope_conditions": "Audited absence: the full 'The TikTok Effect' report (vault note the-tiktok-effect) was independently recovered and confirmed to contain no population/creator-count figures of any kind, ruling out that report as the source of '8 million'; TikTok has never disclosed the methodology behind this internal figure in any source found across this research run",
+    "quoted_support": "Director of Communications Tiktok Indonesia Anggini Setiawan said, based on internal data as of December 2023, there were more than 8 million creators from Indonesia who received income from Tiktok.",
+    "numbers": ["8,000,000+"],
+    "entities": ["TikTok Indonesia", "Anggini Setiawan"],
+    "time_period": "December 2023",
+    "region": "Indonesia",
+    "confidence": "high",
+    "source_note_id": "63-percent-of-tiktok-creators-earn-more-than-minimum-wage"
+  },
+  {
+    "claim": "This same article separately discloses that Indonesian TikTok Shop and Tokopedia together had more than 21 million sellers and TikTok had 125 million monthly Indonesian users, and that 60% of promotional content on TikTok in Indonesia supports local products -- figures also repeated a year later at the July 2025 DPR hearing, indicating some consistency in TikTok Indonesia's talking points over time.",
+    "stance": "neutral",
+    "stance_target": "consistency of TikTok Indonesia's disclosed platform statistics over a one-year span (July 2024 to July 2025)",
+    "evidence_type": "statistical",
+    "scope_conditions": "Both disclosures are corporate public-relations statements at company-organized events, not independently audited",
+    "quoted_support": "Currently, according to Anggini, every month, Tiktok application is visited by 125 million people in Indonesia. Meanwhile, the number of sellers, including MSMEs on Tokopedia and Shop | Tokopedia has reached more than 21 million.",
+    "numbers": ["125,000,000 monthly Indonesian TikTok users", "21,000,000+ sellers (TikTok Shop + Tokopedia)", "60% local-product promotional content"],
+    "entities": ["TikTok Indonesia", "Tokopedia", "Anggini Setiawan"],
+    "time_period": "10 July 2024",
+    "region": "Indonesia",
+    "confidence": "medium",
+    "source_note_id": "63-percent-of-tiktok-creators-earn-more-than-minimum-wage"
+  }
+]

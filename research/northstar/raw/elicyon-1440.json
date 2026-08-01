@@ -1,0 +1,1091 @@
+{
+  "slug": "elicyon",
+  "url": "https://elicyon.com",
+  "name": "Elicyon",
+  "country": "UK",
+  "viewport": {
+    "width": 1440,
+    "height": 900
+  },
+  "ok": true,
+  "httpStatus": 200,
+  "finalUrl": "https://www.elicyon.com/",
+  "consentDismissed": [
+    "DENY"
+  ],
+  "scrollInfo": {
+    "contentHeight": 14622,
+    "docScrollHeight": 14340,
+    "maxElementBottom": 14622,
+    "innerScrollerHeight": 2200,
+    "virtualScroll": false
+  },
+  "document": {
+    "scrollHeight": 14340,
+    "vhMultiple": 16.25,
+    "textNodeCount": 171,
+    "canvasCount": 0,
+    "elementCount": 635,
+    "title": "Global Luxury Interior Design Studio | Elicyon",
+    "lang": "en",
+    "contentHeight": 14622,
+    "scrollMode": "native"
+  },
+  "container": {
+    "dominantPairs": [
+      {
+        "width": 362,
+        "left": 523,
+        "count": 7,
+        "sample": {
+          "tag": "span",
+          "cls": "line"
+        }
+      },
+      {
+        "width": 350,
+        "left": 100,
+        "count": 5,
+        "sample": {
+          "tag": "span",
+          "cls": "line"
+        }
+      },
+      {
+        "width": 452,
+        "left": 488,
+        "count": 5,
+        "sample": {
+          "tag": "span",
+          "cls": "line"
+        }
+      },
+      {
+        "width": 285,
+        "left": 1045,
+        "count": 4,
+        "sample": {
+          "tag": "span",
+          "cls": "line"
+        }
+      },
+      {
+        "width": 302,
+        "left": 569,
+        "count": 2,
+        "sample": {
+          "tag": "span",
+          "cls": "line"
+        }
+      },
+      {
+        "width": 465,
+        "left": 100,
+        "count": 2,
+        "sample": {
+          "tag": "span",
+          "cls": "line"
+        }
+      }
+    ],
+    "containerChain": {
+      "chain": [
+        {
+          "tag": "span",
+          "cls": "line",
+          "width": 361.92,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "block"
+        },
+        {
+          "tag": "span",
+          "cls": "",
+          "width": 361.92,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "block"
+        },
+        {
+          "tag": "div",
+          "cls": "",
+          "width": 361.92,
+          "maxWidth": "371px",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "block"
+        },
+        {
+          "tag": "p",
+          "cls": "opacity-0",
+          "width": 361.92,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "block"
+        },
+        {
+          "tag": "div",
+          "cls": "mobile-body text-type-light self-start",
+          "width": 361.92,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "block"
+        },
+        {
+          "tag": "div",
+          "cls": "relative z-[3] flex flex-col gap-y-[40px] max-w-[395px] item",
+          "width": 395,
+          "maxWidth": "395px",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "flex"
+        },
+        {
+          "tag": "section",
+          "cls": "mt-[100px] py-[100px] relative px-[32px] flex items-center j",
+          "width": 1440,
+          "maxWidth": "none",
+          "paddingInline": "32px / 32px",
+          "marginInline": "0px / 0px",
+          "display": "flex"
+        },
+        {
+          "tag": "main",
+          "cls": "bg-type-light",
+          "width": 1440,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "block"
+        }
+      ],
+      "constrained": {
+        "tag": "div",
+        "cls": "",
+        "width": 361.92,
+        "maxWidth": "371px",
+        "paddingInline": "0px / 0px",
+        "marginInline": "0px / 0px",
+        "display": "block"
+      }
+    },
+    "grids": [
+      {
+        "columns": 12,
+        "columnGap": "20px",
+        "rowGap": "50px",
+        "width": 1440,
+        "template": "85px 85px 85px 85px 85px 85px 85px 85px 85px 85px 85px 85px",
+        "count": 2
+      },
+      {
+        "columns": 13,
+        "columnGap": "20px",
+        "rowGap": "normal",
+        "width": 1400,
+        "template": "96.6562px 96.6562px 96.6562px 96.6562px 96.6562px 96.6562px 96.6562px 96.6562px 96.6562px 96.6562px 96.6562px 96.6562px 0.015625px",
+        "count": 1
+      },
+      {
+        "columns": 3,
+        "columnGap": "20px",
+        "rowGap": "20px",
+        "width": 610,
+        "template": "190px 190px 190px",
+        "count": 1
+      },
+      {
+        "columns": 3,
+        "columnGap": "40px",
+        "rowGap": "0px",
+        "width": 1240,
+        "template": "386.656px 386.672px 386.656px",
+        "count": 1
+      },
+      {
+        "columns": 2,
+        "columnGap": "20px",
+        "rowGap": "normal",
+        "width": 794.34,
+        "template": "387.172px 387.172px",
+        "count": 1
+      }
+    ],
+    "bodyPaddingInline": "0px / 0px",
+    "bodyMaxWidth": "none",
+    "htmlPaddingInline": "0px / 0px"
+  },
+  "leftEdgeTest": {
+    "layout": {
+      "n": 6,
+      "mean": 374,
+      "stdDev": 196.43,
+      "distinctExact": 5,
+      "distinctClustered2px": 5,
+      "clusters": [
+        {
+          "at": 100,
+          "count": 2
+        },
+        {
+          "at": 467,
+          "count": 1
+        },
+        {
+          "at": 484,
+          "count": 1
+        },
+        {
+          "at": 523,
+          "count": 1
+        },
+        {
+          "at": 570,
+          "count": 1
+        }
+      ],
+      "values": [
+        570,
+        100,
+        523,
+        100,
+        467,
+        484
+      ]
+    },
+    "rect": {
+      "n": 6,
+      "mean": 373.87,
+      "stdDev": 196.35,
+      "distinctExact": 5,
+      "distinctClustered2px": 5,
+      "clusters": [
+        {
+          "at": 100,
+          "count": 2
+        },
+        {
+          "at": 466.7,
+          "count": 1
+        },
+        {
+          "at": 484,
+          "count": 1
+        },
+        {
+          "at": 522.5,
+          "count": 1
+        },
+        {
+          "at": 570,
+          "count": 1
+        }
+      ],
+      "values": [
+        570,
+        100,
+        522.5,
+        100,
+        466.7,
+        484
+      ]
+    },
+    "headings": {
+      "n": 6,
+      "mean": 284.33,
+      "stdDev": 208.9,
+      "distinctExact": 5,
+      "distinctClustered2px": 5,
+      "clusters": [
+        {
+          "at": 32,
+          "count": 1
+        },
+        {
+          "at": 100,
+          "count": 2
+        },
+        {
+          "at": 467,
+          "count": 1
+        },
+        {
+          "at": 484,
+          "count": 1
+        },
+        {
+          "at": 523,
+          "count": 1
+        }
+      ],
+      "values": [
+        32,
+        100,
+        523,
+        100,
+        467,
+        484
+      ]
+    },
+    "sectionDiscovery": "semantic-siblings"
+  },
+  "sections": [
+    {
+      "index": 0,
+      "tag": "section",
+      "id": null,
+      "cls": "pt-[60px]  flex flex-col gap-y-[40px] lg:pt-[0px]",
+      "height": 3892.78,
+      "vhFraction": 4.33,
+      "paddingBlockStart": "0px",
+      "paddingBlockEnd": "0px",
+      "marginBlockStart": "0px",
+      "marginBlockEnd": "0px",
+      "firstText": {
+        "layoutLeft": 570,
+        "rectLeft": 570,
+        "tag": "span",
+        "fontSize": "48px",
+        "text": "OUR"
+      },
+      "heading": {
+        "layoutLeft": 32,
+        "rectLeft": 32,
+        "tag": "span",
+        "fontSize": "158.4px",
+        "text": "R"
+      }
+    },
+    {
+      "index": 1,
+      "tag": "section",
+      "id": null,
+      "cls": "pt-[100px] md:grid md:grid-cols-12 md:gap-y-[50px] md:gap-x-[20px] md:",
+      "height": 949.36,
+      "vhFraction": 1.05,
+      "paddingBlockStart": "100px",
+      "paddingBlockEnd": "0px",
+      "marginBlockStart": "0px",
+      "marginBlockEnd": "0px",
+      "firstText": {
+        "layoutLeft": 100,
+        "rectLeft": 100,
+        "tag": "span",
+        "fontSize": "48px",
+        "text": "OUR"
+      },
+      "heading": {
+        "layoutLeft": 100,
+        "rectLeft": 100,
+        "tag": "span",
+        "fontSize": "48px",
+        "text": "OUR"
+      }
+    },
+    {
+      "index": 2,
+      "tag": "section",
+      "id": null,
+      "cls": "mt-[100px] py-[100px] relative px-[32px] flex items-center justify-cen",
+      "height": 1107.55,
+      "vhFraction": 1.23,
+      "paddingBlockStart": "100px",
+      "paddingBlockEnd": "100px",
+      "marginBlockStart": "100px",
+      "marginBlockEnd": "0px",
+      "firstText": {
+        "layoutLeft": 523,
+        "rectLeft": 522.5,
+        "tag": "span",
+        "fontSize": "48px",
+        "text": "LEADING"
+      },
+      "heading": {
+        "layoutLeft": 523,
+        "rectLeft": 522.5,
+        "tag": "span",
+        "fontSize": "48px",
+        "text": "LEADING"
+      }
+    },
+    {
+      "index": 3,
+      "tag": "section",
+      "id": null,
+      "cls": "px-[20px] pt-[100px] lg:pt-[160px] lg:px-[32px] xl:px-[100px]",
+      "height": 1099.69,
+      "vhFraction": 1.22,
+      "paddingBlockStart": "160px",
+      "paddingBlockEnd": "0px",
+      "marginBlockStart": "0px",
+      "marginBlockEnd": "0px",
+      "firstText": {
+        "layoutLeft": 100,
+        "rectLeft": 100,
+        "tag": "span",
+        "fontSize": "48px",
+        "text": "The WORLD"
+      },
+      "heading": {
+        "layoutLeft": 100,
+        "rectLeft": 100,
+        "tag": "span",
+        "fontSize": "48px",
+        "text": "The WORLD"
+      }
+    },
+    {
+      "index": 4,
+      "tag": "section",
+      "id": null,
+      "cls": "pt-[100px] lg:pt-[160px]",
+      "height": 910.59,
+      "vhFraction": 1.01,
+      "paddingBlockStart": "160px",
+      "paddingBlockEnd": "0px",
+      "marginBlockStart": "0px",
+      "marginBlockEnd": "0px",
+      "firstText": {
+        "layoutLeft": 467,
+        "rectLeft": 466.7,
+        "tag": "span",
+        "fontSize": "48px",
+        "text": "OBJECTS"
+      },
+      "heading": {
+        "layoutLeft": 467,
+        "rectLeft": 466.7,
+        "tag": "span",
+        "fontSize": "48px",
+        "text": "OBJECTS"
+      }
+    },
+    {
+      "index": 5,
+      "tag": "section",
+      "id": null,
+      "cls": "relative w-full h-screen min-h-[830px] overflow-hidden mt-[100px]  md:",
+      "height": 900,
+      "vhFraction": 1,
+      "paddingBlockStart": "0px",
+      "paddingBlockEnd": "0px",
+      "marginBlockStart": "160px",
+      "marginBlockEnd": "0px",
+      "firstText": {
+        "layoutLeft": 484,
+        "rectLeft": 484,
+        "tag": "span",
+        "fontSize": "26px",
+        "text": "GET IN TOUCH TO START"
+      },
+      "heading": {
+        "layoutLeft": 484,
+        "rectLeft": 484,
+        "tag": "span",
+        "fontSize": "26px",
+        "text": "GET IN TOUCH TO START"
+      }
+    }
+  ],
+  "verticalRhythm": {
+    "sectionCount": 6,
+    "near100vhCount": 2,
+    "near100vhPct": 33.33,
+    "strictGcdOfSpacing": 1,
+    "baseUnitEstimate80pct": 2,
+    "spacingHistogram": [
+      {
+        "value": 32,
+        "count": 16
+      },
+      {
+        "value": 14,
+        "count": 12
+      },
+      {
+        "value": 16,
+        "count": 11
+      },
+      {
+        "value": 100,
+        "count": 9
+      },
+      {
+        "value": 20,
+        "count": 7
+      },
+      {
+        "value": 40,
+        "count": 7
+      },
+      {
+        "value": 30,
+        "count": 6
+      },
+      {
+        "value": 24,
+        "count": 4
+      },
+      {
+        "value": 160,
+        "count": 3
+      },
+      {
+        "value": 8,
+        "count": 3
+      },
+      {
+        "value": 10,
+        "count": 3
+      },
+      {
+        "value": 488,
+        "count": 2
+      },
+      {
+        "value": 116,
+        "count": 2
+      },
+      {
+        "value": 74,
+        "count": 1
+      }
+    ],
+    "spacingSampleSize": 94
+  },
+  "typeScale": {
+    "distinctFontSizeCount": 12,
+    "distinctFontSizeCount_used2plus": 12,
+    "distinctSizes": [
+      {
+        "size": 285.12,
+        "count": 7
+      },
+      {
+        "size": 158.4,
+        "count": 21
+      },
+      {
+        "size": 133.92,
+        "count": 11
+      },
+      {
+        "size": 108,
+        "count": 3
+      },
+      {
+        "size": 48,
+        "count": 30
+      },
+      {
+        "size": 35,
+        "count": 4
+      },
+      {
+        "size": 26,
+        "count": 4
+      },
+      {
+        "size": 22,
+        "count": 3
+      },
+      {
+        "size": 16,
+        "count": 3
+      },
+      {
+        "size": 14,
+        "count": 60
+      },
+      {
+        "size": 12,
+        "count": 3
+      },
+      {
+        "size": 10,
+        "count": 3
+      }
+    ],
+    "scaleSizesDesc": [
+      285.12,
+      158.4,
+      133.92,
+      108,
+      48,
+      35,
+      26,
+      22,
+      16,
+      14,
+      12,
+      10
+    ],
+    "consecutiveRatios": [
+      1.8,
+      1.18,
+      1.24,
+      2.25,
+      1.37,
+      1.35,
+      1.18,
+      1.38,
+      1.14,
+      1.17,
+      1.2
+    ],
+    "roles": {
+      "h1": null,
+      "biggestText": {
+        "tag": "span",
+        "fontSize": 285.12,
+        "fontWeight": "400",
+        "lineHeightPx": 285.12,
+        "lineHeightRatio": 1,
+        "letterSpacing": "0px",
+        "letterSpacingEm": 0,
+        "fontFamily": "__elicyon_df1f4c",
+        "fontFamilyFull": "__elicyon_df1f4c, __elicyon_Fallback_df1f4c, serif",
+        "textTransform": "uppercase",
+        "color": "rgb(0, 0, 0)",
+        "widthPx": 183.22,
+        "text": "E"
+      },
+      "h2All": [],
+      "h3": {
+        "tag": "h3",
+        "fontSize": 35,
+        "fontWeight": "400",
+        "lineHeightPx": 42,
+        "lineHeightRatio": 1.2,
+        "letterSpacing": "0px",
+        "letterSpacingEm": 0,
+        "fontFamily": "__elicyon_df1f4c",
+        "fontFamilyFull": "__elicyon_df1f4c, __elicyon_Fallback_df1f4c",
+        "textTransform": "uppercase",
+        "color": "rgb(244, 242, 238)",
+        "widthPx": 400,
+        "text": "60 CURZON APARTMENT"
+      },
+      "body": {
+        "tag": "p",
+        "fontSize": 14,
+        "fontWeight": "400",
+        "lineHeightPx": 16.1,
+        "lineHeightRatio": 1.15,
+        "letterSpacing": "0px",
+        "letterSpacingEm": 0,
+        "fontFamily": "__antiqueLegacy_623eb9",
+        "fontFamilyFull": "__antiqueLegacy_623eb9, __antiqueLegacy_Fallback_623eb9",
+        "textTransform": "none",
+        "color": "rgb(0, 0, 0)",
+        "widthPx": 386.67,
+        "text": "Home tour: a contemporary pied-à-terre in Mayfair, London, l"
+      },
+      "small": {
+        "tag": "a",
+        "fontSize": 10,
+        "fontWeight": "400",
+        "lineHeightPx": 11.5,
+        "lineHeightRatio": 1.15,
+        "letterSpacing": "0px",
+        "letterSpacingEm": 0,
+        "fontFamily": "__antiqueLegacy_623eb9",
+        "fontFamilyFull": "__antiqueLegacy_623eb9, __antiqueLegacy_Fallback_623eb9, sans-serif",
+        "textTransform": "uppercase",
+        "color": "rgb(0, 0, 0)",
+        "widthPx": 92.66,
+        "text": "Terms of Service"
+      },
+      "mono": null
+    },
+    "readingMeasure": {
+      "columnWidthPx": 386.67,
+      "widthOf100Chars": 670.13,
+      "measureCh_spec": 57.7,
+      "measureCh_zeroWidth": 46.98,
+      "maxWidthDeclared": "none",
+      "canvasFont": "14px __antiqueLegacy_623eb9, __antiqueLegacy_Fallback_623eb9"
+    },
+    "readingMeasureAlternates": [
+      {
+        "tag": "p",
+        "fontSize": 14,
+        "fontWeight": "400",
+        "lineHeightPx": 16.1,
+        "lineHeightRatio": 1.15,
+        "letterSpacing": "0px",
+        "letterSpacingEm": 0,
+        "fontFamily": "__antiqueLegacy_623eb9",
+        "fontFamilyFull": "__antiqueLegacy_623eb9, __antiqueLegacy_Fallback_623eb9",
+        "textTransform": "none",
+        "color": "rgb(0, 0, 0)",
+        "widthPx": 386.67,
+        "text": "Home tour: a contemporary pied-à-terre in Mayfair, London, l"
+      },
+      {
+        "tag": "p",
+        "fontSize": 14,
+        "fontWeight": "400",
+        "lineHeightPx": 16.1,
+        "lineHeightRatio": 1.15,
+        "letterSpacing": "0px",
+        "letterSpacingEm": 0,
+        "fontFamily": "__antiqueLegacy_623eb9",
+        "fontFamilyFull": "__antiqueLegacy_623eb9, __antiqueLegacy_Fallback_623eb9",
+        "textTransform": "none",
+        "color": "rgb(0, 0, 0)",
+        "widthPx": 386.66,
+        "text": "Looking for decor inspiration? WOW!house is back with plenty"
+      },
+      {
+        "tag": "p",
+        "fontSize": 14,
+        "fontWeight": "400",
+        "lineHeightPx": 16.1,
+        "lineHeightRatio": 1.15,
+        "letterSpacing": "0px",
+        "letterSpacingEm": 0,
+        "fontFamily": "__antiqueLegacy_623eb9",
+        "fontFamilyFull": "__antiqueLegacy_623eb9, __antiqueLegacy_Fallback_623eb9",
+        "textTransform": "none",
+        "color": "rgb(0, 0, 0)",
+        "widthPx": 386.66,
+        "text": "A Fine Balance - This home by Elicyon creates a sense of int"
+      }
+    ],
+    "distinctFontFamilyCount": 2,
+    "fontFamilies": [
+      {
+        "family": "__elicyon_df1f4c",
+        "count": 83
+      },
+      {
+        "family": "__antiqueLegacy_623eb9",
+        "count": 69
+      }
+    ]
+  },
+  "color": {
+    "textColors": [
+      {
+        "value": "rgb(0,0,0)",
+        "count": 92
+      },
+      {
+        "value": "rgb(244,242,238)",
+        "count": 55
+      },
+      {
+        "value": "rgb(255,255,255)",
+        "count": 5
+      }
+    ],
+    "backgroundColors": [
+      {
+        "value": "rgb(141,93,82)",
+        "count": 15
+      },
+      {
+        "value": "rgb(244,242,238)",
+        "count": 3
+      },
+      {
+        "value": "rgb(110,137,200)",
+        "count": 2
+      },
+      {
+        "value": "rgba(245,243,240,0.35)",
+        "count": 2
+      }
+    ],
+    "distinctTextColorCount": 3,
+    "distinctBgColorCount": 4
+  },
+  "persistent": {
+    "fixedOrSticky": [
+      {
+        "tag": "div",
+        "cls": "custom-cursor",
+        "position": "fixed",
+        "rect": {
+          "top": 851,
+          "left": 1382,
+          "width": 14,
+          "height": 16
+        },
+        "zIndex": "9999",
+        "text": "",
+        "opacity": "1"
+      },
+      {
+        "tag": "header",
+        "cls": "fixed top-0 left-0 py-[44px] px-[20px] w-full z-[99] text-wh",
+        "position": "fixed",
+        "rect": {
+          "top": 0,
+          "left": 0,
+          "width": 1440,
+          "height": 64
+        },
+        "zIndex": "99",
+        "text": "ProjectsServicesStudioInsightsMenuCloseContactContact Us",
+        "opacity": "1"
+      },
+      {
+        "tag": "div",
+        "cls": "fixed inset-0 object-cover [&_img]:object-cover pointer-even",
+        "position": "fixed",
+        "rect": {
+          "top": 0,
+          "left": 0,
+          "width": 1440,
+          "height": 900
+        },
+        "zIndex": "50",
+        "text": "",
+        "opacity": "1"
+      },
+      {
+        "tag": "div",
+        "cls": "fixed object-cover [&_img]:object-cover pointer-events-none ",
+        "position": "fixed",
+        "rect": {
+          "top": 159.45,
+          "left": 504,
+          "width": 432,
+          "height": 581.09
+        },
+        "zIndex": "50",
+        "text": "",
+        "opacity": "1"
+      },
+      {
+        "tag": "div",
+        "cls": "fixed inset-0 object-cover [&_img]:object-cover pointer-even",
+        "position": "fixed",
+        "rect": {
+          "top": 0,
+          "left": 0,
+          "width": 720,
+          "height": 900
+        },
+        "zIndex": "50",
+        "text": "",
+        "opacity": "1"
+      }
+    ]
+  },
+  "nav": {
+    "tag": "header",
+    "cls": "fixed top-0 left-0 py-[44px] px-[20px] w-full z-[99] text-wh",
+    "height": 64,
+    "top": 0,
+    "position": "fixed",
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "backdropFilter": "none",
+    "borderBottom": "0px rgb(229, 231, 235)",
+    "paddingBlock": "16px / 0px",
+    "transform": "matrix(1, 0, 0, 1, 0, 0)",
+    "opacity": "1",
+    "mixBlendMode": "normal",
+    "color": "rgb(255, 255, 255)"
+  },
+  "navState": {
+    "at0": {
+      "nav": {
+        "height": 64,
+        "top": 0,
+        "position": "fixed",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "backdropFilter": "none",
+        "borderBottom": "0px rgb(229, 231, 235)",
+        "paddingBlock": "16px / 0px",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)",
+        "opacity": "1",
+        "color": "rgb(255, 255, 255)"
+      },
+      "fixedOrSticky": [
+        {
+          "tag": "div",
+          "cls": "custom-cursor",
+          "position": "fixed",
+          "rect": {
+            "top": 851,
+            "left": 1382,
+            "width": 14,
+            "height": 16
+          },
+          "text": "",
+          "opacity": "1"
+        },
+        {
+          "tag": "header",
+          "cls": "fixed top-0 left-0 py-[44px] px-[20px] w-full z-[99] text-wh",
+          "position": "fixed",
+          "rect": {
+            "top": 0,
+            "left": 0,
+            "width": 1440,
+            "height": 64
+          },
+          "text": "ProjectsServicesStudioInsightsMenuCloseContactContact Us",
+          "opacity": "1"
+        },
+        {
+          "tag": "div",
+          "cls": "fixed inset-0 object-cover [&_img]:object-cover pointer-even",
+          "position": "fixed",
+          "rect": {
+            "top": 0,
+            "left": 0,
+            "width": 1440,
+            "height": 900
+          },
+          "text": "",
+          "opacity": "1"
+        },
+        {
+          "tag": "div",
+          "cls": "fixed object-cover [&_img]:object-cover pointer-events-none ",
+          "position": "fixed",
+          "rect": {
+            "top": 159.45,
+            "left": 504,
+            "width": 432,
+            "height": 581.09
+          },
+          "text": "",
+          "opacity": "1"
+        },
+        {
+          "tag": "div",
+          "cls": "fixed inset-0 object-cover [&_img]:object-cover pointer-even",
+          "position": "fixed",
+          "rect": {
+            "top": 0,
+            "left": 0,
+            "width": 720,
+            "height": 900
+          },
+          "text": "",
+          "opacity": "1"
+        }
+      ]
+    },
+    "at2000": {
+      "nav": {
+        "height": 64,
+        "top": 0,
+        "position": "fixed",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "backdropFilter": "none",
+        "borderBottom": "0px rgb(229, 231, 235)",
+        "paddingBlock": "16px / 0px",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)",
+        "opacity": "0",
+        "color": "rgb(255, 255, 255)"
+      },
+      "fixedOrSticky": [
+        {
+          "tag": "div",
+          "cls": "custom-cursor",
+          "position": "fixed",
+          "rect": {
+            "top": 851,
+            "left": 1382,
+            "width": 14,
+            "height": 16
+          },
+          "text": "",
+          "opacity": "1"
+        },
+        {
+          "tag": "header",
+          "cls": "fixed top-0 left-0 py-[44px] px-[20px] w-full z-[99] text-wh",
+          "position": "fixed",
+          "rect": {
+            "top": 0,
+            "left": 0,
+            "width": 1440,
+            "height": 64
+          },
+          "text": "ProjectsServicesStudioInsightsMenuCloseContactContact Us",
+          "opacity": "0"
+        },
+        {
+          "tag": "div",
+          "cls": "fixed inset-0 object-cover [&_img]:object-cover pointer-even",
+          "position": "fixed",
+          "rect": {
+            "top": 0,
+            "left": 0,
+            "width": 1440,
+            "height": 900
+          },
+          "text": "",
+          "opacity": "1"
+        },
+        {
+          "tag": "div",
+          "cls": "fixed object-cover [&_img]:object-cover pointer-events-none ",
+          "position": "fixed",
+          "rect": {
+            "top": 159.45,
+            "left": 504,
+            "width": 432,
+            "height": 581.09
+          },
+          "text": "",
+          "opacity": "1"
+        },
+        {
+          "tag": "div",
+          "cls": "fixed inset-0 object-cover [&_img]:object-cover pointer-even",
+          "position": "fixed",
+          "rect": {
+            "top": 0,
+            "left": 0,
+            "width": 720,
+            "height": 900
+          },
+          "text": "",
+          "opacity": "1"
+        },
+        {
+          "tag": "section",
+          "cls": "px-[20px] relative overflow-hidden min-h-screen hidden md:fl",
+          "position": "fixed",
+          "rect": {
+            "top": 0,
+            "left": 0,
+            "width": 1440,
+            "height": 900
+          },
+          "text": "OurSTUDIOSCULPTSSPACESthatreflectyourvision,FORGINGaNEWLUXUR",
+          "opacity": "1"
+        }
+      ]
+    },
+    "changed": true,
+    "diff": {
+      "opacity": {
+        "at0": "1",
+        "at2000": "0"
+      }
+    }
+  },
+  "shots": [
+    "elicyon-1440-full.jpg",
+    "elicyon-1440-scroll000.jpg",
+    "elicyon-1440-scroll025.jpg",
+    "elicyon-1440-scroll050.jpg",
+    "elicyon-1440-scroll075.jpg",
+    "elicyon-1440-scroll100.jpg"
+  ],
+  "fullPageShotRepresentative": true,
+  "pageErrors": []
+}

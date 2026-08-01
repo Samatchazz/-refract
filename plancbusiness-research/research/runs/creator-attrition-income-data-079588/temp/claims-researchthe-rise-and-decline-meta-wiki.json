@@ -1,0 +1,58 @@
+[
+  {
+    "claim": "The number of active English Wikipedia editors (>=5 edits/month) grew until early 2007, then abruptly stopped growing and entered a steady linear decline.",
+    "stance": "supports",
+    "stance_target": "Wikipedia's contributor base has a documented, dated inflection point after which aggregate participation declines",
+    "evidence_type": "statistical",
+    "scope_conditions": "English Wikipedia, editors with >=5 edits/month, ~2001-2011",
+    "quoted_support": "the number of active editors (editors with >= 5 edits/month) abruptly stopped growing in early 2007 and entered a steady, linear decline.",
+    "numbers": ["early 2007 inflection point", ">=5 edits/month active-editor threshold"],
+    "entities": ["Wikipedia", "Wikimedia Foundation"],
+    "time_period": "2001-2011",
+    "region": "English Wikipedia",
+    "confidence": "high",
+    "source_note_id": "researchthe-rise-and-decline-meta-wiki"
+  },
+  {
+    "claim": "Wikipedia's editor-retention decline is attributable specifically to falling retention of new editors, not to a decline in the retention rate of already-experienced editors.",
+    "stance": "supports",
+    "stance_target": "the mechanism of Wikipedia's participation decline is a newcomer-retention problem, not a veteran-attrition problem",
+    "evidence_type": "empirical",
+    "scope_conditions": "English Wikipedia",
+    "quoted_support": "Recent research has shown evidence that this transition is rooted in the declining retention of new editors, not a change in the retention of already-experienced old-timers.",
+    "numbers": [],
+    "entities": ["Wikipedia"],
+    "time_period": "2001-2011",
+    "region": "English Wikipedia",
+    "confidence": "high",
+    "source_note_id": "researchthe-rise-and-decline-meta-wiki"
+  },
+  {
+    "claim": "Wikipedia's newcomer-survival metric is operationally defined as the proportion of desirable (good-faith/golden) newcomers who go on to edit for at least two months.",
+    "stance": "neutral",
+    "stance_target": "operational definition of editor retention used in the canonical Wikipedia decline literature",
+    "evidence_type": "empirical",
+    "scope_conditions": "English Wikipedia study methodology",
+    "quoted_support": "Survival of desirable newcomers. The proportion of desirable newcomers who edit for at least two months is plotted over time.",
+    "numbers": ["two-month retention threshold"],
+    "entities": ["Wikipedia"],
+    "time_period": "2001-2011",
+    "region": "English Wikipedia",
+    "confidence": "high",
+    "source_note_id": "researchthe-rise-and-decline-meta-wiki"
+  },
+  {
+    "claim": "Editors who revert newcomer contributions using the semi-automated tool Huggle engage in the recommended Bold-Revert-Discuss follow-up discussion only about 7% of the time, versus about 60% for editors who revert manually.",
+    "stance": "supports",
+    "stance_target": "automated/semi-automated quality-control tools contribute to newcomer attrition by depersonalizing rejection",
+    "evidence_type": "statistical",
+    "scope_conditions": "English Wikipedia, reverts via Huggle vs. manual reverts",
+    "quoted_support": "editors who revert using Huggle are much less likely to participate in a BRD discussion (~7%) than editors who revert manually (~60%).",
+    "numbers": ["~7%", "~60%"],
+    "entities": ["Wikipedia", "Huggle"],
+    "time_period": "unspecified (pre-2013)",
+    "region": "English Wikipedia",
+    "confidence": "high",
+    "source_note_id": "researchthe-rise-and-decline-meta-wiki"
+  }
+]

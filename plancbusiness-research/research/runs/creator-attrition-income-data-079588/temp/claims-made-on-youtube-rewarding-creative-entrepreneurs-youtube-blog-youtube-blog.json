@@ -1,0 +1,75 @@
+[
+  {
+    "claim": "YouTube disclosed in September 2022 that it had paid creators, artists and media companies over $50 billion over the preceding three years and that the YouTube Partner Program had over 2 million partners.",
+    "stance": "supports",
+    "stance_target": "Platform payouts to creators are large in aggregate",
+    "evidence_type": "statistical",
+    "scope_conditions": "Platform-disclosed, self-reported and unaudited; the $50B figure is footnoted 'As of June 2022' and covers roughly mid-2019 to mid-2022; critically it aggregates independent creators WITH artists and media companies, so it cannot be divided by partner count to infer creator earnings; no distribution, median or country breakdown is disclosed",
+    "quoted_support": "Over the past three years, we've paid creators, artists and media companies over $50B.",
+    "numbers": [
+      "$50 billion over three years",
+      "as of June 2022",
+      "over 2 million YPP partners",
+      "published 20 September 2022"
+    ],
+    "entities": [
+      "YouTube",
+      "Amjad Hanif",
+      "YouTube Partner Program"
+    ],
+    "time_period": "Three years to June 2022",
+    "region": "Global; no country breakdown",
+    "confidence": "high",
+    "source_note_id": "made-on-youtube-rewarding-creative-entrepreneurs-youtube-blog-youtube-blog"
+  },
+  {
+    "claim": "YouTube has never published a distribution of creator earnings alongside its aggregate payout figures, disclosing only totals and partner counts, which makes the median YouTube creator's income unknowable from platform-disclosed data.",
+    "stance": "refutes",
+    "stance_target": "That platform payout disclosures answer the question of what share of creators earn a living wage",
+    "evidence_type": "statistical",
+    "scope_conditions": "Audited absence, based on YouTube's flagship monetization announcement of September 2022; a naive $50B / 2M partners / 3 years arithmetic yields roughly $8,300 per partner per year, but that calculation is invalid because the numerator includes record labels and media companies and the denominator is a headcount at a single point in time",
+    "quoted_support": "This unique business model means we only succeed when our creators do. And creators are succeeding, these creator entrepreneurs are building successful businesses of their own with employees and full-fledged operations.",
+    "numbers": [
+      "$50B aggregate",
+      "2M partners",
+      "naive implied mean ~$8,300/partner/year (invalid)",
+      "0 medians disclosed",
+      "0 percentiles disclosed",
+      "0 country splits disclosed"
+    ],
+    "entities": [
+      "YouTube",
+      "YouTube Partner Program"
+    ],
+    "time_period": "2022",
+    "region": "Global",
+    "confidence": "high",
+    "source_note_id": "made-on-youtube-rewarding-creative-entrepreneurs-youtube-blog-youtube-blog"
+  },
+  {
+    "claim": "YouTube's monetization eligibility thresholds as of September 2022 were 1,000 subscribers plus 4,000 watch hours for long-form, with a new Shorts pathway of 1,000 subscribers plus 10 million Shorts views over 90 days opening in early 2023 and a 45% revenue share on Shorts.",
+    "stance": "neutral",
+    "stance_target": "Where the monetization floor sits and why creator cohorts before and after 2023 are not comparable",
+    "evidence_type": "statistical",
+    "scope_conditions": "Platform-disclosed policy, September 2022, global; thresholds have changed repeatedly, which is precisely why attrition and income cohorts spanning threshold changes cannot be compared directly",
+    "quoted_support": "Starting in early 2023, Shorts-focused creators can apply to YPP by meeting a threshold of 1,000 subscribers and 10M Shorts views over 90 days.",
+    "numbers": [
+      "1,000 subscribers",
+      "4,000 watch hours",
+      "10 million Shorts views per 90 days",
+      "45% Shorts revenue share",
+      "30 billion daily Shorts views",
+      "1.5 billion monthly logged-in Shorts users",
+      "YPP launched 2007"
+    ],
+    "entities": [
+      "YouTube",
+      "YouTube Partner Program",
+      "YouTube Shorts"
+    ],
+    "time_period": "September 2022, effective early 2023",
+    "region": "Global",
+    "confidence": "high",
+    "source_note_id": "made-on-youtube-rewarding-creative-entrepreneurs-youtube-blog-youtube-blog"
+  }
+]

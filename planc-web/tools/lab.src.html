@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>planc* — ห้องทดลองการเคลื่อนไหว</title>
+__FONTS__
+<style>
+:root{--ink:#111;--paper:#fcfcfa}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font-family:'Sarabun',system-ui,sans-serif;
+     padding:0 0 6rem;-webkit-font-smoothing:antialiased}
+header{padding:2.4rem max(18px,4vw) 1.4rem;border-bottom:1px solid rgba(17,17,17,.14)}
+h1{font-family:'Prompt',sans-serif;font-size:clamp(1.5rem,6.5vw,2.1rem);font-weight:800;letter-spacing:-.02em;line-height:1.2}
+h1 span{display:inline-block;animation:spin 2.4s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.sub{margin-top:.5rem;font-size:.86rem;line-height:1.6;opacity:.72;max-width:56ch}
+.demo{padding:2rem max(18px,4vw) 0}
+.demo + .demo{margin-top:.6rem}
+.num{font-size:.66rem;letter-spacing:.3em;opacity:.42;font-weight:600}
+h2{font-family:'Prompt',sans-serif;font-size:1.12rem;font-weight:600;margin:.25rem 0 .3rem}
+.why{font-size:.82rem;line-height:1.65;opacity:.74;max-width:60ch;margin-bottom:.85rem}
+.frame{border:1px solid rgba(17,17,17,.18);background:var(--paper);overflow:hidden}
+canvas{display:block;width:100%;height:auto}
+.ctl{padding:.55rem .6rem .35rem;border-top:1px solid rgba(17,17,17,.12)}
+.ctl .row{display:flex;align-items:center;justify-content:space-between;gap:.5rem}
+.ctl .scrub{display:flex;align-items:center;gap:.5rem;margin-top:.15rem}
+.ctl .scrub span{font-size:.6rem;letter-spacing:.16em;opacity:.4;white-space:nowrap}
+.seg{display:flex;border:1px solid var(--ink)}
+.seg button{font-family:'Sarabun',sans-serif;font-size:.7rem;letter-spacing:.04em;padding:.3rem .62rem;
+            background:none;border:0;border-right:1px solid var(--ink);color:inherit;cursor:pointer;white-space:nowrap}
+.seg button:last-child{border-right:0}
+.seg button.on{background:var(--ink);color:var(--paper)}
+input[type=range]{flex:1 1 auto;width:100%;-webkit-appearance:none;appearance:none;height:30px;background:none;cursor:grab}
+input[type=range]:active{cursor:grabbing}
+input[type=range]::-webkit-slider-runnable-track{height:2px;background:rgba(17,17,17,.28)}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:19px;height:19px;border-radius:50%;
+  background:var(--ink);margin-top:-8.5px}
+input[type=range]::-moz-range-track{height:2px;background:rgba(17,17,17,.28)}
+input[type=range]::-moz-range-thumb{width:15px;height:15px;border:0;border-radius:50%;background:var(--ink)}
+.play{font-size:.66rem;letter-spacing:.16em;border:1px solid var(--ink);background:none;color:inherit;
+      padding:.3rem .6rem;cursor:pointer}
+.play.on{background:var(--ink);color:var(--paper)}
+.note{padding:.55rem .7rem;font-size:.76rem;line-height:1.6;background:rgba(17,17,17,.05);border-top:1px solid rgba(17,17,17,.12)}
+.note b{font-weight:600}
+footer{padding:2.6rem max(18px,4vw) 0;font-size:.8rem;line-height:1.7;opacity:.7;max-width:60ch}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>ห้องทดลองการเคลื่อนไหว<br>planc<span>*</span></h1>
+  <p class="sub">ทุกกล่องข้างล่างคือเทคนิคหนึ่งข้อจาก <b>MOTION-REFERENCE.md</b>
+  ลากแถบเลื่อนเพื่อเดินแมว แล้วกดสลับ ปิด/เปิด เพื่อดูว่ามันต่างกันตรงไหน
+  <br><b>ลากถอยหลังได้ด้วย</b> — ถ้าเทคนิคไหนถูกต้อง มันต้องย้อนกลับได้เนียนเสมอ</p>
+</header>
+
+<div id="demos"></div>
+
+<footer>
+  นี่เป็นแค่ห้องทดลอง ไม่ใช่หน้าเว็บจริง ทำเพื่อให้เห็นภาพก่อนตัดสินใจว่าจะเอาข้อไหนไปใส่ในเว็บจริงบ้าง
+</footer>
+
+<script>
+const CAT = new Image(); CAT.src = 'data:image/png;base64,__CAT_B64__';
+
+/* ---------- สูตรกลางจาก MOTION-REFERENCE.md ---------- */
+const rnd = i => { const s = Math.sin(i * 12.9898) * 43758.5453; return s - Math.floor(s); };
+
+function wind(x, t){
+  const gust = 0.55 + 0.45 * Math.sin(t * 0.19 + 1.3);
+  return gust * ( Math.sin(t * 0.9  + x * 0.0060) * 0.60
+                + Math.sin(t * 2.3  + x * 0.0130) * 0.28
+                + Math.sin(t * 0.37 + x * 0.0021) * 0.12 );
+}
+function damp(s, target, dampSec, dtSec){
+  const w = 2 / dampSec, e = Math.exp(-w * dtSec);
+  const ch = s.x - target, tm = (s.v + ch * w) * dtSec;
+  s.v = (s.v - tm * w) * e;
+  s.x = target + (ch + tm) * e;
+}
+function hitstop(cur, points, w = 0.05, hold = 0.18){
+  for (const p of points){
+    const d = cur - p;
+    if (Math.abs(d) > w) continue;
+    const t = d / w;
+    return p + d * (hold + (1 - hold) * t * t);
+  }
+  return cur;
+}
+
+/* ---------- โครงห้องทดลอง ---------- */
+const INK = '#111', PAPER = '#fcfcfa';
+const demos = [];
+
+function makeDemo({n, title, why, modes, note, h = 190, draw}){
+  const wrap = document.createElement('section'); wrap.className = 'demo';
+  wrap.innerHTML = `
+    <div class="num">${n}</div><h2>${title}</h2><p class="why">${why}</p>
+    <div class="frame">
+      <canvas></canvas>
+      <div class="ctl">
+        <div class="row">
+          <div class="seg">${modes.map((m,i)=>`<button data-m="${i}"${i===modes.length-1?' class="on"':''}>${m}</button>`).join('')}</div>
+          <button class="play">เดินเอง</button>
+        </div>
+        <div class="scrub"><span>ลาก</span><input type="range" min="0" max="1000" value="0"><span>↔</span></div>
+      </div>
+      ${note ? `<div class="note">${note}</div>` : ''}
+    </div>`;
+  document.getElementById('demos').appendChild(wrap);
+
+  const cv = wrap.querySelector('canvas'), ctx = cv.getContext('2d');
+  const range = wrap.querySelector('input'), play = wrap.querySelector('.play');
+  const btns = [...wrap.querySelectorAll('.seg button')];
+
+  const st = { p:0, lastP:0, dir:1, mode:modes.length-1, auto:false, h,
+               cv, ctx, mem:{}, W:0, H:h };
+
+  btns.forEach(b => b.onclick = () => {
+    btns.forEach(x => x.classList.remove('on')); b.classList.add('on');
+    st.mode = +b.dataset.m;
+  });
+  range.oninput = () => { st.auto = false; play.classList.remove('on'); st.p = range.value/1000; };
+  play.onclick = () => { st.auto = !st.auto; play.classList.toggle('on', st.auto); };
+
+  function size(){
+    const w = cv.clientWidth || wrap.clientWidth;
+    cv.width = Math.round(w * 2); cv.height = Math.round(h * 2);
+    cv.style.height = h + 'px';
+    ctx.setTransform(2,0,0,2,0,0);
+    st.W = w; st.H = h;
+  }
+  new ResizeObserver(size).observe(cv);
+  size();
+
+  st.draw = draw; st.range = range;
+  demos.push(st);
+  return st;
+}
+
+/* ---------- ตัวช่วยวาด ---------- */
+function ground(ctx, W, H, gy){
+  ctx.fillStyle = INK; ctx.fillRect(0, gy, W, H - gy);
+  ctx.fillStyle = PAPER; ctx.globalAlpha = .85; ctx.fillRect(0, gy, W, 2); ctx.globalAlpha = 1;
+}
+function drawCat(ctx, x, gy, scale, flip, extra){
+  const w = 62 * scale, h = w * (CAT.height / (CAT.width || 1) || 1.0);
+  ctx.save(); ctx.translate(x, gy);
+  if (extra) extra(ctx, w, h);
+  ctx.scale(flip ? -1 : 1, 1);
+  if (CAT.complete && CAT.naturalWidth) ctx.drawImage(CAT, -w/2, -h, w, h);
+  else { ctx.fillStyle = INK; ctx.fillRect(-w/2, -h, w, h); }
+  ctx.restore();
+  return h;
+}
+
+/* ==================================================================
+   1 — หญ้าโดนแมวปัด
+   ================================================================== */
+makeDemo({
+  n:'01', title:'หญ้าโดนแมวปัด',
+  why:'ข้อที่ผมจัดว่าควรทำก่อนเพื่อน เพราะมันเกิดขึ้น<b>ทุกก้าว</b> ไม่ใช่เกิดครั้งเดียวตอนผ่านจุดใดจุดหนึ่ง ลองสลับไปที่ “ไม่โต้ตอบ” แล้วดู — แมวจะกลายเป็นภาพลอยทับฉากหลังทันที',
+  modes:['ไม่โต้ตอบ','สูตรผิด','โต้ตอบ'],
+  note:'โหมด <b>สูตรผิด</b> คือบั๊กที่ผมเขียนพลาดในร่างแรก ถ้าเอาทิศจากเครื่องหมายของระยะ พอแมวผ่านกลางกอพอดี หญ้าจะสะบัดกลับด้านในเฟรมเดียว — ลากช้าๆ ผ่านกอกลางจอแล้วจะเห็นชัด',
+  draw(st, t){
+    const {ctx, W, H, p, dir, mode} = st, gy = H - 26;
+    ctx.clearRect(0,0,W,H); ground(ctx, W, H, gy);
+    const catX = 30 + p * (W - 60);
+    drawCat(ctx, catX, gy + 2, .85, false);
+    const N = Math.max(14, Math.round(W / 17)), R = 74;
+    for (let i = 0; i < N; i++){
+      const bx = (i + .5) * (W / N);
+      let bend = wind(bx, t) * 7;
+      if (mode === 2){
+        const d = (bx - catX) / R;
+        if (Math.abs(d) < 1) bend += (1 - d*d) * dir * 38;
+      } else if (mode === 1){
+        const d = (bx - catX) / R;
+        if (Math.abs(d) < 1) bend += (1 - d*d) * Math.sign(d) * 38;
+      }
+      const hgt = 15 + rnd(i) * 9, a = bend * Math.PI / 180;
+      ctx.strokeStyle = INK; ctx.lineWidth = 1.6; ctx.lineCap = 'round';
+      ctx.beginPath(); ctx.moveTo(bx, gy);
+      ctx.quadraticCurveTo(bx + Math.sin(a) * hgt * .45, gy - hgt * .6,
+                           bx + Math.sin(a) * hgt,       gy - hgt * Math.cos(a));
+      ctx.stroke();
+    }
+  }
+});
+
+/* ==================================================================
+   2 — หาง หู หนวด หน่วงตามตัว
+   ================================================================== */
+makeDemo({
+  n:'02', title:'หาง หู หนวด — ของที่ตามหลัง',
+  why:'ถูกที่สุด ได้ผลมากที่สุดในตัวแมว การที่ทุกส่วนขยับ<b>พร้อมกันเป๊ะ</b> คือสาเหตุอันดับหนึ่งที่ทำให้ตัวละครดูเป็นหุ่น พอมีของที่ตามหลัง สมองจะอ่านว่ามันมีมวล',
+  modes:['ติดแน่น','หน่วงตาม'],
+  note:'ใช้สปริงหน่วงพอดีจาก <b>Game Programming Gems 4</b> — ต่างจาก lerp ตรงที่มันมีความเร็วของตัวเอง เลยเป้าแล้วค่อยกลับ นั่นแหละคือน้ำหนัก',
+  draw(st, t, dt){
+    const {ctx, W, H, p, dir, mode} = st, gy = H - 26;
+    ctx.clearRect(0,0,W,H); ground(ctx, W, H, gy);
+    const catX = 30 + p * (W - 60);
+    const m = st.mem;
+    if (!m.tail){ m.tail = {x:0,v:0}; m.ear = {x:0,v:0}; }
+    const spd = Math.min(1, Math.abs(st.p - st.lastP) * 60);
+    const tgt = -dir * 34 - spd * dir * 26 + wind(catX, t) * 5;
+    if (mode === 1){ damp(m.tail, tgt, .24, dt); damp(m.ear, tgt * .42, .12, dt); }
+    else { m.tail.x = tgt; m.ear.x = tgt * .42; }
+
+    const hh = 54, a = m.tail.x * Math.PI / 180;
+    ctx.strokeStyle = INK; ctx.lineWidth = 4.5; ctx.lineCap = 'round';
+    ctx.beginPath(); ctx.moveTo(catX + 18, gy - hh * .42);
+    ctx.quadraticCurveTo(catX + 18 + Math.sin(a) * 20, gy - hh * .42 - 22,
+                         catX + 18 + Math.sin(a) * 34, gy - hh * .42 - 40);
+    ctx.stroke();
+    drawCat(ctx, catX, gy + 2, .85, false);
+    ctx.save(); ctx.translate(catX - 8, gy - hh * .96); ctx.rotate(m.ear.x * Math.PI / 180 * .5);
+    ctx.fillStyle = INK; ctx.beginPath(); ctx.moveTo(-7,0); ctx.lineTo(0,-13); ctx.lineTo(7,0); ctx.fill();
+    ctx.restore();
+  }
+});
+
+/* ==================================================================
+   3 — ลมเส้นเดียวคุมทั้งฉาก
+   ================================================================== */
+makeDemo({
+  n:'03', title:'ลมเส้นเดียว คุมทั้งฉาก',
+  why:'คุ้มที่สุดต่อบรรทัดโค้ด หญ้า ธง เมฆ ป้าย ใช้สัญญาณลม<b>ตัวเดียวกัน</b> ต่างกันแค่ตำแหน่งในโลกที่ใช้เลื่อนเฟส ลมเลยพัดเป็นระลอกจากซ้ายไปขวา แทนที่จะต่างคนต่างไหว',
+  modes:['ต่างคนต่างไหว','ลมเส้นเดียว'],
+  note:'โหมดซ้ายคือสิ่งที่จะได้ถ้าปล่อยให้แต่ละชิ้นมีนาฬิกาของตัวเอง — ทุกอย่างไหวจริง แต่ฉาก<b>ไม่ได้อยู่ในสภาพอากาศเดียวกัน</b>',
+  h:150,
+  draw(st, t){
+    const {ctx, W, H, mode} = st, gy = H - 22;
+    ctx.clearRect(0,0,W,H); ground(ctx, W, H, gy);
+    const sway = (x, i, amp) => mode === 1 ? wind(x, t) * amp
+                                          : Math.sin(t * (1.1 + rnd(i) * 1.9) + rnd(i+9) * 6.28) * amp;
+    for (let i = 0; i < 3; i++){
+      const fx = W * (0.16 + i * 0.31), ph = 46;
+      ctx.strokeStyle = INK; ctx.lineWidth = 2;
+      ctx.beginPath(); ctx.moveTo(fx, gy); ctx.lineTo(fx, gy - ph); ctx.stroke();
+      ctx.fillStyle = INK; ctx.beginPath(); ctx.moveTo(fx, gy - ph);
+      for (let s = 0; s <= 1.001; s += .1){
+        const amp = s * s * 9, y = Math.sin(t * 4.2 - s * 3.1) * amp * (0.5 + sway(fx, i, 1) * 0.5);
+        ctx.lineTo(fx + s * 34, gy - ph + y);
+      }
+      for (let s = 1; s >= -0.001; s -= .1){
+        const amp = s * s * 9, y = Math.sin(t * 4.2 - s * 3.1) * amp * (0.5 + sway(fx, i, 1) * 0.5);
+        ctx.lineTo(fx + s * 34, gy - ph + y + 15);
+      }
+      ctx.fill();
+    }
+    const N = Math.max(16, Math.round(W / 15));
+    for (let i = 0; i < N; i++){
+      const bx = (i + .5) * (W / N), a = sway(bx, i, 9) * Math.PI / 180, hgt = 13 + rnd(i) * 7;
+      ctx.strokeStyle = INK; ctx.lineWidth = 1.5; ctx.lineCap = 'round';
+      ctx.beginPath(); ctx.moveTo(bx, gy);
+      ctx.quadraticCurveTo(bx + Math.sin(a) * hgt * .45, gy - hgt * .6, bx + Math.sin(a) * hgt, gy - hgt);
+      ctx.stroke();
+    }
+  }
+});
+
+/* ==================================================================
+   4 — hitstop แบบสกรอล
+   ================================================================== */
+makeDemo({
+  n:'04', title:'hitstop — จังหวะหน่วงตอนเหยียบ',
+  why:'ในเกม จังหวะกระแทกจะ<b>หยุดเวลา</b>ไว้ 60–90ms แล้วค่อยไปต่อ มันขายน้ำหนักได้ทั้งที่ไม่มีอะไรขยับเลย เว็บเราหยุดเวลาไม่ได้เพราะนิ้วคนดูคือเวลา แต่บีบให้ progress เดินช้าลงรอบจุดชนได้',
+  modes:['ไม่มี','มี hitstop'],
+  note:'ลากแถบด้วย<b>ความเร็วคงที่</b>ผ่านตัว DEADLINE แล้วสังเกต — โหมดขวาแมวจะหนืดลงตรงจังหวะเหยียบพอดี ทั้งที่นิ้วเราเลื่อนเท่าเดิม และยัง<b>ลากถอยกลับได้</b> เพราะมันเป็นแค่การรีแมปตัวเลข',
+  draw(st, t, dt){
+    const {ctx, W, H, mode} = st, gy = H - 26, P = .5;
+    const cur = mode === 1 ? hitstop(st.p, [P]) : st.p;
+    ctx.clearRect(0,0,W,H); ground(ctx, W, H, gy);
+    const catX = 30 + cur * (W - 60), ex = 30 + P * (W - 60);
+    const sq = Math.max(0, Math.min(1, (cur - P) / .03));
+    ctx.fillStyle = INK; ctx.beginPath();
+    ctx.ellipse(ex, gy - 11 * (1 - sq * .82), 20, 11 * (1 - sq * .82), 0, 0, 6.283); ctx.fill();
+    if (sq < 1){
+      ctx.fillStyle = PAPER;
+      ctx.beginPath(); ctx.arc(ex - 7, gy - 14 * (1-sq*.82), 3.4, 0, 6.283); ctx.fill();
+      ctx.beginPath(); ctx.arc(ex + 7, gy - 14 * (1-sq*.82), 3.4, 0, 6.283); ctx.fill();
+    }
+    const jy = Math.abs(cur - P) < .05 ? -Math.cos((cur - P) / .05 * 1.5708) * 34 : 0;
+    ctx.save(); ctx.translate(0, jy); drawCat(ctx, catX, gy + 2, .85, false); ctx.restore();
+    // สองแถบเทียบกัน: นิ้วเลื่อนเท่าเดิม แต่แมวหนืดตรงจุดชน
+    const bx = 40, bw = W - bx - 14;
+    ctx.font = '10px Sarabun,sans-serif'; ctx.textBaseline = 'middle';
+    [['นิ้ว', st.p, 12, .28], ['แมว', cur, 27, .9]].forEach(([lab, val, y, a]) => {
+      ctx.fillStyle = INK; ctx.globalAlpha = .45; ctx.fillText(lab, 6, y);
+      ctx.globalAlpha = .13; ctx.fillRect(bx, y - 2, bw, 4);
+      ctx.globalAlpha = a;   ctx.fillRect(bx, y - 2, bw * val, 4);
+      ctx.globalAlpha = 1;
+    });
+    ctx.globalAlpha = .35; ctx.fillRect(bx + bw * P - 1, 6, 2, 27); ctx.globalAlpha = 1;
+    ctx.textBaseline = 'alphabetic';
+  }
+});
+
+/* ==================================================================
+   5 — ฝุ่น + รอยเท้า (permanence)
+   ================================================================== */
+makeDemo({
+  n:'05', title:'ฝุ่น และ รอยเท้าที่ค้างไว้',
+  why:'Vlambeer เรียกข้อนี้ว่า <b>permanence</b> — ร่องรอยที่ค้างอยู่ทำให้โลกจำได้ว่าเราเคยผ่านมา ทั้งสองอย่างคำนวณจาก<b>ระยะที่เดินเลยมา</b> ไม่ใช่เวลาที่ผ่านไป เลยลากถอยกลับแล้วรอยเท้าหายไปเองอย่างถูกต้อง',
+  modes:['ไม่มี','มี'],
+  note:'นี่คือหัวใจของการแปลงเทคนิคเกมมาใช้กับเว็บสกรอล ถ้าเผลอผูกอายุฝุ่นกับ <b>เวลา</b> ลากถอยหลังปุ๊บฝุ่นจะโผล่ผิดที่ทันที',
+  draw(st, t){
+    const {ctx, W, H, p, mode} = st, gy = H - 26;
+    ctx.clearRect(0,0,W,H); ground(ctx, W, H, gy);
+    const catX = 30 + p * (W - 60);
+    if (mode === 1){
+      for (let i = 0; i < 22; i++){
+        const fx = 34 + i * ((W - 68) / 21);
+        if (fx > catX - 6) continue;
+        ctx.fillStyle = PAPER; ctx.globalAlpha = .42;
+        ctx.beginPath(); ctx.ellipse(fx, gy + 7, 3.2, 2, 0, 0, 6.283); ctx.fill();
+        ctx.globalAlpha = 1;
+      }
+      for (let i = 0; i < 10; i++){
+        const dp = p - (0.02 + i * 0.004), age = (p - dp) * 3.2;
+        const px = catX - 14 - i * 9 - rnd(i) * 7;
+        const a = Math.max(0, 1 - i / 9);
+        if (px < 8) continue;
+        ctx.fillStyle = INK; ctx.globalAlpha = a * .3;
+        ctx.beginPath(); ctx.arc(px, gy - 4 - i * 1.6 - rnd(i+3) * 5, 1.6 + i * .5, 0, 6.283); ctx.fill();
+        ctx.globalAlpha = 1;
+      }
+    }
+    drawCat(ctx, catX, gy + 2, .85, false);
+  }
+});
+
+/* ==================================================================
+   6 — ของไกลต้องไหวน้อยกว่าของใกล้
+   ================================================================== */
+makeDemo({
+  n:'06', title:'ความลึกในภาพขาว-ดำ',
+  why:'ไม่มีสีให้ใช้บอกระยะ เหลือ 4 อย่าง: คอนทราสต์ ความหนาแน่นของรายละเอียด ความหนาเส้น และ<b>แอมพลิจูดการไหว</b> ข้อสุดท้ายคนลืมบ่อยที่สุด — ของไกลที่ไหวเท่าของใกล้ จะกระโดดมาอยู่ใกล้ทันทีในสายตาคนดู',
+  modes:['ไหวเท่ากันหมด','ไล่ตามระยะ'],
+  h:170,
+  draw(st, t){
+    const {ctx, W, H, mode} = st, gy = H - 20;
+    ctx.clearRect(0,0,W,H); ground(ctx, W, H, gy);
+    const rows = [{y:gy-70, o:.15, lw:1,   amp:.12, n:5},
+                  {y:gy-42, o:.30, lw:1.4, amp:.35, n:8},
+                  {y:gy-16, o:1,   lw:2,   amp:1,   n:14}];
+    rows.forEach((r, ri) => {
+      for (let i = 0; i < r.n; i++){
+        const x = (i + .5) * (W / r.n);
+        const a = wind(x, t) * 11 * (mode === 1 ? r.amp : 1) * Math.PI / 180;
+        const hgt = 16 + ri * 7;
+        ctx.globalAlpha = r.o; ctx.strokeStyle = INK; ctx.lineWidth = r.lw; ctx.lineCap = 'round';
+        ctx.beginPath(); ctx.moveTo(x, r.y + hgt);
+        ctx.quadraticCurveTo(x + Math.sin(a) * hgt * .4, r.y + hgt * .4, x + Math.sin(a) * hgt, r.y);
+        ctx.stroke(); ctx.globalAlpha = 1;
+      }
+    });
+  }
+});
+
+/* ---------- ลูปเดียวคุมทุกกล่อง ---------- */
+let prev = performance.now();
+function frame(now){
+  const dtSec = Math.min(.05, (now - prev) / 1000); prev = now;
+  const t = now / 1000;
+  for (const st of demos){
+    if (st.auto){
+      st.p += dtSec * .28;
+      if (st.p > 1){ st.p = 0; st.lastP = 0; }
+      st.range.value = st.p * 1000;
+    }
+    const d = st.p - st.lastP;
+    if (Math.abs(d) > 0.0004) st.dir = d > 0 ? 1 : -1;
+    st.draw(st, t, dtSec);
+    st.lastP = st.p;
+  }
+  requestAnimationFrame(frame);
+}
+CAT.onload = () => requestAnimationFrame(frame);
+CAT.onerror = () => requestAnimationFrame(frame);
+if (CAT.complete) requestAnimationFrame(frame);
+</script>
+</body>
+</html>

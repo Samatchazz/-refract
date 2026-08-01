@@ -1,0 +1,112 @@
+[
+  {
+    "claim": "The widely-quoted 8.8-year median YouTube channel lifespan is not a median lifespan: CreatorMap defines it as the median age at last upload among channels that have ALREADY gone dark, computed on a cohort that by construction only contains channels that survived long enough to reach 10,000 subscribers by 2019.",
+    "stance": "refutes",
+    "stance_target": "The claim that the typical YouTube channel lasts about 8.8 years",
+    "evidence_type": "statistical",
+    "scope_conditions": "CreatorMap, May 2026; the sampling frame mechanically excludes channels that died young, which is why the study can report that only 3.8% of dormant channels went dark within two years; this is left-truncation plus survivorship selection, and the figure cannot be read as the lifespan of a newly started channel",
+    "quoted_support": "Of all the channels in our dataset that have gone inactive, the single most common age at last upload is 8 to 9 years. The median sits at 8.8 years, with the middle 50% of channels falling between roughly 6 and 12 years.",
+    "numbers": [
+      "median 8.8 years",
+      "modal age 8-9 years (10.1% of dormant channels)",
+      "IQR roughly 6-12 years",
+      "only 3.8% went dark within first 2 years",
+      "40,379 dormant channels"
+    ],
+    "entities": [
+      "CreatorMap"
+    ],
+    "time_period": "May 2026",
+    "region": "Global / unspecified",
+    "confidence": "high",
+    "source_note_id": "youtube-channel-lifespan-half-life-study-of-97601-creators-creatormap-creatormap"
+  },
+  {
+    "claim": "The CreatorMap half-life article states its sample is 105,891 independent channels while its own page title claims 97,601, and its age-at-death distribution is computed on the identical 40,379 dormant-channel count reported for the separate 97,601-channel survival study.",
+    "stance": "refutes",
+    "stance_target": "The internal consistency of the CreatorMap creator-longevity dataset",
+    "evidence_type": "statistical",
+    "scope_conditions": "Page title versus body text of the same article, fetched 27 July 2026",
+    "quoted_support": "We analyzed 105,891 independent YouTube channels. One question: how long do they actually last?",
+    "numbers": [
+      "105,891 in body",
+      "97,601 in title",
+      "40,379 dormant channels reused across both studies"
+    ],
+    "entities": [
+      "CreatorMap"
+    ],
+    "time_period": "May 2026",
+    "region": "n/a",
+    "confidence": "high",
+    "source_note_id": "youtube-channel-lifespan-half-life-study-of-97601-creators-creatormap-creatormap"
+  },
+  {
+    "claim": "CreatorMap reports annual channel mortality rising from 3.1 per 1,000 alive channels in 2016 to 41.7 (2019), 57.4 (2022), 76.5 (2023), 104.1 (2024) and 161.6 (2025), a near-tripling in three years, alongside a monthly going-dark rate of 2.36% by September 2025.",
+    "stance": "supports",
+    "stance_target": "Creator attrition is accelerating, so older cohort statistics understate the current risk of quitting",
+    "evidence_type": "statistical",
+    "scope_conditions": "Vendor dataset, single May 2026 snapshot; the rate is measured against channels alive at the start of each year, which the study says controls for cohort size; because inactivity is judged from one snapshot, the most recent years cannot yet be corrected for channels that later resume posting, biasing 2024-2025 rates upward",
+    "quoted_support": "The rate has nearly tripled since 2022 alone. Channels created in 2012 and channels created in 2019 are both dying at higher per-capita rates in 2024-2025 than in any prior year.",
+    "numbers": [
+      "2016: 3.1 per 1,000",
+      "2019: 41.7",
+      "2022: 57.4",
+      "2023: 76.5",
+      "2024: 104.1",
+      "2025: 161.6",
+      "Sep 2025: 2.36% per month"
+    ],
+    "entities": [
+      "CreatorMap",
+      "YouTube Shorts"
+    ],
+    "time_period": "2015-2025",
+    "region": "Global / unspecified",
+    "confidence": "low",
+    "source_note_id": "youtube-channel-lifespan-half-life-study-of-97601-creators-creatormap-creatormap"
+  },
+  {
+    "claim": "Median channel lifespan in the CreatorMap data varies by four years across content genres, from 7.45 years for People & Blogs to 11.49 years for Nonprofits & Activism, with personal-vlog and general-entertainment formats the shortest-lived.",
+    "stance": "supports",
+    "stance_target": "Attrition risk is systematically higher in the low-barrier, high-volume content categories most new creators enter",
+    "evidence_type": "statistical",
+    "scope_conditions": "15 content categories, CreatorMap dataset May 2026; inherits the same left-truncated cohort as the 8.8-year median, so genre figures are usable as relative rankings but not as absolute lifespans",
+    "quoted_support": "Deviation from overall median (8.8y). Spread: People & Blogs (7.45y) to Nonprofits & Activism (11.49y).",
+    "numbers": [
+      "spread 4.0 years",
+      "People & Blogs 7.45y",
+      "Music 10.4y",
+      "Nonprofits & Activism 11.49y",
+      "overall median 8.8y",
+      "15 categories"
+    ],
+    "entities": [
+      "CreatorMap"
+    ],
+    "time_period": "May 2026",
+    "region": "Global / unspecified",
+    "confidence": "low",
+    "source_note_id": "youtube-channel-lifespan-half-life-study-of-97601-creators-creatormap-creatormap"
+  },
+  {
+    "claim": "CreatorMap's cohort curves show the 2018 creation cohort reaching 50% attrition at age 7, the earliest of any tracked cohort, while the 2012-2017 cohorts still had more than half of channels posting as of mid-2026.",
+    "stance": "supports",
+    "stance_target": "Newer creator cohorts face faster attrition than the cohorts that established the platform's success narratives",
+    "evidence_type": "statistical",
+    "scope_conditions": "CreatorMap, May 2026; the article concedes the 2019-2021 cohorts are too young for firm conclusions; this is the only source in the batch that explicitly acknowledges right-censoring in its survival calculations",
+    "quoted_support": "Channels classified as active or low-engagement as of May 2026 are treated as right-censored observations in all survival calculations.",
+    "numbers": [
+      "2018 cohort half-life at age 7",
+      "1.8 years earlier than the overall median",
+      "2012-2017 cohorts over 50% still posting"
+    ],
+    "entities": [
+      "CreatorMap"
+    ],
+    "time_period": "2012-2026",
+    "region": "Global / unspecified",
+    "confidence": "low",
+    "source_note_id": "youtube-channel-lifespan-half-life-study-of-97601-creators-creatormap-creatormap"
+  }
+]

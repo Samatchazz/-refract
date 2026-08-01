@@ -1,0 +1,630 @@
+{
+  "slug": "tr-advanced",
+  "url": "https://tr-advanced.co.jp/regular/",
+  "name": "Tokai Rika Advanced Recruit",
+  "country": "Japan",
+  "viewport": {
+    "width": 1440,
+    "height": 900
+  },
+  "ok": true,
+  "httpStatus": 200,
+  "finalUrl": "https://tr-advanced.co.jp/regular/",
+  "networkIdleTimeout": true,
+  "consentDismissed": [],
+  "scrollInfo": {
+    "contentHeight": 3073,
+    "docScrollHeight": 3073,
+    "maxElementBottom": 3073,
+    "innerScrollerHeight": 0,
+    "virtualScroll": false
+  },
+  "document": {
+    "scrollHeight": 3073,
+    "vhMultiple": 3.41,
+    "textNodeCount": 165,
+    "canvasCount": 0,
+    "elementCount": 10743,
+    "title": "新卒採用サイト TOP｜東海理化アドバンスト",
+    "lang": "ja",
+    "contentHeight": 3073,
+    "scrollMode": "native"
+  },
+  "container": {
+    "dominantPairs": [
+      {
+        "width": 1440,
+        "left": 0,
+        "count": 3,
+        "sample": {
+          "tag": "p",
+          "cls": "p-top-block-lead__txt js-fadein-up is-active"
+        }
+      },
+      {
+        "width": 112,
+        "left": 1093,
+        "count": 1,
+        "sample": {
+          "tag": "a",
+          "cls": "l-header-nav__link l-header-nav__link--4"
+        }
+      },
+      {
+        "width": 351,
+        "left": 204,
+        "count": 1,
+        "sample": {
+          "tag": "span",
+          "cls": "c-link-card-l__txt"
+        }
+      },
+      {
+        "width": 296,
+        "left": 204,
+        "count": 1,
+        "sample": {
+          "tag": "span",
+          "cls": "c-link-card-s__ttl"
+        }
+      },
+      {
+        "width": 99,
+        "left": 204,
+        "count": 1,
+        "sample": {
+          "tag": "span",
+          "cls": "c-link-card-s__txt"
+        }
+      },
+      {
+        "width": 296,
+        "left": 572,
+        "count": 1,
+        "sample": {
+          "tag": "span",
+          "cls": "c-link-card-s__ttl"
+        }
+      }
+    ],
+    "containerChain": {
+      "chain": [
+        {
+          "tag": "p",
+          "cls": "p-top-block-lead__txt js-fadein-up is-active",
+          "width": 1440,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "block"
+        },
+        {
+          "tag": "div",
+          "cls": "p-top-block-lead js-load-in",
+          "width": 1440,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "block"
+        },
+        {
+          "tag": "div",
+          "cls": "p-top-block",
+          "width": 1440,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "block"
+        },
+        {
+          "tag": "main",
+          "cls": "l-contents",
+          "width": 1440,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "block"
+        },
+        {
+          "tag": "div",
+          "cls": "l-wrapper",
+          "width": 1440,
+          "maxWidth": "none",
+          "paddingInline": "0px / 0px",
+          "marginInline": "0px / 0px",
+          "display": "block"
+        }
+      ],
+      "constrained": null
+    },
+    "grids": [],
+    "bodyPaddingInline": "0px / 0px",
+    "bodyMaxWidth": "none",
+    "htmlPaddingInline": "0px / 0px"
+  },
+  "leftEdgeTest": {
+    "layout": {
+      "n": 1,
+      "mean": 778,
+      "stdDev": 0,
+      "distinctExact": 1,
+      "distinctClustered2px": 1,
+      "clusters": [
+        {
+          "at": 778,
+          "count": 1
+        }
+      ],
+      "values": [
+        778
+      ]
+    },
+    "rect": {
+      "n": 1,
+      "mean": 777.67,
+      "stdDev": 0,
+      "distinctExact": 1,
+      "distinctClustered2px": 1,
+      "clusters": [
+        {
+          "at": 777.67,
+          "count": 1
+        }
+      ],
+      "values": [
+        777.67
+      ]
+    },
+    "headings": {
+      "n": 1,
+      "mean": 272,
+      "stdDev": 0,
+      "distinctExact": 1,
+      "distinctClustered2px": 1,
+      "clusters": [
+        {
+          "at": 272,
+          "count": 1
+        }
+      ],
+      "values": [
+        272
+      ]
+    },
+    "sectionDiscovery": "body-children"
+  },
+  "sections": [
+    {
+      "index": 0,
+      "tag": "div",
+      "id": null,
+      "cls": "l-wrapper",
+      "height": 3072.78,
+      "vhFraction": 3.41,
+      "paddingBlockStart": "0px",
+      "paddingBlockEnd": "0px",
+      "marginBlockStart": "0px",
+      "marginBlockEnd": "0px",
+      "firstText": {
+        "layoutLeft": 778,
+        "rectLeft": 777.67,
+        "tag": "a",
+        "fontSize": "14px",
+        "text": "ホーム"
+      },
+      "heading": {
+        "layoutLeft": 272,
+        "rectLeft": 269.86,
+        "tag": "span",
+        "fontSize": "104px",
+        "text": "E"
+      }
+    }
+  ],
+  "verticalRhythm": {
+    "sectionCount": 1,
+    "near100vhCount": 0,
+    "near100vhPct": 0,
+    "strictGcdOfSpacing": 1,
+    "baseUnitEstimate80pct": 2,
+    "spacingHistogram": [
+      {
+        "value": 36,
+        "count": 8
+      },
+      {
+        "value": 150,
+        "count": 5
+      },
+      {
+        "value": 18,
+        "count": 4
+      },
+      {
+        "value": 5,
+        "count": 4
+      },
+      {
+        "value": 40,
+        "count": 3
+      },
+      {
+        "value": 6,
+        "count": 3
+      },
+      {
+        "value": 60,
+        "count": 2
+      },
+      {
+        "value": 213,
+        "count": 2
+      },
+      {
+        "value": 32,
+        "count": 2
+      },
+      {
+        "value": 654,
+        "count": 2
+      },
+      {
+        "value": 20,
+        "count": 2
+      },
+      {
+        "value": 80,
+        "count": 2
+      },
+      {
+        "value": 16,
+        "count": 1
+      },
+      {
+        "value": 55,
+        "count": 1
+      }
+    ],
+    "spacingSampleSize": 43
+  },
+  "typeScale": {
+    "distinctFontSizeCount": 9,
+    "distinctFontSizeCount_used2plus": 8,
+    "distinctSizes": [
+      {
+        "size": 104,
+        "count": 20
+      },
+      {
+        "size": 56,
+        "count": 16
+      },
+      {
+        "size": 36,
+        "count": 1
+      },
+      {
+        "size": 24,
+        "count": 10
+      },
+      {
+        "size": 22,
+        "count": 3
+      },
+      {
+        "size": 18,
+        "count": 8
+      },
+      {
+        "size": 16,
+        "count": 45
+      },
+      {
+        "size": 14,
+        "count": 9
+      },
+      {
+        "size": 12,
+        "count": 3
+      }
+    ],
+    "scaleSizesDesc": [
+      104,
+      56,
+      24,
+      22,
+      18,
+      16,
+      14,
+      12
+    ],
+    "consecutiveRatios": [
+      1.86,
+      2.33,
+      1.09,
+      1.22,
+      1.13,
+      1.14,
+      1.17
+    ],
+    "roles": {
+      "h1": null,
+      "biggestText": {
+        "tag": "span",
+        "fontSize": 104,
+        "fontWeight": "400",
+        "lineHeightPx": 120,
+        "lineHeightRatio": 1.15,
+        "letterSpacing": "10.4px",
+        "letterSpacingEm": 0.1,
+        "fontFamily": "Aoboshi One",
+        "fontFamilyFull": "\"Aoboshi One\", serif",
+        "textTransform": "none",
+        "color": "rgb(115, 131, 173)",
+        "widthPx": 73.75,
+        "text": "E"
+      },
+      "h2All": [],
+      "h3": null,
+      "body": null,
+      "small": {
+        "tag": "span",
+        "fontSize": 12,
+        "fontWeight": "400",
+        "lineHeightPx": 12,
+        "lineHeightRatio": 1,
+        "letterSpacing": "0px",
+        "letterSpacingEm": 0,
+        "fontFamily": "Aoboshi One",
+        "fontFamilyFull": "\"Aoboshi One\", serif",
+        "textTransform": "none",
+        "color": "rgb(207, 209, 108)",
+        "widthPx": 66.47,
+        "text": "Scroll down"
+      },
+      "mono": null
+    },
+    "readingMeasure": null,
+    "readingMeasureAlternates": [],
+    "distinctFontFamilyCount": 3,
+    "fontFamilies": [
+      {
+        "family": "Aoboshi One",
+        "count": 84
+      },
+      {
+        "family": "Yu Gothic UI",
+        "count": 27
+      },
+      {
+        "family": "Noto Sans JP",
+        "count": 4
+      }
+    ]
+  },
+  "color": {
+    "textColors": [
+      {
+        "value": "rgb(207,209,108)",
+        "count": 41
+      },
+      {
+        "value": "rgb(115,131,173)",
+        "count": 30
+      },
+      {
+        "value": "rgb(95,103,124)",
+        "count": 18
+      },
+      {
+        "value": "rgb(233,236,243)",
+        "count": 16
+      },
+      {
+        "value": "rgb(226,226,226)",
+        "count": 5
+      },
+      {
+        "value": "rgb(218,225,241)",
+        "count": 5
+      }
+    ],
+    "backgroundColors": [
+      {
+        "value": "rgba(35,40,55,0.8)",
+        "count": 1
+      },
+      {
+        "value": "rgba(186,93,93,0.8)",
+        "count": 1
+      }
+    ],
+    "distinctTextColorCount": 6,
+    "distinctBgColorCount": 2
+  },
+  "persistent": {
+    "fixedOrSticky": [
+      {
+        "tag": "div",
+        "cls": "js-lottie js-lottie--blue sp-hide",
+        "position": "fixed",
+        "rect": {
+          "top": 0,
+          "left": 0,
+          "width": 1440,
+          "height": 900
+        },
+        "zIndex": "1",
+        "text": "",
+        "opacity": "1"
+      },
+      {
+        "tag": "div",
+        "cls": "js-lottie js-lottie--blue sp-hide",
+        "position": "fixed",
+        "rect": {
+          "top": 0,
+          "left": 0,
+          "width": 1440,
+          "height": 900
+        },
+        "zIndex": "1",
+        "text": "",
+        "opacity": "1"
+      },
+      {
+        "tag": "header",
+        "cls": "l-header js-load-in",
+        "position": "fixed",
+        "rect": {
+          "top": 26,
+          "left": 0,
+          "width": 1440,
+          "height": 72
+        },
+        "zIndex": "100",
+        "text": "ホーム 体験する 代表メッセージ 社員インタビュー ENTRY",
+        "opacity": "1"
+      }
+    ]
+  },
+  "nav": {
+    "tag": "header",
+    "cls": "l-header js-load-in",
+    "height": 72,
+    "top": 26,
+    "position": "fixed",
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "backdropFilter": "none",
+    "borderBottom": "0px rgb(95, 103, 124)",
+    "paddingBlock": "0px / 0px",
+    "transform": "none",
+    "opacity": "1",
+    "mixBlendMode": "normal",
+    "color": "rgb(95, 103, 124)"
+  },
+  "navState": {
+    "at0": {
+      "nav": {
+        "height": 72,
+        "top": 26,
+        "position": "fixed",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "backdropFilter": "none",
+        "borderBottom": "0px rgb(95, 103, 124)",
+        "paddingBlock": "0px / 0px",
+        "transform": "none",
+        "opacity": "1",
+        "color": "rgb(95, 103, 124)"
+      },
+      "fixedOrSticky": [
+        {
+          "tag": "div",
+          "cls": "js-lottie js-lottie--blue sp-hide",
+          "position": "fixed",
+          "rect": {
+            "top": 0,
+            "left": 0,
+            "width": 1440,
+            "height": 900
+          },
+          "text": "",
+          "opacity": "1"
+        },
+        {
+          "tag": "div",
+          "cls": "js-lottie js-lottie--blue sp-hide",
+          "position": "fixed",
+          "rect": {
+            "top": 0,
+            "left": 0,
+            "width": 1440,
+            "height": 900
+          },
+          "text": "",
+          "opacity": "1"
+        },
+        {
+          "tag": "header",
+          "cls": "l-header js-load-in",
+          "position": "fixed",
+          "rect": {
+            "top": 26,
+            "left": 0,
+            "width": 1440,
+            "height": 72
+          },
+          "text": "ホーム 体験する 代表メッセージ 社員インタビュー ENTRY",
+          "opacity": "1"
+        }
+      ]
+    },
+    "at2000": {
+      "nav": {
+        "height": 72,
+        "top": 26,
+        "position": "fixed",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "backdropFilter": "none",
+        "borderBottom": "0px rgb(95, 103, 124)",
+        "paddingBlock": "0px / 0px",
+        "transform": "none",
+        "opacity": "1",
+        "color": "rgb(95, 103, 124)"
+      },
+      "fixedOrSticky": [
+        {
+          "tag": "div",
+          "cls": "js-lottie js-lottie--blue sp-hide",
+          "position": "fixed",
+          "rect": {
+            "top": 0,
+            "left": 0,
+            "width": 1440,
+            "height": 900
+          },
+          "text": "",
+          "opacity": "1"
+        },
+        {
+          "tag": "div",
+          "cls": "js-lottie js-lottie--blue sp-hide",
+          "position": "fixed",
+          "rect": {
+            "top": 0,
+            "left": 0,
+            "width": 1440,
+            "height": 900
+          },
+          "text": "",
+          "opacity": "1"
+        },
+        {
+          "tag": "header",
+          "cls": "l-header js-load-in",
+          "position": "fixed",
+          "rect": {
+            "top": 26,
+            "left": 0,
+            "width": 1440,
+            "height": 72
+          },
+          "text": "ホーム 体験する 代表メッセージ 社員インタビュー ENTRY",
+          "opacity": "1"
+        }
+      ]
+    },
+    "changed": false,
+    "diff": {}
+  },
+  "shots": [
+    "tr-advanced-1440-full.jpg",
+    "tr-advanced-1440-scroll000.jpg",
+    "tr-advanced-1440-scroll025.jpg",
+    "tr-advanced-1440-scroll050.jpg",
+    "tr-advanced-1440-scroll075.jpg",
+    "tr-advanced-1440-scroll100.jpg"
+  ],
+  "fullPageShotRepresentative": true,
+  "pageErrors": []
+}

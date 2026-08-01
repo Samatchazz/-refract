@@ -1,0 +1,58 @@
+[
+  {
+    "claim": "A March 2026 Forbes article whose entire premise is that few creators earn meaningful income never quantifies that claim anywhere in its text — no percentage, sample size, survey, or year is given for the central assertion.",
+    "stance": "refutes",
+    "stance_target": "The proposition that trade-press statements about creator income concentration rest on measurable evidence",
+    "evidence_type": "expert-opinion",
+    "scope_conditions": "Forbes contributor column by Meggen Harris, published 23 March 2026, updated 25 March 2026; contributor content is explicitly labelled 'independent expert analyses', not Forbes editorial reporting; body partially truncated by a paywall interstitial",
+    "quoted_support": "More than 200 million people worldwide now identify as creators yet only a small percentage earn enough to treat it as a full-time business. Most make little to nothing.",
+    "numbers": ["200 million creators", "$100 billion", "published 23 March 2026"],
+    "entities": ["Forbes", "Meggen Harris", "SignalFire", "Influencer Marketing Hub"],
+    "time_period": "March 2026",
+    "region": "Global claims, US/Western framing",
+    "confidence": "high",
+    "source_note_id": "only-a-small-percentage-of-creators-make-real-moneyheres-who-does"
+  },
+  {
+    "claim": "The article demonstrates aggregate-vs-distribution laundering in its purest form: a market-size figure and a creator-population figure are placed adjacently, each sourced to a vendor or VC blog, with the distribution between them asserted only qualitatively.",
+    "stance": "supports",
+    "stance_target": "The methodological objection that creator-economy reporting substitutes total market size for distributional evidence",
+    "evidence_type": "statistical",
+    "scope_conditions": "The $100B+ figure links to Influencer Marketing Hub, a vendor; the 200 million creators figure links to SignalFire, a venture capital firm's blog; neither link is to a survey with a stated sample or methodology",
+    "quoted_support": "While the creator economy is now estimated to exceed $100 billion globally the number of people earning meaningful, consistent income within it is far smaller—and far more specific—than most people assume.",
+    "numbers": ["$100 billion", "200 million"],
+    "entities": ["Influencer Marketing Hub", "SignalFire", "Forbes"],
+    "time_period": "2026",
+    "region": "Global",
+    "confidence": "high",
+    "source_note_id": "only-a-small-percentage-of-creators-make-real-moneyheres-who-does"
+  },
+  {
+    "claim": "The article's OnlyFans earnings-concentration claim is sourced to a commercial OnlyFans management agency's blog rather than to any platform disclosure or independent analysis.",
+    "stance": "refutes",
+    "stance_target": "The reliability of cross-platform concentration claims repeated in mainstream business press",
+    "evidence_type": "anecdotal",
+    "scope_conditions": "Hyperlink text points to infloww.com, an OnlyFans creator-management vendor, with a nested reference to businessofapps.com statistics aggregation",
+    "quoted_support": "While billions have been paid out to creators, earnings are heavily concentrated among a small percentage of top accounts.",
+    "numbers": [],
+    "entities": ["OnlyFans", "Infloww", "Business of Apps"],
+    "time_period": "2026",
+    "region": "Global",
+    "confidence": "high",
+    "source_note_id": "only-a-small-percentage-of-creators-make-real-moneyheres-who-does"
+  },
+  {
+    "claim": "The article contains no attrition data, no survival-rate data, no income-distribution percentiles, and no time-to-first-income evidence, despite being one of the highest-ranking search results for creator earnings questions.",
+    "stance": "supports",
+    "stance_target": "The finding that high-visibility creator-economy coverage is systematically absent of the quantities researchers actually need",
+    "evidence_type": "statistical",
+    "scope_conditions": "Full text reviewed (1,455 words as fetched, including paywall interstitial); audited absence rather than a positive finding",
+    "quoted_support": "Access creates participation while structure creates income.",
+    "numbers": ["1,455 words", "0 attrition figures", "0 income percentiles"],
+    "entities": ["Forbes"],
+    "time_period": "March 2026",
+    "region": "US/Western",
+    "confidence": "high",
+    "source_note_id": "only-a-small-percentage-of-creators-make-real-moneyheres-who-does"
+  }
+]

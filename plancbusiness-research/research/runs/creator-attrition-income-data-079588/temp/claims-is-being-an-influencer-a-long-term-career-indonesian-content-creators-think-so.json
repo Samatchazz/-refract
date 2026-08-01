@@ -1,0 +1,44 @@
+[
+  {
+    "claim": "About 90% of Indonesian influencers' income comes from brand sponsorship contracts, meaning Southeast Asian creator income is structurally brand-deal dependent rather than platform-ad-revenue dependent as in the US YouTube model.",
+    "stance": "refutes",
+    "stance_target": "The transferability of US creator income models built on platform ad-revenue share and CPM to Southeast Asian creators",
+    "evidence_type": "statistical",
+    "scope_conditions": "Indonesia; Vero Southeast Asia-wide influencer study, circa 2024-2025; SELF-SELECTED VENDOR SURVEY by a PR and influencer-marketing agency, sample under 50 Indonesian influencers, full methodology not disclosed; respondents are currently active monetising influencers, so severe survivorship bias",
+    "quoted_support": "Today, as much as 90% of influencers' income comes from brand sponsorship contracts, the survey finds. In fact, 65% of respondents post sponsored content multiple times a week, while 24% post weekly.",
+    "numbers": ["90% of income from brand sponsorship", "65% post sponsored content multiple times weekly", "24% weekly", "nearly 50 Indonesian respondents"],
+    "entities": ["Vero", "Indonesia"],
+    "time_period": "circa 2024-2025",
+    "region": "Indonesia, Southeast Asia",
+    "confidence": "low",
+    "source_note_id": "is-being-an-influencer-a-long-term-career-indonesian-content-creators-think-so"
+  },
+  {
+    "claim": "Currently active Indonesian influencers rate the longevity of an influencer career at 4.10 on a five-point scale, above the Southeast Asian regional average of 4.02 -- but the sample is drawn entirely from survivors, making the optimism finding near-tautological.",
+    "stance": "refutes",
+    "stance_target": "The use of active-creator surveys as evidence about the sustainability of a creator career",
+    "evidence_type": "statistical",
+    "scope_conditions": "Indonesia subsample of under 50 within a Vero Southeast Asia-wide study; vendor survey with undisclosed sampling frame; recruited from an agency network of monetising influencers; measures belief, not outcome",
+    "quoted_support": "Among nearly 50 influencers surveyed from the archipelago, the average response was 4.10 on a five-point scale, slightly higher than the regional average of 4.02.",
+    "numbers": ["4.10/5 Indonesia", "4.02/5 SEA regional average", "n under 50 Indonesia", "regional n not stated"],
+    "entities": ["Vero", "Indonesia"],
+    "time_period": "circa 2024-2025",
+    "region": "Indonesia, Southeast Asia",
+    "confidence": "low",
+    "source_note_id": "is-being-an-influencer-a-long-term-career-indonesian-content-creators-think-so"
+  },
+  {
+    "claim": "Nearly 70% of surveyed Indonesian influencers planned to raise their sponsored-content rates in 2025 and 29% reported a lack of creative freedom in branded work -- the only located SEA creator-side data on pricing intent and job dissatisfaction.",
+    "stance": "neutral",
+    "stance_target": "Characterising the friction points Southeast Asian creators report in brand work, as a partial proxy for quit-reason evidence that does not otherwise exist for the region",
+    "evidence_type": "statistical",
+    "scope_conditions": "Vero vendor survey, Indonesia, under 50 respondents, circa 2024-2025; measures stated intent and complaint, not realised rates or exits",
+    "quoted_support": "Nearly 70% of respondents plan to increase their rates for sponsored content in 2025 ... However, 29% of the respondents said there is a lack of creative freedom when it comes to branded content.",
+    "numbers": ["~70% planning rate increases", "29% report lack of creative freedom", "storytelling 27%", "quizzes 15%"],
+    "entities": ["Vero", "Indonesia"],
+    "time_period": "2024-2025",
+    "region": "Indonesia",
+    "confidence": "low",
+    "source_note_id": "is-being-an-influencer-a-long-term-career-indonesian-content-creators-think-so"
+  }
+]

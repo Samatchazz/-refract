@@ -1,0 +1,45 @@
+---
+title: "Tag: creative-labour"
+id: "_tag-creative-labour"
+type: index
+created: 2026-07-27T17:52:33.382704+00:00
+updated: 2026-07-27T17:52:33.382704+00:00
+---
+
+# Tag: creative-labour
+
+**4** notes.
+
+- [[artists-and-other-cultural-workers]] — Artists and Other Cultural Workers — US National Endowment for the Arts, NASERC indicator series, Indicator A.7 'What Are the Earnings for Artists and Other Cultural Workers?' (report dated May 2025). Source is the US Census American Community Survey for 2015, 2019 and 2023, all figures in constant 2023 dollars, differences reported only at p<.05. This is the FRESHEST nationally-representative US administrative earnings data for creative occupations in this batch and supersedes the 2015-2019 NEA brief on recency. Crucially, unlike BLS OEWS it 'captures earnings regardless of class of worker (private or wage-salary, government, or self-employed)', so it does include independent creators — earnings are wage-salary plus NET self-employment income before deductions.
+
+THE LOAD-BEARING NUMBER FOR CREATOR-INCOME COMPARISON IS THE PART-TIME MEDIAN. Full-time employed artists had median annual earnings of $70,170 in 2023, versus $61,170 for all full-time workers (+15%) and $56,040 for non-artist cultural workers (+25%). But artists employed PART TIME (under 35 hrs/week and/or under 50 weeks/year) had a median of only $20,380 — 3.4 times lower than the full-time artist median, and statistically indistinguishable from all part-time workers ($19,330). Non-artist cultural workers part-time: $14,830. Since most people who make content do so part-time, $20,380 is the far more relevant administrative benchmark than the $70,170 that headlines usually quote. The NEA warns that part-time earnings trends should be read cautiously given variability.
+
+TREND: full-time artist median earnings rose 5 per cent between 2015 and 2023 ($66,910 to $70,170), SLOWER than the 8 per cent rise for all full-time workers ($56,860 to $61,170). Non-artist cultural workers showed no measurable net change: +10 per cent 2015-2019 ($54,370 to $59,760) then -6 per cent 2019-2023 (to $56,040). Earnings fell in 2023 for three artist occupations: dancers, producers and architects.
+
+BY OCCUPATION (2023, full-time): dancers $39,230 at the bottom to architects $99,630 at the top, with producers $77,250 second. Non-artist cultural workers span $35,200 (ushers and lobby attendants) to $81,070 (photographic process workers). By education: artists with less than high school earned $46,030 versus $38,720 for all similarly-educated full-time workers; at every college level artists out-earned non-artist cultural workers, but artists with a bachelor's degree or higher earned LESS than the general workforce with the same credential.
+
+KEY CAVEAT the NEA states first: 'Individuals reporting primary employment as an artist or other cultural worker were less likely to be working full time than are workers in general.' Occupation is self-reported PRIMARY occupation only — the ACS asks about the job with the most usual hours — so anyone whose creative work is a secondary activity is invisible in these counts. US-ONLY; does not generalize to Southeast Asia. `evergreen`
+- [[independent-artists-writers-and-performers-may-2022-oews-industry-specific-occup]] — Independent Artists, Writers, and Performers - May 2022 OEWS Industry-Specific Occupational Employment and Wage Estimates — US Bureau of Labor Statistics, Occupational Employment and Wage Statistics (OEWS), May 2022 national industry-specific estimates for NAICS 711500 'Independent Artists, Writers, and Performers'. This is the administrative payroll benchmark for the creator-adjacent occupation.
+
+Headline: All Occupations in NAICS 711500, employment 61,710 (employment RSE 0.1%), median hourly wage $24.58, mean hourly wage $35.75, annual mean wage $74,360 (mean-wage RSE 17.1%). Mean hourly is 1.45x median hourly — right-skewed. Within-industry detail: Arts, Design, Entertainment, Sports and Media occupations 28,490 workers (46.17% of the industry), median $29.33/hr, mean $42.52/hr, annual mean $88,440. Artists and Related Workers 6,600, median $24.19/hr. Craft Artists 1,360, median $17.00/hr, annual mean $37,070. Fine Artists 3,670, median $24.53/hr. Special Effects Artists and Animators 800, median $39.82/hr. Entertainers and Performers 10,280, median $33.65/hr, annual mean $107,160. Disc Jockeys (except radio) 1,740, median $23.70/hr. Producers and Directors median $47.69/hr, annual mean $116,290.
+
+CRITICAL METHODOLOGICAL LIMIT: OEWS is collected 'from employers', so it counts wage-and-salary jobs only and structurally EXCLUDES the self-employed — who are the majority of this occupation (NEA/ACS puts self-employment at 34-57% across artist occupations, and ACS-based Data USA counts 172,376 people in the same industry group versus BLS's 61,710). The BLS figure therefore describes the small payrolled minority and cannot be read as the income of independent creators. Many detail rows are suppressed entirely for small cells. US-ONLY, May 2022 reference period. `evergreen`
+- [[independent-artists-writers-and-performers-data-usa]] — Independent artists, writers, and performers | Data USA — Data USA profile for NAICS industry group 'Independent artists, writers, and performers', built on US Census ACS PUMS (2024 reference year) plus BLS projections. Third-party visualisation layer over federal microdata — cite the underlying ACS, not this page, where possible.
+
+Key measured values: workforce 172,376 (2024); average salary $64,887 vs national average $69,878; average male $72,768 vs average female $54,775 (men earn 1.33x); average employee age 43.3; 43.8% women / 56.2% men; 79.6% hold a bachelor's, graduate degree or some college. Full-time employees work 44.5 hrs/week for an average $85,559; part-time employees work 19.3 hrs for an average $31,594 — a 2.7x gap that shows how much of the industry's headline average is carried by full-timers.
+
+THE LOAD-BEARING NUMBER IS THE WAGE GINI: 0.582 for independent artists, writers and performers versus 0.474 for the US national average — i.e. earnings inequality inside this creator-adjacent occupation is materially higher than in the economy as a whole. This is the closest administrative measure of creator income concentration available from US federal data.
+
+Also: BLS-projected 10-year employment growth of -1.61% for the industry (equal to the national rate) against projected output growth of 27.2%; monthly payroll employment of only 20.1k as of Feb 2023 (up 11% year-on-year) versus the 172,376 ACS workforce count — the ~8x gap between payroll and self-identified workforce is the self-employment share and mirrors the BLS OEWS undercount. US-ONLY. `evergreen`
+- [[office-of-research-analysis]] — Office of Research & Analysis — US National Endowment for the Arts, Office of Research & Analysis (July 2022), 'Artists in the Workforce: Selected Demographic Characteristics Prior to COVID-19'. Source is the US Census Bureau American Community Survey PUMS 2015-2019, with more than 119,000 artists unweighted in the dataset — nationally representative administrative-grade sampling, the benchmark against which self-selected creator surveys should be read. US-ONLY; does not generalize to Southeast Asia.
+
+Population: 2.4 million US artists across 11 occupations, of whom writers and authors 247,570; producers and directors 171,273; photographers 190,154; musicians 216,065. 33.6% of artists self-employed vs 9.3% of the entire US labour force; photographers 56.8%, fine artists/art directors/animators 53.8%, entertainers 45.9%, musicians 45.0%, writers/authors 41.8%.
+
+EARNINGS (median, full-year full-time only, i.e. survivorship-filtered upward): all artists $58,005 vs $48,305 for the entire US labour force. By occupation: architects $83,195, producers/directors $69,605, writers and authors $60,115, designers $55,560, announcers $51,675, fine artists/art directors/animators $50,505, musicians $45,875, photographers $42,940, entertainers $41,260, actors $41,060, dancers/choreographers $36,365.
+
+THE ATTRITION-RELEVANT FIGURE IS THE FULL-TIME SHARE, not the wage. Only 59.8% of artists worked full-year/full-time (50+ weeks, 35+ hrs) vs 66.0% of all US workers; actors 23.5%, musicians 32.6%, dancers/choreographers 36.8%, entertainers 37.5%, photographers 46.5%. Because the median-earnings table conditions on full-year/full-time, the $58,005 figure describes the surviving 60% and omits the other 40% entirely — the same survivorship trap that inflates creator-income surveys.
+
+Gender/race gaps: women artists earn $0.80 per male dollar (identical to the whole labour force); photographers $0.77, entertainers $0.65. Non-white/Hispanic artists earn $0.94 per white dollar (vs $0.72 economy-wide), but actors $0.78 and producers/directors and musicians $0.84. 64.4% of artists hold a bachelor's degree or higher vs 37.3% of the US labour force. Median artist age 40 vs 42. `evergreen`
+
+---
+*Auto-generated by hyperresearch. Do not edit manually.*

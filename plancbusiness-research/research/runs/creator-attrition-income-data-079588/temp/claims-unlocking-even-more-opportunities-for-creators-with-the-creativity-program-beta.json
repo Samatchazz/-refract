@@ -1,0 +1,30 @@
+[
+  {
+    "claim": "TikTok's own newsroom post pins the exact effective-date sequence of its monetization overhaul: Creativity Program Beta launched invite-only 20 February 2023 (US, France, Brazil); opened to all eligible US creators (10,000+ followers, 100,000+ authentic video views in 30 days) on 3 May 2023; and fully replaced the Creator Fund in the US, UK, France and Germany on 16 December 2023.",
+    "stance": "supports",
+    "stance_target": "platform monetization-scheme changes have precisely datable effective dates that break year-over-year income comparability",
+    "evidence_type": "empirical",
+    "scope_conditions": "Platform-disclosed, dated by TikTok itself via in-place update notices on the same post; the four named markets (US, UK, France, Germany) are the only ones confirmed by this source for the 16 Dec 2023 full-replacement date -- rollout timing for other countries, including Southeast Asian markets, is not disclosed here",
+    "quoted_support": "[UPDATE - November 6, 2023]: Starting December 16, 2023, the Creativity Program will fully replace the Creator Fund in the US, UK, France, and Germany. ... [UPDATE - May 3, 2023]: Beginning May 3, 2023, US creators with at least 10K followers and 100K authentic video views in the last 30 days are eligible to join the Creativity Program Beta.",
+    "numbers": ["20 February 2023 (launch)", "3 May 2023 (US general eligibility)", "16 December 2023 (full Creator Fund replacement)", "10,000 followers", "100,000 video views / 30 days"],
+    "entities": ["TikTok", "TikTok Creator Fund", "TikTok Creativity Program"],
+    "time_period": "February 2023 - December 2023",
+    "region": "US, UK, France, Germany (confirmed); Brazil (beta only)",
+    "confidence": "high",
+    "source_note_id": "unlocking-even-more-opportunities-for-creators-with-the-creativity-program-beta"
+  },
+  {
+    "claim": "The Creativity Program introduced a structural eligibility change beyond just payout rate: to earn, creators must publish original content longer than one minute, whereas the legacy Creator Fund paid on videos of any length -- meaning the payout-rate shift is confounded with a content-format eligibility shift, not a clean like-for-like rate change.",
+    "stance": "supports",
+    "stance_target": "the pre/post monetization-program cohorts are not directly comparable even setting aside the RPM change, because the underlying content eligible for monetization changed too",
+    "evidence_type": "empirical",
+    "scope_conditions": "US-focused announcement; does not specify whether this content-length rule applied identically upon the 16 Dec 2023 full replacement in UK/France/Germany",
+    "quoted_support": "To start earning, creators must create and publish high-quality, original content longer than one minute.",
+    "numbers": ["1 minute minimum video length"],
+    "entities": ["TikTok", "TikTok Creativity Program"],
+    "time_period": "2023",
+    "region": "US (confirmed); other markets unspecified",
+    "confidence": "high",
+    "source_note_id": "unlocking-even-more-opportunities-for-creators-with-the-creativity-program-beta"
+  }
+]

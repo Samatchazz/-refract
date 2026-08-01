@@ -1,0 +1,30 @@
+[
+  {
+    "claim": "A 2025 Indonesian journal article (Jurnal Ilmiah Edunomika) claiming a quantitative n=60 survey of Indonesian TikTok/YouTube creator income across 5 cities exhibits strong indicators of fabrication: its entire 24-item reference list consists of unrelated STEM papers (photocatalysis, laser optics, orthopedics), two in-text comparison citations central to its discussion do not appear in its own reference list, and its two named case-study creators could not be located on the named platforms under the exact handles given.",
+    "stance": "refutes",
+    "stance_target": "reliability of Southeast Asian academic-journal survey literature on creator income as a category",
+    "evidence_type": "empirical",
+    "scope_conditions": "Indonesia, 2025, single low-tier journal article; finding is about evidence-quality/provenance, not about the underlying creator population",
+    "quoted_support": "Sampel penelitian terdiri dari 60 orang kreator yang dipilih menggunakan teknik purposive sampling dengan kriteria memiliki minimal 1.000 pengikut dan telah melakukan monetisasi konten selama setidaknya enam bulan. [reference list contains works exclusively on topics such as] 'CuWO4 as a novel Z-scheme partner to construct TiO2 based stable and efficient heterojunction for photocatalytic hydrogen generation' and 'Percutaneous screw fixation of the pubic symphysis versus plate osteosynthesis: A biomechanical study' -- none relate to social media, creators, or digital economy",
+    "numbers": ["n=60 claimed sample", "24 references, 0 topically relevant", "2 in-text citations (Nugroho 2023, Rahmawati 2022) absent from reference list"],
+    "entities": ["Jurnal Ilmiah Edunomika", "STIE Wijaya Mulya Surakarta", "Indonesia", "TikTok", "YouTube"],
+    "time_period": "fielding claimed January-February 2025; published August 2025",
+    "region": "Indonesia",
+    "confidence": "high",
+    "source_note_id": "pengaruh-ekonomi-kreator-digital-terhadap-pendapatan-generasi-z-di-perkotaan-stu"
+  },
+  {
+    "claim": "The unverified/likely-fabricated article's descriptive-statistics table nonetheless illustrates the shape of claim commonly made about Indonesian creators: 65% of a claimed sample had monetized for over 12 months, and 48.3% reported monthly income of 1-5 million IDR versus 30% above 5 million IDR and 21.7% below 1 million IDR -- but these specific figures must not be cited as verified data given the source's provenance problems.",
+    "stance": "neutral",
+    "stance_target": "income distribution across Indonesian creators (flagged unreliable)",
+    "evidence_type": "statistical",
+    "scope_conditions": "Indonesia, claimed n=60, unverifiable -- DO NOT USE AS RELIABLE DATA",
+    "quoted_support": "Pendapatan Bulanan (dalam juta) <1 juta 13 21,7 ... 1–5 juta 29 48,3 ... >5 juta 18 30,0",
+    "numbers": ["21.7% <1M IDR/month", "48.3% 1-5M IDR/month", "30% >5M IDR/month", "65% monetizing >12 months"],
+    "entities": ["Indonesia", "TikTok", "YouTube"],
+    "time_period": "2025 (claimed)",
+    "region": "Indonesia",
+    "confidence": "low",
+    "source_note_id": "pengaruh-ekonomi-kreator-digital-terhadap-pendapatan-generasi-z-di-perkotaan-stu"
+  }
+]

@@ -1,0 +1,194 @@
+{
+  "analyst_id": "a",
+  "loci": [
+    {
+      "name": "living-wage-share-magnitude",
+      "flavor": "dialectical",
+      "one_line": "What is the actual share of creators earning a living wage — the survey-based 4-12% figures, or the telemetry-based figures that sit two to three orders of magnitude lower — and can the gap be reconciled by denominator alone?",
+      "rationale": "The contradiction graph's living-wage-share cluster (decision_relevance: high, scope_overlap: PARTIALLY-genuine-after-accounting-for-denominator) shows Side A (Linktree 12%, NeoReach 43%, Goldman ~4%, TikTok-Indonesia 63%) versus Side B (Regner 0.18% of all registered Patreon campaigns / 1% of active campaigns; Rieder et al. 0.043% of YouTube channels above US median wage; Twitch leak rank-8,000 below minimum wage; UK IPO ~1.6% of UK musicians). Hua et al. 2022 measured sampling-frame inflation directly at ~10x for the same quantity, but the observed gap here is 100-1000x, which the graph itself says is too large for denominator choice alone to explain. This is THE central number for Sub-Q4 and needs a depth pass that (a) builds one clean table normalizing every figure to 'share of X earning above Y, X and Y stated', (b) chases the two Cloudflare-blocked primary sources most load-bearing to Side B — the WSJ analysis of the Twitch leak (only traceable origin for the widely-quoted $120/$28/0.06% percentile figures) and Rieder et al.'s full 'Making a Living in the Creator Economy' paper — and (c) checks whether any additional platform (Patreon official transparency report, Substack's public leaderboard-adjacent disclosures, Kick, YouTube's newer disclosures) has published a comparable living-wage-share figure since 2021 that would update Regner's 2013-2015 window.",
+      "corpus_evidence": [
+        "pdf-linktree-creatorreport-2022-02f3aa05a27be6fecb3537b13d5ec9depdf",
+        "vol0123456789-3",
+        "httpsdoiorg10117720563051231180628",
+        "many-top-twitch-streamers-dont-make-minimum-wage-and-3-new-takeaways-from-the-tw",
+        "music-creators-earnings-in"
+      ],
+      "opposing_positions": [
+        {"position": "A meaningful minority (4-12%, one outlier at 43%) of self-identified/full-time creators clear a living-wage threshold, per fielded surveys.", "sources": ["pdf-linktree-creatorreport-2022-02f3aa05a27be6fecb3537b13d5ec9depdf", "creator-earnings-breakdown-the-creator-economy-today", "the-creator-economy-could-approach-half-a-trillion-dollars-by-2027-goldman-sachs"]},
+        {"position": "Complete transaction records and platform-disclosed payout data put the living-wage share at a fraction of one percent — two to three orders of magnitude below the survey figures.", "sources": ["vol0123456789-3", "httpsdoiorg10117720563051231180628", "many-top-twitch-streamers-dont-make-minimum-wage-and-3-new-takeaways-from-the-tw", "music-creators-earnings-in"]}
+      ],
+      "suggested_starting_urls": [
+        "https://link.springer.com/content/pdf/10.1007/s10824-020-09381-5.pdf",
+        "https://mau.diva-portal.org/smash/get/diva2:1789010/FULLTEXT01.pdf"
+      ],
+      "suggested_searches": [
+        "Rieder \"Making a Living\" creator economy YouTube full text OR repository mirror",
+        "Wall Street Journal Twitch streamer earnings leak 2021 percentile analysis",
+        "Patreon official creator earnings transparency report 2023 2024 2025",
+        "site:sec.gov OR site:companieshouse.gov.uk creator platform payout disclosure filing"
+      ]
+    },
+    {
+      "name": "quit-driver-money-vs-motivation",
+      "flavor": "dialectical",
+      "one_line": "When creators actually stop (not just report burnout while still active), does the evidence show income insufficiency or loss of intrinsic motivation/structural affiliation as the operative driver — and does any dataset observe reasons among people who already left?",
+      "rationale": "The contradiction graph flags this as 'the sharpest [fight] in the corpus': Side A (Censuswide/Billion Dollar Boy n=1,000, Ivors Academy/MU n=311, Creators 4 Mental Health n=542) reports financial insecurity as the top-ranked driver, but all three instruments sample only currently-active creators reporting anticipated or hypothetical burnout drivers. Side B — the only two studies in the corpus that statistically model actual continuation/exit — finds income does NOT predict survival: Törhönen et al. 2019 (n=377, intrinsic motivation p=0.000, extrinsic/income p=0.052 non-significant), Zhao et al. 2025 (n=1,923 VTubers, Cox model, affiliation status HR 1.980 p=0.003, hours streamed NOT significant), and Wollborn et al. 2023 (Twitch diff-in-diff, structural threshold effect at affiliate-vs-partner). Coverage-gaps.md independently confirms 'No exit survey of former creators was found in any batch' — this absence is itself part of the deliverable. Depth work should chase named-practitioner and forum-level accounts of actual quitting (r/NewTubers, r/Twitch, YouTube creator Discord/forum retrospectives, 'why I quit' video essays with documented channel stats) as the deep-inference-depth-sanctioned lower-authority evidence needed to at least partially observe the population neither Side A nor Side B reaches, and should search harder for any panel or cohort study that re-contacts creators after they stop.",
+      "corpus_evidence": [
+        "over-half-of-creators-face-burnout-action-urged-billion-dollar-boy",
+        "fame-and-fortune-or-just-fun",
+        "who-reaps-all-the-superchats-a-large-scale-analysis-of-income",
+        "vol0123456789"
+      ],
+      "opposing_positions": [
+        {"position": "Financial insufficiency is the dominant self-reported driver of burnout/exit intention among active creators.", "sources": ["over-half-of-creators-face-burnout-action-urged-billion-dollar-boy", "music-creators-earnings-in", "in-sweeping-study-89-of-creators-claim-to-lack-access-to-specialized-mental-heal"]},
+        {"position": "Statistical models of actual continuation find intrinsic motivation and structural affiliation status predict survival; income and hours are not significant predictors.", "sources": ["fame-and-fortune-or-just-fun", "who-reaps-all-the-superchats-a-large-scale-analysis-of-income", "vol0123456789"]}
+      ],
+      "suggested_starting_urls": [
+        "https://www.utupub.fi/bitstream/10024/161426/1/10-1108_INTR-06-2018-0270.pdf",
+        "https://arxiv.org/pdf/2503.00825"
+      ],
+      "suggested_searches": [
+        "exit survey former YouTube streamers why I quit reasons study",
+        "creator churn qualitative interviews ex-creators retrospective 2023 2024 2025",
+        "Wollborn Twitch affiliate partner threshold effect full text",
+        "r/NewTubers OR r/Twitch \"why I quit\" analytics screenshot documented"
+      ]
+    },
+    {
+      "name": "attrition-telemetry-absence-and-creatormap-verification",
+      "flavor": "convergent",
+      "one_line": "Precisely how thin is peer-reviewed platform-scale creator/channel survival telemetry, and is creatormap.io's 97,601-channel, 8.8-year-median-lifespan figure a citable measurement or an unverifiable marketing claim?",
+      "rationale": "Coverage-gaps.md states three targeted OpenAlex sweeps for platform-scale channel-survival or streamer-churn cohort telemetry 'found nothing', leaving only four real instruments (Zhao, Regner, Kässi, Houssard) behind 91 raw sources for the sub-question with the highest source count. Meanwhile the contradiction graph's attrition-rate-and-timing cluster treats creatormap.io's headline (46.1% dark, median lifespan 8.8 years) as unverified: 'a marketing-blog study whose methodology, sampling frame, author and data source require verification and which carries invented-looking precision.' This is exactly the kind of load-bearing, currently-untraceable figure the run's evidence norms require pinning down or excluding. Depth work should (a) attempt to identify creatormap.io's operator, data-collection method, and whether the 97,601-channel dataset is independently checkable (archive.org snapshots, any academic citation of it), (b) run additional targeted academic searches beyond the three already attempted (different keyword combinations: 'channel abandonment', 'creator churn', 'streamer survival analysis', 'social media account half-life') to confirm the absence is genuine rather than a search-strategy artifact, and (c) if the absence is confirmed, write the precise audited-absence finding with exactly what was searched.",
+      "corpus_evidence": [
+        "who-reaps-all-the-superchats-a-large-scale-analysis-of-income",
+        "vol0123456789-3",
+        "how-many-online-workers-are-there-in-the-open-research-europe",
+        "youtube-channel-lifespan-half-life-study-of-97601-creators-creatormap-creatormap",
+        "youtube-channel-survival-rates-a-7-year-creator-study-creatormap"
+      ],
+      "suggested_starting_urls": [
+        "https://creatormap.io/youtube-channel-lifespan-study",
+        "https://openalex.org/works?search=YouTube%20channel%20survival%20analysis%20churn"
+      ],
+      "suggested_searches": [
+        "creatormap.io about methodology data source who runs it",
+        "\"channel abandonment\" OR \"account half-life\" YouTube creator churn peer-reviewed",
+        "streamer survival analysis cohort study platform-scale 2023 2024 2025 2026",
+        "OpenAlex arXiv \"creator churn\" \"content creator\" cohort telemetry"
+      ]
+    },
+    {
+      "name": "time-to-income-reframing",
+      "flavor": "dialectical",
+      "one_line": "Does time-since-starting predict reaching meaningful (not just eligible) income, or does the 36-million-channel census evidence that output volume — not tenure — is the operative variable, and what does Rieder et al.'s full paper say about the actual time-to-income distribution?",
+      "rationale": "The contradiction graph's time-predicts-success cluster pits advice-column claims (3-18 months to monetization eligibility, no sample/method/date) against Rieder et al. 2020's 36,336,861-channel census, which finds 'the average number of days active is surprisingly constant between tiers' while elite channels post 940 videos versus 294 for the tier below, and vidIQ's finding that 89% of channels at the 1,000-1,100 subscriber threshold have under 5,000 monthly views (ad revenue negligible regardless of eligibility). The graph explicitly frames this as needing 'a reframing plus an audited absence, not a number of months' — exactly the kind of precise-absence finding this run rewards. Depth work should chase the still-blocked Rieder et al. full paper (in the escalation queue) specifically for any time-to-first-payout distribution data it may contain beyond the days-active finding already extracted, check whether TikTok's Creator Rewards Program or Twitch's own documentation discloses a typical elapsed-time-to-first-payout statistic (as distinct from eligibility-gate mechanics, which are already well covered), and verify whether any platform other than YouTube has published time-to-monetization telemetry (Twitch Affiliate-to-Partner transition time, TikTok Creator Fund/Rewards approval-to-payout lag).",
+      "corpus_evidence": [
+        "mapping-youtube-a-quantitative-exploration-of-a-platformed-media-system",
+        "how-much-does-youtube-pay-for-1000-subscribers-vidiq",
+        "how-long-does-it-take-to-get-monetized-on-youtube-lenostube"
+      ],
+      "opposing_positions": [
+        {"position": "Monetization takes a knowable, tenure-based amount of time (3-18 months typical) to reach eligibility thresholds.", "sources": ["how-long-does-it-take-to-get-monetized-on-youtube-lenostube", "when-do-you-start-making-money-on-youtube-whop"]},
+        {"position": "A 36-million-channel census finds tenure does not distinguish successful from unsuccessful channels — output volume does — and reaching the eligibility gate does not correspond to reaching meaningful income.", "sources": ["mapping-youtube-a-quantitative-exploration-of-a-platformed-media-system", "how-much-does-youtube-pay-for-1000-subscribers-vidiq"]}
+      ],
+      "suggested_starting_urls": [
+        "https://firstmonday.org/ojs/index.php/fm/article/download/10667/9575?inline=1",
+        "https://newsroom.tiktok.com/en-us/creator-rewards-program"
+      ],
+      "suggested_searches": [
+        "Rieder \"Making a Living in the Creator Economy\" full text repository mirror sci-hub-free",
+        "TikTok Creator Rewards Program time to first payout eligibility disclosed",
+        "Twitch affiliate to partner transition typical time distribution data",
+        "time to first payment new creator cohort study output volume versus tenure"
+      ]
+    },
+    {
+      "name": "sea-figure-provenance-and-breadth",
+      "flavor": "dialectical",
+      "one_line": "Is the Indonesian '8 million creators, 63% above minimum wage' figure recoverable as a documented primary-source statistic rather than a secondhand press paraphrase of platform testimony, and does comparably specific creator-income/attrition data exist for the Philippines, Vietnam, Thailand, or Malaysia beyond the gig-work literature already covered?",
+      "rationale": "The contradiction graph's indonesia-63-percent cluster is high decision_relevance and already shows the figure originates in TikTok Indonesia's own DPR Komisi I testimony (15 Jul 2025), not an official national statistic, with BPS confirmed to publish no content-creator count until the 2026 Economic Census. But the escalation queue lists the BPS press release and DPR RI hearing record as still Cloudflare/Akamai-blocked and unread as primary text — depth investigation should force that recovery since it is the single highest-value SEA datapoint in the corpus. Separately, coverage-gaps.md and the prompt decomposition both require ASEAN-wide coverage ('must not be collapsed to a single country'), yet the redundancy audit's SEA instrument list (TikTok-DPR, ADBI, Vero, PIDS, World Bank/SAKERNAS) is Indonesia- and gig-work-heavy; the only Philippines-specific lead (PIDS) is itself Cloudflare-blocked. Depth work should chase the PSA Philippines paper, and search national statistics offices (NSO Thailand, GSO Vietnam, DOSM Malaysia) specifically for content-creator or influencer-economy figures, distinct from the ride-hailing/gig-work data the corpus already has in depth.",
+      "corpus_evidence": [
+        "menekraf-8-juta-orang-berprofesi-konten-kreatof-63-persen-gajinya-di-atas-umr-ku",
+        "tiktok-buka-data-63-persen-kreator-di-indonesia-berpenghasilan-tinggi-merdekacom",
+        "bps-dan-kemenekraf-bersinergi-kreator-lokal-dilibatkan-dalam-sosialisasi-se2026",
+        "ada-8-juta-kreator-konten-tapi-baru-14-persen-yang-cuan"
+      ],
+      "opposing_positions": [
+        {"position": "The 8 million / 63%-above-UMR figure is an official Indonesian national creative-economy statistic.", "sources": ["menekraf-8-juta-orang-berprofesi-konten-kreatof-63-persen-gajinya-di-atas-umr-ku", "babak-baru-profesi-kreator-konten-di-indonesia"]},
+        {"position": "It is TikTok's own platform-specific disclosure to a parliamentary hearing, repackaged in press coverage as a national figure, and no Indonesian government body has ever published a methodologically-disclosed content-creator count.", "sources": ["tiktok-buka-data-63-persen-kreator-di-indonesia-berpenghasilan-tinggi-merdekacom", "pendapatan-63-persen-konten-kreator-di-tiktok-di-atas-umr-tempoco", "bps-dan-kemenekraf-bersinergi-kreator-lokal-dilibatkan-dalam-sosialisasi-se2026"]}
+      ],
+      "suggested_starting_urls": [
+        "https://www.dpr.go.id/berita",
+        "https://www.bps.go.id/id/publication",
+        "https://psa.gov.ph"
+      ],
+      "suggested_searches": [
+        "DPR Komisi I RDP TikTok Indonesia 15 Juli 2025 risalah rapat transkrip",
+        "BPS siaran pers kreator konten SE2026 sensus ekonomi",
+        "PSA Philippines content creator influencer income survey statistics",
+        "GSO Vietnam OR NSO Thailand OR DOSM Malaysia content creator digital economy labour statistics"
+      ]
+    },
+    {
+      "name": "onlyfans-income-provenance",
+      "flavor": "convergent",
+      "one_line": "Can the widely-circulated OnlyFans median/mean income and percentile-share figures be traced to any auditable primary source, and what does Fenix International Ltd's UK Companies House filing actually disclose about aggregate creator payouts?",
+      "rationale": "OnlyFans is a named required entity in the prompt decomposition (subscription-content platforms) but the corpus's only two dedicated income-distribution notes are both audited as unsourced vendor/SEO content: SirenCY (a commercial OnlyFans management agency with direct conflict of interest) states median $145/month against onlyfansstatistics.com's ~$180/YEAR for the same platform — a roughly 12x discrepancy — and both cite no named study, sample, or method. However, onlyfansstatistics.com's note flags one genuine primary-source lead not yet chased: the $5.80bn FY2024 aggregate creator payout traces to Fenix International Ltd's audited UK Companies House filing (gross fan payments $7.22bn, ~80% payout rate), and a directly-measured June 2026 scrape of n=100,200 public creator profiles for like-concentration (top 1% hold 35.5% of likes) exists but measures engagement, not dollars. Depth investigation should pull the actual Companies House filing (a genuine administrative record, highest evidence tier per this run's norms) for any disclosed creator count or distribution detail beyond the aggregate, and search academic/journalistic sources for any independent scrape-based OnlyFans income-distribution study analogous to Regner's Patreon work or the Twitch leak.",
+      "corpus_evidence": [
+        "average-onlyfans-income-2026-real-numbers-sirency",
+        "onlyfans-creator-income-distribution-report-2026",
+        "only-a-small-percentage-of-creators-make-real-moneyheres-who-does"
+      ],
+      "suggested_starting_urls": [
+        "https://find-and-update.company-information.service.gov.uk/company/11729909",
+        "https://onlyfansstatistics.com/earnings"
+      ],
+      "suggested_searches": [
+        "Fenix International Ltd Companies House annual accounts creator payout 2024",
+        "OnlyFans creator income distribution academic study scrape Gini",
+        "OnlyFans median income independent journalism investigation data",
+        "OnlyFans registered creators count active creators discrepancy 4.24 million 4.63 million"
+      ]
+    },
+    {
+      "name": "bls-nea-administrative-benchmark-for-creator-occupation",
+      "flavor": "convergent",
+      "one_line": "How well does US administrative labor data (BLS OEWS NAICS 711500, Census ACS via the NEA's NASERC indicators) serve as a ground-truth income benchmark for 'content creator' as an occupation, given that no BLS/Census occupational code directly measures social-media content creation, and is there a more recent or more precise administrative proxy?",
+      "rationale": "The corpus contains three ground_truth-tier US administrative-data notes (BLS OEWS May 2022 NAICS 711500: median $24.58/hr, mean $35.75/hr, n=61,710 workers; Data USA/Census ACS PUMS 2024: n=172,376, average $64,887, full-time $85,559 vs part-time $31,594; NEA/NASERC May 2025 report using Census ACS 2015/2019/2023: full-time artist median $70,170 vs part-time $20,380, a 3.4x gap) that are NOT surfaced anywhere in the contradiction graph or consensus claims, meaning neither this analyst's sibling nor the earlier pipeline stages have flagged them as a distinct locus. These are the freshest and highest-tier administrative earnings data in the whole corpus, but NAICS 711500 'Independent Artists, Writers and Performers' is a proxy occupation, not a content-creator-specific code, and the NEA note itself flags that occupation is self-reported PRIMARY employment only, which likely misses most part-time/side-income creators entirely (the population the prompt decomposition explicitly requires covering). Depth work should determine precisely what this proxy over- or under-counts relative to platform-measured creator populations, check whether the 2028 SOC revision or any O*NET update has added a content-creator/influencer-specific code, and see whether the $20,380 part-time-artist median or the $24.58/hr median hourly figure can be cross-walked against any platform-measured per-creator income figure already in the corpus (e.g., Rieder's per-subscriber-tier averages) to produce one directly comparable administrative-vs-telemetry data point.",
+      "corpus_evidence": [
+        "independent-artists-writers-and-performers-may-2022-oews-industry-specific-occup",
+        "independent-artists-writers-and-performers-data-usa",
+        "artists-and-other-cultural-workers"
+      ],
+      "suggested_starting_urls": [
+        "https://www.bls.gov/oes/2022/may/naics4_711500.htm",
+        "https://www.arts.gov/sites/default/files/a7-report-202505.pdf",
+        "https://www.onetonline.org/find/quick?s=social+media"
+      ],
+      "suggested_searches": [
+        "BLS SOC 2028 revision social media influencer content creator occupation code",
+        "O*NET \"social media\" content creator occupation profile wage data",
+        "Census ACS PUMS self-employed digital content creator income microdata",
+        "IRS self-employment 1099 income creator economy platform payment statistics"
+      ]
+    }
+  ],
+  "skip_loci": [
+    {
+      "slug": "creator-population-denominator",
+      "reason": "High decision_relevance in the contradiction graph, but the evidence_quality_delta already fully resolves it as definitional/genealogical rather than a measurement dispute needing more data: Goldman's figure is traced backwards through Zippia to a SignalFire VC blog post with no re-measurement possible, and Linktree's 200M is an admitted desk exercise. Further source-gathering will not produce a better denominator; the finding is the audited genealogy itself, which the corpus already has. Folded partial value into the bls-nea-administrative-benchmark locus, which chases a genuinely more rigorous denominator candidate instead."
+    },
+    {
+      "slug": "inequality-trend-worsening-vs-stable",
+      "reason": "decision_relevance is medium, not high, and the graph's own evidence_quality_delta concludes the apparent conflict is 'largely scoped differently rather than contradictory' (within-elite churn vs whole-population dispersion can both be true simultaneously) — already resolved, not a genuine open fight requiring depth investigation."
+    },
+    {
+      "slug": "youtube-payout-denominator-laundering",
+      "reason": "decision_relevance is medium, and the graph's evidence_quality_delta calls Side B 'an analytical correction rather than a competing measurement, and it is correct' with all three major platforms already confirmed to withhold the needed denominator. This is a stable finding to state in the draft, not a further-investigation target — no plausible additional source would unlock the missing per-creator distribution platforms have chosen not to disclose."
+    },
+    {
+      "slug": "twitch-payout-leak-denominator-reconciliation",
+      "reason": "The redundancy audit already establishes that the leak's denominator is quoted six incompatible ways and the observation window five incompatible ways, concluding 'pooling them produces nonsense' — this is an audited methodological instability to state, not a number to resolve with more sources, since the underlying leaked dataset itself is internally inconsistent per Dexerto's own analysis."
+    }
+  ]
+}

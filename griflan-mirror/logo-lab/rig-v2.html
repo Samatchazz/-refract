@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<title>Plan C — โลโก้เวกเตอร์ rig v2</title>
+<style>
+  body{background:#0f1613;color:#f2efde;font:13px/1.7 sans-serif;padding:22px;margin:0}
+  h1{color:#f0b32e;font-size:16px;margin-bottom:2px}
+  p.sub{color:rgba(242,239,222,.5);font-size:12px;margin-bottom:16px}
+  #stage{width:430px;height:430px;background:#181616;border-radius:14px;cursor:pointer}
+  #stage svg{width:100%;height:100%;display:block}
+  .btns{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0;max-width:560px}
+  button{background:#f0b32e;border:0;color:#181616;font-weight:700;padding:6px 12px;border-radius:6px;cursor:pointer;font-size:12px}
+  button.alt{background:transparent;border:1px solid rgba(242,239,222,.3);color:#f2efde}
+  pre{background:#00000055;padding:10px;border-radius:6px;font-size:11.5px;white-space:pre-wrap;max-width:620px;color:#9fd}
+</style>
+</head>
+<body>
+<h1>โลโก้เวกเตอร์ rig — v2 (ปากเป็นรูจริง)</h1>
+<p class="sub">ใช้ fill-rule evenodd แยกกลุ่ม → ปาก/รู เป็นรูทะลุจริง ไม่ใช่ทาสีพื้นทับ</p>
+
+<div id="stage"></div>
+
+<div class="btns">
+  <button onclick="RIG.click()">คลิก (สะบัดหาง)</button>
+  <button class="alt" onclick="RIG.coat('#f2efde')">ครีม</button>
+  <button class="alt" onclick="RIG.coat('#f0b32e')">ทอง</button>
+  <button class="alt" onclick="RIG.coat('#FF3831')">แดง</button>
+  <button class="alt" onclick="RIG.bg('#f2efde')">พื้นสว่าง</button>
+  <button class="alt" onclick="RIG.bg('#181616')">พื้นเข้ม</button>
+  <button class="alt" onclick="RIG.parts()">โชว์ชิ้นส่วน</button>
+</div>
+<pre id="log">โหลด…</pre>
+
+<script>
+const NS='http://www.w3.org/2000/svg';
+const HEAD_PIVOT={x:130,y:400};
+const TAIL_PIVOT={x:430,y:340};
+const RIG=window.RIG={};
+
+fetch('_frame1_fine.json').then(r=>r.json()).then(subs=>{
+  const svg=document.createElementNS(NS,'svg');
+  svg.setAttribute('viewBox','0 0 624 624');
+  document.getElementById('stage').appendChild(svg);
+
+  // ---- วัดว่า subpath ไหนอยู่ในไหน (ใช้ isPointInFill ของจริง) ----
+  const probe=document.createElementNS(NS,'svg');
+  probe.setAttribute('viewBox','0 0 624 624');
+  probe.style.cssText='position:absolute;width:624px;height:624px;opacity:0;pointer-events:none;left:-9999px';
+  document.body.appendChild(probe);
+  const els=subs.map(d=>{const p=document.createElementNS(NS,'path');
+    p.setAttribute('d',d); probe.appendChild(p); return p;});
+  const box=els.map(p=>p.getBBox());
+  const area=box.map(b=>b.width*b.height);
+  const pt=(i)=>{const b=box[i];const p=probe.createSVGPoint?probe.createSVGPoint():null;
+    // หาจุดที่อยู่ในเนื้อของ subpath i จริงๆ
+    for(let k=0;k<40;k++){
+      const x=b.x+b.width*(0.5+0.35*Math.sin(k*1.7)), y=b.y+b.height*(0.5+0.35*Math.cos(k*2.3));
+      const q=probe.createSVGPoint(); q.x=x; q.y=y;
+      if(els[i].isPointInFill(q)) return q;
+    }
+    const q=probe.createSVGPoint(); q.x=b.x+b.width/2; q.y=b.y+b.height/2; return q;
+  };
+  const inside=subs.map(()=>null);
+  for(let i=0;i<subs.length;i++){
+    const q=pt(i);
+    for(let j=0;j<subs.length;j++){
+      if(i===j) continue;
+      if(area[j]>area[i] && els[j].isPointInFill(q)){
+        if(inside[i]===null || area[j]<area[inside[i]]) inside[i]=j;
+      }
+    }
+  }
+  probe.remove();
+
+  // ---- รวมเป็น "ชิ้น": ตัวนอก + รูของมัน ----
+  const shapes=[];
+  subs.forEach((d,i)=>{ if(inside[i]===null) shapes.push({root:i, holes:[]}); });
+  subs.forEach((d,i)=>{ if(inside[i]!==null){
+    const s=shapes.find(s=>s.root===inside[i]);
+    if(s) s.holes.push(i); else shapes.push({root:i,holes:[]});   // รูซ้อนรู
+  }});
+  shapes.forEach(s=>{ s.bbox=box[s.root]; s.d=[s.root,...s.holes].map(i=>subs[i]).join(' '); });
+
+  // ---- แบ่งเป็นกลุ่ม rig ตามตำแหน่ง ----
+  const byX=[...shapes].sort((a,b)=>a.bbox.x-b.bbox.x);
+  const headShape=byX[0];                                  // ซ้ายสุด = หัว+P
+  const tailShape=shapes.reduce((m,s)=>s.bbox.x>m.bbox.x?s:m, shapes[0]);  // ขวาสุด = หาง C
+  const bodyShapes=shapes.filter(s=>s!==headShape && s!==tailShape);
+
+  let coat='#f2efde';
+  const mkPath=(d)=>{const p=document.createElementNS(NS,'path');
+    p.setAttribute('d',d); p.setAttribute('fill',coat); p.setAttribute('fill-rule','evenodd'); return p;};
+  const g=(id)=>{const e=document.createElementNS(NS,'g'); e.dataset.id=id; return e;};
+
+  const gBody=g('body'); bodyShapes.forEach(s=>gBody.appendChild(mkPath(s.d)));
+  const gHead=g('head'); gHead.appendChild(mkPath(headShape.d));
+  const gTail=g('tail'); gTail.appendChild(mkPath(tailShape.d));
+  svg.appendChild(gBody); svg.appendChild(gHead); svg.appendChild(gTail);
+
+  // ---- spring ----
+  const sp=(k,c)=>({p:0,v:0,t:0,k,c});
+  const step=(s,dt)=>{const a=-s.k*(s.p-s.t)-s.c*s.v; s.v+=a*dt; s.p+=s.v*dt;};
+  const tail=sp(90,11), headR=sp(120,14), headY=sp(150,15);
+  function loop(){
+    const dt=1/60; step(tail,dt); step(headR,dt); step(headY,dt);
+    gTail.setAttribute('transform',`rotate(${tail.p.toFixed(2)} ${TAIL_PIVOT.x} ${TAIL_PIVOT.y})`);
+    gHead.setAttribute('transform',
+      `rotate(${headR.p.toFixed(2)} ${HEAD_PIVOT.x} ${HEAD_PIVOT.y}) translate(0 ${headY.p.toFixed(2)})`);
+    requestAnimationFrame(loop);
+  }
+  requestAnimationFrame(loop);
+
+  const stage=document.getElementById('stage');
+  stage.addEventListener('mousemove',e=>{const r=stage.getBoundingClientRect();
+    const mx=(e.clientX-r.left)/r.width-0.5, my=(e.clientY-r.top)/r.height-0.5;
+    headR.t=mx*9; headY.t=my*12; tail.t=mx*7;});
+  stage.addEventListener('mouseleave',()=>{headR.t=0;headY.t=0;tail.t=0;});
+  stage.addEventListener('click',()=>RIG.click());
+
+  RIG.click=()=>{ tail.v-=260; headY.v-=90; };
+  RIG.coat=(c)=>{ coat=c; svg.querySelectorAll('path').forEach(p=>p.setAttribute('fill',c)); };
+  RIG.bg=(c)=>{ document.getElementById('stage').style.background=c; };
+  let po=false;
+  RIG.parts=()=>{ po=!po;
+    const cols=['#e6194b','#3cb44b','#ffe119','#4363d8','#f58231','#911eb4','#46f0f0','#f032e6'];
+    const ps=[...svg.querySelectorAll('path')];
+    if(po) ps.forEach((p,i)=>p.setAttribute('fill',cols[i%8])); else RIG.coat(coat); };
+  RIG._debug={shapes,inside,box};
+
+  document.getElementById('log').textContent =
+    'subpath ดิบ: '+subs.length+'  →  รวมเป็นชิ้น: '+shapes.length+'\n'+
+    shapes.map((s,i)=>{
+      const role = s===headShape?'หัว+P' : s===tailShape?'หาง C' : 'ลำตัว';
+      return `  ชิ้น ${i}: ${role}  bbox ${Math.round(s.bbox.x)},${Math.round(s.bbox.y)} `+
+             `${Math.round(s.bbox.width)}×${Math.round(s.bbox.height)}  รูข้างใน ${s.holes.length} รู`;
+    }).join('\n');
+});
+</script>
+</body>
+</html>
