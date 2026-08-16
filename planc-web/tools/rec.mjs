@@ -27,7 +27,7 @@ const sleep = ms => pg.waitForTimeout(ms);
 await pg.goto('file:///' + path.join(ROOT, 'index.html').replace(/\\/g,'/'));
 await sleep(2200);                      // watch the preloader lift
 
-const S = 5200;
+const S = 10400;
 
 // hand-rolled easing scroll — a jump-cut scrollTo would hide the whole point,
 // which is that the gait is coupled to scroll SPEED
@@ -45,9 +45,9 @@ const glide = (from, to, ms) => pg.evaluate(([a, z, d]) => new Promise(res=>{
 await pg.click('#menuBtn'); await sleep(1100);
 await pg.click('#menuBtn'); await sleep(700);
 
-const plan = [[0,.10,900],[.10,.20,1100],[.20,.30,850],[.30,.40,1000],
-              [.40,.47,700],[.47,.58,1000],[.58,.66,750],[.66,.78,1100],
-              [.78,.88,900],[.88,1.0,1200]];
+const plan = [[0,.10,1400],[.10,.20,1700],[.20,.30,1500],[.30,.40,1500],
+              [.40,.47,1100],[.47,.58,1600],[.58,.66,1300],[.66,.78,1700],
+              [.78,.88,1400],[.88,1.0,1900]];
 for (const [a,z,ms] of plan){ await glide(a*S, z*S, ms); await sleep(500); }
 
 await glide(1.0*S, .62*S, 900); await sleep(550);   // scrub backwards — reversible

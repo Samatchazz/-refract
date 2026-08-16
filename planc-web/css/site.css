@@ -183,7 +183,7 @@ body.inverted .ground{color:var(--paper)}
 
 /* ? block — two stacked sprite states, crossfade on hit; a coin pops
    from behind. Class toggles reverse cleanly, so scrubbing back un-hits. */
-.block{bottom:calc(var(--ground-h) + 32dvh);width:clamp(58px,10vw,80px);aspect-ratio:1;
+.block{bottom:calc(var(--ground-h) + 30dvh);width:clamp(58px,10vw,80px);aspect-ratio:1;
        color:var(--ink);transition:color .6s ease,transform .3s ease}
 body.inverted .block{color:var(--paper)}
 .block .q-on,.block .q-off{position:absolute;inset:0;width:100%;height:100%;transition:opacity .25s ease}

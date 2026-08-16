@@ -19,8 +19,8 @@ const pg = await b.newPage({ viewport:{width:390,height:844}, deviceScaleFactor:
 await pg.goto('file:///' + path.join(ROOT, 'index.html').replace(/\\/g,'/'));
 await pg.waitForTimeout(2200);
 
-const S = 5200;
-const stops = [0,.05,.12,.20,.26,.33,.42,.47,.54,.615,.70,.78,.86,.955,1.0];
+const S = 10400;
+const stops = [0,.05,.13,.165,.23,.30,.34,.41,.45,.47,.52,.575,.61,.665,.695,.715,.78,.86,.93,.95,.975,1.0];
 let n = 0;
 for (const p of stops){
   await pg.evaluate(y => scrollTo(0, y), p * S);

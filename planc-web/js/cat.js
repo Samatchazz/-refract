@@ -29,15 +29,19 @@ PLANC.Cat = (function(){
   const sq     = document.getElementById('catSq');
   const shadow = document.getElementById('shadow').firstElementChild;
 
+  const shadowWrap = document.getElementById('shadow');
+
   let phase = 0, v = 0, dir = 1, prevY = 0, land = 0;
 
   /* dt is in frames-at-60Hz, so every smoothing constant below stays
      the value it was tuned at while behaving the same on a 120Hz screen */
-  function update(cur, d, dt, jumps){
-    if (Math.abs(d) > 0.00004) dir = d > 0 ? 1 : -1;
+  function update(cur, d, dt, jumps, elev){
+    elev = elev || 0;
+    if (Math.abs(d) > 0.00002) dir = d > 0 ? 1 : -1;
 
-    // normalised gait speed 0..1 (tuned so a comfortable scroll sits near 0.6)
-    const spd = Math.min(1, Math.abs(d) / Math.max(dt, .0001) * 820);
+    // normalised gait speed 0..1 (tuned so a comfortable scroll sits near
+    // 0.6 — retuned after SCROLL_LEN doubled and d per frame halved)
+    const spd = Math.min(1, Math.abs(d) / Math.max(dt, .0001) * 1500);
     v += (spd - v) * (1 - Math.pow(1 - 0.18, dt));
     phase += GAIT_RATE * v * dir * dt;
 
@@ -72,9 +76,11 @@ PLANC.Cat = (function(){
 
     const deg = dir*LEAN_DEG*v*0.55 + rock + (air ? dir*4*v : 0);
 
-    wrap.style.transform = 'translate3d(0,' + (jy + bob).toFixed(2) + 'px,0)';
+    // elevation (pyramids, stairs) rides the same translate as the jump
+    wrap.style.transform = 'translate3d(0,' + (jy + bob - elev).toFixed(2) + 'px,0)';
     lean.style.transform = 'rotate(' + deg.toFixed(2) + 'deg)';
     sq.style.transform   = 'scale(' + (dir < 0 ? -sx : sx).toFixed(3) + ',' + sy.toFixed(3) + ')';
+    shadowWrap.style.transform = 'translate3d(0,' + (-elev).toFixed(2) + 'px,0)';
 
     // the shadow reacting to height is what actually sells the jump
     const lift = Math.min(1, -jy / 150);

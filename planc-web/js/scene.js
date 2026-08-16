@@ -12,10 +12,40 @@ window.PLANC = window.PLANC || {};
 
 PLANC.Scene = (function(){
 
-  const TRAVEL_MIN = 7200;   // px of world movement, floor
-  const SCROLL_LEN = 5200;   // px of page scroll mapped to 0..1
-  const PIT        = [0.245, 0.285];  // ground gap, in progress
-  const HOLD       = 0.085;  // default: how long a text beat stands still
+  const TRAVEL_MIN = 10400;  // px of world movement, floor
+  const SCROLL_LEN = 10400;  // px of page scroll mapped to 0..1 — doubled:
+                             // ~12 screens of swiping instead of ~6, so every
+                             // action breathes at half the old speed
+  const HOLD       = 0.105;  // default: how long a text beat stands still
+
+  /* World 1-1 layout (HANDOVER §5): three pits now — after the pipes,
+     inside the dense block zone, and between the two pyramids */
+  const PITS = [[0.395, 0.418], [0.600, 0.622], [0.685, 0.705]];
+
+  /* stepped elevation, all in progress space — pure function of cur,
+     so climbing scrubs backwards perfectly */
+  const PYR_B = 52, STAIR_B = 44;   // block px per structure
+  const PYR   = {up:[0.655, 0.675], down:[0.705, 0.725], n:4};
+  const STAIR = {up:[0.920, 0.954], drop:[0.955, 0.961], n:8};
+
+  function stepRamp(cur, a, b, n){   // 0..n in n steps: dwell, then quick rise
+    if (cur <= a) return 0;
+    if (cur >= b) return n;
+    const k = (cur - a) / (b - a) * n;
+    const i = Math.floor(k), f = k - i;
+    return Math.min(n, i + Math.max(0, (f - 0.55) / 0.45));
+  }
+  function elev(cur){   // px above the ground line
+    let e = 0;
+    e += stepRamp(cur, PYR.up[0],   PYR.up[1],   PYR.n) * PYR_B;
+    e -= stepRamp(cur, PYR.down[0], PYR.down[1], PYR.n) * PYR_B;
+    e += stepRamp(cur, STAIR.up[0], STAIR.up[1], STAIR.n) * STAIR_B;
+    if (cur > STAIR.drop[0]){
+      const k = Math.min(1, (cur - STAIR.drop[0]) / (STAIR.drop[1] - STAIR.drop[0]));
+      e -= STAIR.n * STAIR_B * k;
+    }
+    return Math.max(0, e);
+  }
 
   const world  = document.getElementById('world');
   const spacer = document.getElementById('spacer');
@@ -85,7 +115,7 @@ PLANC.Scene = (function(){
 
   /* world decorations: [progress, sprite ids to pick from, height in
      dvh, extra px offset]. Bushes skirt the pit + the beat positions. */
-  const BUSH_P    = [0.055, 0.115, 0.19, 0.315, 0.375, 0.475, 0.575, 0.655, 0.77, 0.845, 0.925];
+  const BUSH_P    = [0.045, 0.10, 0.175, 0.29, 0.36, 0.455, 0.53, 0.63, 0.77, 0.83, 0.895];
   const BUSH_IDS  = ['bush1','bush2','bush3','bush4'];
   const HILL_IDS  = ['hill-s1','hill-m1','hill-s2','hill-m2'];
   const SKY_IDS   = ['skyline1','skyline2','skyline3'];
@@ -143,34 +173,42 @@ PLANC.Scene = (function(){
       el.style.left = (el.dataset.p * travel + catX) + 'px';
     });
 
-    // ground, split in two around the pit — filled with the hand-drawn
-    // tile pattern; the last block's own edge plays the pit edge
+    // ground, split around every pit — filled with the hand-drawn tile
+    // pattern; the last block's own edge plays the pit edge
     grounds.forEach(g => g.remove());
     grounds = [];
-    [[0, PIT[0]*travel + catX], [PIT[1]*travel + catX, travel + innerWidth]].forEach(([a,b])=>{
+    const cuts = [0];
+    PITS.forEach(([a,b]) => cuts.push(a*travel + catX, b*travel + catX));
+    cuts.push(travel + innerWidth);
+    for (let s = 0; s < cuts.length; s += 2){
       const g = document.createElement('div');
       g.className = 'ground';
-      g.style.left = a + 'px';
-      g.style.width = (b - a) + 'px';
+      g.style.left = cuts[s] + 'px';
+      g.style.width = (cuts[s+1] - cuts[s]) + 'px';
       g.innerHTML = '<svg width="100%" height="100%" preserveAspectRatio="none">' +
                     '<rect width="100%" height="100%" fill="url(#groundPat)"/></svg>';
       world.appendChild(g);
       grounds.push(g);
-    });
+    }
 
     decorate();
 
     const H = Math.min(innerHeight * 0.22, 190);
     jumps = [
-      {p:(PIT[0]+PIT[1])/2, w:.034, h:H*1.15},  // over the pit
-      {p:0.415,             w:.026, h:H*0.85},  // stomp DEADLINE
-      {p:0.615,             w:.028, h:H*1.05},  // hit the block
-      {p:0.985,             w:.022, h:H*0.60}   // hop at the flag
+      {p:0.2255, w:.013, h:H*0.75},   // pipe 1
+      {p:0.2620, w:.013, h:H*0.90},   // pipe 2
+      {p:0.3010, w:.014, h:H*1.10},   // pipe 3
+      {p:0.3410, w:.014, h:H*1.25},   // pipe 4
+      {p:0.4065, w:.019, h:H*1.15},   // over pit 1
+      {p:0.4700, w:.013, h:H*0.85},   // stomp DEADLINE
+      {p:0.5750, w:.012, h:H*1.05},   // hit the ? block
+      {p:0.6110, w:.016, h:H*1.10},   // over pit 2
+      {p:0.6950, w:.016, h:H*0.52}    // pyramid gap (already 4 blocks up)
     ];
   }
 
   /* --- decorations — rebuilt with every layout() ------------ */
-  let dWorld = null;
+  let dWorld = null, coinEls = [];
   function decorate(){
     const H = innerHeight;
 
@@ -227,14 +265,81 @@ PLANC.Scene = (function(){
       dWorld.appendChild(s);
     });
 
-    // pebbles hugging both pit lips
-    [[PIT[0], -0.9], [PIT[1], -0.1]].forEach(([p, k], j) => {
-      const s = sprite(pick(['pebbles1','pebbles2','pebbles3'], j), 'wd pebbles');
-      const w = H * 0.075;
-      s.style.cssText = 'position:absolute;bottom:var(--ground-h);left:' +
-        (p * travel + catX + k * w).toFixed(0) + 'px;width:' + w.toFixed(0) + 'px;height:' + (w / s.__ar).toFixed(0) + 'px';
-      dWorld.appendChild(s);
+    // pebbles hugging every pit lip
+    let pj = 0;
+    PITS.forEach(pit => {
+      [[pit[0], -0.9], [pit[1], -0.1]].forEach(([p, k]) => {
+        const s = sprite(pick(['pebbles1','pebbles2','pebbles3'], pj), 'wd pebbles');
+        const w = H * 0.075;
+        s.style.cssText = 'position:absolute;bottom:var(--ground-h);left:' +
+          (p * travel + catX + k * w).toFixed(0) + 'px;width:' + w.toFixed(0) + 'px;height:' + (w / s.__ar).toFixed(0) + 'px';
+        dWorld.appendChild(s);
+        pj++;
+      });
     });
+
+    /* ---- World 1-1 set pieces (HANDOVER §5) ------------------
+       Everything below is plain data → sprites; when CONTENT-MAP
+       locks the real service count, only these arrays change. */
+    const px = p => p * travel + catX;
+    const put = (el, x, bottomPx, w, h) => {
+      el.style.cssText = 'position:absolute;bottom:calc(var(--ground-h) + ' + bottomPx.toFixed(0) +
+        'px);left:' + x.toFixed(0) + 'px;width:' + w.toFixed(0) + 'px;height:' + h.toFixed(0) + 'px';
+      dWorld.appendChild(el);
+    };
+    const BW = Math.min(60, Math.max(44, innerWidth * 0.085));   // one block
+
+    // lesson zone: lone ? → brick,?,brick,?,brick panel → high ?
+    const rowY = H * 0.26, highY = H * 0.44;
+    put(sprite('qblock2', 'wd'), px(0.112), rowY, BW, BW);
+    ['brick1','qblock3','brick2','qblock2','brick3'].forEach((id, i) =>
+      put(sprite(id, 'wd'), px(0.150) + i * (BW - 1), rowY, BW, BW));
+    put(sprite('qblock3', 'wd'), px(0.150) + 2 * (BW - 1), highY, BW, BW);
+
+    // four pipes, stepping taller — the cat hops each one
+    [['pipe-short1', 0.2255, 0.105], ['pipe-short2', 0.2620, 0.135],
+     ['pipe-long1',  0.3010, 0.175], ['pipe-long2',  0.3410, 0.205]].forEach(([id, p, hf]) => {
+      const s = sprite(id, 'wd'), h = innerHeight * hf;
+      put(s, px(p) - h * s.__ar / 2, 0, h * s.__ar, h);
+    });
+
+    // coin arc after pit 1 (progress-driven spin happens in render)
+    coinEls = [];
+    for (let c = 0; c < 6; c++){
+      const s = sprite('coin' + (c % 4 + 1), 'wd coinS');
+      const cw = BW * 0.95;
+      const lift = H * (0.235 + 0.055 * Math.sin(c / 5 * Math.PI));
+      put(s, px(0.430) + c * cw * 1.35, lift, cw, cw / 0.88);
+      coinEls.push(s);
+    }
+
+    // dense block zone: brick rows around the interactive ? block
+    ['brick2','brick4','brick1','brick5'].forEach((id, i) =>
+      put(sprite(id, 'wd'), px(0.520) + i * (BW - 1), rowY, BW, BW));
+    ['brick3','qblock2','brick5'].forEach((id, i) =>
+      put(sprite(id, 'wd'), px(0.548) + i * (BW - 1), highY, BW, BW));
+    ['brick4','brick1'].forEach((id, i) =>
+      put(sprite(id, 'wd'), px(0.590) + i * (BW - 1), rowY, BW, BW));
+
+    // pyramids flanking the third pit, then the closing staircase —
+    // stacked ground blocks; geometry mirrors elev() exactly
+    const stack = (pStart, n, B, dirUp) => {
+      for (let c = 0; c < n; c++){
+        const lv = dirUp ? c + 1 : n - c;
+        for (let r = 0; r < lv; r++)
+          put(sprite(pick(['ground1','ground2','ground3','ground4'], c * 3 + r), 'wd'),
+              px(pStart) + c * (B - 1), r * (B - 1), B, B);
+      }
+    };
+    stack(PYR.up[0],   PYR.n,   PYR_B,   true);    // up to the gap
+    stack(PYR.down[0], PYR.n,   PYR_B,   false);   // down after it
+    stack(STAIR.up[0], STAIR.n, STAIR_B, true);    // the big stairs
+
+    // plateau between pyramid top and the gap — two full-height columns
+    for (let c = 0; c < 2; c++)
+      for (let r = 0; r < PYR.n; r++)
+        put(sprite(pick(['ground1','ground2','ground3','ground4'], c * 5 + r), 'wd'),
+            px(PYR.up[1]) + c * (PYR_B - 1), r * (PYR_B - 1), PYR_B, PYR_B);
 
     // castle closes the level, just past the flag
     const c = sprite('castle', 'wd castle');
@@ -259,12 +364,18 @@ PLANC.Scene = (function(){
       el.style.transform = h ? 'translate3d(' + (h*travel).toFixed(1) + 'px,0,0)' : '';
       el.classList.toggle('lit', cur > p - 0.055);
     }
+
+    // coin spin: 4 quantized frames like the NES, driven by progress —
+    // scroll back and the coins spin the other way
+    const q = [1, .55, .12, .55];
+    for (let c = 0; c < coinEls.length; c++)
+      coinEls[c].style.transform = 'scaleX(' + q[((cur * travel / 110 + c) | 0) % 4] + ')';
   }
 
   splitWords();
 
   return {
-    SCROLL_LEN, PIT,
+    SCROLL_LEN, PITS, elev,
     layout, render,
     get travel(){ return travel; },
     get catX(){ return catX; },

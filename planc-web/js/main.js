@@ -49,7 +49,7 @@
     if (Math.abs(target - cur) < 0.0002) cur = target;
 
     const d = cur - lastCur;
-    const cat = Cat.update(cur, d, dt, Scene.jumps);
+    const cat = Cat.update(cur, d, dt, Scene.jumps, Scene.elev(cur));
 
     // camera
     const lookAhead = -cat.dir * cat.v * 30;
@@ -64,14 +64,14 @@
     Scene.render(cur, cam);
 
     // DEADLINE watches the cat walk in, then loses its nerve
-    const dx = (0.415 - cur) * Scene.travel;
+    const dx = (0.470 - cur) * Scene.travel;
     const look = Math.max(-1, Math.min(1, -dx / 420)) * 2.4;
     for (const p of pupils) p.style.transform = 'translateX(' + look.toFixed(2) + 'px)';
 
-    enemy.classList.toggle('squashed', cur > 0.419);
-    block.classList.toggle('hit',      cur > 0.611);
+    enemy.classList.toggle('squashed', cur > 0.474);
+    block.classList.toggle('hit',      cur > 0.577);
 
-    const fk = Math.min(1, Math.max(0, (cur - 0.952) / 0.04));
+    const fk = Math.min(1, Math.max(0, (cur - 0.966) / 0.028));
     flagS.style.transform = 'translateY(' + (fk * flagRange).toFixed(1) + 'px)';
     document.body.classList.toggle('inverted', cur > 0.690 && cur < 0.860);
 
