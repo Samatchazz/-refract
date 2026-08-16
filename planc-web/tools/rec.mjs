@@ -45,8 +45,8 @@ const glide = (from, to, ms) => pg.evaluate(([a, z, d]) => new Promise(res=>{
 await pg.click('#menuBtn'); await sleep(1100);
 await pg.click('#menuBtn'); await sleep(700);
 
-const plan = [[0,.10,1400],[.10,.20,1700],[.20,.30,1500],[.30,.40,1500],
-              [.40,.47,1100],[.47,.58,1600],[.58,.66,1300],[.66,.78,1700],
+const plan = [[0,.10,1400],[.10,.20,1700],[.20,.30,1400],[.30,.40,1500],
+              [.40,.47,1100],[.47,.58,1600],[.58,.66,1200],[.66,.78,1700],
               [.78,.88,1400],[.88,1.0,1900]];
 for (const [a,z,ms] of plan){ await glide(a*S, z*S, ms); await sleep(500); }
 
