@@ -45,19 +45,16 @@
 <!-- ============ THE WORLD ============ -->
 <main id="stage">
 
-  <!-- depth 1 — sky + far hills, 0.12x -->
+  <!-- depth 1 — sky + far hills, 0.12x — hills filled by scene.js from sprites -->
   <div class="layer" id="lSky" data-f="0.12">
     <div class="sky-grad"></div>
-    <div class="tile hills"></div>
+    <div class="decor" id="dHills"></div>
   </div>
 
-  <!-- depth 2 — city + clouds, 0.35x -->
+  <!-- depth 2 — bangkok skyline + clouds, 0.35x — filled by scene.js -->
   <div class="layer" id="lMid" data-f="0.35">
-    <div class="tile city"></div>
-    <div class="clouds">
-      <span class="cloud c1"></span><span class="cloud c2"></span>
-      <span class="cloud c3"></span><span class="cloud c4"></span>
-    </div>
+    <div class="decor" id="dSkyline"></div>
+    <div class="clouds" id="dClouds"></div>
   </div>
 
   <!-- depth 3 — the level itself, 1.0x -->
@@ -108,8 +105,15 @@
           <circle class="pupil" cx="62" cy="32" r="2" fill="#111"/>
         </svg>
       </div>
-      <div class="prop block" data-p="0.615" id="block">!<span class="star">★</span></div>
-      <div class="prop flagpole" data-p="0.995"><div class="flag">planc*</div></div>
+      <div class="prop block" data-p="0.615" id="block">
+        <svg class="q-coin" aria-hidden="true"><use href="#coin1" width="100%" height="100%"/></svg>
+        <svg class="q-on" aria-hidden="true"><use href="#qblock1" width="100%" height="100%"/></svg>
+        <svg class="q-off" aria-hidden="true"><use href="#qblock-used1" width="100%" height="100%"/></svg>
+      </div>
+      <div class="prop flagpole" data-p="0.995">
+        <svg class="pole" aria-hidden="true"><use href="#pole1" width="100%" height="100%"/></svg>
+        <svg class="flagS" id="flagSvg" aria-hidden="true"><use href="#flag" width="100%" height="100%"/></svg>
+      </div>
     </div>
   </div>
 
@@ -180,6 +184,7 @@
   <p><strong><a href="mailto:hello@planc.studio">ถึงเสาธงแล้ว — คุยกับเรา</a></strong></p>
 </article>
 
+<script src="js/sprites.js"></script>
 <script src="js/scene.js"></script>
 <script src="js/cat.js"></script>
 <script src="js/ui.js"></script>

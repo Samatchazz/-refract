@@ -103,27 +103,16 @@ body.menu-open #menuList button{transform:translateY(0)}
 .tile{position:absolute;bottom:var(--ground-h);left:0;width:100%;
       background-repeat:repeat-x;background-position:left bottom}
 
-/* far hills — one 1200px tile, low contrast so it reads as distance */
-.hills{
-  height:30dvh;background-size:1200px 100%;opacity:.15;
-  background-image:url("data:image/svg+xml;utf8,\
-<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 300' preserveAspectRatio='none'>\
-<path d='M0 300 L0 190 Q90 120 180 178 Q260 228 330 168 Q420 92 520 172 Q600 236 690 176 Q780 116 880 186 Q960 242 1050 172 Q1130 112 1200 178 L1200 300 Z' fill='%23111'/>\
-</svg>");
-}
-/* mid city — taller contrast, still flat black */
-.city{
-  height:23dvh;background-size:900px 100%;opacity:.3;
-  background-image:url("data:image/svg+xml;utf8,\
-<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 900 260' preserveAspectRatio='none'>\
-<g fill='%23111'>\
-<rect x='0' y='150' width='90' height='110'/><rect x='100' y='96' width='64' height='164'/>\
-<rect x='176' y='170' width='110' height='90'/><rect x='298' y='60' width='52' height='200'/>\
-<rect x='362' y='134' width='86' height='126'/><rect x='460' y='182' width='120' height='78'/>\
-<rect x='592' y='104' width='70' height='156'/><rect x='674' y='158' width='58' height='102'/>\
-<rect x='744' y='78' width='46' height='182'/><rect x='802' y='166' width='98' height='94'/>\
-</g></svg>");
-}
+/* sprite decorations — hand-drawn SVG symbols placed by scene.js.
+   Everything paints with currentColor, so body.inverted flips them
+   for free (the "state both sides" rule handled at the source). */
+.decor{position:absolute;left:0;right:0;bottom:var(--ground-h);height:0;pointer-events:none}
+.decor svg,.wd{color:var(--ink);transition:color .6s ease}
+body.inverted .decor svg,body.inverted .wd{color:var(--paper)}
+.decor .hill{opacity:.15}
+.decor .sky{opacity:.28}
+#dWorld .bush{opacity:.9}
+#dWorld .pebbles{opacity:.85}
 /* foreground grass — sits ON the ground line and passes in FRONT of the
    cat's feet. Black on the black ground is invisible, so it has to grow
    upward into the paper, not downward into the ground. */
@@ -131,39 +120,34 @@ body.menu-open #menuList button{transform:translateY(0)}
   height:4.2dvh;background-size:520px 100%;opacity:1;
   background-image:url("data:image/svg+xml;utf8,\
 <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 520 90' preserveAspectRatio='none'>\
-<g fill='%23111'>\
-<path d='M8 90 Q10 40 18 8 Q24 44 30 90 Z'/><path d='M40 90 Q44 52 54 26 Q54 58 60 90 Z'/>\
-<path d='M96 90 Q98 34 108 4 Q112 46 118 90 Z'/><path d='M132 90 Q138 56 146 32 Q146 62 152 90 Z'/>\
-<path d='M206 90 Q208 42 218 12 Q222 50 228 90 Z'/><path d='M248 90 Q252 58 262 30 Q262 60 268 90 Z'/>\
-<path d='M318 90 Q320 36 330 6 Q334 48 340 90 Z'/><path d='M358 90 Q364 54 372 28 Q372 60 378 90 Z'/>\
-<path d='M436 90 Q438 44 448 14 Q452 50 458 90 Z'/><path d='M474 90 Q480 58 488 34 Q488 62 494 90 Z'/>\
+<g stroke='%23111' stroke-width='3.5' fill='none' stroke-linecap='round'>\
+<path d='M10 90 Q16 58 8 30'/><path d='M22 90 Q20 56 32 38'/><path d='M33 90 Q38 68 30 52'/>\
+<path d='M100 90 Q104 52 94 22'/><path d='M113 90 Q110 58 122 40'/>\
+<path d='M210 90 Q216 56 206 28'/><path d='M222 90 Q220 60 232 44'/><path d='M234 90 Q239 70 231 56'/>\
+<path d='M322 90 Q326 50 316 20'/><path d='M334 90 Q331 58 344 42'/>\
+<path d='M440 90 Q446 56 436 26'/><path d='M452 90 Q449 62 461 46'/><path d='M463 90 Q468 70 460 58'/>\
 </g></svg>");
 }
 .clouds{position:absolute;top:0;left:0;height:100%;width:100%;pointer-events:none}
 .cloud{
-  position:absolute;display:block;opacity:.16;
-  background:var(--ink);border-radius:999px;
-  box-shadow:34px 6px 0 -4px var(--ink), -30px 8px 0 -6px var(--ink), 12px -10px 0 -8px var(--ink);
+  position:absolute;display:block;opacity:.32;
+  color:var(--ink);transition:color .6s ease;
   animation:drift linear infinite;
-  transition:background .6s ease,box-shadow .6s ease;
 }
+body.inverted .cloud{color:var(--paper)}
 @keyframes drift{from{transform:translateX(0)}to{transform:translateX(-46vw)}}
-.c1{width:70px;height:22px;top:14dvh;left:14vw;animation-duration:62s}
-.c2{width:52px;height:17px;top:24dvh;left:58vw;animation-duration:88s;animation-delay:-20s}
-.c3{width:86px;height:26px;top:9dvh;left:104vw;animation-duration:74s;animation-delay:-40s}
-.c4{width:60px;height:19px;top:29dvh;left:158vw;animation-duration:96s;animation-delay:-10s}
+.c1{animation-duration:62s}
+.c2{animation-duration:88s;animation-delay:-20s}
+.c3{animation-duration:74s;animation-delay:-40s}
+.c4{animation-duration:96s;animation-delay:-10s}
 
 /* ============ GROUND ============ */
-.ground{position:absolute;bottom:0;height:var(--ground-h);background:var(--ink);transition:background .6s ease}
-.ground::before{ /* bright top edge — reads as a lit surface */
-  content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--paper);opacity:.85;
-}
-.ground::after{ /* brick texture, drawn not imaged */
-  content:'';position:absolute;top:3px;left:0;right:0;height:calc(100% - 3px);opacity:.16;
-  background-image:
-    repeating-linear-gradient(90deg,var(--paper) 0 1px,transparent 1px 44px),
-    repeating-linear-gradient(180deg,var(--paper) 0 1px,transparent 1px 22px);
-}
+/* hand-drawn tile pattern (url(#groundPat), built by scene.js).
+   The pattern paints with currentColor so the dark level flips it. */
+.ground{position:absolute;bottom:0;height:var(--ground-h);overflow:hidden;
+        color:var(--ink);transition:color .6s ease}
+body.inverted .ground{color:var(--paper)}
+.ground svg{display:block}
 
 /* ============ BEATS ============ */
 .beat{position:absolute;top:calc(var(--nav-h) + 5dvh);width:78vw;max-width:34rem;transition:color .6s ease}
@@ -197,17 +181,29 @@ body.menu-open #menuList button{transform:translateY(0)}
 .squashed svg{transform:scaleY(.16)!important;animation:none}
 .squashed .label{text-decoration:line-through;opacity:.4}
 
+/* ? block — two stacked sprite states, crossfade on hit; a coin pops
+   from behind. Class toggles reverse cleanly, so scrubbing back un-hits. */
 .block{bottom:calc(var(--ground-h) + 32dvh);width:clamp(58px,10vw,80px);aspect-ratio:1;
-       border:4px solid var(--ink);display:flex;align-items:center;justify-content:center;
-       font-weight:800;font-size:1.8rem;transition:border-color .6s ease,transform .3s ease}
-.block .star{position:absolute;left:50%;top:-.6rem;transform:translate(-50%,0) scale(0);font-size:2rem;line-height:1;
-             transition:transform .7s cubic-bezier(.2,1.6,.4,1)}
+       color:var(--ink);transition:color .6s ease,transform .3s ease}
+body.inverted .block{color:var(--paper)}
+.block .q-on,.block .q-off{position:absolute;inset:0;width:100%;height:100%;transition:opacity .25s ease}
+.block .q-off{opacity:0}
+.block.hit .q-on{opacity:0}
+.block.hit .q-off{opacity:1}
+.block .q-coin{position:absolute;left:50%;top:0;width:56%;aspect-ratio:.88;
+               transform:translate(-50%,0) scale(0);
+               transition:transform .7s cubic-bezier(.2,1.6,.4,1),opacity .5s ease;opacity:0}
+.block.hit .q-coin{transform:translate(-50%,-120%) scale(1);opacity:1}
 .block.hit{transform:translateY(-14px)}
-.block.hit .star{transform:translate(-50%,-3.4rem) scale(1) rotate(180deg)}
 
-.flagpole{bottom:var(--ground-h);width:8px;height:31dvh;background:var(--ink);transition:background .6s ease}
-.flag{position:absolute;top:0;left:8px;padding:.5rem .9rem;background:var(--ink);color:var(--paper);
-      font-weight:800;letter-spacing:.05em;white-space:nowrap;transition:background .6s ease,color .6s ease}
+/* flagpole + separate flag sprite — main.js slides the flag down the
+   pole over the last stretch of progress (the climax) */
+.flagpole{bottom:var(--ground-h);height:34dvh;aspect-ratio:220/2008;
+          color:var(--ink);transition:color .6s ease}
+body.inverted .flagpole{color:var(--paper)}
+.flagpole .pole{position:absolute;inset:0;width:100%;height:100%}
+.flagpole .flagS{position:absolute;top:1.5%;right:58%;width:320%;aspect-ratio:700/562;
+                 will-change:transform}
 
 .cta{display:inline-block;margin-top:1.1rem;padding:.8rem 1.6rem;background:var(--ink);color:var(--paper);
      text-decoration:none;font-weight:600;letter-spacing:.08em;transition:background .6s ease,color .6s ease,transform .3s var(--ease)}
@@ -282,21 +278,9 @@ body.hud-hidden #hud{transform:translateY(100%)}
 body.inverted{background:var(--ink)}
 body.inverted #stage{background:var(--ink)}
 body.inverted{color:var(--paper)}
-body.inverted .ground{background:var(--paper)}
-body.inverted .ground::before,body.inverted .ground::after{background:var(--ink)}
-body.inverted .ground::after{
-  background-image:
-    repeating-linear-gradient(90deg,var(--ink) 0 1px,transparent 1px 44px),
-    repeating-linear-gradient(180deg,var(--ink) 0 1px,transparent 1px 22px);
-}
-body.inverted .hills,body.inverted .city,body.inverted .grass{filter:invert(1)}
+body.inverted .grass{filter:invert(1)}
 body.inverted .sky-grad{background:linear-gradient(180deg,rgba(252,252,250,.06) 0%,rgba(252,252,250,0) 42%)}
-body.inverted .cloud{background:var(--paper);
-  box-shadow:34px 6px 0 -4px var(--paper), -30px 8px 0 -6px var(--paper), 12px -10px 0 -8px var(--paper)}
 body.inverted #shadow i{background:var(--paper)}
-body.inverted .block{border-color:var(--paper)}
-body.inverted .flagpole{background:var(--paper)}
-body.inverted .flag{background:var(--paper);color:var(--ink)}
 body.inverted .cta{background:var(--paper);color:var(--ink)}
 body.inverted #hud{background:var(--ink);border-color:rgba(252,252,250,.2)}
 body.inverted #hudPins b{background:var(--ink)}

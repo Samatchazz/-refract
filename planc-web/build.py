@@ -32,7 +32,7 @@ html = html.replace(
 )
 
 # scripts -> <script>, in load order
-for name in ("scene", "cat", "ui", "main"):
+for name in ("sprites", "scene", "cat", "ui", "main"):
     js = (ROOT / f"js/{name}.js").read_text(encoding="utf-8")
     html = html.replace(
         f'<script src="js/{name}.js"></script>',

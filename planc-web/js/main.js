@@ -15,6 +15,16 @@
   Scene.layout();
   addEventListener('resize', Scene.layout);
 
+  // the flag rides down the pole over the last stretch — position is a
+  // pure function of progress, so scrubbing back hoists it again
+  // NOTE: svg elements have no offsetHeight — use getBoundingClientRect
+  const flagS = document.getElementById('flagSvg');
+  let flagRange = 0;
+  const measureFlag = () =>
+    flagRange = flagS.parentElement.offsetHeight * 0.80 - flagS.getBoundingClientRect().height;
+  measureFlag();
+  addEventListener('resize', measureFlag);
+
   const scrollToP = p => scrollTo({top: p * S, behavior:'smooth'});
   const menu = UI.nav(scrollToP);
   const hudUpdate = UI.hud();
@@ -60,6 +70,9 @@
 
     enemy.classList.toggle('squashed', cur > 0.419);
     block.classList.toggle('hit',      cur > 0.611);
+
+    const fk = Math.min(1, Math.max(0, (cur - 0.952) / 0.04));
+    flagS.style.transform = 'translateY(' + (fk * flagRange).toFixed(1) + 'px)';
     document.body.classList.toggle('inverted', cur > 0.690 && cur < 0.860);
 
     hudUpdate(cur, menu.items);
