@@ -78,12 +78,14 @@
     hudUpdate(cur, menu.items);
     hint.style.opacity = cur < 0.015 ? 1 : 0;
 
-    // hand the page over to the real closing panel.
+    // hand the page over to the real closing panel — which now starts
+    // rising only after Scene.endPad of "stand at the flag" scroll.
     // Two different thresholds: the HUD sits at the bottom so the footer
     // covers it the moment it appears, but the nav only needs to flip to
     // paper once the footer has actually risen far enough to be under it.
-    document.body.classList.toggle('hud-hidden', scrollY > S + 40);
-    document.body.classList.toggle('on-end',     scrollY > S + innerHeight - 70);
+    const endAt = S + Scene.endPad;
+    document.body.classList.toggle('hud-hidden', scrollY > endAt + 40);
+    document.body.classList.toggle('on-end',     scrollY > endAt + innerHeight - 70);
 
     lastCur = cur;
     requestAnimationFrame(frame);

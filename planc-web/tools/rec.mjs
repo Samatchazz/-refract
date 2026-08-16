@@ -53,7 +53,7 @@ for (const [a,z,ms] of plan){ await glide(a*S, z*S, ms); await sleep(500); }
 await glide(1.0*S, .62*S, 900); await sleep(550);   // scrub backwards — reversible
 await glide(.62*S, 1.0*S, 1100); await sleep(500);
 
-await glide(1.0*S, S + 844*1.5, 1400); await sleep(1400);   // into the closing panel
+await glide(1.0*S, S + 844*2.4, 2000); await sleep(1400);   // stand at the flag, then into the closing panel
 
 const video = pg.video();
 await ctx.close();

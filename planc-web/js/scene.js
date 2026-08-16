@@ -24,7 +24,7 @@ PLANC.Scene = (function(){
     el, f: parseFloat(el.dataset.f)
   }));
 
-  let travel = 0, catX = 0;
+  let travel = 0, catX = 0, endPad = 0;
   let beats = [], jumps = [], grounds = [];
 
   /* --- sprite plumbing --------------------------------------
@@ -128,7 +128,11 @@ PLANC.Scene = (function(){
     travel = Math.max(TRAVEL_MIN, innerWidth * 4.2);
 
     world.style.width = (travel + innerWidth) + 'px';
-    spacer.style.height = (SCROLL_LEN + innerHeight) + 'px';
+    // endPad: a full screen of "stand at the flag" scroll AFTER progress
+    // hits 1, so the closing panel doesn't ride up over the finale the
+    // moment the flag lands
+    endPad = Math.round(innerHeight * 0.95);
+    spacer.style.height = (SCROLL_LEN + innerHeight + endPad) + 'px';
 
     // every parallax layer must be wide enough for its own scroll rate
     layers.forEach(L => {
@@ -269,6 +273,7 @@ PLANC.Scene = (function(){
     layout, render,
     get travel(){ return travel; },
     get catX(){ return catX; },
-    get jumps(){ return jumps; }
+    get jumps(){ return jumps; },
+    get endPad(){ return endPad; }
   };
 })();
