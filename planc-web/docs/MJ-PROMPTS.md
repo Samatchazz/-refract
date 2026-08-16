@@ -1,47 +1,28 @@
-# คำสั่ง Midjourney — ก็อปวางได้เลย
+# คำสั่ง Midjourney ฉบับละเอียด — ก็อปวางได้เลย
 
-> ไฟล์นี้คือ **คำสั่งพร้อมวาง** เท่านั้น เหตุผลว่าทำไมต้องเจนชิ้นพวกนี้อยู่ใน
-> `docs/MIDJOURNEY-BRIEF.md` ส่วนของอ้างอิงเรื่องฉากอยู่ใน `docs/MARIO-TEARDOWN.md`
+> แทนที่ฉบับเก่าทั้งไฟล์ (ฉบับเก่า subject สั้นเกิน MJ เดาเองเยอะ)
+> โครง prompt ใหม่มี 4 เลเยอร์: **ตัวของ+DNA มาริโอ → การจัดวางในเฟรม → โลก/สื่อ → สไตล์**
+> เหตุผลเชิงเทคนิคอยู่ `docs/MIDJOURNEY-BRIEF.md` · ฉากอ้างอิงอยู่ `docs/MARIO-TEARDOWN.md`
 > **ทุกการตัดสินใจด้านดีไซน์เป็นของ Mat อย่าเลือกแทน เสนอทางเลือกแล้วถาม**
 
-## 0. อ่านสามนาที ก่อนวางอันแรก
+## 0. หลักที่ใช้เขียนรอบนี้ (จากคู่มือ MJ + การถอดฉากมาริโอ)
 
-**เวอร์ชันตอนนี้คือ V8.2** (ขึ้นเป็นค่าเริ่มต้นวันที่ 24 ก.ค. 2026) ไม่ต้องใส่ `--v`
-มันใช้ตัวล่าสุดให้เอง ถ้าเจอว่า `--tile` ไม่ทำงาน ให้เติม `--v 7` ท้ายคำสั่ง
-เพราะ V7 เป็นเวอร์ชันที่รองรับพารามิเตอร์ครบที่สุด
+1. **คำสำคัญไว้หน้าสุด** MJ ให้น้ำหนักคำต้น prompt มากกว่า — เลยเปิดด้วยตัวของทุกครั้ง
+2. **บรรยายสิ่งที่อยากได้ ไม่ใช่สิ่งที่ไม่อยากได้** ลิสต์ --no เลยสั้นลงกว่าเดิมครึ่งหนึ่ง
+3. **DNA มาริโอใส่ตรงๆ ในทุกชิ้น** อ้างทั้งชื่อเกม (super mario bros) และ*บทบาท*ของชิ้น
+   (เช่น "in the role of the question block") พร้อมบรรยายรูปทรงแบบเจาะจง
+   (พูสองพู ก้นแบน ฐานเรียบ หมุดสี่มุม) — ชื่อเกมดึงอารมณ์ รูปทรงกันเพี้ยน
+4. **ระวัง:** คำว่า super mario ใน MJ มักดึงภาพเขียนสีสด — ถูกกดไว้ด้วย
+   `black ink on pure white` + `--raw --s 50` แล้ว ถ้ายังหลุดเป็นภาพสีหรือมีตัวมาริโอโผล่
+   ให้เปลี่ยนคำว่า `super mario bros` เป็น `a classic 1985 NES side-scroller` ทั้งประโยค
 
-**พารามิเตอร์ต้องอยู่ท้ายสุดเสมอ** เว้นวรรคก่อน `--` และห้ามมีจุด/จุลภาคในตัวพารามิเตอร์
-(ยกเว้นในลิสต์ของ `--no` ที่คั่นด้วยจุลภาคได้)
+**เวอร์ชัน:** ค่าเริ่มต้นตอนนี้คือ V8.2 ไม่ต้องใส่ `--v` · ถ้า `--tile` (ชิ้น 1, 2) ไม่ทำงาน เติม `--v 7`
+**ลำดับ:** เจนชิ้น 1 ให้ได้ก่อนอย่างเดียว → ก็อป URL ใบที่ชอบ → ต่อท้ายชิ้น 2-12 ทุกอันด้วย
+`--sref <URL> --sw 100` (หลุดชุด → เพิ่ม 300 · เหมือนกันเกิน → ลด 50) · ลองไอเดียถูกๆ ด้วย `--draft`
 
-**สามตัวที่ผมใส่ให้ทุกคำสั่ง และเป็นตัวที่ทำให้ภาพเอาไป potrace ได้จริง:**
+## 1. เจนตอนนี้ได้เลย — 12 ชิ้น
 
-| | ทำอะไร |
-|---|---|
-| `--raw` | ตัด "ความสวยอัตโนมัติ" ของ MJ ออก ทำให้มันฟังคำสั่งตรงๆ มากขึ้น |
-| `--s 50` | ลดการใส่ลูกเล่นเอง (ค่าปกติคือ 100) **ถ้ายังใส่ลายเยอะเกิน ลดเป็น `--s 0`** |
-| `--c 0` | ไม่สุ่มความหลากหลาย ทั้ง 4 ใบในกริดจะใกล้เคียงกัน ตัดสินง่ายกว่า |
-
-**ลำดับการทำงาน — ข้อนี้สำคัญกว่าตัวคำสั่ง**
-
-1. เจน **ชิ้นที่ 1 (ตึกแถบยาว)** ก่อนอย่างเดียว เจนซ้ำจนได้ใบที่ชอบจริงๆ
-2. ก็อป **URL ของใบนั้น** (เว็บ: กดที่ภาพ → คัดลอกลิงก์ / Discord: เปิดภาพ → Copy Link)
-3. เอาไปต่อท้ายคำสั่งที่ 2–12 ทุกอัน: `--sref <URL> --sw 100`
-4. ถ้ายังหลุดชุดกันอยู่ เพิ่มเป็น `--sw 300` ถ้าเหมือนกันจนน่าเบื่อ ลดเป็น `--sw 50`
-
-**ถ้าไม่ทำข้อ 3 ชิ้นทั้ง 12 จะเหมือนมาจาก 12 คนวาด** และแก้ทีหลังไม่ได้เลย
-
-**ประหยัดโควตา:** ใส่ `--draft` ตอนลองไอเดีย มันคิดครึ่งราคา พอเจอใบที่ใช่ค่อยกด
-Enhance ให้เป็นภาพเต็ม (ถ้า `--draft` ตีกับ V8.2 ให้ระบุ `--v 8.1` หรือ `--v 7` ไปด้วย)
-
-**`--tile` ใส่แค่ 2 ชิ้น** (ตึกแถบยาว กับ พื้น) เพราะสองอันนี้ต้องต่อกันได้ไม่มีรอยต่อ
-ชิ้นอื่นห้ามใส่ เดี๋ยวมันตัดขอบทิ้ง
-
-## 1. เจนตอนนี้ได้เลย — 12 ชิ้นที่ไม่ผูกกับผังด่าน
-
-ชิ้นพวกนี้ต้องมีแน่นอนไม่ว่าผังด่านจะออกมาหน้าตายังไง เจนคู่ขนานไปกับที่
-Mat ออกแบบภูมิทัศน์ได้เลย ส่วนที่ผูกกับผังจริงๆ ผมแยกไว้ข้อ 3
-
-**เลือกสไตล์เดียวแล้วใช้อันนั้นทั้ง 12 ชิ้น ห้ามผสม**
+**เลือกสไตล์เดียวใช้ทั้งชุด ห้ามผสม** (รอ Mat เลือก ก/ข/ค จาก `tools/style-compare.png`)
 
 ---
 
@@ -50,76 +31,75 @@ Mat ออกแบบภูมิทัศน์ได้เลย ส่วน
 **1. ตึกกรุงเทพแถบยาว (ตัวตั้งต้น)** → `sky-city.png`
 
 ```
-bangkok city skyline strip, mixed shophouses and slim condo towers, seamless repeating horizontally, flat 2D side-scrolling platformer game asset, pure black and white, orthographic side view, no perspective, isolated on plain white background, thick readable silhouette, swiss graphic design, flat geometric vector shapes, hard clean edges, uniform stroke weight, bauhaus poster --ar 3:1 --tile --raw --s 50 --c 0 --no color, colour, grey gradient, soft shading, cast shadow, ground plane, text, letters, numbers, watermark, signature, 3d render, photorealistic, frame, border, multiple objects
+background skyline strip for a platformer level: a row of bangkok shophouses and slim condo towers simplified into chunky rectangular blocks, tiny square windows, rooftop water tanks, air-conditioner boxes and antennas, varied heights making a playful rhythm, drawn to sit far behind the action the way hills sit behind super mario bros world 1-1, seamless when tiled sideways, one continuous horizontal strip, repeating rhythm, plain white background, 2D side-scrolling platformer level prop in the spirit of classic 1985 Super Mario Bros, black ink on pure white, flat orthographic side view, bold chunky cartoon shapes with thick confident outlines, friendly and readable like a video game sprite, rendered as swiss graphic design: flat geometric vector shapes, hard clean edges, uniform stroke weight, bauhaus poster discipline --ar 3:1 --tile --raw --s 50 --c 0 --no color, gradient, soft shading, cast shadow, text, watermark, 3d render, photo, frame, people, characters
 ```
 
-↑ **เจนอันนี้ให้ได้ก่อน** แล้วก็อป URL ใบที่ชอบ
-ไปต่อท้ายอันที่ 2–12 ว่า `--sref <URL> --sw 100`
+↑ **ตัวตั้งต้นของทั้งชุด** เจนให้ได้ก่อน แล้วเอา URL ไปเป็น `--sref` ของที่เหลือ
 
 **2. พื้น 1 ช่อง** → `tile-ground.png`
 
 ```
-single square ground tile, flat top surface with packed soil below, seamless on all sides, flat 2D side-scrolling platformer game asset, pure black and white, orthographic side view, no perspective, isolated on plain white background, thick readable silhouette, swiss graphic design, flat geometric vector shapes, hard clean edges, uniform stroke weight, bauhaus poster --ar 1:1 --tile --raw --s 50 --c 0 --no color, colour, grey gradient, soft shading, cast shadow, text, letters, numbers, watermark, signature, 3d render, photorealistic, frame, border, multiple objects
+one square ground tile exactly in the role of the super mario bros ground block: a crisp heavy top edge line where a character walks, packed soil with small pebbles and cracks filling the body below, chunky and modular, edges designed to repeat seamlessly on all sides, single object only, centered, filling most of the frame, nothing cropped, plain white background, 2D side-scrolling platformer level prop in the spirit of classic 1985 Super Mario Bros, black ink on pure white, flat orthographic side view, bold chunky cartoon shapes with thick confident outlines, friendly and readable like a video game sprite, rendered as swiss graphic design: flat geometric vector shapes, hard clean edges, uniform stroke weight, bauhaus poster discipline --ar 1:1 --tile --raw --s 50 --c 0 --no color, gradient, soft shading, cast shadow, text, watermark, 3d render, photo, frame, people, characters
 ```
 
 **3. เมฆเล็ก** → `cloud-s.png`
 
 ```
-one small simple cloud, two rounded lobes, solid outline, flat 2D side-scrolling platformer game asset, pure black and white, orthographic side view, no perspective, isolated on plain white background, thick readable silhouette, swiss graphic design, flat geometric vector shapes, hard clean edges, uniform stroke weight, bauhaus poster --ar 3:2 --raw --s 50 --c 0 --no color, colour, grey gradient, soft shading, cast shadow, ground plane, text, letters, numbers, watermark, signature, 3d render, photorealistic, frame, border, multiple objects
+one small cloud in the exact spirit of the classic super mario bros cloud sprite: two plump round lobes touching to form a scalloped top, perfectly flat base, one bold continuous outline, puffy and friendly, single object only, centered, filling most of the frame, nothing cropped, plain white background, 2D side-scrolling platformer level prop in the spirit of classic 1985 Super Mario Bros, black ink on pure white, flat orthographic side view, bold chunky cartoon shapes with thick confident outlines, friendly and readable like a video game sprite, rendered as swiss graphic design: flat geometric vector shapes, hard clean edges, uniform stroke weight, bauhaus poster discipline --ar 3:2 --raw --s 50 --c 0 --no color, gradient, soft shading, cast shadow, text, watermark, 3d render, photo, frame, people, characters
 ```
 
 **4. เมฆกลาง** → `cloud-m.png`
 
 ```
-one medium simple cloud, three rounded lobes, solid outline, flat 2D side-scrolling platformer game asset, pure black and white, orthographic side view, no perspective, isolated on plain white background, thick readable silhouette, swiss graphic design, flat geometric vector shapes, hard clean edges, uniform stroke weight, bauhaus poster --ar 2:1 --raw --s 50 --c 0 --no color, colour, grey gradient, soft shading, cast shadow, ground plane, text, letters, numbers, watermark, signature, 3d render, photorealistic, frame, border, multiple objects
+one medium cloud in the exact spirit of the classic super mario bros cloud sprite: three plump round lobes in a row forming a scalloped top, perfectly flat base, one bold continuous outline, puffy and friendly, single object only, centered, filling most of the frame, nothing cropped, plain white background, 2D side-scrolling platformer level prop in the spirit of classic 1985 Super Mario Bros, black ink on pure white, flat orthographic side view, bold chunky cartoon shapes with thick confident outlines, friendly and readable like a video game sprite, rendered as swiss graphic design: flat geometric vector shapes, hard clean edges, uniform stroke weight, bauhaus poster discipline --ar 2:1 --raw --s 50 --c 0 --no color, gradient, soft shading, cast shadow, text, watermark, 3d render, photo, frame, people, characters
 ```
 
 **5. เมฆใหญ่** → `cloud-l.png`
 
 ```
-one large simple cloud, four rounded lobes in a row, solid outline, flat 2D side-scrolling platformer game asset, pure black and white, orthographic side view, no perspective, isolated on plain white background, thick readable silhouette, swiss graphic design, flat geometric vector shapes, hard clean edges, uniform stroke weight, bauhaus poster --ar 3:1 --raw --s 50 --c 0 --no color, colour, grey gradient, soft shading, cast shadow, ground plane, text, letters, numbers, watermark, signature, 3d render, photorealistic, frame, border, multiple objects
+one long cloud in the exact spirit of the classic super mario bros cloud sprite: four plump round lobes in a row forming a scalloped top, perfectly flat base, one bold continuous outline, stretched wide and friendly, single object only, centered, filling most of the frame, nothing cropped, plain white background, 2D side-scrolling platformer level prop in the spirit of classic 1985 Super Mario Bros, black ink on pure white, flat orthographic side view, bold chunky cartoon shapes with thick confident outlines, friendly and readable like a video game sprite, rendered as swiss graphic design: flat geometric vector shapes, hard clean edges, uniform stroke weight, bauhaus poster discipline --ar 3:1 --raw --s 50 --c 0 --no color, gradient, soft shading, cast shadow, text, watermark, 3d render, photo, frame, people, characters
 ```
 
 **6. พุ่มไม้** → `bush.png`
 
 ```
-one low bush with three rounded lobes, exactly the same silhouette as a cloud but solid filled and sitting flat at the bottom, flat 2D side-scrolling platformer game asset, pure black and white, orthographic side view, no perspective, isolated on plain white background, thick readable silhouette, swiss graphic design, flat geometric vector shapes, hard clean edges, uniform stroke weight, bauhaus poster --ar 2:1 --raw --s 50 --c 0 --no color, colour, grey gradient, soft shading, cast shadow, ground plane, text, letters, numbers, watermark, signature, 3d render, photorealistic, frame, border, multiple objects
+one ground bush borrowing the famous super mario bros trick where the bush is the same sprite as the cloud: identical scalloped silhouette of three round lobes, but solid filled black and sitting flat on the ground line instead of floating, single object only, centered, filling most of the frame, nothing cropped, plain white background, 2D side-scrolling platformer level prop in the spirit of classic 1985 Super Mario Bros, black ink on pure white, flat orthographic side view, bold chunky cartoon shapes with thick confident outlines, friendly and readable like a video game sprite, rendered as swiss graphic design: flat geometric vector shapes, hard clean edges, uniform stroke weight, bauhaus poster discipline --ar 2:1 --raw --s 50 --c 0 --no color, gradient, soft shading, cast shadow, text, watermark, 3d render, photo, frame, people, characters
 ```
 
 **7. เนินเล็ก** → `hill-s.png`
 
 ```
-one small smooth rounded hill mound, flat bottom edge, flat 2D side-scrolling platformer game asset, pure black and white, orthographic side view, no perspective, isolated on plain white background, thick readable silhouette, swiss graphic design, flat geometric vector shapes, hard clean edges, uniform stroke weight, bauhaus poster --ar 2:1 --raw --s 50 --c 0 --no color, colour, grey gradient, soft shading, cast shadow, ground plane, text, letters, numbers, watermark, signature, 3d render, photorealistic, frame, border, multiple objects
+one small background hill exactly in the role of the super mario bros world 1-1 hill: a single smooth dome with a perfectly flat base, one bold outline, calm and simple, meant to sit in the far background layer, single object only, centered, filling most of the frame, nothing cropped, plain white background, 2D side-scrolling platformer level prop in the spirit of classic 1985 Super Mario Bros, black ink on pure white, flat orthographic side view, bold chunky cartoon shapes with thick confident outlines, friendly and readable like a video game sprite, rendered as swiss graphic design: flat geometric vector shapes, hard clean edges, uniform stroke weight, bauhaus poster discipline --ar 2:1 --raw --s 50 --c 0 --no color, gradient, soft shading, cast shadow, text, watermark, 3d render, photo, frame, people, characters
 ```
 
 **8. เนินใหญ่** → `hill-l.png`
 
 ```
-one large smooth rounded hill mound, same silhouette as a small hill but wider, two small dark notches near the base, flat bottom edge, flat 2D side-scrolling platformer game asset, pure black and white, orthographic side view, no perspective, isolated on plain white background, thick readable silhouette, swiss graphic design, flat geometric vector shapes, hard clean edges, uniform stroke weight, bauhaus poster --ar 2:1 --raw --s 50 --c 0 --no color, colour, grey gradient, soft shading, cast shadow, ground plane, text, letters, numbers, watermark, signature, 3d render, photorealistic, frame, border, multiple objects
+one large background hill exactly in the role of the super mario bros world 1-1 big hill: the same smooth dome silhouette as a small hill but stretched wider and taller, two small dark oval marks on the slope, perfectly flat base, one bold outline, single object only, centered, filling most of the frame, nothing cropped, plain white background, 2D side-scrolling platformer level prop in the spirit of classic 1985 Super Mario Bros, black ink on pure white, flat orthographic side view, bold chunky cartoon shapes with thick confident outlines, friendly and readable like a video game sprite, rendered as swiss graphic design: flat geometric vector shapes, hard clean edges, uniform stroke weight, bauhaus poster discipline --ar 2:1 --raw --s 50 --c 0 --no color, gradient, soft shading, cast shadow, text, watermark, 3d render, photo, frame, people, characters
 ```
 
 **9. อิฐ** → `block-brick.png`
 
 ```
-one square brick block, simple even brick pattern, chunky border, flat 2D side-scrolling platformer game asset, pure black and white, orthographic side view, no perspective, isolated on plain white background, thick readable silhouette, swiss graphic design, flat geometric vector shapes, hard clean edges, uniform stroke weight, bauhaus poster --ar 1:1 --raw --s 50 --c 0 --no color, colour, grey gradient, soft shading, cast shadow, ground plane, text, letters, numbers, watermark, signature, 3d render, photorealistic, frame, border, multiple objects
+one breakable brick block exactly in the role of the super mario bros brick: a square tile filled with a simple even brick bond pattern, thick mortar lines, chunky beveled border, looks satisfying to smash from below, single object only, centered, filling most of the frame, nothing cropped, plain white background, 2D side-scrolling platformer level prop in the spirit of classic 1985 Super Mario Bros, black ink on pure white, flat orthographic side view, bold chunky cartoon shapes with thick confident outlines, friendly and readable like a video game sprite, rendered as swiss graphic design: flat geometric vector shapes, hard clean edges, uniform stroke weight, bauhaus poster discipline --ar 1:1 --raw --s 50 --c 0 --no color, gradient, soft shading, cast shadow, text, watermark, 3d render, photo, frame, people, characters
 ```
 
-**10. บล็อกรางวัล** → `block-q.png`
+**10. บล็อกรางวัล ?** → `block-q.png`
 
 ```
-one floating cube block with a bold question mark carved on its face, small rivets in the four corners, flat 2D side-scrolling platformer game asset, pure black and white, orthographic side view, no perspective, isolated on plain white background, thick readable silhouette, swiss graphic design, flat geometric vector shapes, hard clean edges, uniform stroke weight, bauhaus poster --ar 1:1 --raw --s 50 --c 0 --no color, colour, grey gradient, soft shading, cast shadow, ground plane, text, letters, numbers, watermark, signature, 3d render, photorealistic, frame, border, multiple objects
+one reward block directly inspired by the super mario bros question block: a floating square block with a fat bold question mark carved dead center on its face, one round rivet in each of the four corners, chunky beveled edges, looks like it begs to be bumped from below, single object only, centered, filling most of the frame, nothing cropped, plain white background, 2D side-scrolling platformer level prop in the spirit of classic 1985 Super Mario Bros, black ink on pure white, flat orthographic side view, bold chunky cartoon shapes with thick confident outlines, friendly and readable like a video game sprite, rendered as swiss graphic design: flat geometric vector shapes, hard clean edges, uniform stroke weight, bauhaus poster discipline --ar 1:1 --raw --s 50 --c 0 --no color, gradient, soft shading, cast shadow, text, watermark, 3d render, photo, frame, people, characters
 ```
 
 **11. ขอบหลุม** → `pit-edge.png`
 
 ```
-cross section of a broken floor edge, jagged break on the right side, soil layer below, flat 2D side-scrolling platformer game asset, pure black and white, orthographic side view, no perspective, isolated on plain white background, thick readable silhouette, swiss graphic design, flat geometric vector shapes, hard clean edges, uniform stroke weight, bauhaus poster --ar 1:1 --raw --s 50 --c 0 --no color, colour, grey gradient, soft shading, cast shadow, text, letters, numbers, watermark, signature, 3d render, photorealistic, frame, border, multiple objects
+side cross-section of a platformer floor breaking off into a bottomless pit, exactly like the pit edges of super mario bros: crisp walkable top line ending in a jagged vertical break on the right side, soil and pebble layers visible in the cut face, single object only, centered, filling most of the frame, nothing cropped, plain white background, 2D side-scrolling platformer level prop in the spirit of classic 1985 Super Mario Bros, black ink on pure white, flat orthographic side view, bold chunky cartoon shapes with thick confident outlines, friendly and readable like a video game sprite, rendered as swiss graphic design: flat geometric vector shapes, hard clean edges, uniform stroke weight, bauhaus poster discipline --ar 1:1 --raw --s 50 --c 0 --no color, gradient, soft shading, cast shadow, text, watermark, 3d render, photo, frame, people, characters
 ```
 
 **12. เสาธง** → `flagpole.png`
 
 ```
-one tall thin flagpole with a small sphere on top, bare pole, no cloth flag, flat 2D side-scrolling platformer game asset, pure black and white, orthographic side view, no perspective, isolated on plain white background, thick readable silhouette, swiss graphic design, flat geometric vector shapes, hard clean edges, uniform stroke weight, bauhaus poster --ar 1:4 --raw --s 50 --c 0 --no color, colour, grey gradient, soft shading, cast shadow, ground plane, text, letters, numbers, watermark, signature, 3d render, photorealistic, frame, border, multiple objects
+one goal flagpole exactly in the role of the super mario bros end-of-level flagpole: a very tall thin pole standing on a small block base, a solid ball on the very top, bare pole with no cloth flag, proud and vertical, single object only, centered, filling most of the frame, nothing cropped, plain white background, 2D side-scrolling platformer level prop in the spirit of classic 1985 Super Mario Bros, black ink on pure white, flat orthographic side view, bold chunky cartoon shapes with thick confident outlines, friendly and readable like a video game sprite, rendered as swiss graphic design: flat geometric vector shapes, hard clean edges, uniform stroke weight, bauhaus poster discipline --ar 1:4 --raw --s 50 --c 0 --no color, gradient, soft shading, cast shadow, text, watermark, 3d render, photo, frame, people, characters
 ```
 
 ---
@@ -129,76 +109,75 @@ one tall thin flagpole with a small sphere on top, bare pole, no cloth flag, fla
 **1. ตึกกรุงเทพแถบยาว (ตัวตั้งต้น)** → `sky-city.png`
 
 ```
-bangkok city skyline strip, mixed shophouses and slim condo towers, seamless repeating horizontally, flat 2D side-scrolling platformer game asset, pure black and white, orthographic side view, no perspective, isolated on plain white background, thick readable silhouette, risograph print, coarse halftone dot shading, screenprint grain, slightly misregistered ink --ar 3:1 --tile --raw --s 50 --c 0 --no color, colour, grey gradient, soft shading, cast shadow, ground plane, text, letters, numbers, watermark, signature, 3d render, photorealistic, frame, border, multiple objects
+background skyline strip for a platformer level: a row of bangkok shophouses and slim condo towers simplified into chunky rectangular blocks, tiny square windows, rooftop water tanks, air-conditioner boxes and antennas, varied heights making a playful rhythm, drawn to sit far behind the action the way hills sit behind super mario bros world 1-1, seamless when tiled sideways, one continuous horizontal strip, repeating rhythm, plain white background, 2D side-scrolling platformer level prop in the spirit of classic 1985 Super Mario Bros, black ink on pure white, flat orthographic side view, bold chunky cartoon shapes with thick confident outlines, friendly and readable like a video game sprite, rendered as a risograph print: coarse halftone dot shading, screenprint grain, slightly misregistered ink layers --ar 3:1 --tile --raw --s 50 --c 0 --no color, gradient, soft shading, cast shadow, text, watermark, 3d render, photo, frame, people, characters
 ```
 
-↑ **เจนอันนี้ให้ได้ก่อน** แล้วก็อป URL ใบที่ชอบ
-ไปต่อท้ายอันที่ 2–12 ว่า `--sref <URL> --sw 100`
+↑ **ตัวตั้งต้นของทั้งชุด** เจนให้ได้ก่อน แล้วเอา URL ไปเป็น `--sref` ของที่เหลือ
 
 **2. พื้น 1 ช่อง** → `tile-ground.png`
 
 ```
-single square ground tile, flat top surface with packed soil below, seamless on all sides, flat 2D side-scrolling platformer game asset, pure black and white, orthographic side view, no perspective, isolated on plain white background, thick readable silhouette, risograph print, coarse halftone dot shading, screenprint grain, slightly misregistered ink --ar 1:1 --tile --raw --s 50 --c 0 --no color, colour, grey gradient, soft shading, cast shadow, text, letters, numbers, watermark, signature, 3d render, photorealistic, frame, border, multiple objects
+one square ground tile exactly in the role of the super mario bros ground block: a crisp heavy top edge line where a character walks, packed soil with small pebbles and cracks filling the body below, chunky and modular, edges designed to repeat seamlessly on all sides, single object only, centered, filling most of the frame, nothing cropped, plain white background, 2D side-scrolling platformer level prop in the spirit of classic 1985 Super Mario Bros, black ink on pure white, flat orthographic side view, bold chunky cartoon shapes with thick confident outlines, friendly and readable like a video game sprite, rendered as a risograph print: coarse halftone dot shading, screenprint grain, slightly misregistered ink layers --ar 1:1 --tile --raw --s 50 --c 0 --no color, gradient, soft shading, cast shadow, text, watermark, 3d render, photo, frame, people, characters
 ```
 
 **3. เมฆเล็ก** → `cloud-s.png`
 
 ```
-one small simple cloud, two rounded lobes, solid outline, flat 2D side-scrolling platformer game asset, pure black and white, orthographic side view, no perspective, isolated on plain white background, thick readable silhouette, risograph print, coarse halftone dot shading, screenprint grain, slightly misregistered ink --ar 3:2 --raw --s 50 --c 0 --no color, colour, grey gradient, soft shading, cast shadow, ground plane, text, letters, numbers, watermark, signature, 3d render, photorealistic, frame, border, multiple objects
+one small cloud in the exact spirit of the classic super mario bros cloud sprite: two plump round lobes touching to form a scalloped top, perfectly flat base, one bold continuous outline, puffy and friendly, single object only, centered, filling most of the frame, nothing cropped, plain white background, 2D side-scrolling platformer level prop in the spirit of classic 1985 Super Mario Bros, black ink on pure white, flat orthographic side view, bold chunky cartoon shapes with thick confident outlines, friendly and readable like a video game sprite, rendered as a risograph print: coarse halftone dot shading, screenprint grain, slightly misregistered ink layers --ar 3:2 --raw --s 50 --c 0 --no color, gradient, soft shading, cast shadow, text, watermark, 3d render, photo, frame, people, characters
 ```
 
 **4. เมฆกลาง** → `cloud-m.png`
 
 ```
-one medium simple cloud, three rounded lobes, solid outline, flat 2D side-scrolling platformer game asset, pure black and white, orthographic side view, no perspective, isolated on plain white background, thick readable silhouette, risograph print, coarse halftone dot shading, screenprint grain, slightly misregistered ink --ar 2:1 --raw --s 50 --c 0 --no color, colour, grey gradient, soft shading, cast shadow, ground plane, text, letters, numbers, watermark, signature, 3d render, photorealistic, frame, border, multiple objects
+one medium cloud in the exact spirit of the classic super mario bros cloud sprite: three plump round lobes in a row forming a scalloped top, perfectly flat base, one bold continuous outline, puffy and friendly, single object only, centered, filling most of the frame, nothing cropped, plain white background, 2D side-scrolling platformer level prop in the spirit of classic 1985 Super Mario Bros, black ink on pure white, flat orthographic side view, bold chunky cartoon shapes with thick confident outlines, friendly and readable like a video game sprite, rendered as a risograph print: coarse halftone dot shading, screenprint grain, slightly misregistered ink layers --ar 2:1 --raw --s 50 --c 0 --no color, gradient, soft shading, cast shadow, text, watermark, 3d render, photo, frame, people, characters
 ```
 
 **5. เมฆใหญ่** → `cloud-l.png`
 
 ```
-one large simple cloud, four rounded lobes in a row, solid outline, flat 2D side-scrolling platformer game asset, pure black and white, orthographic side view, no perspective, isolated on plain white background, thick readable silhouette, risograph print, coarse halftone dot shading, screenprint grain, slightly misregistered ink --ar 3:1 --raw --s 50 --c 0 --no color, colour, grey gradient, soft shading, cast shadow, ground plane, text, letters, numbers, watermark, signature, 3d render, photorealistic, frame, border, multiple objects
+one long cloud in the exact spirit of the classic super mario bros cloud sprite: four plump round lobes in a row forming a scalloped top, perfectly flat base, one bold continuous outline, stretched wide and friendly, single object only, centered, filling most of the frame, nothing cropped, plain white background, 2D side-scrolling platformer level prop in the spirit of classic 1985 Super Mario Bros, black ink on pure white, flat orthographic side view, bold chunky cartoon shapes with thick confident outlines, friendly and readable like a video game sprite, rendered as a risograph print: coarse halftone dot shading, screenprint grain, slightly misregistered ink layers --ar 3:1 --raw --s 50 --c 0 --no color, gradient, soft shading, cast shadow, text, watermark, 3d render, photo, frame, people, characters
 ```
 
 **6. พุ่มไม้** → `bush.png`
 
 ```
-one low bush with three rounded lobes, exactly the same silhouette as a cloud but solid filled and sitting flat at the bottom, flat 2D side-scrolling platformer game asset, pure black and white, orthographic side view, no perspective, isolated on plain white background, thick readable silhouette, risograph print, coarse halftone dot shading, screenprint grain, slightly misregistered ink --ar 2:1 --raw --s 50 --c 0 --no color, colour, grey gradient, soft shading, cast shadow, ground plane, text, letters, numbers, watermark, signature, 3d render, photorealistic, frame, border, multiple objects
+one ground bush borrowing the famous super mario bros trick where the bush is the same sprite as the cloud: identical scalloped silhouette of three round lobes, but solid filled black and sitting flat on the ground line instead of floating, single object only, centered, filling most of the frame, nothing cropped, plain white background, 2D side-scrolling platformer level prop in the spirit of classic 1985 Super Mario Bros, black ink on pure white, flat orthographic side view, bold chunky cartoon shapes with thick confident outlines, friendly and readable like a video game sprite, rendered as a risograph print: coarse halftone dot shading, screenprint grain, slightly misregistered ink layers --ar 2:1 --raw --s 50 --c 0 --no color, gradient, soft shading, cast shadow, text, watermark, 3d render, photo, frame, people, characters
 ```
 
 **7. เนินเล็ก** → `hill-s.png`
 
 ```
-one small smooth rounded hill mound, flat bottom edge, flat 2D side-scrolling platformer game asset, pure black and white, orthographic side view, no perspective, isolated on plain white background, thick readable silhouette, risograph print, coarse halftone dot shading, screenprint grain, slightly misregistered ink --ar 2:1 --raw --s 50 --c 0 --no color, colour, grey gradient, soft shading, cast shadow, ground plane, text, letters, numbers, watermark, signature, 3d render, photorealistic, frame, border, multiple objects
+one small background hill exactly in the role of the super mario bros world 1-1 hill: a single smooth dome with a perfectly flat base, one bold outline, calm and simple, meant to sit in the far background layer, single object only, centered, filling most of the frame, nothing cropped, plain white background, 2D side-scrolling platformer level prop in the spirit of classic 1985 Super Mario Bros, black ink on pure white, flat orthographic side view, bold chunky cartoon shapes with thick confident outlines, friendly and readable like a video game sprite, rendered as a risograph print: coarse halftone dot shading, screenprint grain, slightly misregistered ink layers --ar 2:1 --raw --s 50 --c 0 --no color, gradient, soft shading, cast shadow, text, watermark, 3d render, photo, frame, people, characters
 ```
 
 **8. เนินใหญ่** → `hill-l.png`
 
 ```
-one large smooth rounded hill mound, same silhouette as a small hill but wider, two small dark notches near the base, flat bottom edge, flat 2D side-scrolling platformer game asset, pure black and white, orthographic side view, no perspective, isolated on plain white background, thick readable silhouette, risograph print, coarse halftone dot shading, screenprint grain, slightly misregistered ink --ar 2:1 --raw --s 50 --c 0 --no color, colour, grey gradient, soft shading, cast shadow, ground plane, text, letters, numbers, watermark, signature, 3d render, photorealistic, frame, border, multiple objects
+one large background hill exactly in the role of the super mario bros world 1-1 big hill: the same smooth dome silhouette as a small hill but stretched wider and taller, two small dark oval marks on the slope, perfectly flat base, one bold outline, single object only, centered, filling most of the frame, nothing cropped, plain white background, 2D side-scrolling platformer level prop in the spirit of classic 1985 Super Mario Bros, black ink on pure white, flat orthographic side view, bold chunky cartoon shapes with thick confident outlines, friendly and readable like a video game sprite, rendered as a risograph print: coarse halftone dot shading, screenprint grain, slightly misregistered ink layers --ar 2:1 --raw --s 50 --c 0 --no color, gradient, soft shading, cast shadow, text, watermark, 3d render, photo, frame, people, characters
 ```
 
 **9. อิฐ** → `block-brick.png`
 
 ```
-one square brick block, simple even brick pattern, chunky border, flat 2D side-scrolling platformer game asset, pure black and white, orthographic side view, no perspective, isolated on plain white background, thick readable silhouette, risograph print, coarse halftone dot shading, screenprint grain, slightly misregistered ink --ar 1:1 --raw --s 50 --c 0 --no color, colour, grey gradient, soft shading, cast shadow, ground plane, text, letters, numbers, watermark, signature, 3d render, photorealistic, frame, border, multiple objects
+one breakable brick block exactly in the role of the super mario bros brick: a square tile filled with a simple even brick bond pattern, thick mortar lines, chunky beveled border, looks satisfying to smash from below, single object only, centered, filling most of the frame, nothing cropped, plain white background, 2D side-scrolling platformer level prop in the spirit of classic 1985 Super Mario Bros, black ink on pure white, flat orthographic side view, bold chunky cartoon shapes with thick confident outlines, friendly and readable like a video game sprite, rendered as a risograph print: coarse halftone dot shading, screenprint grain, slightly misregistered ink layers --ar 1:1 --raw --s 50 --c 0 --no color, gradient, soft shading, cast shadow, text, watermark, 3d render, photo, frame, people, characters
 ```
 
-**10. บล็อกรางวัล** → `block-q.png`
+**10. บล็อกรางวัล ?** → `block-q.png`
 
 ```
-one floating cube block with a bold question mark carved on its face, small rivets in the four corners, flat 2D side-scrolling platformer game asset, pure black and white, orthographic side view, no perspective, isolated on plain white background, thick readable silhouette, risograph print, coarse halftone dot shading, screenprint grain, slightly misregistered ink --ar 1:1 --raw --s 50 --c 0 --no color, colour, grey gradient, soft shading, cast shadow, ground plane, text, letters, numbers, watermark, signature, 3d render, photorealistic, frame, border, multiple objects
+one reward block directly inspired by the super mario bros question block: a floating square block with a fat bold question mark carved dead center on its face, one round rivet in each of the four corners, chunky beveled edges, looks like it begs to be bumped from below, single object only, centered, filling most of the frame, nothing cropped, plain white background, 2D side-scrolling platformer level prop in the spirit of classic 1985 Super Mario Bros, black ink on pure white, flat orthographic side view, bold chunky cartoon shapes with thick confident outlines, friendly and readable like a video game sprite, rendered as a risograph print: coarse halftone dot shading, screenprint grain, slightly misregistered ink layers --ar 1:1 --raw --s 50 --c 0 --no color, gradient, soft shading, cast shadow, text, watermark, 3d render, photo, frame, people, characters
 ```
 
 **11. ขอบหลุม** → `pit-edge.png`
 
 ```
-cross section of a broken floor edge, jagged break on the right side, soil layer below, flat 2D side-scrolling platformer game asset, pure black and white, orthographic side view, no perspective, isolated on plain white background, thick readable silhouette, risograph print, coarse halftone dot shading, screenprint grain, slightly misregistered ink --ar 1:1 --raw --s 50 --c 0 --no color, colour, grey gradient, soft shading, cast shadow, text, letters, numbers, watermark, signature, 3d render, photorealistic, frame, border, multiple objects
+side cross-section of a platformer floor breaking off into a bottomless pit, exactly like the pit edges of super mario bros: crisp walkable top line ending in a jagged vertical break on the right side, soil and pebble layers visible in the cut face, single object only, centered, filling most of the frame, nothing cropped, plain white background, 2D side-scrolling platformer level prop in the spirit of classic 1985 Super Mario Bros, black ink on pure white, flat orthographic side view, bold chunky cartoon shapes with thick confident outlines, friendly and readable like a video game sprite, rendered as a risograph print: coarse halftone dot shading, screenprint grain, slightly misregistered ink layers --ar 1:1 --raw --s 50 --c 0 --no color, gradient, soft shading, cast shadow, text, watermark, 3d render, photo, frame, people, characters
 ```
 
 **12. เสาธง** → `flagpole.png`
 
 ```
-one tall thin flagpole with a small sphere on top, bare pole, no cloth flag, flat 2D side-scrolling platformer game asset, pure black and white, orthographic side view, no perspective, isolated on plain white background, thick readable silhouette, risograph print, coarse halftone dot shading, screenprint grain, slightly misregistered ink --ar 1:4 --raw --s 50 --c 0 --no color, colour, grey gradient, soft shading, cast shadow, ground plane, text, letters, numbers, watermark, signature, 3d render, photorealistic, frame, border, multiple objects
+one goal flagpole exactly in the role of the super mario bros end-of-level flagpole: a very tall thin pole standing on a small block base, a solid ball on the very top, bare pole with no cloth flag, proud and vertical, single object only, centered, filling most of the frame, nothing cropped, plain white background, 2D side-scrolling platformer level prop in the spirit of classic 1985 Super Mario Bros, black ink on pure white, flat orthographic side view, bold chunky cartoon shapes with thick confident outlines, friendly and readable like a video game sprite, rendered as a risograph print: coarse halftone dot shading, screenprint grain, slightly misregistered ink layers --ar 1:4 --raw --s 50 --c 0 --no color, gradient, soft shading, cast shadow, text, watermark, 3d render, photo, frame, people, characters
 ```
 
 ---
@@ -208,134 +187,138 @@ one tall thin flagpole with a small sphere on top, bare pole, no cloth flag, fla
 **1. ตึกกรุงเทพแถบยาว (ตัวตั้งต้น)** → `sky-city.png`
 
 ```
-bangkok city skyline strip, mixed shophouses and slim condo towers, seamless repeating horizontally, flat 2D side-scrolling platformer game asset, pure black and white, orthographic side view, no perspective, isolated on plain white background, thick readable silhouette, hand-inked linocut, uneven wobbly ink line, crosshatch shading, woodblock print --ar 3:1 --tile --raw --s 50 --c 0 --no color, colour, grey gradient, soft shading, cast shadow, ground plane, text, letters, numbers, watermark, signature, 3d render, photorealistic, frame, border, multiple objects
+background skyline strip for a platformer level: a row of bangkok shophouses and slim condo towers simplified into chunky rectangular blocks, tiny square windows, rooftop water tanks, air-conditioner boxes and antennas, varied heights making a playful rhythm, drawn to sit far behind the action the way hills sit behind super mario bros world 1-1, seamless when tiled sideways, one continuous horizontal strip, repeating rhythm, plain white background, 2D side-scrolling platformer level prop in the spirit of classic 1985 Super Mario Bros, black ink on pure white, flat orthographic side view, bold chunky cartoon shapes with thick confident outlines, friendly and readable like a video game sprite, rendered as a hand-inked linocut: uneven wobbly ink lines, crosshatch shading, woodblock print texture --ar 3:1 --tile --raw --s 50 --c 0 --no color, gradient, soft shading, cast shadow, text, watermark, 3d render, photo, frame, people, characters
 ```
 
-↑ **เจนอันนี้ให้ได้ก่อน** แล้วก็อป URL ใบที่ชอบ
-ไปต่อท้ายอันที่ 2–12 ว่า `--sref <URL> --sw 100`
+↑ **ตัวตั้งต้นของทั้งชุด** เจนให้ได้ก่อน แล้วเอา URL ไปเป็น `--sref` ของที่เหลือ
 
 **2. พื้น 1 ช่อง** → `tile-ground.png`
 
 ```
-single square ground tile, flat top surface with packed soil below, seamless on all sides, flat 2D side-scrolling platformer game asset, pure black and white, orthographic side view, no perspective, isolated on plain white background, thick readable silhouette, hand-inked linocut, uneven wobbly ink line, crosshatch shading, woodblock print --ar 1:1 --tile --raw --s 50 --c 0 --no color, colour, grey gradient, soft shading, cast shadow, text, letters, numbers, watermark, signature, 3d render, photorealistic, frame, border, multiple objects
+one square ground tile exactly in the role of the super mario bros ground block: a crisp heavy top edge line where a character walks, packed soil with small pebbles and cracks filling the body below, chunky and modular, edges designed to repeat seamlessly on all sides, single object only, centered, filling most of the frame, nothing cropped, plain white background, 2D side-scrolling platformer level prop in the spirit of classic 1985 Super Mario Bros, black ink on pure white, flat orthographic side view, bold chunky cartoon shapes with thick confident outlines, friendly and readable like a video game sprite, rendered as a hand-inked linocut: uneven wobbly ink lines, crosshatch shading, woodblock print texture --ar 1:1 --tile --raw --s 50 --c 0 --no color, gradient, soft shading, cast shadow, text, watermark, 3d render, photo, frame, people, characters
 ```
 
 **3. เมฆเล็ก** → `cloud-s.png`
 
 ```
-one small simple cloud, two rounded lobes, solid outline, flat 2D side-scrolling platformer game asset, pure black and white, orthographic side view, no perspective, isolated on plain white background, thick readable silhouette, hand-inked linocut, uneven wobbly ink line, crosshatch shading, woodblock print --ar 3:2 --raw --s 50 --c 0 --no color, colour, grey gradient, soft shading, cast shadow, ground plane, text, letters, numbers, watermark, signature, 3d render, photorealistic, frame, border, multiple objects
+one small cloud in the exact spirit of the classic super mario bros cloud sprite: two plump round lobes touching to form a scalloped top, perfectly flat base, one bold continuous outline, puffy and friendly, single object only, centered, filling most of the frame, nothing cropped, plain white background, 2D side-scrolling platformer level prop in the spirit of classic 1985 Super Mario Bros, black ink on pure white, flat orthographic side view, bold chunky cartoon shapes with thick confident outlines, friendly and readable like a video game sprite, rendered as a hand-inked linocut: uneven wobbly ink lines, crosshatch shading, woodblock print texture --ar 3:2 --raw --s 50 --c 0 --no color, gradient, soft shading, cast shadow, text, watermark, 3d render, photo, frame, people, characters
 ```
 
 **4. เมฆกลาง** → `cloud-m.png`
 
 ```
-one medium simple cloud, three rounded lobes, solid outline, flat 2D side-scrolling platformer game asset, pure black and white, orthographic side view, no perspective, isolated on plain white background, thick readable silhouette, hand-inked linocut, uneven wobbly ink line, crosshatch shading, woodblock print --ar 2:1 --raw --s 50 --c 0 --no color, colour, grey gradient, soft shading, cast shadow, ground plane, text, letters, numbers, watermark, signature, 3d render, photorealistic, frame, border, multiple objects
+one medium cloud in the exact spirit of the classic super mario bros cloud sprite: three plump round lobes in a row forming a scalloped top, perfectly flat base, one bold continuous outline, puffy and friendly, single object only, centered, filling most of the frame, nothing cropped, plain white background, 2D side-scrolling platformer level prop in the spirit of classic 1985 Super Mario Bros, black ink on pure white, flat orthographic side view, bold chunky cartoon shapes with thick confident outlines, friendly and readable like a video game sprite, rendered as a hand-inked linocut: uneven wobbly ink lines, crosshatch shading, woodblock print texture --ar 2:1 --raw --s 50 --c 0 --no color, gradient, soft shading, cast shadow, text, watermark, 3d render, photo, frame, people, characters
 ```
 
 **5. เมฆใหญ่** → `cloud-l.png`
 
 ```
-one large simple cloud, four rounded lobes in a row, solid outline, flat 2D side-scrolling platformer game asset, pure black and white, orthographic side view, no perspective, isolated on plain white background, thick readable silhouette, hand-inked linocut, uneven wobbly ink line, crosshatch shading, woodblock print --ar 3:1 --raw --s 50 --c 0 --no color, colour, grey gradient, soft shading, cast shadow, ground plane, text, letters, numbers, watermark, signature, 3d render, photorealistic, frame, border, multiple objects
+one long cloud in the exact spirit of the classic super mario bros cloud sprite: four plump round lobes in a row forming a scalloped top, perfectly flat base, one bold continuous outline, stretched wide and friendly, single object only, centered, filling most of the frame, nothing cropped, plain white background, 2D side-scrolling platformer level prop in the spirit of classic 1985 Super Mario Bros, black ink on pure white, flat orthographic side view, bold chunky cartoon shapes with thick confident outlines, friendly and readable like a video game sprite, rendered as a hand-inked linocut: uneven wobbly ink lines, crosshatch shading, woodblock print texture --ar 3:1 --raw --s 50 --c 0 --no color, gradient, soft shading, cast shadow, text, watermark, 3d render, photo, frame, people, characters
 ```
 
 **6. พุ่มไม้** → `bush.png`
 
 ```
-one low bush with three rounded lobes, exactly the same silhouette as a cloud but solid filled and sitting flat at the bottom, flat 2D side-scrolling platformer game asset, pure black and white, orthographic side view, no perspective, isolated on plain white background, thick readable silhouette, hand-inked linocut, uneven wobbly ink line, crosshatch shading, woodblock print --ar 2:1 --raw --s 50 --c 0 --no color, colour, grey gradient, soft shading, cast shadow, ground plane, text, letters, numbers, watermark, signature, 3d render, photorealistic, frame, border, multiple objects
+one ground bush borrowing the famous super mario bros trick where the bush is the same sprite as the cloud: identical scalloped silhouette of three round lobes, but solid filled black and sitting flat on the ground line instead of floating, single object only, centered, filling most of the frame, nothing cropped, plain white background, 2D side-scrolling platformer level prop in the spirit of classic 1985 Super Mario Bros, black ink on pure white, flat orthographic side view, bold chunky cartoon shapes with thick confident outlines, friendly and readable like a video game sprite, rendered as a hand-inked linocut: uneven wobbly ink lines, crosshatch shading, woodblock print texture --ar 2:1 --raw --s 50 --c 0 --no color, gradient, soft shading, cast shadow, text, watermark, 3d render, photo, frame, people, characters
 ```
 
 **7. เนินเล็ก** → `hill-s.png`
 
 ```
-one small smooth rounded hill mound, flat bottom edge, flat 2D side-scrolling platformer game asset, pure black and white, orthographic side view, no perspective, isolated on plain white background, thick readable silhouette, hand-inked linocut, uneven wobbly ink line, crosshatch shading, woodblock print --ar 2:1 --raw --s 50 --c 0 --no color, colour, grey gradient, soft shading, cast shadow, ground plane, text, letters, numbers, watermark, signature, 3d render, photorealistic, frame, border, multiple objects
+one small background hill exactly in the role of the super mario bros world 1-1 hill: a single smooth dome with a perfectly flat base, one bold outline, calm and simple, meant to sit in the far background layer, single object only, centered, filling most of the frame, nothing cropped, plain white background, 2D side-scrolling platformer level prop in the spirit of classic 1985 Super Mario Bros, black ink on pure white, flat orthographic side view, bold chunky cartoon shapes with thick confident outlines, friendly and readable like a video game sprite, rendered as a hand-inked linocut: uneven wobbly ink lines, crosshatch shading, woodblock print texture --ar 2:1 --raw --s 50 --c 0 --no color, gradient, soft shading, cast shadow, text, watermark, 3d render, photo, frame, people, characters
 ```
 
 **8. เนินใหญ่** → `hill-l.png`
 
 ```
-one large smooth rounded hill mound, same silhouette as a small hill but wider, two small dark notches near the base, flat bottom edge, flat 2D side-scrolling platformer game asset, pure black and white, orthographic side view, no perspective, isolated on plain white background, thick readable silhouette, hand-inked linocut, uneven wobbly ink line, crosshatch shading, woodblock print --ar 2:1 --raw --s 50 --c 0 --no color, colour, grey gradient, soft shading, cast shadow, ground plane, text, letters, numbers, watermark, signature, 3d render, photorealistic, frame, border, multiple objects
+one large background hill exactly in the role of the super mario bros world 1-1 big hill: the same smooth dome silhouette as a small hill but stretched wider and taller, two small dark oval marks on the slope, perfectly flat base, one bold outline, single object only, centered, filling most of the frame, nothing cropped, plain white background, 2D side-scrolling platformer level prop in the spirit of classic 1985 Super Mario Bros, black ink on pure white, flat orthographic side view, bold chunky cartoon shapes with thick confident outlines, friendly and readable like a video game sprite, rendered as a hand-inked linocut: uneven wobbly ink lines, crosshatch shading, woodblock print texture --ar 2:1 --raw --s 50 --c 0 --no color, gradient, soft shading, cast shadow, text, watermark, 3d render, photo, frame, people, characters
 ```
 
 **9. อิฐ** → `block-brick.png`
 
 ```
-one square brick block, simple even brick pattern, chunky border, flat 2D side-scrolling platformer game asset, pure black and white, orthographic side view, no perspective, isolated on plain white background, thick readable silhouette, hand-inked linocut, uneven wobbly ink line, crosshatch shading, woodblock print --ar 1:1 --raw --s 50 --c 0 --no color, colour, grey gradient, soft shading, cast shadow, ground plane, text, letters, numbers, watermark, signature, 3d render, photorealistic, frame, border, multiple objects
+one breakable brick block exactly in the role of the super mario bros brick: a square tile filled with a simple even brick bond pattern, thick mortar lines, chunky beveled border, looks satisfying to smash from below, single object only, centered, filling most of the frame, nothing cropped, plain white background, 2D side-scrolling platformer level prop in the spirit of classic 1985 Super Mario Bros, black ink on pure white, flat orthographic side view, bold chunky cartoon shapes with thick confident outlines, friendly and readable like a video game sprite, rendered as a hand-inked linocut: uneven wobbly ink lines, crosshatch shading, woodblock print texture --ar 1:1 --raw --s 50 --c 0 --no color, gradient, soft shading, cast shadow, text, watermark, 3d render, photo, frame, people, characters
 ```
 
-**10. บล็อกรางวัล** → `block-q.png`
+**10. บล็อกรางวัล ?** → `block-q.png`
 
 ```
-one floating cube block with a bold question mark carved on its face, small rivets in the four corners, flat 2D side-scrolling platformer game asset, pure black and white, orthographic side view, no perspective, isolated on plain white background, thick readable silhouette, hand-inked linocut, uneven wobbly ink line, crosshatch shading, woodblock print --ar 1:1 --raw --s 50 --c 0 --no color, colour, grey gradient, soft shading, cast shadow, ground plane, text, letters, numbers, watermark, signature, 3d render, photorealistic, frame, border, multiple objects
+one reward block directly inspired by the super mario bros question block: a floating square block with a fat bold question mark carved dead center on its face, one round rivet in each of the four corners, chunky beveled edges, looks like it begs to be bumped from below, single object only, centered, filling most of the frame, nothing cropped, plain white background, 2D side-scrolling platformer level prop in the spirit of classic 1985 Super Mario Bros, black ink on pure white, flat orthographic side view, bold chunky cartoon shapes with thick confident outlines, friendly and readable like a video game sprite, rendered as a hand-inked linocut: uneven wobbly ink lines, crosshatch shading, woodblock print texture --ar 1:1 --raw --s 50 --c 0 --no color, gradient, soft shading, cast shadow, text, watermark, 3d render, photo, frame, people, characters
 ```
 
 **11. ขอบหลุม** → `pit-edge.png`
 
 ```
-cross section of a broken floor edge, jagged break on the right side, soil layer below, flat 2D side-scrolling platformer game asset, pure black and white, orthographic side view, no perspective, isolated on plain white background, thick readable silhouette, hand-inked linocut, uneven wobbly ink line, crosshatch shading, woodblock print --ar 1:1 --raw --s 50 --c 0 --no color, colour, grey gradient, soft shading, cast shadow, text, letters, numbers, watermark, signature, 3d render, photorealistic, frame, border, multiple objects
+side cross-section of a platformer floor breaking off into a bottomless pit, exactly like the pit edges of super mario bros: crisp walkable top line ending in a jagged vertical break on the right side, soil and pebble layers visible in the cut face, single object only, centered, filling most of the frame, nothing cropped, plain white background, 2D side-scrolling platformer level prop in the spirit of classic 1985 Super Mario Bros, black ink on pure white, flat orthographic side view, bold chunky cartoon shapes with thick confident outlines, friendly and readable like a video game sprite, rendered as a hand-inked linocut: uneven wobbly ink lines, crosshatch shading, woodblock print texture --ar 1:1 --raw --s 50 --c 0 --no color, gradient, soft shading, cast shadow, text, watermark, 3d render, photo, frame, people, characters
 ```
 
 **12. เสาธง** → `flagpole.png`
 
 ```
-one tall thin flagpole with a small sphere on top, bare pole, no cloth flag, flat 2D side-scrolling platformer game asset, pure black and white, orthographic side view, no perspective, isolated on plain white background, thick readable silhouette, hand-inked linocut, uneven wobbly ink line, crosshatch shading, woodblock print --ar 1:4 --raw --s 50 --c 0 --no color, colour, grey gradient, soft shading, cast shadow, ground plane, text, letters, numbers, watermark, signature, 3d render, photorealistic, frame, border, multiple objects
+one goal flagpole exactly in the role of the super mario bros end-of-level flagpole: a very tall thin pole standing on a small block base, a solid ball on the very top, bare pole with no cloth flag, proud and vertical, single object only, centered, filling most of the frame, nothing cropped, plain white background, 2D side-scrolling platformer level prop in the spirit of classic 1985 Super Mario Bros, black ink on pure white, flat orthographic side view, bold chunky cartoon shapes with thick confident outlines, friendly and readable like a video game sprite, rendered as a hand-inked linocut: uneven wobbly ink lines, crosshatch shading, woodblock print texture --ar 1:4 --raw --s 50 --c 0 --no color, gradient, soft shading, cast shadow, text, watermark, 3d render, photo, frame, people, characters
 ```
 
 ---
 
-## 2. ตรวจก่อนเก็บไฟล์
+## 2. เช็คก่อนเก็บ (ตกข้อไหน = เจนใหม่ อย่าฝืนแก้)
 
-ก่อนจะเซฟใบไหนไว้ใช้จริง ดูสามข้อนี้ ถ้าตกข้อใดข้อหนึ่งให้เจนใหม่ อย่าฝืนเอาไปแก้ทีหลัง
+1. พื้นหลังขาวสนิท ไม่มีเงา/เส้นพื้นแถม 2. ไม่มีเทาไล่เฉด (ด่านมืดกลับสีไม่ได้)
+3. หรี่ตาแล้วยังอ่านทรงออก 4. **กลิ่นมาริโอต้องมา** — เมฆต้องพูก้นแบน บล็อกต้องอยากชน
+5. ไม่มีตัวละคร/ตัวมาริโอ/ตัวหนังสือโผล่มาในภาพ
 
-1. **พื้นหลังขาวสนิทไหม** มีเงาตกพื้นหรือมีเส้นพื้นติดมาหรือเปล่า ถ้ามี = ทิ้ง
-2. **มีเทาไล่เฉดไหม** ต้องมีแค่ดำกับขาว (หรือจุดสกรีน) ถ้ามีเทาเนียนๆ = ทิ้ง
-   เพราะครึ่งหลังของเว็บเป็นด่านมืดที่กลับสีทั้งหน้า เทาที่อบมาจะกลับสีไม่ได้
-3. **หรี่ตาแล้วยังรู้ว่าเป็นอะไร** ถ้าต้องเพ่ง = รายละเอียดเยอะเกิน potrace จะออกมาเละ
-
-แปลงเป็น path ก่อนใช้เสมอ **ห้ามเอา PNG ไปแปะตรงๆ**:
-
+ผ่านแล้วแปลงเป็น path เสมอ ห้ามใช้ PNG ตรง:
 ```bash
-convert in.png -colorspace gray -threshold 55%% -negate out.pbm   # ปรับ 55%% ตามภาพ
+convert in.png -colorspace gray -threshold 55% -negate out.pbm
 potrace out.pbm -s -o out.svg --turdsize 8 --alphamax 1
 ```
+เก็บทุกใบที่ `assets\art\raw\` ใบที่เลือกก็อปมา `assets\art\` ชื่อไฟล์ตามหัวข้อเป๊ะ
 
-เก็บใบที่เจนมาทั้งหมดไว้ที่ `Z:\Claude Code\planc-web\assets\art\raw\`
-แล้วก็อปเฉพาะใบที่เลือกออกมาไว้ที่ `assets\art\` **ใช้ชื่อไฟล์ตามตารางเป๊ะ**
-เพราะโค้ดจะอ้างชื่อพวกนี้
-
-## 3. ยังอย่าเพิ่งเจน — 6 ชิ้นที่รอผังด่าน / รอ Mat ตอบ
+## 3. ยังห้ามเจน — 6 ชิ้น (subject ละเอียดเตรียมไว้แล้ว)
 
 | ชิ้น | ไฟล์ | ติดอะไร |
 |---|---|---|
-| บันได 1 บล็อก | `step.png` | ผังด่าน |
+| บันได 1 บล็อก | `step.png` | ผังด่าน (CONTENT-MAP) |
 | เหรียญ | `coin.png` | ยังไม่ตัดสินว่ามีของเก็บไหม |
-| อุปสรรคสูง | `stack.png` | ลิสต์บริการ |
-| ศัตรู | `foe.png` | รอ Mat ตอบว่ามีศัตรูไหม |
+| อุปสรรคสูง (กองแฟ้ม) | `stack.png` | ลิสต์บริการจาก BMC |
+| ศัตรู (นาฬิกาปลุก) | `foe.png` | รอ Mat ตอบ: มีศัตรูไหม |
 | ศัตรูโดนเหยียบ | `foe-flat.png` | รอข้อบน |
-| อาคารปลายทาง | `office.png` | สคริปต์ปลายด่าน |
+| อาคารปลายทาง | `office.png` | สคริปต์ปลายด่าน + CTA |
 
-พอปลดล็อกแล้วประกอบคำสั่งเองได้เลย สูตรเดียวกัน:
+พอปลดล็อก ประกอบด้วยสูตรเดียวกัน: `<subject>, <COMP>, <BASE>, <STYLE> --ar <AR> --sref <URL> --sw 100 --raw --s 50 --c 0 --no color, gradient, soft shading, cast shadow, text, watermark, 3d render, photo, frame, people, characters`
 
+**บันได 1 บล็อก** (`--ar 1:1`)
 ```
-<subject>, flat 2D side-scrolling platformer game asset, pure black and white, orthographic side view, no perspective, isolated on plain white background, thick readable silhouette, <ท่อนสไตล์ที่เลือก> --ar <อัตราส่วน> --sref <URL> --sw 100 --raw --s 50 --c 0 --no color, colour, grey gradient, soft shading, cast shadow, ground plane, text, letters, numbers, watermark, signature, 3d render, photorealistic, frame, border, multiple objects
+one solid stair block exactly in the role of the super mario bros hard staircase block: a plain heavy square with a subtle chunky bevel, designed to stack into a staircase
 ```
 
-ท่อน `<subject>` ของทั้งหกชิ้นเตรียมไว้แล้ว:
+**เหรียญ** (`--ar 1:1`)
+```
+one collectible coin in the role of the super mario bros coin: a flat round coin seen face-on, thick rim, a small star carved in the middle, bold and instantly readable
+```
 
-- **บันได 1 บล็อก** (`--ar 1:1`) — `one solid staircase step block, plain heavy face`
-- **เหรียญ** (`--ar 1:1`) — `one flat round coin seen face on, a small star carved in the middle`
-- **อุปสรรคสูง** (`--ar 2:3`) — `tall stack of paper files and folders, taller than a cat, standing upright`
-- **ศัตรู** (`--ar 1:1`) — `small grumpy alarm clock creature with two little walking feet, front facing, angry face`
-- **ศัตรูโดนเหยียบ** (`--ar 2:1`) — `the same alarm clock creature completely flattened into a pancake, seen from the side`
-- **อาคารปลายทาง** (`--ar 1:1`) — `small tidy office building with a welcoming door, flat facade, low roof`
+**อุปสรรคสูง (กองแฟ้ม)** (`--ar 2:3`)
+```
+a tall wobbly stack of paper documents and ring binders standing on the ground like a super mario bros pipe obstacle: taller than a cat, slightly leaning, must be jumped over, chunky silhouette
+```
 
-## 4. สองข้อที่ยังรอ Mat
+**ศัตรู (นาฬิกาปลุก)** (`--ar 1:1`)
+```
+one small enemy creature walking like a super mario bros goomba but shaped as a grumpy round alarm clock: two bell ears on top, angry little face on the clock dial, two stubby walking feet, front facing
+```
 
-1. **สไตล์ ก / ข / ค** — อันนี้บล็อกทุกอย่างในไฟล์นี้ ดูของจริงเทียบกันที่
-   `tools/style-compare.png` หรือวิดีโอ `tools/style-compare.mp4`
-2. **มีศัตรูให้เหยียบไหม** — ถ้ามี ต้องตอบว่ามันแทนปัญหาอะไรของลูกค้า
+**ศัตรูโดนเหยียบ** (`--ar 2:1`)
+```
+the same grumpy alarm clock creature one instant after being stomped, flattened completely into a pancake the way a goomba flattens in super mario bros, seen from the side, bell ears splayed out sideways
+```
+
+**อาคารปลายทาง** (`--ar 1:1`)
+```
+one small tidy office building standing exactly where the castle stands at the end of a super mario bros level: flat facade, a welcoming front door, a few windows, small flag on the roof, chunky and proud
+```
 
 ## แหล่งอ้างอิง
 
-- Parameter List (ทางการ) — https://docs.midjourney.com/hc/en-us/articles/32859204029709-Parameter-List
-- Tile — https://docs.midjourney.com/hc/en-us/articles/32197978340109-Tile
-- สรุปเวอร์ชัน V8.1/V8.2 และตารางรองรับพารามิเตอร์ — https://blakecrosley.com/guides/midjourney
+- Prompt Basics (ทางการ) — https://docs.midjourney.com/hc/en-us/articles/32023408776205-Prompt-Basics
+- พฤติกรรมคำว่า Super Mario ใน MJ — https://midlibrary.io/styles/super-mario
+- สรุปเวอร์ชัน/พารามิเตอร์ V8.x — https://blakecrosley.com/guides/midjourney
+- รูปทรงอ้างอิงทุกชิ้น — `docs/MARIO-TEARDOWN.md`
