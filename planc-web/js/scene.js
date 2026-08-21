@@ -175,6 +175,14 @@ PLANC.Scene = (function(){
       {p:0.615,             w:.040, h:H*1.21},  // hit the block
       {p:0.985,             w:.032, h:H*0.69}   // hop at the flag
     ];
+
+    // hang the ? block so the cat's HEAD meets its underside exactly at
+    // the jump apex — apex height + cat height, minus a 14px head-bump
+    // overlap. Computed, not hand-tuned: stays true at every viewport.
+    const blockEl = document.getElementById('block');
+    const catH = document.getElementById('catWrap').offsetWidth * (617 / 560);
+    blockEl.style.bottom =
+      'calc(var(--ground-h) + ' + Math.round(H * 1.21 + catH - 6 - 14) + 'px)';
   }
 
   /* --- decorations — rebuilt with every layout() ------------ */

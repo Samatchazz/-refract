@@ -181,20 +181,20 @@ body.inverted .ground{color:var(--paper)}
 .squashed svg{transform:scaleY(.16)!important;animation:none}
 .squashed .label{text-decoration:line-through;opacity:.4}
 
-/* ? block — two stacked sprite states, crossfade on hit; a coin pops
-   from behind. Class toggles reverse cleanly, so scrubbing back un-hits. */
+/* ? block — two stacked sprite states. The bump, the coin launch and
+   the face swap are ALL driven from main.js as pure functions of
+   progress (no one-shot transitions): scrub back and the coin dives
+   home. The block's bottom is set by scene.js from real jump geometry
+   so the cat's head kisses it exactly at the apex. */
 .block{bottom:calc(var(--ground-h) + 32dvh);width:clamp(58px,10vw,80px);aspect-ratio:1;
-       color:var(--ink);transition:color .6s ease,transform .3s ease}
+       color:var(--ink);transition:color .6s ease;will-change:transform}
 body.inverted .block{color:var(--paper)}
-.block .q-on,.block .q-off{position:absolute;inset:0;width:100%;height:100%;transition:opacity .25s ease}
+.block .q-on,.block .q-off{position:absolute;inset:0;width:100%;height:100%;transition:opacity .12s ease}
 .block .q-off{opacity:0}
 .block.hit .q-on{opacity:0}
 .block.hit .q-off{opacity:1}
-.block .q-coin{position:absolute;left:50%;top:0;width:56%;aspect-ratio:.88;
-               transform:translate(-50%,0) scale(0);
-               transition:transform .7s cubic-bezier(.2,1.6,.4,1),opacity .5s ease;opacity:0}
-.block.hit .q-coin{transform:translate(-50%,-120%) scale(1);opacity:1}
-.block.hit{transform:translateY(-14px)}
+.block .q-coin{position:absolute;left:50%;top:-4%;width:58%;aspect-ratio:.88;
+               transform:translate(-50%,0);opacity:0;will-change:transform,opacity}
 
 /* flagpole + separate flag sprite — main.js slides the flag down the
    pole over the last stretch of progress (the climax) */

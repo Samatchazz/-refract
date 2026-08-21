@@ -10,6 +10,7 @@
   const hint  = document.getElementById('hint');
   const enemy = document.getElementById('enemy');
   const block = document.getElementById('block');
+  const qcoin = block.querySelector('.q-coin');
   const pupils = [...enemy.querySelectorAll('.pupil')];
 
   Scene.layout();
@@ -71,7 +72,29 @@
     for (const p of pupils) p.style.transform = 'translateX(' + look.toFixed(2) + 'px)';
 
     enemy.classList.toggle('squashed', cur > 0.419);
-    block.classList.toggle('hit',      cur > 0.611);
+
+    /* ---- ? block head-bump — every piece a pure function of cur ----
+       contact at 0.615 (the jump apex, where scene.js hung the block) */
+    const bt = (cur - 0.615) / 0.016;          // 0..1 = bump, ..2.6 = coin flight
+    // the block takes the hit: snaps up 16px and drops back
+    const bump = (bt > 0 && bt < 1) ? Math.sin(Math.min(bt / 0.45, 1) * Math.PI) * 16 : 0;
+    block.style.transform = 'translateY(' + (-bump).toFixed(1) + 'px)';
+    block.classList.toggle('hit', bt > 0.12);  // face swaps as it jolts
+    // camera feels the thunk (same treatment landings get)
+    if (lastCur < 0.615 && cur >= 0.615) shake = Math.max(shake, 0.55);
+    // the coin: launches off the block top, spins in 4 quantized frames,
+    // gravity pulls it back, it fades — scrub back and it dives home
+    if (bt > 0.06 && bt < 2.6){
+      const ct = (bt - 0.06) / 2.54;
+      const rise = 1 - Math.pow(1 - Math.min(ct / 0.42, 1), 2);   // fast up
+      const fall = Math.pow(Math.max(0, (ct - 0.42) / 0.58), 2);  // heavy down
+      const y = -(rise * 122 - fall * 72);
+      const spin = [1, .5, .12, .5][((cur * Scene.travel) / 60 | 0) % 4];
+      qcoin.style.transform = 'translate(-50%,' + y.toFixed(1) + 'px) scaleX(' + spin + ')';
+      qcoin.style.opacity = ct < 0.72 ? 1 : Math.max(0, 1 - (ct - 0.72) / 0.28).toFixed(2);
+    } else {
+      qcoin.style.opacity = 0;
+    }
 
     const fk = Math.min(1, Math.max(0, (cur - 0.952) / 0.04));
     flagS.style.transform = 'translateY(' + (fk * flagRange).toFixed(1) + 'px)';
