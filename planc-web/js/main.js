@@ -44,8 +44,10 @@
     const dt = Math.min(3, Math.max(.2, (now - prevT) / 16.667));
     prevT = now;
 
+    // 0.10 (was 0.14): more glide inertia — mass is half of what makes
+    // gravity read as real
     target = Math.min(1, Math.max(0, scrollY / S));
-    cur += (target - cur) * (1 - Math.pow(1 - 0.14, dt));
+    cur += (target - cur) * (1 - Math.pow(1 - 0.10, dt));
     if (Math.abs(target - cur) < 0.0002) cur = target;
 
     const d = cur - lastCur;
@@ -57,7 +59,7 @@
     if (cat.landed) shake = 1;
     if (shake > 0.002){
       shakeT += dt;
-      cam.y = Math.sin(shakeT * 1.9) * shake * 5;
+      cam.y = Math.sin(shakeT * 1.9) * shake * 7;
       shake *= Math.pow(0.80, dt);
     } else { shake = 0; cam.y += (0 - cam.y) * 0.3; }
 

@@ -39,23 +39,34 @@ PLANC.Cat = (function(){
     // normalised gait speed 0..1 (tuned so a comfortable scroll sits near
     // 0.6 — factor doubled with SCROLL_LEN so the same finger speed keeps
     // the same gait energy)
-    const spd = Math.min(1, Math.abs(d) / Math.max(dt, .0001) * 1640);
+    const spd = Math.min(1, Math.abs(d) / Math.max(dt, .0001) * 2050);
     v += (spd - v) * (1 - Math.pow(1 - 0.18, dt));
     phase += GAIT_RATE * v * dir * dt;
 
-    // jump arcs — parabolas centred on each obstacle
-    let jy = 0;
+    // jump arcs — Mario gravity, not a symmetric parabola:
+    // launch fast, HANG at the apex, fall steeper than the rise.
+    // Shape stays a pure function of progress, so it scrubs both ways.
+    let jy = 0, crouch = 0;
     for (const j of jumps){
       const t = (cur - j.p) / j.w;
-      if (t > -1 && t < 1) jy -= j.h * (1 - t*t);
+      if (t > -1 && t < 1){
+        const rising = t < 0 ? -t : 0;          // 1 → 0 on the way up
+        const falling = t > 0 ? t : 0;          // 0 → 1 on the way down
+        // |t|^3 flattens the top (hang); the falling side is squeezed so
+        // the drop spends fewer progress-px in the air = reads heavier
+        const shape = 1 - Math.pow(rising, 3) - Math.pow(Math.min(1, falling * 1.18), 2.1);
+        jy -= j.h * Math.max(0, shape);
+      }
+      // anticipation: a tiny crouch right before takeoff
+      if (t > -1.28 && t < -1) crouch = Math.max(crouch, 1 - (-t - 1) / 0.28);
     }
     const air = jy < -2;
     const vy  = jy - prevY;                 // <0 rising, >0 falling
 
-    // landing impact
+    // landing impact — decays slower than before: a thud, not a tap
     let landed = false;
     if (prevY < -6 && jy >= -6){ land = 1; landed = true; }
-    land *= Math.pow(0.86, dt);
+    land *= Math.pow(0.90, dt);
     if (land < 0.004) land = 0;
 
     const step = Math.abs(Math.sin(phase));   // 0 = foot planted, 1 = mid-lift
@@ -70,7 +81,8 @@ PLANC.Cat = (function(){
       sy = 1 - (SQUASH*(1-step) - SQUASH*0.55*step) * v;
       sx = 1 + (SQUASH*0.8*(1-step) - SQUASH*0.45*step) * v;
     }
-    sy -= land * 0.20;  sx += land * 0.16;
+    sy -= land * 0.26;  sx += land * 0.20;      // heavier landing
+    sy -= crouch * 0.10; sx += crouch * 0.08;   // pre-jump crouch
 
     const deg = dir*LEAN_DEG*v*0.55 + rock + (air ? dir*4*v : 0);
 

@@ -13,8 +13,9 @@ window.PLANC = window.PLANC || {};
 PLANC.Scene = (function(){
 
   const TRAVEL_MIN = 7200;   // px of world movement, floor
-  const SCROLL_LEN = 10400;  // px of page scroll mapped to 0..1 — doubled:
-                             // ~12 screens of swiping, same level, half speed
+  const SCROLL_LEN = 13000;  // px of page scroll mapped to 0..1 —
+                             // ~15 screens of swiping, same level, 40% of
+                             // the original speed
   const PIT        = [0.245, 0.285];  // ground gap, in progress
   const HOLD       = 0.085;  // default: how long a text beat stands still
 
@@ -165,12 +166,14 @@ PLANC.Scene = (function(){
 
     decorate();
 
+    // windows widened ~1.5x and arcs raised: with the Mario-gravity
+    // curve in cat.js a jump now launches, hangs, and drops with weight
     const H = Math.min(innerHeight * 0.22, 190);
     jumps = [
-      {p:(PIT[0]+PIT[1])/2, w:.034, h:H*1.15},  // over the pit
-      {p:0.415,             w:.026, h:H*0.85},  // stomp DEADLINE
-      {p:0.615,             w:.028, h:H*1.05},  // hit the block
-      {p:0.985,             w:.022, h:H*0.60}   // hop at the flag
+      {p:(PIT[0]+PIT[1])/2, w:.046, h:H*1.32},  // over the pit
+      {p:0.415,             w:.038, h:H*0.98},  // stomp DEADLINE
+      {p:0.615,             w:.040, h:H*1.21},  // hit the block
+      {p:0.985,             w:.032, h:H*0.69}   // hop at the flag
     ];
   }
 
