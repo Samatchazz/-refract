@@ -24,7 +24,7 @@ const sleep = ms => pg.waitForTimeout(ms);
 await pg.goto('file:///' + path.join(HERE, 'proto.html').replace(/\\/g,'/'));
 await sleep(2600);                       // the bobbing-cat preloader
 
-const S = 9500;
+const S = 12500;
 const glide = (from, to, ms) => pg.evaluate(([a, z, d]) => new Promise(res=>{
   const t0 = performance.now();
   (function step(t){
@@ -35,9 +35,9 @@ const glide = (from, to, ms) => pg.evaluate(([a, z, d]) => new Promise(res=>{
   })(t0);
 }), [from, to, ms]);
 
-// scene 1: tiny cat collects three treasures
-for (const [a,z,ms] of [[0,.06,1500],[.06,.11,1300],[.11,.16,1300],[.16,.22,1300]]){
-  await glide(a*S, z*S, ms); await sleep(500);
+// scene 1: tiny cat head-bumps three treasure boxes
+for (const [a,z,ms] of [[0,.055,1900],[.055,.115,1800],[.115,.175,1800],[.175,.23,1700]]){
+  await glide(a*S, z*S, ms); await sleep(650);
 }
 // scene 2: gear + the dark editing stretch
 await glide(.22*S, .34*S, 1900); await sleep(500);
