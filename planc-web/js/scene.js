@@ -16,7 +16,7 @@ PLANC.Scene = (function(){
   const SCROLL_LEN = 13000;  // px of page scroll mapped to 0..1 —
                              // ~15 screens of swiping, same level, 40% of
                              // the original speed
-  const PIT        = [0.245, 0.285];  // ground gap, in progress
+  const PIPE_P     = 0.265;  // the tall pipe (replaced the old pit)
   const HOLD       = 0.085;  // default: how long a text beat stands still
 
   const world  = document.getElementById('world');
@@ -53,34 +53,49 @@ PLANC.Scene = (function(){
     return el;
   }
 
-  /* ground <pattern>: 4 tiles x 2 rows, blocks overlap 1px (64 art
-     in 63 cells) so the hand-drawn edges never show a seam line */
+  /* ground <pattern>s — Yoshi's Island treatment, not a block grid:
+     a wobbly hand-drawn lip with grass tufts on top, then mostly-empty
+     soil with sparse crayon scribbles. Everything strokes currentColor
+     so the dark level inverts it for free. */
   function groundPattern(){
-    const B = 64, S = 63;
     const svg = document.createElementNS(NS, 'svg');
     svg.setAttribute('width', 0); svg.setAttribute('height', 0);
     svg.style.position = 'absolute';
     const defs = document.createElementNS(NS, 'defs');
-    const pat = document.createElementNS(NS, 'pattern');
-    pat.id = 'groundPat';
-    pat.setAttribute('patternUnits', 'userSpaceOnUse');
-    pat.setAttribute('width', S * 4);
-    pat.setAttribute('height', S * 2);
-    const ids = ['ground1','ground2','ground3','ground4'];
-    for (let r = 0; r < 2; r++) for (let c = 0; c < 4; c++){
-      const u = document.createElementNS(NS, 'use');
-      u.setAttribute('href', '#' + ids[(c + r * 2) % 4]);   // row 2 starts at tile 3 — offset bond
-      u.setAttribute('x', c * S - (r ? S / 2 : 0));
-      u.setAttribute('y', r * S);
-      u.setAttribute('width', B); u.setAttribute('height', B);
-      pat.appendChild(u);
-      if (r){ // the shifted row leaks half a block off the left — wrap a copy round the right
-        const u2 = u.cloneNode();
-        u2.setAttribute('x', c * S - S / 2 + S * 4);
-        pat.appendChild(u2);
-      }
-    }
-    defs.appendChild(pat); svg.appendChild(defs);
+
+    const top = document.createElementNS(NS, 'pattern');
+    top.id = 'groundTop';
+    top.setAttribute('patternUnits', 'userSpaceOnUse');
+    top.setAttribute('width', 360); top.setAttribute('height', 42);
+    top.innerHTML =
+      // the lip: one confident wobbly stroke + a fainter echo under it.
+      // both edges of the repeat end FLAT at the same y, or the pattern
+      // seam shows as a step every 360px
+      '<path d="M-4 15 L6 15 Q34 8 62 14 T130 13 T198 17 T266 12 Q300 16 330 14 Q348 13 364 15" fill="none" stroke="currentColor" stroke-width="5.5" stroke-linecap="round"/>' +
+      '<path d="M-4 26 L8 26 Q48 22 88 25 T192 23 T288 27 Q330 28 364 26" fill="none" stroke="currentColor" stroke-width="2" opacity=".3"/>' +
+      // grass tufts poking up from the lip, three clusters per repeat
+      '<g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round">' +
+      '<path d="M46 13 Q43 6 38 1"/><path d="M52 13 Q54 5 58 2"/><path d="M60 14 Q62 9 60 5"/>' +
+      '<path d="M170 15 Q167 7 163 3"/><path d="M177 15 Q179 6 184 2"/>' +
+      '<path d="M292 13 Q289 6 285 2"/><path d="M298 13 Q301 7 304 3"/><path d="M306 14 Q307 9 305 5"/></g>';
+
+    const soil = document.createElementNS(NS, 'pattern');
+    soil.id = 'groundSoil';
+    soil.setAttribute('patternUnits', 'userSpaceOnUse');
+    soil.setAttribute('width', 340); soil.setAttribute('height', 180);
+    soil.innerHTML =
+      // sparse crayon marks: two pebble loops, dots, a dash — mostly air
+      '<path d="M46 62 q9 -9 24 -6 q14 3 10 11 q-4 8 -20 7 q-15 -2 -14 -12" fill="none" stroke="currentColor" stroke-width="2.5" opacity=".24"/>' +
+      '<path d="M232 122 q11 -8 25 -3 q12 4 6 11 q-7 8 -22 5 q-12 -3 -9 -13" fill="none" stroke="currentColor" stroke-width="2.5" opacity=".22"/>' +
+      '<circle cx="132" cy="146" r="3.2" fill="currentColor" opacity=".22"/>' +
+      '<circle cx="308" cy="52" r="2.4" fill="currentColor" opacity=".2"/>' +
+      '<circle cx="30" cy="152" r="2.2" fill="currentColor" opacity=".18"/>' +
+      '<path d="M272 38 q11 3 20 -2" fill="none" stroke="currentColor" stroke-width="2" opacity=".2"/>' +
+      '<path d="M150 28 q-9 6 -5 14" fill="none" stroke="currentColor" stroke-width="2" opacity=".2"/>' +
+      '<path d="M92 108 q6 -5 12 -1" fill="none" stroke="currentColor" stroke-width="2" opacity=".18"/>';
+
+    defs.appendChild(top); defs.appendChild(soil);
+    svg.appendChild(defs);
     document.body.appendChild(svg);
   }
   groundPattern();
@@ -149,20 +164,19 @@ PLANC.Scene = (function(){
       el.style.left = (el.dataset.p * travel + catX) + 'px';
     });
 
-    // ground, split in two around the pit — filled with the hand-drawn
-    // tile pattern; the last block's own edge plays the pit edge
+    // ground — one continuous strip now (the pit became a pipe):
+    // soil scribbles under a hand-drawn lip
     grounds.forEach(g => g.remove());
     grounds = [];
-    [[0, PIT[0]*travel + catX], [PIT[1]*travel + catX, travel + innerWidth]].forEach(([a,b])=>{
-      const g = document.createElement('div');
-      g.className = 'ground';
-      g.style.left = a + 'px';
-      g.style.width = (b - a) + 'px';
-      g.innerHTML = '<svg width="100%" height="100%" preserveAspectRatio="none">' +
-                    '<rect width="100%" height="100%" fill="url(#groundPat)"/></svg>';
-      world.appendChild(g);
-      grounds.push(g);
-    });
+    const g = document.createElement('div');
+    g.className = 'ground';
+    g.style.left = '0px';
+    g.style.width = (travel + innerWidth) + 'px';
+    g.innerHTML = '<svg width="100%" height="100%" preserveAspectRatio="none">' +
+                  '<rect y="34" width="100%" height="100%" fill="url(#groundSoil)"/>' +
+                  '<rect width="100%" height="42" fill="url(#groundTop)"/></svg>';
+    world.appendChild(g);
+    grounds.push(g);
 
     decorate();
 
@@ -170,10 +184,10 @@ PLANC.Scene = (function(){
     // curve in cat.js a jump now launches, hangs, and drops with weight
     const H = Math.min(innerHeight * 0.22, 190);
     jumps = [
-      {p:(PIT[0]+PIT[1])/2, w:.046, h:H*1.32},  // over the pit
-      {p:0.415,             w:.038, h:H*0.98},  // stomp DEADLINE
-      {p:0.615,             w:.040, h:H*1.21},  // hit the block
-      {p:0.985,             w:.032, h:H*0.69}   // hop at the flag
+      {p:PIPE_P, w:.046, h:H*1.32},  // over the tall pipe
+      {p:0.415,  w:.038, h:H*0.98},  // stomp DEADLINE
+      {p:0.615,  w:.040, h:H*1.21},  // hit the block
+      {p:0.985,  w:.032, h:H*0.69}   // hop at the flag
     ];
 
     // hang the ? block so the cat's HEAD meets its underside exactly at
@@ -243,14 +257,21 @@ PLANC.Scene = (function(){
       dWorld.appendChild(s);
     });
 
-    // pebbles hugging both pit lips
-    [[PIT[0], -0.9], [PIT[1], -0.1]].forEach(([p, k], j) => {
-      const s = sprite(pick(['pebbles1','pebbles2','pebbles3'], j), 'wd pebbles');
-      const w = H * 0.075;
-      s.style.cssText = 'position:absolute;bottom:var(--ground-h);left:' +
-        (p * travel + catX + k * w).toFixed(0) + 'px;width:' + w.toFixed(0) + 'px;height:' + (w / s.__ar).toFixed(0) + 'px';
-      dWorld.appendChild(s);
-    });
+    // the tall pipe (took the pit's place) — the cat vaults it
+    const pipe = sprite('pipe-long1', 'wd pipe');
+    const ph = H * 0.20;
+    pipe.style.cssText = 'position:absolute;bottom:var(--ground-h);left:' +
+      (PIPE_P * travel + catX - (ph * pipe.__ar) / 2).toFixed(0) +
+      'px;height:' + ph.toFixed(0) + 'px;width:' + (ph * pipe.__ar).toFixed(0) + 'px';
+    dWorld.appendChild(pipe);
+
+    // pebbles at the pipe's foot, like something once spilled there
+    const peb = sprite('pebbles2', 'wd pebbles');
+    const pw = H * 0.07;
+    peb.style.cssText = 'position:absolute;bottom:var(--ground-h);left:' +
+      (PIPE_P * travel + catX + (ph * pipe.__ar) / 2 + 6).toFixed(0) +
+      'px;width:' + pw.toFixed(0) + 'px;height:' + (pw / peb.__ar).toFixed(0) + 'px';
+    dWorld.appendChild(peb);
 
     // castle closes the level, just past the flag
     const c = sprite('castle', 'wd castle');
@@ -280,7 +301,7 @@ PLANC.Scene = (function(){
   splitWords();
 
   return {
-    SCROLL_LEN, PIT,
+    SCROLL_LEN,
     layout, render,
     get travel(){ return travel; },
     get catX(){ return catX; },

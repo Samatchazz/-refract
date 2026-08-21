@@ -66,7 +66,7 @@ main.js    ลูป rAF + กล้อง (look-ahead กับ shake ตอน
 | ข้อความ / ชื่อฉากในเมนู | `index.html` — `data-name` กับเนื้อใน `.beat` |
 | ตำแหน่งที่แต่ละฉากโผล่ | `data-p` ใน `index.html` |
 | ความยาวด่าน / ความยาวสกรอล | `TRAVEL_MIN`, `SCROLL_LEN` ใน `scene.js` |
-| หลุมพื้น / จุดกระโดด | `PIT` และอาเรย์ `jumps` ใน `scene.js` |
+| ท่อ / จุดกระโดด | `PIPE_P` และอาเรย์ `jumps` ใน `scene.js` (หลุมถูกแทนด้วยท่อแล้ว) |
 | ท่าเดินแรงแค่ไหน | `GAIT_RATE / BOB_PX / LEAN_DEG / SQUASH` ใน `cat.js` |
 | ความลึกฉากหลัง | `data-f` ของ `.layer` ใน `index.html` |
 | ช่วงด่านมืด | เงื่อนไข `inverted` ใน `main.js` |
