@@ -10,10 +10,11 @@
 <style>
 /* ============================================================
    JOURNEY PROTO — separate from the main site on purpose.
-   Same iron rules (scroll-driven, scrub-safe, B/W) with TWO
+   Same iron rules (scroll-driven, scrub-safe, B/W) with THREE
    sanctioned exceptions Mat asked to try:
-   1) the rainbow — the single color moment in the whole site
+   1) the rainbow — the big color moment of the site
    2) tapping the logo — the second input, and its bridge persists
+   3) gold sparkling coins in scene 1 (glint is scroll-keyed)
    ============================================================ */
 :root{
   --ink:#111; --paper:#fcfcfa;
@@ -88,6 +89,12 @@ body.inverted #story{color:var(--paper)}
 .sline{font-family:'Prompt',sans-serif;font-weight:800;white-space:nowrap;opacity:0;
   font-size:clamp(1.15rem,5vw,1.85rem);line-height:1.55;transform-origin:0 50%;
   will-change:transform,opacity}
+/* line 1 matches the beat h2 exactly (Mat: same size as อาชีพนี้ไม่ได้มีแค่) */
+.sline.big{font-size:clamp(1.5rem,6.2vw,3rem);line-height:1.16;margin-bottom:.25rem}
+/* gold coin sparkles — Mat's second sanctioned color exception (after
+   the rainbow); the glint is keyed to scroll progress, never a timer */
+.spark{position:absolute;color:#f0b400;font-size:15px;line-height:1;opacity:0;
+  pointer-events:none;will-change:transform,opacity;text-shadow:0 0 7px rgba(240,180,0,.75)}
 /* same design language as the beats: kicker on top, body below */
 .skick{font-size:.7rem;letter-spacing:.34em;text-transform:uppercase;margin-bottom:.55rem;
   font-weight:600;opacity:0;will-change:opacity}
@@ -203,7 +210,7 @@ body.inverted .glow{opacity:1}
 const S = 12500;                   // scroll px mapped to 0..1 (slower)
 const NS = 'http://www.w3.org/2000/svg';
 const FALL = .042;                 // the cat drifts down from the sky, lands here
-const TR = [ {p:FALL, t:'เราเป็นอินฟลู', cat:true},   // pops from the landing, not a box
+const TR = [ {p:FALL, t:'เราเป็นอินฟลู', cat:true, big:true},   // pops from the landing, not a box
              {p:.095, t:'เราทำคอนเทนต์'},
              {p:.15,  t:'เรามียอดฟอล'},
              {p:.205, t:'เรามีแบรนด์จ้าง'} ];
@@ -335,10 +342,14 @@ function layout(){
     [on,off].forEach(s=>s.style.cssText='position:absolute;inset:0;width:100%;height:100%');
     off.style.opacity=0;
     const coin=sprite('coin'+i,'wd');
-    coin.style.cssText='position:absolute;left:50%;top:-6%;width:58%;height:66%;transform:translate(-50%,0);opacity:0;will-change:transform,opacity';
+    coin.style.cssText='position:absolute;left:50%;top:-6%;width:58%;height:66%;transform:translate(-50%,0);opacity:0;will-change:transform,opacity;color:#f0b400';
+    const sparks=[[6,-52],[74,-96],[38,-140]].map(sp=>{
+      const s=document.createElement('div');s.className='spark';s.textContent='✦';
+      s.style.left=sp[0]+'%';s.style.top=sp[1]+'%';box.appendChild(s);return s;
+    });
     box.appendChild(coin);box.appendChild(on);box.appendChild(off);
     world.appendChild(box);
-    coins.push({box,on,off,coin});
+    coins.push({box,on,off,coin,sparks});
   });
 
   // the story block: built like a beat (kicker / four lines / body),
@@ -347,7 +358,7 @@ function layout(){
   kickEl=document.createElement('div');kickEl.className='skick';kickEl.textContent='What am I?';
   story.appendChild(kickEl);
   TR.forEach(t=>{
-    const l=document.createElement('div');l.className='sline';
+    const l=document.createElement('div');l.className='sline'+(t.big?' big':'');
     l.textContent=t.t;story.appendChild(l);slines.push(l);
   });
   bodyEl=document.createElement('div');bodyEl.className='sbody';bodyEl.textContent=SBODY;
@@ -576,10 +587,20 @@ function frame(now){
         const rise=1-Math.pow(1-Math.min(ct/0.4,1),2);
         const fall=Math.pow(Math.max(0,(ct-0.4)/0.6),2);
         const y=-(rise*105-fall*60);
-        const spin=[1,.5,.12,.5][((cur*travel)/70|0)%4];
+        const sIdx=((cur*travel)/70|0)%4;
+        const spin=[1,.5,.12,.5][sIdx];
         c.coin.style.transform='translate(-50%,'+y.toFixed(1)+'px) scaleX('+spin+')';
         c.coin.style.opacity=ct<0.7?1:Math.max(0,1-(ct-0.7)/0.3);
-      } else c.coin.style.opacity=0;
+        // gold glint: brightest when the coin is edge-on in its spin
+        c.coin.style.filter='brightness('+[1,1.25,1.55,1.25][sIdx]+') drop-shadow(0 0 6px rgba(240,180,0,.6))';
+        // sparks pop one after another along the flight, scroll-keyed
+        c.sparks.forEach((sp,k)=>{
+          const w=(ct-(0.10+k*0.2))/0.16;
+          const o=(w>0&&w<1)?Math.sin(w*Math.PI):0;
+          sp.style.opacity=o.toFixed(2);
+          sp.style.transform='rotate('+(w*90).toFixed(0)+'deg) scale('+(0.5+o*0.9).toFixed(2)+')';
+        });
+      } else { c.coin.style.opacity=0; c.sparks.forEach(sp=>sp.style.opacity=0); }
     }
     // sentence flight: source → its story slot, overshoot on landing.
     // start point read live from the box (or cat) rect so it stays
