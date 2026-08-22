@@ -340,12 +340,17 @@ function layout(){
     s.setAttribute('viewBox','0 0 '+sw+' '+hgt);s.setAttribute('preserveAspectRatio','none');
     s.style.cssText='position:absolute;left:'+sx0.toFixed(0)+'px;bottom:-2px;width:'+sw.toFixed(0)+
       'px;height:'+hgt+'px;opacity:'+op+';will-change:transform';
-    let d='M0 '+hgt;
+    // hand-drawn fangs: uneven heights, off-center tips, bowed-in sides
+    let d='M0 '+hgt, i=0;
     for(let x=0;x<sw;x+=pitch){
-      const tip=3+((x/pitch*31)%3)*4;                     // deterministic jag
-      d+=' L'+(x+pitch/2).toFixed(0)+' '+tip+' L'+(x+pitch).toFixed(0)+' '+hgt;
+      const tipY=(hgt*(0.08+((i*31)%4)*0.15)).toFixed(0);
+      const tipX=(x+pitch*(0.38+((i*17)%5)*0.05)).toFixed(0);
+      d+=' Q'+(x+pitch*0.15).toFixed(0)+' '+(hgt*0.58).toFixed(0)+' '+tipX+' '+tipY;
+      d+=' Q'+(x+pitch*0.86).toFixed(0)+' '+(hgt*0.62).toFixed(0)+' '+(x+pitch).toFixed(0)+' '+hgt;
+      i++;
     }
-    s.innerHTML='<path d="'+d+' Z" fill="currentColor"/>';
+    s.innerHTML='<path d="'+d+' Z" fill="currentColor" stroke="currentColor" '+
+      'stroke-width="3" stroke-linejoin="round"/>';
     world.appendChild(s);spikes.push(s);
   });
 
