@@ -33,11 +33,8 @@ img{display:block}
   display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.9rem;
   transition:opacity .55s ease,visibility .55s}
 #preload.gone{opacity:0;visibility:hidden;pointer-events:none}
-#preload img{width:96px;animation:plbob 1.05s ease-in-out infinite;transform-origin:50% 100%}
-@keyframes plbob{0%,100%{transform:scaleX(-1) translateY(0) scale(1,.96)}50%{transform:scaleX(-1) translateY(-9px) scale(.97,1.03)}}
-.pl-mark{font-family:'Prompt',sans-serif;font-size:2.4rem;font-weight:800;letter-spacing:-.02em}
-.pl-mark span{display:inline-block;animation:spin 2.4s linear infinite}
-@keyframes spin{to{transform:rotate(360deg)}}
+#preload img{width:min(62vw,300px);animation:plbob 1.05s ease-in-out infinite;transform-origin:50% 100%}
+@keyframes plbob{0%,100%{transform:translateY(0) scale(1,.97)}50%{transform:translateY(-8px) scale(.985,1.02)}}
 .pl-tag{font-size:.8rem;letter-spacing:.42em;opacity:.55;text-transform:lowercase}
 
 /* ---------- chrome ---------- */
@@ -45,12 +42,15 @@ img{display:block}
   display:flex;align-items:center;justify-content:space-between;padding:0 max(18px,4vw)}
 #nav::after{content:'';position:absolute;left:max(18px,4vw);right:max(18px,4vw);bottom:0;height:1px;
   background:currentColor;opacity:.14}
-.brand{font-size:1.35rem;font-weight:800;letter-spacing:-.02em;color:inherit;text-decoration:none;
-  line-height:1;cursor:pointer;background:none;border:0;padding:.3rem .4rem;position:relative}
+.brand{line-height:1;cursor:pointer;background:none;border:0;padding:.3rem .4rem;position:relative}
+.brand img{height:36px;display:block;transition:filter .6s ease}
+body.inverted .brand img{filter:invert(1)}   /* pure-B/W wordmark: invert is safe here */
 .badge{font-size:.6rem;letter-spacing:.3em;opacity:.45}
-/* the logo goes rainbow when the story needs you */
-.brand.rainbow{background-image:var(--rainbow);-webkit-background-clip:text;background-clip:text;
-  color:transparent;animation:pulse 1.1s ease-in-out infinite}
+/* the logo goes rainbow when the story needs you — the wordmark is an
+   image now, so the rainbow is a pulsing glow behind it */
+.brand.rainbow{animation:pulse 1.1s ease-in-out infinite}
+.brand.rainbow::before{content:'';position:absolute;inset:-4px -8px;z-index:-1;border-radius:14px;
+  background:var(--rainbow);filter:blur(10px);opacity:.85}
 @keyframes pulse{50%{transform:scale(1.18) rotate(-4deg)}}
 
 /* ---------- stage ---------- */
@@ -160,13 +160,12 @@ body.inverted .glow{opacity:1}
 <body>
 
 <div id="preload">
-  <img src="../assets/cat.png" alt="">
-  <div class="pl-mark">planc<span>*</span></div>
+  <img src="../assets/logo-planc.png" alt="PlanC">
   <div class="pl-tag">aesthetize you</div>
 </div>
 
 <header id="nav">
-  <button class="brand" id="logoBtn">planc<span>*</span></button>
+  <button class="brand" id="logoBtn"><img src="../assets/logo-planc.png" alt="PlanC"></button>
   <span class="badge">JOURNEY&nbsp;PROTO</span>
 </header>
 
