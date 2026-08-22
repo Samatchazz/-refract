@@ -86,9 +86,13 @@ body.inverted .ground{color:var(--paper)}
   color:var(--ink);transition:color .6s ease;will-change:transform}
 body.inverted #story{color:var(--paper)}
 .sline{font-family:'Prompt',sans-serif;font-weight:800;white-space:nowrap;opacity:0;
-  font-size:clamp(1.05rem,4.6vw,1.7rem);line-height:1.55;transform-origin:0 50%;
+  font-size:clamp(1.15rem,5vw,1.85rem);line-height:1.55;transform-origin:0 50%;
   will-change:transform,opacity}
-.sline.big{font-size:clamp(1.6rem,7.2vw,2.8rem);line-height:1.25;margin-bottom:.15em}
+/* same design language as the beats: kicker on top, body below */
+.skick{font-size:.7rem;letter-spacing:.34em;text-transform:uppercase;margin-bottom:.55rem;
+  font-weight:600;opacity:0;will-change:opacity}
+.sbody{margin-top:.6rem;font-family:'Sarabun',system-ui,sans-serif;font-weight:400;
+  font-size:clamp(.92rem,3.4vw,1.1rem);line-height:1.6;opacity:0;will-change:transform,opacity}
 #scrollHint{position:absolute;z-index:7;left:50%;bottom:calc(var(--ground-h) + 15dvh);
   transform:translateX(-50%);padding:.55rem 1rem;background:var(--paper);
   box-shadow:0 0 0 1px rgba(17,17,17,.16);font-size:.72rem;letter-spacing:.22em;
@@ -190,17 +194,20 @@ body.inverted .glow{opacity:1}
 (function(){
 'use strict';
 /* ================= scene map (progress 0..1) =================
-   S1 grow   0.03–0.20  tiny cat collects 3 treasures, grows each time
-   S2 life   0.24–0.46  gear piles on; dark editing zone 0.36–0.455
+   S1 grow   0.00–0.24  cat falls from the sky, then 3 boxes — the
+                        story block fills in line by line, then fades
+   S2 life   0.29–0.46  gear piles on; dark editing zone 0.36–0.455
    S3 hits   0.50–0.68  3 piranha pipes fire word-bullets, cat shrinks
    S4 chasm  0.72–0.93  impossible gap, one death, rainbow bridge
    S5 out    0.94–1.0   aesthetize-you beat, then the closing panel  */
 const S = 12500;                   // scroll px mapped to 0..1 (slower)
 const NS = 'http://www.w3.org/2000/svg';
-const TR = [ {p:.05,  t:'เราเป็นอินฟลู', big:true},
-             {p:.105, t:'เราทำคอนเทนต์'},
-             {p:.16,  t:'เรามียอดฟอล'},
-             {p:.215, t:'เรามีแบรนด์จ้าง'} ];
+const FALL = .042;                 // the cat drifts down from the sky, lands here
+const TR = [ {p:FALL, t:'เราเป็นอินฟลู', cat:true},   // pops from the landing, not a box
+             {p:.095, t:'เราทำคอนเทนต์'},
+             {p:.15,  t:'เรามียอดฟอล'},
+             {p:.205, t:'เรามีแบรนด์จ้าง'} ];
+const SBODY = 'เรารักอาชีพนี้';    // beat-style body line, lands with the last box
 const HIT = [ {p:.53, t:'คอนเทนต์ไม่ปัง'}, {p:.59, t:'ยอดฟอลไม่ขึ้น'}, {p:.65, t:'แบรนด์หายไป'} ];
 const GAP = [.775, .905];          // the impossible chasm
 const DIE = .782;                  // where the cat tries anyway
@@ -210,6 +217,7 @@ const world = document.getElementById('world');
 const stage = document.getElementById('stage');
 let travel = 0, catX = 0, layers = [], grounds = [], beats = [];
 let coins = [], slines = [], slots = [], piranhas = [], bullets = [], glowEl, bridgeSvg, bridgePath;
+let kickEl, bodyEl;
 const story = document.getElementById('story');
 
 const clamp01 = v => Math.min(1, Math.max(0, v));
@@ -305,14 +313,16 @@ function layout(){
     s.style.left=(p*travel+innerWidth*0.08)+'px';world.appendChild(s);beats.push({el:s,p});return s;
   };
   // scene 1 opens EMPTY — the box pops do the storytelling
-  mkBeat(0.30,'Slice of Life','อาชีพนี้ไม่ได้มีแค่<br>ด้านที่สวย','ของที่ต้องแบก งานที่ไม่จบ คืนที่ไม่ได้นอน');
+  mkBeat(0.315,'Slice of Life','อาชีพนี้ไม่ได้มีแค่<br>ด้านที่สวย','ของที่ต้องแบก งานที่ไม่จบ คืนที่ไม่ได้นอน');
   mkBeat(0.50,'The Piranhas','แล้ววันนึง<br>มันก็กัดเรา');
   mkBeat(0.72,'The Wall','เหวที่โดดยังไง<br>ก็ไม่พ้น','บางปัญหา ตัวคนเดียวข้ามไม่ได้จริงๆ');
   const endB=mkBeat(0.945,'planc*','<span class="rb">aesthetize</span> you','ข้ามด้วยกันไหม');
 
   // scene 1 treasures = ? boxes head-bumped from below, like the main
-  // site's block — box bottom sits exactly at the tiny cat's jump apex
+  // site's block — box bottom sits exactly at the tiny cat's jump apex.
+  // the first sentence comes from the sky-landing, so no box for it
   TR.forEach((t,i)=>{
+    if(t.cat){ coins.push(null); return; }
     const bw=Math.min(64,Math.max(50,innerWidth*0.135));
     const tinyH=Math.min(150,Math.max(104,innerWidth*0.18))*0.34*1.15;
     const apex=Math.min(innerHeight*0.22,190)*0.62;
@@ -321,23 +331,27 @@ function layout(){
     box.className='qbox';
     box.style.cssText='position:absolute;bottom:calc(var(--ground-h) + '+bottom+'px);left:'+
       (t.p*travel+catX-bw/2).toFixed(0)+'px;width:'+bw+'px;height:'+bw+'px;will-change:transform';
-    const on=sprite('qblock'+(i%3+1),'wd'), off=sprite('qblock-used2','wd');
+    const on=sprite('qblock'+((i-1)%3+1),'wd'), off=sprite('qblock-used2','wd');
     [on,off].forEach(s=>s.style.cssText='position:absolute;inset:0;width:100%;height:100%');
     off.style.opacity=0;
-    const coin=sprite('coin'+(i+1),'wd');
+    const coin=sprite('coin'+i,'wd');
     coin.style.cssText='position:absolute;left:50%;top:-6%;width:58%;height:66%;transform:translate(-50%,0);opacity:0;will-change:transform,opacity';
     box.appendChild(coin);box.appendChild(on);box.appendChild(off);
     world.appendChild(box);
     coins.push({box,on,off,coin});
   });
 
-  // the story block: each sentence lands here one by one, replacing
-  // the old intro beat — slots measured once while untransformed
-  story.replaceChildren();story.style.transform='';slines=[];slots=[];
+  // the story block: built like a beat (kicker / four lines / body),
+  // filling in live as the story happens — slots measured untransformed
+  story.replaceChildren();story.style.transform='';story.style.opacity='';slines=[];slots=[];
+  kickEl=document.createElement('div');kickEl.className='skick';kickEl.textContent='What am I?';
+  story.appendChild(kickEl);
   TR.forEach(t=>{
-    const l=document.createElement('div');l.className='sline'+(t.big?' big':'');
+    const l=document.createElement('div');l.className='sline';
     l.textContent=t.t;story.appendChild(l);slines.push(l);
   });
+  bodyEl=document.createElement('div');bodyEl.className='sbody';bodyEl.textContent=SBODY;
+  story.appendChild(bodyEl);
   slines.forEach(l=>{const r=l.getBoundingClientRect();slots.push({x:r.left,y:r.top});});
 
   // scene 2 props: gear built onto the cat + editing glow + moon handled by decor
@@ -433,7 +447,7 @@ function catSize(cur){
 /* jumps: over each treasure + at each piranha + the doomed leap */
 const JUMPS=()=>{
   const H=Math.min(innerHeight*0.22,190);
-  const j=TR.map(t=>({p:t.p,w:.018,h:H*0.62}));
+  const j=TR.filter(t=>!t.cat).map(t=>({p:t.p,w:.018,h:H*0.62}));
   HIT.forEach(h=>j.push({p:h.p-0.006,w:.014,h:H*0.78}));
   return j;
 };
@@ -485,6 +499,12 @@ function frame(now){
   for(const b of beats){
     const h=Math.min(0.10,Math.max(0,cur-b.p));
     b.el.style.transform=h?'translate3d('+(h*travel).toFixed(1)+'px,0,0)':'';
+    // phase transition: a beat only becomes visible as it reaches its
+    // reading spot, and fades out before the next phase's text enters
+    // (the end beat never reaches its fade-out window, so it stays)
+    const bin=clamp01((cur-(b.p-0.02))/0.02);
+    const bout=1-clamp01((cur-b.p-0.085)/0.03);
+    b.el.style.opacity=(bin*bout).toFixed(2);
   }
 
   // gait
@@ -496,7 +516,10 @@ function frame(now){
   const size=catSize(cur);
   const jy=jumpY(cur,jumps);
   const {fallY,flashO,blink}=death(cur);
-  const air=jy<-2;
+  // opening: the cat drifts down from the sky, landing at FALL
+  const drop=-(1-smooth(clamp01(cur/FALL)))*innerHeight*0.8;
+  const lsq=Math.sin(clamp01((cur-FALL)/0.008)*Math.PI)*0.16;   // landing squash
+  const air=(jy+drop)<-2;
   const bob=air?0:-step*10*v*size;
 
   // bridge arc lift while crossing (only exists once bridged)
@@ -506,13 +529,13 @@ function frame(now){
     lift=2*k*(1-k)*164;   // matches the bridge's quadratic arc exactly
   }
 
-  catW.style.transform='translate3d(0,'+(jy+bob+fallY-lift).toFixed(2)+'px,0)';
+  catW.style.transform='translate3d(0,'+(jy+bob+fallY-lift+drop).toFixed(2)+'px,0)';
   catL.style.transform='rotate('+(Math.sin(phase*2)*2.2*v).toFixed(2)+'deg)';
   const sq=air?1.06:1-(0.085*(1-step))*v;
-  catS.style.transform='scale('+(-size*(2-sq)).toFixed(3)+','+(size*sq).toFixed(3)+')';
+  catS.style.transform='scale('+(-size*(2-sq)*(1+lsq*0.7)).toFixed(3)+','+(size*sq*(1-lsq)).toFixed(3)+')';
   catS.style.opacity=blink;
   shadow.style.transform='translate3d(0,'+(-lift).toFixed(1)+'px,0) scale('+size+','+size+')';
-  shadowI.style.opacity=(cur>GAP[0]&&cur<GAP[1]&&!bridged)?0:0.18*(1-Math.min(1,-jy/150)*0.7);
+  shadowI.style.opacity=(cur>GAP[0]&&cur<GAP[1]&&!bridged)?0:0.18*(1-Math.min(1,-(jy+drop)/150)*0.7);
   flash.style.opacity=flashO;
 
   // scene 2: gear appears piece by piece
@@ -524,39 +547,50 @@ function frame(now){
   scrollHint.style.opacity=cur<0.012?1:0;
   document.body.classList.toggle('inverted',cur>DARK[0]&&cur<DARK[1]);
 
-  // the story block sits at the old intro-beat spot; once the last
-  // sentence has landed it rides out with the world like a beat
-  const ride=Math.max(0,cur-(TR[TR.length-1].p+0.05))*travel;
+  // the story block sits at the old intro-beat spot; once everything
+  // has landed it fades out and rides away — a clean breath before
+  // the next phase's text enters (Mat: texts must not collide)
+  const ride=Math.max(0,cur-(TR[TR.length-1].p+0.06))*travel;
   story.style.transform='translate('+(-ride).toFixed(1)+'px,'+imp.toFixed(2)+'px)';
+  story.style.opacity=(1-clamp01((cur-(TR[TR.length-1].p+0.06))/0.02)).toFixed(2);
+  // the question fades in while the cat is still in the air
+  kickEl.style.opacity=(0.6*clamp01((cur-0.006)/0.02)).toFixed(2);
+  // the beat-style body line lands right after the last sentence
+  const bb=smooth((cur-(TR[TR.length-1].p+0.018))/0.012);
+  bodyEl.style.opacity=bb.toFixed(2);
+  bodyEl.style.transform='translateY('+((1-bb)*14).toFixed(1)+'px)';
 
   // scene 1: ? box head-bumps — box jolts, face swaps, coin launches,
-  // the sentence flies from the box up into its slot in the story
+  // the sentence flies up into its slot in the story block. line 0 has
+  // no box: it pops from the cat itself the moment it touches down
   TR.forEach((t,i)=>{
     const c=coins[i];
-    const bt=(cur-t.p)/0.02;
-    const bump=(bt>0&&bt<1)?Math.sin(Math.min(bt/0.4,1)*Math.PI)*15:0;
-    c.box.style.transform='translateY('+(-bump).toFixed(1)+'px)';
-    c.on.style.opacity=bt>0.1?0:1;
-    c.off.style.opacity=bt>0.1?1:0;
-    if(bt>0.05&&bt<2.4){
-      const ct=(bt-0.05)/2.35;
-      const rise=1-Math.pow(1-Math.min(ct/0.4,1),2);
-      const fall=Math.pow(Math.max(0,(ct-0.4)/0.6),2);
-      const y=-(rise*105-fall*60);
-      const spin=[1,.5,.12,.5][((cur*travel)/70|0)%4];
-      c.coin.style.transform='translate(-50%,'+y.toFixed(1)+'px) scaleX('+spin+')';
-      c.coin.style.opacity=ct<0.7?1:Math.max(0,1-(ct-0.7)/0.3);
-    } else c.coin.style.opacity=0;
-    // sentence flight: box top → its story slot, overshoot on landing.
-    // start point read live from the box rect so it stays glued during
-    // the jolt; slot corrected for the story's own ride/impact offset
+    if(c){
+      const bt=(cur-t.p)/0.02;
+      const bump=(bt>0&&bt<1)?Math.sin(Math.min(bt/0.4,1)*Math.PI)*15:0;
+      c.box.style.transform='translateY('+(-bump).toFixed(1)+'px)';
+      c.on.style.opacity=bt>0.1?0:1;
+      c.off.style.opacity=bt>0.1?1:0;
+      if(bt>0.05&&bt<2.4){
+        const ct=(bt-0.05)/2.35;
+        const rise=1-Math.pow(1-Math.min(ct/0.4,1),2);
+        const fall=Math.pow(Math.max(0,(ct-0.4)/0.6),2);
+        const y=-(rise*105-fall*60);
+        const spin=[1,.5,.12,.5][((cur*travel)/70|0)%4];
+        c.coin.style.transform='translate(-50%,'+y.toFixed(1)+'px) scaleX('+spin+')';
+        c.coin.style.opacity=ct<0.7?1:Math.max(0,1-(ct-0.7)/0.3);
+      } else c.coin.style.opacity=0;
+    }
+    // sentence flight: source → its story slot, overshoot on landing.
+    // start point read live from the box (or cat) rect so it stays
+    // glued; slot corrected for the story's own ride/impact offset
     const pk=clamp01((cur-t.p-0.002)/0.014);
     const line=slines[i];
     if(pk<=0){ line.style.opacity=0; line.style.transform='translate(0,14px) scale(.4)'; }
     else{
       const e=smooth(pk);
-      const br=c.box.getBoundingClientRect();
-      const dx=br.left+br.width*0.5-slots[i].x-(-ride);
+      const br=(c?c.box:catW).getBoundingClientRect();
+      const dx=br.left+br.width*0.5-slots[i].x+ride;
       const dy=br.top-slots[i].y-imp;
       const os=1+Math.sin(pk*Math.PI)*0.18;                      // overshoot
       line.style.opacity=Math.min(1,pk*3).toFixed(2);
