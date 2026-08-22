@@ -531,7 +531,7 @@ function frame(now){
   // then settles with three light decaying bounces (pure fn of cur)
   const drop=-(1-smooth(clamp01(cur/FALL)))*innerHeight*0.8;
   let bnc=0, lsq=0;
-  [[FALL,.008,26,.16],[FALL+.008,.006,11,.09],[FALL+.014,.004,4,.05]].forEach(h=>{
+  [[FALL,.009,58,.22],[FALL+.009,.007,26,.13],[FALL+.016,.005,10,.07]].forEach(h=>{
     const k=(cur-h[0])/h[1];
     if(k>0&&k<1){ bnc-=Math.sin(k*Math.PI)*h[2]; lsq+=Math.max(0,1-k*3)*h[3]; }
   });
