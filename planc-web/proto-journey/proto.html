@@ -229,7 +229,7 @@ const DARK = [.36, .455];
 const world = document.getElementById('world');
 const stage = document.getElementById('stage');
 let travel = 0, catX = 0, layers = [], grounds = [], beats = [];
-let coins = [], slines = [], slots = [], piranhas = [], bullets = [], glowEl, bridgeSvg, bridgePath;
+let coins = [], slines = [], slots = [], piranhas = [], bullets = [], spikes = [], glowEl, bridgeSvg, bridgePath;
 let kickEl, bodyEl;
 const story = document.getElementById('story');
 
@@ -300,6 +300,7 @@ function buildGear(){
 function layout(){
   catX = innerWidth*0.24;
   travel = Math.max(7000, innerWidth*4.4);
+  LOCKP = GAP[0] - catX/travel - 0.0015;   // scroll wall: cat's toes at the cliff edge
   world.style.width=(travel+innerWidth)+'px';
   document.getElementById('spacer').style.height=(S+innerHeight*2)+'px';
   layers=[...document.querySelectorAll('.layer')].map(el=>({el,f:+el.dataset.f}));
@@ -308,7 +309,8 @@ function layout(){
   world.replaceChildren();
   grounds=[];coins=[];piranhas=[];bullets=[];beats=[];
 
-  // ground: solid until the chasm, then the far bank
+  // ground: solid until the chasm, then the far bank — each bank gets
+  // a drawn cliff edge so the cut doesn't look broken
   [[0,GAP[0]],[GAP[1],1.02]].forEach(seg=>{
     const g=document.createElement('div'); g.className='ground';
     const a=seg[0]*travel+ (seg[0]?catX:0), b=seg[1]*travel+catX+(seg[1]>1?innerWidth:0);
@@ -316,7 +318,35 @@ function layout(){
     g.innerHTML='<svg width="100%" height="100%" preserveAspectRatio="none">'+
       '<rect y="34" width="100%" height="100%" fill="url(#gSoil)"/>'+
       '<rect width="100%" height="42" fill="url(#gTop)"/></svg>';
+    const right=seg[0]===0;                    // left bank → edge on its right side
+    const edge=document.createElementNS(NS,'svg');
+    edge.setAttribute('viewBox','0 0 24 300');edge.setAttribute('preserveAspectRatio','none');
+    edge.style.cssText='position:absolute;top:6px;height:100%;width:18px;'+(right?'right:0':'left:0');
+    edge.innerHTML='<path d="'+(right
+      ?'M8 0 Q18 44 9 96 Q2 150 15 204 Q20 252 10 298'
+      :'M16 0 Q6 44 15 96 Q22 150 9 204 Q4 252 14 298')+
+      '" fill="none" stroke="currentColor" stroke-width="5.5" stroke-linecap="round"/>';
+    g.appendChild(edge);
     world.appendChild(g); grounds.push(g);
+  });
+
+  // the chasm floor: two layers of spikes that sway against each other
+  spikes=[];
+  const sx0=GAP[0]*travel+catX-26, sx1=GAP[1]*travel+catX+26, sw=sx1-sx0;
+  [[0.30,0.17,58],[1,0.115,44]].forEach((cfg,li)=>{
+    const op=cfg[0], hgt=Math.round(innerHeight*cfg[1]), pitch=cfg[2];
+    const s=document.createElementNS(NS,'svg');
+    s.setAttribute('class','wd');
+    s.setAttribute('viewBox','0 0 '+sw+' '+hgt);s.setAttribute('preserveAspectRatio','none');
+    s.style.cssText='position:absolute;left:'+sx0.toFixed(0)+'px;bottom:-2px;width:'+sw.toFixed(0)+
+      'px;height:'+hgt+'px;opacity:'+op+';will-change:transform';
+    let d='M0 '+hgt;
+    for(let x=0;x<sw;x+=pitch){
+      const tip=3+((x/pitch*31)%3)*4;                     // deterministic jag
+      d+=' L'+(x+pitch/2).toFixed(0)+' '+tip+' L'+(x+pitch).toFixed(0)+' '+hgt;
+    }
+    s.innerHTML='<path d="'+d+' Z" fill="currentColor"/>';
+    world.appendChild(s);spikes.push(s);
   });
 
   // beats
@@ -450,7 +480,7 @@ const catW=document.getElementById('catW'),catL=document.getElementById('catL'),
 
 let bridged=false;
 logo.addEventListener('click',()=>{
-  if(cur>DIE-0.01 && !bridged){ bridged=true; document.body.classList.add('bridged'); }
+  if(cur>LOCKP-0.01 && !bridged){ bridged=true; document.body.classList.add('bridged'); }
 });
 
 // ---- the PlanC logo rig (from logo-lab): asleep by default — that IS
@@ -515,14 +545,15 @@ function jumpY(cur,jumps){
 }
 /* the doomed leap + respawn blink, all progress-driven */
 function death(cur){
-  let fallY=0, flashO=0, blink=1;
+  let fallY=0, fallX=0, flashO=0, blink=1;
   if(cur>DIE&&cur<DIE+0.012){
     const k=(cur-DIE)/0.012;
     fallY = -140*Math.sin(Math.min(1,k*1.6)*Math.PI) + 560*Math.pow(Math.max(0,k-0.35)/0.65,2);
-  }
+    fallX = Math.min(1,k*1.4)*innerWidth*0.30;   // leaps FORWARD into the gap...
+  }                                              // ...and respawns at the ledge (fallX snaps to 0)
   if(cur>DIE+0.008&&cur<DIE+0.022) flashO = Math.sin(clamp01((cur-DIE-0.008)/0.014)*Math.PI)*0.92;
   if(cur>DIE+0.016&&cur<DIE+0.034) blink = (Math.floor(cur*1400)%2)?0.15:1;
-  return {fallY,flashO,blink};
+  return {fallY,fallX,flashO,blink};
 }
 
 let cur=0,last=0,prevT=performance.now(),phase=0,v=0;
@@ -530,7 +561,8 @@ const jumps=JUMPS();
 /* the lock: the story will not move past the chasm until the logo is
    tapped — the one place scroll stops being the only input (Mat's call).
    While held there, the cat re-tries and dies on a clock. */
-const LOCKP=DIE+0.036, CYCLE=2600;
+const CYCLE=2600;
+let LOCKP=0.76;                    // set precisely in layout(): the cat AT the ledge
 let loopMs=0,lastCyc=-1,deaths=0,wasNeed=false;
 
 function frame(now){
@@ -542,6 +574,9 @@ function frame(now){
   const d=cur-last;
 
   const imp=impactY(cur);
+  // once the first doomed leap has played, The Wall's text yields the
+  // stage to the rainbow call (time-keyed, inside the sanctioned lock)
+  const wallFade=(!bridged&&cur>LOCKP-0.003)?clamp01((loopMs-CYCLE*0.5)/400):0;
   for(const L of layers)
     L.el.style.transform='translate3d('+(-cur*travel*L.f).toFixed(2)+'px,'+imp.toFixed(2)+'px,0)';
   for(const b of beats){
@@ -551,8 +586,8 @@ function frame(now){
     // reading spot, and fades out before the next phase's text enters
     // (the end beat never reaches its fade-out window, so it stays)
     const bin=clamp01((cur-(b.p-0.02))/0.02);
-    const bout=1-clamp01((cur-b.p-0.07)/0.025);   // fully gone before the chasm lock holds
-    b.el.style.opacity=(bin*bout).toFixed(2);
+    const bout=1-clamp01((cur-b.p-0.07)/0.025);
+    b.el.style.opacity=(bin*bout*(1-wallFade)).toFixed(2);
   }
 
   // gait
@@ -563,13 +598,14 @@ function frame(now){
 
   const size=catSize(cur);
   const jy=jumpY(cur,jumps);
-  let {fallY,flashO,blink}=death(cur);
+  // once bridged there is no more dying — even scrubbing back over DIE
+  let {fallY,fallX,flashO,blink}=bridged?{fallY:0,fallX:0,flashO:0,blink:1}:death(cur);
   // held at the wall: replay the doomed leap on a clock until the tap
-  const held=!bridged&&cur>DIE+0.033;
+  const held=!bridged&&cur>LOCKP-0.003;
   if(held){
     loopMs+=dt*16.667;
     const d2=death(DIE+((loopMs%CYCLE)/CYCLE)*0.05);   // 2/3 action, 1/3 breath
-    fallY+=d2.fallY;flashO=Math.max(flashO,d2.flashO);blink=Math.min(blink,d2.blink);
+    fallY+=d2.fallY;fallX+=d2.fallX;flashO=Math.max(flashO,d2.flashO);blink=Math.min(blink,d2.blink);
     deaths=1+Math.floor(loopMs/CYCLE);
     const cycN=Math.floor(loopMs/CYCLE);
     if(cycN!==lastCyc){lastCyc=cycN;if(deaths>=3&&navRig.flick)navRig.flick();}
@@ -592,14 +628,21 @@ function frame(now){
     lift=2*k*(1-k)*164;   // matches the bridge's quadratic arc exactly
   }
 
-  catW.style.transform='translate3d(0,'+(jy+bob+fallY-lift+drop+bnc).toFixed(2)+'px,0)';
+  catW.style.transform='translate3d('+fallX.toFixed(1)+'px,'+(jy+bob+fallY-lift+drop+bnc).toFixed(2)+'px,0)';
   catL.style.transform='rotate('+(Math.sin(phase*2)*2.2*v).toFixed(2)+'deg)';
   const sq=air?1.06:1-(0.085*(1-step))*v;
   catS.style.transform='scale('+(-size*(2-sq)*(1+lsq*0.7)).toFixed(3)+','+(size*sq*(1-lsq)).toFixed(3)+')';
   catS.style.opacity=blink;
   shadow.style.transform='translate3d(0,'+(-lift).toFixed(1)+'px,0) scale('+size+','+size+')';
-  shadowI.style.opacity=(cur>GAP[0]&&cur<GAP[1]&&!bridged)?0:0.18*(1-Math.min(1,-(jy+drop)/150)*0.7);
+  shadowI.style.opacity=(cur>GAP[0]&&cur<GAP[1]&&!bridged)?0
+    :0.18*(1-Math.min(1,-(jy+drop)/150)*0.7)*Math.max(0,1-fallX/80);
   flash.style.opacity=flashO;
+
+  // spike layers sway against each other — keyed to scroll, and to the
+  // lock clock while the page is held at the wall
+  const swp=Math.sin(cur*travel/80+loopMs/900)*7;
+  if(spikes[0])spikes[0].style.transform='translateX('+swp.toFixed(1)+'px)';
+  if(spikes[1])spikes[1].style.transform='translateX('+(-swp).toFixed(1)+'px)';
 
   // scene 2: gear appears piece by piece
   gear.style.opacity=clamp01((cur-0.265)/0.01)-clamp01((cur-0.475)/0.01);
@@ -689,7 +732,7 @@ function frame(now){
 
   // scene 4: rainbow call — eyes open, ink goes rainbow, and the page
   // waits. No fallback: only the tap builds the bridge now.
-  const needHelp=cur>DIE+0.03&&cur<GAP[1]&&!bridged;
+  const needHelp=held&&loopMs>CYCLE*0.7;   // die first, THEN the rainbow calls
   logo.classList.toggle('rainbow',needHelp||(bridged&&cur>GAP[0]-0.02&&cur<GAP[1]+0.02));
   tapHint.style.opacity=needHelp?1:0;
   tapHint.classList.toggle('urgent',needHelp&&deaths>=3);
