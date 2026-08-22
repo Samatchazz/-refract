@@ -165,6 +165,7 @@
       el: svg,
       // ส่วนขยายฝั่ง planc-web: สั่งลืมตา/มองทิศทางจากโค้ดได้ (ใช้ในพรีโหลดเดอร์)
       open: function () { open.t = 1; sleepAt = 0; },
+      flick: function () { tail.v -= 300; },   // สะบัดหางหนึ่งที
       gaze: function (nx, ny) {
         gazeX.t = Math.max(-1, Math.min(1, nx));
         gazeY.t = Math.max(-1, Math.min(1, ny));

@@ -10,11 +10,13 @@
 <style>
 /* ============================================================
    JOURNEY PROTO — separate from the main site on purpose.
-   Same iron rules (scroll-driven, scrub-safe, B/W) with THREE
+   Same iron rules (scroll-driven, scrub-safe, B/W) with FOUR
    sanctioned exceptions Mat asked to try:
    1) the rainbow — the big color moment of the site
    2) tapping the logo — the second input, and its bridge persists
    3) gold sparkling coins in scene 1 (glint is scroll-keyed)
+   4) the chasm lock — scroll stops at the wall and the death loop
+      runs on a clock until the logo is tapped (scroll-up always free)
    ============================================================ */
 :root{
   --ink:#111; --paper:#fcfcfa;
@@ -139,6 +141,9 @@ body.bridged #bridgePath{stroke-dashoffset:0}
   box-shadow:0 0 0 1px rgba(17,17,17,.2);opacity:0;transition:opacity .4s;pointer-events:none;
   animation:hintbob 1.3s ease-in-out infinite}
 @keyframes hintbob{50%{transform:translateY(5px)}}
+/* after a few deaths the hint gets louder */
+#tapHint.urgent{font-size:.95rem;font-weight:700;animation:hintbob2 .75s ease-in-out infinite}
+@keyframes hintbob2{50%{transform:translateY(8px) scale(1.07)}}
 body.inverted #tapHint{background:var(--ink);box-shadow:0 0 0 1px rgba(252,252,250,.3)}
 
 /* dark level swap */
@@ -522,9 +527,15 @@ function death(cur){
 
 let cur=0,last=0,prevT=performance.now(),phase=0,v=0;
 const jumps=JUMPS();
+/* the lock: the story will not move past the chasm until the logo is
+   tapped — the one place scroll stops being the only input (Mat's call).
+   While held there, the cat re-tries and dies on a clock. */
+const LOCKP=DIE+0.036, CYCLE=2600;
+let loopMs=0,lastCyc=-1,deaths=0,wasNeed=false;
 
 function frame(now){
   const dt=Math.min(3,Math.max(.2,(now-prevT)/16.667));prevT=now;
+  if(!bridged&&scrollY>LOCKP*S)scrollTo(0,Math.round(LOCKP*S));  // the wall holds
   const target=clamp01(scrollY/S);
   cur+=(target-cur)*(1-Math.pow(1-0.10,dt));
   if(Math.abs(target-cur)<0.0002)cur=target;
@@ -540,7 +551,7 @@ function frame(now){
     // reading spot, and fades out before the next phase's text enters
     // (the end beat never reaches its fade-out window, so it stays)
     const bin=clamp01((cur-(b.p-0.02))/0.02);
-    const bout=1-clamp01((cur-b.p-0.085)/0.03);
+    const bout=1-clamp01((cur-b.p-0.07)/0.025);   // fully gone before the chasm lock holds
     b.el.style.opacity=(bin*bout).toFixed(2);
   }
 
@@ -552,7 +563,17 @@ function frame(now){
 
   const size=catSize(cur);
   const jy=jumpY(cur,jumps);
-  const {fallY,flashO,blink}=death(cur);
+  let {fallY,flashO,blink}=death(cur);
+  // held at the wall: replay the doomed leap on a clock until the tap
+  const held=!bridged&&cur>DIE+0.033;
+  if(held){
+    loopMs+=dt*16.667;
+    const d2=death(DIE+((loopMs%CYCLE)/CYCLE)*0.05);   // 2/3 action, 1/3 breath
+    fallY+=d2.fallY;flashO=Math.max(flashO,d2.flashO);blink=Math.min(blink,d2.blink);
+    deaths=1+Math.floor(loopMs/CYCLE);
+    const cycN=Math.floor(loopMs/CYCLE);
+    if(cycN!==lastCyc){lastCyc=cycN;if(deaths>=3&&navRig.flick)navRig.flick();}
+  } else { loopMs=0;lastCyc=-1;deaths=bridged?deaths:0; }
   // opening: the cat drifts down from the sky, landing at FALL,
   // then settles with three light decaying bounces (pure fn of cur)
   const drop=-(1-smooth(clamp01(cur/FALL)))*innerHeight*0.8;
@@ -666,11 +687,14 @@ function frame(now){
     bullets[i].style.transform='translateX('+(-smooth(clamp01(bk))*innerWidth*0.42).toFixed(0)+'px)';
   });
 
-  // scene 4: rainbow call
+  // scene 4: rainbow call — eyes open, ink goes rainbow, and the page
+  // waits. No fallback: only the tap builds the bridge now.
   const needHelp=cur>DIE+0.03&&cur<GAP[1]&&!bridged;
   logo.classList.toggle('rainbow',needHelp||bridged&&cur<GAP[1]+0.02);
   tapHint.style.opacity=needHelp?1:0;
-  if(!bridged&&cur>DIE+0.06){ bridged=true;document.body.classList.add('bridged'); } // fallback: never strand the reader
+  tapHint.classList.toggle('urgent',needHelp&&deaths>=3);
+  if(needHelp){ navRig.open(); wasNeed=true; }
+  else if(wasNeed){ wasNeed=false; navRig.sleep(); }
 
   last=cur;
   requestAnimationFrame(frame);
