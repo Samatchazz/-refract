@@ -33,7 +33,9 @@ img{display:block}
   display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.9rem;
   transition:opacity .55s ease,visibility .55s}
 #preload.gone{opacity:0;visibility:hidden;pointer-events:none}
-#preload img{width:min(62vw,300px);animation:plbob 1.05s ease-in-out infinite;transform-origin:50% 100%}
+#plLogo{width:min(70vw,340px);aspect-ratio:545/266;animation:plbob 1.05s ease-in-out infinite;
+  transform-origin:50% 100%;color:var(--ink)}
+#plLogo svg{overflow:visible}
 @keyframes plbob{0%,100%{transform:translateY(0) scale(1,.97)}50%{transform:translateY(-8px) scale(.985,1.02)}}
 .pl-tag{font-size:.8rem;letter-spacing:.42em;opacity:.55;text-transform:lowercase}
 
@@ -42,9 +44,9 @@ img{display:block}
   display:flex;align-items:center;justify-content:space-between;padding:0 max(18px,4vw)}
 #nav::after{content:'';position:absolute;left:max(18px,4vw);right:max(18px,4vw);bottom:0;height:1px;
   background:currentColor;opacity:.14}
-.brand{line-height:1;cursor:pointer;background:none;border:0;padding:.3rem .4rem;position:relative}
-.brand img{height:36px;display:block;transition:filter .6s ease}
-body.inverted .brand img{filter:invert(1)}   /* pure-B/W wordmark: invert is safe here */
+.brand{line-height:1;cursor:pointer;background:none;border:0;padding:.3rem .4rem;position:relative;
+  color:inherit;width:110px;height:44px}
+.brand svg{overflow:visible}   /* the rig draws with currentColor, so dark mode is free */
 .badge{font-size:.6rem;letter-spacing:.3em;opacity:.45}
 /* the logo goes rainbow when the story needs you — the wordmark is an
    image now, so the rainbow is a pulsing glow behind it */
@@ -160,12 +162,12 @@ body.inverted .glow{opacity:1}
 <body>
 
 <div id="preload">
-  <img src="../assets/logo-planc.png" alt="PlanC">
+  <div id="plLogo" aria-label="PlanC"></div>
   <div class="pl-tag">aesthetize you</div>
 </div>
 
 <header id="nav">
-  <button class="brand" id="logoBtn"><img src="../assets/logo-planc.png" alt="PlanC"></button>
+  <button class="brand" id="logoBtn" aria-label="PlanC"></button>
   <span class="badge">JOURNEY&nbsp;PROTO</span>
 </header>
 
@@ -196,6 +198,7 @@ body.inverted .glow{opacity:1}
 </div></footer>
 
 <script src="../js/sprites.js"></script>
+<script src="../js/planc-rig.js"></script>
 <script>
 (function(){
 'use strict';
@@ -445,6 +448,24 @@ let bridged=false;
 logo.addEventListener('click',()=>{
   if(cur>DIE-0.01 && !bridged){ bridged=true; document.body.classList.add('bridged'); }
 });
+
+// ---- the PlanC logo rig (from logo-lab): asleep by default — that IS
+// the real logo — eyes open on tap and the pupils chase the pointer ----
+const RIG_VB='40 150 545 266';
+const navRig=PlanCRig.mount(logo,{coat:'currentColor'});
+navRig.el.setAttribute('viewBox',RIG_VB);
+const plRig=PlanCRig.mount(document.getElementById('plLogo'),{coat:'currentColor'});
+plRig.el.setAttribute('viewBox',RIG_VB);
+// preloader: eyes open and roll in a slow circle while the page loads
+// (the preloader is the sanctioned time-based zone)
+plRig.open();
+const plT0=performance.now();
+(function plCircle(){
+  if(document.getElementById('preload').classList.contains('gone')){ plRig.destroy(); return; }
+  const t=(performance.now()-plT0)/1000;
+  plRig.gaze(Math.cos(t*2.4),Math.sin(t*2.4));
+  requestAnimationFrame(plCircle);
+})();
 
 /* size: grows with each treasure, shrinks with each bite — one pure fn */
 function catSize(cur){
