@@ -527,9 +527,14 @@ function frame(now){
   const size=catSize(cur);
   const jy=jumpY(cur,jumps);
   const {fallY,flashO,blink}=death(cur);
-  // opening: the cat drifts down from the sky, landing at FALL
+  // opening: the cat drifts down from the sky, landing at FALL,
+  // then settles with three light decaying bounces (pure fn of cur)
   const drop=-(1-smooth(clamp01(cur/FALL)))*innerHeight*0.8;
-  const lsq=Math.sin(clamp01((cur-FALL)/0.008)*Math.PI)*0.16;   // landing squash
+  let bnc=0, lsq=0;
+  [[FALL,.008,26,.16],[FALL+.008,.006,11,.09],[FALL+.014,.004,4,.05]].forEach(h=>{
+    const k=(cur-h[0])/h[1];
+    if(k>0&&k<1){ bnc-=Math.sin(k*Math.PI)*h[2]; lsq+=Math.max(0,1-k*3)*h[3]; }
+  });
   const air=(jy+drop)<-2;
   const bob=air?0:-step*10*v*size;
 
@@ -540,7 +545,7 @@ function frame(now){
     lift=2*k*(1-k)*164;   // matches the bridge's quadratic arc exactly
   }
 
-  catW.style.transform='translate3d(0,'+(jy+bob+fallY-lift+drop).toFixed(2)+'px,0)';
+  catW.style.transform='translate3d(0,'+(jy+bob+fallY-lift+drop+bnc).toFixed(2)+'px,0)';
   catL.style.transform='rotate('+(Math.sin(phase*2)*2.2*v).toFixed(2)+'deg)';
   const sq=air?1.06:1-(0.085*(1-step))*v;
   catS.style.transform='scale('+(-size*(2-sq)*(1+lsq*0.7)).toFixed(3)+','+(size*sq*(1-lsq)).toFixed(3)+')';
