@@ -40,7 +40,7 @@ img{display:block}
   transform-origin:50% 100%;color:var(--ink)}
 #plLogo svg{overflow:visible}
 @keyframes plbob{0%,100%{transform:translateY(0) scale(1,.97)}50%{transform:translateY(-8px) scale(.985,1.02)}}
-.pl-tag{font-size:.8rem;letter-spacing:.42em;opacity:.55;text-transform:lowercase}
+.pl-tag{font-size:.8rem;letter-spacing:.42em;opacity:.55}
 
 /* ---------- chrome ---------- */
 #nav{position:fixed;top:0;left:0;right:0;height:var(--nav-h);z-index:40;
@@ -188,7 +188,7 @@ body.inverted .glow{opacity:1}
 
 <div id="preload">
   <div id="plLogo" aria-label="PlanC"></div>
-  <div class="pl-tag">aesthetize you</div>
+  <div class="pl-tag">Aesthetically you</div>
 </div>
 
 <header id="nav">
@@ -225,7 +225,7 @@ body.inverted .glow{opacity:1}
 
 <footer id="end"><div class="in">
   <p style="font-size:.68rem;letter-spacing:.34em;opacity:.5">END OF PROTO</p>
-  <h2>planc<span class="rb">*</span> aesthetize you</h2>
+  <h2>Aesthetically you</h2>
   <p>โปรโตทดสอบ journey 4 ฉาก — ทุกอย่างยังเป็น placeholder ปรับได้ทั้งหมด</p>
   <a class="cta" href="mailto:hello@planc.studio">คุยกับเรา →</a>
 </div></footer>
@@ -241,7 +241,7 @@ body.inverted .glow{opacity:1}
    S2 life   0.29–0.46  gear piles on; dark editing zone 0.36–0.455
    S3 hits   0.50–0.68  3 piranha pipes fire word-bullets, cat shrinks
    S4 chasm  0.72–0.93  impossible gap, one death, rainbow bridge
-   S5 out    0.94–1.0   aesthetize-you beat, then the closing panel  */
+   S5 out    0.94–1.0   Aesthetically-you beat, then the closing panel  */
 const S = 12500;                   // scroll px mapped to 0..1 (slower)
 const NS = 'http://www.w3.org/2000/svg';
 const FALL = .042;                 // the cat drifts down from the sky, lands here
@@ -394,7 +394,7 @@ function layout(){
   mkBeat(0.315,'Slice of Life','อาชีพนี้ไม่ได้มีแค่<br>ด้านที่สวย','ของที่ต้องแบก งานที่ไม่จบ คืนที่ไม่ได้นอน');
   mkBeat(0.50,'The Piranhas','แล้ววันนึง<br>มันก็กัดเรา');
   mkBeat(0.72,'The Wall','เหวที่โดดยังไง<br>ก็ไม่พ้น','บางปัญหา ตัวคนเดียวข้ามไม่ได้จริงๆ');
-  const endB=mkBeat(0.945,'planc*','<span class="rb">aesthetize</span> you','ข้ามด้วยกันไหม');
+  const endB=mkBeat(0.945,'planc*','Aesthetically you','ข้ามด้วยกันไหม');
 
   // scene 1 treasures = ? boxes head-bumped from below, like the main
   // site's block — box bottom sits exactly at the tiny cat's jump apex.
