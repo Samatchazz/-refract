@@ -72,7 +72,7 @@ body.inverted .ground{color:var(--paper)}
 .ground svg{display:block}
 
 /* ---------- beats ---------- */
-.beat{position:absolute;top:calc(var(--nav-h) + 7dvh);width:72vw;max-width:34rem;transition:color .6s ease}
+.beat{position:absolute;top:calc(var(--nav-h) + 5dvh);width:78vw;max-width:34rem;transition:color .6s ease}
 .beat .kicker{font-size:.7rem;letter-spacing:.34em;text-transform:uppercase;margin-bottom:.55rem;font-weight:600;opacity:.6}
 .beat h2{font-size:clamp(1.5rem,6.2vw,3rem);font-weight:800;line-height:1.16}
 .beat p{margin-top:.6rem;font-size:clamp(.92rem,3.4vw,1.1rem);line-height:1.6;max-width:30rem}
@@ -81,11 +81,9 @@ body.inverted .ground{color:var(--paper)}
   text-decoration:none;font-weight:600;letter-spacing:.06em}
 
 /* treasure labels pop out of collected items */
-/* box pop-ups fly to a permanent stack at the top-right (they live in
-   #stage screen space, not in the world, so the stack never scrolls) */
-.tpop{position:absolute;top:0;left:0;z-index:30;white-space:nowrap;
+.tpop{position:absolute;bottom:calc(var(--ground-h) + 30dvh);white-space:nowrap;
   font-family:'Prompt',sans-serif;font-weight:800;font-size:clamp(1.05rem,4.4vw,1.6rem);
-  transform-origin:0 0;transition:color .6s ease;will-change:transform,opacity;opacity:0}
+  transition:color .6s ease;will-change:transform,opacity;opacity:0}
 .tpop.bigpop{font-size:clamp(1.7rem,7.6vw,2.9rem)}
 #scrollHint{position:absolute;z-index:7;left:50%;bottom:calc(var(--ground-h) + 15dvh);
   transform:translateX(-50%);padding:.55rem 1rem;background:var(--paper);
@@ -154,7 +152,7 @@ body.inverted .glow{opacity:1}
 
 <header id="nav">
   <button class="brand" id="logoBtn">planc<span>*</span></button>
-  <span class="badge" id="badge">JOURNEY&nbsp;PROTO</span>
+  <span class="badge">JOURNEY&nbsp;PROTO</span>
 </header>
 
 <main id="stage">
@@ -313,7 +311,6 @@ function layout(){
     const tinyH=Math.min(150,Math.max(104,innerWidth*0.18))*0.34*1.15;
     const apex=Math.min(innerHeight*0.22,190)*0.62;
     const bottom=(apex+tinyH-10).toFixed(0);
-    t.bw=bw; t.bottomPx=+bottom;
     const box=document.createElement('div');
     box.className='qbox';
     box.style.cssText='position:absolute;bottom:calc(var(--ground-h) + '+bottom+'px);left:'+
@@ -327,8 +324,9 @@ function layout(){
     world.appendChild(box);
     coins.push({box,on,off,coin});
     const pop=document.createElement('div');pop.className='tpop'+(t.big?' bigpop':'');pop.textContent=t.t;
-    stage.appendChild(pop);
-    pops.push(pop); t.pw=pop.offsetWidth;   // re-measured on fonts.ready
+    pop.style.left=(t.p*travel+catX-14)+'px';
+    pop.style.bottom='calc(var(--ground-h) + '+(+bottom+bw+18).toFixed(0)+'px)';
+    world.appendChild(pop);pops.push(pop);
   });
 
   // scene 2 props: gear built onto the cat + editing glow + moon handled by decor
@@ -406,7 +404,6 @@ const catW=document.getElementById('catW'),catL=document.getElementById('catL'),
       shadowI=shadow.firstElementChild,gear=document.getElementById('gear'),
       flash=document.getElementById('flash'),tapHint=document.getElementById('tapHint'),
       scrollHint=document.getElementById('scrollHint'),
-      badge=document.getElementById('badge'),
       logo=document.getElementById('logoBtn');
 
 let bridged=false;
@@ -514,8 +511,6 @@ function frame(now){
     if(g)g.style.opacity=clamp01((cur-(0.275+i*0.032))/0.008);
   });
   scrollHint.style.opacity=cur<0.012?1:0;
-  // the achievement stack REPLACES the corner badge
-  badge.style.opacity=(1-smooth(clamp01((cur-TR[0].p-0.03)/0.02))).toFixed(2);
   document.body.classList.toggle('inverted',cur>DARK[0]&&cur<DARK[1]);
 
   // scene 1: ? box head-bumps — box jolts, face swaps, coin launches,
@@ -536,28 +531,14 @@ function frame(now){
       c.coin.style.transform='translate(-50%,'+y.toFixed(1)+'px) scaleX('+spin+')';
       c.coin.style.opacity=ct<0.7?1:Math.max(0,1-(ct-0.7)/0.3);
     } else c.coin.style.opacity=0;
-    // label: crashes out of the box, then FLIES to its permanent slot
-    // at the top-right and stays — scrub back and it dives home again
-    const el=pops[i];
-    const pk=(cur-t.p-0.002)/0.012;
-    if(pk<=0){ el.style.opacity=0; }
-    else {
-      el.style.opacity=1;
-      const groundH=innerHeight*0.22;
-      const boxTopY=innerHeight-(groundH+t.bottomPx+t.bw);
-      const rise=smooth(Math.min(1,pk));
-      const os=1+Math.sin(Math.min(1,pk)*Math.PI)*0.22;
-      const endScale=t.big?0.40:0.58;
-      const slotX=innerWidth-14-t.pw*endScale;
-      const slotY=62+i*22;
-      const fly=smooth(clamp01((cur-t.p-0.026)/0.032));
-      // start point is fixed in SCREEN space (where it popped, above
-      // the cat) — the world slides on underneath while it lingers
-      const sx=catX+t.bw*0.2-t.pw/2, sy=boxTopY-16-rise*46;
-      const x=sx+(slotX-sx)*fly, y=sy+(slotY-sy)*fly;
-      const sc=(rise*os)*(1-fly)+endScale*fly;
-      el.style.transform='translate3d('+x.toFixed(1)+'px,'+y.toFixed(1)+'px,0) scale('+sc.toFixed(3)+')';
-    }
+    // label: crash in with overshoot, HOLD in place while the world
+    // slides (same trick as the beats), then ride out fading
+    const pk=clamp01((cur-t.p-0.002)/0.012);
+    const os=1+Math.sin(Math.min(1,pk)*Math.PI)*0.22;            // overshoot
+    const hold=Math.min(0.045,Math.max(0,cur-t.p))*travel;
+    const gone=clamp01((cur-t.p-0.045)/0.018);
+    pops[i].style.opacity=(smooth(pk)-gone).toFixed(2);
+    pops[i].style.transform='translate('+hold.toFixed(1)+'px,'+(-smooth(pk)*54)+'px) scale('+(smooth(pk)*os).toFixed(3)+')';
   });
 
   // scene 3: jaws snap + bullets fly at the cat
@@ -587,7 +568,6 @@ function frame(now){
 
 layout();
 addEventListener('resize',layout);
-if(document.fonts&&document.fonts.ready)document.fonts.ready.then(layout); // re-measure label widths with the real font
 requestAnimationFrame(frame);
 setTimeout(()=>document.getElementById('preload').classList.add('gone'),1600);
 })();
