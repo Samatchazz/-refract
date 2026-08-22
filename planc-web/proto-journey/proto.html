@@ -80,10 +80,19 @@ body.inverted .ground{color:var(--paper)}
 .cta{display:inline-block;margin-top:1rem;padding:.75rem 1.5rem;background:var(--ink);color:var(--paper);
   text-decoration:none;font-weight:600;letter-spacing:.06em}
 
-/* treasure labels pop out of collected items */
-.tpop{position:absolute;bottom:calc(var(--ground-h) + 30dvh);white-space:nowrap;
-  font-family:'Prompt',sans-serif;font-weight:800;font-size:clamp(1.05rem,4.4vw,1.6rem);
-  transition:color .6s ease;will-change:transform,opacity;opacity:0}
+/* the story block — sentences knocked out of the boxes stack up
+   here, in the exact spot the old intro beat used to occupy */
+#story{position:fixed;left:8vw;top:calc(var(--nav-h) + 7dvh);z-index:30;pointer-events:none;
+  color:var(--ink);transition:color .6s ease;will-change:transform}
+body.inverted #story{color:var(--paper)}
+.sline{font-family:'Prompt',sans-serif;font-weight:800;white-space:nowrap;opacity:0;
+  font-size:clamp(1.05rem,4.6vw,1.7rem);line-height:1.55;transform-origin:0 50%;
+  will-change:transform,opacity}
+.sline.big{font-size:clamp(1.6rem,7.2vw,2.8rem);line-height:1.25;margin-bottom:.15em}
+#scrollHint{position:absolute;z-index:7;left:50%;bottom:calc(var(--ground-h) + 15dvh);
+  transform:translateX(-50%);padding:.55rem 1rem;background:var(--paper);
+  box-shadow:0 0 0 1px rgba(17,17,17,.16);font-size:.72rem;letter-spacing:.22em;
+  white-space:nowrap;animation:hintbob 1.4s ease-in-out infinite;transition:opacity .4s}
 /* piranha speech bullets */
 .bullet{position:absolute;white-space:nowrap;font-family:'Prompt',sans-serif;font-weight:800;
   font-size:clamp(.95rem,3.8vw,1.4rem);padding:.2rem .55rem;border:3px solid currentColor;
@@ -162,8 +171,10 @@ body.inverted .glow{opacity:1}
   </div></div></div>
 
   <div id="tapHint">planc* ช่วยได้ — แตะโลโก้ ↖</div>
+  <div id="scrollHint">SCROLL ↓</div>
 </main>
 
+<div id="story"></div>
 <div id="flash"></div>
 <div id="spacer"></div>
 
@@ -186,7 +197,10 @@ body.inverted .glow{opacity:1}
    S5 out    0.94–1.0   aesthetize-you beat, then the closing panel  */
 const S = 12500;                   // scroll px mapped to 0..1 (slower)
 const NS = 'http://www.w3.org/2000/svg';
-const TR = [ {p:.07, t:'ทำคอนเทนต์'}, {p:.13, t:'มียอดฟอล'}, {p:.19, t:'มีแบรนด์จ้าง'} ];
+const TR = [ {p:.05,  t:'เราเป็นอินฟลู', big:true},
+             {p:.105, t:'เราทำคอนเทนต์'},
+             {p:.16,  t:'เรามียอดฟอล'},
+             {p:.215, t:'เรามีแบรนด์จ้าง'} ];
 const HIT = [ {p:.53, t:'คอนเทนต์ไม่ปัง'}, {p:.59, t:'ยอดฟอลไม่ขึ้น'}, {p:.65, t:'แบรนด์หายไป'} ];
 const GAP = [.775, .905];          // the impossible chasm
 const DIE = .782;                  // where the cat tries anyway
@@ -195,7 +209,8 @@ const DARK = [.36, .455];
 const world = document.getElementById('world');
 const stage = document.getElementById('stage');
 let travel = 0, catX = 0, layers = [], grounds = [], beats = [];
-let coins = [], pops = [], piranhas = [], bullets = [], glowEl, bridgeSvg, bridgePath;
+let coins = [], slines = [], slots = [], piranhas = [], bullets = [], glowEl, bridgeSvg, bridgePath;
+const story = document.getElementById('story');
 
 const clamp01 = v => Math.min(1, Math.max(0, v));
 const smooth = v => { v = clamp01(v); return v*v*(3-2*v); };
@@ -270,7 +285,7 @@ function layout(){
   layers.forEach(L=>L.el.style.width=(travel*L.f+innerWidth*2)+'px');
 
   world.replaceChildren();
-  grounds=[];coins=[];pops=[];piranhas=[];bullets=[];beats=[];
+  grounds=[];coins=[];piranhas=[];bullets=[];beats=[];
 
   // ground: solid until the chasm, then the far bank
   [[0,GAP[0]],[GAP[1],1.02]].forEach(seg=>{
@@ -289,8 +304,8 @@ function layout(){
     s.innerHTML='<div class="kicker">'+kick+'</div><h2>'+h2+'</h2>'+(body?'<p>'+body+'</p>':'');
     s.style.left=(p*travel+innerWidth*0.08)+'px';world.appendChild(s);beats.push({el:s,p});return s;
   };
-  mkBeat(0.0,'Journey Proto','ชีวิตอินฟลูฯ<br>เริ่มจากตัวเล็กๆ','เลื่อนลง แล้วเก็บของให้ครบ');
-  mkBeat(0.26,'Slice of Life','อาชีพนี้ไม่ได้มีแค่<br>ด้านที่สวย','ของที่ต้องแบก งานที่ไม่จบ คืนที่ไม่ได้นอน');
+  // scene 1 opens EMPTY — the box pops do the storytelling
+  mkBeat(0.30,'Slice of Life','อาชีพนี้ไม่ได้มีแค่<br>ด้านที่สวย','ของที่ต้องแบก งานที่ไม่จบ คืนที่ไม่ได้นอน');
   mkBeat(0.50,'The Piranhas','แล้ววันนึง<br>มันก็กัดเรา');
   mkBeat(0.72,'The Wall','เหวที่โดดยังไง<br>ก็ไม่พ้น','บางปัญหา ตัวคนเดียวข้ามไม่ได้จริงๆ');
   const endB=mkBeat(0.945,'planc*','<span class="rb">aesthetize</span> you','ข้ามด้วยกันไหม');
@@ -306,7 +321,7 @@ function layout(){
     box.className='qbox';
     box.style.cssText='position:absolute;bottom:calc(var(--ground-h) + '+bottom+'px);left:'+
       (t.p*travel+catX-bw/2).toFixed(0)+'px;width:'+bw+'px;height:'+bw+'px;will-change:transform';
-    const on=sprite('qblock'+(i+1),'wd'), off=sprite('qblock-used2','wd');
+    const on=sprite('qblock'+(i%3+1),'wd'), off=sprite('qblock-used2','wd');
     [on,off].forEach(s=>s.style.cssText='position:absolute;inset:0;width:100%;height:100%');
     off.style.opacity=0;
     const coin=sprite('coin'+(i+1),'wd');
@@ -314,11 +329,16 @@ function layout(){
     box.appendChild(coin);box.appendChild(on);box.appendChild(off);
     world.appendChild(box);
     coins.push({box,on,off,coin});
-    const pop=document.createElement('div');pop.className='tpop';pop.textContent=t.t;
-    pop.style.left=(t.p*travel+catX-14)+'px';
-    pop.style.bottom='calc(var(--ground-h) + '+(+bottom+bw+18).toFixed(0)+'px)';
-    world.appendChild(pop);pops.push(pop);
   });
+
+  // the story block: each sentence lands here one by one, replacing
+  // the old intro beat — slots measured once while untransformed
+  story.replaceChildren();story.style.transform='';slines=[];slots=[];
+  TR.forEach(t=>{
+    const l=document.createElement('div');l.className='sline'+(t.big?' big':'');
+    l.textContent=t.t;story.appendChild(l);slines.push(l);
+  });
+  slines.forEach(l=>{const r=l.getBoundingClientRect();slots.push({x:r.left,y:r.top});});
 
   // scene 2 props: gear built onto the cat + editing glow + moon handled by decor
   buildGear();
@@ -394,6 +414,7 @@ const catW=document.getElementById('catW'),catL=document.getElementById('catL'),
       catS=document.getElementById('catS'),shadow=document.getElementById('shadow'),
       shadowI=shadow.firstElementChild,gear=document.getElementById('gear'),
       flash=document.getElementById('flash'),tapHint=document.getElementById('tapHint'),
+      scrollHint=document.getElementById('scrollHint'),
       logo=document.getElementById('logoBtn');
 
 let bridged=false;
@@ -404,7 +425,7 @@ logo.addEventListener('click',()=>{
 /* size: grows with each treasure, shrinks with each bite — one pure fn */
 function catSize(cur){
   let s=0.34;
-  TR.forEach(t=>{ s+=0.22*smooth((cur-t.p)/0.01); });
+  TR.forEach(t=>{ s+=0.165*smooth((cur-t.p)/0.01); });   // 4 boxes -> full size
   HIT.forEach(h=>{ s-=0.22*smooth((cur-h.p)/0.008); });
   s+=0.62*smooth((cur-0.925)/0.03);   // planc got you across — grow back
   return Math.min(1,Math.max(0.30,s));
@@ -495,15 +516,21 @@ function frame(now){
   flash.style.opacity=flashO;
 
   // scene 2: gear appears piece by piece
-  gear.style.opacity=clamp01((cur-0.24)/0.01)-clamp01((cur-0.475)/0.01);
+  gear.style.opacity=clamp01((cur-0.265)/0.01)-clamp01((cur-0.475)/0.01);
   ['g1','g2','g3'].forEach((id,i)=>{
     const g=document.getElementById(id);
-    if(g)g.style.opacity=clamp01((cur-(0.25+i*0.035))/0.008);
+    if(g)g.style.opacity=clamp01((cur-(0.275+i*0.032))/0.008);
   });
+  scrollHint.style.opacity=cur<0.012?1:0;
   document.body.classList.toggle('inverted',cur>DARK[0]&&cur<DARK[1]);
 
+  // the story block sits at the old intro-beat spot; once the last
+  // sentence has landed it rides out with the world like a beat
+  const ride=Math.max(0,cur-(TR[TR.length-1].p+0.05))*travel;
+  story.style.transform='translate('+(-ride).toFixed(1)+'px,'+imp.toFixed(2)+'px)';
+
   // scene 1: ? box head-bumps — box jolts, face swaps, coin launches,
-  // the label SLAMS up with an overshoot and stands for a long beat
+  // the sentence flies from the box up into its slot in the story
   TR.forEach((t,i)=>{
     const c=coins[i];
     const bt=(cur-t.p)/0.02;
@@ -520,14 +547,22 @@ function frame(now){
       c.coin.style.transform='translate(-50%,'+y.toFixed(1)+'px) scaleX('+spin+')';
       c.coin.style.opacity=ct<0.7?1:Math.max(0,1-(ct-0.7)/0.3);
     } else c.coin.style.opacity=0;
-    // label: crash in with overshoot, HOLD in place while the world
-    // slides (same trick as the beats), then ride out fading
-    const pk=clamp01((cur-t.p-0.002)/0.012);
-    const os=1+Math.sin(Math.min(1,pk)*Math.PI)*0.22;            // overshoot
-    const hold=Math.min(0.062,Math.max(0,cur-t.p))*travel;
-    const gone=clamp01((cur-t.p-0.085)/0.03);
-    pops[i].style.opacity=(smooth(pk)-gone).toFixed(2);
-    pops[i].style.transform='translate('+hold.toFixed(1)+'px,'+(-smooth(pk)*54)+'px) scale('+(smooth(pk)*os).toFixed(3)+')';
+    // sentence flight: box top → its story slot, overshoot on landing.
+    // start point read live from the box rect so it stays glued during
+    // the jolt; slot corrected for the story's own ride/impact offset
+    const pk=clamp01((cur-t.p-0.002)/0.014);
+    const line=slines[i];
+    if(pk<=0){ line.style.opacity=0; line.style.transform='translate(0,14px) scale(.4)'; }
+    else{
+      const e=smooth(pk);
+      const br=c.box.getBoundingClientRect();
+      const dx=br.left+br.width*0.5-slots[i].x-(-ride);
+      const dy=br.top-slots[i].y-imp;
+      const os=1+Math.sin(pk*Math.PI)*0.18;                      // overshoot
+      line.style.opacity=Math.min(1,pk*3).toFixed(2);
+      line.style.transform='translate('+(dx*(1-e)).toFixed(1)+'px,'+(dy*(1-e)).toFixed(1)+
+        'px) scale('+((0.35+0.65*e)*os).toFixed(3)+')';
+    }
   });
 
   // scene 3: jaws snap + bullets fly at the cat
@@ -557,6 +592,7 @@ function frame(now){
 
 layout();
 addEventListener('resize',layout);
+if(document.fonts&&document.fonts.ready)document.fonts.ready.then(layout);  // re-measure story slots with the real font
 requestAnimationFrame(frame);
 setTimeout(()=>document.getElementById('preload').classList.add('gone'),1600);
 })();
