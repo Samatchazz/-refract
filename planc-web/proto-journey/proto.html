@@ -690,7 +690,7 @@ function frame(now){
   // scene 4: rainbow call — eyes open, ink goes rainbow, and the page
   // waits. No fallback: only the tap builds the bridge now.
   const needHelp=cur>DIE+0.03&&cur<GAP[1]&&!bridged;
-  logo.classList.toggle('rainbow',needHelp||bridged&&cur<GAP[1]+0.02);
+  logo.classList.toggle('rainbow',needHelp||(bridged&&cur>GAP[0]-0.02&&cur<GAP[1]+0.02));
   tapHint.style.opacity=needHelp?1:0;
   tapHint.classList.toggle('urgent',needHelp&&deaths>=3);
   if(needHelp){ navRig.open(); wasNeed=true; }
