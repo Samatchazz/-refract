@@ -176,11 +176,15 @@ body.inverted #boltShape{animation:boltpop 5.6s linear infinite}
 #drone{position:absolute;left:0;top:0;width:clamp(54px,9vw,78px);z-index:6;
   pointer-events:none;opacity:0;will-change:transform,opacity}
 #sun svg,#drone svg{width:100%;height:auto;overflow:visible}
-/* shark pipes: the wrapper clips the shark so it truly rises out of the pipe */
+/* shark pipes: the wrapper clips only the emergence line — roomy on
+   top/sides so fins never get shaved off mid-lunge */
 .sharkClip{position:absolute;overflow:hidden;pointer-events:none;z-index:4}
-.sharkClip svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible;
-  will-change:transform}
+.sharkClip svg{position:absolute;bottom:0;left:50%;overflow:visible;
+  transform-origin:50% 96%;will-change:transform}
 .sharkClip use{transition:none}
+/* the classic damage flash: one red blink the instant the bite lands
+   (a sanctioned color moment, same family as the gold and the spikes) */
+#catS img.hurt{filter:invert(35%) sepia(85%) saturate(5200%) hue-rotate(342deg) brightness(1.02)}
 /* editing-desk glow — the one bright thing in the dark level */
 .glow{position:absolute;bottom:var(--ground-h);width:120px;height:86px;opacity:0;transition:opacity .5s}
 .glow i{position:absolute;inset:0;background:var(--paper);opacity:.92;border-radius:3px;
@@ -513,15 +517,14 @@ function sprite(id, cls){
   defs.appendChild(top);defs.appendChild(soil);svg.appendChild(defs);document.body.appendChild(svg);
 })();
 
-/* ---- tree-shark (the MJ set): 3 open frames boil, 1 shut frame snaps ---- */
-function makeShark(){
+/* ---- tree-shark (the MJ set): each pipe gets its own shark drawing,
+   all of them share the zipped-shut frame for the snap ---- */
+function makeShark(i){
   const g=document.createElementNS(NS,'svg');
   g.setAttribute('viewBox','0 0 470 640'); g.setAttribute('class','wd');
   g.setAttribute('preserveAspectRatio','xMidYMax meet');
   g.innerHTML=
-   '<use href="#shark-open1" width="470" height="640"/>'+
-   '<use href="#shark-open2" width="470" height="640" opacity="0"/>'+
-   '<use href="#shark-open3" width="470" height="640" opacity="0"/>'+
+   '<use href="#shark-open'+(i%3+1)+'" width="470" height="640"/>'+
    '<use href="#shark-closed1" width="470" height="640" opacity="0"/>';
   return g;
 }
@@ -668,17 +671,23 @@ function layout(){
   HIT.forEach((h,i)=>{
     const pipe=sprite(i%2?'pipe-short2':'pipe-short1','wd');
     const ph=innerHeight*0.13, pw=ph*pipe.__ar;
-    pipe.style.cssText='position:absolute;bottom:var(--ground-h);left:'+
-      (h.p*travel+catX-pw/2).toFixed(0)+'px;height:'+ph.toFixed(0)+'px;width:'+pw.toFixed(0)+'px;z-index:5';
+    // planted 18px into the soil so the wavy ground line never makes
+    // the pipe read as floating (or sinking) as the line wanders
+    pipe.style.cssText='position:absolute;bottom:calc(var(--ground-h) - 18px);left:'+
+      (h.p*travel+catX-pw/2).toFixed(0)+'px;height:'+(ph+18).toFixed(0)+'px;width:'+pw.toFixed(0)+'px;z-index:5';
     const prH=innerHeight*0.21, prW=prH*0.73;
+    // clip box: generous headroom + wings, the only hard edge is the
+    // emergence line hidden inside the pipe mouth
+    const cW=prW*1.6, cH=prH*1.3;
     const clip=document.createElement('div');clip.className='sharkClip';
-    clip.style.cssText+='bottom:calc(var(--ground-h) + '+(ph*0.88).toFixed(0)+'px);left:'+
-      (h.p*travel+catX-prW*0.56).toFixed(0)+'px;height:'+prH.toFixed(0)+'px;width:'+prW.toFixed(0)+'px';
-    const pr=makeShark();
+    clip.style.cssText+='bottom:calc(var(--ground-h) + '+(ph*0.52).toFixed(0)+'px);left:'+
+      (h.p*travel+catX-cW/2).toFixed(0)+'px;height:'+cH.toFixed(0)+'px;width:'+cW.toFixed(0)+'px';
+    const pr=makeShark(i);
+    pr.style.width=prW.toFixed(0)+'px';pr.style.height=prH.toFixed(0)+'px';
     clip.appendChild(pr);
     world.appendChild(clip);world.appendChild(pipe);   // pipe drawn over the clip seam
     const uses=[...pr.querySelectorAll('use')];
-    piranhas.push({el:pr, opens:uses.slice(0,3), closed:uses[3], p:h.p});
+    piranhas.push({el:pr, open:uses[0], closed:uses[1], p:h.p});
     const b=document.createElement('div');b.className='bullet';b.textContent=h.t;
     b.style.left=(h.p*travel+catX-prW*0.5)+'px';
     b.style.bottom='calc(var(--ground-h) + '+(ph*0.88+prH*0.55).toFixed(0)+'px)';
@@ -780,7 +789,8 @@ function buildSky(){
 
 /* ================= per-frame state ================= */
 const catW=document.getElementById('catW'),catL=document.getElementById('catL'),
-      catS=document.getElementById('catS'),shadow=document.getElementById('shadow'),
+      catS=document.getElementById('catS'),catImg=document.getElementById('catImg'),
+      shadow=document.getElementById('shadow'),
       shadowI=shadow.firstElementChild,gear=document.getElementById('gear'),
       flash=document.getElementById('flash'),tapHint=document.getElementById('tapHint'),
       scrollHint=document.getElementById('scrollHint'),
@@ -820,9 +830,14 @@ const plT0=performance.now();
 function catSize(cur){
   let s=0.34;
   TR.forEach(t=>{ s+=0.165*smooth((cur-t.p)/0.01); });   // 4 boxes -> full size
-  HIT.forEach(h=>{ s-=0.22*smooth((cur-(h.p-0.0128))/0.006); });  // each bite: pop smaller
+  HIT.forEach(h=>{
+    const bp=h.p-0.0128;
+    s-=0.22*smooth((cur-bp)/0.005);                 // each bite: settle smaller
+    const k=(cur-bp)/0.022;                         // ...via a springy dip-and-
+    if(k>0&&k<1) s-=0.16*(1-k)*Math.sin(Math.PI*2.2*k);  // rebound so damage reads
+  });
   s+=0.62*smooth((cur-0.925)/0.03);   // planc got you across — grow back
-  return Math.min(1,Math.max(0.30,s));
+  return Math.min(1,Math.max(0.24,s));
 }
 /* the bite lands on the way up, while the pipe is still ahead of the
    cat — so the shark's mouth meets the cat's face, not its hitbox */
@@ -951,8 +966,11 @@ function frame(now){
       if(k>0.5)lsq+=Math.max(0,1-Math.abs(k-0.64)*7)*0.24;   // the landing thump
     }
     if(cur>bp+0.0015&&cur<bp+0.024)
-      blink=Math.min(blink,((cur*travel/55|0)%2)?0.3:1);
+      blink=Math.min(blink,((cur*travel/48|0)%2)?0.18:1);
   }
+  // the damage flash: the cat goes red for one blink as the jaws close
+  catImg.classList.toggle('hurt',
+    BITEP.some(bp=>cur>bp-0.0008&&cur<bp+0.003));
 
   const air=(jy+drop)<-2;
   const bob=air?0:-step*10*v*size;
@@ -1062,16 +1080,15 @@ function frame(now){
     const bp=pr.p-0.0128;                                         // bite mid-ascent
     // pop out just as the cat launches, duck back in after the hit
     const rise=smooth((cur-(pr.p-0.021))/0.007)-smooth((cur-(pr.p+0.004))/0.012);
-    // a hungry lean into the bite
+    // a hungry lean into the bite + a light boil-wobble while out
     const lunge=Math.exp(-Math.pow((cur-bp)/0.004,2));
-    pr.el.style.transform='translateY('+((1-rise)*103).toFixed(1)+'%) rotate('+
-      (-lunge*9).toFixed(1)+'deg)';
-    pr.el.style.transformOrigin='50% 96%';
+    const wob=rise>0.2?(((cur*travel/95|0)%2)?1.6:-1.6):0;
+    pr.el.style.transform='translate(-50%,'+((1-rise)*115).toFixed(1)+'%) rotate('+
+      (-lunge*9+wob).toFixed(1)+'deg)';
     // chomp-chomp: open/shut alternates with scroll; shut is forced
     // right at the bite so the connect always reads
     const shut=Math.abs(cur-bp)<0.0022||((cur*travel/110|0)%2===1);
-    const openIdx=(((cur*travel)/130|0)+i)%3;
-    pr.opens.forEach((u,k)=>u.setAttribute('opacity',(!shut&&k===openIdx)?1:0));
+    pr.open.setAttribute('opacity',shut?0:1);
     pr.closed.setAttribute('opacity',shut?1:0);
     // the word bursts from the mouth at the bite and chases the cat
     const bk=(cur-bp)/0.015;
