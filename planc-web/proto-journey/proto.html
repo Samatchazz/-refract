@@ -659,7 +659,10 @@ function hitstop(c){
 const JUMPS=()=>{
   const H=Math.min(innerHeight*0.22,190);
   const j=TR.filter(t=>!t.cat).map(t=>({p:t.p,w:.018,h:H*0.62}));
-  HIT.forEach(h=>j.push({p:h.p-0.006,w:.014,h:H*0.95}));   // taller pipes, taller leap
+  HIT.forEach(h=>{
+    j.push({p:h.p-0.006,w:.014,h:H*0.95});   // the doomed first leap
+    j.push({p:h.p+0.019,w:.008,h:H*0.82});   // the retry — shark's gone now
+  });
   return j;
 };
 /* screen kick on every head-bump and every bite — pure fn of cur */
@@ -716,25 +719,27 @@ function frame(now){
   const imp=impactY(cur);
 
   // shark bites: real knockback physics, computed up front because the
-  // camera needs it — flung back past the jump-start spot, thumps down,
-  // holds a beat, then catches back up. All pure fns of cur, scrub-safe
-  let kbFull=0,kbY=0,kbLsq=0,kbBlink=1;
+  // camera needs it. Three beats, all pure fns of cur, scrub-safe:
+  // flung back 2/3 of a screen, thumps down way behind, holds — then
+  // runs back in and RETRIES the jump (the shark has ducked away)
+  let kbX=0,camPx=0,kbY=0,kbLsq=0,kbBlink=1;
   for(const bp of BITEP){
-    const k=(cur-bp)/0.030;
+    const k=(cur-bp)/0.040;
     if(k>0&&k<1){
-      const fly=smooth(Math.min(1,k*3.3));                 // flung backwards fast...
-      const rec=smooth(Math.max(0,(k-0.55)/0.45));         // ...then walks back in
-      kbFull-=Math.min(innerWidth*0.36,240)*fly*(1-rec);
-      kbY-=Math.sin(Math.min(1,k*3.3)*Math.PI)*36;         // the fling pops it up
+      const fly=smooth(Math.min(1,k*4));                   // flung backwards fast...
+      const rec=smooth(clamp01((k-0.58)/0.34));            // ...then charges back in
+      const kbWorld=-Math.min(innerWidth*0.66,430)*fly*(1-rec);
+      // the cat keeps as much of the throw as the screen can show;
+      // the camera rides along and swallows the rest, Rockman-style
+      const vis=Math.max(kbWorld*(1-CAM_ABSORB),-(catX-26));
+      kbX+=vis; camPx+=kbWorld-vis;
+      kbY-=Math.sin(Math.min(1,k*4)*Math.PI)*36;           // the fling pops it up
       // touchdown thump right where the jump arc meets the ground again
-      if(k>0.60&&k<0.80)kbLsq+=Math.max(0,1-Math.abs(k-0.69)*9)*0.26;
+      if(k>0.46&&k<0.62)kbLsq+=Math.max(0,1-Math.abs(k-0.52)*9)*0.26;
     }
-    if(cur>bp+0.0015&&cur<bp+0.032)                        // NES i-frames: hard on/off
+    if(cur>bp+0.0015&&cur<bp+0.038)                        // NES i-frames: hard on/off
       kbBlink=Math.min(kbBlink,((cur*travel/48|0)%2)?0:1);
   }
-  // the camera rides with the cat: it swallows most of the throw, the
-  // cat keeps the rest — the whole world jolts, Rockman-style
-  const camPx=kbFull*CAM_ABSORB, kbX=kbFull-camPx;
 
   // once the first doomed leap has played, The Wall's text yields the
   // stage to the rainbow call (time-keyed, inside the sanctioned lock)
