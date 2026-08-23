@@ -669,18 +669,18 @@ function layout(){
   // scene 3: pipes + tree-sharks + word bullets. The shark hides inside
   // the pipe and pops out to ambush the cat mid-jump (Mat's call)
   HIT.forEach((h,i)=>{
+    const prH=innerHeight*0.20, prW=prH*0.73;
     const pipe=sprite(i%2?'pipe-short2':'pipe-short1','wd');
-    const ph=innerHeight*0.13, pw=ph*pipe.__ar;
-    // planted 18px into the soil so the wavy ground line never makes
-    // the pipe read as floating (or sinking) as the line wanders
-    pipe.style.cssText='position:absolute;bottom:calc(var(--ground-h) - 18px);left:'+
-      (h.p*travel+catX-pw/2).toFixed(0)+'px;height:'+(ph+18).toFixed(0)+'px;width:'+pw.toFixed(0)+'px;z-index:5';
-    const prH=innerHeight*0.21, prW=prH*0.73;
-    // clip box: generous headroom + wings, the only hard edge is the
-    // emergence line hidden inside the pipe mouth
-    const cW=prW*1.6, cH=prH*1.3;
+    // the pipe is WIDER than the shark and sunk deep into the soil —
+    // the shark's flat emergence line always hides behind the rim
+    const sink=26, pw=prW*1.16, ph=pw/pipe.__ar;
+    pipe.style.cssText='position:absolute;bottom:calc(var(--ground-h) - '+sink+'px);left:'+
+      (h.p*travel+catX-pw/2).toFixed(0)+'px;height:'+ph.toFixed(0)+'px;width:'+pw.toFixed(0)+'px;z-index:5';
+    // clip box: generous headroom + wings; its bottom edge (the only
+    // hard cut) sits just under the pipe's rim
+    const cW=prW*1.6, cH=prH*1.35;
     const clip=document.createElement('div');clip.className='sharkClip';
-    clip.style.cssText+='bottom:calc(var(--ground-h) + '+(ph*0.52).toFixed(0)+'px);left:'+
+    clip.style.cssText+='bottom:calc(var(--ground-h) + '+(ph*0.86-sink).toFixed(0)+'px);left:'+
       (h.p*travel+catX-cW/2).toFixed(0)+'px;height:'+cH.toFixed(0)+'px;width:'+cW.toFixed(0)+'px';
     const pr=makeShark(i);
     pr.style.width=prW.toFixed(0)+'px';pr.style.height=prH.toFixed(0)+'px';
@@ -857,7 +857,7 @@ function hitstop(c){
 const JUMPS=()=>{
   const H=Math.min(innerHeight*0.22,190);
   const j=TR.filter(t=>!t.cat).map(t=>({p:t.p,w:.018,h:H*0.62}));
-  HIT.forEach(h=>j.push({p:h.p-0.006,w:.014,h:H*0.78}));
+  HIT.forEach(h=>j.push({p:h.p-0.006,w:.014,h:H*0.95}));   // taller pipes, taller leap
   return j;
 };
 /* screen kick on every head-bump and every bite — pure fn of cur */
@@ -956,16 +956,21 @@ function frame(now){
     const k=(cur-h[0])/h[1];
     if(k>0&&k<1){ bnc-=Math.sin(k*Math.PI)*h[2]; lsq+=Math.max(0,1-k*3)*h[3]; }
   });
-  // shark bites: knocked back off the jump arc, thumps down, then walks
-  // on blinking (Mario i-frames) — all pure fns of cur, scrub-safe
-  let kbX=0;
+  // shark bites: real knockback physics — flung back PAST where the
+  // jump began, thumps down, holds there a beat, then catches back up
+  // while blinking (Mario i-frames). All pure fns of cur, scrub-safe
+  let kbX=0,kbY=0;
   for(const bp of BITEP){
-    const k=(cur-bp)/0.013;
+    const k=(cur-bp)/0.030;
     if(k>0&&k<1){
-      kbX-=Math.sin(k*Math.PI)*innerWidth*0.16;
-      if(k>0.5)lsq+=Math.max(0,1-Math.abs(k-0.64)*7)*0.24;   // the landing thump
+      const fly=smooth(Math.min(1,k*3.3));                 // flung backwards fast...
+      const rec=smooth(Math.max(0,(k-0.55)/0.45));         // ...then walks back in
+      kbX-=Math.min(innerWidth*0.36,240)*fly*(1-rec);
+      kbY-=Math.sin(Math.min(1,k*3.3)*Math.PI)*36;         // the fling pops it up
+      // touchdown thump right where the jump arc meets the ground again
+      if(k>0.60&&k<0.80)lsq+=Math.max(0,1-Math.abs(k-0.69)*9)*0.26;
     }
-    if(cur>bp+0.0015&&cur<bp+0.024)
+    if(cur>bp+0.0015&&cur<bp+0.032)
       blink=Math.min(blink,((cur*travel/48|0)%2)?0.18:1);
   }
   // the damage flash: the cat goes red for one blink as the jaws close
@@ -982,7 +987,7 @@ function frame(now){
     lift=2*k*(1-k)*164;   // matches the bridge's quadratic arc exactly
   }
 
-  catW.style.transform='translate3d('+(fallX+kbX).toFixed(1)+'px,'+(jy+bob+fallY-lift+drop+bnc).toFixed(2)+'px,0)';
+  catW.style.transform='translate3d('+(fallX+kbX).toFixed(1)+'px,'+(jy+bob+fallY+kbY-lift+drop+bnc).toFixed(2)+'px,0)';
   catL.style.transform='rotate('+(Math.sin(phase*2)*2.2*v).toFixed(2)+'deg)';
   const sq=air?1.06:1-(0.085*(1-step))*v;
   catS.style.transform='scale('+(-size*(2-sq)*(1+lsq*0.7)).toFixed(3)+','+(size*sq*(1-lsq)).toFixed(3)+')';
