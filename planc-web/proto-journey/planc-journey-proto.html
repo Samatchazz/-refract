@@ -633,6 +633,16 @@ function layout(){
       const s=document.createElement('div');s.className='spark';s.textContent='✦';
       s.style.left=sp[0]+'%';s.style.top=sp[1]+'%';box.appendChild(s);return s;
     });
+    // bump effect: ink starburst dashes that pop around the box
+    const fx=document.createElementNS(NS,'svg');
+    fx.setAttribute('viewBox','0 0 120 120');fx.setAttribute('class','wd');
+    fx.innerHTML='<g stroke="currentColor" stroke-width="5" stroke-linecap="round" fill="none">'+
+      '<path d="M60 14 L60 2"/><path d="M96 26 L106 16"/><path d="M112 60 L122 58"/>'+
+      '<path d="M98 94 L108 102"/><path d="M22 92 L12 100"/><path d="M8 58 L-2 62"/>'+
+      '<path d="M24 24 L14 15"/></g>';
+    fx.style.cssText='position:absolute;left:-25%;top:-25%;width:150%;height:150%;opacity:0;'+
+      'overflow:visible;will-change:transform,opacity';
+    box.appendChild(fx);
     // coin = black ink drawing boiling through coin1-4, gold disc under
     const wrap=document.createElement('div');
     wrap.style.cssText='position:absolute;left:50%;top:-6%;width:58%;height:66%;transform:translate(-50%,0);opacity:0;will-change:transform,opacity';
@@ -645,7 +655,7 @@ function layout(){
     wrap.appendChild(disc);wrap.appendChild(coin);
     box.appendChild(wrap);box.appendChild(on);box.appendChild(off);
     world.appendChild(box);
-    coins.push({box,on,off,onUse,wrap,disc,coinUse,sparks});
+    coins.push({box,on,off,onUse,wrap,disc,coinUse,sparks,fx});
   });
 
   // the story block: built like a beat (kicker / four lines / body),
@@ -885,7 +895,7 @@ const JUMPS=()=>{
 function impactY(cur){
   let y=0;
   TR.forEach(t=>{const k=(cur-t.p)/0.010;
-    if(k>0&&k<1)y+=Math.sin(k*Math.PI*2.5)*(1-k)*9;});
+    if(k>0&&k<1)y+=Math.sin(k*Math.PI*2.5)*(1-k)*13;});
   HIT.forEach(h=>{const k=(cur-(h.p-0.0128))/0.008;
     if(k>0&&k<1)y+=Math.sin(k*Math.PI*2.5)*(1-k)*17;});
   return y;
@@ -1071,8 +1081,22 @@ function frame(now){
     const c=coins[i];
     if(c){
       const bt=(cur-t.p)/0.02;
-      const bump=(bt>0&&bt<1)?Math.sin(Math.min(bt/0.4,1)*Math.PI)*15:0;
-      c.box.style.transform='translateY('+(-bump).toFixed(1)+'px)';
+      // the head-bump KNOCKS the box loose: it launches with an
+      // overshoot and stays parked up there — each box its own height
+      // and its own crooked settle (Mat: uneven, with impact)
+      const HOLD=[0,32,58,20][i], TILT=[0,-2.5,3.5,-1.8][i];
+      let by=0,tw=0;
+      if(bt>0){
+        const set=smooth(Math.min(1,bt*2.4));
+        by=HOLD*set+Math.sin(Math.min(1,bt*1.5)*Math.PI)*(1-Math.min(1,bt))*26;
+        tw=TILT*set;
+      }
+      c.box.style.transform='translateY('+(-by).toFixed(1)+'px) rotate('+tw.toFixed(1)+'deg)';
+      // ink starburst pops right at the knock
+      const fo=(bt>0&&bt<0.55)?(1-bt/0.55):0;
+      c.fx.style.opacity=fo.toFixed(2);
+      c.fx.style.transform='scale('+(0.6+Math.min(1,bt/0.55)*0.7).toFixed(2)+
+        ') rotate('+(((cur*travel/70|0)%2)?8:-6)+'deg)';
       c.on.style.opacity=bt>0.1?0:1;
       c.off.style.opacity=bt>0.1?1:0;
       // hand-drawn boil: the ? face cycles all three qblock frames
