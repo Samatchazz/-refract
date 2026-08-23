@@ -638,6 +638,10 @@ function catSize(cur){
 /* the bite lands on the way up, while the pipe is still ahead of the
    cat — so the shark's mouth meets the cat's face, not its hitbox */
 const BITEP=HIT.map(h=>h.p-0.0128);
+/* Rockman-style damage camera: the camera is glued to the cat, so it
+   absorbs this fraction of every knockback — the world jolts forward
+   past the cat instead of the cat flying across the screen */
+const CAM_ABSORB=0.55;
 /* scroll hitstop (MOTION-REFERENCE 2.4): squeeze cur near each bite so
    the impact hangs for a beat — a pure remap, so scrubbing stays exact */
 function hitstop(c){
@@ -708,11 +712,33 @@ function frame(now){
   const d=cur-last;
 
   const imp=impactY(cur);
+
+  // shark bites: real knockback physics, computed up front because the
+  // camera needs it — flung back past the jump-start spot, thumps down,
+  // holds a beat, then catches back up. All pure fns of cur, scrub-safe
+  let kbFull=0,kbY=0,kbLsq=0,kbBlink=1;
+  for(const bp of BITEP){
+    const k=(cur-bp)/0.030;
+    if(k>0&&k<1){
+      const fly=smooth(Math.min(1,k*3.3));                 // flung backwards fast...
+      const rec=smooth(Math.max(0,(k-0.55)/0.45));         // ...then walks back in
+      kbFull-=Math.min(innerWidth*0.36,240)*fly*(1-rec);
+      kbY-=Math.sin(Math.min(1,k*3.3)*Math.PI)*36;         // the fling pops it up
+      // touchdown thump right where the jump arc meets the ground again
+      if(k>0.60&&k<0.80)kbLsq+=Math.max(0,1-Math.abs(k-0.69)*9)*0.26;
+    }
+    if(cur>bp+0.0015&&cur<bp+0.032)                        // NES i-frames: hard on/off
+      kbBlink=Math.min(kbBlink,((cur*travel/48|0)%2)?0:1);
+  }
+  // the camera rides with the cat: it swallows most of the throw, the
+  // cat keeps the rest — the whole world jolts, Rockman-style
+  const camPx=kbFull*CAM_ABSORB, kbX=kbFull-camPx;
+
   // once the first doomed leap has played, The Wall's text yields the
   // stage to the rainbow call (time-keyed, inside the sanctioned lock)
   const wallFade=(!bridged&&cur>LOCKP-0.003)?clamp01((loopMs-CYCLE*0.5)/400):0;
   for(const L of layers)
-    L.el.style.transform='translate3d('+(-cur*travel*L.f).toFixed(2)+'px,'+imp.toFixed(2)+'px,0)';
+    L.el.style.transform='translate3d('+(-(cur*travel+camPx)*L.f).toFixed(2)+'px,'+imp.toFixed(2)+'px,0)';
   for(const b of beats){
     const h=Math.min(0.10,Math.max(0,cur-b.p));
     b.el.style.transform=h?'translate3d('+(h*travel).toFixed(1)+'px,0,0)':'';
@@ -752,23 +778,9 @@ function frame(now){
     const k=(cur-h[0])/h[1];
     if(k>0&&k<1){ bnc-=Math.sin(k*Math.PI)*h[2]; lsq+=Math.max(0,1-k*3)*h[3]; }
   });
-  // shark bites: real knockback physics — flung back PAST where the
-  // jump began, thumps down, holds there a beat, then catches back up
-  // while blinking (Mario i-frames). All pure fns of cur, scrub-safe
-  let kbX=0,kbY=0;
-  for(const bp of BITEP){
-    const k=(cur-bp)/0.030;
-    if(k>0&&k<1){
-      const fly=smooth(Math.min(1,k*3.3));                 // flung backwards fast...
-      const rec=smooth(Math.max(0,(k-0.55)/0.45));         // ...then walks back in
-      kbX-=Math.min(innerWidth*0.36,240)*fly*(1-rec);
-      kbY-=Math.sin(Math.min(1,k*3.3)*Math.PI)*36;         // the fling pops it up
-      // touchdown thump right where the jump arc meets the ground again
-      if(k>0.60&&k<0.80)lsq+=Math.max(0,1-Math.abs(k-0.69)*9)*0.26;
-    }
-    if(cur>bp+0.0015&&cur<bp+0.032)
-      blink=Math.min(blink,((cur*travel/48|0)%2)?0.18:1);
-  }
+  // fold the bite results (computed up top, before the camera) in here
+  lsq+=kbLsq;
+  blink=Math.min(blink,kbBlink);
   // the damage flash: the cat goes red for one blink as the jaws close
   catImg.classList.toggle('hurt',
     BITEP.some(bp=>cur>bp-0.0008&&cur<bp+0.003));
@@ -788,7 +800,7 @@ function frame(now){
   const sq=air?1.06:1-(0.085*(1-step))*v;
   catS.style.transform='scale('+(-size*(2-sq)*(1+lsq*0.7)).toFixed(3)+','+(size*sq*(1-lsq)).toFixed(3)+')';
   catS.style.opacity=blink;
-  shadow.style.transform='translate3d(0,'+(-lift).toFixed(1)+'px,0) scale('+size+','+size+')';
+  shadow.style.transform='translate3d('+(fallX+kbX).toFixed(1)+'px,'+(-lift).toFixed(1)+'px,0) scale('+size+','+size+')';
   shadowI.style.opacity=(cur>GAP[0]&&cur<GAP[1]&&!bridged)?0
     :0.18*(1-Math.min(1,-(jy+drop)/150)*0.7)*Math.max(0,1-fallX/80);
   flash.style.opacity=flashO;
