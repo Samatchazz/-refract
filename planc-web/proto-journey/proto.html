@@ -314,7 +314,9 @@ function sprite(id, cls){
 })();
 
 /* ---- tree-shark (the MJ set): each pipe gets its own shark drawing,
-   all of them share the zipped-shut frame for the snap ---- */
+   all of them share the zipped-shut frame for the snap. (The jaws were
+   never cropped in MJ — an over-eager border crop in the trace step
+   shaved them; the tracer now strips only the frame-line columns) */
 function makeShark(i){
   const g=document.createElementNS(NS,'svg');
   g.setAttribute('viewBox','0 0 470 640'); g.setAttribute('class','wd');
@@ -465,7 +467,7 @@ function layout(){
   // scene 3: pipes + tree-sharks + word bullets. The shark hides inside
   // the pipe and pops out to ambush the cat mid-jump (Mat's call)
   HIT.forEach((h,i)=>{
-    const prH=innerHeight*0.20, prW=prH*0.73;
+    const prH=innerHeight*0.20*[1,1.12,0.92][i], prW=prH*0.73;
     const pipe=sprite(i%2?'pipe-short2':'pipe-short1','wd');
     // the pipe is WIDER than the shark and sunk deep into the soil —
     // the shark's flat emergence line always hides behind the rim
@@ -895,12 +897,14 @@ function frame(now){
     const rise=smooth((cur-(pr.p-0.021))/0.007)-smooth((cur-(pr.p+0.004))/0.012);
     // a hungry lean into the bite + a light boil-wobble while out
     const lunge=Math.exp(-Math.pow((cur-bp)/0.004,2));
-    const wob=rise>0.2?(((cur*travel/95|0)%2)?1.6:-1.6):0;
+    // each pipe chews and wobbles at its own pace — the personality
+    // that used to come from different drawings now comes from timing
+    const wob=rise>0.2?((((cur*travel/[95,78,118][i])|0)%2)?[1.6,2.6,1.1][i]:-[1.6,2.6,1.1][i]):0;
     pr.el.style.transform='translate(-50%,'+((1-rise)*115).toFixed(1)+'%) rotate('+
       (-lunge*9+wob).toFixed(1)+'deg)';
     // chomp-chomp: open/shut alternates with scroll; shut is forced
     // right at the bite so the connect always reads
-    const shut=Math.abs(cur-bp)<0.0022||((cur*travel/110|0)%2===1);
+    const shut=Math.abs(cur-bp)<0.0022||((cur*travel/[110,92,132][i]|0)%2===1);
     pr.open.setAttribute('opacity',shut?0:1);
     pr.closed.setAttribute('opacity',shut?1:0);
     // the word bursts from the mouth at the bite and chases the cat
