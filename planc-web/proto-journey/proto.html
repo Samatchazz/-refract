@@ -763,7 +763,9 @@ function frame(now){
       // touchdown thump right where the jump arc meets the ground again
       if(k>0.46&&k<0.62)kbLsq+=Math.max(0,1-Math.abs(k-0.52)*9)*0.26;
     }
-    if(cur>bp+0.0015&&cur<bp+0.038)                        // NES i-frames: hard on/off
+    // NES i-frames: hard on/off, stretched (Mat's ก) — the hurt lingers
+    // right up until the next pipe's shark starts to stir
+    if(cur>bp+0.0015&&cur<bp+0.050)
       kbBlink=Math.min(kbBlink,((cur*travel/48|0)%2)?0:1);
   }
 
