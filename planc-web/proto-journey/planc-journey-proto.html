@@ -278,7 +278,7 @@ body.inverted .glow{opacity:1}
   <a class="cta" href="mailto:hello@planc.studio">คุยกับเรา →</a>
 </div></footer>
 
-<section id="pgPricing" aria-label="ราคา"><style>
+<section id="pgPricing" class="hd" aria-label="ราคา"><style>
 #pgPricing{
   --paper:#fcfcfa; --ink:#111; --red:#e5484d;
   --hair:1px solid rgba(17,17,17,.18);
@@ -368,13 +368,6 @@ body.inverted .glow{opacity:1}
 #pgPricing .footin .links{margin-left:auto;display:flex;gap:22px}
 #pgPricing .footin a{font-size:.82rem;letter-spacing:.08em;text-decoration:none;opacity:.62;white-space:nowrap}
 #pgPricing .footin a:hover{opacity:1}
-#pgPricing .chooser{position:fixed;right:16px;bottom:16px;z-index:50;background:var(--paper);
-  border:1.5px dashed var(--red);padding:12px 14px;font-size:12.5px;max-width:230px}
-#pgPricing .chooser .t{color:var(--red);font-weight:600;margin-bottom:8px}
-#pgPricing .chooser .gl2{font-weight:600;margin-bottom:4px}
-#pgPricing .chooser button{font:inherit;border:1px solid var(--ink);background:var(--paper);
-  color:var(--ink);padding:3px 10px;cursor:pointer;margin:2px 4px 2px 0}
-#pgPricing .chooser button.sel{background:var(--ink);color:var(--paper)}
 @media (max-width:900px){#pgPricing .navlinks{gap:16px;font-size:14px}
 #pgPricing .navlinks a:not(.active){display:none}
 #pgPricing .srow{grid-template-columns:92px 1fr;padding:12px 18px}
@@ -516,18 +509,6 @@ body.inverted .glow{opacity:1}
   <div><div class="todo rv" style="--d:.3s">[ร่าง — ปุ่มยังไม่มีปลายทาง รอลิงก์จองจริง (LINE OA?)]</div></div>
 </div></section>
 
-<div class="chooser" aria-label="ตัวเลือกร่าง">
-  <div class="t">ตัวเลือกร่าง — เอาออกตอนขึ้นจริง</div>
-  <div class="gl2">เส้นกรอบ</div>
-  <div style="margin-bottom:8px">
-    <button class="sel" onclick="document.querySelectorAll('.chooser button').forEach(b=>{if(b.textContent==='คม')b.classList.add('sel');if(b.textContent==='ยึกยือแบบเกม')b.classList.remove('sel')});var t=document.querySelectorAll('#pgPricing,#pgAbout');(t.length?[...t]:[document.body]).forEach(el=>el.classList.remove('hd'))">คม</button>
-    <button onclick="document.querySelectorAll('.chooser button').forEach(b=>{if(b.textContent==='คม')b.classList.remove('sel');if(b.textContent==='ยึกยือแบบเกม')b.classList.add('sel')});var t=document.querySelectorAll('#pgPricing,#pgAbout');(t.length?[...t]:[document.body]).forEach(el=>el.classList.add('hd'))">ยึกยือแบบเกม</button>
-  </div>
-  <div class="gl2">จุดแดงของหน้านี้</div>
-  <button class="sel" onclick="this.parentElement.querySelectorAll('button').forEach(b=>b.classList.remove('sel'));this.classList.add('sel');document.querySelector('.spec').style.setProperty('--pricecol','var(--red)');document.querySelectorAll('.btnP').forEach(b=>b.style.background='var(--ink)')">ราคาแดง</button>
-  <button onclick="this.parentElement.querySelectorAll('button').forEach(b=>b.classList.remove('sel'));this.classList.add('sel');document.querySelector('.spec').style.setProperty('--pricecol','var(--ink)');document.querySelectorAll('.btnP').forEach(b=>b.style.background='var(--red)')">ปุ่มแดง</button>
-</div>
-
 <footer>
   <div class="fground" aria-hidden="true">
     <svg class="gl" viewBox="0 0 1200 30" preserveAspectRatio="none">
@@ -545,7 +526,7 @@ body.inverted .glow{opacity:1}
     </div>
   </div>
 </footer></section>
-<section id="pgAbout" aria-label="เกี่ยวกับเรา"><style>
+<section id="pgAbout" class="hd" aria-label="เกี่ยวกับเรา"><style>
 #pgAbout{
   --paper:#fcfcfa; --ink:#111; --red:#e5484d;
   --hair:1px solid rgba(17,17,17,.18);
@@ -630,15 +611,6 @@ body.inverted .glow{opacity:1}
 #pgAbout .footin .links{margin-left:auto;display:flex;gap:22px}
 #pgAbout .footin a{font-size:.82rem;letter-spacing:.08em;text-decoration:none;opacity:.62;white-space:nowrap}
 #pgAbout .footin a:hover{opacity:1}
-#pgAbout .chooser{position:fixed;right:16px;bottom:16px;z-index:50;background:var(--paper);
-  border:1.5px dashed var(--red);padding:12px 14px;font-size:12.5px;max-width:230px}
-#pgAbout .chooser .t{color:var(--red);font-weight:600;margin-bottom:8px}
-#pgAbout .chooser .g{margin-bottom:8px}
-#pgAbout .chooser .g:last-child{margin-bottom:0}
-#pgAbout .chooser .gl2{font-weight:600;margin-bottom:4px}
-#pgAbout .chooser button{font:inherit;border:1px solid var(--ink);background:var(--paper);
-  color:var(--ink);padding:3px 10px;cursor:pointer;margin:2px 4px 2px 0}
-#pgAbout .chooser button.sel{background:var(--ink);color:var(--paper)}
 @media (max-width:900px){#pgAbout .pitem{grid-template-columns:1fr;gap:10px;padding:56px 0 58px}
 #pgAbout .pnum{font-size:56px}
 #pgAbout .navlinks{gap:16px;font-size:14px}
@@ -675,7 +647,7 @@ body.inverted .glow{opacity:1}
 <header class="hero"><div class="wrap">
   <div class="kicker rv">ABOUT — WHO'S BEHIND THIS</div>
   <h1 class="rv" style="--d:.08s">เราไม่บอกชื่อ<br>ตั้งใจ</h1>
-  <p class="rv" style="--d:.18s">ทำสายนี้มาสิบกว่าปี <span data-fol>ยอดฟอลพอประมาณ</span>
+  <p class="rv" style="--d:.18s">ทำสายนี้มาสิบกว่าปี ยอดฟอลรวมราวสองล้าน
   และนั่งฝั่งที่จ่ายเงินมานาน</p>
   <p class="rv" style="--d:.26s">เห็นทั้งตอนกราฟขึ้น และตอนที่มันนิ่งจนไม่รู้จะทำอะไรต่อ</p>
   <p class="punch rv" style="--d:.34s">ชื่อเราไม่ช่วยให้ยอดคุณขยับ<br>สิ่งที่เราเห็นมาต่างหากที่ช่วย</p>
@@ -809,25 +781,6 @@ body.inverted .glow{opacity:1}
   <br><a class="more rv" style="--d:.2s" href="#pricing">ดูราคาทั้งหมด →</a>
   <div><div class="todo rv" style="--d:.26s">[ร่าง — ปุ่มยังไม่มีปลายทาง รอลิงก์จองจริง (LINE OA?)]</div></div>
 </div></section>
-
-<div class="chooser" aria-label="ตัวเลือกร่าง">
-  <div class="t">ตัวเลือกร่าง — เอาออกตอนขึ้นจริง</div>
-  <div class="g">
-    <div class="gl2">เส้นกรอบ</div>
-    <button class="sel" onclick="document.querySelectorAll('.chooser button').forEach(b=>{if(b.textContent==='คม')b.classList.add('sel');if(b.textContent==='ยึกยือแบบเกม')b.classList.remove('sel')});var t=document.querySelectorAll('#pgPricing,#pgAbout');(t.length?[...t]:[document.body]).forEach(el=>el.classList.remove('hd'))">คม</button>
-    <button onclick="document.querySelectorAll('.chooser button').forEach(b=>{if(b.textContent==='คม')b.classList.remove('sel');if(b.textContent==='ยึกยือแบบเกม')b.classList.add('sel')});var t=document.querySelectorAll('#pgPricing,#pgAbout');(t.length?[...t]:[document.body]).forEach(el=>el.classList.add('hd'))">ยึกยือแบบเกม</button>
-  </div>
-  <div class="g">
-    <div class="gl2">เลขข้อ 01–07</div>
-    <button onclick="this.parentElement.querySelectorAll('button').forEach(b=>b.classList.remove('sel'));this.classList.add('sel');document.querySelector('.principles').style.setProperty('--numcol-a','var(--red)')">ก แดงทุกข้อ</button>
-    <button class="sel" onclick="this.parentElement.querySelectorAll('button').forEach(b=>b.classList.remove('sel'));this.classList.add('sel');document.querySelector('.principles').style.removeProperty('--numcol-a')">ข แดงข้อเดียว</button>
-  </div>
-  <div class="g">
-    <div class="gl2">ยอดฟอลในท่อนเปิด</div>
-    <button class="sel" onclick="this.parentElement.querySelectorAll('button').forEach(b=>b.classList.remove('sel'));this.classList.add('sel');document.querySelectorAll('[data-fol]').forEach(e=>e.textContent='ยอดฟอลพอประมาณ')">พอประมาณ</button>
-    <button onclick="this.parentElement.querySelectorAll('button').forEach(b=>b.classList.remove('sel'));this.classList.add('sel');document.querySelectorAll('[data-fol]').forEach(e=>e.textContent='ยอดฟอลรวมราวสองล้าน')">~2 ล้าน</button>
-  </div>
-</div>
 
 <footer>
   <div class="fground" aria-hidden="true">

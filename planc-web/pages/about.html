@@ -116,17 +116,6 @@ footer{padding:0 0 40px}
 .footin a{font-size:.82rem;letter-spacing:.08em;text-decoration:none;opacity:.62;white-space:nowrap}
 .footin a:hover{opacity:1}
 
-/* ---- แผงเลือกร่าง (เอาออกตอนขึ้นจริง) ---- */
-.chooser{position:fixed;right:16px;bottom:16px;z-index:50;background:var(--paper);
-  border:1.5px dashed var(--red);padding:12px 14px;font-size:12.5px;max-width:230px}
-.chooser .t{color:var(--red);font-weight:600;margin-bottom:8px}
-.chooser .g{margin-bottom:8px}
-.chooser .g:last-child{margin-bottom:0}
-.chooser .gl2{font-weight:600;margin-bottom:4px}
-.chooser button{font:inherit;border:1px solid var(--ink);background:var(--paper);
-  color:var(--ink);padding:3px 10px;cursor:pointer;margin:2px 4px 2px 0}
-.chooser button.sel{background:var(--ink);color:var(--paper)}
-
 @media (max-width:900px){
   .pitem{grid-template-columns:1fr;gap:10px;padding:56px 0 58px}
   .pnum{font-size:56px}
@@ -169,7 +158,7 @@ body.hd nav{border-bottom:0;background:var(--paper) var(--wavyS) left bottom rep
   background-size:120px 7px}
 </style>
 </head>
-<body>
+<body class="hd">
 <nav><div class="wrap navin">
   <button class="brand" id="logoBtn" aria-label="PlanC — หน้าหลัก"></button>
   <div class="navlinks">
@@ -183,7 +172,7 @@ body.hd nav{border-bottom:0;background:var(--paper) var(--wavyS) left bottom rep
 <header class="hero"><div class="wrap">
   <div class="kicker rv">ABOUT — WHO'S BEHIND THIS</div>
   <h1 class="rv" style="--d:.08s">เราไม่บอกชื่อ<br>ตั้งใจ</h1>
-  <p class="rv" style="--d:.18s">ทำสายนี้มาสิบกว่าปี <span data-fol>ยอดฟอลพอประมาณ</span>
+  <p class="rv" style="--d:.18s">ทำสายนี้มาสิบกว่าปี ยอดฟอลรวมราวสองล้าน
   และนั่งฝั่งที่จ่ายเงินมานาน</p>
   <p class="rv" style="--d:.26s">เห็นทั้งตอนกราฟขึ้น และตอนที่มันนิ่งจนไม่รู้จะทำอะไรต่อ</p>
   <p class="punch rv" style="--d:.34s">ชื่อเราไม่ช่วยให้ยอดคุณขยับ<br>สิ่งที่เราเห็นมาต่างหากที่ช่วย</p>
@@ -317,25 +306,6 @@ body.hd nav{border-bottom:0;background:var(--paper) var(--wavyS) left bottom rep
   <br><a class="more rv" style="--d:.2s" href="pricing.html">ดูราคาทั้งหมด →</a>
   <div><div class="todo rv" style="--d:.26s">[ร่าง — ปุ่มยังไม่มีปลายทาง รอลิงก์จองจริง (LINE OA?)]</div></div>
 </div></section>
-
-<div class="chooser" aria-label="ตัวเลือกร่าง">
-  <div class="t">ตัวเลือกร่าง — เอาออกตอนขึ้นจริง</div>
-  <div class="g">
-    <div class="gl2">เส้นกรอบ</div>
-    <button class="sel" onclick="document.querySelectorAll('.chooser button').forEach(b=>{if(b.textContent==='คม')b.classList.add('sel');if(b.textContent==='ยึกยือแบบเกม')b.classList.remove('sel')});var t=document.querySelectorAll('#pgPricing,#pgAbout');(t.length?[...t]:[document.body]).forEach(el=>el.classList.remove('hd'))">คม</button>
-    <button onclick="document.querySelectorAll('.chooser button').forEach(b=>{if(b.textContent==='คม')b.classList.remove('sel');if(b.textContent==='ยึกยือแบบเกม')b.classList.add('sel')});var t=document.querySelectorAll('#pgPricing,#pgAbout');(t.length?[...t]:[document.body]).forEach(el=>el.classList.add('hd'))">ยึกยือแบบเกม</button>
-  </div>
-  <div class="g">
-    <div class="gl2">เลขข้อ 01–07</div>
-    <button onclick="this.parentElement.querySelectorAll('button').forEach(b=>b.classList.remove('sel'));this.classList.add('sel');document.querySelector('.principles').style.setProperty('--numcol-a','var(--red)')">ก แดงทุกข้อ</button>
-    <button class="sel" onclick="this.parentElement.querySelectorAll('button').forEach(b=>b.classList.remove('sel'));this.classList.add('sel');document.querySelector('.principles').style.removeProperty('--numcol-a')">ข แดงข้อเดียว</button>
-  </div>
-  <div class="g">
-    <div class="gl2">ยอดฟอลในท่อนเปิด</div>
-    <button class="sel" onclick="this.parentElement.querySelectorAll('button').forEach(b=>b.classList.remove('sel'));this.classList.add('sel');document.querySelectorAll('[data-fol]').forEach(e=>e.textContent='ยอดฟอลพอประมาณ')">พอประมาณ</button>
-    <button onclick="this.parentElement.querySelectorAll('button').forEach(b=>b.classList.remove('sel'));this.classList.add('sel');document.querySelectorAll('[data-fol]').forEach(e=>e.textContent='ยอดฟอลรวมราวสองล้าน')">~2 ล้าน</button>
-  </div>
-</div>
 
 <footer>
   <div class="fground" aria-hidden="true">

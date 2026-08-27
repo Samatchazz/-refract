@@ -119,15 +119,6 @@ footer{padding:0 0 40px}
 .footin a{font-size:.82rem;letter-spacing:.08em;text-decoration:none;opacity:.62;white-space:nowrap}
 .footin a:hover{opacity:1}
 
-/* ---- แผงเลือกร่าง (เอาออกตอนขึ้นจริง) ---- */
-.chooser{position:fixed;right:16px;bottom:16px;z-index:50;background:var(--paper);
-  border:1.5px dashed var(--red);padding:12px 14px;font-size:12.5px;max-width:230px}
-.chooser .t{color:var(--red);font-weight:600;margin-bottom:8px}
-.chooser .gl2{font-weight:600;margin-bottom:4px}
-.chooser button{font:inherit;border:1px solid var(--ink);background:var(--paper);
-  color:var(--ink);padding:3px 10px;cursor:pointer;margin:2px 4px 2px 0}
-.chooser button.sel{background:var(--ink);color:var(--paper)}
-
 @media (max-width:900px){
   .navlinks{gap:16px;font-size:14px}
   .navlinks a:not(.active){display:none}
@@ -182,7 +173,7 @@ body.hd nav{border-bottom:0;background:var(--paper) var(--wavyS) left bottom rep
   background-size:120px 7px}
 </style>
 </head>
-<body>
+<body class="hd">
 <nav><div class="wrap navin">
   <button class="brand" id="logoBtn" aria-label="PlanC — หน้าหลัก"></button>
   <div class="navlinks">
@@ -290,18 +281,6 @@ body.hd nav{border-bottom:0;background:var(--paper) var(--wavyS) left bottom rep
   <p class="honest rv" style="--d:.22s">เราไม่รับประกันว่าคุณจะได้งาน</p>
   <div><div class="todo rv" style="--d:.3s">[ร่าง — ปุ่มยังไม่มีปลายทาง รอลิงก์จองจริง (LINE OA?)]</div></div>
 </div></section>
-
-<div class="chooser" aria-label="ตัวเลือกร่าง">
-  <div class="t">ตัวเลือกร่าง — เอาออกตอนขึ้นจริง</div>
-  <div class="gl2">เส้นกรอบ</div>
-  <div style="margin-bottom:8px">
-    <button class="sel" onclick="document.querySelectorAll('.chooser button').forEach(b=>{if(b.textContent==='คม')b.classList.add('sel');if(b.textContent==='ยึกยือแบบเกม')b.classList.remove('sel')});var t=document.querySelectorAll('#pgPricing,#pgAbout');(t.length?[...t]:[document.body]).forEach(el=>el.classList.remove('hd'))">คม</button>
-    <button onclick="document.querySelectorAll('.chooser button').forEach(b=>{if(b.textContent==='คม')b.classList.remove('sel');if(b.textContent==='ยึกยือแบบเกม')b.classList.add('sel')});var t=document.querySelectorAll('#pgPricing,#pgAbout');(t.length?[...t]:[document.body]).forEach(el=>el.classList.add('hd'))">ยึกยือแบบเกม</button>
-  </div>
-  <div class="gl2">จุดแดงของหน้านี้</div>
-  <button class="sel" onclick="this.parentElement.querySelectorAll('button').forEach(b=>b.classList.remove('sel'));this.classList.add('sel');document.querySelector('.spec').style.setProperty('--pricecol','var(--red)');document.querySelectorAll('.btnP').forEach(b=>b.style.background='var(--ink)')">ราคาแดง</button>
-  <button onclick="this.parentElement.querySelectorAll('button').forEach(b=>b.classList.remove('sel'));this.classList.add('sel');document.querySelector('.spec').style.setProperty('--pricecol','var(--ink)');document.querySelectorAll('.btnP').forEach(b=>b.style.background='var(--red)')">ปุ่มแดง</button>
-</div>
 
 <footer>
   <div class="fground" aria-hidden="true">
