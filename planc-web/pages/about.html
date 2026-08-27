@@ -145,6 +145,28 @@ footer{padding:0 0 40px}
 @media (prefers-reduced-motion:reduce){
   .rv{opacity:1;transform:none;transition:none}
 }
+
+/* ---- โหมดเส้นยึกยือ (ต่อเนื่องกับเกม — สลับด้วยแผงเลือกร่าง) ---- */
+:root{
+  --wob:255px 15px 225px 15px/15px 225px 15px 255px;
+  --wavyS:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='7' viewBox='0 0 120 7'><path d='M0 3.5 Q15 1.4 30 3.5 T60 3.3 T90 3.7 T120 3.5' fill='none' stroke='%23111' stroke-width='2' stroke-linecap='round'/></svg>");
+  --wavyH:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='7' viewBox='0 0 120 7'><path d='M0 3.5 Q15 1.6 30 3.5 T60 3.3 T90 3.7 T120 3.5' fill='none' stroke='%23111' stroke-width='1.3' stroke-linecap='round' opacity='.32'/></svg>");
+}
+body.hd h1{transform:rotate(-.4deg)}
+body.hd .whynot{border-top:0;background:var(--wavyH) left top repeat-x;
+  background-size:120px 7px;padding-top:30px}
+body.hd .slabel{border-top:0;background:var(--wavyS) left top repeat-x;
+  background-size:120px 7px;padding-top:18px}
+body.hd .pitem{border-bottom:0;background:var(--wavyH) left bottom repeat-x;
+  background-size:120px 7px}
+body.hd .pnum{transform:rotate(-2.2deg)}
+body.hd .pitem:nth-of-type(even) .pnum{transform:rotate(1.6deg)}
+body.hd .erow,body.hd .qa{border-top:0;background:var(--wavyH) left top repeat-x;
+  background-size:120px 7px}
+body.hd .nocut{border-radius:var(--wob);border-width:2.5px;transform:rotate(-.3deg)}
+body.hd .btn{border-radius:var(--wob)}
+body.hd nav{border-bottom:0;background:var(--paper) var(--wavyS) left bottom repeat-x;
+  background-size:120px 7px}
 </style>
 </head>
 <body>
@@ -298,6 +320,11 @@ footer{padding:0 0 40px}
 
 <div class="chooser" aria-label="ตัวเลือกร่าง">
   <div class="t">ตัวเลือกร่าง — เอาออกตอนขึ้นจริง</div>
+  <div class="g">
+    <div class="gl2">เส้นกรอบ</div>
+    <button class="sel" onclick="document.querySelectorAll('.chooser button').forEach(b=>{if(b.textContent==='คม')b.classList.add('sel');if(b.textContent==='ยึกยือแบบเกม')b.classList.remove('sel')});var t=document.querySelectorAll('#pgPricing,#pgAbout');(t.length?[...t]:[document.body]).forEach(el=>el.classList.remove('hd'))">คม</button>
+    <button onclick="document.querySelectorAll('.chooser button').forEach(b=>{if(b.textContent==='คม')b.classList.remove('sel');if(b.textContent==='ยึกยือแบบเกม')b.classList.add('sel')});var t=document.querySelectorAll('#pgPricing,#pgAbout');(t.length?[...t]:[document.body]).forEach(el=>el.classList.add('hd'))">ยึกยือแบบเกม</button>
+  </div>
   <div class="g">
     <div class="gl2">เลขข้อ 01–07</div>
     <button onclick="this.parentElement.querySelectorAll('button').forEach(b=>b.classList.remove('sel'));this.classList.add('sel');document.querySelector('.principles').style.setProperty('--numcol-a','var(--red)')">ก แดงทุกข้อ</button>

@@ -147,6 +147,39 @@ footer{padding:0 0 40px}
   .rv{opacity:1;transform:none;transition:none}
   .udl path{stroke-dashoffset:0}
 }
+
+/* ---- โหมดเส้นยึกยือ (ต่อเนื่องกับเกม — สลับด้วยแผงเลือกร่าง) ----
+   กรอบเบี้ยวด้วย radius สองแกนไม่เท่ากัน · เส้นตรงทุกเส้นแทนด้วยลายหยึกหยัก
+   ที่วาดเป็น SVG ฝังในตัวแปร --wavyS (เส้นหลัก) / --wavyH (เส้นบาง) */
+:root{
+  --wob:255px 15px 225px 15px/15px 225px 15px 255px;
+  --wavyS:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='7' viewBox='0 0 120 7'><path d='M0 3.5 Q15 1.4 30 3.5 T60 3.3 T90 3.7 T120 3.5' fill='none' stroke='%23111' stroke-width='2' stroke-linecap='round'/></svg>");
+  --wavyH:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='7' viewBox='0 0 120 7'><path d='M0 3.5 Q15 1.6 30 3.5 T60 3.3 T90 3.7 T120 3.5' fill='none' stroke='%23111' stroke-width='1.3' stroke-linecap='round' opacity='.32'/></svg>");
+}
+body.hd .docline{border-bottom:0;background:var(--wavyS) left bottom repeat-x;
+  background-size:120px 7px;padding-bottom:16px}
+body.hd .sblock{border-radius:var(--wob);border-width:2.5px;overflow:hidden}
+body.hd .sblock:nth-of-type(odd){transform:rotate(-.35deg)}
+body.hd .sblock:nth-of-type(even){transform:rotate(.3deg)}
+body.hd .shead{border-bottom:0;background:var(--wavyS) left bottom repeat-x;
+  background-size:120px 7px;padding-bottom:20px}
+body.hd .sprice{transform:rotate(-1.4deg)}
+body.hd .srow{border-bottom:0;background:var(--wavyH) left bottom repeat-x;
+  background-size:120px 7px}
+body.hd .srow:last-child,body.hd .srow:last-of-type{background:none}
+body.hd .sfoot{border-top:0;background:var(--wavyH) left top repeat-x;
+  background-size:120px 7px;padding-top:15px}
+body.hd .band{border-top:0;border-bottom:0;
+  background:var(--wavyS) left top repeat-x,var(--wavyS) left bottom repeat-x;
+  background-size:120px 7px}
+body.hd .slabel{border-top:0;background:var(--wavyS) left top repeat-x;
+  background-size:120px 7px;padding-top:18px}
+body.hd .rule,body.hd .qa{border-top:0;background:var(--wavyH) left top repeat-x;
+  background-size:120px 7px}
+body.hd .btn{border-radius:var(--wob)}
+body.hd h1{transform:rotate(-.4deg)}
+body.hd nav{border-bottom:0;background:var(--paper) var(--wavyS) left bottom repeat-x;
+  background-size:120px 7px}
 </style>
 </head>
 <body>
@@ -260,6 +293,11 @@ footer{padding:0 0 40px}
 
 <div class="chooser" aria-label="ตัวเลือกร่าง">
   <div class="t">ตัวเลือกร่าง — เอาออกตอนขึ้นจริง</div>
+  <div class="gl2">เส้นกรอบ</div>
+  <div style="margin-bottom:8px">
+    <button class="sel" onclick="document.querySelectorAll('.chooser button').forEach(b=>{if(b.textContent==='คม')b.classList.add('sel');if(b.textContent==='ยึกยือแบบเกม')b.classList.remove('sel')});var t=document.querySelectorAll('#pgPricing,#pgAbout');(t.length?[...t]:[document.body]).forEach(el=>el.classList.remove('hd'))">คม</button>
+    <button onclick="document.querySelectorAll('.chooser button').forEach(b=>{if(b.textContent==='คม')b.classList.remove('sel');if(b.textContent==='ยึกยือแบบเกม')b.classList.add('sel')});var t=document.querySelectorAll('#pgPricing,#pgAbout');(t.length?[...t]:[document.body]).forEach(el=>el.classList.add('hd'))">ยึกยือแบบเกม</button>
+  </div>
   <div class="gl2">จุดแดงของหน้านี้</div>
   <button class="sel" onclick="this.parentElement.querySelectorAll('button').forEach(b=>b.classList.remove('sel'));this.classList.add('sel');document.querySelector('.spec').style.setProperty('--pricecol','var(--red)');document.querySelectorAll('.btnP').forEach(b=>b.style.background='var(--ink)')">ราคาแดง</button>
   <button onclick="this.parentElement.querySelectorAll('button').forEach(b=>b.classList.remove('sel'));this.classList.add('sel');document.querySelector('.spec').style.setProperty('--pricecol','var(--ink)');document.querySelectorAll('.btnP').forEach(b=>b.style.background='var(--red)')">ปุ่มแดง</button>

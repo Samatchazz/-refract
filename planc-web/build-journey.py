@@ -40,7 +40,13 @@ def scope_css(css, prefix='#pgPricing'):
             for s in (x.strip() for x in sel.split(',')):
                 if not s or s == 'html':
                     continue
-                parts.append(prefix if s in (':root', 'body') else prefix + ' ' + s)
+                if s == ':root':
+                    parts.append(prefix)
+                elif s.startswith('body'):
+                    # body.hd .x -> #pgX.hd .x  (คลาสโหมดถูกแปะบนตัว overlay เอง)
+                    parts.append(prefix + s[4:])
+                else:
+                    parts.append(prefix + ' ' + s)
             if parts:
                 out.append(', '.join(parts) + '{' + body + '}')
         i = k

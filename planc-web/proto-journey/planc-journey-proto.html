@@ -388,6 +388,35 @@ body.inverted .glow{opacity:1}
 #pgPricing .rv.on{opacity:1;transform:none}
 @media (prefers-reduced-motion:reduce){#pgPricing .rv{opacity:1;transform:none;transition:none}
 #pgPricing .udl path{stroke-dashoffset:0}}
+#pgPricing{
+  --wob:255px 15px 225px 15px/15px 225px 15px 255px;
+  --wavyS:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='7' viewBox='0 0 120 7'><path d='M0 3.5 Q15 1.4 30 3.5 T60 3.3 T90 3.7 T120 3.5' fill='none' stroke='%23111' stroke-width='2' stroke-linecap='round'/></svg>");
+  --wavyH:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='7' viewBox='0 0 120 7'><path d='M0 3.5 Q15 1.6 30 3.5 T60 3.3 T90 3.7 T120 3.5' fill='none' stroke='%23111' stroke-width='1.3' stroke-linecap='round' opacity='.32'/></svg>");
+}
+#pgPricing.hd .docline{border-bottom:0;background:var(--wavyS) left bottom repeat-x;
+  background-size:120px 7px;padding-bottom:16px}
+#pgPricing.hd .sblock{border-radius:var(--wob);border-width:2.5px;overflow:hidden}
+#pgPricing.hd .sblock:nth-of-type(odd){transform:rotate(-.35deg)}
+#pgPricing.hd .sblock:nth-of-type(even){transform:rotate(.3deg)}
+#pgPricing.hd .shead{border-bottom:0;background:var(--wavyS) left bottom repeat-x;
+  background-size:120px 7px;padding-bottom:20px}
+#pgPricing.hd .sprice{transform:rotate(-1.4deg)}
+#pgPricing.hd .srow{border-bottom:0;background:var(--wavyH) left bottom repeat-x;
+  background-size:120px 7px}
+#pgPricing.hd .srow:last-child, #pgPricing.hd .srow:last-of-type{background:none}
+#pgPricing.hd .sfoot{border-top:0;background:var(--wavyH) left top repeat-x;
+  background-size:120px 7px;padding-top:15px}
+#pgPricing.hd .band{border-top:0;border-bottom:0;
+  background:var(--wavyS) left top repeat-x,var(--wavyS) left bottom repeat-x;
+  background-size:120px 7px}
+#pgPricing.hd .slabel{border-top:0;background:var(--wavyS) left top repeat-x;
+  background-size:120px 7px;padding-top:18px}
+#pgPricing.hd .rule, #pgPricing.hd .qa{border-top:0;background:var(--wavyH) left top repeat-x;
+  background-size:120px 7px}
+#pgPricing.hd .btn{border-radius:var(--wob)}
+#pgPricing.hd h1{transform:rotate(-.4deg)}
+#pgPricing.hd nav{border-bottom:0;background:var(--paper) var(--wavyS) left bottom repeat-x;
+  background-size:120px 7px}
 </style>
 <header class="hero"><div class="wrap">
   <div class="docline rv"><span>PLANC — SERVICE SPECIFICATION</span><span>UPDATED 2026.08</span></div>
@@ -489,6 +518,11 @@ body.inverted .glow{opacity:1}
 
 <div class="chooser" aria-label="ตัวเลือกร่าง">
   <div class="t">ตัวเลือกร่าง — เอาออกตอนขึ้นจริง</div>
+  <div class="gl2">เส้นกรอบ</div>
+  <div style="margin-bottom:8px">
+    <button class="sel" onclick="document.querySelectorAll('.chooser button').forEach(b=>{if(b.textContent==='คม')b.classList.add('sel');if(b.textContent==='ยึกยือแบบเกม')b.classList.remove('sel')});var t=document.querySelectorAll('#pgPricing,#pgAbout');(t.length?[...t]:[document.body]).forEach(el=>el.classList.remove('hd'))">คม</button>
+    <button onclick="document.querySelectorAll('.chooser button').forEach(b=>{if(b.textContent==='คม')b.classList.remove('sel');if(b.textContent==='ยึกยือแบบเกม')b.classList.add('sel')});var t=document.querySelectorAll('#pgPricing,#pgAbout');(t.length?[...t]:[document.body]).forEach(el=>el.classList.add('hd'))">ยึกยือแบบเกม</button>
+  </div>
   <div class="gl2">จุดแดงของหน้านี้</div>
   <button class="sel" onclick="this.parentElement.querySelectorAll('button').forEach(b=>b.classList.remove('sel'));this.classList.add('sel');document.querySelector('.spec').style.setProperty('--pricecol','var(--red)');document.querySelectorAll('.btnP').forEach(b=>b.style.background='var(--ink)')">ราคาแดง</button>
   <button onclick="this.parentElement.querySelectorAll('button').forEach(b=>b.classList.remove('sel'));this.classList.add('sel');document.querySelector('.spec').style.setProperty('--pricecol','var(--ink)');document.querySelectorAll('.btnP').forEach(b=>b.style.background='var(--red)')">ปุ่มแดง</button>
@@ -617,6 +651,26 @@ body.inverted .glow{opacity:1}
 #pgAbout .rv.left{transform:translateX(-26px)}
 #pgAbout .rv.on{opacity:1;transform:none}
 @media (prefers-reduced-motion:reduce){#pgAbout .rv{opacity:1;transform:none;transition:none}}
+#pgAbout{
+  --wob:255px 15px 225px 15px/15px 225px 15px 255px;
+  --wavyS:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='7' viewBox='0 0 120 7'><path d='M0 3.5 Q15 1.4 30 3.5 T60 3.3 T90 3.7 T120 3.5' fill='none' stroke='%23111' stroke-width='2' stroke-linecap='round'/></svg>");
+  --wavyH:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='7' viewBox='0 0 120 7'><path d='M0 3.5 Q15 1.6 30 3.5 T60 3.3 T90 3.7 T120 3.5' fill='none' stroke='%23111' stroke-width='1.3' stroke-linecap='round' opacity='.32'/></svg>");
+}
+#pgAbout.hd h1{transform:rotate(-.4deg)}
+#pgAbout.hd .whynot{border-top:0;background:var(--wavyH) left top repeat-x;
+  background-size:120px 7px;padding-top:30px}
+#pgAbout.hd .slabel{border-top:0;background:var(--wavyS) left top repeat-x;
+  background-size:120px 7px;padding-top:18px}
+#pgAbout.hd .pitem{border-bottom:0;background:var(--wavyH) left bottom repeat-x;
+  background-size:120px 7px}
+#pgAbout.hd .pnum{transform:rotate(-2.2deg)}
+#pgAbout.hd .pitem:nth-of-type(even) .pnum{transform:rotate(1.6deg)}
+#pgAbout.hd .erow, #pgAbout.hd .qa{border-top:0;background:var(--wavyH) left top repeat-x;
+  background-size:120px 7px}
+#pgAbout.hd .nocut{border-radius:var(--wob);border-width:2.5px;transform:rotate(-.3deg)}
+#pgAbout.hd .btn{border-radius:var(--wob)}
+#pgAbout.hd nav{border-bottom:0;background:var(--paper) var(--wavyS) left bottom repeat-x;
+  background-size:120px 7px}
 </style>
 <header class="hero"><div class="wrap">
   <div class="kicker rv">ABOUT — WHO'S BEHIND THIS</div>
@@ -758,6 +812,11 @@ body.inverted .glow{opacity:1}
 
 <div class="chooser" aria-label="ตัวเลือกร่าง">
   <div class="t">ตัวเลือกร่าง — เอาออกตอนขึ้นจริง</div>
+  <div class="g">
+    <div class="gl2">เส้นกรอบ</div>
+    <button class="sel" onclick="document.querySelectorAll('.chooser button').forEach(b=>{if(b.textContent==='คม')b.classList.add('sel');if(b.textContent==='ยึกยือแบบเกม')b.classList.remove('sel')});var t=document.querySelectorAll('#pgPricing,#pgAbout');(t.length?[...t]:[document.body]).forEach(el=>el.classList.remove('hd'))">คม</button>
+    <button onclick="document.querySelectorAll('.chooser button').forEach(b=>{if(b.textContent==='คม')b.classList.remove('sel');if(b.textContent==='ยึกยือแบบเกม')b.classList.add('sel')});var t=document.querySelectorAll('#pgPricing,#pgAbout');(t.length?[...t]:[document.body]).forEach(el=>el.classList.add('hd'))">ยึกยือแบบเกม</button>
+  </div>
   <div class="g">
     <div class="gl2">เลขข้อ 01–07</div>
     <button onclick="this.parentElement.querySelectorAll('button').forEach(b=>b.classList.remove('sel'));this.classList.add('sel');document.querySelector('.principles').style.setProperty('--numcol-a','var(--red)')">ก แดงทุกข้อ</button>
