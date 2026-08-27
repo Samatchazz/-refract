@@ -1,5 +1,10 @@
 # HANDOVER — เว็บ Scrollytelling "แมวดำเดินด่าน World 1-1"
 
+> **สถานะ 24 ส.ค. 2026:** สเปกนี้ถูกสร้างจริงแล้วที่ `planc-web/proto-journey/proto.html`
+> และเลยสเปกไปไกล (ฉลามงับ / damage camera / story block บินประกอบ) ·
+> sprites.svg โตจาก 49 → **62 symbol** (เพิ่มฉลาม 4 · เครื่องบินกระดาษ 2 · นก · UFO 3 ·
+> โดรน · พระอาทิตย์ 2) · คิวงานปัจจุบันอยู่ `planc-web/docs/START-HERE.md`
+
 สเปกส่งมอบสำหรับทีมโค้ด อ่านไฟล์นี้จบ = สร้างเว็บได้โดยไม่ต้องถามฝั่ง asset อีก
 
 ## 1. คอนเซปต์
@@ -74,6 +79,7 @@ const wobble = (i) =>
 | brick โดนชน (ถ้าทำ) | แตก 4 เศษ: clip path เป็น 4 ส่วน แต่ละส่วน interpolate ตำแหน่งตามโค้งกระเด็น map กับ progress |
 | pebbles | ตอน scroll ผ่านหลุม: ร่วงลงหลุม (translateY + rotate map กับ progress ช่วงนั้น) |
 | flag | ช่วง progress 95–99%: เลื่อนจากยอดเสาลงโคน — นี่คือ climax ของเว็บ |
+| ต้นงับ (durian/sharkplant — asset เสริม) | วาดก่อนท่อ (ให้ท่อบังลำต้น) · โผล่: `translateY` ครึ่งโซนแรก · งับ: ผ่า SVG เป็น `jaw-top`/`jaw-bottom`/`stem` (Inkscape Break Apart) หมุน jaw-top รอบจุดบานพับมุมปาก `rotate(-28°→0)` ด้วย `Math.abs(Math.sin(p*Math.PI*6))*28` — quantize เหลือ 2 ค่า (อ้า/หุบ) ได้ฟีลเรโทร · jaw-bottom หมุนสวน +6° |
 | dark-level mode | โซนหนึ่งของด่าน (แนะนำ: ช่วงพีระมิด/ก่อนจบ) ใส่ `filter: invert(1)` ที่ root ทั้งฉาก — ไม่ต้องมี asset ชุดที่สอง เข้า-ออกโซนค่อย ๆ ไล่ค่า filter ตาม progress |
 
 ## 7. เทคนิคที่แนะนำ

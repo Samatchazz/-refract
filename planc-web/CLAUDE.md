@@ -3,6 +3,13 @@
 เว็บหน้าเดียว เลื่อนลงแล้วแมวดำเดินไปทางขวาผ่านด่านแบบ Mario 1-1
 ขาว-ดำล้วน ไทย+อังกฤษ mobile-first ออกแบบที่ 390px ก่อนเสมอ
 
+> **อัปเดต 24 ส.ค. 2026 — เส้นหลักย้ายแล้ว:** ตัวจริงคือ **`proto-journey/proto.html`**
+> (build ไฟล์เดียว: `proto-journey/planc-journey-proto.html` · sprite: `../assets-svg/sprites.svg`
+> → `tools/make-sprites.py` → `js/sprites.js`) ส่วน `index.html` + `js/` ข้างล่างนี้คือ engine
+> ยุคแรก ไม่ใช่เส้นหลักแล้ว · คิวงาน + การตัดสินใจล่าสุดอยู่ `docs/START-HERE.md` ·
+> สคริปต์เนื้อหาจริงอยู่ `Z:\Claude Code\PlanCBIz\CONTENT-MAP.md` (สรรพนาม = "เรา" ทุกที่) ·
+> กติกา scrub-safe / ไทย / สองฝั่ง CSS ข้างล่างยังใช้กับ proto-journey ทั้งหมด
+
 ## รันยังไง
 
 ไม่มี build step ไม่มี dependency เปิด `index.html` ด้วยเบราว์เซอร์ได้เลย
