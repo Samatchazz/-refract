@@ -4,25 +4,31 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>เกี่ยวกับเรา — planc*</title>
-<meta name="description" content="เรานั่งฝั่งที่จ่ายเงินมาสิบกว่าปี ยังไม่เปิดชื่อ — อ่านสิ่งที่เราเขียน แล้วตัดสินเองว่าคนเขียนเคยอยู่ในห้องนั้นจริงไหม">
+<meta name="description" content="เราไม่บอกชื่อ ตั้งใจ — อ่านสิ่งที่เราเขียน แล้วตัดสินเองว่าคนเขียนเคยอยู่ในห้องนั้นจริงไหม">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@600;800;900&family=Sarabun:wght@400;600&display=swap" rel="stylesheet">
 <style>
+/* ============ กติกาชุดใหม่ (จากคู่มือเรฟ 27 ส.ค.) ============
+   - หนึ่งจอภาพ = จุดแดงกลุ่มเดียว
+   - ไม่มีเทา: อยากให้รอง ใช้ขนาด/น้ำหนัก ไม่ใช่ opacity (เส้นบางจางได้)
+   - มุมเหลี่ยมทั้งหน้า — กระดาษไม่มี border-radius
+   - เลขทุกตัว = Prompt หนา (เลขคือกราฟิกของหน้า text ล้วน)          */
 :root{
   --paper:#fcfcfa; --ink:#111; --red:#e5484d;
-  --line:1.5px solid var(--ink);
+  --hair:1px solid rgba(17,17,17,.18);
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{background:var(--paper);color:var(--ink);font-family:'Sarabun',system-ui,sans-serif;
-  font-size:17px;line-height:1.75;-webkit-font-smoothing:antialiased}
+  font-size:17px;line-height:1.8;-webkit-font-smoothing:antialiased}
 h1,h2,h3{font-family:'Prompt','Sarabun',sans-serif}
 .wrap{max-width:1080px;margin:0 auto;padding:0 28px}
+.col{max-width:38rem}
 a{color:inherit}
 
 /* ---- nav (สไตล์เดียวกับหน้าหลัก) ---- */
-nav{position:sticky;top:0;background:var(--paper);border-bottom:var(--line);z-index:10}
+nav{position:sticky;top:0;background:var(--paper);border-bottom:1.5px solid var(--ink);z-index:10}
 .navin{display:flex;align-items:center;gap:14px;height:60px}
 .brand{line-height:1;cursor:pointer;background:none;border:0;padding:.3rem .4rem;
   color:inherit;width:110px;height:44px;flex:0 0 auto}
@@ -34,82 +40,71 @@ nav{position:sticky;top:0;background:var(--paper);border-bottom:var(--line);z-in
 .navlinks a:hover{opacity:1;border-bottom-color:currentColor}
 .navlinks a.active{opacity:1;border-bottom-color:currentColor}
 
-/* ---- hero ---- */
-header.hero{padding:84px 0 26px}
+/* ---- hero: เสียงสั้นคม (A2) ---- */
+header.hero{padding:96px 0 72px}
 .kicker{font-family:'Prompt';font-weight:600;font-size:13px;letter-spacing:.22em;color:var(--red)}
-h1{font-size:clamp(38px,5.6vw,60px);font-weight:900;line-height:1.22;margin:10px 0 14px}
-.sub{font-size:19px;max-width:620px}
+h1{font-size:clamp(44px,7vw,84px);font-weight:900;line-height:1.25;margin:14px 0 34px}
+.hero p{max-width:36rem;margin-bottom:18px}
+.hero .punch{font-family:'Prompt';font-weight:800;font-size:clamp(20px,2.6vw,26px);
+  line-height:1.6;margin-top:30px;max-width:40rem}
+.hero .invite{font-size:15px;margin-top:26px}
+.whynot{border-top:var(--hair);margin-top:56px;padding-top:26px;max-width:36rem}
+.whynot .lbl{font-family:'Prompt';font-weight:600;font-size:12.5px;letter-spacing:.2em;margin-bottom:12px}
+.whynot p{font-size:15.5px;line-height:1.85}
 
-/* ---- prose sections ---- */
-section.blk{padding:54px 0 6px}
-h2{font-size:clamp(26px,3.6vw,38px);font-weight:800;line-height:1.35}
-.h2sub{font-size:15px;opacity:.66;margin:6px 0 26px}
-.prose{max-width:660px;display:flex;flex-direction:column;gap:16px}
-.prose b{font-weight:600}
-.pull{border-left:4px solid var(--red);padding:6px 0 6px 20px;max-width:660px;
-  font-family:'Prompt';font-weight:600;font-size:19px;line-height:1.7;margin-top:10px}
+/* ---- หลักที่เราถือ (A1: เลขข้อใหญ่) ---- */
+section.principles{padding:40px 0 0;
+  --numcol-a:var(--ink)}           /* ตัวแปรถูกสลับด้วยปุ่มเลือกร่าง */
+.slabel{font-family:'Prompt';font-weight:600;font-size:12.5px;letter-spacing:.22em;
+  border-top:1.5px solid var(--ink);padding-top:14px}
+.slabel .th{font-family:'Sarabun';font-weight:600;letter-spacing:0;font-size:14px;margin-left:10px}
+.pitem{border-bottom:var(--hair);padding:72px 0 76px;display:grid;
+  grid-template-columns:150px 1fr;gap:8px 44px;align-items:start}
+.pnum{font-family:'Prompt';font-weight:900;font-size:clamp(56px,7vw,92px);line-height:1;
+  color:var(--numcol-a)}
+.pitem.key .pnum{color:var(--red)}
+.pbody h3{font-size:clamp(22px,2.8vw,30px);font-weight:800;line-height:1.5;margin-bottom:14px}
+.pbody p{max-width:36rem;font-size:16.5px}
+.pbody p+p{margin-top:10px}
+.pbody .chainln{font-weight:600}
 
-/* ---- two layers ---- */
-.layers{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:30px}
-.lay{border:var(--line);border-radius:12px;padding:26px 24px;
-  transition:transform .35s ease,box-shadow .35s ease}
-.lay:hover{transform:translateY(-5px);box-shadow:0 14px 34px rgba(17,17,17,.10)}
-.lay .no{font-family:'Prompt';font-weight:800;font-size:14px;color:var(--red);letter-spacing:.14em}
-.lay h3{font-size:20px;font-weight:600;margin:6px 0 10px}
-.lay p{font-size:15.5px}
-.lay .tail{margin-top:12px;font-size:13.5px;opacity:.66;line-height:1.6}
+/* ---- เราประเมินอะไร ---- */
+section.evalx{padding:84px 0 0}
+.evalx h2{font-size:clamp(24px,3.2vw,32px);font-weight:800;margin:16px 0 4px}
+.evalx .sub{font-size:15px;margin-bottom:30px}
+.erow{display:grid;grid-template-columns:88px 1fr;gap:20px;border-top:var(--hair);padding:18px 0}
+.erow .lb{font-family:'Prompt';font-weight:800;font-size:15px;padding-top:2px}
+.erow h3{font-size:16.5px;font-weight:600}
+.erow p{font-size:15px}
+.nocut{border:1.5px solid var(--ink);margin-top:36px;padding:24px 26px}
+.nocut h3{font-size:16.5px;font-weight:600;margin-bottom:10px}
+.nocut p{font-size:15px;line-height:2.05}
+.nocut b{font-weight:600;white-space:nowrap}
 
-/* ---- price-logic chains ---- */
-.chain{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-top:18px}
-.chain .c{border:1.5px solid var(--ink);border-radius:99px;padding:6px 16px;
-  font-size:15px;white-space:nowrap}
-.chain .arw{font-family:'Prompt';font-weight:800;opacity:.45}
-.chain.bad .c{border-color:var(--red);color:var(--red)}
-.chain.bad .arw{color:var(--red);opacity:.6}
-.chainnote{margin-top:22px;font-size:16px;max-width:640px}
+/* ---- FAQ ---- */
+section.faq{padding:84px 0 0}
+.faq h2{font-size:clamp(24px,3.2vw,32px);font-weight:800;margin:16px 0 8px}
+.qa{border-top:var(--hair);padding:24px 0}
+.qa h3{font-size:18px;font-weight:600;margin-bottom:6px}
+.qa p{max-width:38rem;font-size:16px}
 
-/* ---- band ---- */
-.band{margin:76px 0 0;border-top:var(--line);border-bottom:var(--line);padding:52px 0;text-align:center}
-.band p{font-family:'Prompt';font-weight:800;font-size:clamp(20px,3vw,30px);line-height:1.6}
-.band .red{color:var(--red)}
-.band small{display:block;font-family:'Sarabun';font-weight:400;font-size:15px;opacity:.7;margin-top:10px}
-.udl{position:relative;display:inline-block}
-.udl svg{position:absolute;left:2%;bottom:-8px;width:96%;height:12px;overflow:visible}
-.udl path{stroke:var(--red);stroke-width:3.2;fill:none;stroke-linecap:round;
-  stroke-dasharray:1;stroke-dashoffset:1}
-.band.on .udl path{transition:stroke-dashoffset .9s ease .45s;stroke-dashoffset:0}
+/* ---- litany ปิดหน้า (A3) ---- */
+section.litany{padding:130px 0 60px;text-align:center}
+.litany p{font-family:'Prompt';font-weight:800;font-size:clamp(24px,3.6vw,36px);line-height:2.05}
+.litany .last{font-size:clamp(34px,5vw,52px);color:var(--red);margin-top:10px}
 
-/* ---- criteria ---- */
-.crit{margin-top:8px}
-.crow{display:flex;gap:18px;padding:18px 0;border-bottom:1px solid rgba(17,17,17,.18)}
-.crow .no{font-family:'Prompt';font-weight:800;font-size:15px;color:var(--red);flex:0 0 56px;padding-top:3px}
-.crow h3{font-size:17px;font-weight:600;margin-bottom:2px}
-.crow p{font-size:15.5px;opacity:.85}
-.noded{margin-top:34px;border:1.5px dashed var(--red);border-radius:12px;padding:22px 24px}
-.noded h3{font-size:17px;font-weight:600;margin-bottom:12px}
-.noded h3 b{color:var(--red)}
-.chips{display:flex;flex-wrap:wrap;gap:10px}
-.chips span{border:1.5px solid var(--ink);border-radius:99px;padding:5px 14px;font-size:14px}
-.creed{margin-top:26px;font-family:'Prompt';font-weight:600;font-size:18px;max-width:640px;line-height:1.7}
-
-/* ---- faq ---- */
-section.faq{padding:66px 0 0}
-.qa{border-bottom:1px solid rgba(17,17,17,.18);padding:24px 0}
-.qa h3{font-size:19px;font-weight:600;margin-bottom:8px}
-.qa p{max-width:640px}
-
-/* ---- cta ---- */
-section.pcta{text-align:center;padding:92px 0 86px}
-.pcta h2{margin-bottom:26px}
+/* ---- CTA ---- */
+section.pcta{text-align:center;padding:30px 0 96px}
 .btn{display:inline-block;background:var(--ink);color:var(--paper);text-decoration:none;
-  font-family:'Prompt';font-weight:600;font-size:18px;padding:16px 40px;border-radius:99px}
-.btn:hover{background:var(--red)}
-.pcta .fine{font-size:14px;opacity:.7;margin-top:18px}
-.pcta .honest{font-size:14.5px;margin-top:6px}
+  font-family:'Prompt';font-weight:600;font-size:18px;padding:16px 40px;
+  transition:transform .25s ease}
+.btn:hover{transform:translateY(-2px)}
+.pcta .fine{font-size:14px;margin-top:18px}
+.pcta .honest{font-size:14.5px;font-weight:600;margin-top:6px}
 .pcta .more{display:inline-block;margin-top:16px;font-size:15px;text-decoration:none;
   border-bottom:1.5px solid currentColor;padding-bottom:1px}
-.todo{display:inline-block;margin-top:22px;font-size:13px;color:var(--red);
-  border:1.5px dashed var(--red);border-radius:8px;padding:4px 14px}
+.todo{display:inline-block;margin-top:24px;font-size:13px;color:var(--red);
+  border:1.5px dashed var(--red);padding:4px 14px}
 
 /* ---- footer: เส้นพื้นของด่าน + แมวยืน ---- */
 footer{padding:0 0 40px}
@@ -121,24 +116,34 @@ footer{padding:0 0 40px}
 .footin a{font-size:.82rem;letter-spacing:.08em;text-decoration:none;opacity:.62;white-space:nowrap}
 .footin a:hover{opacity:1}
 
+/* ---- แผงเลือกร่าง (เอาออกตอนขึ้นจริง) ---- */
+.chooser{position:fixed;right:16px;bottom:16px;z-index:50;background:var(--paper);
+  border:1.5px dashed var(--red);padding:12px 14px;font-size:12.5px;max-width:230px}
+.chooser .t{color:var(--red);font-weight:600;margin-bottom:8px}
+.chooser .g{margin-bottom:8px}
+.chooser .g:last-child{margin-bottom:0}
+.chooser .gl2{font-weight:600;margin-bottom:4px}
+.chooser button{font:inherit;border:1px solid var(--ink);background:var(--paper);
+  color:var(--ink);padding:3px 10px;cursor:pointer;margin:2px 4px 2px 0}
+.chooser button.sel{background:var(--ink);color:var(--paper)}
+
 @media (max-width:900px){
-  .layers{grid-template-columns:1fr}
+  .pitem{grid-template-columns:1fr;gap:10px;padding:56px 0 58px}
+  .pnum{font-size:56px}
   .navlinks{gap:16px;font-size:14px}
   .navlinks a:not(.active){display:none}
-  header.hero{padding-top:56px}
+  header.hero{padding-top:64px}
+  .erow{grid-template-columns:64px 1fr}
 }
 
-/* ---- motion (แบบเดียวกับหน้า Pricing) ---- */
+/* ---- motion ---- */
 .rv{opacity:0;transform:translateY(22px);
   transition:opacity .7s ease,transform .7s cubic-bezier(.22,.9,.3,1);
   transition-delay:var(--d,0s)}
 .rv.left{transform:translateX(-26px)}
 .rv.on{opacity:1;transform:none}
-.btn{transition:background .25s ease,transform .25s ease}
-.btn:hover{transform:translateY(-2px)}
 @media (prefers-reduced-motion:reduce){
   .rv{opacity:1;transform:none;transition:none}
-  .udl path{stroke-dashoffset:0}
 }
 </style>
 </head>
@@ -155,128 +160,155 @@ footer{padding:0 0 40px}
 
 <header class="hero"><div class="wrap">
   <div class="kicker rv">ABOUT — WHO'S BEHIND THIS</div>
-  <h1 class="rv" style="--d:.1s">เรานั่งฝั่งที่จ่ายเงิน<br>มาสิบกว่าปี</h1>
-  <p class="sub rv" style="--d:.2s">ทำสายนี้มาสิบกว่าปี ยอดฟอลพอประมาณ
-  และเคยนั่งอยู่ฝั่งที่จ่ายเงินมานาน — ตอนนี้ยังไม่เปิดชื่อ</p>
+  <h1 class="rv" style="--d:.08s">เราไม่บอกชื่อ<br>ตั้งใจ</h1>
+  <p class="rv" style="--d:.18s">ทำสายนี้มาสิบกว่าปี <span data-fol>ยอดฟอลพอประมาณ</span>
+  และนั่งฝั่งที่จ่ายเงินมานาน</p>
+  <p class="rv" style="--d:.26s">เห็นทั้งตอนกราฟขึ้น และตอนที่มันนิ่งจนไม่รู้จะทำอะไรต่อ</p>
+  <p class="punch rv" style="--d:.34s">ชื่อเราไม่ช่วยให้ยอดคุณขยับ<br>สิ่งที่เราเห็นมาต่างหากที่ช่วย</p>
+  <p class="invite rv" style="--d:.42s">อ่านสิ่งที่เราเขียนข้างล่างนี้
+  แล้วตัดสินเองว่าคนเขียนเคยอยู่ในห้องนั้นจริงหรือเปล่า</p>
+  <div class="whynot rv" style="--d:.1s">
+    <div class="lbl">WHY ANONYMOUS, FOR NOW</div>
+    <p>เรายังทำงานกับแบรนด์อยู่ และอยากเลือกจังหวะเปิดตัวเอง
+    ตอนนี้เรากำลังสร้างบริการนี้ และต้องการเคสจริงก่อนจะขยาย — คุณคือหนึ่งในนั้น</p>
+  </div>
 </div></header>
 
-<section class="blk"><div class="wrap">
-  <h2 class="rv">ทำไมยังไม่เปิดชื่อ</h2>
-  <div class="h2sub rv" style="--d:.08s">Why anonymous, for now</div>
-  <div class="prose rv" style="--d:.12s">
-    <p>เพราะเรายังทำงานกับแบรนด์อยู่ และเราอยากเลือกจังหวะเอง</p>
-    <p>อาชีพนี้ยิ่งสูงยิ่งเหงา เราพอไปได้แล้ว
-    เลยอยากเอาสิ่งที่สะสมมาใช้ให้เป็นประโยชน์บ้าง
-    และเราได้อะไรจากมันจริง ๆ — <b>เรากำลังสร้างบริการนี้อยู่
-    เราต้องการเคสจริงก่อนจะขยาย คุณคือหนึ่งในนั้น</b></p>
-  </div>
-  <p class="pull rv" style="--d:.18s">คุณไม่ต้องเชื่อเราจากชื่อ — อ่านสิ่งที่เราเขียน
-  แล้วตัดสินเองว่าคนเขียนเคยอยู่ในห้องนั้นจริงหรือเปล่า</p>
-</div></section>
+<section class="principles"><div class="wrap">
+  <div class="slabel rv">SEVEN PRINCIPLES<span class="th">หลักที่เราถือ — อ่านเจ็ดข้อนี้จบ ก็รู้จักเราแล้ว</span></div>
 
-<section class="blk"><div class="wrap">
-  <h2 class="rv">เราทำอะไร</h2>
-  <div class="h2sub rv" style="--d:.08s">Two layers, one honest split</div>
-  <div class="layers">
-    <div class="lay rv" style="--d:.05s">
-      <div class="no">ชั้นแรก</div>
-      <h3>เข้าใจว่าคุณถูกเลือกเพราะอะไร</h3>
-      <p>ไม่ใช่เรื่องยอด ไม่ใช่เรื่องเทรนด์ — คือเรื่องที่ว่าคนดูของคุณทำอะไรหลังดู
-      และแบรนด์ประเภทไหนที่<b>ไม่ควร</b>จ้างคุณ
-      คนที่ตอบข้อหลังได้ คือคนที่ตั้งราคาได้</p>
-      <p class="tail">ชั้นนี้เราคุยกันครั้งเดียวแล้วให้คุณไปทั้งหมด — ไม่มีการเก็บไว้ขายทีหลัง</p>
-    </div>
-    <div class="lay rv" style="--d:.18s">
-      <div class="no">ชั้นที่สอง</div>
-      <h3>ทำให้อาชีพนี้เป็นอาชีพจริง</h3>
-      <p>สัญญาที่คุณเซ็นโดยไม่เคยอ่านจบ · เรทที่คิดจากต้นทุนของคุณ ไม่ใช่จากงบของเขา ·
-      การขอ debrief หลังจบงาน · การไม่ต้องพึ่งคนกลางเจ้าเดียว</p>
-      <p class="tail">ชั้นนี้คือสิ่งที่ต้องทำต่อเนื่อง และเป็นสิ่งที่เราคิดเงิน —
-      <a href="pricing.html">ดูราคาทั้งหมด →</a></p>
+  <div class="pitem rv">
+    <div class="pnum">01</div>
+    <div class="pbody">
+      <h3>เป็นตัวเอง สู้ในสนามของตัวเอง</h3>
+      <p>เราไม่ทำให้คุณเหมือนคนที่กำลังดัง
+      คนที่เหมือนคนอื่นถูกแทนที่ได้เสมอ คนที่เป็นตัวเองแทนที่ไม่ได้</p>
     </div>
   </div>
-</div></section>
 
-<section class="blk"><div class="wrap">
-  <h2 class="rv">สิ่งที่เราเชื่อ: ตัวตนไม่ชัด คือปัญหาราคา</h2>
-  <div class="h2sub rv" style="--d:.08s">Identity is a pricing problem</div>
-  <div class="chain rv left" style="--d:.1s">
-    <span class="c">ตัวตนชัด</span><span class="arw">→</span>
-    <span class="c">แบรนด์เดาผลลัพธ์ได้</span><span class="arw">→</span>
-    <span class="c">คุณวัดผลได้</span><span class="arw">→</span>
-    <span class="c">เขาจ่ายแพงได้</span>
-  </div>
-  <div class="chain bad rv left" style="--d:.22s">
-    <span class="c">ตัวตนไม่ชัด</span><span class="arw">→</span>
-    <span class="c">แบรนด์เดาไม่ได้</span><span class="arw">→</span>
-    <span class="c">คุณกลายเป็นการพนัน</span><span class="arw">→</span>
-    <span class="c">เขาไปจ้างคนที่ถูกกว่า</span>
-  </div>
-  <p class="chainnote rv" style="--d:.3s">เรทการ์ดที่สวยแต่ปิดได้ครึ่งเดียว
-  ไม่ได้แปลว่าคุณตั้งราคาแพงไป — <b>มันแปลว่าเขายังไม่รู้ว่าเขากำลังซื้ออะไร</b></p>
-</div></section>
-
-<div class="band rv"><div class="wrap">
-  <p>ความเป็นมืออาชีพ คือการทำตามที่ตกลงไว้อย่างน่าเชื่อถือ<br>
-  <span class="red udl">ไม่ใช่การยอมสิ่งที่ไม่ได้ตกลงไว้
-    <svg viewBox="0 0 100 10" preserveAspectRatio="none" aria-hidden="true">
-      <path pathLength="1" d="M1 6 Q 14 3 27 5.5 T 52 5 Q 66 3.4 78 5.8 T 99 4.6"/>
-    </svg></span></p>
-  <small>How we define professionalism</small>
-</div></div>
-
-<section class="blk"><div class="wrap">
-  <h2 class="rv">เราประเมินอะไร</h2>
-  <div class="h2sub rv" style="--d:.08s">เกณฑ์เดียวกันกับทุกคน — และคุณได้เห็นคะแนนตัวเอง</div>
-  <div class="crit">
-    <div class="crow rv left"><div class="no">ชั้น 1</div>
-      <div><h3>สิ่งที่วัดได้</h3>
-      <p>ส่งงานตรงเวลา · เวลาตอบกลับ · ความชัดเจนเรื่องช่วงห้ามรับคู่แข่ง</p></div></div>
-    <div class="crow rv left" style="--d:.08s"><div class="no">ชั้น 2</div>
-      <div><h3>วุฒิภาวะในการทำงาน</h3>
-      <p>การรับการแก้งาน · เงื่อนไขที่บอกล่วงหน้าเป็นลายลักษณ์อักษร</p></div></div>
-    <div class="crow rv left" style="--d:.16s"><div class="no">ชั้น 3</div>
-      <div><h3>ตัวตน</h3>
-      <p>รู้ว่าถูกเลือกเพราะอะไร · งานที่รับสอดคล้องกับที่เคยบอกคนดูไว้</p></div></div>
-    <div class="crow rv left" style="--d:.24s"><div class="no">+1</div>
-      <div><h3>ข้อที่ไม่ใช่เกณฑ์ของแบรนด์ แต่เป็นของเรา</h3>
-      <p>สัดส่วนงานที่รับเป็นของแลกแทนเงิน</p></div></div>
-  </div>
-  <div class="noded rv" style="--d:.1s">
-    <h3>หมวดที่เรา<b>ไม่หักคะแนนคุณเด็ดขาด</b> แม้แบรนด์จะบ่น</h3>
-    <div class="chips">
-      <span>ปฏิเสธค่าตอบแทนที่ต่ำกว่าต้นทุนจริง</span>
-      <span>ปฏิเสธสคริปต์ที่ขัดกับสิ่งที่เคยพูดกับคนดู</span>
-      <span>ขอเวลาผลิตที่สมเหตุสมผล</span>
-      <span>ปฏิเสธการใช้งานเกินขอบเขตที่ตกลง</span>
-      <span>ปฏิเสธการทำงานฟรีเพื่อ &ldquo;ทดลองก่อน&rdquo;</span>
-      <span>ยืนยันให้มีสัญญาเป็นลายลักษณ์อักษร</span>
+  <div class="pitem rv">
+    <div class="pnum">02</div>
+    <div class="pbody">
+      <h3>ตัวตนไม่ชัด ไม่ใช่ปัญหาความน่าสนใจ — มันคือปัญหาราคา</h3>
+      <p class="chainln">ตัวตนชัด → แบรนด์เดาผลลัพธ์ได้ → คุณวัดผลได้ → เขาจ่ายแพงได้</p>
+      <p class="chainln">ตัวตนไม่ชัด → แบรนด์เดาไม่ได้ → คุณกลายเป็นการพนัน → เขาไปจ้างคนที่ถูกกว่า</p>
+      <p>เรทการ์ดที่สวยแต่ปิดได้ครึ่งเดียว ไม่ได้แปลว่าคุณแพงไป
+      มันแปลว่าเขายังไม่รู้ว่าเขากำลังซื้ออะไร</p>
     </div>
+  </div>
+
+  <div class="pitem rv">
+    <div class="pnum">03</div>
+    <div class="pbody">
+      <h3>ชั้นแรกให้หมด ไม่เก็บไว้ขายทีหลัง</h3>
+      <p>เรื่องที่ว่าคุณถูกเลือกเพราะอะไร และแบรนด์แบบไหนไม่ควรจ้างคุณ —
+      เราคุยกันครั้งเดียวแล้วให้คุณไปทั้งหมด
+      สิ่งที่เราคิดเงินคืองานที่ต้องทำต่อเนื่อง: สัญญา เรท debrief
+      และการไม่ต้องพึ่งคนกลางเจ้าเดียว</p>
+    </div>
+  </div>
+
+  <div class="pitem rv">
+    <div class="pnum">04</div>
+    <div class="pbody">
+      <h3>เราได้เท่าเดิม แม้คุณปฏิเสธงาน</h3>
+      <p>เอเจนซีได้เงินเมื่อคุณรับงาน เราไม่ได้
+      เราจึงเป็นคนเดียวที่บอกคุณได้ว่างานไหนไม่ควรรับ</p>
+    </div>
+  </div>
+
+  <div class="pitem rv">
+    <div class="pnum">05</div>
+    <div class="pbody">
+      <h3>ทุกดีลต้องมี debrief</h3>
+      <p>ถ้าไม่มีใครบอกคุณว่าผลเป็นยังไง คุณจะไม่มีวันรู้ว่าทำไมถึงไม่ได้ต่อ
+      ขอได้ ไม่เสียมารยาท และแบรนด์ที่ดีจะให้</p>
+    </div>
+  </div>
+
+  <div class="pitem rv">
+    <div class="pnum">06</div>
+    <div class="pbody">
+      <h3>คิดราคาจากต้นทุนของคุณ ไม่ใช่จากงบของเขา</h3>
+      <p>เวลาถ่าย + เวลาตัด × ค่าแรงตัวเอง + ค่าเดินทางและของ + ค่าสิทธิ์ที่เขาจะเอาไปใช้
+      งบของเขาเป็นเรื่องของเขา</p>
+    </div>
+  </div>
+
+  <div class="pitem key rv">
+    <div class="pnum">07</div>
+    <div class="pbody">
+      <h3>ถ้าคำตอบที่ถูกคือ &ldquo;เลิกเถอะ&rdquo; — เราจะบอกคุณ</h3>
+      <p>และเราคิดว่านั่นคือเซสชันที่สำเร็จ ไม่ใช่ล้มเหลว
+      คุณจะได้ยินคำตอบที่จริง ไม่ใช่คำตอบที่ฟังสบายใจ</p>
+    </div>
+  </div>
+</div></section>
+
+<section class="evalx"><div class="wrap">
+  <div class="slabel rv">SCORECARD</div>
+  <h2 class="rv" style="--d:.06s">เราประเมินอะไร</h2>
+  <p class="sub rv" style="--d:.1s">เกณฑ์เดียวกันกับทุกคน — และคุณได้เห็นคะแนนตัวเอง</p>
+  <div class="erow rv left"><div class="lb">ชั้น 1</div>
+    <div><h3>สิ่งที่วัดได้</h3><p>ส่งงานตรงเวลา · เวลาตอบกลับ · ความชัดเจนเรื่องช่วงห้ามรับคู่แข่ง</p></div></div>
+  <div class="erow rv left" style="--d:.07s"><div class="lb">ชั้น 2</div>
+    <div><h3>วุฒิภาวะในการทำงาน</h3><p>การรับการแก้งาน · เงื่อนไขที่บอกล่วงหน้าเป็นลายลักษณ์อักษร</p></div></div>
+  <div class="erow rv left" style="--d:.14s"><div class="lb">ชั้น 3</div>
+    <div><h3>ตัวตน</h3><p>รู้ว่าถูกเลือกเพราะอะไร · งานที่รับสอดคล้องกับที่เคยบอกคนดูไว้</p></div></div>
+  <div class="erow rv left" style="--d:.21s"><div class="lb">+1</div>
+    <div><h3>ข้อที่ไม่ใช่เกณฑ์ของแบรนด์ แต่เป็นของเรา</h3><p>สัดส่วนงานที่รับเป็นของแลกแทนเงิน</p></div></div>
+  <div class="nocut rv" style="--d:.1s">
+    <h3>หมวดที่เราไม่หักคะแนนคุณเด็ดขาด แม้แบรนด์จะบ่น</h3>
+    <p><b>ปฏิเสธค่าตอบแทนที่ต่ำกว่าต้นทุนจริง</b> · <b>ปฏิเสธสคริปต์ที่ขัดกับสิ่งที่เคยพูดกับคนดู</b> ·
+    <b>ขอเวลาผลิตที่สมเหตุสมผล</b> · <b>ปฏิเสธการใช้งานเกินขอบเขตที่ตกลง</b> ·
+    <b>ปฏิเสธการทำงานฟรีเพื่อ &ldquo;ทดลองก่อน&rdquo;</b> · <b>ยืนยันให้มีสัญญาเป็นลายลักษณ์อักษร</b></p>
+    <p style="margin-top:12px;font-weight:600">ความเป็นมืออาชีพคือการทำตามที่ตกลงไว้อย่างน่าเชื่อถือ
+    ไม่ใช่การยอมสิ่งที่ไม่ได้ตกลงไว้</p>
   </div>
 </div></section>
 
 <section class="faq"><div class="wrap">
-  <h2 class="rv">ถามตรง ตอบตรง</h2>
-  <div class="h2sub rv" style="--d:.08s">Straight answers</div>
-  <div class="qa rv">
+  <div class="slabel rv">STRAIGHT ANSWERS</div>
+  <h2 class="rv" style="--d:.06s">ถามตรง ตอบตรง</h2>
+  <div class="qa rv" style="margin-top:18px">
     <h3>&ldquo;ต่างจากเอเจนซียังไง?&rdquo;</h3>
-    <p>เอเจนซีได้เงินเมื่อคุณรับงาน เราได้เท่าเดิมไม่ว่าคุณจะรับหรือปฏิเสธ —
-    เราจึงเป็นคนเดียวที่บอกคุณได้ว่างานไหนไม่ควรรับ</p>
+    <p>เอเจนซีได้เงินเมื่อคุณรับงาน เราได้เท่าเดิมไม่ว่าคุณจะรับหรือปฏิเสธ</p>
   </div>
-  <div class="qa rv" style="--d:.1s">
+  <div class="qa rv" style="--d:.08s">
     <h3>&ldquo;ข้อมูลที่เรากรอกไป จะไปไหน?&rdquo;</h3>
     <p>ไม่ถูกส่งต่อให้แบรนด์หรือเอเจนซีใด ๆ และไม่ถูกใช้ประกอบการเลือกใครไปเสนองาน</p>
   </div>
 </div></section>
 
-<section class="pcta"><div class="wrap">
-  <h2 class="rv">อ่านแล้วตัดสินเอง<br>แล้วค่อยมาคุยกัน</h2>
-  <a class="btn rv" style="--d:.12s" href="#">จองคุยครั้งแรก — ไม่มีค่าใช้จ่าย</a>
-  <p class="fine rv" style="--d:.2s">มีการบ้าน 5 นาทีก่อนคุย</p>
-  <p class="honest rv" style="--d:.26s">เราไม่รับประกันว่าคุณจะได้งาน</p>
-  <br><a class="more rv" style="--d:.3s" href="pricing.html">ดูราคาทั้งหมด →</a>
-  <div><div class="todo rv" style="--d:.34s">[ร่าง — ปุ่มยังไม่มีปลายทาง รอลิงก์จองจริง (LINE OA?)]</div></div>
+<section class="litany"><div class="wrap">
+  <p class="rv">ทำให้ชัดว่าคุณคือใคร</p>
+  <p class="rv" style="--d:.1s">ทำให้แบรนด์เห็นแล้วจำได้</p>
+  <p class="rv" style="--d:.2s">ทำให้ทุกดีลมีบทเรียนติดมือกลับ</p>
+  <p class="rv" style="--d:.3s">ทำให้สนามนี้เป็นของคุณ</p>
+  <p class="last rv" style="--d:.45s">ทำ</p>
 </div></section>
+
+<section class="pcta"><div class="wrap">
+  <a class="btn rv" href="#">จองคุยครั้งแรก — ไม่มีค่าใช้จ่าย</a>
+  <p class="fine rv" style="--d:.08s">มีการบ้าน 5 นาทีก่อนคุย</p>
+  <p class="honest rv" style="--d:.14s">เราไม่รับประกันว่าคุณจะได้งาน</p>
+  <br><a class="more rv" style="--d:.2s" href="pricing.html">ดูราคาทั้งหมด →</a>
+  <div><div class="todo rv" style="--d:.26s">[ร่าง — ปุ่มยังไม่มีปลายทาง รอลิงก์จองจริง (LINE OA?)]</div></div>
+</div></section>
+
+<div class="chooser" aria-label="ตัวเลือกร่าง">
+  <div class="t">ตัวเลือกร่าง — เอาออกตอนขึ้นจริง</div>
+  <div class="g">
+    <div class="gl2">เลขข้อ 01–07</div>
+    <button onclick="this.parentElement.querySelectorAll('button').forEach(b=>b.classList.remove('sel'));this.classList.add('sel');document.querySelector('.principles').style.setProperty('--numcol-a','var(--red)')">ก แดงทุกข้อ</button>
+    <button class="sel" onclick="this.parentElement.querySelectorAll('button').forEach(b=>b.classList.remove('sel'));this.classList.add('sel');document.querySelector('.principles').style.removeProperty('--numcol-a')">ข แดงข้อเดียว</button>
+  </div>
+  <div class="g">
+    <div class="gl2">ยอดฟอลในท่อนเปิด</div>
+    <button class="sel" onclick="this.parentElement.querySelectorAll('button').forEach(b=>b.classList.remove('sel'));this.classList.add('sel');document.querySelectorAll('[data-fol]').forEach(e=>e.textContent='ยอดฟอลพอประมาณ')">พอประมาณ</button>
+    <button onclick="this.parentElement.querySelectorAll('button').forEach(b=>b.classList.remove('sel'));this.classList.add('sel');document.querySelectorAll('[data-fol]').forEach(e=>e.textContent='ยอดฟอลรวมราวสองล้าน')">~2 ล้าน</button>
+  </div>
+</div>
 
 <footer>
   <div class="fground" aria-hidden="true">
@@ -297,7 +329,6 @@ footer{padding:0 0 40px}
 </footer>
 
 <script>
-/* โผล่ครั้งเดียวตอนเข้าจอ — หน้า business ธรรมดา ไม่ต้อง scrub-safe */
 (function(){
   const io = new IntersectionObserver(es => es.forEach(e => {
     if (!e.isIntersecting) return;
@@ -309,7 +340,6 @@ footer{padding:0 0 40px}
 </script>
 <script src="../js/planc-rig.js"></script>
 <script>
-/* โลโก้ = rig ตัวเดียวกับหน้าหลัก · เปิดนอก repo ให้ขึ้นชื่อแทน ห้าม error */
 (function(){
   const logo = document.getElementById('logoBtn');
   if (window.PlanCRig) {
