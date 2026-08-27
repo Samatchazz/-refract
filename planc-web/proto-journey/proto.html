@@ -307,8 +307,9 @@ body.inverted .glow{opacity:1}
     }), { root: pg, threshold: 0.22 });
     pg.querySelectorAll('.rv').forEach(el => io.observe(el));
   }
+  let forced = null;   /* ใช้เมื่อแก้ hash ไม่ได้ (เช่นพรีวิวใน sandbox) */
   function sync(){
-    const cur = location.hash.slice(1);
+    const cur = forced !== null ? forced : location.hash.slice(1);
     let any = false;
     for (const [name, id] of Object.entries(PAGES)){
       const pg = document.getElementById(id);
@@ -320,6 +321,27 @@ body.inverted .glow{opacity:1}
     document.body.classList.toggle('paged', any);
     document.body.dataset.page = any ? cur : '';
   }
+  function go(name){   /* name = '' คือกลับหน้าเกม */
+    forced = null;
+    let ok = false;
+    try {
+      const want = name ? '#' + name : '#journey';
+      if (location.hash === want) { sync(); ok = true; }
+      else { location.hash = want; ok = location.hash === want; }
+    } catch (err) {}
+    if (!ok) { forced = name; sync(); }
+  }
+  /* ลิงก์เมนูห้ามพึ่ง default ของ <a> — ในพรีวิว sandbox ของแชท คลิกลิงก์ #
+     จะพาออกไปที่ URL ของตัว sandbox แทน จึงดักคลิกแล้วสลับหน้าเอง */
+  document.addEventListener('click', e => {
+    const a = e.target.closest('a[href^="#"]');
+    if (!a) return;
+    const name = a.getAttribute('href').slice(1);
+    if (name === 'journey' || PAGES[name]) {
+      e.preventDefault();
+      go(name === 'journey' ? '' : name);
+    }
+  });
   addEventListener('hashchange', sync);
   sync();
 })();
