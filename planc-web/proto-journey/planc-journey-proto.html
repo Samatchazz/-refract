@@ -51,6 +51,13 @@ img{display:block}
   color:inherit;width:110px;height:44px}
 .brand svg{overflow:visible}   /* the rig draws with currentColor, so dark mode is free */
 .badge{font-size:.6rem;letter-spacing:.3em;opacity:.45}
+.navr{display:flex;align-items:center;gap:clamp(12px,2.4vw,22px)}
+.navlk{font-size:.82rem;letter-spacing:.08em;text-decoration:none;color:inherit;opacity:.62;
+  white-space:nowrap;padding:.2rem .05rem;border-bottom:1.5px solid transparent;
+  transition:opacity .25s ease,border-color .25s ease}
+@media (max-width:560px){.navlk.dis{display:none}}
+.navlk:hover{opacity:1;border-bottom-color:currentColor}
+.navlk.dis{opacity:.26;pointer-events:none}
 /* the logo goes rainbow when the story needs you — the rig's own ink
    turns into the gradient, like the first text version did */
 .brand.rainbow{animation:pulse 1.1s ease-in-out infinite}
@@ -207,7 +214,12 @@ body.inverted .glow{opacity:1}
 
 <header id="nav">
   <button class="brand" id="logoBtn" aria-label="PlanC"></button>
-  <span class="badge">JOURNEY&nbsp;PROTO</span>
+  <nav class="navr">
+    <a class="navlk" href="../pages/pricing.html">ราคา</a>
+    <a class="navlk dis" href="#" aria-disabled="true">เกี่ยวกับเรา</a>
+    <a class="navlk dis" href="#" aria-disabled="true">ติดต่อ</a>
+    <span class="badge">JOURNEY&nbsp;PROTO</span>
+  </nav>
 </header>
 
 <main id="stage">
