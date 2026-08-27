@@ -56,6 +56,12 @@ img{display:block}
   white-space:nowrap;padding:.2rem .05rem;border-bottom:1.5px solid transparent;
   transition:opacity .25s ease,border-color .25s ease}
 @media (max-width:560px){.navlk.dis{display:none}}
+/* หน้า Pricing ในตัว — build-journey.py เทเนื้อหาลง #pgPricing ตอน build
+   เปิด/ปิดด้วย hash (#pricing) จอเกมข้างหลังไม่ขยับ เลื่อนกลับมาต่อจุดเดิมได้ */
+#pgPricing{position:fixed;inset:0;z-index:60;background:#fcfcfa;color:#111;
+  overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;
+  opacity:0;visibility:hidden;transition:opacity .3s ease,visibility 0s linear .3s}
+#pgPricing.open{opacity:1;visibility:visible;transition:opacity .3s ease}
 .navlk:hover{opacity:1;border-bottom-color:currentColor}
 .navlk.dis{opacity:.26;pointer-events:none}
 /* the logo goes rainbow when the story needs you — the rig's own ink
@@ -257,6 +263,44 @@ body.inverted .glow{opacity:1}
   <a class="cta" href="mailto:hello@planc.studio">คุยกับเรา →</a>
 </div></footer>
 
+<section id="pgPricing" aria-label="ราคา"><!--PRICING--></section>
+<script>
+/* สลับหน้าในไฟล์เดียว: #pricing เปิด overlay ราคา · hash อื่น/ไม่มี = หน้าเกม
+   ใช้ hash เพื่อให้ปุ่ม back ของเบราว์เซอร์ทำงานเหมือนเว็บหลายหน้า */
+(function(){
+  const pg = document.getElementById('pgPricing');
+  let inited = false;
+  function initReveals(){
+    if (inited || !pg.querySelector('.rv')) return;
+    inited = true;
+    const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+    function countUp(el){
+      const target = +el.dataset.count, t0 = performance.now(), dur = 850;
+      function tick(t){
+        const k = Math.min(1, (t - t0) / dur), e = 1 - Math.pow(1 - k, 3);
+        el.textContent = Math.round(target * e).toLocaleString('en-US');
+        if (k < 1) requestAnimationFrame(tick);
+      }
+      requestAnimationFrame(tick);
+    }
+    const io = new IntersectionObserver(es => es.forEach(en => {
+      if (!en.isIntersecting) return;
+      en.target.classList.add('on');
+      if (!reduced) en.target.querySelectorAll('[data-count]').forEach(countUp);
+      io.unobserve(en.target);
+    }), { root: pg, threshold: 0.22 });
+    pg.querySelectorAll('.rv').forEach(el => io.observe(el));
+  }
+  function sync(){
+    const open = location.hash === '#pricing';
+    if (open && !pg.classList.contains('open')) pg.scrollTop = 0;
+    pg.classList.toggle('open', open);
+    if (open) initReveals();
+  }
+  addEventListener('hashchange', sync);
+  sync();
+})();
+</script>
 <script src="../js/sprites.js"></script>
 <script src="../js/planc-rig.js"></script>
 <script>
