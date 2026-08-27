@@ -55,22 +55,27 @@ img{display:block}
 .navlk{font-size:.82rem;letter-spacing:.08em;text-decoration:none;color:inherit;opacity:.62;
   white-space:nowrap;padding:.2rem .05rem;border-bottom:1.5px solid transparent;
   transition:opacity .25s ease,border-color .25s ease}
-@media (max-width:560px){.navlk.dis{display:none}}
+@media (max-width:560px){
+  .navlk.dis,.badge{display:none}
+  body[data-page="pricing"] .navlk:not(#lkHome):not(#lkPricing){display:none}
+  body[data-page="about"] .navlk:not(#lkHome):not(#lkAbout){display:none}
+}
 /* หน้า Pricing ในตัว — build-journey.py เทเนื้อหาลง #pgPricing ตอน build
    เปิด/ปิดด้วย hash (#pricing) จอเกมข้างหลังไม่ขยับ เลื่อนกลับมาต่อจุดเดิมได้
    อยู่ "ใต้" nav ของเกม (z 37 < 40) — ทั้งเว็บใช้แถบเดียว โลโก้เดียว */
-#pgPricing{position:fixed;inset:0;z-index:37;background:#fcfcfa;color:#111;
+#pgPricing,#pgAbout{position:fixed;inset:0;z-index:37;background:#fcfcfa;color:#111;
   padding-top:var(--nav-h);overflow-y:auto;overscroll-behavior:contain;
   -webkit-overflow-scrolling:touch;
   opacity:0;visibility:hidden;transition:opacity .3s ease,visibility 0s linear .3s}
-#pgPricing.open{opacity:1;visibility:visible;transition:opacity .3s ease}
-/* ตอนเปิดหน้าราคา: nav กลับเป็นหมึกเสมอ (กันโดนโหมดด่านมืด), โชว์ปุ่มกลับ,
+#pgPricing.open,#pgAbout.open{opacity:1;visibility:visible;transition:opacity .3s ease}
+/* ตอนเปิดหน้า business: nav กลับเป็นหมึกเสมอ (กันโดนโหมดด่านมืด), โชว์ปุ่มกลับ,
    ขีดใต้เมนูที่ active และซ่อน hint/แฟลชของเกมที่ลอยทับ */
-body.paged #nav{color:#111}
+body.paged #nav{color:#111;background:#fcfcfa}
 body.paged #tapHint,body.paged #flash{display:none}
 #lkHome{display:none}
 body.paged #lkHome{display:inline-block}
-body.paged #lkPricing{opacity:1;border-bottom-color:currentColor}
+body[data-page="pricing"] #lkPricing,
+body[data-page="about"] #lkAbout{opacity:1;border-bottom-color:currentColor}
 .navlk:hover{opacity:1;border-bottom-color:currentColor}
 .navlk.dis{opacity:.26;pointer-events:none}
 /* the logo goes rainbow when the story needs you — the rig's own ink
@@ -232,7 +237,7 @@ body.inverted .glow{opacity:1}
   <nav class="navr">
     <a class="navlk" id="lkHome" href="#journey">หน้าหลัก</a>
     <a class="navlk" id="lkPricing" href="../pages/pricing.html">ราคา</a>
-    <a class="navlk dis" href="#" aria-disabled="true">เกี่ยวกับเรา</a>
+    <a class="navlk" id="lkAbout" href="../pages/about.html">เกี่ยวกับเรา</a>
     <a class="navlk dis" href="#" aria-disabled="true">ติดต่อ</a>
     <span class="badge">JOURNEY&nbsp;PROTO</span>
   </nav>
@@ -274,15 +279,16 @@ body.inverted .glow{opacity:1}
 </div></footer>
 
 <section id="pgPricing" aria-label="ราคา"><!--PRICING--></section>
+<section id="pgAbout" aria-label="เกี่ยวกับเรา"><!--ABOUT--></section>
 <script>
-/* สลับหน้าในไฟล์เดียว: #pricing เปิด overlay ราคา · hash อื่น/ไม่มี = หน้าเกม
+/* สลับหน้าในไฟล์เดียว: #pricing / #about เปิด overlay · hash อื่น/ไม่มี = หน้าเกม
    ใช้ hash เพื่อให้ปุ่ม back ของเบราว์เซอร์ทำงานเหมือนเว็บหลายหน้า */
 (function(){
-  const pg = document.getElementById('pgPricing');
-  let inited = false;
-  function initReveals(){
-    if (inited || !pg.querySelector('.rv')) return;
-    inited = true;
+  const PAGES = { pricing: 'pgPricing', about: 'pgAbout' };
+  const inited = {};
+  function initReveals(pg){
+    if (inited[pg.id] || !pg.querySelector('.rv')) return;
+    inited[pg.id] = true;
     const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
     function countUp(el){
       const target = +el.dataset.count, t0 = performance.now(), dur = 850;
@@ -302,11 +308,17 @@ body.inverted .glow{opacity:1}
     pg.querySelectorAll('.rv').forEach(el => io.observe(el));
   }
   function sync(){
-    const open = location.hash === '#pricing';
-    if (open && !pg.classList.contains('open')) pg.scrollTop = 0;
-    pg.classList.toggle('open', open);
-    document.body.classList.toggle('paged', open);
-    if (open) initReveals();
+    const cur = location.hash.slice(1);
+    let any = false;
+    for (const [name, id] of Object.entries(PAGES)){
+      const pg = document.getElementById(id);
+      const open = cur === name;
+      if (open && !pg.classList.contains('open')) pg.scrollTop = 0;
+      pg.classList.toggle('open', open);
+      if (open){ any = true; initReveals(pg); }
+    }
+    document.body.classList.toggle('paged', any);
+    document.body.dataset.page = any ? cur : '';
   }
   addEventListener('hashchange', sync);
   sync();

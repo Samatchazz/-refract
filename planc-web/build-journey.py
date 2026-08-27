@@ -57,16 +57,23 @@ def build():
         assert tag in html, tag
         html = html.replace(tag, '<script>\n' + js + '\n</script>')
 
-    # 2. pricing page -> overlay (เอาเฉพาะ hero..footer — nav ไม่เอา เพราะไฟล์รวม
+    # 2. business pages -> overlays (เอาเฉพาะ hero..footer — nav ไม่เอา เพราะไฟล์รวม
     #    ใช้ nav ของเกมเป็นแถบเดียวทั้งเว็บ · ต้องมาก่อนขั้น cat.png เพื่อให้
-    #    รูปแมวใน footer ของ pricing ถูกฝัง base64 ด้วย)
-    pr = (ROOT / 'pages/pricing.html').read_text(encoding='utf-8')
-    css = scope_css(pr[pr.index('<style>') + 7:pr.index('</style>')])
-    body = pr[pr.index('<header class="hero">'):pr.index('</footer>') + len('</footer>')]
-    body = body.replace('href="../proto-journey/planc-journey-proto.html"', 'href="#journey"')
-    assert '<!--PRICING-->' in html
-    html = html.replace('<!--PRICING-->', '<style>\n' + css + '\n</style>\n' + body)
-    html = html.replace('href="../pages/pricing.html"', 'href="#pricing"')
+    #    รูปแมวใน footer ของแต่ละหน้าถูกฝัง base64 ด้วย)
+    PAGES = [('pages/pricing.html', '<!--PRICING-->', '#pgPricing'),
+             ('pages/about.html',   '<!--ABOUT-->',   '#pgAbout')]
+    for path, marker, prefix in PAGES:
+        pr = (ROOT / path).read_text(encoding='utf-8')
+        css = scope_css(pr[pr.index('<style>') + 7:pr.index('</style>')], prefix)
+        body = pr[pr.index('<header class="hero">'):pr.index('</footer>') + len('</footer>')]
+        body = (body
+                .replace('href="../proto-journey/planc-journey-proto.html"', 'href="#journey"')
+                .replace('href="pricing.html"', 'href="#pricing"')
+                .replace('href="about.html"', 'href="#about"'))
+        assert marker in html, marker
+        html = html.replace(marker, '<style>\n' + css + '\n</style>\n' + body)
+    html = (html.replace('href="../pages/pricing.html"', 'href="#pricing"')
+                .replace('href="../pages/about.html"', 'href="#about"'))
 
     # 3. cat.png (ทั้งของเกมและของ footer หน้า pricing)
     b64 = base64.b64encode((ROOT / 'assets/cat.png').read_bytes()).decode()
