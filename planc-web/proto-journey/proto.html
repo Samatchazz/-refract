@@ -57,11 +57,20 @@ img{display:block}
   transition:opacity .25s ease,border-color .25s ease}
 @media (max-width:560px){.navlk.dis{display:none}}
 /* หน้า Pricing ในตัว — build-journey.py เทเนื้อหาลง #pgPricing ตอน build
-   เปิด/ปิดด้วย hash (#pricing) จอเกมข้างหลังไม่ขยับ เลื่อนกลับมาต่อจุดเดิมได้ */
-#pgPricing{position:fixed;inset:0;z-index:60;background:#fcfcfa;color:#111;
-  overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;
+   เปิด/ปิดด้วย hash (#pricing) จอเกมข้างหลังไม่ขยับ เลื่อนกลับมาต่อจุดเดิมได้
+   อยู่ "ใต้" nav ของเกม (z 37 < 40) — ทั้งเว็บใช้แถบเดียว โลโก้เดียว */
+#pgPricing{position:fixed;inset:0;z-index:37;background:#fcfcfa;color:#111;
+  padding-top:var(--nav-h);overflow-y:auto;overscroll-behavior:contain;
+  -webkit-overflow-scrolling:touch;
   opacity:0;visibility:hidden;transition:opacity .3s ease,visibility 0s linear .3s}
 #pgPricing.open{opacity:1;visibility:visible;transition:opacity .3s ease}
+/* ตอนเปิดหน้าราคา: nav กลับเป็นหมึกเสมอ (กันโดนโหมดด่านมืด), โชว์ปุ่มกลับ,
+   ขีดใต้เมนูที่ active และซ่อน hint/แฟลชของเกมที่ลอยทับ */
+body.paged #nav{color:#111}
+body.paged #tapHint,body.paged #flash{display:none}
+#lkHome{display:none}
+body.paged #lkHome{display:inline-block}
+body.paged #lkPricing{opacity:1;border-bottom-color:currentColor}
 .navlk:hover{opacity:1;border-bottom-color:currentColor}
 .navlk.dis{opacity:.26;pointer-events:none}
 /* the logo goes rainbow when the story needs you — the rig's own ink
@@ -221,7 +230,8 @@ body.inverted .glow{opacity:1}
 <header id="nav">
   <button class="brand" id="logoBtn" aria-label="PlanC"></button>
   <nav class="navr">
-    <a class="navlk" href="../pages/pricing.html">ราคา</a>
+    <a class="navlk" id="lkHome" href="#journey">หน้าหลัก</a>
+    <a class="navlk" id="lkPricing" href="../pages/pricing.html">ราคา</a>
     <a class="navlk dis" href="#" aria-disabled="true">เกี่ยวกับเรา</a>
     <a class="navlk dis" href="#" aria-disabled="true">ติดต่อ</a>
     <span class="badge">JOURNEY&nbsp;PROTO</span>
@@ -295,6 +305,7 @@ body.inverted .glow{opacity:1}
     const open = location.hash === '#pricing';
     if (open && !pg.classList.contains('open')) pg.scrollTop = 0;
     pg.classList.toggle('open', open);
+    document.body.classList.toggle('paged', open);
     if (open) initReveals();
   }
   addEventListener('hashchange', sync);

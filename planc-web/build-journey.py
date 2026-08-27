@@ -57,18 +57,20 @@ def build():
         assert tag in html, tag
         html = html.replace(tag, '<script>\n' + js + '\n</script>')
 
-    # 2. cat.png
-    b64 = base64.b64encode((ROOT / 'assets/cat.png').read_bytes()).decode()
-    html = html.replace('../assets/cat.png', 'data:image/png;base64,' + b64)
-
-    # 3. pricing page -> overlay
+    # 2. pricing page -> overlay (เอาเฉพาะ hero..footer — nav ไม่เอา เพราะไฟล์รวม
+    #    ใช้ nav ของเกมเป็นแถบเดียวทั้งเว็บ · ต้องมาก่อนขั้น cat.png เพื่อให้
+    #    รูปแมวใน footer ของ pricing ถูกฝัง base64 ด้วย)
     pr = (ROOT / 'pages/pricing.html').read_text(encoding='utf-8')
     css = scope_css(pr[pr.index('<style>') + 7:pr.index('</style>')])
-    body = pr[pr.index('<nav>'):pr.index('</footer>') + len('</footer>')]
+    body = pr[pr.index('<header class="hero">'):pr.index('</footer>') + len('</footer>')]
     body = body.replace('href="../proto-journey/planc-journey-proto.html"', 'href="#journey"')
     assert '<!--PRICING-->' in html
     html = html.replace('<!--PRICING-->', '<style>\n' + css + '\n</style>\n' + body)
     html = html.replace('href="../pages/pricing.html"', 'href="#pricing"')
+
+    # 3. cat.png (ทั้งของเกมและของ footer หน้า pricing)
+    b64 = base64.b64encode((ROOT / 'assets/cat.png').read_bytes()).decode()
+    html = html.replace('../assets/cat.png', 'data:image/png;base64,' + b64)
 
     assert '../js/' not in html and '../assets/' not in html and '../pages/' not in html
     out = ROOT / 'proto-journey/planc-journey-proto.html'
