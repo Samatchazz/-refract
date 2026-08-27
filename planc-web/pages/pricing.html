@@ -292,11 +292,21 @@ footer{padding:0 0 40px}
 <script src="../js/planc-rig.js"></script>
 <script>
 /* โลโก้ = rig ตัวเดียวกับหน้าหลัก (หลับตา ลืมตอนคลิก) · คลิกโลโก้กลับหน้าหลัก
-   สองแท็กนี้อยู่นอกช่วงที่ build-journey.py ฝัง — ไฟล์รวมใช้ nav ของเกมอยู่แล้ว */
-PlanCRig.mount(document.getElementById('logoBtn'), { coat: 'currentColor' });
-document.getElementById('logoBtn').addEventListener('click', () => {
-  location.href = '../proto-journey/planc-journey-proto.html';
-});
+   สองแท็กนี้อยู่นอกช่วงที่ build-journey.py ฝัง — ไฟล์รวมใช้ nav ของเกมอยู่แล้ว
+   ถ้าไฟล์ถูกเปิดนอกโฟลเดอร์ repo (rig โหลดไม่ได้) ให้ขึ้นชื่อแทน ห้าม error */
+(function(){
+  const logo = document.getElementById('logoBtn');
+  if (window.PlanCRig) {
+    PlanCRig.mount(logo, { coat: 'currentColor' });
+  } else {
+    logo.textContent = 'planc*';
+    logo.style.cssText = "font-family:'Prompt','Sarabun',sans-serif;font-weight:800;" +
+      'font-size:21px;width:auto';
+  }
+  logo.addEventListener('click', () => {
+    location.href = '../proto-journey/planc-journey-proto.html';
+  });
+})();
 </script>
 </body>
 </html>
