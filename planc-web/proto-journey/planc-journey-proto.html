@@ -156,10 +156,11 @@ body.inverted #gear svg{color:var(--paper)}
 #shadow i{display:block;width:62%;height:100%;margin:0 auto;border-radius:50%;
   background:var(--ink);opacity:.18;transform-origin:50% 50%;transition:background .6s ease}
 
-/* rainbow bridge */
+/* rainbow bridge — six crayon bands, each drawn on after the last
+   (a kid's rainbow, not a gradient stroke) */
 #bridgeSvg{position:absolute;bottom:var(--ground-h);pointer-events:none;overflow:visible}
-#bridgePath{stroke-dasharray:1;stroke-dashoffset:1;transition:stroke-dashoffset 1s var(--ease)}
-body.bridged #bridgePath{stroke-dashoffset:0}
+#bridgeSvg path{stroke-dasharray:1;stroke-dashoffset:1;transition:stroke-dashoffset .9s var(--ease)}
+body.bridged #bridgeSvg path{stroke-dashoffset:0}
 
 /* death flash + tap hint */
 #flash{position:fixed;inset:0;background:#111;opacity:0;pointer-events:none;z-index:60}
@@ -211,18 +212,44 @@ body.inverted #boltShape{animation:boltpop 5.6s linear infinite}
 /* the classic damage flash: one red blink the instant the bite lands
    (a sanctioned color moment, same family as the gold and the spikes) */
 #catS img.hurt{filter:invert(35%) sepia(85%) saturate(5200%) hue-rotate(342deg) brightness(1.02)}
-/* editing-desk glow — the one bright thing in the dark level */
-.glow{position:absolute;bottom:var(--ground-h);width:120px;height:86px;opacity:0;transition:opacity .5s}
-.glow i{position:absolute;inset:0;background:var(--paper);opacity:.92;border-radius:3px;
-  box-shadow:0 0 60px 24px rgba(252,252,250,.35)}
+/* the lit billboard — the one bright thing in the dark level, and it
+   says the quiet part out loud (Mat's line) */
+.glow{position:absolute;bottom:var(--ground-h);width:clamp(230px,34vw,360px);opacity:0;
+  transition:opacity .5s;pointer-events:none;display:flex;flex-direction:column;align-items:center}
+.glow .gpanel{position:relative;width:100%;padding:9% 9% 10%;background:var(--paper);
+  box-shadow:0 0 70px 26px rgba(252,252,250,.32)}
+.glow .gframe{position:absolute;inset:-4% -2.5%;width:105%;height:108%;overflow:visible;color:#111}
+.glow .gtxt{position:relative;font-family:'Prompt','Sarabun',sans-serif;font-weight:800;color:#111;
+  font-size:clamp(1.3rem,2.7vw,2.05rem);line-height:1.25;text-align:center}
+.glow .gpost{width:26px;height:clamp(150px,24dvh,240px);overflow:visible;color:#fcfcfa;margin-top:-2px}
 body.inverted .glow{opacity:1}
+/* desktop: the beats and story lines grow into the tall screen so the
+   middle band stops feeling empty; a second cloud row sits lower too */
+.cloud.lo{display:none}
+@media (min-width:1100px){
+  .beat{width:60vw;max-width:46rem}
+  .beat h2{font-size:4rem}
+  .beat p{font-size:1.2rem;max-width:36rem;margin-top:.9rem}
+  .sline{font-size:3rem}
+  .sline.big{font-size:4rem}
+  .sbody{font-size:1.2rem}
+  .cloud.lo{display:block}
+}
 
 #spacer{display:block}
-#end{position:relative;z-index:35;background:var(--ink);color:var(--paper);padding:12dvh max(18px,4vw) 10dvh}
+#end{position:relative;z-index:35;background:var(--ink);color:var(--paper);padding:14dvh max(18px,4vw) 12dvh}
 #end .in{max-width:60rem;margin:0 auto}
-#end h2{font-family:'Prompt',sans-serif;font-size:clamp(1.8rem,7vw,3.2rem);font-weight:800;line-height:1.2}
-#end p{margin-top:.8rem;opacity:.75}
-#end .cta{background:var(--paper);color:var(--ink);margin-top:1.4rem}
+#end .ek{font-size:.68rem;letter-spacing:.34em;opacity:.6;font-weight:600}
+#end h2{font-family:'Prompt',sans-serif;font-size:clamp(1.9rem,6.4vw,3.6rem);font-weight:800;line-height:1.3;margin-top:.6rem}
+#end p{margin-top:1rem;max-width:36rem;line-height:1.75}
+#end .cta{background:var(--paper);color:var(--ink);margin-top:1.6rem;
+  border-radius:255px 15px 225px 15px/15px 225px 15px 255px}
+#end .fine{font-size:.9rem;margin-top:1rem;opacity:.8}
+#end .elinks{margin-top:2.6rem;display:flex;gap:22px;font-size:.82rem;letter-spacing:.08em}
+#end .elinks a{color:inherit;text-decoration:none;opacity:.7;border-bottom:1.5px solid transparent}
+#end .elinks a:hover{opacity:1;border-bottom-color:currentColor}
+#end .todo{display:inline-block;margin-top:1.2rem;font-size:.78rem;color:#e5484d;
+  border:1.5px dashed #e5484d;padding:.2rem .8rem}
 </style>
 </head>
 <body>
@@ -272,10 +299,14 @@ body.inverted .glow{opacity:1}
 <div id="spacer"></div>
 
 <footer id="end"><div class="in">
-  <p style="font-size:.68rem;letter-spacing:.34em;opacity:.5">END OF PROTO</p>
-  <h2>Aesthetically you</h2>
-  <p>โปรโตทดสอบ journey 4 ฉาก — ทุกอย่างยังเป็น placeholder ปรับได้ทั้งหมด</p>
-  <a class="cta" href="mailto:hello@planc.studio">คุยกับเรา →</a>
+  <div class="ek">CLARITY, NOT HOPE</div>
+  <h2>เราไม่ได้ขายความหวัง<br>เราขายความชัดเจน</h2>
+  <p>บางคนเดินออกไปพร้อมแผน 90 วัน บางคนเดินออกไปพร้อมข้อสรุปว่าควรทำเป็นงานเสริม —
+  ทั้งสองแบบคือคำตอบที่ใช้ได้ และคุณจะได้ยินอันที่จริง ไม่ใช่อันที่ฟังสบายใจ</p>
+  <a class="cta" href="#booking">จองคุยครั้งแรก — ไม่มีค่าใช้จ่าย</a>
+  <p class="fine">มีการบ้าน 5 นาทีก่อนคุย · เราไม่รับประกันว่าคุณจะได้งาน</p>
+  <div class="todo">[ร่าง — ปุ่มยังไม่มีปลายทาง รอลิงก์จองจริง (LINE OA?)]</div>
+  <nav class="elinks"><a href="#pricing">ราคา</a><a href="#about">เกี่ยวกับเรา</a></nav>
 </div></footer>
 
 <section id="pgPricing" class="hd" aria-label="ราคา"><style>
@@ -1093,11 +1124,13 @@ const HIT = [ {p:.53, t:'คอนเทนต์ไม่ปัง'}, {p:.59, t
 const GAP = [.775, .905];          // the impossible chasm
 const DIE = .782;                  // where the cat tries anyway
 const DARK = [.36, .455];
+const POLE_P = .955, SLIDE = .03;  // the flagpole: grab here, slide for this long
 
 const world = document.getElementById('world');
 const stage = document.getElementById('stage');
 let travel = 0, catX = 0, layers = [], grounds = [], beats = [];
-let coins = [], slines = [], slots = [], piranhas = [], bullets = [], spikes = [], glowEl, bridgeSvg, bridgePath;
+let coins = [], slines = [], slots = [], piranhas = [], bullets = [], spikes = [], glowEl, bridgeSvg;
+let poleEl, flagEl, poleTravel = 0, grabH = 0;
 let kickEl, bodyEl, kick2, s2lines=[], s2slots=[];
 const story = document.getElementById('story');
 const story2 = document.getElementById('story2');
@@ -1229,7 +1262,7 @@ function layout(){
   // scene 1 opens EMPTY — the box pops do the storytelling
   mkBeat(0.315,'Slice of Life','อาชีพนี้ไม่ได้มีแค่<br>ด้านที่สวย','ของที่ต้องแบก งานที่ไม่จบ คืนที่ไม่ได้นอน');
   mkBeat(0.72,'The Wall','เหวที่โดดยังไง<br>ก็ไม่พ้น','บางปัญหา ตัวคนเดียวข้ามไม่ได้จริงๆ');
-  const endB=mkBeat(0.945,'planc*','Aesthetically you','ข้ามด้วยกันไหม');
+  // (no sign after the bridge — the flagpole IS the ending, Mat's call)
 
   // scene 1 treasures = ? boxes head-bumped from below, like the main
   // site's block — box bottom sits exactly at the tiny cat's jump apex.
@@ -1304,8 +1337,23 @@ function layout(){
   // scene 2 props: gear built onto the cat + editing glow + moon handled by decor
   buildGear();
   glowEl=document.createElement('div');glowEl.className='glow';
-  glowEl.innerHTML='<i></i>';
-  glowEl.style.left=(0.41*travel+catX)+'px';
+  // a hand-drawn billboard: wobbly frame, two-line message, a post
+  glowEl.innerHTML=
+    '<div class="gpanel"><svg class="gframe" viewBox="0 0 100 60" preserveAspectRatio="none">'+
+      '<path d="M3 4 Q30 1 52 3 T97 4 Q99 20 97 34 T96 57 Q60 60 30 58 T3 56 Q1 40 3 24 T3 4 Z" '+
+      'fill="none" stroke="currentColor" stroke-width="2.6" vector-effect="non-scaling-stroke" '+
+      'stroke-linejoin="round"/></svg>'+
+      '<div class="gtxt">เดือนนี้<br>ไม่มีงานเลย</div></div>'+
+    '<svg class="gpost" viewBox="0 0 26 64" preserveAspectRatio="none">'+
+      '<path d="M7 0 Q5 22 8 40 T6 64 M19 0 Q21 20 18 42 T20 64" fill="none" stroke="currentColor" '+
+      'stroke-width="3.5" stroke-linecap="round"/></svg>';
+  // stands on a tall post, ahead of the cat for the whole dark stretch:
+  // it reads over the cat's head, and the cat only reaches it at dawn
+  // (phones: the world moves ~a screen per 0.05, so the sign is simply
+  // centred at the middle of the dark stretch instead of leading the cat)
+  glowEl.style.left=(innerWidth>=700
+    ? 0.40*travel+catX+innerWidth*0.33
+    : 0.41*travel+(innerWidth-230)/2).toFixed(0)+'px';
   world.appendChild(glowEl);
 
   // scene 3: pipes + tree-sharks + word bullets. The shark hides inside
@@ -1350,12 +1398,41 @@ function layout(){
   const gw=(GAP[1]-GAP[0])*travel+catX*0; const x0=GAP[0]*travel+catX-20, x1=GAP[1]*travel+catX+20;
   bridgeSvg.setAttribute('width',(x1-x0));bridgeSvg.setAttribute('height',200);
   bridgeSvg.style.left=x0+'px';bridgeSvg.style.height='200px';bridgeSvg.style.width=(x1-x0)+'px';
-  bridgeSvg.innerHTML='<defs><linearGradient id="rg" x1="0" y1="0" x2="1" y2="0">'+
-   '<stop offset="0" stop-color="#e5484d"/><stop offset=".2" stop-color="#f5a524"/><stop offset=".4" stop-color="#ffe14d"/>'+
-   '<stop offset=".6" stop-color="#46c56f"/><stop offset=".8" stop-color="#3f9cf0"/><stop offset="1" stop-color="#8a63d2"/></linearGradient></defs>'+
-   '<path id="bridgePath" d="M6 194 Q '+((x1-x0)/2)+' 30 '+(x1-x0-6)+' 194" fill="none" stroke="url(#rg)" stroke-width="11" stroke-linecap="round" pathLength="1"/>';
+  // six crayon bands on one quadratic spine (apex 30 → the cat's lift
+  // math still matches); each band wobbles like a hand that can't hold
+  // a curve, and stacks a little below the last
+  const bw=x1-x0, ax=bw/2, ay=30;
+  let bands='';
+  ['#e5484d','#f5a524','#ffe14d','#46c56f','#3f9cf0','#8a63d2'].forEach((c,j)=>{
+    let d='';
+    for(let s=0;s<=44;s++){
+      const t=s/44, mt=1-t;
+      const bx=mt*mt*6+2*mt*t*ax+t*t*(bw-6);
+      const by=mt*mt*194+2*mt*t*ay+t*t*194+j*6.5+Math.sin(t*23+j*1.7)*2.2+Math.cos(t*41+j)*1.1;
+      d+=(s?' L':'M')+bx.toFixed(1)+' '+by.toFixed(1);
+    }
+    bands+='<path d="'+d+'" fill="none" stroke="'+c+'" stroke-width="6" stroke-linecap="round" '+
+      'stroke-linejoin="round" pathLength="1" style="transition-delay:'+(j*0.11).toFixed(2)+'s"/>';
+  });
+  bridgeSvg.innerHTML=bands;
   world.appendChild(bridgeSvg);
-  bridgePath=bridgeSvg.querySelector('#bridgePath');
+
+  // scene 5: the flagpole — the cat leaps onto it after the bridge and
+  // rides the flag down while the camera holds (Mario's ending, ours)
+  poleEl=sprite('pole1','wd');
+  const pH=innerHeight*0.56, pW=pH*poleEl.__ar;
+  const poleX=POLE_P*travel+catX+Math.min(150,Math.max(104,innerWidth*0.18))*0.44;
+  poleEl.style.cssText='position:absolute;bottom:calc(var(--ground-h) - 4px);left:'+
+    (poleX-pW/2).toFixed(0)+'px;width:'+pW.toFixed(0)+'px;height:'+pH.toFixed(0)+'px;z-index:4';
+  world.appendChild(poleEl);
+  flagEl=sprite('flag','wd');
+  const fW=Math.min(120,Math.max(64,innerWidth*0.09)), fH=fW/flagEl.__ar;
+  flagEl.style.cssText='position:absolute;bottom:calc(var(--ground-h) + '+(pH-fH-6).toFixed(0)+
+    'px);left:'+(poleX+pW*0.3).toFixed(0)+'px;width:'+fW.toFixed(0)+'px;height:'+fH.toFixed(0)+
+    'px;z-index:4;will-change:transform';
+  world.appendChild(flagEl);
+  poleTravel=pH-fH-6-22;      // how far the flag can ride down the pole
+  grabH=pH*0.70;              // where the cat catches it
 
   decorate();
   buildSky();
@@ -1386,6 +1463,12 @@ function decorate(){
     s.style.left=sp[0]+'vw';s.style.top=sp[1]+'dvh';s.style.width=sp[2]+'px';
     dC.appendChild(s);
   });
+  // a lower cloud row for tall desktop screens only (CSS hides it below 1100px)
+  [[38,43,92],[128,46,112]].forEach((sp,j)=>{
+    const s=sprite(pick(['cloud-l2','cloud-s3'],j),'cloud lo');
+    s.style.left=sp[0]+'vw';s.style.top=sp[1]+'dvh';s.style.width=sp[2]+'px';
+    dC.appendChild(s);
+  });
 }
 
 /* ---- sky gimmicks (MJ batch): paper planes, birds, a ufo easter egg,
@@ -1395,7 +1478,10 @@ function buildSky(){
   const H=innerHeight;
   // paper planes glide through the bright opening (world layer)
   sky.planes=[];
-  [['plane-down',0.062,0.20,96],['plane-up',0.150,0.125,84]].forEach(cfg=>{
+  // (the first plane flies lower on tall desktop screens — it fills the
+  // middle band instead of hugging the nav)
+  const wide=innerWidth>=1100;
+  [['plane-down',0.062,wide?0.31:0.20,96],['plane-up',0.150,0.125,84]].forEach(cfg=>{
     const s=sprite(cfg[0],'wd');
     const w=Math.min(cfg[3],innerWidth*0.24);
     s.style.cssText='position:absolute;top:'+(H*cfg[2]).toFixed(0)+'px;left:'+
@@ -1403,25 +1489,30 @@ function buildSky(){
       (w/s.__ar).toFixed(0)+'px;opacity:.8;will-change:transform';
     world.appendChild(s);sky.planes.push(s);
   });
-  // a loose line of logo-birds, far layer so they drift slower
+  // a loose line of logo-birds on the far layer. A far-layer prop stays
+  // on screen for ~2/3 of the journey, so they live LATE: they show up
+  // after the dark stretch and keep the sky company through the chasm
   const dC=document.getElementById('dClouds');
   sky.birds=[];
-  [[0.045,0.068,44],[0.062,0.090,34],[0.082,0.075,38]].forEach(cfg=>{
+  [[0.90,0.068,44],[0.917,0.090,34],[0.937,0.075,38]].forEach(cfg=>{
     const s=sprite('bird1','cloud');
     s.style.cssText='position:absolute;top:'+(H*cfg[1]).toFixed(0)+'px;left:'+
       (cfg[0]*travel*0.35+innerWidth*0.3).toFixed(0)+'px;width:'+cfg[2]+
       'px;opacity:.5;animation:none;will-change:transform';
     dC.appendChild(s);sky.birds.push(s);
   });
-  // the ufo: blink-and-you-miss-it, high up between scene 1 and 2
+  // the ufo: blink-and-you-miss-it — on the WORLD layer so it really is
+  // a blink (one screen-width), high up between scene 1 and 2
   const u=document.createElementNS(NS,'svg');
-  u.setAttribute('viewBox','0 0 640 490');u.setAttribute('class','cloud');
+  u.setAttribute('viewBox','0 0 640 490');u.setAttribute('class','wd');
   u.innerHTML='<use href="#ufo1" width="640" height="490"/>'+
               '<use href="#ufo2" width="640" height="490" opacity="0"/>';
-  u.style.cssText='position:absolute;top:'+(H*0.055).toFixed(0)+'px;left:'+
-    (0.20*travel*0.35+innerWidth*0.3).toFixed(0)+'px;width:62px;height:48px;'+
-    'opacity:.55;animation:none;will-change:transform';
-  dC.appendChild(u);sky.ufo={el:u,uses:[...u.querySelectorAll('use')]};
+  // mid-sky, in the breath between the story riding out and the next
+  // beat's text — below where any headline sits, above the cat's head
+  u.style.cssText='position:absolute;top:'+(H*0.36).toFixed(0)+'px;left:'+
+    (0.31*travel+catX).toFixed(0)+'px;width:66px;height:50px;'+
+    'opacity:.85;will-change:transform';
+  world.appendChild(u);sky.ufo={el:u,uses:[...u.querySelectorAll('use')]};
   // sun + drone live on the stage itself (fixed to the screen)
   if(!sky.sun){
     const s=document.createElement('div');s.id='sun';s.className='wd';
@@ -1466,8 +1557,13 @@ navRig.el.insertAdjacentHTML('afterbegin','<defs><linearGradient id="rgLogo" '+
 const plRig=PlanCRig.mount(document.getElementById('plLogo'),{coat:'currentColor'});
 plRig.el.setAttribute('viewBox',RIG_VB);
 // preloader: asleep while loading — eyes open only in the last half
-// second before the page reveals (preloader = sanctioned time zone)
-setTimeout(()=>plRig.open(),2100);
+// second before the page reveals (preloader = sanctioned time zone).
+// Full 2.6s only the first time this session; coming back from the
+// business pages it's a 0.7s blink, not a re-run of the intro
+let plSeen=false;
+try{ plSeen=!!sessionStorage.getItem('plancSeen'); sessionStorage.setItem('plancSeen','1'); }catch(e){}
+const PL_OPEN=plSeen?250:2100, PL_GONE=plSeen?700:2600;
+setTimeout(()=>plRig.open(),PL_OPEN);
 const plT0=performance.now();
 (function plCircle(){
   if(document.getElementById('preload').classList.contains('gone')){ plRig.destroy(); return; }
@@ -1602,8 +1698,16 @@ function frame(now){
   // once the first doomed leap has played, The Wall's text yields the
   // stage to the rainbow call (time-keyed, inside the sanctioned lock)
   const wallFade=(!bridged&&cur>LOCKP-0.003)?clamp01((loopMs-CYCLE*0.5)/400):0;
+  // scene 5: the camera holds still while the cat rides the flag down —
+  // a plateau in the world's travel, still a pure fn of cur
+  const kUp=clamp01((cur-(POLE_P-0.014))/0.014), kDn=clamp01((cur-POLE_P)/SLIDE);
+  const wx=cur-kDn*SLIDE;
+  const onPole=kDn>0&&kDn<1;
+  let poleY=0;
+  if(kUp>0&&kDn<1) poleY=-grabH*(kUp<1?Math.sin(kUp*Math.PI/2):1)*(1-smooth(kDn));
+  if(flagEl) flagEl.style.transform='translateY('+(smooth(kDn)*poleTravel).toFixed(1)+'px)';
   for(const L of layers)
-    L.el.style.transform='translate3d('+(-(cur*travel+camPx)*L.f).toFixed(2)+'px,'+imp.toFixed(2)+'px,0)';
+    L.el.style.transform='translate3d('+(-(wx*travel+camPx)*L.f).toFixed(2)+'px,'+imp.toFixed(2)+'px,0)';
   for(const b of beats){
     const h=Math.min(0.10,Math.max(0,cur-b.p));
     b.el.style.transform=h?'translate3d('+(h*travel).toFixed(1)+'px,0,0)':'';
@@ -1618,7 +1722,7 @@ function frame(now){
   // gait — the legs answer to the cat's WORLD speed, so the sprint
   // back after a knockback churns them properly instead of moonwalking
   const dW=d+(kbW-lastKbW)/travel; lastKbW=kbW;
-  const spd=Math.min(1,Math.abs(dW)/Math.max(dt,.0001)*1500);
+  const spd=onPole?0:Math.min(1,Math.abs(dW)/Math.max(dt,.0001)*1500);   // hands on the pole, legs still
   v+=(spd-v)*(1-Math.pow(1-0.18,dt));
   phase+=0.46*v*(dW>=0?1:-1)*dt;
   const step=Math.abs(Math.sin(phase));
@@ -1652,7 +1756,7 @@ function frame(now){
   catImg.classList.toggle('hurt',
     BITEP.some(bp=>cur>bp-0.0008&&cur<bp+0.004));
 
-  const air=(jy+drop)<-2;
+  const air=(jy+drop+poleY)<-2;
   const bob=air?0:-step*10*v*size;
 
   // bridge arc lift while crossing (only exists once bridged)
@@ -1662,14 +1766,14 @@ function frame(now){
     lift=2*k*(1-k)*164;   // matches the bridge's quadratic arc exactly
   }
 
-  catW.style.transform='translate3d('+(fallX+kbX).toFixed(1)+'px,'+(jy+bob+fallY+kbY-lift+drop+bnc).toFixed(2)+'px,0)';
+  catW.style.transform='translate3d('+(fallX+kbX).toFixed(1)+'px,'+(jy+bob+fallY+kbY-lift+drop+bnc+poleY).toFixed(2)+'px,0)';
   catL.style.transform='rotate('+(Math.sin(phase*2)*2.2*v+kbRot).toFixed(2)+'deg)';
   const sq=air?1.06:1-(0.085*(1-step))*v;
   catS.style.transform='scale('+(-size*(2-sq)*(1+lsq*0.7)).toFixed(3)+','+(size*sq*(1-lsq)).toFixed(3)+')';
   catS.style.opacity=blink;
   shadow.style.transform='translate3d('+(fallX+kbX).toFixed(1)+'px,'+(-lift).toFixed(1)+'px,0) scale('+size+','+size+')';
   shadowI.style.opacity=(cur>GAP[0]&&cur<GAP[1]&&!bridged)?0
-    :0.18*(1-Math.min(1,-(jy+drop)/150)*0.7)*Math.max(0,1-fallX/80);
+    :0.18*(1-Math.min(1,-(jy+drop+poleY)/150)*0.7)*Math.max(0,1-fallX/80);
   // one dark blink of the whole screen right at each tooth-connect
   for(const bp of BITEP)flashO=Math.max(flashO,Math.exp(-Math.pow((cur-bp)/0.0012,2))*0.22);
   flash.style.opacity=flashO;
@@ -1875,7 +1979,7 @@ layout();
 addEventListener('resize',layout);
 if(document.fonts&&document.fonts.ready)document.fonts.ready.then(layout);  // re-measure story slots with the real font
 requestAnimationFrame(frame);
-setTimeout(()=>document.getElementById('preload').classList.add('gone'),2600);
+setTimeout(()=>document.getElementById('preload').classList.add('gone'),PL_GONE);
 })();
 </script>
 </body>
