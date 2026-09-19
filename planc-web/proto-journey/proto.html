@@ -135,6 +135,13 @@ body.inverted #story{color:var(--paper)}
   font-weight:600;opacity:0;will-change:opacity}
 .sbody{margin-top:.6rem;font-family:'Sarabun',system-ui,sans-serif;font-weight:400;
   font-size:clamp(.92rem,3.4vw,1.1rem);line-height:1.6;opacity:0;will-change:transform,opacity}
+/* corner nudge: only while the reader has stopped scrolling for a while */
+#idleHint{position:absolute;z-index:9;right:clamp(14px,3vw,40px);bottom:calc(var(--ground-h) + 2.2dvh);
+  padding:.5rem .95rem;background:var(--paper);color:var(--ink);font-family:'Prompt',sans-serif;font-weight:600;
+  font-size:.82rem;white-space:nowrap;border-radius:255px 15px 225px 15px/15px 225px 15px 255px;
+  box-shadow:0 0 0 1.5px var(--ink);opacity:0;pointer-events:none;
+  animation:hintbob 1.4s ease-in-out infinite;transition:opacity .45s}
+body.paged #idleHint{display:none}
 #scrollHint{position:absolute;z-index:7;left:50%;bottom:calc(var(--ground-h) + 15dvh);
   transform:translateX(-50%);padding:.55rem 1rem;background:var(--paper);
   box-shadow:0 0 0 1px rgba(17,17,17,.16);font-size:.72rem;letter-spacing:.22em;
@@ -256,6 +263,9 @@ body.inverted .sign{opacity:1}
   letter-spacing:.08em;color:#e5484d}
 /* 4 — half sunk in the flood, its reflection wobbling in the water */
 .sign.sunk{width:clamp(220px,32vw,340px)}
+.sign .fol{margin-top:.35em;line-height:1}
+.sign .fol b{display:inline-block;font-size:1.7em;font-weight:800;letter-spacing:.02em}
+.sign .fol span{display:block;margin-top:.3em;font-size:.5em;font-weight:600;letter-spacing:.2em}
 .sign.sunk .refl{width:100%;transform:scaleY(-1);opacity:0;margin-top:2px;
   filter:blur(.6px);will-change:transform,opacity}
 .sign.sunk .refl .panel{box-shadow:none}
@@ -269,6 +279,9 @@ body.inverted .sign{opacity:1}
 @media (max-width:699px){
   .sign.tv,.sign.sunk{width:200px}
   .sign.hang{width:200px}
+  .sign.sunk{width:224px}
+  .sign.sunk .txt{font-size:1.05rem;white-space:nowrap}
+  .sign.sunk .fol{white-space:normal}
 }
 /* the rain stops the moment the bridge is called for */
 body.bridged #rain1,body.bridged #rain2{opacity:0}
@@ -368,7 +381,8 @@ body.bridged #boltFlash,body.bridged #boltShape{animation:none;opacity:0}
   <div id="chat"></div>
 
   <div id="tapHint">ไม่ต้องข้ามคนเดียว — แตะ planc* ↖</div>
-  <div id="scrollHint">SCROLL ↓</div>
+  <div id="scrollHint">ไถลงสิ ↓</div>
+  <div id="idleHint">ไถต่อสิ ↓</div>
 </main>
 
 <div id="story"></div>
@@ -558,7 +572,7 @@ function buildGear(){
 /* ================= layout ================= */
 function layout(){
   catX = innerWidth*0.24;
-  travel = Math.max(7000, innerWidth*4.4);
+  travel = Math.max(7000, innerWidth*8);   // ~one sign per screen on desktop too (Mat 19 Sep)
   LOCKP = GAP[0] - catX/travel - 0.0015;   // scroll wall: cat's toes at the cliff edge
   world.style.width=(travel+innerWidth)+'px';
   document.getElementById('spacer').style.height=(S*(1+HOLD2)+innerHeight*2)+'px';
@@ -733,9 +747,10 @@ function layout(){
   world.appendChild(s3);signs.s3={el:s3,panel:s3.querySelector('.panel'),stat:s3.querySelector('.static'),views:s3.querySelector('.views')};
   // 4 — half under water, reflected
   const s4=document.createElement('div');s4.className='sign sunk';
-  s4.innerHTML=panel('ทำไมยอดฟอลไม่ขึ้น?')+'<div class="refl">'+panel('ทำไมยอดฟอลไม่ขึ้น?')+'</div>';
+  s4.innerHTML=panel('ทำไมยอดฟอลไม่ขึ้น?<div class="fol"><b>12,408</b><span>FOLLOWERS</span></div>')+post;
+  s4.querySelector('.gpost').style.height=innerWidth>=700?'clamp(120px,20dvh,200px)':'30dvh';   // phones: clear of the cat's raincloud
   s4.style.left=(P4*travel+catX+(innerWidth>=700?lead*0.65:lead)).toFixed(0)+'px';
-  world.appendChild(s4);signs.s4={el:s4,refl:s4.querySelector('.refl')};
+  world.appendChild(s4);signs.s4={el:s4,num:s4.querySelector('.fol b')};
   // 5 — the giant billboard on two posts, lit by one lamp
   const s5=document.createElement('div');s5.className='sign giant';
   s5.innerHTML='<div class="lamp"></div>'+panel('เราจะทำอาชีพนี้ต่อไปได้ไหมนะ?')+
@@ -1009,6 +1024,7 @@ const CYCLE=2600;
 let LOCKP=0.76;                    // set precisely in layout(): the cat AT the ledge
 let loopMs=0,lastCyc=-1,deaths=0,wasNeed=false;
 
+let idleY=-1,idleT=0;const idleHint=document.getElementById('idleHint');
 function frame(now){
   const dt=Math.min(3,Math.max(.2,(now-prevT)/16.667));prevT=now;
   // the scroll wall sits HOLD2 further down the page than the world
@@ -1019,6 +1035,10 @@ function frame(now){
   if(Math.abs(target-curS)<0.0002)curS=target;
   cur=clamp01(hold(curS));   // sign 2 holds the world still for a while
   const d=cur-last;
+  // idle nudge (UI chrome, clock-keyed on purpose): 3s without scrolling
+  if(scrollY!==idleY){idleY=scrollY;idleT=now;}
+  const heldNow=!bridged&&cur>LOCKP-0.003;
+  idleHint.style.opacity=(now-idleT>3000&&cur>=0.012&&cur<0.97&&!heldNow)?1:0;
   const hold2k=clamp01((curS-P2)/HOLD2);            // 0..1 through the stop
   const holding=hold2k>0&&hold2k<1;
 
@@ -1289,8 +1309,12 @@ function frame(now){
   water.style.height=lvl.toFixed(0)+'px';
   water.style.opacity=(lvl>1&&storm)?1:0;
   water.firstElementChild.style.transform='translateX('+(-(cur*travel*0.5)%120).toFixed(0)+'px)';
-  if(signs.s4)signs.s4.refl.style.opacity=(0.42*wade).toFixed(2);
-  if(signs.s4)signs.s4.refl.style.transform='scaleY(-1) skewX('+(Math.sin(cur*travel/60)*3*wade).toFixed(1)+'deg)';
+  // sign 4: the follower counter twitches +1, then drops right back — stuck
+  if(signs.s4){
+    const ph=(cur*travel/150)%1, up=ph>0.55&&ph<0.8;
+    signs.s4.num.textContent=up?'12,409':'12,408';
+    signs.s4.num.style.transform='translateY('+(up?-3:0)+'px)';
+  }
   splashes.forEach(sp=>{
     const o=wade*Math.max(0,1-step*3)*v;
     sp.el.style.opacity=o.toFixed(2);
