@@ -137,8 +137,8 @@ body.inverted #story{color:var(--paper)}
   font-size:clamp(.92rem,3.4vw,1.1rem);line-height:1.6;opacity:0;will-change:transform,opacity}
 /* corner nudge: only while the reader has stopped scrolling for a while */
 #idleHint{position:absolute;z-index:9;right:clamp(14px,3vw,40px);bottom:calc(var(--ground-h) + 2.2dvh);
-  display:flex;flex-direction:column;align-items:center;gap:.12rem;line-height:1.15;
-  padding:.7rem .55rem .6rem;background:var(--paper);color:var(--ink);font-family:'Prompt',sans-serif;font-weight:600;
+  display:flex;flex-direction:column;align-items:center;gap:0;line-height:1.12;
+  padding:.34rem .3rem .26rem;background:var(--paper);color:var(--ink);font-family:'Prompt',sans-serif;font-weight:600;
   font-size:.82rem;white-space:nowrap;border-radius:255px 15px 225px 15px/15px 225px 15px 255px;
   box-shadow:0 0 0 1.5px var(--ink);opacity:0;pointer-events:none;
   transition:opacity .45s}
@@ -267,6 +267,7 @@ body.inverted .sign{opacity:1}
 .sign.sunk{width:clamp(220px,32vw,340px)}
 .sign .fol{margin-top:.35em;line-height:1}
 .sign .fol b{display:inline-block;font-size:1.7em;font-weight:800;letter-spacing:.02em}
+.sign .fol .ar{font-style:normal;font-size:.7em;margin-left:.3em;vertical-align:.35em}
 .sign .fol span{display:block;margin-top:.3em;font-size:.5em;font-weight:600;letter-spacing:.2em}
 .sign.sunk .refl{width:100%;transform:scaleY(-1);opacity:0;margin-top:2px;
   filter:blur(.6px);will-change:transform,opacity}
@@ -1220,8 +1221,10 @@ const DARK = [.36, 1];             // the storm runs from here until the bridge 
 /* the storm's five signs (in world progress) and their events */
 const P2 = .47, HOLD2 = .04;       // sign 2: the cat stops for this much scroll, phone out
 const P3 = .55, GUST = .555, DRONE_HIT = .58;   // sign 3: wind, then the drone is struck
-const P4 = .62, FLOOD = [.58, .66];             // sign 4: the flood rises, then drains
-const P5 = .70, STRIKE = .71, BLACK = .715;     // sign 5: lightning, lamp dies, city goes dark
+const WIDE = innerWidth >= 1100;                // desktop locks at the cliff earlier in progress → signs 4–5 step back
+const P4 = WIDE?.605:.62, FLOOD = [.58, .66];             // sign 4: the flood rises, then drains
+                
+const P5 = WIDE?.665:.70, STRIKE = P5+.01, BLACK = P5+.015;     // sign 5: lightning, lamp dies, city goes dark
 const POLE_P = .955, SLIDE = .03;  // the flagpole: grab here, slide for this long
 
 const world = document.getElementById('world');
@@ -1364,7 +1367,7 @@ function layout(){
     // the three hard truths land one at a time, big (pure fn of cur)
     hards=['งานที่ต้องแก้','คืนที่ไม่ได้นอน','ลูกค้าที่บิดเงิน'].map(t=>{
       const d=document.createElement('div');d.className='hard';d.textContent=t;sl.appendChild(d);return d;}); }
-  mkBeat(0.72,'The Wall','บนหนทางที่ดูโดดเดี่ยว<br>แต่คุณไม่ได้อยู่คนเดียวนะ');
+  mkBeat(WIDE?0.728:0.72,'The Wall','บนหนทางที่ดูโดดเดี่ยว<br>แต่คุณไม่ได้อยู่คนเดียวนะ');
   // (no sign after the bridge — the flagpole IS the ending, Mat's call)
 
   // scene 1 treasures = ? boxes head-bumped from below, like the main
@@ -1472,16 +1475,16 @@ function layout(){
   world.appendChild(s3);signs.s3={el:s3,panel:s3.querySelector('.panel'),stat:s3.querySelector('.static'),views:s3.querySelector('.views')};
   // 4 — half under water, reflected
   const s4=document.createElement('div');s4.className='sign sunk';
-  s4.innerHTML=panel('ทำไมยอดฟอลไม่ขึ้น?<div class="fol"><b>12,408</b><span>FOLLOWERS</span></div>')+post;
+  s4.innerHTML=panel('ทำไมยอดฟอลไม่ขึ้น?<div class="fol"><b>12,408</b><i class="ar">▲</i><span>FOLLOWERS</span></div>')+post;
   s4.querySelector('.gpost').style.height=innerWidth>=700?'clamp(120px,20dvh,200px)':'30dvh';   // phones: clear of the cat's raincloud
   s4.style.left=(P4*travel+catX+(innerWidth>=700?lead*0.65:lead)).toFixed(0)+'px';
-  world.appendChild(s4);signs.s4={el:s4,num:s4.querySelector('.fol b')};
+  world.appendChild(s4);signs.s4={el:s4,num:s4.querySelector('.fol b'),arrow:s4.querySelector('.fol .ar')};
   // 5 — the giant billboard on two posts, lit by one lamp
   const s5=document.createElement('div');s5.className='sign giant';
   s5.innerHTML='<div class="lamp"></div>'+panel('เราจะทำอาชีพนี้ต่อไปได้ไหมนะ?')+
     '<svg class="posts" viewBox="0 0 100 60" preserveAspectRatio="none"><path d="M14 0 Q12 20 15 40 T13 60 M86 0 Q88 22 85 42 T87 60" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" vector-effect="non-scaling-stroke"/></svg>';
   const gW=Math.min(innerWidth*0.74,900);
-  s5.style.left=(P5*travel+catX-gW*0.05).toFixed(0)+'px';
+  s5.style.left=(P5*travel+catX+(WIDE?gW*0.22:-gW*0.05)).toFixed(0)+'px';
   world.appendChild(s5);signs.s5={el:s5,panel:s5.querySelector('.panel'),txt:s5.querySelector('.txt'),lamp:s5.querySelector('.lamp')};
 
   // the personal raincloud + the phone chat live on the stage (they
@@ -1994,7 +1997,7 @@ function frame(now){
     const r=el.getBoundingClientRect();
     const ahead=r.left-cw.right;                       // px between the cat and the sign
     const near=smooth((innerWidth*0.40-ahead)/(innerWidth*0.18));
-    const gone=r.right<cw.left-innerWidth*0.05?0:1;    // passed and left behind
+    const gone=WIDE?smooth((r.right-cw.left+innerWidth*0.02)/(innerWidth*0.06)):(r.right<cw.left-innerWidth*0.05?0:1);    // passed and left behind
     el.style.opacity=(storm?near*gone:0).toFixed(2);
   });
   // sign 2: swings on its chains (keeps swinging while the world holds)
@@ -2036,9 +2039,12 @@ function frame(now){
   water.firstElementChild.style.transform='translateX('+(-(cur*travel*0.5)%120).toFixed(0)+'px)';
   // sign 4: the follower counter twitches +1, then drops right back — stuck
   if(signs.s4){
-    const ph=(cur*travel/150)%1, up=ph>0.55&&ph<0.8;
-    signs.s4.num.textContent=up?'12,409':'12,408';
-    signs.s4.num.style.transform='translateY('+(up?-3:0)+'px)';
+    const w=cur*travel, st=(w/55|0);                  // a new reading every ~55px of walking
+    const dv=Math.round(Math.sin(st*1.7)*19+Math.sin(st*0.63+1)*14);   // ±30ish, always back to where it was
+    const prev=Math.round(Math.sin((st-1)*1.7)*19+Math.sin((st-1)*0.63+1)*14);
+    signs.s4.num.textContent=(12408+dv).toLocaleString('en-US');
+    signs.s4.arrow.textContent=dv>prev?'▲':'▼';
+    signs.s4.arrow.style.color=dv>prev?'#111':'#e5484d';
   }
   splashes.forEach(sp=>{
     const o=wade*Math.max(0,1-step*3)*v;
@@ -2054,7 +2060,10 @@ function frame(now){
     signs.s5.lamp.style.opacity=((1-lampK)*(((cur*travel/26|0)%7===0)?0.1:1)).toFixed(2);
     // dying tube: stutters on and off on the way in, long before the strike
     const fz=(cur*travel/26|0), off5=(fz%7===0||fz%11===3||fz%13===5);
-    signs.s5.panel.style.opacity=((1-0.86*lampK)*(off5?0.12:1)).toFixed(2);
+    // desktop: the dead billboard sinks fully into the dark before The Wall speaks
+    const s5gone=WIDE?1-smooth((cur-(BLACK+0.004))/0.012):1;
+    signs.s5.panel.style.opacity=((1-0.86*lampK)*(off5?0.12:1)*s5gone).toFixed(2);
+    signs.s5.el.querySelector('.posts').style.opacity=s5gone.toFixed(2);
     signs.s5.txt.style.opacity=((((cur*travel/30|0)%3)&&lampK>0.2)?0.35:1).toFixed(2);
   }
   const zapO=Math.exp(-Math.pow((cur-STRIKE)/0.0018,2))*0.9+Math.exp(-Math.pow((cur-DRONE_HIT)/0.0018,2))*0.7;
