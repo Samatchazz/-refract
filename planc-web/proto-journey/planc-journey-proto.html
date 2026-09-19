@@ -1220,11 +1220,12 @@ const DIE = .782;                  // where the cat tries anyway
 const DARK = [.36, 1];             // the storm runs from here until the bridge is called
 /* the storm's five signs (in world progress) and their events */
 const P2 = .47, HOLD2 = .04;       // sign 2: the cat stops for this much scroll, phone out
-const P3 = .55, GUST = .555, DRONE_HIT = .58;   // sign 3: wind, then the drone is struck
-const WIDE = innerWidth >= 1100;                // desktop locks at the cliff earlier in progress → signs 4–5 step back
-const P4 = WIDE?.605:.62, FLOOD = [.58, .66];             // sign 4: the flood rises, then drains
+const WIDE = innerWidth >= 1100;                // desktop: the cliff locks earlier in progress, so the storm's back half is rescheduled —
+                                                // the cat must walk clear of the giant billboard BEFORE The Wall speaks (Mat 19 Sep)
+const P3 = WIDE?.525:.55, GUST = P3+.005, DRONE_HIT = P3+.03;   // sign 3: wind, then the drone is struck
+const P4 = WIDE?.58:.62, FLOOD = [.58, .66];             // sign 4: the flood rises, then drains
                 
-const P5 = WIDE?.665:.70, STRIKE = P5+.01, BLACK = P5+.015;     // sign 5: lightning, lamp dies, city goes dark
+const P5 = WIDE?.635:.70, STRIKE = P5+(WIDE?.03:.01), BLACK = STRIKE+.005;     // sign 5: lightning, lamp dies, city goes dark
 const POLE_P = .955, SLIDE = .03;  // the flagpole: grab here, slide for this long
 
 const world = document.getElementById('world');
@@ -1367,7 +1368,7 @@ function layout(){
     // the three hard truths land one at a time, big (pure fn of cur)
     hards=['งานที่ต้องแก้','คืนที่ไม่ได้นอน','ลูกค้าที่บิดเงิน'].map(t=>{
       const d=document.createElement('div');d.className='hard';d.textContent=t;sl.appendChild(d);return d;}); }
-  mkBeat(WIDE?0.728:0.72,'The Wall','บนหนทางที่ดูโดดเดี่ยว<br>แต่คุณไม่ได้อยู่คนเดียวนะ');
+  mkBeat(WIDE?0.73:0.72,'The Wall','บนหนทางที่ดูโดดเดี่ยว<br>แต่คุณไม่ได้อยู่คนเดียวนะ');
   // (no sign after the bridge — the flagpole IS the ending, Mat's call)
 
   // scene 1 treasures = ? boxes head-bumped from below, like the main
@@ -1483,8 +1484,9 @@ function layout(){
   const s5=document.createElement('div');s5.className='sign giant';
   s5.innerHTML='<div class="lamp"></div>'+panel('เราจะทำอาชีพนี้ต่อไปได้ไหมนะ?')+
     '<svg class="posts" viewBox="0 0 100 60" preserveAspectRatio="none"><path d="M14 0 Q12 20 15 40 T13 60 M86 0 Q88 22 85 42 T87 60" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" vector-effect="non-scaling-stroke"/></svg>';
-  const gW=Math.min(innerWidth*0.74,900);
-  s5.style.left=(P5*travel+catX+(WIDE?gW*0.22:-gW*0.05)).toFixed(0)+'px';
+  const gW=WIDE?Math.min(innerWidth*0.5,720):Math.min(innerWidth*0.74,900);
+  s5.style.width=gW+'px';
+  s5.style.left=(P5*travel+catX+(WIDE?0:-gW*0.05)).toFixed(0)+'px';
   world.appendChild(s5);signs.s5={el:s5,panel:s5.querySelector('.panel'),txt:s5.querySelector('.txt'),lamp:s5.querySelector('.lamp')};
 
   // the personal raincloud + the phone chat live on the stage (they
@@ -1992,13 +1994,18 @@ function frame(now){
   }
   // every sign lights up only as the cat comes near, and goes dark once
   // it's behind — one lit sign at a time, the way a dark road works
+  let prevLit=0;
   [glowEl,signs.s2&&signs.s2.el,signs.s3&&signs.s3.el,signs.s4&&signs.s4.el,signs.s5&&signs.s5.el].forEach(el=>{
     if(!el)return;
     const r=el.getBoundingClientRect();
     const ahead=r.left-cw.right;                       // px between the cat and the sign
     const near=smooth((innerWidth*0.40-ahead)/(innerWidth*0.18));
     const gone=WIDE?smooth((r.right-cw.left+innerWidth*0.02)/(innerWidth*0.06)):(r.right<cw.left-innerWidth*0.05?0:1);    // passed and left behind
-    el.style.opacity=(storm?near*gone:0).toFixed(2);
+    // desktop: strictly one lit sign at a time — the next one only comes
+    // on as the one before it goes dark behind the cat
+    const lit=near*gone*(WIDE?1-prevLit:1);
+    prevLit=near*gone;
+    el.style.opacity=(storm?lit:0).toFixed(2);
   });
   // sign 2: swings on its chains (keeps swinging while the world holds)
   if(signs.s2)signs.s2.swing.style.transform='rotate('+(Math.sin(curS*travel/95)*7).toFixed(2)+'deg)';
