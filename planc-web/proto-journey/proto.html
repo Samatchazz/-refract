@@ -108,6 +108,10 @@ body.inverted .ground{color:var(--paper)}
 .beat .kicker{font-size:.7rem;letter-spacing:.34em;text-transform:uppercase;margin-bottom:.55rem;font-weight:600;opacity:.6}
 .beat h2{font-size:clamp(1.5rem,6.2vw,3rem);font-weight:800;line-height:1.16}
 .beat p{margin-top:.6rem;font-size:clamp(.92rem,3.4vw,1.1rem);line-height:1.6;max-width:30rem}
+.beat .hard{font-family:'Prompt','Sarabun',sans-serif;font-weight:800;line-height:1.2;
+  font-size:clamp(1.35rem,5.6vw,2.4rem);margin-top:.5rem;opacity:0;transform-origin:0 60%;
+  will-change:transform,opacity}
+.beat h2+.hard{margin-top:1.1rem}
 .rb{background-image:var(--rainbow);-webkit-background-clip:text;background-clip:text;color:transparent}
 .cta{display:inline-block;margin-top:1rem;padding:.75rem 1.5rem;background:var(--ink);color:var(--paper);
   text-decoration:none;font-weight:600;letter-spacing:.06em}
@@ -189,6 +193,9 @@ body.inverted #rain2{opacity:.24}
   background-size:260px 420px;animation:rainA .6s linear infinite}
 #rain2{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='460'%3E%3Cg fill='none' stroke='%23fcfcfa' stroke-linecap='round'%3E%3Cpath d='M78,44q-4,10-8,22' stroke-width='2.2'/%3E%3Cpath d='M244,132q-5,11-9,25' stroke-width='2'/%3E%3Cpath d='M30,268q-4,9-8,21' stroke-width='2.3'/%3E%3Cpath d='M170,376q-5,11-9,24' stroke-width='2'/%3E%3C/g%3E%3C/svg%3E");
   background-size:300px 460px;animation:rainB 1s linear infinite}
+#rain3{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='300'%3E%3Cg fill='none' stroke='%23fcfcfa' stroke-linecap='round'%3E%3Cpath d='M30,10q-9,18-17,42' stroke-width='3.4'/%3E%3Cpath d='M112,52q-9,18-17,42' stroke-width='3'/%3E%3Cpath d='M160,140q-9,18-17,42' stroke-width='3.6'/%3E%3Cpath d='M66,170q-9,18-17,42' stroke-width='3'/%3E%3Cpath d='M128,236q-9,18-17,42' stroke-width='3.3'/%3E%3C/g%3E%3C/svg%3E");
+  background-size:180px 300px;animation:rainC .34s linear infinite;transition:none}
+@keyframes rainC{to{background-position:-108px 300px}}
 @keyframes rainA{to{background-position:-260px 420px}}
 @keyframes rainB{to{background-position:-300px 460px}}
 #boltFlash{position:absolute;inset:0;background:var(--paper);opacity:0;pointer-events:none;z-index:7}
@@ -245,8 +252,8 @@ body.inverted .sign{opacity:1}
 .sign.tv .panel{padding:7% 8% 12%;border:6px solid #fcfcfa;box-shadow:0 0 60px 22px rgba(252,252,250,.22)}
 .sign.tv .static{position:absolute;inset:0;pointer-events:none;
   background:repeating-linear-gradient(0deg,rgba(17,17,17,.16) 0 2px,transparent 2px 6px)}
-.sign.tv .views{position:absolute;right:6%;bottom:3%;font-family:'Prompt';font-weight:600;font-size:.72rem;
-  letter-spacing:.1em;color:#111}
+.sign.tv .views{position:absolute;right:6%;bottom:3%;font-family:'Prompt';font-weight:700;font-size:clamp(.85rem,1.5vw,1.15rem);
+  letter-spacing:.08em;color:#e5484d}
 /* 4 — half sunk in the flood, its reflection wobbling in the water */
 .sign.sunk{width:clamp(220px,32vw,340px)}
 .sign.sunk .refl{width:100%;transform:scaleY(-1);opacity:0;margin-top:2px;
@@ -294,6 +301,7 @@ body.bridged #boltFlash,body.bridged #boltShape{animation:none;opacity:0}
   .beat{width:60vw;max-width:46rem}
   .beat h2{font-size:4rem}
   .beat p{font-size:1.2rem;max-width:36rem;margin-top:.9rem}
+  .beat .hard{font-size:3rem}
   .sline{font-size:3rem}
   .sline.big{font-size:4rem}
   .sbody{font-size:1.2rem}
@@ -347,6 +355,7 @@ body.bridged #boltFlash,body.bridged #boltShape{animation:none;opacity:0}
 
   <i class="rainL" id="rain2"></i>
   <i class="rainL" id="rain1"></i>
+  <i class="rainL" id="rain3"></i>
   <svg id="boltShape" viewBox="0 0 120 260" aria-hidden="true">
     <path d="M74 6 Q60 52 48 84 L72 80 Q52 138 40 172 L62 166 Q44 216 30 254"
       fill="none" stroke="currentColor" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
@@ -481,7 +490,7 @@ const stage = document.getElementById('stage');
 let travel = 0, catX = 0, layers = [], grounds = [], beats = [];
 let coins = [], slines = [], slots = [], piranhas = [], bullets = [], spikes = [], glowEl, bridgeSvg;
 let poleEl, flagEl, poleTravel = 0, grabH = 0;
-let signs = {}, bubs = [], splashes = [];
+let signs = {}, bubs = [], splashes = [], hards = [];
 let kickEl, bodyEl, kick2, s2lines=[], s2slots=[];
 const story = document.getElementById('story');
 const story2 = document.getElementById('story2');
@@ -539,6 +548,7 @@ function makeShark(i){
 /* ---- gear the cat carries in scene 2 (code placeholders) ---- */
 function buildGear(){
   const gear=document.getElementById('gear');
+  gear.innerHTML='';return;   // Mat 19 Sep: the floating gadgets read as clutter — cut
   gear.innerHTML=
    '<svg id="g1" viewBox="0 0 60 80" style="width:42%;left:8%;top:-46%"><g fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round"><path d="M30 8 L12 72 M30 8 L48 72 M30 8 L30 66"/><path d="M18 46 L42 46"/></g></svg>'+
    '<svg id="g2" viewBox="0 0 70 60" style="width:40%;left:42%;top:-64%"><g fill="none" stroke="currentColor" stroke-width="5"><rect x="8" y="8" width="54" height="38" rx="8"/><path d="M35 46 L35 58 M22 58 L48 58" stroke-linecap="round"/><circle cx="35" cy="27" r="9"/></g></svg>'+
@@ -611,7 +621,10 @@ function layout(){
     s.style.left=(p*travel+innerWidth*0.08)+'px';world.appendChild(s);beats.push({el:s,p});return s;
   };
   // scene 1 opens EMPTY — the box pops do the storytelling
-  mkBeat(0.315,'Slice of Life','แต่อาชีพนี้ไม่ได้มีแค่<br>ด้านที่สนุกสวยงาม','ของที่ต้องแบก งานที่ต้องแก้ คืนที่ไม่ได้นอน ลูกค้าที่บิดเงิน');
+  { const sl=mkBeat(0.315,'Slice of Life','แต่เหรียญย่อมมีสองด้าน<br>อาชีพนี้ก็เช่นกัน');
+    // the three hard truths land one at a time, big (pure fn of cur)
+    hards=['งานที่ต้องแก้','คืนที่ไม่ได้นอน','ลูกค้าที่บิดเงิน'].map(t=>{
+      const d=document.createElement('div');d.className='hard';d.textContent=t;sl.appendChild(d);return d;}); }
   mkBeat(0.72,'The Wall','บนหนทางที่ดูโดดเดี่ยว<br>แต่คุณไม่ได้อยู่คนเดียวนะ');
   // (no sign after the bridge — the flagpole IS the ending, Mat's call)
 
@@ -684,7 +697,7 @@ function layout(){
       '<path d="M3 4 Q30 1 52 3 T97 4 Q99 20 97 34 T96 57 Q60 60 30 58 T3 56 Q1 40 3 24 T3 4 Z" '+
       'fill="none" stroke="currentColor" stroke-width="2.6" vector-effect="non-scaling-stroke" '+
       'stroke-linejoin="round"/></svg>'+
-      '<div class="gtxt">เดือนนี้<br>ไม่มีงานเลย</div></div>'+
+      '<div class="gtxt">เดือนนี้<br>จะมีงานไหม?</div></div>'+
     '<svg class="gpost" viewBox="0 0 26 64" preserveAspectRatio="none">'+
       '<path d="M7 0 Q5 22 8 40 T6 64 M19 0 Q21 20 18 42 T20 64" fill="none" stroke="currentColor" '+
       'stroke-width="3.5" stroke-linecap="round"/></svg>';
@@ -713,8 +726,8 @@ function layout(){
   world.appendChild(s2);signs.s2={el:s2,swing:s2.querySelector('.swing')};
   // 3 — a TV full of static
   const s3=document.createElement('div');s3.className='sign tv';
-  s3.innerHTML=panel('ทำไมยอดวิวน้อย?')+post;
-  s3.querySelector('.panel').insertAdjacentHTML('beforeend','<div class="static"></div><div class="views">12 VIEWS</div>');
+  s3.innerHTML=panel('ทำไมยอดวิวลด?')+post;
+  s3.querySelector('.panel').insertAdjacentHTML('beforeend','<div class="static"></div><div class="views">13 VIEWS</div>');
   s3.querySelector('.gpost').style.height='clamp(120px,20dvh,200px)';
   s3.style.left=(P3*travel+catX+lead).toFixed(0)+'px';
   world.appendChild(s3);signs.s3={el:s3,panel:s3.querySelector('.panel'),stat:s3.querySelector('.static'),views:s3.querySelector('.views')};
@@ -1050,14 +1063,22 @@ function frame(now){
     b.el.style.opacity=(bin*bout*(1-wallFade)).toFixed(2);
   }
 
+  hards.forEach((el,i)=>{
+    const k=clamp01((cur-(0.328+i*0.017))/0.011), e=smooth(k);
+    el.style.opacity=Math.min(1,k*2.5).toFixed(2);
+    el.style.transform='translate('+((1-e)*46).toFixed(1)+'px,0) scale('+((0.8+0.2*e)*(1+Math.sin(k*Math.PI)*0.1)).toFixed(3)+')';
+  });
+
   // gait — the legs answer to the cat's WORLD speed, so the sprint
   // back after a knockback churns them properly instead of moonwalking
   const dW=d+(kbW-lastKbW)/travel; lastKbW=kbW;
   // wading through the flood slows the stride
   const lvlMax=innerHeight*0.16;
-  const lvl=lvlMax*(smooth((cur-FLOOD[0])/0.05)-smooth((cur-FLOOD[1])/0.025));
+  const lvl=0;   // the flood is cut (Mat 19 Sep: too hard to read) — sign 4's new event is pending his pick
   const wade=lvl/lvlMax;
-  const spd=(onPole||holding)?0:Math.min(1,Math.abs(dW)/Math.max(dt,.0001)*1500)*(1-0.4*wade);
+  // sign 5: the downpour — rain thickens, the cat drags its feet
+  const heavy=(cur>DARK[0]&&!bridged)?smooth((cur-(P5-0.05))/0.03):0;
+  const spd=(onPole||holding)?0:Math.min(1,Math.abs(dW)/Math.max(dt,.0001)*1500)*(1-0.4*wade)*(1-0.5*heavy);
   v+=(spd-v)*(1-Math.pow(1-0.18,dt));
   phase+=0.46*v*(dW>=0?1:-1)*dt;
   const step=Math.abs(Math.sin(phase));
@@ -1089,7 +1110,7 @@ function frame(now){
   const look=holding?Math.min(1,Math.min(hold2k,1-hold2k)*6):0;
 
   const air=(jy+drop+poleY)<-2;
-  const bob=air?0:-step*10*v*size;
+  const bob=air?0:-step*10*v*size*(1-0.5*heavy);
 
   // bridge arc lift while crossing (only exists once bridged)
   let lift=0;
@@ -1099,7 +1120,7 @@ function frame(now){
   }
 
   catW.style.transform='translate3d('+(fallX+kbX).toFixed(1)+'px,'+(jy+bob+fallY+kbY-lift+drop+bnc+poleY).toFixed(2)+'px,0)';
-  catL.style.transform='rotate('+(Math.sin(phase*2)*2.2*v+kbRot+look*7).toFixed(2)+'deg)';
+  catL.style.transform='rotate('+(Math.sin(phase*2)*2.2*v+kbRot+look*7+heavy*6).toFixed(2)+'deg)';
   const sq=air?1.06:1-(0.085*(1-step))*v;
   catS.style.transform='scale('+(-size*(2-sq)*(1+lsq*0.7)).toFixed(3)+','+(size*sq*(1-lsq)).toFixed(3)+')';
   catS.style.opacity=blink;
@@ -1127,6 +1148,8 @@ function frame(now){
   // few steps onto the rainbow)
   const storm=cur>DARK[0]&&!(bridged&&cur>GAP[0]+0.015);
   document.body.classList.toggle('inverted',storm);
+
+  document.getElementById('rain3').style.opacity=(heavy*0.75).toFixed(2);
 
   // the story block sits at the old intro-beat spot; once everything
   // has landed it fades out and rides away — a clean breath before
@@ -1257,7 +1280,7 @@ function frame(now){
     const fl=((cur*travel/38|0)%5===0)?0.55:1;
     signs.s3.panel.style.opacity=fl;
     signs.s3.stat.style.opacity=((cur*travel/23|0)%2)?0.35:1;
-    signs.s3.views.textContent=((cur*travel/160|0)%4===3)?'11 VIEWS':'12 VIEWS';
+    signs.s3.views.textContent=Math.round(13-7*clamp01((cur-(P3-0.03))/0.055))+' VIEWS';   // 13 → 6 as the cat walks by
   }
   // the drone gets struck at sign 3 and falls out of the sky
   const fk=clamp01((cur-DRONE_HIT)/0.024);
@@ -1279,8 +1302,10 @@ function frame(now){
   // then the whole city goes dark behind it
   const lampK=smooth((cur-STRIKE)/0.004);
   if(signs.s5){
-    signs.s5.lamp.style.opacity=(1-lampK).toFixed(2);
-    signs.s5.panel.style.opacity=(1-0.86*lampK).toFixed(2);
+    signs.s5.lamp.style.opacity=((1-lampK)*(((cur*travel/26|0)%7===0)?0.1:1)).toFixed(2);
+    // dying tube: stutters on and off on the way in, long before the strike
+    const fz=(cur*travel/26|0), off5=(fz%7===0||fz%11===3||fz%13===5);
+    signs.s5.panel.style.opacity=((1-0.86*lampK)*(off5?0.12:1)).toFixed(2);
     signs.s5.txt.style.opacity=((((cur*travel/30|0)%3)&&lampK>0.2)?0.35:1).toFixed(2);
   }
   const zapO=Math.exp(-Math.pow((cur-STRIKE)/0.0018,2))*0.9+Math.exp(-Math.pow((cur-DRONE_HIT)/0.0018,2))*0.7;
@@ -1309,7 +1334,7 @@ function frame(now){
   }
   // drone: on the job from scene 2 deep into the storm — until the
   // lightning at sign 3 knocks it out of the air
-  const dOp=(clamp01((cur-0.262)/0.012))*(1-fk);
+  const dOp=0;   // the drone is cut with the rest of the gadgets (Mat 19 Sep)
   sky.drone.style.opacity=dOp.toFixed(2);
   if(dOp>0){
     sky.drone.style.transform='translate3d('+(cw.right+innerWidth*0.02+Math.sin(cur*travel/90)*10+fk*40).toFixed(0)+
