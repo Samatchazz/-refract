@@ -137,10 +137,12 @@ body.inverted #story{color:var(--paper)}
   font-size:clamp(.92rem,3.4vw,1.1rem);line-height:1.6;opacity:0;will-change:transform,opacity}
 /* corner nudge: only while the reader has stopped scrolling for a while */
 #idleHint{position:absolute;z-index:9;right:clamp(14px,3vw,40px);bottom:calc(var(--ground-h) + 2.2dvh);
-  padding:.5rem .95rem;background:var(--paper);color:var(--ink);font-family:'Prompt',sans-serif;font-weight:600;
+  display:flex;flex-direction:column;align-items:center;gap:.12rem;line-height:1.15;
+  padding:.7rem .55rem .6rem;background:var(--paper);color:var(--ink);font-family:'Prompt',sans-serif;font-weight:600;
   font-size:.82rem;white-space:nowrap;border-radius:255px 15px 225px 15px/15px 225px 15px 255px;
   box-shadow:0 0 0 1.5px var(--ink);opacity:0;pointer-events:none;
-  animation:hintbob 1.4s ease-in-out infinite;transition:opacity .45s}
+  transition:opacity .45s}
+#idleHint .ar{margin-top:.15rem;animation:hintbob 1.4s ease-in-out infinite}
 body.paged #idleHint{display:none}
 #scrollHint{position:absolute;z-index:7;left:50%;bottom:calc(var(--ground-h) + 15dvh);
   transform:translateX(-50%);padding:.55rem 1rem;background:var(--paper);
@@ -381,8 +383,8 @@ body.bridged #boltFlash,body.bridged #boltShape{animation:none;opacity:0}
   <div id="chat"></div>
 
   <div id="tapHint">ไม่ต้องข้ามคนเดียว — แตะ planc* ↖</div>
-  <div id="scrollHint">ไถลงสิ ↓</div>
-  <div id="idleHint">ไถต่อสิ ↓</div>
+  <div id="scrollHint" hidden>ไถลงสิ ↓</div>
+  <div id="idleHint"><span>ไถ</span><span>ต่อ</span><span>สิ</span><span class="ar">↓</span></div>
 </main>
 
 <div id="story"></div>
@@ -1761,7 +1763,7 @@ function frame(now){
   // idle nudge (UI chrome, clock-keyed on purpose): 3s without scrolling
   if(scrollY!==idleY){idleY=scrollY;idleT=now;}
   const heldNow=!bridged&&cur>LOCKP-0.003;
-  idleHint.style.opacity=(now-idleT>3000&&cur>=0.012&&cur<0.97&&!heldNow)?1:0;
+  idleHint.style.opacity=(cur<0.97&&!heldNow)?1:0;   // always on (Mat 19 Sep) — except where scrolling can't go on
   const hold2k=clamp01((curS-P2)/HOLD2);            // 0..1 through the stop
   const holding=hold2k>0&&hold2k<1;
 
