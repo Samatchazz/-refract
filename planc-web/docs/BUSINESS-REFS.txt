@@ -1,0 +1,584 @@
+﻿planc*
+Business pages: a reference book
+21 live websites for About, Pricing and Contact — what to steal, what to leave, and how close each one is to our ink-on-paper world.
+Checked and screenshotted 23 September 2026
+The homepage already tells the story: a black cat, a pen line, a world that reveals itself as you scroll. The business pages have a different job. A creator who has never heard of planc* lands on About, Pricing or Contact with one question in their head: "Is this real, and is it worth ฿999 of my money?" These pages have to answer that calmly, in the same ink-on-paper world, without borrowing trust we don't have yet.
+So this doc collects 21 live websites that answer that question well, in four groups: people who coach creators and freelancers for money, serious businesses that draw by hand, single pages worth stealing from (pricing and booking), and Thai examples. Each one comes with a screenshot I took in your Chrome on 23 Sep 2026, what it does well, what to take, what to leave, and a fit score for our constraints.
+At the end: my top 5, a suggested section order for About / Pricing / Contact (+ an optional FAQ), and a list of trust signals that work without a single testimonial.
+How to read this
+Fit score (1–5) — How close the page already is to our world: monochrome + one red, hand-drawn line, works with Thai text. 5 = could almost be ours. 1 = only the idea is useful. This is my judgment from looking at the page, not a measurement.
+Recommendations, not decisions — Everything under "Steal" and in the final sections is a suggestion. Which ones go on the site is your call.
+Sources — Quotes and prices come from the live page on 23 Sep 2026 (read via page fetch or visible in the screenshot). Prices on other people's sites can change after that date.
+The 21 sites at a glance
+#
+	Site
+	Fit
+	1
+	Jonathan Stark — Proposal Pricing Session
+	●●●●○
+	2
+	Jonathan Stark — Products + Services
+	●●●●○
+	3
+	Kan Do Creators Community — YouTube consulting with Andrew Kan
+	●●○○○
+	4
+	Creator Dynamics — Creator Consulting (Matt Koval)
+	●●●○○
+	5
+	Moonshot Planning — Pricing (financial planner for creators)
+	●●●○○
+	6
+	Creator Wizard — About (Justin Moore, sponsorship coach)
+	●●○○○
+	7
+	Shape Up (Basecamp's book on product work)
+	●●●●●
+	8
+	Basecamp — About ("Where we came from")
+	●●●●○
+	9
+	Basecamp — Pricing
+	●●●●○
+	10
+	37signals — company homepage
+	●●●○○
+	11
+	Wizard Zines (Julia Evans)
+	●●●●○
+	12
+	Sketchplanations
+	●●●○○
+	13
+	Excalidraw+ — Pricing
+	●●●●○
+	14
+	Marketoonist (Tom Fishburne) — Contact
+	●●●○○
+	15
+	Gumroad — Pricing
+	●●●○○
+	16
+	HEY — Pricing
+	●●○○○
+	17
+	Cal.com — booking widget
+	●●●●○
+	18
+	iSTRONG — Counseling service
+	●●○○○
+	19
+	FlowAccount — Pricing
+	●●●○○
+	20
+	Inflow Account — accounting & tax office
+	●●○○○
+	21
+	The Money Coach
+	●●●○○
+	________________
+
+
+Part 1 — People who coach creators and freelancers
+These are the closest cousins to planc*: one person (or a tiny team) selling their judgment by the hour or by the session. Watch how they turn "trust me" into prices, boundaries and deadlines.
+1. Jonathan Stark — Proposal Pricing Session
+https://jonathanstark.com/proposal-pricing-session
+  
+
+Screenshot: https://jonathanstark.com/proposal-pricing-session · 23 Sep 2026
+WHAT IT DOES WELL
+* It sells exactly one thing: "One 90-minute private call to price the proposal in front of you." Price is stated flat: $500.
+* It spells out what you walk away with and when: a 90-minute Zoom "scheduled within 2 business days of booking" plus "Written action notes within 24-48 hours."
+* It has a "What to bring" list (the client context, the scope, any draft, "The number you're considering, even if you don't trust it yet") — the buyer already feels the session starting.
+* It draws a hard boundary: "One situation only. No ongoing access. Must be used within 14 days." And a real cap: "I take four of these per month, max."
+* Section order: promise → problem → how it works → what you get → good-fit examples → what we work on → what to bring → boundary → goal → book.
+STEAL
+* The whole skeleton for our ฿999 page: promise, what you get + deadline, what to bring, boundary, book.
+* "What to bring" is perfect for creators: last 3 brand quotes, a contract you're unsure about, your current rate card, the number you're thinking of charging.
+* A monthly cap — but only if it's true for the founder's calendar.
+DON'T COPY
+* The testimonial with a headshot near the top — we don't have one, and the page still works without it.
+* Condensed all-caps headings — they don't have a Thai equivalent and feel shouty in Prompt 800.
+Fit 4/5  ●●●●○  Nearly black-and-white, text-first, one muted accent. No hand-drawn element, English only.
+
+
+2. Jonathan Stark — Products + Services
+https://jonathanstark.com/ps
+  
+
+Screenshot: https://jonathanstark.com/ps · 23 Sep 2026
+WHAT IT DOES WELL
+* A plain list, not a pricing grid. Each offer = name, one paragraph, price inside the sentence, one link.
+* It's a real price ladder: $500 session → $1,500 four months of Slack mentoring ("One payment, no auto-renewal, Slack only (no calls)") → $2,500 two-week sprint → $8,500 four-month program ("Application required").
+* The top of the page tells a newcomer where to start: "If you have a live pricing or proposal situation, start with private help."
+STEAL
+* The ladder as a list — works beautifully in Thai, where wide 3-column price cards get cramped.
+* Writing the rules into the offer line ("one payment, no auto-renewal") instead of hiding them in terms.
+* A "not sure where to start?" sentence at the top.
+DON'T COPY
+* Listing products we don't sell yet. If packages aren't ready, one line like "more packages later" is enough.
+Fit 4/5  ●●●●○  Almost monochrome, calm list layout. No drawing, no Thai.
+
+
+3. Kan Do Creators Community — YouTube consulting with Andrew Kan
+https://kdcc.social/pages/consulting
+  
+
+Screenshot: https://kdcc.social/pages/consulting · 23 Sep 2026
+WHAT IT DOES WELL
+* Four fixed-price tiers, each with a one-line "who it's for" in italics: Strategy Session $199.99 · 90 minutes → Channel Audit + Roadmap $999.99 → Monthly Advisory "From $2,499.99/mo" (waitlist).
+* Honest scarcity on the card itself: "Capped at 4 audits per month" / "Currently full. Capped at 5 active retainer clients."
+* Trust is built with policy, not praise: a written refund rule (full refund within 30 days if work hasn't started, then "all sales are final"), a "not suitable for" list, and a flat refusal to promise subscriber numbers.
+* One sentence that defines the role: "Andrew Kan diagnoses and advises. You or your team execute."
+STEAL
+* The italic "if you've been…" line under each tier — it lets the buyer pick themselves.
+* A plain refund/reschedule policy on the pricing page itself.
+* A "we won't promise" line: planc* can say it won't promise follower counts or deal amounts.
+* A one-sentence role split, e.g. "เราวิเคราะห์และแนะนำ คุณเป็นคนตัดสินใจและลงมือ".
+DON'T COPY
+* The gradient hero, dark background and $x.99 pricing. It reads like a funnel; ฿999 already does the job.
+* Brand-name dropping as the main proof.
+Fit 2/5  ●●○○○  Loud colors and a dark theme. The structure and the policies are what matter here.
+
+
+4. Creator Dynamics — Creator Consulting (Matt Koval)
+https://www.creatordynamics.net/creators
+  
+
+Screenshot: https://www.creatordynamics.net/creators · 23 Sep 2026
+WHAT IT DOES WELL
+* Only two options, numbered: "1) Book a Quick-Answers Call" ($295, 45 minutes) and a Channel Deep-Dive ($1,200).
+* Every offer uses the same labels: WHO / WHAT / HEADS UP / RESULT. "HEADS UP: Matt does not sugarcoat his feedback."
+* There's a hand-drawn marker underline under the page title and highlighter behind the subhead — small, but it softens a corporate page.
+* Booking is a Calendly link on each offer.
+STEAL
+* WHO / WHAT / HEADS UP / RESULT as the four blocks for our ฿999 card (ใครควรจอง / ได้อะไร / ต้องรู้ก่อน / ผลที่ได้).
+* A "HEADS UP" line that sets the tone — e.g. we will talk about real numbers, bring yours.
+* One scribbled underline on the page title — exactly our pen line, used once.
+DON'T COPY
+* Yellow highlighter and a gray header bar — off-palette.
+* The heavy testimonials further down, tagged with subscriber counts.
+Fit 3/5  ●●●○○  Mostly black text on white with a real hand-drawn underline; colors are off-palette.
+
+
+5. Moonshot Planning — Pricing (financial planner for creators)
+https://www.moonshotplanning.com/pricing
+  
+
+Screenshot: https://www.moonshotplanning.com/pricing · 23 Sep 2026
+WHAT IT DOES WELL
+* The closest match to our "planning income" topic. Three tiers, each labelled by the creator's income band (e.g. "For creators earning $50K–$150K"), priced "Starting at $200/month", $500 and $700.
+* Tiers stack ("Everything in the Launch Pad"), so each card only lists what's new.
+* One CTA everywhere: "Free Financial Health Check."
+* Its Story page (moonshotplanning.com/story) is a first-person timeline: 2021 → 2023 → 2024.
+STEAL
+* Label packages by where the creator is, not by our product names (e.g. "รายได้ยังไม่นิ่ง" / "มีดีลเข้าทุกเดือน").
+* A timeline About page — works well for an anonymous founder: years and turning points, no face needed.
+DON'T COPY
+* The "Starting at" wording for an entry product — for ฿999 a fixed price is more reassuring.
+* Heavy fade-in animations: the prices were invisible for a few seconds while I took the screenshot. A pricing page should show the price right away.
+Fit 3/5  ●●●○○  Black/gray/white, very clean. Nothing hand-drawn; slick rather than human.
+
+
+6. Creator Wizard — About (Justin Moore, sponsorship coach)
+https://www.creatorwizard.com/about
+  
+
+Screenshot: https://www.creatorwizard.com/about · 23 Sep 2026
+WHAT IT DOES WELL
+* An About page that says what he does in the first line: "I'm a Sponsorship Coach who has generated over $5M in brand partnerships."
+* It explains why he knows the brand side: "full-time creator since 2014 and former influencer marketing agency owner" — almost the same story as the planc* founder.
+* It makes a big mission concrete: "help creators secure 1 million paid partnerships by 2032."
+* A "0% Cut Policy" link in the main menu, stating that they are educators, not managers, and take no share of your deals.
+STEAL
+* "I've been on both sides" as the backbone of our About: 10+ years as a creator, 10 years running brand deals.
+* A 0% cut statement in the navigation or footer. planc* has already decided creators pay and planc takes no cut from deals — say it out loud; it's a big trust signal.
+DON'T COPY
+* The big smiling portrait — not possible if the founder stays unnamed, and not needed.
+* "Yo!" energy. Our voice is calmer.
+Fit 2/5  ●●○○○  Photo-led, but it uses black + one red band — a reminder that one red can carry a whole page.
+
+
+________________
+
+
+Part 2 — Serious, with a pen in hand
+These prove the point we most need proven: hand-drawn doesn't mean unserious. The trick in all of them is the same — the drawing explains or marks something, and the typography stays grown-up.
+7. Shape Up (Basecamp's book on product work)
+https://basecamp.com/shapeup/1.1-chapter-02
+  
+
+Screenshot: https://basecamp.com/shapeup/1.1-chapter-02 · 23 Sep 2026
+WHAT IT DOES WELL
+* Black marker diagrams on white, drawn quickly and left imperfect (ABSTRACT / SHAPED / CONCRETE), next to a serious serif text.
+* Every drawing explains an idea — none are decoration.
+* A left column with the chapter title and a list of sections works as a quiet table of contents.
+STEAL
+* This is the visual register for our business pages: the cat world, but drawn to explain. E.g. a hand-drawn line showing income swinging month to month on the Pricing page, or a 3-box sketch of "ก่อน / ระหว่าง / หลัง session".
+* Hand-lettered labels inside drawings, typed text everywhere else.
+DON'T COPY
+* The long-read book format — our pages should be short.
+Fit 5/5  ●●●●●  Black marker line art + serious text. The closest thing to our world in this doc.
+
+
+8. Basecamp — About ("Where we came from")
+https://basecamp.com/about
+  
+
+Screenshot: https://basecamp.com/about · 23 Sep 2026
+WHAT IT DOES WELL
+* The whole About page is a first-person letter from the co-founder: "Hey there, I'm Jason Fried…"
+* It opens by admitting something: "I wish I could credit a spark of genius, or some deep insight. But I can't."
+* It ends with a direct line to the founder (his email) instead of a sales button.
+STEAL
+* A letter instead of a "team" section. Signed as "ผู้ก่อตั้ง planc*" if the name stays hidden — the voice does the work.
+* Start with why it exists, in plain words: e.g. how many creators the founder has watched lose money on the business side.
+* End with a human contact (a LINE that the founder actually answers).
+DON'T COPY
+* The pale pink panel — not our palette.
+Fit 4/5  ●●●●○  Text-only letter on a calm page. Easy to rebuild in ink on paper.
+
+
+9. Basecamp — Pricing
+https://basecamp.com/pricing
+  
+
+Screenshot: https://basecamp.com/pricing · 23 Sep 2026
+WHAT IT DOES WELL
+* The headline is a promise about fairness, not a feature list: "No per-user fees, everyone's included. Just clear, fixed prices."
+* A loose hand-drawn yellow circle around "No per-user fees" — one pen mark pointing at the one idea that matters.
+* Lower down, reliability shown as plain facts instead of quotes, e.g. "27 profitable, financially responsible years in business".
+STEAL
+* One hand-drawn red circle around the one idea on our pricing page (e.g. "ราคาเดียว ไม่มีค่าใช้จ่ายแอบแฝง").
+* Replace customer quotes with checkable facts about the business (years, the registered company, the policies).
+DON'T COPY
+* The "2,281 organizations signed up last week" line — we have no equivalent yet, and we shouldn't fake one.
+* Radio-button plan pickers — too SaaS for a single session.
+Fit 4/5  ●●●●○  Shows exactly how one hand-drawn mark makes a serious pricing page human.
+
+
+10. 37signals — company homepage
+https://37signals.com/
+  
+
+Screenshot: https://37signals.com/ · 23 Sep 2026
+WHAT IT DOES WELL
+* The homepage is just a numbered list of beliefs: "00. Start here", "01. An obligation to independence", "02. Work isn't war"…
+* Each title is 2–5 words. Each one opens into a short essay.
+* No hard sell anywhere. It earns trust by saying what the company stands for.
+STEAL
+* A numbered "สิ่งที่เราเชื่อ" list on our About — 5 to 7 short lines, e.g. "รับงานเพราะเหมาะ ไม่ใช่เพราะกลัว", "ตัวเลขต้องมีที่มา".
+* The numbering itself (00, 01, 02) looks great in Prompt heavy weights.
+DON'T COPY
+* The flood of one bright color across the whole screen.
+Fit 3/5  ●●●○○  Pure type, no drawing. The list idea is the takeaway, not the look.
+
+
+11. Wizard Zines (Julia Evans)
+https://wizardzines.com/
+  
+
+Screenshot: https://wizardzines.com/ · 23 Sep 2026
+WHAT IT DOES WELL
+* A stick figure with a speech bubble greets you: "Hi! I'm Julia." It's a kid-simple drawing on a real shop.
+* Pricing in one friendly sentence: "The ones with black and white covers are free, and you can buy the ones with colour covers!" and "collect all 15 zines for $145!"
+* Buttons have thick black outlines and a hard offset shadow — hand-made, but clearly clickable.
+STEAL
+* The black cat can host the business pages the same way: a small speech bubble that says one plain thing.
+* Explaining free vs paid in one sentence (useful if the free first session stays).
+* Outline buttons with an offset shadow — easy to do in #111 with a red hover.
+DON'T COPY
+* Orange header and yellow buttons.
+* Too much cuteness on a page about money. One cat moment per page is enough.
+Fit 4/5  ●●●●○  Kid-simple drawing + thick black outlines. Colors are the only mismatch.
+
+
+12. Sketchplanations
+https://sketchplanations.com/
+  
+
+Screenshot: https://sketchplanations.com/ · 23 Sep 2026
+WHAT IT DOES WELL
+* Headline: "Explaining the world one sketch at a time." Then a short personal intro: "Hi, I'm Jono."
+* Its licence page (sketchplanations.com/licence) states prices plainly — "$65 per image (or £50 if paying in GBP), to keep things straightforward."
+* A hand-lettered wordmark and a lot of white space; the rest is ordinary, readable type.
+STEAL
+* "to keep things straightforward" as a tone for our money copy — say the number, say why.
+* A hand-lettered wordmark with plain typography everywhere else.
+DON'T COPY
+* The embedded newsletter widget in the middle of the page.
+Fit 3/5  ●●●○○  Monochrome and calm, but the drawing lives in the product, not on the page.
+
+
+13. Excalidraw+ — Pricing
+https://plus.excalidraw.com/pricing
+  
+
+Screenshot: https://plus.excalidraw.com/pricing · 23 Sep 2026
+WHAT IT DOES WELL
+* A real pricing page with hand-drawn details: the word "made" in a handwriting font, a hand-drawn arrow from Free to Plus, a scribbled "save 14%".
+* Plan cards are drawn as dashed selection boxes with corner handles — the product's own drawing language.
+* Prices are plain: "Free forever" and "$6 a month per user".
+STEAL
+* Hand-drawn arrows and notes as annotations on top of clean cards — e.g. an arrow from ฿999 to "เริ่มตรงนี้".
+* Frames drawn in our wobbly line instead of CSS boxes.
+DON'T COPY
+* Purple/green/orange — keep only #111 + red.
+* Monthly/annual toggles — irrelevant for a session.
+Fit 4/5  ●●●●○  Handwriting notes and hand-drawn frames on a pricing page. Recolor and it's close.
+
+
+14. Marketoonist (Tom Fishburne) — Contact
+https://marketoonist.com/contact
+  
+
+Screenshot: https://marketoonist.com/contact · 23 Sep 2026
+WHAT IT DOES WELL
+* Headline: "interested? let's talk". Next to the form sits one of his own black-and-white cartoons ("YOUR CALL IS VERY IMPORTANT TO US…").
+* The form is short. The message box asks a better question than "Message": "what should we know before we talk?"
+* Button: "say hello!"
+STEAL
+* One cat drawing beside the contact form that jokes about exactly the fear (e.g. a brand that disappears after the work is posted).
+* The better question in the text box, in Thai: "อยากให้เรารู้อะไรก่อนคุยกัน".
+DON'T COPY
+* Not saying what happens after you submit — our page should say who replies and how soon.
+* The blue form panel.
+Fit 3/5  ●●●○○  Real ink cartoon on a business contact page. Form styling is off-palette.
+
+
+15. Gumroad — Pricing
+https://gumroad.com/pricing
+  
+
+Screenshot: https://gumroad.com/pricing · 23 Sep 2026
+WHAT IT DOES WELL
+* Headline: "Simple, transparent pricing." Sub: "No hidden fees, no monthly charges."
+* The fee is one line: "10% + $0.50" on direct sales.
+* Illustrations are thick black-outline coins drawn by hand, floating around the headline.
+STEAL
+* The "no hidden fees" promise sitting right under the headline.
+* Thick-outline objects in our line: a hand-drawn ฿ coin or a contract with a fold can live on the pricing page.
+DON'T COPY
+* Big blocks of color. Only the outline drawing style is useful to us.
+Fit 3/5  ●●●○○  Great black-outline drawing style; loud colors.
+
+
+________________
+
+
+Part 3 — Single pages worth borrowing from
+Two pages that aren't consulting businesses, but solve one of our three pages very well.
+16. HEY — Pricing
+https://www.hey.com/pricing/
+  
+
+Screenshot: https://www.hey.com/pricing/ · 23 Sep 2026
+WHAT IT DOES WELL
+* Headline: "Two flavors, two prices." You understand the page before reading it.
+* Right under it, what they will never do: "We don't sell ads, data, or your private info."
+* Each option = who it's for in one sentence + one big price + one button.
+STEAL
+* A headline that counts for the reader: "หนึ่งเซสชัน หนึ่งราคา".
+* A "what we never do" line under the price: we don't share your numbers, contracts or brand names with anyone.
+DON'T COPY
+* Gradient headline and purple price panels.
+Fit 2/5  ●●○○○  Colorful. The copy pattern is the value, not the look.
+
+
+17. Cal.com — booking widget
+https://cal.com/
+  
+
+Screenshot: https://cal.com/ · 23 Sep 2026
+WHAT IT DOES WELL
+* The booking card is black, white and gray only: who you're meeting, what the meeting is about, a length picker (15m/30m/45m/1h), time zone, then a calendar.
+* The event description says who it's for: "Are you an agency, influencer, SaaS founder, or business looking to collaborate…"
+* Cal.com is open-source and can be self-hosted or embedded.
+STEAL
+* A monochrome booking embed that won't break our palette (Calendly-style tools usually add their own blue).
+* Put "what this session is for" inside the booking card too, so nobody books the wrong thing.
+DON'T COPY
+* Rating badges and logo rows around the widget.
+* Offering many durations — one session length keeps the ฿999 decision simple.
+Fit 4/5  ●●●●○  Monochrome booking UI. Not hand-drawn, but it won't fight the drawing.
+
+
+________________
+
+
+Part 4 — Thai examples
+I found no Thai service site with a convincing hand-drawn style — that's an empty spot planc* can own. These four are here for Thai pricing, Thai booking habits and Thai typography.
+18. iSTRONG — Counseling service
+https://www.istrong.co/service/counseling
+  
+
+Screenshot: https://www.istrong.co/service/counseling · 23 Sep 2026
+WHAT IT DOES WELL
+* Price per format, in THB, with the regular price shown next to the promo: "อัตราปกติ 2,000 บาท / 1 ชั่วโมง" and "990 บาท / 30 นาที" — almost our ฿999.
+* Two booking doors side by side under every service: "จองคิวทาง Line" and "จองคิวผ่านระบบออนไลน์".
+* States the overtime rule on the page: if the call runs 15+ minutes past the slot, you pay extra afterwards.
+* Online booking: pick a service → pick a time → pay first → staff confirm. The company name (Actualiz Co., Ltd.) is in the footer.
+STEAL
+* The two-door booking pattern: LINE for people who want to ask first, calendar for people ready to pay. This fits Thai buyers.
+* State the time rules on the price card (30 minutes, what happens if it runs over).
+* Registered company name in the footer.
+DON'T COPY
+* The busy promo banner with many colors and discounts.
+* Cluttered navigation for organizations/schools/professionals.
+Fit 2/5  ●●○○○  Blue/orange template look. Thai price and booking structure is the value.
+
+
+19. FlowAccount — Pricing
+https://flowaccount.com/pricing
+  
+
+Screenshot: https://flowaccount.com/pricing · 23 Sep 2026
+WHAT IT DOES WELL
+* Clean Thai headline "แพ็กเกจ และ ราคา", a small eyebrow line "เลือกแพ็กเกจที่เหมาะกับธุรกิจของคุณ".
+* Each column starts with who it suits ("เหมาะสำหรับฟรีแลนซ์", "เหมาะสำหรับธุรกิจเริ่มต้น") before the price.
+* A hand-drawn orange swoosh with the note "ประหยัดกว่า 17%" next to the yearly toggle.
+* Price format: struck-out old price ฿199, then ฿165 /เดือน.
+STEAL
+* "เหมาะสำหรับ…" before the price — Thai readers scan for themselves first.
+* A hand-drawn note beside a price in Thai — it works, and it proves Thai + handwriting reads fine.
+* Clear spacing between Thai lines — worth copying for Sarabun body text.
+DON'T COPY
+* Strike-through discount prices — it trains people to wait for promos.
+* Four columns of SaaS tiers.
+Fit 3/5  ●●●○○  Good Thai typography and one hand-drawn note; blue SaaS palette.
+
+
+20. Inflow Account — accounting & tax office
+https://inflowaccount.co.th/
+  
+
+Screenshot: https://inflowaccount.co.th/ · 23 Sep 2026
+WHAT IT DOES WELL
+* The hero promise is about time, not accounting: "เอาเวลาของคุณคืนมาจากทุกปัญหาบัญชีภาษี".
+* Two equal CTAs in the hero: phone and "Add Line @ac567".
+* Right after, a problem section: "คุณกำลังพบปัญหาเหล่านี้อยู่ใช่ไหม".
+* Service starts "from 1,000 THB/month" (per the site text); trust comes from CPA auditors, years in business and press mentions.
+STEAL
+* "คุณกำลังเจอปัญหาเหล่านี้อยู่ใช่ไหม" as an opening block — list real creator pains (โดนกดราคา, แบรนด์จ่ายช้า, ไม่รู้จะออกใบกำกับยังไง).
+* Show the LINE ID in plain text on the button, so people can add it by hand too.
+DON'T COPY
+* Dark office photo hero and yellow buttons.
+Fit 2/5  ●●○○○  Typical Thai corporate look. The copy order and the LINE CTA are the lesson.
+
+
+21. The Money Coach
+https://www.moneycoach.co.th/
+  
+
+Screenshot: https://www.moneycoach.co.th/ · 23 Sep 2026
+WHAT IT DOES WELL
+* Thailand's best-known money educator for individuals. The headline is four short Thai lines stacked like a list: "จัดการเงินให้เป็นระบบ ปลดหนี้ / มีเงินออม ลงทุนอย่างถูกวิธี / …"
+* Calm palette: off-white, black text, one gold-beige accent — very close to the one-accent idea.
+* Contact is split by purpose (LINE business account, separate emails, a named contact for speaking/sponsorship) with a full Bangkok address.
+STEAL
+* Stacked short Thai lines as a headline — Prompt 800 will look great this way.
+* One-accent discipline on a Thai money site — proof the tone works for this audience.
+* Contact split by purpose (อยากจองเซสชัน / แบรนด์อยากคุย / สื่อ).
+DON'T COPY
+* The founder portrait as the hero — not our route.
+* This is also what your visitors may compare you with. It teaches personal finance; planc* is about the creator's business. Say that difference clearly.
+Fit 3/5  ●●●○○  Off-white, black, one accent, good Thai type. Photo-led.
+
+
+________________
+
+
+Top 5, ranked
+Ranked by how much each one would change our three pages — not by how pretty it is.
+1. Jonathan Stark — Proposal Pricing Session
+The best template for the ฿999 page. It sells one session with a fixed price, a deliverable and a deadline, a "what to bring" list and a clear boundary — and it would still work with the testimonial removed. That last part is exactly our situation.
+2. Shape Up (Basecamp)
+The best proof for the visual world. Rough black marker drawings next to serious text read as thinking, not as decoration. If the business pages draw to explain (income swings, the session steps), they'll feel like the homepage and still feel professional.
+3. Kan Do Creators Community — consulting
+The best model for trust through policies: a written refund rule, a "not suitable for" list, and a refusal to promise results. Also the clearest ladder from a small first session to bigger packages.
+4. Basecamp — About
+The best founder voice. A first-person letter that admits things works even if the founder stays unnamed, and it fits our "short sentences, no hype" rule.
+5. iSTRONG — Counseling service
+The best Thai reference for money and booking: ~฿990 for 30 minutes stated plainly, with LINE and online booking side by side. That's the Thai buyer's habit, and our Contact page should respect it.
+________________
+
+
+Suggested page structures
+Section order drawn from the patterns above. It is a starting menu: cut, merge or reorder as you see fit.
+About (เกี่ยวกับเรา)
+1. One-line headline — What planc* is and who it's for, in one sentence. (Money Coach's stacked short lines work well in Prompt.)
+2. A letter from the founder — First person, signed "ผู้ก่อตั้ง planc*" or with a name — your call. Years as a creator, years running brand deals, what he saw from the brand side. (Basecamp About, Creator Wizard.)
+3. Why planc* exists — The problem in plain words: creators are good at content and left alone with the business. A hand-drawn timeline or one explanatory sketch fits here. (Moonshot Story, Shape Up.)
+4. What we believe — 5–7 numbered short lines. (37signals.)
+5. What we are not — Not a management agency, no cut from your deals, no promised follower counts. (Creator Wizard's 0% Cut, KDCC.)
+6. The company behind it — Registered name, registration number, address, how to reach a human. (iSTRONG footer.)
+7. One CTA — "จองเซสชันแรก" → Pricing or Booking.
+Pricing / Services (บริการและราคา)
+1. Headline that counts — e.g. "หนึ่งเซสชัน หนึ่งราคา" + a no-hidden-fees line. One hand-drawn red circle around the key phrase. (HEY, Basecamp Pricing, Gumroad.)
+2. The ฿999 card — Four blocks: ใครควรจอง / ได้อะไร / ต้องรู้ก่อน / ผลที่ได้ — length, format, and what you leave with (e.g. the 1-page compass) and by when. (Creator Dynamics, Stark.)
+3. What to bring — Rate card, recent brand quotes, a contract, the number you're thinking of. (Stark.)
+4. Good fit / not a fit — Who should book and who shouldn't. (KDCC, Stark.)
+5. How it works — 3 steps — Book → pay → meet, drawn as three wobbly boxes. (Shape Up style.)
+6. What comes next — The ladder as a list, or one line that more packages are coming. If the free first session stays, explain free vs paid in one sentence. (Stark /ps, Wizard Zines.)
+7. Policies — Reschedule, refund, overtime, privacy of your numbers — written on this page. (KDCC, iSTRONG, HEY.)
+8. Short FAQ + CTA — 3–5 questions, then the booking button.
+Contact / Booking (ติดต่อและจอง)
+1. Two doors — LINE OA ("ถามก่อน") and online calendar ("พร้อมจอง"), side by side, equal weight. (iSTRONG, Inflow.)
+2. What happens after you book — Numbered: confirmation, payment, a short pre-session form, the call, the follow-up. Say who replies and how fast.
+3. The booking embed — Monochrome, one session length, a description of who it's for inside the card. (Cal.com.)
+4. A short form for everything else — Name, contact, "อยากให้เรารู้อะไรก่อนคุยกัน". Split by purpose: creators / brands / media. (Marketoonist, Money Coach.)
+5. Payment & paperwork — Accepted methods, receipts/tax invoice, what the price includes.
+6. Company details — Registered name, registration number, address, hours, email.
+7. One cat drawing — Beside the form, a small joke about the exact fear the visitor has. (Marketoonist, Wizard Zines.)
+FAQ (optional)
+1. When it's worth a page — If the policy and "what to bring" answers get long, move them here and keep Pricing short.
+2. Likely questions — ต่างจากเอเจนซี/ผู้จัดการยังไง · ต้องมีฟอลเท่าไหร่ถึงจองได้ · ข้อมูลของเราจะถูกเปิดเผยไหม · เลื่อน/ยกเลิกได้ไหม · ออกใบเสร็จ/ใบกำกับภาษีได้ไหม · ถ้าคุยแล้วไม่ช่วยจะทำยังไง
+________________
+
+
+Trust before ฿999 — without testimonials
+A first-time visitor is really asking three things: is this a real business, will I get something concrete, and what happens if it goes wrong? Every signal below answers one of those, and none of them needs a customer quote.
+1. A real, checkable company. Registered company name, registration number and address in the footer and on Contact. Thai buyers check this; Chob Accounting (chobaccountingonline.co.th) even shows its DBD e-commerce registration on the page.
+2. The exact price and what it includes. ฿999, the length, format, what you leave with, and whether VAT or fees are extra. ooca's service page states that fees exclude card fees and VAT (ooca.co/service) — that kind of honesty reads as professional.
+3. A deliverable with a deadline. "Written action notes within 24-48 hours" (Stark). A visitor trusts a promise they can check.
+4. Written policies. Reschedule, refund, overtime. KDCC's refund rule is the model.
+5. Boundaries and "not for you if…". Saying no to some people makes the yes believable. (KDCC, Stark.)
+6. Refusing to promise results. "We won't promise follower counts or deal amounts." (KDCC does the same for subscribers.)
+7. No conflict of interest. "planc* doesn't take a cut from your deals" — creators pay for advice, not a share. (Creator Wizard's 0% Cut Policy.)
+8. Specific, checkable experience. Years as a creator, years running brand deals, the kind of brands dealt with. Only numbers that can be backed up. How much to reveal while the founder stays anonymous is your decision — the letter voice (Basecamp) can carry a lot even without a name.
+9. Privacy of their numbers. A plain promise that rates, contracts and brand names discussed in a session are never shared. (HEY's "what we never do" pattern.)
+10. A human on the other end. A LINE OA that a real person answers, with stated reply hours.
+11. Showing the thinking for free. A short explainer on pricing or contracts, drawn in the cat's world (Sketchplanations, Shape Up). It proves expertise without anyone vouching for it.
+12. Honest scarcity only. "X sessions per month" only if it's the founder's real limit. (Stark, KDCC.)
+Gaps and notes
+* No Thai or Southeast Asian service site with a convincing hand-drawn style turned up — searches returned template-style sites. Worth knowing: that space looks open.
+* ooca (ooca.co/service) and Chob Accounting are cited in the trust section, but their pages froze in Chrome when I tried to screenshot them, so they aren't separate entries.
+* Moonshot Planning's page description (the text search engines show) still lists older prices than the page itself ($125/$500/$750 vs $200/$500/$700 on the page). The screenshot shows the current page.
+* Checked but dropped: Searchlight Social, Brand Bosses, Intro.co (page didn't render), Ink Factory (its site isn't actually hand-drawn), Tally, Content Shifu, Double Your Freelancing — weaker fits than the 21 above.
+Sources
+Jonathan Stark — Proposal Pricing Session: https://jonathanstark.com/proposal-pricing-session
+Jonathan Stark — Products + Services: https://jonathanstark.com/ps
+Kan Do Creators Community — YouTube consulting with Andrew Kan: https://kdcc.social/pages/consulting
+Creator Dynamics — Creator Consulting (Matt Koval): https://www.creatordynamics.net/creators
+Moonshot Planning — Pricing (financial planner for creators): https://www.moonshotplanning.com/pricing
+Creator Wizard — About (Justin Moore, sponsorship coach): https://www.creatorwizard.com/about
+Shape Up (Basecamp's book on product work): https://basecamp.com/shapeup/1.1-chapter-02
+Basecamp — About ("Where we came from"): https://basecamp.com/about
+Basecamp — Pricing: https://basecamp.com/pricing
+37signals — company homepage: https://37signals.com/
+Wizard Zines (Julia Evans): https://wizardzines.com/
+Sketchplanations: https://sketchplanations.com/
+Excalidraw+ — Pricing: https://plus.excalidraw.com/pricing
+Marketoonist (Tom Fishburne) — Contact: https://marketoonist.com/contact
+Gumroad — Pricing: https://gumroad.com/pricing
+HEY — Pricing: https://www.hey.com/pricing/
+Cal.com — booking widget: https://cal.com/
+iSTRONG — Counseling service: https://www.istrong.co/service/counseling
+FlowAccount — Pricing: https://flowaccount.com/pricing
+Inflow Account — accounting & tax office: https://inflowaccount.co.th/
+The Money Coach: https://www.moneycoach.co.th/
+Moonshot Planning — Story: https://www.moonshotplanning.com/story
+Sketchplanations — Licence: https://sketchplanations.com/licence
+ooca — Service: https://ooca.co/service/
+Chob Accounting — taxes for influencers: https://chobaccountingonline.co.th/what-taxes-do-influencers-have-to-pay/
+Creator Wizard / Brand Deal Wizard: https://www.creatorwizard.com/about
