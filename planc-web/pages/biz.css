@@ -1,3 +1,4 @@
+/* หัวเรื่อง Prompt 600 — กลางระหว่าง Moonshot (400) กับหน้าเกม (800): Mat เลือก ข. 24 ก.ย. 2026 */
 /* ============ หน้าธุรกิจ — ระบบเดียวกันทั้ง Pricing / About / Contact ============
    โครงจาก moonshotplanning.com (Mat เลือก 24 ก.ย. 2026): หัวเรื่องบางตัวใหญ่กลางหน้า ·
    nav แคปซูลลอย · การ์ดเทาอ่อน + ใบเด่นสีดำ · เช็กลิสต์ · FAQ สองคอลัมน์ · แถบวิ่งท้ายหน้า
@@ -34,13 +35,13 @@ header.hero{text-align:center;padding:92px 0 56px}
   padding:.28rem .8rem .28rem .5rem;border:1.5px solid var(--ink);border-radius:var(--wob)}
 .eyebrow .ast{display:inline-grid;place-items:center;width:1.4rem;height:1.4rem;background:var(--ink);
   color:var(--paper);border-radius:50%;font-weight:800;font-size:1.25rem;line-height:1;padding-top:.28rem}
-h1{font-weight:400;font-size:clamp(38px,6.2vw,66px);line-height:1.22;margin-top:22px;letter-spacing:-.005em}
+h1{font-weight:600;font-size:clamp(38px,6.2vw,66px);line-height:1.22;margin-top:22px;letter-spacing:-.005em}
 .sub{margin:16px auto 0;max-width:32rem;font-size:17px}
 
 /* ---- ส่วน ---- */
 section{padding-top:120px}
 .stitle{text-align:center;margin-bottom:44px}
-.stitle h2{font-weight:400;font-size:clamp(32px,4.6vw,52px);line-height:1.22;margin-top:18px}
+.stitle h2{font-weight:600;font-size:clamp(32px,4.6vw,52px);line-height:1.22;margin-top:18px}
 .stitle p{max-width:32rem;margin:12px auto 0}
 
 /* ---- การ์ด ---- */
@@ -73,7 +74,7 @@ ul.ck svg{width:20px;height:20px;margin-top:2px}
 
 /* ---- ปิดท้าย ---- */
 .closing{text-align:center;padding-top:130px}
-.closing h2{font-weight:400;font-size:clamp(32px,4.6vw,52px);line-height:1.22}
+.closing h2{font-weight:600;font-size:clamp(32px,4.6vw,52px);line-height:1.22}
 .closing p{margin:14px auto 26px;max-width:28rem}
 .closing .honest{font-weight:600;font-size:.92rem;margin:14px auto 0}
 
