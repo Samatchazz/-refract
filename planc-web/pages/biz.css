@@ -66,10 +66,10 @@ ul.ck svg{width:20px;height:20px;margin-top:2px}
 .card.dark .pbtn{border-color:var(--paper)}
 .pbtn.solid{background:var(--ink);color:var(--paper)}
 .card.dark .pbtn.solid{background:var(--paper);color:var(--ink)}
-.pbtn:hover,.cta:hover{transform:translateY(-2px)}
-.cta{display:inline-block;background:var(--ink);color:var(--paper);text-decoration:none;font-family:'Prompt';
+.pbtn:hover,.bcta:hover{transform:translateY(-2px)}
+.bcta{display:inline-block;background:var(--ink);color:var(--paper);text-decoration:none;font-family:'Prompt';
   font-weight:500;font-size:1.05rem;padding:.9rem 2.2rem;border-radius:var(--wob2);transition:transform .2s ease}
-.todo{display:inline-block;margin-top:14px;font-size:13px;color:var(--red);border:1.5px dashed var(--red);padding:4px 14px}
+.btodo{display:inline-block;margin-top:14px;font-size:13px;color:var(--red);border:1.5px dashed var(--red);padding:4px 14px}
 
 /* ---- ปิดท้าย ---- */
 .closing{text-align:center;padding-top:130px}
