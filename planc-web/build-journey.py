@@ -67,19 +67,24 @@ def build():
     #    ใช้ nav ของเกมเป็นแถบเดียวทั้งเว็บ · ต้องมาก่อนขั้น cat.png เพื่อให้
     #    รูปแมวใน footer ของแต่ละหน้าถูกฝัง base64 ด้วย)
     PAGES = [('pages/pricing.html', '<!--PRICING-->', '#pgPricing'),
-             ('pages/about.html',   '<!--ABOUT-->',   '#pgAbout')]
+             ('pages/about.html',   '<!--ABOUT-->',   '#pgAbout'),
+             ('pages/contact.html', '<!--CONTACT-->', '#pgContact')]
+    shared = (ROOT / 'pages/biz.css').read_text(encoding='utf-8')   # ระบบหน้าธุรกิจที่ทุกหน้าใช้ร่วม
     for path, marker, prefix in PAGES:
         pr = (ROOT / path).read_text(encoding='utf-8')
-        css = scope_css(pr[pr.index('<style>') + 7:pr.index('</style>')], prefix)
+        own = pr[pr.index('<style>') + 7:pr.index('</style>')]
+        css = scope_css((shared if 'href="biz.css"' in pr else '') + '\n' + own, prefix)
         body = pr[pr.index('<header class="hero">'):pr.index('</footer>') + len('</footer>')]
         body = (body
                 .replace('href="../proto-journey/planc-journey-proto.html"', 'href="#journey"')
                 .replace('href="pricing.html"', 'href="#pricing"')
-                .replace('href="about.html"', 'href="#about"'))
+                .replace('href="about.html"', 'href="#about"')
+                .replace('href="contact.html"', 'href="#contact"'))
         assert marker in html, marker
         html = html.replace(marker, '<style>\n' + css + '\n</style>\n' + body)
     html = (html.replace('href="../pages/pricing.html"', 'href="#pricing"')
-                .replace('href="../pages/about.html"', 'href="#about"'))
+                .replace('href="../pages/about.html"', 'href="#about"')
+                .replace('href="../pages/contact.html"', 'href="#contact"'))
 
     # 3. cat.png (ทั้งของเกมและของ footer หน้า pricing)
     b64 = base64.b64encode((ROOT / 'assets/cat.png').read_bytes()).decode()

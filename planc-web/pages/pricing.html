@@ -7,335 +7,184 @@
 <meta name="description" content="ครั้งแรกฟรี · เซสชันเดี่ยว ฿999 · สมาชิกรายเดือน ฿2,000 — ไม่มีนับถอยหลัง ไม่มีเร่งให้รีบ">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@600;800;900&family=Sarabun:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;800&family=Sarabun:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="biz.css">
 <style>
-/* ============ ใบสเปคบริการ (B1) — เอกสารหนึ่งแผ่น ไม่ใช่การ์ด SaaS ============
-   กติกา: จุดแดงกลุ่มเดียวต่อจอ (ค่าเริ่มต้น = ตัวเลขราคา) · ไม่มีเทาในตัวหนังสือ
-   · มุมเหลี่ยมทั้งหน้า · เลขทุกตัว Prompt                                     */
-:root{
-  --paper:#fcfcfa; --ink:#111; --red:#e5484d;
-  --hair:1px solid rgba(17,17,17,.18);
-}
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{background:var(--paper);color:var(--ink);font-family:'Sarabun',system-ui,sans-serif;
-  font-size:17px;line-height:1.8;-webkit-font-smoothing:antialiased}
-h1,h2,h3{font-family:'Prompt','Sarabun',sans-serif}
-.wrap{max-width:1080px;margin:0 auto;padding:0 28px}
-a{color:inherit}
-
-/* ---- nav ---- */
-nav{position:sticky;top:0;background:var(--paper);border-bottom:1.5px solid var(--ink);z-index:10}
-.navin{display:flex;align-items:center;gap:14px;height:60px}
-.brand{line-height:1;cursor:pointer;background:none;border:0;padding:.3rem .4rem;
-  color:inherit;width:110px;height:44px;flex:0 0 auto}
-.brand svg{overflow:visible}
-.navlinks{margin-left:auto;display:flex;align-items:center;gap:clamp(12px,2.4vw,22px)}
-.navlinks a{font-size:.82rem;letter-spacing:.08em;text-decoration:none;opacity:.62;
-  white-space:nowrap;padding:.2rem .05rem;border-bottom:1.5px solid transparent;
-  transition:opacity .25s ease,border-color .25s ease}
-.navlinks a:hover{opacity:1;border-bottom-color:currentColor}
-.navlinks a.active{opacity:1;border-bottom-color:currentColor}
-
-/* ---- หัวเอกสาร + hero ---- */
-header.hero{padding:40px 0 20px}
-.docline{display:flex;justify-content:space-between;gap:12px;
-  font-family:'Prompt';font-weight:600;font-size:11.5px;letter-spacing:.18em;
-  border-bottom:1.5px solid var(--ink);padding-bottom:10px}
-h1{font-size:clamp(40px,6vw,64px);font-weight:900;line-height:1.2;margin:52px 0 10px}
-.sub{font-size:19px;max-width:560px}
-
-/* ---- สเปคบริการ (เรียงลงมา ไม่เรียงข้าง) ---- */
-section.spec{padding:44px 0 0;
-  --pricecol:var(--red); --btnbg:var(--ink)}   /* สลับด้วยแผงเลือกร่าง */
-.sblock{border:1.5px solid var(--ink);margin-bottom:34px}
-.shead{display:flex;align-items:baseline;justify-content:space-between;gap:16px;
-  padding:22px 26px 16px;border-bottom:1.5px solid var(--ink);flex-wrap:wrap}
-.sname{font-family:'Prompt';font-weight:800;font-size:clamp(20px,2.6vw,26px)}
-.sname small{display:block;font-family:'Prompt';font-weight:600;font-size:11px;
-  letter-spacing:.2em;margin-bottom:2px}
-.sprice{font-family:'Prompt';font-weight:900;font-size:clamp(44px,6vw,72px);
-  line-height:1.1;color:var(--pricecol);white-space:nowrap}
-.sprice small{font-size:16px;font-weight:600;color:var(--ink)}
-.srow{display:grid;grid-template-columns:120px 1fr;gap:16px;
-  padding:13px 26px;border-bottom:var(--hair)}
-.srow:last-child{border-bottom:0}
-.srow .lb{font-family:'Prompt';font-weight:600;font-size:13.5px;padding-top:3px}
-.srow .vl{font-size:15.5px}
-.srow .vl b{font-weight:600}
-.sfoot{padding:12px 26px 14px;border-top:var(--hair);font-size:13.5px;
-  font-family:'Sarabun'}
-.sfoot .joke{font-weight:400}
-
-/* ---- แถบความเชื่อใจ ---- */
-.band{margin:76px 0 0;border-top:1.5px solid var(--ink);border-bottom:1.5px solid var(--ink);
-  padding:52px 0;text-align:center}
-.band p{font-family:'Prompt';font-weight:800;font-size:clamp(22px,3.4vw,32px);line-height:1.55}
-.band .red{color:var(--red)}
-.band small{display:block;font-family:'Sarabun';font-weight:400;font-size:15px;margin-top:10px}
-.udl{position:relative;display:inline-block}
-.udl svg{position:absolute;left:2%;bottom:-8px;width:96%;height:12px;overflow:visible}
-.udl path{stroke:var(--red);stroke-width:3.2;fill:none;stroke-linecap:round;
-  stroke-dasharray:1;stroke-dashoffset:1}
-.band.on .udl path{transition:stroke-dashoffset .9s ease .45s;stroke-dashoffset:0}
-
-/* ---- เส้นที่เราไม่ข้าม: ลิสต์แบบเอกสาร ---- */
-section.lines{padding:80px 0 0}
-.slabel{font-family:'Prompt';font-weight:600;font-size:12.5px;letter-spacing:.22em;
-  border-top:1.5px solid var(--ink);padding-top:14px}
-.lines h2{font-size:clamp(24px,3.2vw,34px);font-weight:800;margin:14px 0 22px}
-.rule{display:grid;grid-template-columns:56px 1fr;gap:16px;
-  border-top:var(--hair);padding:16px 0}
-.rule .no{font-family:'Prompt';font-weight:800;font-size:15px;padding-top:4px}
-.rule p{font-size:16.5px;font-weight:600}
-.linesnote{margin-top:22px;font-size:15px;max-width:38rem}
-
-/* ---- FAQ ---- */
-section.faq{padding:80px 0 0}
-.faq h2{font-size:clamp(24px,3.2vw,34px);font-weight:800;margin:14px 0 8px}
-.qa{border-top:var(--hair);padding:22px 0}
-.qa h3{font-size:18px;font-weight:600;margin-bottom:6px}
-.qa p{max-width:38rem;font-size:16px}
-
-/* ---- CTA ---- */
-section.pcta{text-align:center;padding:96px 0 90px}
-.pcta h2{font-size:clamp(26px,3.8vw,38px);font-weight:800;margin-bottom:26px;line-height:1.5}
-.btn{display:inline-block;background:var(--btnbg,var(--ink));color:var(--paper);text-decoration:none;
-  font-family:'Prompt';font-weight:600;font-size:18px;padding:16px 40px;
-  transition:transform .25s ease}
-.btn:hover{transform:translateY(-2px)}
-.pcta .fine{font-size:14px;margin-top:18px}
-.pcta .honest{font-size:14.5px;font-weight:600;margin-top:6px}
-.todo{display:inline-block;margin-top:24px;font-size:13px;color:var(--red);
-  border:1.5px dashed var(--red);padding:4px 14px}
-
-/* ---- footer: เส้นพื้นของด่าน + แมวยืน ---- */
-footer{padding:0 0 40px}
-.fground{position:relative;height:80px}
-.fground .gl{position:absolute;left:0;right:0;bottom:0;width:100%;height:30px;display:block}
-.fground .fcat{position:absolute;left:9%;bottom:10px;height:54px;width:auto}
-.footin{display:flex;align-items:center;gap:14px;font-size:14px;padding-top:24px}
-.footin .links{margin-left:auto;display:flex;gap:22px}
-.footin a{font-size:.82rem;letter-spacing:.08em;text-decoration:none;opacity:.62;white-space:nowrap}
-.footin a:hover{opacity:1}
-
+/* ---- Pricing: การ์ดราคาสามใบ ใบกลางดำ ---- */
+.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;align-items:start}
+.plan{display:flex;flex-direction:column;position:relative;padding:30px 26px 26px}
+.plan.dark{margin-top:-18px;padding-top:40px;box-shadow:0 18px 40px rgba(17,17,17,.18)}
+.tag{position:absolute;top:14px;left:24px;font-family:'Prompt';font-size:.74rem;font-weight:500;
+  background:var(--paper);color:var(--ink);padding:.1rem .6rem;border-radius:var(--wob)}
+.pname{font-family:'Prompt';font-weight:500;font-size:1.02rem}
+.price{font-family:'Prompt';font-weight:400;font-size:clamp(40px,4.4vw,54px);line-height:1.1;margin:8px 0 4px;color:var(--red)}
+.price small{font-size:1rem;font-weight:400;color:var(--ink)}
+.plan.dark .price small{color:var(--paper)}
+.fit{font-size:.95rem;margin-bottom:18px;min-height:3.2em}
+.plan ul.ck{margin-bottom:24px;flex:1}
+.joke{font-size:.84rem;margin-top:12px;text-align:center}
+/* ---- เรา vs ตัวกลาง ---- */
+.vcard h3{font-size:1.3rem;margin-bottom:18px}
+.vcard h4{font-weight:500;font-size:.95rem;margin:18px 0 8px}
+.vcard h4:first-of-type{margin-top:0}
 @media (max-width:900px){
-  .navlinks{gap:16px;font-size:14px}
-  .navlinks a:not(.active){display:none}
-  .srow{grid-template-columns:92px 1fr;padding:12px 18px}
-  .shead{padding:18px 18px 14px}
-  .sfoot{padding:10px 18px 12px}
-  .docline{letter-spacing:.1em}
+  .plans{grid-template-columns:1fr;gap:22px;max-width:460px;margin:0 auto}
+  .plan.dark{margin-top:0}
+  .fit{min-height:0}
 }
-
-/* ---- motion ---- */
-.rv{opacity:0;transform:translateY(22px);
-  transition:opacity .7s ease,transform .7s cubic-bezier(.22,.9,.3,1);
-  transition-delay:var(--d,0s)}
-.rv.left{transform:translateX(-26px)}
-.rv.on{opacity:1;transform:none}
-@media (prefers-reduced-motion:reduce){
-  .rv{opacity:1;transform:none;transition:none}
-  .udl path{stroke-dashoffset:0}
-}
-
-/* ---- โหมดเส้นยึกยือ (ต่อเนื่องกับเกม — สลับด้วยแผงเลือกร่าง) ----
-   กรอบเบี้ยวด้วย radius สองแกนไม่เท่ากัน · เส้นตรงทุกเส้นแทนด้วยลายหยึกหยัก
-   ที่วาดเป็น SVG ฝังในตัวแปร --wavyS (เส้นหลัก) / --wavyH (เส้นบาง) */
-:root{
-  --wob:255px 15px 225px 15px/15px 225px 15px 255px;
-  --wavyS:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='7' viewBox='0 0 120 7'><path d='M0 3.5 Q15 1.4 30 3.5 T60 3.3 T90 3.7 T120 3.5' fill='none' stroke='%23111' stroke-width='2' stroke-linecap='round'/></svg>");
-  --wavyH:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='7' viewBox='0 0 120 7'><path d='M0 3.5 Q15 1.6 30 3.5 T60 3.3 T90 3.7 T120 3.5' fill='none' stroke='%23111' stroke-width='1.3' stroke-linecap='round' opacity='.32'/></svg>");
-}
-body.hd .docline{border-bottom:0;background:var(--wavyS) left bottom repeat-x;
-  background-size:120px 7px;padding-bottom:16px}
-body.hd .sblock{border-radius:var(--wob);border-width:2.5px;overflow:hidden}
-body.hd .sblock:nth-of-type(odd){transform:rotate(-.35deg)}
-body.hd .sblock:nth-of-type(even){transform:rotate(.3deg)}
-body.hd .shead{border-bottom:0;background:var(--wavyS) left bottom repeat-x;
-  background-size:120px 7px;padding-bottom:20px}
-body.hd .sprice{transform:rotate(-1.4deg)}
-body.hd .srow{border-bottom:0;background:var(--wavyH) left bottom repeat-x;
-  background-size:120px 7px}
-body.hd .srow:last-child,body.hd .srow:last-of-type{background:none}
-body.hd .sfoot{border-top:0;background:var(--wavyH) left top repeat-x;
-  background-size:120px 7px;padding-top:15px}
-body.hd .band{border-top:0;border-bottom:0;
-  background:var(--wavyS) left top repeat-x,var(--wavyS) left bottom repeat-x;
-  background-size:120px 7px}
-body.hd .slabel{border-top:0;background:var(--wavyS) left top repeat-x;
-  background-size:120px 7px;padding-top:18px}
-body.hd .rule,body.hd .qa{border-top:0;background:var(--wavyH) left top repeat-x;
-  background-size:120px 7px}
-body.hd .btn{border-radius:var(--wob)}
-body.hd h1{transform:rotate(-.4deg)}
-body.hd nav{border-bottom:0;background:var(--paper) var(--wavyS) left bottom repeat-x;
-  background-size:120px 7px}
 </style>
 </head>
-<body class="hd">
-<nav><div class="wrap navin">
-  <button class="brand" id="logoBtn" aria-label="PlanC — หน้าหลัก"></button>
-  <div class="navlinks">
-    <a href="../proto-journey/planc-journey-proto.html">หน้าหลัก</a>
-    <a href="#" class="active">ราคา</a>
-    <a href="about.html">เกี่ยวกับเรา</a>
-    <a href="#">ติดต่อ</a>
-  </div>
+<body>
+<nav class="bnav"><div class="pill-nav">
+  <button class="brand" id="logoBtn" aria-label="planc* — หน้าหลัก"></button>
+  <a href="../proto-journey/planc-journey-proto.html">หน้าหลัก</a>
+  <a href="#" class="active">ราคา</a>
+  <a href="about.html">เกี่ยวกับเรา</a>
+  <a href="contact.html">ติดต่อ</a>
+  <a href="contact.html" class="go">จองคุยครั้งแรก</a>
 </div></nav>
 
 <header class="hero"><div class="wrap">
-  <div class="docline rv"><span>PLANC — SERVICE SPECIFICATION</span><span>UPDATED 2026.08</span></div>
-  <h1 class="rv" style="--d:.08s">ราคา ตรง ๆ</h1>
-  <p class="sub rv" style="--d:.16s">สามบริการ สามตัวเลข ไม่มีนับถอยหลัง ไม่มีเร่งให้รีบ</p>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="tick" viewBox="0 0 24 24"><path d="M3.5 12.8 Q6.6 15.4 9.4 19 Q13.8 10.4 20.8 4.6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="cross" viewBox="0 0 24 24"><path d="M5 5.4 Q12 12.4 19 18.8 M18.6 5 Q12.4 11.6 5.4 19" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></symbol>
+  </svg>
+  <span class="eyebrow rv"><span class="ast">*</span>ราคาที่บอกตรง ๆ</span>
+  <h1 class="rv" style="--d:.06s">เริ่มจาก<br>ตรงที่คุณยืนอยู่</h1>
+  <p class="sub rv" style="--d:.12s">สามบริการ สามตัวเลข ไม่มีนับถอยหลัง ไม่มีเร่งให้รีบ</p>
 </div></header>
 
-<section class="spec"><div class="wrap">
-
-  <div class="sblock rv">
-    <div class="shead">
-      <div class="sname"><small>NO. 01 — FIRST SESSION</small>คุยครั้งแรก</div>
-      <div class="sprice">ฟรี</div>
-    </div>
-    <div class="srow"><div class="lb">รูปแบบ</div>
-      <div class="vl">คุยกัน 30–45 นาที · <b>ครั้งเดียวต่อคน</b></div></div>
-    <div class="srow"><div class="lb">สิ่งที่ได้</div>
-      <div class="vl">&ldquo;เข็มทิศ 1 หน้า&rdquo; — ให้หมด ไม่เก็บไว้ขายทีหลัง</div></div>
-    <div class="srow"><div class="lb">เงื่อนไข</div>
-      <div class="vl">ส่งการบ้านก่อนคุย (5 นาที) — เราไม่คุยจากศูนย์</div></div>
-    <div class="srow"><div class="lb">เหมาะกับ</div>
-      <div class="vl">ยอดตก ไม่รู้ทำอะไรต่อ ไม่รู้ตัวเองเป็นใคร — เริ่มที่นี่</div></div>
-    <div class="sfoot joke">ค่าใช้จ่ายเดียวของเซสชันนี้ คือการบ้านที่ต้องส่งก่อนคุย</div>
+<div class="wrap"><div class="plans">
+  <div class="card plan rv">
+    <div class="pname">คุยครั้งแรก</div>
+    <div class="price">ฟรี</div>
+    <p class="fit">สำหรับคนที่ยอดตก ไม่รู้ทำอะไรต่อ ไม่รู้ตัวเองเป็นใคร</p>
+    <ul class="ck">
+      <li><svg><use href="#tick"/></svg>คุยกัน 30–45 นาที ครั้งเดียวต่อคน</li>
+      <li><svg><use href="#tick"/></svg>ได้ &ldquo;เข็มทิศ 1 หน้า&rdquo; กลับไป ให้หมด ไม่เก็บไว้ขายทีหลัง</li>
+      <li><svg><use href="#tick"/></svg>ส่งการบ้านก่อนคุย 5 นาที เราไม่คุยจากศูนย์</li>
+    </ul>
+    <a class="pbtn" href="contact.html">จองคุยครั้งแรก</a>
+    <p class="joke">ค่าใช้จ่ายเดียว คือการบ้านที่ต้องส่งก่อนคุย</p>
   </div>
 
-  <div class="sblock rv">
-    <div class="shead">
-      <div class="sname"><small>NO. 02 — SINGLE SESSION</small>เซสชันเดี่ยว</div>
-      <div class="sprice">฿<span data-count="999">999</span><small> / 30 นาที</small></div>
-    </div>
-    <div class="srow"><div class="lb">รูปแบบ</div>
-      <div class="vl">30 นาที · ซื้อเมื่อไหร่ก็ได้ ไม่ต้องเป็นสมาชิก</div></div>
-    <div class="srow"><div class="lb">ใช้ตอบ</div>
-      <div class="vl">งานนี้ควรคิดเรทเท่าไหร่ · สัญญานี้เสียเปรียบไหม · ดีลนี้ควรรับไหม</div></div>
-    <div class="srow"><div class="lb">หลักคิด</div>
-      <div class="vl">เราคิดราคาจากต้นทุนของคุณ ไม่ใช่จากงบของเขา</div></div>
-    <div class="sfoot joke">999 บาท ต่อ 30 นาที = วินาทีละ 0.555 บาท — ถามให้คุ้มทุกวินาที</div>
+  <div class="card dark plan rv" style="--d:.08s">
+    <span class="tag">คนส่วนใหญ่เริ่มตรงนี้</span>
+    <div class="pname">เซสชันเดี่ยว</div>
+    <div class="price">฿<span data-count="999">999</span><small> / 30 นาที</small></div>
+    <p class="fit">สำหรับคำถามที่ต้องตอบวันนี้ ซื้อเมื่อไหร่ก็ได้ ไม่ต้องเป็นสมาชิก</p>
+    <ul class="ck">
+      <li><svg><use href="#tick"/></svg>งานนี้ควรคิดเรทเท่าไหร่</li>
+      <li><svg><use href="#tick"/></svg>สัญญานี้เสียเปรียบไหม</li>
+      <li><svg><use href="#tick"/></svg>ดีลนี้ควรรับไหม</li>
+      <li><svg><use href="#tick"/></svg>คิดราคาจากต้นทุนของคุณ ไม่ใช่จากงบของเขา</li>
+    </ul>
+    <a class="pbtn" href="contact.html">จองเซสชัน</a>
+    <p class="joke">999 บาท ต่อ 30 นาที = วินาทีละ 0.555 บาท ถามให้คุ้มทุกวินาที</p>
   </div>
 
-  <div class="sblock rv">
-    <div class="shead">
-      <div class="sname"><small>NO. 03 — MEMBERSHIP</small>สมาชิกรายเดือน</div>
-      <div class="sprice">฿<span data-count="2000">2,000</span><small> / เดือน</small></div>
-    </div>
-    <div class="srow"><div class="lb">สิ่งที่ได้</div>
-      <div class="vl">ข่าววงในฝั่งแบรนด์ ทุกสัปดาห์ · เซสชัน 45 นาที × 2 ครั้ง/เดือน ·
-      ประเมินตามเกณฑ์ รายไตรมาส · เช็กลิสต์สัญญา + คลังเอกสาร</div></div>
-    <div class="srow"><div class="lb">สิทธิ์เพิ่ม</div>
-      <div class="vl">เข้าลิสต์เฟส 3 (กำลังสร้าง) — บางครั้งแบรนด์ให้เราช่วยคัดคน
-      ไม่มีราคาแยก เราไม่รับเงินจากทั้งสองฝั่ง และไม่รับประกันว่าจะได้งาน —
-      ประตูเข้าลิสต์คือคะแนนประเมิน</div></div>
-    <div class="srow"><div class="lb">เหมาะกับ</div>
-      <div class="vl">ปัญหาที่เกิดใหม่ทุกวัน — เงียบหลังส่งงาน · แก้ไม่จบ · พึ่งเจ้าเดียว</div></div>
+  <div class="card plan rv" style="--d:.16s">
+    <div class="pname">สมาชิกรายเดือน</div>
+    <div class="price">฿<span data-count="2000">2,000</span><small> / เดือน</small></div>
+    <p class="fit">สำหรับปัญหาที่เกิดใหม่ทุกวัน เงียบหลังส่งงาน แก้ไม่จบ พึ่งเจ้าเดียว</p>
+    <ul class="ck">
+      <li><svg><use href="#tick"/></svg>ทุกอย่างในเซสชันเดี่ยว</li>
+      <li><svg><use href="#tick"/></svg>เซสชัน 45 นาที × 2 ครั้ง/เดือน</li>
+      <li><svg><use href="#tick"/></svg>ข่าววงในฝั่งแบรนด์ ทุกสัปดาห์</li>
+      <li><svg><use href="#tick"/></svg>ประเมินตามเกณฑ์ รายไตรมาส</li>
+      <li><svg><use href="#tick"/></svg>เช็กลิสต์สัญญา + คลังเอกสาร</li>
+      <li><svg><use href="#tick"/></svg>เข้าลิสต์เฟส 3 (กำลังสร้าง) ประตูเข้าคือคะแนนประเมิน</li>
+    </ul>
+    <a class="pbtn" href="contact.html">สมัครสมาชิก</a>
   </div>
-
-</div></section>
-
-<div class="band rv"><div class="wrap">
-  <p>เอเจนซีได้เงินเมื่อคุณรับงาน<br><span class="red udl">เราได้เท่าเดิม แม้คุณปฏิเสธ
-    <svg viewBox="0 0 100 10" preserveAspectRatio="none" aria-hidden="true">
-      <path pathLength="1" d="M1 6 Q 14 3 27 5.5 T 52 5 Q 66 3.4 78 5.8 T 99 4.6"/>
-    </svg></span></p>
-  <small>Why you can trust the advice</small>
 </div></div>
 
-<section class="lines"><div class="wrap">
-  <div class="slabel rv">SIX LINES WE DON'T CROSS</div>
-  <h2 class="rv" style="--d:.06s">เส้นที่เราไม่ข้าม</h2>
-  <div class="rule rv left"><div class="no">01</div><p>ไม่รับเงินจากแบรนด์เพื่อกดราคาคุณ</p></div>
-  <div class="rule rv left" style="--d:.06s"><div class="no">02</div><p>คุณเห็นทุกอย่างที่เราพูดแทนคุณ</p></div>
-  <div class="rule rv left" style="--d:.12s"><div class="no">03</div><p>ไม่เอาชื่อ planc* ไปแปะสินค้าใคร</p></div>
-  <div class="rule rv left" style="--d:.18s"><div class="no">04</div><p>ไม่หักส่วนแบ่งจากคนที่เราแนะนำ</p></div>
-  <div class="rule rv left" style="--d:.24s"><div class="no">05</div><p>ไม่หักค่าคอมจากดีลของคุณ ทุกกรณี</p></div>
-  <div class="rule rv left" style="--d:.30s"><div class="no">06</div><p>ถ้าคำตอบที่ถูกคือ &ldquo;เลิกเถอะ&rdquo; — เราจะบอกคุณ</p></div>
-  <p class="linesnote rv">ธุรกิจแบบเรามีจุดที่ผลประโยชน์ขัดกันได้ง่ายมาก
-  เราเลยเขียนไว้ตั้งแต่วันที่ยังไม่มีอะไรจะเสีย</p>
+<section><div class="wrap">
+  <div class="stitle">
+    <span class="eyebrow rv"><span class="ast">*</span>ทำไมถึงเชื่อคำแนะนำเราได้</span>
+    <h2 class="rv" style="--d:.06s">เอเจนซีได้เงินเมื่อคุณรับงาน<br>เราได้เท่าเดิม แม้คุณปฏิเสธ</h2>
+  </div>
+  <div class="grid2">
+    <div class="card dark vcard tilt-l rv">
+      <h3>planc*</h3>
+      <h4>รายได้ของเรา</h4>
+      <ul class="ck">
+        <li><svg><use href="#tick"/></svg>คุณจ่ายค่าคำแนะนำ จบแค่นั้น</li>
+        <li><svg><use href="#tick"/></svg>ไม่หักค่าคอมจากดีลของคุณ ทุกกรณี</li>
+        <li><svg><use href="#tick"/></svg>ไม่รับเงินจากแบรนด์เพื่อกดราคาคุณ</li>
+      </ul>
+      <h4>คำแนะนำ</h4>
+      <ul class="ck">
+        <li><svg><use href="#tick"/></svg>คุณเห็นทุกอย่างที่เราพูดแทนคุณ</li>
+        <li><svg><use href="#tick"/></svg>ถ้าคำตอบที่ถูกคือ &ldquo;เลิกเถอะ&rdquo; เราจะบอกคุณ</li>
+      </ul>
+    </div>
+    <div class="card vcard tilt-r rv" style="--d:.08s">
+      <h3>ตัวกลางที่ได้ส่วนแบ่ง</h3>
+      <h4>รายได้ของเขา</h4>
+      <ul class="ck">
+        <li><svg><use href="#cross"/></svg>ได้เงินเมื่อดีลปิด ยิ่งรับมากยิ่งได้มาก</li>
+        <li><svg><use href="#cross"/></svg>หักเปอร์เซ็นต์จากค่าตัวคุณ</li>
+        <li><svg><use href="#cross"/></svg>อยู่ตรงกลางระหว่างคุณกับแบรนด์</li>
+      </ul>
+      <h4>คำแนะนำ</h4>
+      <ul class="ck">
+        <li><svg><use href="#cross"/></svg>&ldquo;รับไปก่อน&rdquo; มักเป็นคำตอบที่ดีกับเขาด้วย</li>
+        <li><svg><use href="#cross"/></svg>คำว่า &ldquo;อย่ารับ&rdquo; ทำให้เขาเสียรายได้</li>
+      </ul>
+    </div>
+  </div>
 </div></section>
 
-<section class="faq"><div class="wrap">
-  <div class="slabel rv">STRAIGHT ANSWERS</div>
-  <h2 class="rv" style="--d:.06s">ถามตรง ตอบตรง</h2>
-  <div class="qa rv">
-    <h3>&ldquo;เข้ามาแล้วได้งานไหม?&rdquo;</h3>
-    <p>เราไม่รับประกันว่าคุณจะได้งาน และเราไม่รับเงินจากทั้งสองฝั่งในการแนะนำใคร</p>
+<section><div class="wrap">
+  <div class="stitle">
+    <span class="eyebrow rv"><span class="ast">*</span>ถามตรง ตอบตรง</span>
+    <h2 class="rv" style="--d:.06s">คำถามเรื่องราคา</h2>
   </div>
-  <div class="qa rv" style="--d:.08s">
-    <h3>&ldquo;ถ้าคำตอบคือ ทำเป็นงานเสริมเถอะ ล่ะ?&rdquo;</h3>
-    <p>เราจะบอกคุณตรง ๆ — และนั่นคือเซสชันที่สำเร็จ ไม่ใช่ล้มเหลว</p>
+  <div class="grid2">
+    <div class="card rv"><span class="lb">การรับประกัน</span>
+      <h3>&ldquo;เข้ามาแล้วได้งานไหม?&rdquo;</h3>
+      <p>เราไม่รับประกันว่าคุณจะได้งาน และเราไม่รับเงินจากทั้งสองฝั่งในการแนะนำใคร</p></div>
+    <div class="card rv" style="--d:.06s"><span class="lb">ความตรง</span>
+      <h3>&ldquo;ถ้าคำตอบคือ ทำเป็นงานเสริมเถอะ ล่ะ?&rdquo;</h3>
+      <p>เราจะบอกคุณตรง ๆ และนั่นคือเซสชันที่สำเร็จ ไม่ใช่ล้มเหลว</p></div>
+    <div class="card rv"><span class="lb">ค่าใช้จ่ายแฝง</span>
+      <h3>&ldquo;มีค่าอะไรเพิ่มอีกไหม?&rdquo;</h3>
+      <p>[ร่าง — รอ Mat] ราคาบนการ์ดคือทั้งหมด · VAT / ใบเสร็จ / ใบกำกับภาษี ยังต้องเคาะ</p></div>
+    <div class="card rv" style="--d:.06s"><span class="lb">เลื่อน / ยกเลิก</span>
+      <h3>&ldquo;ติดธุระ เลื่อนนัดได้ไหม?&rdquo;</h3>
+      <p>[ร่าง — รอ Mat] กติกาเลื่อนนัดและคืนเงิน</p></div>
   </div>
 </div></section>
 
-<section class="pcta"><div class="wrap">
-  <h2 class="rv">เราไม่ได้ขายความหวัง<br>เราขายความชัดเจน</h2>
-  <a class="btn btnP rv" style="--d:.1s" href="#">จองคุยครั้งแรก — ไม่มีค่าใช้จ่าย</a>
-  <p class="fine rv" style="--d:.16s">มีการบ้าน 5 นาทีก่อนคุย</p>
-  <p class="honest rv" style="--d:.22s">เราไม่รับประกันว่าคุณจะได้งาน</p>
-  <div><div class="todo rv" style="--d:.3s">[ร่าง — ปุ่มยังไม่มีปลายทาง รอลิงก์จองจริง (LINE OA?)]</div></div>
-</div></section>
+<div class="closing"><div class="wrap">
+  <h2 class="rv">ไม่แน่ใจว่า<br>ควรเริ่มตรงไหน?</h2>
+  <p class="rv" style="--d:.06s">เริ่มจากคุยครั้งแรก ฟรี แล้วเราจะบอกว่าคุณต้องการอะไรต่อ หรือไม่ต้องการอะไรเลย</p>
+  <a class="cta rv" style="--d:.1s" href="contact.html">จองคุยครั้งแรก — ไม่มีค่าใช้จ่าย</a>
+  <p class="honest rv" style="--d:.14s">เราไม่รับประกันว่าคุณจะได้งาน</p>
+</div></div>
+
+<div class="marq" aria-hidden="true"><div class="row">
+  เราขายความชัดเจน <span class="ast">*</span> planc <span class="ast">*</span> เราขายความชัดเจน <span class="ast">*</span> planc <span class="ast">*</span>
+  เราขายความชัดเจน <span class="ast">*</span> planc <span class="ast">*</span> เราขายความชัดเจน <span class="ast">*</span> planc <span class="ast">*</span>
+</div></div>
 
 <footer>
   <div class="fground" aria-hidden="true">
     <svg class="gl" viewBox="0 0 1200 30" preserveAspectRatio="none">
-      <path d="M0 21 Q12 18.6 24 21 T48 21.9 T72 20.9 T96 20.2 T120 20.4 T144 21.4 T168 21.9 T192 21.4 T216 20.4 T240 20.1 T264 20.9 T288 21.8 T312 21.7 T336 20.7 T360 20.1 T384 20.5 T408 21.5 T432 21.9 T456 21.2 T480 20.3 T504 20.1 T528 21.1 T552 21.9 T576 21.6 T600 20.6 T624 20.1 T648 20.6 T672 21.6 T696 21.9 T720 21.1 T744 20.2 T768 20.2 T792 21.2 T816 21.9 T840 21.5 T864 20.5 T888 20.1 T912 20.7 T936 21.7 T960 21.8 T984 20.9 T1008 20.2 T1032 20.3 T1056 21.3 T1080 21.9 T1104 21.4 T1128 20.4 T1152 20.1 T1176 20.8 T1200 21.8"
-        fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
-      <path d="M180 20 l7 -10 l7 10 M420 20 l7 -10 l7 10 M660 19 l7 -10 l7 10 M900 19 l7 -10 l7 10 M1140 20 l7 -10 l7 10"
-        fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M0 21 Q12 18.6 24 21 T48 21.9 T72 20.9 T96 20.2 T120 20.4 T144 21.4 T168 21.9 T192 21.4 T216 20.4 T240 20.1 T264 20.9 T288 21.8 T312 21.7 T336 20.7 T360 20.1 T384 20.5 T408 21.5 T432 21.9 T456 21.2 T480 20.3 T504 20.1 T528 21.1 T552 21.9 T576 21.6 T600 20.6 T624 20.1 T648 20.6 T672 21.6 T696 21.9 T720 21.1 T744 20.2 T768 20.2 T792 21.2 T816 21.9 T840 21.5 T864 20.5 T888 20.1 T912 20.7 T936 21.7 T960 21.8 T984 20.9 T1008 20.2 T1032 20.3 T1056 21.3 T1080 21.9 T1104 21.4 T1128 20.4 T1152 20.1 T1176 20.8 T1200 21.8" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+      <path d="M180 20 l7 -10 l7 10 M420 20 l7 -10 l7 10 M660 19 l7 -10 l7 10 M900 19 l7 -10 l7 10 M1140 20 l7 -10 l7 10" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
     </svg>
     <img class="fcat" src="../assets/cat.png" alt="">
   </div>
   <div class="wrap footin">
     <span>© 2026 planc*</span>
-    <div class="links">
-      <a href="../proto-journey/planc-journey-proto.html">หน้าหลัก</a><a href="#">ราคา</a><a href="about.html">เกี่ยวกับเรา</a><a href="#">ติดต่อ</a>
-    </div>
+    <div class="links"><a href="../proto-journey/planc-journey-proto.html">หน้าหลัก</a><a href="#">ราคา</a><a href="about.html">เกี่ยวกับเรา</a><a href="contact.html">ติดต่อ</a></div>
   </div>
 </footer>
 
-<script>
-(function(){
-  const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
-  function countUp(el){
-    const target = +el.dataset.count, t0 = performance.now(), dur = 850;
-    function tick(t){
-      const k = Math.min(1, (t - t0) / dur), e = 1 - Math.pow(1 - k, 3);
-      el.textContent = Math.round(target * e).toLocaleString('en-US');
-      if (k < 1) requestAnimationFrame(tick);
-    }
-    requestAnimationFrame(tick);
-  }
-  const io = new IntersectionObserver(es => es.forEach(e => {
-    if (!e.isIntersecting) return;
-    e.target.classList.add('on');
-    if (!reduced) e.target.querySelectorAll('[data-count]').forEach(countUp);
-    io.unobserve(e.target);
-  }), { threshold: 0.22 });
-  document.querySelectorAll('.rv').forEach(el => io.observe(el));
-})();
-</script>
+<script src="biz.js"></script>
 <script src="../js/planc-rig.js"></script>
-<script>
-(function(){
-  const logo = document.getElementById('logoBtn');
-  if (window.PlanCRig) {
-    PlanCRig.mount(logo, { coat: 'currentColor' });
-  } else {
-    logo.textContent = 'planc*';
-    logo.style.cssText = "font-family:'Prompt','Sarabun',sans-serif;font-weight:800;" +
-      'font-size:21px;width:auto';
-  }
-  logo.addEventListener('click', () => {
-    location.href = '../proto-journey/planc-journey-proto.html';
-  });
-})();
-</script>
+<script>bizLogo();</script>
 </body>
 </html>

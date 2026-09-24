@@ -1,0 +1,107 @@
+/* ============ หน้าธุรกิจ — ระบบเดียวกันทั้ง Pricing / About / Contact ============
+   โครงจาก moonshotplanning.com (Mat เลือก 24 ก.ย. 2026): หัวเรื่องบางตัวใหญ่กลางหน้า ·
+   nav แคปซูลลอย · การ์ดเทาอ่อน + ใบเด่นสีดำ · เช็กลิสต์ · FAQ สองคอลัมน์ · แถบวิ่งท้ายหน้า
+   แปลงเข้าโลกเรา: กระดาษ/หมึก · แดงจุดเดียวต่อจอ · กรอบยึกยือ · ติ๊กวาดมือ · พื้นด่าน+แมว
+   (build-journey.py ฝังไฟล์นี้ + <style> ของแต่ละหน้า แล้ว scope ใต้ #pgX ให้เอง) */
+:root{
+  --paper:#fcfcfa; --ink:#111; --red:#e5484d; --card:#efeee8;
+  --wob:255px 18px 225px 18px/18px 225px 18px 255px;
+  --wob2:18px 225px 18px 255px/255px 18px 225px 18px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font-family:'Sarabun',system-ui,sans-serif;
+  font-size:16.5px;line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2,h3,h4{font-family:'Prompt','Sarabun',sans-serif}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+.narrow{max-width:760px}
+
+/* ---- nav: แคปซูลลอยกลางจอ (เฉพาะไฟล์แยก — ไฟล์รวมใช้ nav ของเกม) ---- */
+nav.bnav{position:sticky;top:14px;z-index:20;display:flex;justify-content:center;padding:0 12px}
+.pill-nav{display:flex;align-items:center;gap:clamp(10px,2.4vw,26px);background:var(--paper);
+  border:2px solid var(--ink);border-radius:var(--wob);padding:6px 8px 6px 14px;
+  box-shadow:0 6px 24px rgba(17,17,17,.08)}
+.brand{width:92px;height:36px;background:none;border:0;color:inherit;cursor:pointer;flex:0 0 auto}
+.brand svg{overflow:visible}
+.pill-nav a{font-family:'Prompt';font-size:.86rem;text-decoration:none;white-space:nowrap}
+.pill-nav a.active{text-decoration:underline;text-underline-offset:5px;text-decoration-thickness:1.5px}
+.pill-nav .go{background:var(--ink);color:var(--paper);padding:.42rem 1rem;border-radius:var(--wob2);font-weight:500}
+
+/* ---- หัวหน้า ---- */
+header.hero{text-align:center;padding:92px 0 56px}
+.eyebrow{display:inline-flex;align-items:center;gap:.5rem;font-family:'Prompt';font-size:.82rem;
+  padding:.28rem .8rem .28rem .5rem;border:1.5px solid var(--ink);border-radius:var(--wob)}
+.eyebrow .ast{display:inline-grid;place-items:center;width:1.4rem;height:1.4rem;background:var(--ink);
+  color:var(--paper);border-radius:50%;font-weight:800;font-size:1.25rem;line-height:1;padding-top:.28rem}
+h1{font-weight:400;font-size:clamp(38px,6.2vw,66px);line-height:1.22;margin-top:22px;letter-spacing:-.005em}
+.sub{margin:16px auto 0;max-width:32rem;font-size:17px}
+
+/* ---- ส่วน ---- */
+section{padding-top:120px}
+.stitle{text-align:center;margin-bottom:44px}
+.stitle h2{font-weight:400;font-size:clamp(32px,4.6vw,52px);line-height:1.22;margin-top:18px}
+.stitle p{max-width:32rem;margin:12px auto 0}
+
+/* ---- การ์ด ---- */
+.card{background:var(--card);border-radius:var(--wob);padding:28px 26px}
+.card:nth-child(even){border-radius:var(--wob2)}
+.card.dark{background:var(--ink);color:var(--paper)}
+.tilt-l{transform:rotate(-.35deg)} .tilt-r{transform:rotate(.3deg)}
+.lb{font-family:'Prompt';font-size:.78rem;font-weight:500;display:inline-block;
+  border:1.5px solid currentColor;border-radius:var(--wob);padding:.05rem .6rem;margin-bottom:12px}
+.card h3{font-weight:500;font-size:1.2rem;line-height:1.4;margin-bottom:8px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+
+/* ---- เช็กลิสต์ติ๊กวาดมือ ---- */
+ul.ck{list-style:none;display:grid;gap:10px}
+ul.ck li{display:grid;grid-template-columns:22px 1fr;gap:10px;font-size:.95rem;line-height:1.55}
+ul.ck svg{width:20px;height:20px;margin-top:2px}
+
+/* ---- ปุ่ม ---- */
+.pbtn{display:block;text-align:center;text-decoration:none;font-family:'Prompt';font-weight:500;
+  padding:.72rem 1rem;border:2px solid var(--ink);border-radius:var(--wob2);background:var(--paper);color:var(--ink);
+  transition:transform .2s ease;cursor:pointer}
+.card.dark .pbtn{border-color:var(--paper)}
+.pbtn.solid{background:var(--ink);color:var(--paper)}
+.card.dark .pbtn.solid{background:var(--paper);color:var(--ink)}
+.pbtn:hover,.cta:hover{transform:translateY(-2px)}
+.cta{display:inline-block;background:var(--ink);color:var(--paper);text-decoration:none;font-family:'Prompt';
+  font-weight:500;font-size:1.05rem;padding:.9rem 2.2rem;border-radius:var(--wob2);transition:transform .2s ease}
+.todo{display:inline-block;margin-top:14px;font-size:13px;color:var(--red);border:1.5px dashed var(--red);padding:4px 14px}
+
+/* ---- ปิดท้าย ---- */
+.closing{text-align:center;padding-top:130px}
+.closing h2{font-weight:400;font-size:clamp(32px,4.6vw,52px);line-height:1.22}
+.closing p{margin:14px auto 26px;max-width:28rem}
+.closing .honest{font-weight:600;font-size:.92rem;margin:14px auto 0}
+
+/* ---- แถบวิ่ง + พื้นด่าน ---- */
+.marq{margin-top:110px;overflow:hidden;white-space:nowrap;font-family:'Prompt';font-weight:800;
+  font-size:clamp(46px,9vw,120px);line-height:1.05;letter-spacing:-.01em}
+.marq .row{display:inline-block;animation:bizmq 38s linear infinite;padding-right:.4em}
+.marq .ast{color:var(--red)}
+@keyframes bizmq{to{transform:translateX(-50%)}}
+footer{padding:0 0 36px}
+.fground{position:relative;height:74px}
+.fground .gl{position:absolute;left:0;right:0;bottom:0;width:100%;height:30px;display:block}
+.fground .fcat{position:absolute;left:9%;bottom:10px;height:52px}
+.footin{display:flex;flex-wrap:wrap;gap:12px 22px;align-items:center;font-size:14px;padding-top:22px}
+.footin .links{margin-left:auto;display:flex;gap:20px}
+.footin a{text-decoration:none;font-family:'Prompt';font-size:.84rem}
+
+@media (max-width:900px){
+  .grid2,.grid3{grid-template-columns:1fr}
+  .tilt-l,.tilt-r{transform:none}
+  .pill-nav a:not(.go):not(.active){display:none}
+  header.hero{padding:64px 0 40px}
+  section{padding-top:90px}
+  .stitle h2,.closing h2{font-size:27px}
+  h1{font-size:36px}
+}
+
+/* ---- motion: ขึ้นทีละใบตอนเลื่อนถึง (หน้าธุรกิจใช้เวลาได้) ---- */
+.rv{opacity:0;translate:0 22px;transition:opacity .7s ease,translate .7s cubic-bezier(.22,.9,.3,1);transition-delay:var(--d,0s)}
+.rv.on{opacity:1;translate:0 0}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;translate:none;transition:none}.marq .row{animation:none}}

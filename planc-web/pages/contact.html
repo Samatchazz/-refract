@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ติดต่อ — planc*</title>
+<meta name="description" content="ถามก่อนทาง LINE หรือจองคุยครั้งแรกได้เลย — ฟรี มีการบ้าน 5 นาทีก่อนคุย">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;800&family=Sarabun:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="biz.css">
+<style>
+/* ---- Contact: แมวทัก · สองประตู · จองแล้วเกิดอะไรต่อ · เตรียมอะไรมา · ติดต่อตามเรื่อง · บริษัท ---- */
+.hicat{display:inline-flex;align-items:flex-end;gap:10px;margin-top:30px}
+.hicat img{height:64px}
+.hicat .hibub{background:var(--paper);font-family:'Sarabun';font-weight:600;font-size:.95rem;padding:.45rem .9rem;
+  border:1.5px solid var(--ink);border-radius:255px 15px 225px 15px/15px 225px 15px 255px;margin-bottom:40px}
+.door{display:flex;flex-direction:column;padding:34px 30px 30px}
+.door .lb{align-self:flex-start}
+.door h2{font-weight:400;font-size:clamp(30px,3.6vw,42px);line-height:1.2;margin-bottom:10px}
+.door p{margin-bottom:18px}
+.door ul.ck{margin-bottom:26px;flex:1}
+.door .id{font-family:'Prompt';font-weight:500;font-size:1.05rem;margin-bottom:14px}
+.door .note{font-size:.85rem;text-align:center;margin-top:10px}
+.door.dark{box-shadow:0 18px 40px rgba(17,17,17,.18)}
+/* ขั้นตอน: การ์ดเล็กห้าใบ มีลูกศรวาดมือคั่น */
+.steps{display:grid;grid-template-columns:repeat(5,1fr);gap:26px;position:relative}
+.step{padding:22px 18px 20px;position:relative}
+.step .n{font-family:'Prompt';font-weight:400;font-size:40px;line-height:1}
+.step h3{font-size:1.02rem;margin:10px 0 6px}
+.step p{font-size:.9rem;line-height:1.55}
+.step:not(:last-child)::after{content:"";position:absolute;right:-24px;top:40px;width:22px;height:14px;
+  background:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 22 14'><path d='M1 7.5 Q9 5.6 19 7 M14 2.5 Q17.5 5 20 7 Q17 9.4 14.4 11.6' fill='none' stroke='%23111' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/></svg>") no-repeat center/contain}
+.bring{display:grid;grid-template-columns:1fr 1.2fr;gap:30px;align-items:center;padding:36px 34px}
+.bring h2{font-weight:400;font-size:clamp(28px,3.4vw,40px);line-height:1.25}
+.bring .small{font-size:.92rem;margin-top:10px}
+.purpose h3{margin-bottom:6px}
+.purpose .how{font-family:'Prompt';font-weight:500;margin-top:14px}
+.privacy{text-align:center;padding:40px 30px}
+.privacy h2{font-weight:400;font-size:clamp(28px,3.6vw,40px);line-height:1.3}
+.privacy p{max-width:34rem;margin:12px auto 0}
+.company{display:grid;grid-template-columns:repeat(4,1fr);gap:14px 26px;padding:28px 30px}
+.company div b{display:block;font-family:'Prompt';font-weight:500;font-size:.82rem;margin-bottom:4px}
+@media (max-width:900px){
+  .steps{grid-template-columns:1fr;gap:14px}
+  .step:not(:last-child)::after{right:auto;left:50%;top:auto;bottom:-15px;transform:translateX(-50%) rotate(90deg)}
+  .bring{grid-template-columns:1fr;padding:28px 24px}
+  .company{grid-template-columns:1fr 1fr}
+  .hicat .hibub{margin-bottom:34px}
+}
+</style>
+</head>
+<body>
+<nav class="bnav"><div class="pill-nav">
+  <button class="brand" id="logoBtn" aria-label="planc* — หน้าหลัก"></button>
+  <a href="../proto-journey/planc-journey-proto.html">หน้าหลัก</a>
+  <a href="pricing.html">ราคา</a>
+  <a href="about.html">เกี่ยวกับเรา</a>
+  <a href="#" class="active">ติดต่อ</a>
+</div></nav>
+
+<header class="hero"><div class="wrap">
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="tick" viewBox="0 0 24 24"><path d="M3.5 12.8 Q6.6 15.4 9.4 19 Q13.8 10.4 20.8 4.6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  </svg>
+  <span class="eyebrow rv"><span class="ast">*</span>ติดต่อ</span>
+  <h1 class="rv" style="--d:.06s">อยากถามก่อน<br>หรือพร้อมคุยเลย</h1>
+  <p class="sub rv" style="--d:.12s">สองทาง น้ำหนักเท่ากัน เลือกทางที่สบายใจ</p>
+  <div class="hicat rv" style="--d:.18s"><img src="../assets/cat.png" alt=""><span class="hibub">ทักมาได้ ไม่กัด</span></div>
+</div></header>
+
+<div class="wrap"><div class="grid2">
+  <div class="card door tilt-l rv">
+    <span class="lb">ถามก่อน</span>
+    <h2>ทัก LINE</h2>
+    <p>ยังไม่แน่ใจว่าเหมาะไหม อยากรู้ว่าคุยอะไรได้บ้าง ถามได้เลย คนจริงเป็นคนตอบ</p>
+    <ul class="ck">
+      <li><svg><use href="#tick"/></svg>ถามได้ ไม่ต้องจอง ไม่มีค่าใช้จ่าย</li>
+      <li><svg><use href="#tick"/></svg>เราตอบภายใน [ร่าง — กี่ชั่วโมง?]</li>
+    </ul>
+    <div class="id">LINE ID: [ร่าง — @ของจริง]</div>
+    <a class="pbtn">เพิ่มเพื่อนทาง LINE</a>
+    <div style="text-align:center"><span class="todo">[ร่าง — รอลิงก์ LINE OA]</span></div>
+  </div>
+  <div class="card dark door tilt-r rv" style="--d:.08s">
+    <span class="lb">พร้อมคุย</span>
+    <h2>จองคุยครั้งแรก</h2>
+    <p>ฟรี 30–45 นาที ครั้งเดียวต่อคน ออกไปพร้อม &ldquo;เข็มทิศ 1 หน้า&rdquo;</p>
+    <ul class="ck">
+      <li><svg><use href="#tick"/></svg>มีการบ้าน 5 นาทีก่อนคุย เราไม่คุยจากศูนย์</li>
+      <li><svg><use href="#tick"/></svg>รับสัปดาห์ละ 3 คน</li>
+      <li><svg><use href="#tick"/></svg>เราไม่รับประกันว่าคุณจะได้งาน</li>
+    </ul>
+    <a class="pbtn solid">เลือกเวลาคุย</a>
+    <div style="text-align:center"><span class="todo">[ร่าง — รอระบบจอง (Cal.com? ผ่าน LINE?)]</span></div>
+  </div>
+</div></div>
+
+<section><div class="wrap">
+  <div class="stitle">
+    <span class="eyebrow rv"><span class="ast">*</span>ไม่มีเซอร์ไพรส์</span>
+    <h2 class="rv" style="--d:.06s">จองแล้ว<br>เกิดอะไรต่อ</h2>
+  </div>
+  <div class="steps">
+    <div class="card step rv"><div class="n">01</div><h3>เลือกเวลา</h3><p>เลือกช่วงที่ว่าง หรือบอกเราทาง LINE</p></div>
+    <div class="card step rv" style="--d:.05s"><div class="n">02</div><h3>ส่งการบ้าน</h3><p>คำถาม 5 ข้อ ใช้เวลา 5 นาที ส่งก่อนวันคุย</p></div>
+    <div class="card step rv" style="--d:.1s"><div class="n">03</div><h3>เรายืนยันนัด</h3><p>[ร่าง — ยืนยันภายในกี่ชม. ทางไหน]</p></div>
+    <div class="card step rv" style="--d:.15s"><div class="n">04</div><h3>คุยกัน</h3><p>30–45 นาที [ร่าง — ออนไลน์ผ่านอะไร]</p></div>
+    <div class="card dark step rv" style="--d:.2s"><div class="n">05</div><h3>ได้เข็มทิศ 1 หน้า</h3><p>สรุปสิ่งที่ควรทำต่อ ให้หมด ไม่กั๊ก</p></div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="card bring rv">
+    <div>
+      <span class="lb">ถ้าจองเซสชัน ฿999</span>
+      <h2>เตรียมของจริง<br>มาด้วย</h2>
+      <p class="small">30 นาทีหมดเร็ว ยิ่งมีของจริงบนโต๊ะ ยิ่งได้คำตอบที่ใช้ได้เลย</p>
+    </div>
+    <ul class="ck">
+      <li><svg><use href="#tick"/></svg>เรทการ์ดที่ใช้อยู่ตอนนี้ (ถ้ามี)</li>
+      <li><svg><use href="#tick"/></svg>ข้อความหรืออีเมลจากแบรนด์ล่าสุดที่ยังไม่ได้ตอบ</li>
+      <li><svg><use href="#tick"/></svg>สัญญาหรือบรีฟที่อ่านแล้วไม่แน่ใจ</li>
+      <li><svg><use href="#tick"/></svg>ตัวเลขที่คุณคิดจะเสนอ แม้จะยังไม่มั่นใจ</li>
+    </ul>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="stitle">
+    <span class="eyebrow rv"><span class="ast">*</span>ติดต่อตามเรื่อง</span>
+    <h2 class="rv" style="--d:.06s">คุณเป็นใคร</h2>
+  </div>
+  <div class="grid3">
+    <div class="card purpose rv"><span class="lb">ครีเอเตอร์</span>
+      <h3>อยากคุยเรื่องงานตัวเอง</h3><p>ทัก LINE หรือจองคุยครั้งแรกด้านบน</p>
+      <p class="how">LINE: [ร่าง]</p></div>
+    <div class="card purpose rv" style="--d:.06s"><span class="lb">แบรนด์</span>
+      <h3>อยากหาครีเอเตอร์</h3><p>ลิสต์เฟส 3 กำลังสร้าง เราไม่รับเงินจากทั้งสองฝั่งในการแนะนำใคร</p>
+      <p class="how">อีเมล: [ร่าง]</p></div>
+    <div class="card purpose rv" style="--d:.12s"><span class="lb">สื่อ / งานพูด</span>
+      <h3>อยากสัมภาษณ์หรือเชิญ</h3><p>บอกหัวข้อและกำหนดการมาได้เลย</p>
+      <p class="how">อีเมล: [ร่าง]</p></div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="card dark privacy rv">
+    <h2>สิ่งที่คุณเล่าให้เราฟัง<br>อยู่กับเรา</h2>
+    <p>เรท สัญญา ชื่อแบรนด์ และตัวเลขที่คุยกันในเซสชัน ไม่ถูกส่งต่อให้แบรนด์หรือเอเจนซีใด ๆ
+    และไม่ถูกใช้ประกอบการเลือกใครไปเสนองาน</p>
+  </div>
+  <div class="card company rv" style="margin-top:18px">
+    <div><b>บริษัท</b>[ร่าง — ชื่อจดทะเบียน]</div>
+    <div><b>เลขนิติบุคคล</b>[ร่าง]</div>
+    <div><b>ที่อยู่</b>[ร่าง]</div>
+    <div><b>เวลาตอบ</b>[ร่าง — เช่น ทุกวัน 10:00–22:00]</div>
+  </div>
+</div></section>
+
+<div class="marq" aria-hidden="true"><div class="row">
+  ทักมาได้ <span class="ast">*</span> planc <span class="ast">*</span> ทักมาได้ <span class="ast">*</span> planc <span class="ast">*</span>
+  ทักมาได้ <span class="ast">*</span> planc <span class="ast">*</span> ทักมาได้ <span class="ast">*</span> planc <span class="ast">*</span>
+</div></div>
+
+<footer>
+  <div class="fground" aria-hidden="true">
+    <svg class="gl" viewBox="0 0 1200 30" preserveAspectRatio="none">
+      <path d="M0 21 Q12 18.6 24 21 T48 21.9 T72 20.9 T96 20.2 T120 20.4 T144 21.4 T168 21.9 T192 21.4 T216 20.4 T240 20.1 T264 20.9 T288 21.8 T312 21.7 T336 20.7 T360 20.1 T384 20.5 T408 21.5 T432 21.9 T456 21.2 T480 20.3 T504 20.1 T528 21.1 T552 21.9 T576 21.6 T600 20.6 T624 20.1 T648 20.6 T672 21.6 T696 21.9 T720 21.1 T744 20.2 T768 20.2 T792 21.2 T816 21.9 T840 21.5 T864 20.5 T888 20.1 T912 20.7 T936 21.7 T960 21.8 T984 20.9 T1008 20.2 T1032 20.3 T1056 21.3 T1080 21.9 T1104 21.4 T1128 20.4 T1152 20.1 T1176 20.8 T1200 21.8" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+      <path d="M180 20 l7 -10 l7 10 M420 20 l7 -10 l7 10 M660 19 l7 -10 l7 10 M900 19 l7 -10 l7 10 M1140 20 l7 -10 l7 10" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    <img class="fcat" src="../assets/cat.png" alt="">
+  </div>
+  <div class="wrap footin">
+    <span>© 2026 planc*</span>
+    <div class="links"><a href="../proto-journey/planc-journey-proto.html">หน้าหลัก</a><a href="pricing.html">ราคา</a><a href="about.html">เกี่ยวกับเรา</a><a href="#">ติดต่อ</a></div>
+  </div>
+</footer>
+
+<script src="biz.js"></script>
+<script src="../js/planc-rig.js"></script>
+<script>bizLogo();</script>
+</body>
+</html>

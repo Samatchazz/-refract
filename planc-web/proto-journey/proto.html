@@ -6,7 +6,7 @@
 <title>planc* — journey proto</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@600;800;900&family=Sarabun:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;800;900&family=Sarabun:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 /* ============================================================
    JOURNEY PROTO — separate from the main site on purpose.
@@ -59,15 +59,16 @@ img{display:block}
   .navlk.dis,.badge{display:none}
   body[data-page="pricing"] .navlk:not(#lkHome):not(#lkPricing){display:none}
   body[data-page="about"] .navlk:not(#lkHome):not(#lkAbout){display:none}
+  body[data-page="contact"] .navlk:not(#lkHome):not(#lkContact){display:none}
 }
 /* หน้า Pricing ในตัว — build-journey.py เทเนื้อหาลง #pgPricing ตอน build
    เปิด/ปิดด้วย hash (#pricing) จอเกมข้างหลังไม่ขยับ เลื่อนกลับมาต่อจุดเดิมได้
    อยู่ "ใต้" nav ของเกม (z 37 < 40) — ทั้งเว็บใช้แถบเดียว โลโก้เดียว */
-#pgPricing,#pgAbout{position:fixed;inset:0;z-index:37;background:#fcfcfa;color:#111;
+#pgPricing,#pgAbout,#pgContact{position:fixed;inset:0;z-index:37;background:#fcfcfa;color:#111;
   padding-top:var(--nav-h);overflow-y:auto;overscroll-behavior:contain;
   -webkit-overflow-scrolling:touch;
   opacity:0;visibility:hidden;transition:opacity .3s ease,visibility 0s linear .3s}
-#pgPricing.open,#pgAbout.open{opacity:1;visibility:visible;transition:opacity .3s ease}
+#pgPricing.open,#pgAbout.open,#pgContact.open{opacity:1;visibility:visible;transition:opacity .3s ease}
 /* ตอนเปิดหน้า business: nav กลับเป็นหมึกเสมอ (กันโดนโหมดด่านมืด), โชว์ปุ่มกลับ,
    ขีดใต้เมนูที่ active และซ่อน hint/แฟลชของเกมที่ลอยทับ */
 body.paged #nav{color:#111;background:#fcfcfa}
@@ -75,7 +76,8 @@ body.paged #tapHint,body.paged #flash{display:none}
 #lkHome{display:none}
 body.paged #lkHome{display:inline-block}
 body[data-page="pricing"] #lkPricing,
-body[data-page="about"] #lkAbout{opacity:1;border-bottom-color:currentColor}
+body[data-page="about"] #lkAbout,
+body[data-page="contact"] #lkContact{opacity:1;border-bottom-color:currentColor}
 .navlk:hover{opacity:1;border-bottom-color:currentColor}
 .navlk.dis{opacity:.26;pointer-events:none}
 /* the logo goes rainbow when the story needs you — the rig's own ink
@@ -353,7 +355,7 @@ body.bridged #boltFlash,body.bridged #boltShape{animation:none;opacity:0}
     <a class="navlk" id="lkHome" href="#journey">หน้าหลัก</a>
     <a class="navlk" id="lkPricing" href="../pages/pricing.html">ราคา</a>
     <a class="navlk" id="lkAbout" href="../pages/about.html">เกี่ยวกับเรา</a>
-    <a class="navlk dis" href="#" aria-disabled="true">ติดต่อ</a>
+    <a class="navlk" id="lkContact" href="../pages/contact.html">ติดต่อ</a>
     <span class="badge">JOURNEY&nbsp;PROTO</span>
   </nav>
 </header>
@@ -398,19 +400,19 @@ body.bridged #boltFlash,body.bridged #boltShape{animation:none;opacity:0}
   <h2>เราไม่ได้ขายความหวัง<br>เราขายความชัดเจน</h2>
   <p>บางคนเดินออกไปพร้อมแผน 90 วัน บางคนเดินออกไปพร้อมข้อสรุปว่าควรทำเป็นงานเสริม —
   ทั้งสองแบบคือคำตอบที่ใช้ได้ และคุณจะได้ยินอันที่จริง ไม่ใช่อันที่ฟังสบายใจ</p>
-  <a class="cta" href="#booking">จองคุยครั้งแรก — ไม่มีค่าใช้จ่าย</a>
+  <a class="cta" href="../pages/contact.html">จองคุยครั้งแรก — ไม่มีค่าใช้จ่าย</a>
   <p class="fine">มีการบ้าน 5 นาทีก่อนคุย · เราไม่รับประกันว่าคุณจะได้งาน</p>
-  <div class="todo">[ร่าง — ปุ่มยังไม่มีปลายทาง รอลิงก์จองจริง (LINE OA?)]</div>
-  <nav class="elinks"><a href="../pages/pricing.html">ราคา</a><a href="../pages/about.html">เกี่ยวกับเรา</a></nav>
+  <nav class="elinks"><a href="../pages/pricing.html">ราคา</a><a href="../pages/about.html">เกี่ยวกับเรา</a><a href="../pages/contact.html">ติดต่อ</a></nav>
 </div></footer>
 
 <section id="pgPricing" class="hd" aria-label="ราคา"><!--PRICING--></section>
 <section id="pgAbout" class="hd" aria-label="เกี่ยวกับเรา"><!--ABOUT--></section>
+<section id="pgContact" aria-label="ติดต่อ"><!--CONTACT--></section>
 <script>
 /* สลับหน้าในไฟล์เดียว: #pricing / #about เปิด overlay · hash อื่น/ไม่มี = หน้าเกม
    ใช้ hash เพื่อให้ปุ่ม back ของเบราว์เซอร์ทำงานเหมือนเว็บหลายหน้า */
 (function(){
-  const PAGES = { pricing: 'pgPricing', about: 'pgAbout' };
+  const PAGES = { pricing: 'pgPricing', about: 'pgAbout', contact: 'pgContact' };
   const inited = {};
   function initReveals(pg){
     if (inited[pg.id] || !pg.querySelector('.rv')) return;
@@ -463,6 +465,7 @@ body.bridged #boltFlash,body.bridged #boltShape{animation:none;opacity:0}
     const a = e.target.closest('a[href^="#"]');
     if (!a) return;
     const name = a.getAttribute('href').slice(1);
+    if (!name) { e.preventDefault(); return; }   /* href="#" = หน้านี้เอง / ปุ่มร่างที่ยังไม่มีปลายทาง */
     if (name === 'journey' || PAGES[name]) {
       e.preventDefault();
       go(name === 'journey' ? '' : name);
