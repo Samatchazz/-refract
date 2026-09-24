@@ -63,23 +63,26 @@ def build():
         assert tag in html, tag
         html = html.replace(tag, '<script>\n' + js + '\n</script>')
 
-    # 2. business pages -> overlays (เอาเฉพาะ hero..footer — nav ไม่เอา เพราะไฟล์รวม
-    #    ใช้ nav ของเกมเป็นแถบเดียวทั้งเว็บ · ต้องมาก่อนขั้น cat.png เพื่อให้
-    #    รูปแมวใน footer ของแต่ละหน้าถูกฝัง base64 ด้วย)
-    PAGES = [('pages/pricing.html', '<!--PRICING-->', '#pgPricing'),
-             ('pages/about.html',   '<!--ABOUT-->',   '#pgAbout'),
-             ('pages/contact.html', '<!--CONTACT-->', '#pgContact')]
+    # 2. business pages -> sections ต่อท้ายด่านในหน้าเดียว (Mat 25 ก.ย.) — เอาเฉพาะ
+    #    hero..ก่อนแถบวิ่ง (nav ไม่เอา ใช้แคปซูลของเกม · แถบวิ่ง+footer เอาเฉพาะของ
+    #    contact ซึ่งเป็นท้ายเว็บ) · ต้องมาก่อนขั้น cat.png เพื่อให้แมวใน footer ฝัง base64
+    PAGES = [('pages/pricing.html', '<!--PRICING-->', '#pricing', False),
+             ('pages/about.html',   '<!--ABOUT-->',   '#about',   False),
+             ('pages/contact.html', '<!--CONTACT-->', '#contact', True)]
     shared = (ROOT / 'pages/biz.css').read_text(encoding='utf-8')   # ระบบหน้าธุรกิจที่ทุกหน้าใช้ร่วม
-    for path, marker, prefix in PAGES:
+    for path, marker, prefix, tail in PAGES:
         pr = (ROOT / path).read_text(encoding='utf-8')
         own = pr[pr.index('<style>') + 7:pr.index('</style>')]
         css = scope_css((shared if 'href="biz.css"' in pr else '') + '\n' + own, prefix)
-        body = pr[pr.index('<header class="hero">'):pr.index('</footer>') + len('</footer>')]
+        end = pr.index('</footer>') + len('</footer>') if tail else pr.index('<div class="marq"')
+        body = pr[pr.index('<header class="hero">'):end]
         body = (body
                 .replace('href="../proto-journey/planc-journey-proto.html"', 'href="#journey"')
                 .replace('href="pricing.html"', 'href="#pricing"')
                 .replace('href="about.html"', 'href="#about"')
                 .replace('href="contact.html"', 'href="#contact"'))
+        # ลิงก์ "หน้านี้เอง" (href="#") ใน footer → ชี้ section ของตัวเอง
+        body = body.replace('<a href="#">ติดต่อ</a>', '<a href="#contact">ติดต่อ</a>')
         assert marker in html, marker
         html = html.replace(marker, '<style>\n' + css + '\n</style>\n' + body)
     html = (html.replace('href="../pages/pricing.html"', 'href="#pricing"')

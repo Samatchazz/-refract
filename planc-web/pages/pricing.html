@@ -4,32 +4,43 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>ราคา — planc*</title>
-<meta name="description" content="ครั้งแรกฟรี · เซสชันเดี่ยว ฿999 · สมาชิกรายเดือน ฿2,000 — ไม่มีนับถอยหลัง ไม่มีเร่งให้รีบ">
+<meta name="description" content="คุยครั้งแรกฟรี · เซสชันเดี่ยว ฿999 · สมาชิกรายเดือน ฿2,000 — ไม่มีนับถอยหลัง ไม่มีเร่งให้รีบ">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;800&family=Sarabun:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="biz.css">
 <style>
-/* ---- Pricing: การ์ดราคาสามใบ ใบกลางดำ ---- */
-.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;align-items:start}
+/* ---- Pricing (Mat 25 ก.ย.): แนะนำตัวสั้น ๆ ว่ามาคุยแล้วได้อะไร → ใบฟรีใบเดียวเต็มแถว สีดำ
+   → สองแบบที่ต้องจ่าย เป็นใบรองสีอ่อน → FAQ · ตัดตารางเทียบเอเจนซีทิ้ง (เราไม่ใช่เอเจนซี) ---- */
+.free{display:grid;grid-template-columns:1fr 1.15fr;gap:10px 44px;padding:44px 46px 40px;position:relative;
+  box-shadow:0 18px 40px rgba(17,17,17,.18)}
+.free .tag{position:absolute;top:-14px;left:36px;font-family:'Prompt';font-size:.8rem;font-weight:500;
+  background:var(--paper);color:var(--ink);border:1.5px solid var(--ink);padding:.12rem .8rem;border-radius:var(--wob)}
+.free .pname{font-family:'Prompt';font-weight:500;font-size:1.05rem}
+.free .price{font-family:'Prompt';font-weight:600;font-size:clamp(64px,7vw,96px);line-height:1;margin:6px 0 10px;color:var(--red)}
+.free .fit{font-size:1rem;max-width:22rem}
+.free .pbtn{margin-top:22px;max-width:22rem}
+.free .joke{font-size:.84rem;margin-top:12px;max-width:22rem}
+.free .get{font-family:'Prompt';font-weight:500;font-size:.95rem;margin-bottom:12px;opacity:.85}
+.free ul.ck li{font-size:1rem;line-height:1.6}
+.free ul.ck svg{color:var(--paper)}
+/* ---- สองแบบที่ต้องจ่าย ---- */
+.plans{display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:start;max-width:920px;margin:0 auto}
 .plan{display:flex;flex-direction:column;position:relative;padding:30px 26px 26px}
-.plan.dark{margin-top:-18px;padding-top:40px;box-shadow:0 18px 40px rgba(17,17,17,.18)}
-.tag{position:absolute;top:14px;left:24px;font-family:'Prompt';font-size:.74rem;font-weight:500;
-  background:var(--paper);color:var(--ink);padding:.1rem .6rem;border-radius:var(--wob)}
+.plan .tag{position:absolute;top:14px;right:22px;font-family:'Prompt';font-size:.74rem;font-weight:500;
+  background:var(--ink);color:var(--paper);padding:.1rem .6rem;border-radius:var(--wob)}
 .pname{font-family:'Prompt';font-weight:500;font-size:1.02rem}
 .price{font-family:'Prompt';font-weight:600;font-size:clamp(40px,4.4vw,54px);line-height:1.1;margin:8px 0 4px;color:var(--red)}
 .price small{font-size:1rem;font-weight:400;color:var(--ink)}
-.plan.dark .price small{color:var(--paper)}
 .fit{font-size:.95rem;margin-bottom:18px;min-height:3.2em}
 .plan ul.ck{margin-bottom:24px;flex:1}
 .joke{font-size:.84rem;margin-top:12px;text-align:center}
-/* ---- เรา vs ตัวกลาง ---- */
-.vcard h3{font-size:1.3rem;margin-bottom:18px}
-.vcard h4{font-weight:500;font-size:.95rem;margin:18px 0 8px}
-.vcard h4:first-of-type{margin-top:0}
 @media (max-width:900px){
-  .plans{grid-template-columns:1fr;gap:22px;max-width:460px;margin:0 auto}
-  .plan.dark{margin-top:0}
+  .free{grid-template-columns:1fr;gap:22px;padding:38px 26px 30px}
+  .free .price{font-size:64px}
+  .free .fit,.free .pbtn,.free .joke{max-width:none}
+  .plans{grid-template-columns:1fr;gap:22px;max-width:460px}
+  .plan .tag{position:static;display:inline-block;margin-bottom:10px;align-self:flex-start}
   .fit{min-height:0}
 }
 </style>
@@ -47,91 +58,70 @@
 <header class="hero"><div class="wrap">
   <svg width="0" height="0" style="position:absolute" aria-hidden="true">
     <symbol id="tick" viewBox="0 0 24 24"><path d="M3.5 12.8 Q6.6 15.4 9.4 19 Q13.8 10.4 20.8 4.6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
-    <symbol id="cross" viewBox="0 0 24 24"><path d="M5 5.4 Q12 12.4 19 18.8 M18.6 5 Q12.4 11.6 5.4 19" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></symbol>
   </svg>
-  <span class="eyebrow rv"><span class="ast">*</span>ราคาทั้งหมดอยู่ตรงนี้</span>
-  <h1 class="rv" style="--d:.06s">เริ่มจากเรื่อง<br>ที่คุณติดอยู่ตอนนี้</h1>
-  <p class="sub rv" style="--d:.12s">มีสามแบบ ราคาเขียนไว้หมดแล้ว ไม่มีโปร ไม่ต้องรีบ</p>
+  <span class="eyebrow rv"><span class="ast">*</span>มาคุยกันก่อน</span>
+  <h1 class="rv" style="--d:.06s">ครั้งแรก<br>ไม่คิดเงิน</h1>
+  <p class="sub rv" style="--d:.12s">เราทำอาชีพนี้มาสิบกว่าปี เจอทั้งช่วงยอดพุ่งและช่วงยอดร่วง
+  คุยกันครึ่งชั่วโมง คุณจะรู้ว่าตัวเองอยู่ตรงไหน และควรขยับไปทางไหนต่อ</p>
 </div></header>
 
-<div class="wrap"><div class="plans">
-  <div class="card plan rv">
-    <div class="pname">คุยครั้งแรก</div>
-    <div class="price">ฟรี</div>
-    <p class="fit">เหมาะกับคนที่ยอดตก ไม่รู้จะไปทางไหนต่อ หรือเริ่มไม่แน่ใจแล้วว่าช่องตัวเองเป็นช่องอะไร</p>
-    <ul class="ck">
-      <li><svg><use href="#tick"/></svg>คุยกัน 30–45 นาที ได้คนละครั้งเดียว</li>
-      <li><svg><use href="#tick"/></svg>คุยเสร็จเราจะเขียน &ldquo;เข็มทิศ 1 หน้า&rdquo; ให้เอากลับไป มีอะไรก็ใส่ไปหมด ไม่เก็บไว้ขายทีหลัง</li>
-      <li><svg><use href="#tick"/></svg>ก่อนคุยมีการบ้าน 5 นาที ส่งมาก่อน จะได้ไม่ต้องมานั่งเล่ากันใหม่ตั้งแต่ต้น</li>
-    </ul>
-    <a class="pbtn" href="contact.html">จองคุยครั้งแรก</a>
-    <p class="joke">ค่าใช้จ่ายเดียว คือการบ้านที่ต้องส่งก่อนคุย</p>
+<div class="wrap">
+  <div class="card dark free rv">
+    <span class="tag">เริ่มตรงนี้</span>
+    <div>
+      <div class="pname">คุยครั้งแรก</div>
+      <div class="price">ฟรี</div>
+      <p class="fit">30–45 นาที ได้คนละครั้งเดียว ไม่ต้องสมัครอะไร ไม่มีใครโทรตามทีหลัง</p>
+      <a class="pbtn solid" href="contact.html">จองคุยครั้งแรก</a>
+      <p class="joke">ค่าใช้จ่ายเดียว คือการบ้าน 5 นาทีที่ต้องส่งมาก่อนคุย จะได้ไม่ต้องมานั่งเล่ากันใหม่ตั้งแต่ต้น</p>
+    </div>
+    <div>
+      <div class="get">คุยจบ คุณจะได้</div>
+      <ul class="ck">
+        <li><svg><use href="#tick"/></svg>รู้ว่าช่องของคุณอยู่ตรงไหนตอนนี้ ในสายตาแบรนด์ ไม่ใช่ในสายตาแฟน</li>
+        <li><svg><use href="#tick"/></svg>รู้ว่า 90 วันข้างหน้าควรทำอะไร และไม่ควรเสียเวลากับอะไร</li>
+        <li><svg><use href="#tick"/></svg>&ldquo;เข็มทิศ 1 หน้า&rdquo; เขียนให้เอากลับไป มีอะไรก็ใส่ไปหมด ไม่เก็บไว้ขายทีหลัง</li>
+        <li><svg><use href="#tick"/></svg>คำตอบตรง ๆ ว่าคุณต้องใช้เราต่อไหม หรือจริง ๆ แล้วไม่ต้องใช้อะไรเลย</li>
+      </ul>
+    </div>
   </div>
-
-  <div class="card dark plan rv" style="--d:.08s">
-    <span class="tag">ไม่รู้จะเริ่มอันไหน เอาอันนี้ก่อน</span>
-    <div class="pname">เซสชันเดี่ยว</div>
-    <div class="price">฿<span data-count="999">999</span><small> / 30 นาที</small></div>
-    <p class="fit">เหมาะกับคนที่มีคำถามอยู่เรื่องเดียว จองครั้งเดียวจบ ไม่ต้องสมัครอะไร</p>
-    <ul class="ck">
-      <li><svg><use href="#tick"/></svg>งานนี้ควรคิดเท่าไหร่ดี</li>
-      <li><svg><use href="#tick"/></svg>สัญญานี้เซ็นได้ไหม</li>
-      <li><svg><use href="#tick"/></svg>ดีลนี้ควรรับไหม</li>
-      <li><svg><use href="#tick"/></svg>คิดราคาจากต้นทุนของคุณ ไม่ใช่จากงบของเขา</li>
-    </ul>
-    <a class="pbtn" href="contact.html">จองคุย 30 นาที</a>
-    <p class="joke">999 บาทได้ 30 นาที ตกนาทีละ 33 บาทกว่า ๆ คิดคำถามมาก่อนนะ จะได้คุ้ม</p>
-  </div>
-
-  <div class="card plan rv" style="--d:.16s">
-    <div class="pname">สมาชิกรายเดือน</div>
-    <div class="price">฿<span data-count="2000">2,000</span><small> / เดือน</small></div>
-    <p class="fit">เหมาะกับคนที่มีเรื่องใหม่มาให้ปวดหัวทุกอาทิตย์ ส่งงานแล้วแบรนด์เงียบ แก้แล้วแก้อีก หรือมีลูกค้าอยู่เจ้าเดียว</p>
-    <ul class="ck">
-      <li><svg><use href="#tick"/></svg>ได้ทุกอย่างที่เซสชันเดี่ยวมี</li>
-      <li><svg><use href="#tick"/></svg>คุยกัน 45 นาที เดือนละ 2 ครั้ง</li>
-      <li><svg><use href="#tick"/></svg>ทุกอาทิตย์ เราเล่าให้ฟังว่าฝั่งแบรนด์เขาคุยอะไรกัน</li>
-      <li><svg><use href="#tick"/></svg>ทุก 3 เดือน ดูคะแนนตัวเองว่าอยู่ตรงไหน</li>
-      <li><svg><use href="#tick"/></svg>เช็กลิสต์ไว้อ่านสัญญา กับคลังเอกสาร</li>
-      <li><svg><use href="#tick"/></svg>เข้าลิสต์เฟส 3 (กำลังสร้าง) ประตูเข้าคือคะแนนประเมิน</li>
-    </ul>
-    <a class="pbtn" href="contact.html">สมัครสมาชิก</a>
-  </div>
-</div></div>
+</div>
 
 <section><div class="wrap">
   <div class="stitle">
-    <span class="eyebrow rv"><span class="ast">*</span>เราได้เงินจากไหน</span>
-    <h2 class="rv" style="--d:.06s">เอเจนซีได้เงินตอนคุณรับงาน<br>เราได้เท่าเดิม ถึงคุณจะไม่รับก็ตาม</h2>
+    <span class="eyebrow rv"><span class="ast">*</span>หลังจากคุยครั้งแรก</span>
+    <h2 class="rv" style="--d:.06s">ถ้าอยากไปต่อ<br>มีสองแบบ</h2>
+    <p class="rv" style="--d:.1s">ราคาเขียนไว้หมดแล้ว ไม่มีโปร ไม่ต้องรีบ</p>
   </div>
-  <div class="grid2">
-    <div class="card dark vcard tilt-l rv">
-      <h3>planc*</h3>
-      <h4>เราได้เงินจาก</h4>
+  <div class="plans">
+    <div class="card plan rv">
+      <span class="tag">ไม่รู้จะเริ่มอันไหน เอาอันนี้ก่อน</span>
+      <div class="pname">เซสชันเดี่ยว</div>
+      <div class="price">฿<span data-count="999">999</span><small> / 30 นาที</small></div>
+      <p class="fit">เหมาะกับคนที่มีคำถามอยู่เรื่องเดียว จองครั้งเดียวจบ ไม่ต้องสมัครอะไร</p>
       <ul class="ck">
-        <li><svg><use href="#tick"/></svg>คุณจ่ายค่าคำแนะนำ แค่นั้นจบ</li>
-        <li><svg><use href="#tick"/></svg>ไม่หักค่าคอมจากดีลของคุณเลย สักบาทก็ไม่หัก</li>
-        <li><svg><use href="#tick"/></svg>ไม่รับเงินจากแบรนด์มากดราคาคุณ</li>
+        <li><svg><use href="#tick"/></svg>งานนี้ควรคิดเท่าไหร่ดี</li>
+        <li><svg><use href="#tick"/></svg>สัญญานี้เซ็นได้ไหม</li>
+        <li><svg><use href="#tick"/></svg>ดีลนี้ควรรับไหม</li>
+        <li><svg><use href="#tick"/></svg>คิดราคาจากต้นทุนของคุณ ไม่ใช่จากงบของเขา</li>
       </ul>
-      <h4>คำแนะนำ</h4>
-      <ul class="ck">
-        <li><svg><use href="#tick"/></svg>คุณเห็นทุกอย่างที่เราพูดแทนคุณ</li>
-        <li><svg><use href="#tick"/></svg>ถ้าคำตอบที่ถูกคือ &ldquo;เลิกเถอะ&rdquo; เราจะบอกคุณ</li>
-      </ul>
+      <a class="pbtn" href="contact.html">จองคุย 30 นาที</a>
+      <p class="joke">999 บาทได้ 30 นาที ตกนาทีละ 33 บาทกว่า ๆ คิดคำถามมาก่อนนะ จะได้คุ้ม</p>
     </div>
-    <div class="card vcard tilt-r rv" style="--d:.08s">
-      <h3>คนกลางที่หักเปอร์เซ็นต์</h3>
-      <h4>เขาได้เงินจาก</h4>
+
+    <div class="card plan rv" style="--d:.08s">
+      <div class="pname">สมาชิกรายเดือน</div>
+      <div class="price">฿<span data-count="2000">2,000</span><small> / เดือน</small></div>
+      <p class="fit">เหมาะกับคนที่มีเรื่องใหม่มาให้ปวดหัวทุกอาทิตย์ ส่งงานแล้วแบรนด์เงียบ แก้แล้วแก้อีก หรือมีลูกค้าอยู่เจ้าเดียว</p>
       <ul class="ck">
-        <li><svg><use href="#cross"/></svg>ได้ตอนดีลปิด คุณรับงานเยอะ เขาก็ได้เยอะ</li>
-        <li><svg><use href="#cross"/></svg>หักเปอร์เซ็นต์จากค่าตัวคุณ</li>
-        <li><svg><use href="#cross"/></svg>อยู่ตรงกลางระหว่างคุณกับแบรนด์</li>
+        <li><svg><use href="#tick"/></svg>ได้ทุกอย่างที่เซสชันเดี่ยวมี</li>
+        <li><svg><use href="#tick"/></svg>คุยกัน 45 นาที เดือนละ 2 ครั้ง</li>
+        <li><svg><use href="#tick"/></svg>ทุกอาทิตย์ เราเล่าให้ฟังว่าฝั่งแบรนด์เขาคุยอะไรกัน</li>
+        <li><svg><use href="#tick"/></svg>ทุก 3 เดือน ดูคะแนนตัวเองว่าอยู่ตรงไหน</li>
+        <li><svg><use href="#tick"/></svg>เช็กลิสต์ไว้อ่านสัญญา กับคลังเอกสาร</li>
+        <li><svg><use href="#tick"/></svg>เข้าลิสต์เฟส 3 (กำลังสร้าง) ประตูเข้าคือคะแนนประเมิน</li>
       </ul>
-      <h4>คำแนะนำ</h4>
-      <ul class="ck">
-        <li><svg><use href="#cross"/></svg>&ldquo;รับไปก่อน&rdquo; มักเป็นคำตอบที่ดีกับเขาด้วย</li>
-        <li><svg><use href="#cross"/></svg>ถ้าเขาบอกคุณว่าอย่ารับ เขาก็ไม่ได้เงิน</li>
-      </ul>
+      <a class="pbtn" href="contact.html">สมัครสมาชิก</a>
     </div>
   </div>
 </div></section>
@@ -142,9 +132,15 @@
     <h2 class="rv" style="--d:.06s">เรื่องเงิน ถามมาได้เลย</h2>
   </div>
   <div class="grid2">
-    <div class="card rv"><span class="lb">ได้งานไหม</span>
+    <div class="card rv"><span class="lb">เราได้เงินจากไหน</span>
+      <h3>&ldquo;แล้ว planc* ได้อะไร?&rdquo;</h3>
+      <p>ค่าคำแนะนำ แค่นั้น เราไม่หักเปอร์เซ็นต์จากดีลของคุณ ไม่รับเงินจากแบรนด์ และถ้าคำตอบที่ถูกคือ &ldquo;อย่ารับงานนี้&rdquo; เราก็ได้เท่าเดิม</p></div>
+    <div class="card rv" style="--d:.06s"><span class="lb">ได้งานไหม</span>
       <h3>&ldquo;จ่ายแล้วจะได้งานไหม?&rdquo;</h3>
       <p>เราไม่รับประกันว่าคุณจะได้งาน และเราไม่ได้รับเงินจากใครเพื่อแนะนำชื่อใคร ทั้งฝั่งคุณและฝั่งแบรนด์</p></div>
+    <div class="card rv"><span class="lb">ต้องคุยฟรีก่อนไหม</span>
+      <h3>&ldquo;ซื้อเซสชันเลยได้ไหม ไม่ต้องคุยครั้งแรก?&rdquo;</h3>
+      <p>ได้ แต่แนะนำให้คุยฟรีก่อน เพราะคุยจบเราจะบอกเองว่าคุณควรซื้ออะไร หรือไม่ควรซื้อเลย</p></div>
     <div class="card rv" style="--d:.06s"><span class="lb">ความตรง</span>
       <h3>&ldquo;ถ้าคำตอบคือ ทำเป็นงานเสริมเถอะ ล่ะ?&rdquo;</h3>
       <p>เราจะบอกคุณตรง ๆ และนั่นคือเซสชันที่สำเร็จ ไม่ใช่ล้มเหลว</p></div>
