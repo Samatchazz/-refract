@@ -43,21 +43,27 @@ img{display:block}
 .pl-tag{font-size:.8rem;letter-spacing:.42em;opacity:.55}
 
 /* ---------- chrome ---------- */
-/* nav = แคปซูลลอยอันเดียวทั้งเว็บ (Mat 25 ก.ย.: โลโก้กับเมนูอยู่ชิดกัน, ตัด badge PROTO)
-   กระดาษ/หมึกเสมอ — ในด่านมืดจะเป็นแคปซูลสว่างลอยอยู่ ไม่กลับสีตาม body */
-#nav{position:fixed;top:12px;left:0;right:0;z-index:40;display:flex;justify-content:center;padding:0 12px;
-  pointer-events:none}
-.pill{pointer-events:auto;display:flex;align-items:center;gap:clamp(10px,2.4vw,24px);
-  background:#fcfcfa;color:#111;border:2px solid #111;padding:5px 8px 5px 12px;
-  border-radius:255px 18px 225px 18px/18px 225px 18px 255px;box-shadow:0 6px 24px rgba(17,17,17,.10)}
-.brand{line-height:1;cursor:pointer;background:none;border:0;padding:0;position:relative;
-  color:inherit;width:92px;height:36px;flex:0 0 auto}
+/* nav = แถบเดียวทั้งเว็บ แบบทางการ (Mat 25 ก.ย.: "มันเว็บธุรกิจนะ") — โลโก้ซ้าย
+   เมนูขวาแค่สองอย่าง: เกี่ยวกับเรา + ปุ่มจองคุยครั้งแรก · เส้นตรง ไม่ยึกยือ · สีตาม body
+   (ด่านมืดกลับเป็นขาว) · เลยด่านไปหน้าธุรกิจแล้วเป็นแถบกระดาษทึบ */
+#nav{position:fixed;top:0;left:0;right:0;height:var(--nav-h);z-index:40;
+  display:flex;align-items:center;justify-content:space-between;padding:0 max(18px,4vw);
+  transition:background .3s ease}
+#nav::after{content:'';position:absolute;left:max(18px,4vw);right:max(18px,4vw);bottom:0;height:1px;
+  background:currentColor;opacity:.14}
+.brand{line-height:1;cursor:pointer;background:none;border:0;padding:.3rem .4rem;position:relative;
+  color:inherit;width:110px;height:44px;flex:0 0 auto}
 .brand svg{overflow:visible}   /* the rig draws with currentColor, so dark mode is free */
-.navlk{font-family:'Prompt','Sarabun',sans-serif;font-size:.86rem;text-decoration:none;color:inherit;
-  white-space:nowrap;padding:.2rem .05rem}
-.navlk.go{background:#111;color:#fcfcfa;padding:.4rem 1rem;font-weight:500;
-  border-radius:18px 225px 18px 255px/255px 18px 225px 18px}
-@media (max-width:700px){ .navlk:not(.go){display:none} }
+.navr{display:flex;align-items:center;gap:clamp(16px,3vw,32px)}
+.navlk{font-family:'Prompt','Sarabun',sans-serif;font-weight:500;font-size:.9rem;letter-spacing:.02em;
+  text-decoration:none;color:inherit;white-space:nowrap;opacity:.82;transition:opacity .25s ease}
+.navlk:hover{opacity:1}
+.navlk.go{opacity:1;background:currentColor;padding:.5rem 1.15rem;border-radius:6px}
+.navlk.go span{color:#fcfcfa}
+body.inverted .navlk.go span{color:#111}
+body.past #nav{background:#fcfcfa;color:#111}
+body.past .navlk.go span{color:#fcfcfa}
+@media (max-width:480px){ .brand{width:92px} .navlk{font-size:.84rem} .navlk.go{padding:.42rem .85rem} }
 /* หน้าธุรกิจต่อท้ายด่าน (Mat 25 ก.ย.: เว็บเป็นอันหนึ่งอันเดียว ไม่ใช่ overlay) —
    build-journey.py เทเนื้อหา pages/*.html ลง #pricing #about #contact แล้ว scope CSS ให้
    วางทับ #stage ที่ fixed อยู่ข้างหลัง (z 35 เท่ากับ #end) */
@@ -160,31 +166,46 @@ body.inverted #gear svg{color:var(--paper)}
 #bridgeSvg path{stroke-dasharray:1;stroke-dashoffset:1;transition:stroke-dashoffset .9s var(--ease)}
 body.bridged #bridgeSvg path{stroke-dashoffset:0}
 
-/* death flash + the help screen (Mat 25 ก.ย.): the cat leaps twice and dies,
-   hangs in the air on the third — time stops — and this asks the question */
+/* death flash + the question (Mat 25 ก.ย.): the cat leaps twice and dies, hangs
+   in the air on the third — time stops — and its PHONE lights up with a chat
+   from planc*, same bubbles as the "ยังไม่จ่าย" replies at sign 2. The two
+   answers are the cat's own reply bubbles. Positioned at the phone each frame. */
 #flash{position:fixed;inset:0;background:#111;opacity:0;pointer-events:none;z-index:60}
-/* sits beside the hanging cat, never over it: right of it on desktop, above it on phones */
-#help{position:fixed;inset:0;z-index:45;display:grid;place-items:center end;padding:20px 8vw 20px 20px;
-  opacity:0;visibility:hidden;transition:opacity .5s ease,visibility 0s linear .5s}
-@media (max-width:700px){ #help{place-items:start center;padding-top:9dvh} }
-#help.on{opacity:1;visibility:visible;transition:opacity .5s ease .35s}
-#help .box{background:var(--paper);color:var(--ink);text-align:center;padding:30px 30px 26px;max-width:22rem;
-  border:2px solid var(--ink);border-radius:255px 18px 225px 18px/18px 225px 18px 255px;
-  box-shadow:0 18px 50px rgba(0,0,0,.35);transform:translateY(10px);transition:transform .5s var(--ease)}
-#help.on .box{transform:none}
-#help h3{font-family:'Prompt',sans-serif;font-weight:600;font-size:1.5rem;line-height:1.35}
-#help p{font-size:.92rem;margin-top:.5rem;opacity:.8}
-#help .yes{display:block;margin:1.2rem auto 0;background:var(--ink);color:var(--paper);border:0;cursor:pointer;
-  font-family:'Prompt',sans-serif;font-weight:500;font-size:1.05rem;padding:.8rem 2rem;
-  border-radius:18px 225px 18px 255px/255px 18px 225px 18px}
-#help .no{display:inline-block;margin-top:.9rem;background:none;border:0;cursor:pointer;color:inherit;
-  font-family:inherit;font-size:.85rem;opacity:.6;text-decoration:underline;text-underline-offset:4px}
+#help{position:fixed;left:0;top:0;z-index:45;display:flex;flex-direction:column;align-items:flex-start;gap:7px;
+  visibility:hidden;pointer-events:none}
+#help.on{visibility:visible;pointer-events:auto}
+#help .bub{transition:opacity .35s ease,transform .35s var(--ease);transition-delay:var(--d,0s)}
+#help.on .bub{opacity:1;transform:none}
+#help .from{font-size:.68rem;letter-spacing:.2em;font-weight:700;opacity:.55;margin-bottom:-2px;
+  opacity:0;transition:opacity .3s ease}
+#help.on .from{opacity:.55}
+#help .re{align-self:flex-end;transform-origin:100% 100%;cursor:pointer;font:inherit;font-family:'Sarabun',system-ui,sans-serif;font-weight:600;
+  border:0;background:#111;color:#fcfcfa;box-shadow:0 0 0 1.5px #fcfcfa,0 0 22px rgba(252,252,250,.25)}
+#help .re.no{background:var(--paper);color:#111;box-shadow:0 0 0 1.5px #111,0 0 22px rgba(252,252,250,.3);font-weight:500;opacity:.9}
 /* time stops while the question is up: rain and clouds freeze with the cat */
 body.frozen #rain1,body.frozen #rain2,body.frozen #rain3,body.frozen .cloud{animation-play-state:paused}
 
 /* dark level swap */
 body.inverted{background:var(--ink);color:var(--paper)}
 body.inverted #stage{background:var(--ink)}
+/* the world in colour (Mat 25 ก.ย.): after the dark crossing and the fireworks, the
+   moment the cat catches the flag the whole level turns kid-pastel in ONE pop —
+   every sprite is drawn in currentColor, so colour is a class on body. The cat
+   stays black (it is the logo); the world is what changes. Level-1 = coloured
+   strokes; crayon fill (level 2) is a later pipeline. */
+body.colored{--sky:#dcecfa;--hill:#8fcf9a;--town:#dcb4d4;--cloud:#8ab7e3;--soil:#c48f63;--prop:#e8875f;--sunc:#f4b942}
+body.colored #stage{background:var(--sky)}
+body.colored .decor .hill{color:var(--hill);opacity:.7}
+body.colored .decor .sky{color:var(--town);opacity:.7}
+body.colored .cloud{color:var(--cloud);opacity:.8}
+body.colored .ground,body.colored #gdefs{color:var(--soil)}   /* the ground is pattern-filled: its currentColor comes from the defs svg, not .ground */
+body.colored .wd{color:var(--prop)}
+body.colored #sun{color:var(--sunc)}
+#pop{position:fixed;inset:0;background:#fff;opacity:0;pointer-events:none;z-index:59}
+/* fireworks over the chasm — crayon strokes, screen-space, each burst a pure fn of cur */
+#fw{position:absolute;inset:0;width:100%;height:100%;z-index:5;pointer-events:none;overflow:visible}
+#fw path{fill:none;stroke-width:3.2;stroke-linecap:round;stroke-dasharray:1;stroke-dashoffset:1}
+#fw circle{opacity:0}
 /* rain + thunder — ambient weather for the dark stretch only.
    Time-based like the drifting clouds (same sanctioned category);
    it fades in/out with body.inverted, so scroll still rules. */
@@ -337,13 +358,13 @@ body.bridged #boltFlash,body.bridged #boltShape{animation:none;opacity:0}
   <div class="pl-tag">Aesthetically you</div>
 </div>
 
-<header id="nav"><nav class="pill">
+<header id="nav">
   <button class="brand" id="logoBtn" aria-label="planc* — กลับไปบนสุด"></button>
-  <a class="navlk" href="#pricing">ราคา</a>
-  <a class="navlk" href="#about">เกี่ยวกับเรา</a>
-  <a class="navlk" href="#contact">ติดต่อ</a>
-  <a class="navlk go" href="#contact">จองคุยครั้งแรก</a>
-</nav></header>
+  <nav class="navr">
+    <a class="navlk" href="#about">เกี่ยวกับเรา</a>
+    <a class="navlk go" href="#contact"><span>จองคุยครั้งแรก</span></a>
+  </nav>
+</header>
 
 <main id="stage">
   <div class="layer" id="lSky" data-f="0.12"><div class="decor" id="dHills"></div></div>
@@ -369,6 +390,7 @@ body.bridged #boltFlash,body.bridged #boltShape{animation:none;opacity:0}
   <div id="pcloud"></div>
   <div id="phoneGlow"></div>
   <div id="chat"></div>
+  <svg id="fw" aria-hidden="true"></svg>
 
   <div id="scrollHint" hidden>ไถลงสิ ↓</div>
   <div id="idleHint"><span>ไถ</span><span>ต่อ</span><span>สิ</span><span class="ar">↓</span></div>
@@ -377,12 +399,14 @@ body.bridged #boltFlash,body.bridged #boltShape{animation:none;opacity:0}
 <div id="story"></div>
 <div id="story2"></div>
 <div id="flash"></div>
-<div id="help" role="dialog" aria-labelledby="helpQ"><div class="box">
-  <h3 id="helpQ">ให้ planc* ช่วยไหม</h3>
-  <p>ไม่ต้องข้ามคนเดียวก็ได้นะ</p>
-  <button class="yes" id="helpYes">ช่วยหน่อย</button>
-  <button class="no" id="helpNo">ขอลองเองอีกที</button>
-</div></div>
+<div id="help" role="dialog" aria-labelledby="helpQ">
+  <div class="from">planc*</div>
+  <div class="bub" id="helpQ">ให้ planc* ช่วยไหม</div>
+  <div class="bub" style="--d:.5s">ไม่ต้องข้ามคนเดียวก็ได้นะ</div>
+  <button class="bub re" id="helpYes" style="--d:1.2s">ช่วยหน่อย</button>
+  <button class="bub re no" id="helpNo" style="--d:1.5s">ขอลองเองอีกที</button>
+</div>
+<div id="pop"></div>
 <div id="spacer"></div>
 
 <footer id="end"><div class="in">
@@ -1383,7 +1407,7 @@ function sprite(id, cls){
 /* ---- ground patterns: same Yoshi treatment as the main site ---- */
 (function(){
   const svg=document.createElementNS(NS,'svg');
-  svg.setAttribute('width',0);svg.setAttribute('height',0);svg.style.position='absolute';
+  svg.setAttribute('width',0);svg.setAttribute('height',0);svg.style.position='absolute';svg.id='gdefs';
   const defs=document.createElementNS(NS,'defs');
   const top=document.createElementNS(NS,'pattern');
   top.id='gTop';top.setAttribute('patternUnits','userSpaceOnUse');
@@ -1692,6 +1716,7 @@ function layout(){
 
   decorate();
   buildSky();
+  buildFireworks();
 }
 
 /* ---- background decor: hills / skyline / clouds / moon ---- */
@@ -1894,6 +1919,39 @@ function death(cur){
   return {fallY,fallX,flashO,blink};
 }
 
+/* fireworks a third of the way across the rainbow (Mat 25 ก.ย.): six crayon
+   bursts in the dark sky, staggered in scroll — each stroke draws out from the
+   centre as its burst opens, fades as it closes; scrub back and they fold in */
+const FW=[[.24,.30,'#e5484d'],[.62,.20,'#ffe14d'],[.44,.40,'#3f9cf0'],[.80,.32,'#46c56f'],[.34,.16,'#f5a524'],[.70,.46,'#8a63d2']];
+const FW0=GAP[0]+(GAP[1]-GAP[0])/3, FWGAP=(GAP[1]-GAP[0])*0.045, FWLEN=(GAP[1]-GAP[0])*0.10;
+let fwB=[];
+function buildFireworks(){
+  const svg=document.getElementById('fw');svg.replaceChildren();fwB=[];
+  FW.forEach(([fx,fy,col],i)=>{
+    const cx=fx*innerWidth,cy=fy*innerHeight,R=Math.min(innerWidth,innerHeight)*(0.10+(i%3)*0.025);
+    const g=document.createElementNS(NS,'g');
+    let d='';
+    for(let j=0;j<14;j++){
+      const a=j/14*Math.PI*2+i*0.4, r=R*(0.8+((j*7)%5)*0.05);
+      const mx=cx+Math.cos(a)*r*0.5+Math.sin(a*3)*4, my=cy+Math.sin(a)*r*0.5+Math.cos(a*3)*4;
+      d+='M'+cx.toFixed(0)+' '+cy.toFixed(0)+' Q'+mx.toFixed(0)+' '+my.toFixed(0)+' '+(cx+Math.cos(a)*r).toFixed(0)+' '+(cy+Math.sin(a)*r).toFixed(0);
+    }
+    g.innerHTML='<circle cx="'+cx+'" cy="'+cy+'" r="'+(R*1.15)+'" fill="'+col+'"/><path d="'+d+'" stroke="'+col+'" pathLength="1"/>';
+    svg.appendChild(g);fwB.push({g,c:g.firstChild,p:g.lastChild,p0:FW0+i*FWGAP});
+  });
+}
+function fireworks(cur){
+  if(!fwB.length)return;
+  fwB.forEach(b=>{
+    const k=(cur-b.p0)/FWLEN;
+    if(k<=0||k>=1||!bridged){b.g.style.display='none';return;}
+    b.g.style.display='';
+    b.p.style.strokeDashoffset=(1-Math.min(1,k*1.5)).toFixed(3);
+    b.p.style.opacity=(k<0.6?1:(1-k)/0.4).toFixed(2);
+    b.c.style.opacity=(Math.sin(k*Math.PI)*0.09).toFixed(3);
+  });
+}
+
 let cur=0,curS=0,last=0,prevT=performance.now(),phase=0,v=0,lastKbW=0;
 const jumps=JUMPS();
 /* the lock: the story will not move past the chasm until the logo is
@@ -2058,8 +2116,15 @@ function frame(now){
   // clears as the cat steps onto the rainbow
   // (the rain itself stops at the tap — body.bridged — the sky clears a
   // few steps onto the rainbow)
-  const storm=cur>DARK[0]&&!(bridged&&cur>GAP[0]+0.015);
+  // (Mat 25 ก.ย.: the sky stays dark for the whole crossing — the fireworks
+  // need it — and the world turns to colour the instant the flag is caught)
+  const storm=cur>DARK[0]&&!(bridged&&cur>=POLE_P);
+  const colored=bridged&&cur>=POLE_P;
   document.body.classList.toggle('inverted',storm);
+  document.body.classList.toggle('colored',colored);
+  { const k=(cur-POLE_P)/0.004;   // one white pop as the colour lands
+    document.getElementById('pop').style.opacity=(colored&&k<1?Math.sin(k*Math.PI)*0.85:0).toFixed(2); }
+  fireworks(cur);
 
   document.getElementById('rain3').style.opacity=(heavy*0.75).toFixed(2);
 
@@ -2188,7 +2253,12 @@ function frame(now){
   // the phone lights the cat's face while it waits, and it is the only
   // light left once the city goes dark
   const bk=storm?smooth((cur-BLACK)/0.015):0;
-  const pgOp=Math.max(chatOn?Math.min(1,Math.min(hold2k,1-hold2k)*8)*0.85:0,bk*0.9);
+  const pgOp=Math.max(chatOn?Math.min(1,Math.min(hold2k,1-hold2k)*8)*0.85:0,bk*0.9,(held&&frozen)?0.95:0);
+  // the question arrives on the phone: bubbles above the frozen cat, kept on screen
+  if(held&&frozen){
+    const hx=Math.min(cw.right-cw.width*0.18,innerWidth-help.offsetWidth-10);
+    help.style.transform='translate3d('+hx.toFixed(0)+'px,'+(cw.top-help.offsetHeight-6).toFixed(0)+'px,0)';
+  }
   pg.style.opacity=pgOp.toFixed(2);
   if(pgOp>0)pg.style.transform='translate3d('+(cw.right-cw.width*0.42-55).toFixed(0)+'px,'+
     (cw.top+cw.height*0.42-55).toFixed(0)+'px,0)';
@@ -2270,7 +2340,7 @@ function frame(now){
   // sun: smiles through the good times, hides for the whole storm, and
   // comes back out once the bridge has been called
   const sOp=clamp01((cur-0.015)/0.012)*(1-clamp01((cur-(DARK[0]-0.006))/0.008))
-           +(bridged?clamp01((cur-(GAP[0]+0.03))/0.02):0);
+           +(colored?1:0);
   sky.sun.style.opacity=Math.min(1,sOp).toFixed(2);
   sky.sunUses[0].setAttribute('opacity',1);
   sky.sunUses[1].setAttribute('opacity',0);

@@ -28,11 +28,16 @@ async function run(name, w, h) {
   await pg.click('#helpYes'); await pg.waitForTimeout(1500);
   const bridged = await pg.evaluate(() => document.body.classList.contains('bridged'));
   await shot(pg, `${name}-4-bridged`);
-  await pg.evaluate(v => scrollTo(0, v), Math.round(0.86 * S)); await pg.waitForTimeout(1200);
+  await pg.evaluate(v => scrollTo(0, v), Math.round(0.87 * S)); await pg.waitForTimeout(1200);
   await shot(pg, `${name}-5-cross`);
+  await pg.evaluate(v => scrollTo(0, v), Math.round(0.885 * S)); await pg.waitForTimeout(1200);
+  await shot(pg, `${name}-5b-fireworks`);
+  await pg.evaluate(v => scrollTo(0, v), Math.round(1.012 * S)); await pg.waitForTimeout(1500);
+  const colored = await pg.evaluate(() => document.body.classList.contains('colored'));
+  await shot(pg, `${name}-5c-color`);
   // into the business pages
   for (const id of ['pricing', 'about', 'contact']) {
-    await pg.evaluate(i => document.querySelector(`a.navlk[href="#${i}"]`).click(), id);
+    await pg.evaluate(i => { const a = document.querySelector(`a.navlk[href="#${i}"]`); a ? a.click() : scrollTo(0, document.getElementById(i).offsetTop); }, id);
     await pg.waitForTimeout(1500);
     await shot(pg, `${name}-6-${id}`);
   }
@@ -45,7 +50,7 @@ async function run(name, w, h) {
   // back to the top via the logo
   await pg.click('#logoBtn'); await pg.waitForTimeout(1200);
   const y0 = await pg.evaluate(() => scrollY);
-  console.log(name, { asking, askAgain, bridged, past, stageVis, counts, y0, errors: errs.length ? errs.join(' | ') : 'NONE' });
+  console.log(name, { asking, askAgain, bridged, colored, past, stageVis, counts, y0, errors: errs.length ? errs.join(' | ') : 'NONE' });
   await pg.close();
 }
 await run('d', 1440, 900);
@@ -54,7 +59,7 @@ await run('m', 390, 844);
 // skip test: fresh page, jump straight to pricing from the nav, then scroll back up — no snap to the cliff
 const pg = await browser.newPage({ viewport: { width: 1440, height: 900 } });
 await pg.goto(F); await pg.waitForTimeout(3000);
-await pg.evaluate(() => document.querySelector('a.navlk[href="#pricing"]').click()); await pg.waitForTimeout(1500);
+await pg.evaluate(() => document.querySelector('a.navlk[href="#about"]').click()); await pg.waitForTimeout(1500);
 const skipBridged = await pg.evaluate(() => document.body.classList.contains('bridged'));
 await pg.evaluate(v => scrollTo(0, v), Math.round(0.90 * S)); await pg.waitForTimeout(1500);
 const yBack = await pg.evaluate(() => scrollY);
