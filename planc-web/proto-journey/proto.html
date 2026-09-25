@@ -201,6 +201,9 @@ body.colored .cloud{color:var(--cloud);opacity:.8}
 body.colored .ground,body.colored #gdefs{color:var(--soil)}   /* the ground is pattern-filled: its currentColor comes from the defs svg, not .ground */
 body.colored .wd{color:var(--prop)}
 body.colored #sun{color:var(--sunc)}
+.wd .fill{fill:none}
+body.colored .wd .fill{fill:#e5484d}   /* the flag goes solid red; its ink stays black on top */
+body.colored .wd:has(.fill){color:#111}
 #pop{position:fixed;inset:0;background:#fff;opacity:0;pointer-events:none;z-index:59}
 /* fireworks over the chasm — crayon strokes, screen-space, each burst a pure fn of cur */
 #fw{position:absolute;inset:0;width:100%;height:100%;z-index:5;pointer-events:none;overflow:visible}
@@ -473,6 +476,7 @@ body.bridged #boltFlash,body.bridged #boltShape{animation:none;opacity:0}
    S5 out    0.94–1.0   Aesthetically-you beat, then the closing panel  */
 const S = 12500;                   // scroll px mapped to 0..1 (slower)
 const NS = 'http://www.w3.org/2000/svg';
+const FLAG_SIL='M175 0 L123 9 L96 17 L3 26 L0 35 L0 44 L0 52 L3 61 L3 70 L3 79 L3 87 L6 96 L6 105 L6 114 L6 122 L6 131 L6 140 L6 149 L6 157 L6 166 L6 175 L9 184 L9 192 L12 201 L12 210 L12 219 L12 227 L15 236 L15 245 L15 254 L15 262 L15 271 L18 280 L18 289 L18 297 L20 306 L20 315 L20 323 L23 332 L23 341 L23 350 L26 358 L26 367 L26 376 L29 385 L32 393 L32 402 L32 411 L32 420 L35 428 L35 437 L35 446 L35 455 L35 463 L35 472 L35 481 L38 490 L38 498 L38 507 L38 516 L38 525 L41 533 L44 542 L47 551 L53 560 L55 560 L595 551 L595 542 L595 533 L593 525 L593 516 L590 507 L590 498 L590 490 L590 481 L590 472 L590 463 L593 455 L593 446 L593 437 L595 428 L595 420 L598 411 L598 402 L598 393 L601 385 L598 376 L601 367 L604 358 L607 350 L610 341 L610 332 L613 323 L616 315 L616 306 L619 297 L619 289 L622 280 L625 271 L628 262 L630 254 L630 245 L633 236 L636 227 L636 219 L639 210 L642 201 L645 192 L645 184 L648 175 L651 166 L651 157 L654 149 L657 140 L660 131 L663 122 L666 114 L668 105 L671 96 L674 87 L677 79 L680 70 L683 61 L689 52 L698 44 L645 35 L517 26 L447 17 L379 9 L257 0 Z';
 const FALL = .042;                 // the cat drifts down from the sky, lands here
 const TR = [ {p:FALL, t:'เราเป็นอินฟลู', cat:true, big:true},   // pops from the landing, not a box
              {p:.095, t:'เราทำคอนเทนต์'},
@@ -818,6 +822,9 @@ function layout(){
     (poleX-pW/2).toFixed(0)+'px;width:'+pW.toFixed(0)+'px;height:'+pH.toFixed(0)+'px;z-index:4';
   world.appendChild(poleEl);
   flagEl=sprite('flag','wd');
+  // solid flag (Mat 26 ก.ย.): the sprite is ink only, so a traced silhouette of it
+  // (tools/flag-silhouette.json) sits behind the ink and takes the fill in colour mode
+  flagEl.insertAdjacentHTML('afterbegin','<path class="fill" d="'+FLAG_SIL+'"/>');
   const fW=Math.min(120,Math.max(64,innerWidth*0.09)), fH=fW/flagEl.__ar;
   flagEl.style.cssText='position:absolute;bottom:calc(var(--ground-h) + '+(pH-fH-6).toFixed(0)+
     'px);left:'+(poleX+pW*0.3).toFixed(0)+'px;width:'+fW.toFixed(0)+'px;height:'+fH.toFixed(0)+
