@@ -204,8 +204,7 @@ body.colored #sun{color:var(--sunc)}
 #pop{position:fixed;inset:0;background:#fff;opacity:0;pointer-events:none;z-index:59}
 /* fireworks over the chasm — crayon strokes, screen-space, each burst a pure fn of cur */
 #fw{position:absolute;inset:0;width:100%;height:100%;z-index:5;pointer-events:none;overflow:visible}
-#fw path{fill:none;stroke-width:3.2;stroke-linecap:round;stroke-dasharray:1;stroke-dashoffset:1}
-#fw circle{opacity:0}
+#fw path{stroke-linecap:round;stroke-linejoin:round}
 /* rain + thunder — ambient weather for the dark stretch only.
    Time-based like the drifting clouds (same sanctioned category);
    it fades in/out with body.inverted, so scroll still rules. */
@@ -1919,37 +1918,58 @@ function death(cur){
   return {fallY,fallX,flashO,blink};
 }
 
-/* fireworks a third of the way across the rainbow (Mat 25 ก.ย.): six crayon
-   bursts in the dark sky, staggered in scroll — each stroke draws out from the
-   centre as its burst opens, fades as it closes; scrub back and they fold in */
+/* fireworks a third of the way across the rainbow (Mat 25 ก.ย.; style ก. "peony
+   ดินสอสี" picked 26 ก.ย. from tools/fw-lab.html): each one is a pure fn of scroll —
+   a dotted rocket trail climbs from the ground (first 30%), then the break: 16
+   crayon rays that start OFF the centre, uneven lengths, a dot at every tip, a few
+   loose sparks outside, and the whole thing sags and fades. No glow disc. */
 const FW=[[.24,.30,'#e5484d'],[.62,.20,'#ffe14d'],[.44,.40,'#3f9cf0'],[.80,.32,'#46c56f'],[.34,.16,'#f5a524'],[.70,.46,'#8a63d2']];
-const FW0=GAP[0]+(GAP[1]-GAP[0])/3, FWGAP=(GAP[1]-GAP[0])*0.045, FWLEN=(GAP[1]-GAP[0])*0.10;
+const FW0=GAP[0]+(GAP[1]-GAP[0])/3, FWGAP=(GAP[1]-GAP[0])*0.05, FWLEN=(GAP[1]-GAP[0])*0.12;
 let fwB=[];
+function seeded(i){let s=i*9301+49297;return()=>{s=(s*9301+49297)%233280;return s/233280}}
 function buildFireworks(){
   const svg=document.getElementById('fw');svg.replaceChildren();fwB=[];
+  const gy=innerHeight*(1-0.22)+2;   // the ground line (--ground-h = 22dvh)
   FW.forEach(([fx,fy,col],i)=>{
-    const cx=fx*innerWidth,cy=fy*innerHeight,R=Math.min(innerWidth,innerHeight)*(0.10+(i%3)*0.025);
-    const g=document.createElementNS(NS,'g');
-    let d='';
-    for(let j=0;j<14;j++){
-      const a=j/14*Math.PI*2+i*0.4, r=R*(0.8+((j*7)%5)*0.05);
-      const mx=cx+Math.cos(a)*r*0.5+Math.sin(a*3)*4, my=cy+Math.sin(a)*r*0.5+Math.cos(a*3)*4;
-      d+='M'+cx.toFixed(0)+' '+cy.toFixed(0)+' Q'+mx.toFixed(0)+' '+my.toFixed(0)+' '+(cx+Math.cos(a)*r).toFixed(0)+' '+(cy+Math.sin(a)*r).toFixed(0);
+    const r=seeded(i*7+1), cx=fx*innerWidth, cy=fy*innerHeight, R=Math.min(innerWidth,innerHeight)*(0.10+(i%3)*0.02);
+    const g=document.createElementNS(NS,'g'); g.style.display='none';
+    const mk=(n,at)=>{const e=document.createElementNS(NS,n);for(const k in at)e.setAttribute(k,at[k]);g.appendChild(e);return e;};
+    const trail=[];for(let j=0;j<9;j++)trail.push(mk('circle',{fill:col,r:1.6+j/8*1.2,opacity:.25+.6*j/8}));
+    const head=mk('circle',{fill:'#fcfcfa',r:3.6});
+    const rays=[];for(let j=0;j<16;j++){
+      const a=j/16*Math.PI*2+r()*0.3, L=R*(0.6+r()*0.5), gap=R*(0.2+r()*0.14), w=r()*8-4;
+      rays.push({a,L,gap,w,p:mk('path',{fill:'none',stroke:col,'stroke-width':3.4}),d:mk('circle',{fill:col,r:2.8})});
     }
-    g.innerHTML='<circle cx="'+cx+'" cy="'+cy+'" r="'+(R*1.15)+'" fill="'+col+'"/><path d="'+d+'" stroke="'+col+'" pathLength="1"/>';
-    svg.appendChild(g);fwB.push({g,c:g.firstChild,p:g.lastChild,p0:FW0+i*FWGAP});
+    const sparks=[];for(let j=0;j<7;j++)sparks.push({a:r()*6.28,d:R*(1.15+r()*0.35),c:mk('circle',{fill:col,r:1.8})});
+    svg.appendChild(g);fwB.push({g,cx,cy,gy,trail,head,rays,sparks,p0:FW0+i*FWGAP});
   });
 }
 function fireworks(cur){
-  if(!fwB.length)return;
-  fwB.forEach(b=>{
-    const k=(cur-b.p0)/FWLEN;
-    if(k<=0||k>=1||!bridged){b.g.style.display='none';return;}
-    b.g.style.display='';
-    b.p.style.strokeDashoffset=(1-Math.min(1,k*1.5)).toFixed(3);
-    b.p.style.opacity=(k<0.6?1:(1-k)/0.4).toFixed(2);
-    b.c.style.opacity=(Math.sin(k*Math.PI)*0.09).toFixed(3);
-  });
+  for(const f of fwB){
+    const k=(cur-f.p0)/FWLEN;
+    if(k<=0||k>=1||!bridged){f.g.style.display='none';continue;}
+    f.g.style.display='';
+    const kr=clamp01(k/0.3), rising=kr<1;
+    // the climb: a wobbly dotted trail up from the ground, bright head on top
+    const hy=f.gy-(f.gy-f.cy)*smooth(kr);
+    f.trail.forEach((c,j)=>{const t=j/8, yy=f.gy-(f.gy-hy)*t;
+      c.setAttribute('cx',(f.cx+Math.sin(t*9)*3).toFixed(1));c.setAttribute('cy',yy.toFixed(1));c.style.opacity=rising?'':'0';});
+    f.head.setAttribute('cx',f.cx);f.head.setAttribute('cy',hy.toFixed(1));f.head.style.opacity=rising?'':'0';
+    // the break: rays grow out, tips get their dot, everything sags and fades
+    const b=clamp01((k-0.3)/0.7), o=b<0.65?1:(1-b)/0.35, grow=Math.min(1,b*1.6), sag=b*b*22;
+    for(const ry of f.rays){
+      const x0=f.cx+Math.cos(ry.a)*ry.gap, y0=f.cy+Math.sin(ry.a)*ry.gap;
+      const x1=f.cx+Math.cos(ry.a)*(ry.gap+ry.L*grow), y1=f.cy+Math.sin(ry.a)*(ry.gap+ry.L*grow)+sag;
+      const mx=(x0+x1)/2+Math.cos(ry.a+1.57)*ry.w, my=(y0+y1)/2+Math.sin(ry.a+1.57)*ry.w;
+      ry.p.setAttribute('d',b>0?'M'+x0.toFixed(1)+' '+y0.toFixed(1)+' Q'+mx.toFixed(1)+' '+my.toFixed(1)+' '+x1.toFixed(1)+' '+y1.toFixed(1):'M0 0');
+      ry.p.style.opacity=(b>0?o:0).toFixed(2);
+      ry.d.setAttribute('cx',(x1+Math.cos(ry.a)*5).toFixed(1));ry.d.setAttribute('cy',(y1+Math.sin(ry.a)*5).toFixed(1));
+      ry.d.style.opacity=(o*clamp01((b-0.35)/0.2)).toFixed(2);
+    }
+    for(const sp of f.sparks){const d=sp.d*Math.min(1,b*1.4);
+      sp.c.setAttribute('cx',(f.cx+Math.cos(sp.a)*d).toFixed(1));sp.c.setAttribute('cy',(f.cy+Math.sin(sp.a)*d+b*b*30).toFixed(1));
+      sp.c.style.opacity=(b>0?(b<0.7?0.9:(1-b)/0.3*0.9):0).toFixed(2);}
+  }
 }
 
 let cur=0,curS=0,last=0,prevT=performance.now(),phase=0,v=0,lastKbW=0;
