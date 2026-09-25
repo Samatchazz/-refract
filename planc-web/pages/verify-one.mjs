@@ -20,10 +20,10 @@ async function run(name, w, h) {
   // the wall: 2 deaths then freeze → the question
   await pg.evaluate(v => scrollTo(0, v), Math.round(0.80 * S)); await pg.waitForTimeout(1500);
   await shot(pg, `${name}-2-wall`);
-  await pg.waitForTimeout(6000);
+  await pg.waitForTimeout(8500);
   const asking = await pg.evaluate(() => document.getElementById('help').classList.contains('on'));
   await shot(pg, `${name}-3-ask`);
-  await pg.click('#helpNo'); await pg.waitForTimeout(3600);
+  await pg.click("#helpNo"); await pg.waitForTimeout(5400);
   const askAgain = await pg.evaluate(() => document.getElementById('help').classList.contains('on'));
   await pg.click('#helpYes'); await pg.waitForTimeout(1500);
   const bridged = await pg.evaluate(() => document.body.classList.contains('bridged'));

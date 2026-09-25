@@ -1824,9 +1824,9 @@ const catW=document.getElementById('catW'),catL=document.getElementById('catL'),
       scrollHint=document.getElementById('scrollHint'),
       logo=document.getElementById('logoBtn');
 
-/* the ending (Mat 25 ก.ย.): the cat leaps and dies twice on a clock, the third
-   leap freezes at its apex and the screen asks "ให้ planc* ช่วยไหม" — "ช่วยหน่อย"
-   calls the bridge; "ขอลองเองอีกที" gives one more death, then asks again */
+/* the ending (Mat 25–26 ก.ย.): the cat leaps and dies twice on a clock, comes back
+   to the ledge and stands there; its phone lights up and the chat asks "ให้ planc*
+   ช่วยไหม" — "ช่วยหน่อย" calls the bridge; "ขอลองเองอีกที" = one more death, then asks again */
 let bridged=false,bridgeAt=0,frozen=false,retries=0,frozenY=0,frozenX=0;
 function callBridge(){
   if(bridged)return;
@@ -2079,9 +2079,10 @@ function frame(now){
   // held at the wall: replay the doomed leap on a clock until the tap
   const held=!bridged&&cur>LOCKP-0.003;
   if(held){
-    // two full leaps end in the gap; the third stops at the top of its arc
-    // (0.075 of a cycle = death()'s apex) and hangs there until answered
-    const FREEZE=(retries?1:2)*CYCLE+0.075*CYCLE;
+    // two full leaps end in the gap; then the cat is back on the ledge, standing
+    // (0.72 of a cycle = respawn blink over) — it stays put, panting, until answered
+    // (Mat 26 ก.ย.: ข. ยืนที่ขอบ — no more hanging mid-air)
+    const FREEZE=(retries?1:2)*CYCLE+0.72*CYCLE;
     loopMs=Math.min(loopMs+dt*16.667,FREEZE);
     frozen=loopMs>=FREEZE;
     const d2=death(DIE+((loopMs%CYCLE)/CYCLE)*0.05);   // 2/3 action, 1/3 breath
@@ -2118,7 +2119,7 @@ function frame(now){
 
   catW.style.transform='translate3d('+(fallX+kbX).toFixed(1)+'px,'+(jy+bob+fallY+kbY-lift+drop+bnc+poleY).toFixed(2)+'px,0)';
   catL.style.transform='rotate('+(Math.sin(phase*2)*2.2*v+kbRot+look*7+heavy*6).toFixed(2)+'deg)';
-  const sq=air?1.06:1-(0.085*(1-step))*v;
+  const sq=(air?1.06:1-(0.085*(1-step))*v)+((held&&frozen)?Math.sin(now/170)*0.025:0);   // panting at the edge while the phone asks
   catS.style.transform='scale('+(-size*(2-sq)*(1+lsq*0.7)).toFixed(3)+','+(size*sq*(1-lsq)).toFixed(3)+')';
   catS.style.opacity=blink;
   shadow.style.transform='translate3d('+(fallX+kbX).toFixed(1)+'px,'+(-lift).toFixed(1)+'px,0) scale('+size+','+size+')';
@@ -2377,7 +2378,6 @@ function frame(now){
   // wakes up and goes rainbow while the bridge is in play
   const asking=held&&frozen;
   help.classList.toggle('on',asking);
-  document.body.classList.toggle('frozen',asking);
   logo.classList.toggle('rainbow',asking||(bridged&&cur>GAP[0]-0.02&&cur<GAP[1]+0.02));
   if(asking){ navRig.open(); wasNeed=true; }
   else if(wasNeed){ wasNeed=false; navRig.sleep(); }
