@@ -61,13 +61,13 @@ img{display:block}
 .navlk.go{opacity:1;background:currentColor;padding:.5rem 1.15rem;border-radius:6px}
 .navlk.go span{color:#fcfcfa}
 body.inverted .navlk.go span{color:#111}
-body.past #nav{background:#fcfcfa;color:#111}
-body.past .navlk.go span{color:#fcfcfa}
+body.navp #nav{background:#fcfcfa;color:#111}
+body.navp .navlk.go span{color:#fcfcfa}
 @media (max-width:480px){ .brand{width:92px} .navlk{font-size:.84rem} .navlk.go{padding:.42rem .85rem} }
 /* หน้าธุรกิจต่อท้ายด่าน (Mat 25 ก.ย.: เว็บเป็นอันหนึ่งอันเดียว ไม่ใช่ overlay) —
-   build-journey.py เทเนื้อหา pages/*.html ลง #pricing #about #contact แล้ว scope CSS ให้
-   วางทับ #stage ที่ fixed อยู่ข้างหลัง (z 35 เท่ากับ #end) */
-#pricing,#about,#contact{position:relative;z-index:35;background:#fcfcfa;color:#111}
+   build-journey.py เทเนื้อหา pages/one.html (ทิศ Bürocratik, 28 ก.ย.) ลง #biz แล้ว scope CSS ให้
+   เลื่อนขึ้นมาทับ #stage ที่ fixed อยู่ข้างหลัง — ไม่มีกล่องดำคั่นแล้ว */
+#biz{position:relative;z-index:35;background:#fcfcfa;color:#111}
 /* เลยด่านไปแล้ว: ซ่อนเวทีเกม (ฝน/เมฆหยุด composite — ไม่กิน CPU ตอนอ่านหน้าธุรกิจ) */
 body.past #stage,body.past #idleHint{visibility:hidden}
 /* the logo goes rainbow when the story needs you — the rig's own ink
@@ -343,14 +343,6 @@ body.bridged #boltFlash,body.bridged #boltShape{animation:none;opacity:0}
 }
 
 #spacer{display:block}
-#end{position:relative;z-index:35;background:var(--ink);color:var(--paper);padding:14dvh max(18px,4vw) 12dvh}
-#end .in{max-width:60rem;margin:0 auto}
-#end .ek{font-size:.68rem;letter-spacing:.34em;opacity:.6;font-weight:600}
-#end h2{font-family:'Prompt',sans-serif;font-size:clamp(1.9rem,6.4vw,3.6rem);font-weight:800;line-height:1.3;margin-top:.6rem}
-#end p{margin-top:1rem;max-width:36rem;line-height:1.75}
-#end .cta{background:var(--paper);color:var(--ink);margin-top:1.6rem;
-  border-radius:255px 15px 225px 15px/15px 225px 15px 255px}
-#end .fine{font-size:.9rem;margin-top:1rem;opacity:.8}
 </style>
 </head>
 <body>
@@ -363,8 +355,8 @@ body.bridged #boltFlash,body.bridged #boltShape{animation:none;opacity:0}
 <header id="nav">
   <button class="brand" id="logoBtn" aria-label="planc* — กลับไปบนสุด"></button>
   <nav class="navr">
-    <a class="navlk" href="../pages/about.html">เกี่ยวกับเรา</a>
-    <a class="navlk go" href="../pages/contact.html"><span>จองคุยครั้งแรก</span></a>
+    <a class="navlk" href="../pages/one.html#about">เกี่ยวกับเรา</a>
+    <a class="navlk go" href="../pages/one.html#contact"><span>จองคุยครั้งแรก</span></a>
   </nav>
 </header>
 
@@ -411,43 +403,16 @@ body.bridged #boltFlash,body.bridged #boltShape{animation:none;opacity:0}
 <div id="pop"></div>
 <div id="spacer"></div>
 
-<footer id="end"><div class="in">
-  <div class="ek">CLARITY, NOT HOPE</div>
-  <h2>เราไม่ได้ขายความหวัง<br>เราขายความชัดเจน</h2>
-  <p>บางคนเดินออกไปพร้อมแผน 90 วัน บางคนเดินออกไปพร้อมข้อสรุปว่าควรทำเป็นงานเสริม —
-  ทั้งสองแบบคือคำตอบที่ใช้ได้ และคุณจะได้ยินอันที่จริง ไม่ใช่อันที่ฟังสบายใจ</p>
-  <a class="cta" href="../pages/contact.html">จองคุยครั้งแรก — ไม่มีค่าใช้จ่าย</a>
-  <p class="fine">มีการบ้าน 5 นาทีก่อนคุย · เราไม่รับประกันว่าคุณจะได้งาน</p>
-</div></footer>
-
-<section id="pricing" aria-label="ราคา"><!--PRICING--></section>
-<section id="about" aria-label="เกี่ยวกับเรา"><!--ABOUT--></section>
-<section id="contact" aria-label="ติดต่อ"><!--CONTACT--></section>
+<section id="biz" aria-label="planc* — ที่ปรึกษาของคนทำคอนเทนต์"><!--BIZ--></section>
+<script src="../pages/one.js"></script>
 <script>
-/* หน้าธุรกิจต่อท้ายด่านในหน้าเดียว: ลิงก์ # = กระโดดในหน้า (ไม่ smooth — ไม่งั้นด่าน
-   จะเล่นเร็วให้ดู 12,000px) · การ์ดขึ้นทีละใบตอนเลื่อนถึง · เลขนับขึ้น */
+/* ลิงก์ # = กระโดดในหน้า (ไม่ smooth — ไม่งั้นด่านจะเล่นเร็วให้ดู 12,000px) */
 (function(){
-  const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
-  function countUp(el){
-    const target = +el.dataset.count, t0 = performance.now(), dur = 850;
-    (function tick(t){
-      const k = Math.min(1, (t - t0) / dur), e = 1 - Math.pow(1 - k, 3);
-      el.textContent = Math.round(target * e).toLocaleString('en-US');
-      if (k < 1) requestAnimationFrame(tick);
-    })(t0);
-  }
-  const io = new IntersectionObserver(es => es.forEach(en => {
-    if (!en.isIntersecting) return;
-    en.target.classList.add('on');
-    if (!reduced) en.target.querySelectorAll('[data-count]').forEach(countUp);
-    io.unobserve(en.target);
-  }), { threshold: 0.18 });
-  document.querySelectorAll('.rv').forEach(el => io.observe(el));
   function jump(id){
     if (id === 'journey') { scrollTo(0, 0); return true; }
     const el = document.getElementById(id);
     if (!el) return false;
-    scrollTo(0, el.getBoundingClientRect().top + scrollY - 8);
+    scrollTo(0, el.getBoundingClientRect().top + scrollY - 56);   /* เว้นที่ให้แถบ nav */
     return true;
   }
   /* ดักคลิกเอง — ในพรีวิว sandbox ของแชท ลิงก์ # จะพาออกไป URL ของ sandbox แทน */
@@ -585,7 +550,8 @@ function layout(){
   STRIKE = P5 + (gW/travel)*0.45; BLACK = STRIKE + 0.005;
   P4 = P5 - 0.055; P3 = P4 - 0.055; GUST = P3 + 0.005; DRONE_HIT = P3 + 0.03;
   world.style.width=(travel+innerWidth)+'px';
-  document.getElementById('spacer').style.height=(S*(1+HOLD2)+innerHeight*2)+'px';
+  document.getElementById('spacer').style.height=(S*(1+HOLD2)+innerHeight*1.35)+'px';
+  bizTop=document.getElementById('biz').offsetTop;
   layers=[...document.querySelectorAll('.layer')].map(el=>({el,f:+el.dataset.f}));
   layers.forEach(L=>L.el.style.width=(travel*L.f+innerWidth*2)+'px');
 
@@ -1092,6 +1058,7 @@ function fireworks(cur){
   }
 }
 
+let bizTop=1e9;
 let cur=0,curS=0,last=0,prevT=performance.now(),phase=0,v=0,lastKbW=0;
 const jumps=JUMPS();
 /* the lock: the story will not move past the chasm until the logo is
@@ -1106,9 +1073,14 @@ function frame(now){
   const dt=Math.min(3,Math.max(.2,(now-prevT)/16.667));prevT=now;
   // past the level = the business pages. Jumping there from the nav counts
   // as having crossed (scrolling back up must not snap to the cliff)
-  const pastEnd=scrollY>S*(1+HOLD2)+innerHeight;
+  const pastEnd=scrollY>S*(1+HOLD2)+innerHeight*0.5;
+  // the business part slides up OVER the finished level (Büro-style hand-over): the
+  // stage stays on screen until it is fully covered, the nav turns to paper as the
+  // sheet passes under it
+  const covered=scrollY>=bizTop-1;
+  document.body.classList.toggle('navp',scrollY>=bizTop-58);
   if(pastEnd&&!bridged){ bridged=true;bridgeAt=0;document.body.classList.add('bridged');help.classList.remove('on'); }
-  document.body.classList.toggle('past',pastEnd);
+  document.body.classList.toggle('past',covered);
   // the scroll wall sits HOLD2 further down the page than the world
   // progress says, because sign 2 ate that much scroll standing still
   if(!bridged&&scrollY>(LOCKP+HOLD2)*S)scrollTo(0,Math.round((LOCKP+HOLD2)*S));
@@ -1498,7 +1470,7 @@ function frame(now){
   last=cur;
   // reading the business pages: nothing back here moves, so the loop sleeps
   // (the scroll listener wakes it) — the stage is hidden by body.past too
-  if(pastEnd&&Math.abs(target-curS)<0.0002){ asleep=true; return; }
+  if(covered&&Math.abs(target-curS)<0.0002){ asleep=true; return; }
   requestAnimationFrame(frame);
 }
 let asleep=false;

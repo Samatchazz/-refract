@@ -4,7 +4,7 @@
 ทำอะไรบ้าง:
 1. inline js/sprites.js + js/planc-rig.js แทน <script src>
 2. ฝัง assets/cat.png เป็น base64
-3. ฝังหน้า pages/pricing.html เข้าไปเป็น "หน้าในตัว" (#pgPricing overlay):
+3. ฝังส่วนธุรกิจ pages/one.html ต่อท้ายด่าน (#biz) — เดิมเป็น overlay #pgPricing:
    - CSS ถูก scope ให้ทุก selector อยู่ใต้ #pgPricing (กันชนกับ CSS ของเกม)
    - ลิงก์ "หน้าหลัก" → #journey (ปิด overlay) · ลิงก์ "ราคา" ใน nav เกม → #pricing
    - ตัด <svg> symbol ของ pricing ทิ้ง เพราะ sprites.js มี #flag อยู่แล้ว
@@ -63,31 +63,19 @@ def build():
         assert tag in html, tag
         html = html.replace(tag, '<script>\n' + js + '\n</script>')
 
-    # 2. business pages -> sections ต่อท้ายด่านในหน้าเดียว (Mat 25 ก.ย.) — เอาเฉพาะ
-    #    hero..ก่อนแถบวิ่ง (nav ไม่เอา ใช้แคปซูลของเกม · แถบวิ่ง+footer เอาเฉพาะของ
-    #    contact ซึ่งเป็นท้ายเว็บ) · ต้องมาก่อนขั้น cat.png เพื่อให้แมวใน footer ฝัง base64
-    PAGES = [('pages/pricing.html', '<!--PRICING-->', '#pricing', False),
-             ('pages/about.html',   '<!--ABOUT-->',   '#about',   False),
-             ('pages/contact.html', '<!--CONTACT-->', '#contact', True)]
-    shared = (ROOT / 'pages/biz.css').read_text(encoding='utf-8')   # ระบบหน้าธุรกิจที่ทุกหน้าใช้ร่วม
-    for path, marker, prefix, tail in PAGES:
-        pr = (ROOT / path).read_text(encoding='utf-8')
-        own = pr[pr.index('<style>') + 7:pr.index('</style>')]
-        css = scope_css((shared if 'href="biz.css"' in pr else '') + '\n' + own, prefix)
-        end = pr.index('</footer>') + len('</footer>') if tail else pr.index('<div class="marq"')
-        body = pr[pr.index('<header class="hero">'):end]
-        body = (body
-                .replace('href="../proto-journey/planc-journey-proto.html"', 'href="#journey"')
-                .replace('href="pricing.html"', 'href="#pricing"')
-                .replace('href="about.html"', 'href="#about"')
-                .replace('href="contact.html"', 'href="#contact"'))
-        # ลิงก์ "หน้านี้เอง" (href="#") ใน footer → ชี้ section ของตัวเอง
-        body = body.replace('<a href="#">ติดต่อ</a>', '<a href="#contact">ติดต่อ</a>')
-        assert marker in html, marker
-        html = html.replace(marker, '<style>\n' + css + '\n</style>\n' + body)
-    html = (html.replace('href="../pages/pricing.html"', 'href="#pricing"')
-                .replace('href="../pages/about.html"', 'href="#about"')
-                .replace('href="../pages/contact.html"', 'href="#contact"'))
+    # 2. ส่วนธุรกิจ (pages/one.html — ทิศ Bürocratik, Mat 28 ก.ย.) -> #biz ต่อท้ายด่านในหน้าเดียว
+    #    เอาเฉพาะใน <main> (nav ของไฟล์แยกไม่เอา ใช้แถบของเกม) · CSS ถูก scope ใต้ #biz ·
+    #    ต้องมาก่อนขั้น cat.png เพื่อให้แมวในประโยค/ท้ายเว็บฝัง base64
+    pr = (ROOT / 'pages/one.html').read_text(encoding='utf-8')
+    css = scope_css(pr[pr.index('<style>') + 7:pr.index('</style>')], '#biz')
+    body = pr[pr.index('<main class="biz">') + len('<main class="biz">'):pr.index('</main>')]
+    assert '<!--BIZ-->' in html
+    html = html.replace('<!--BIZ-->', '<style>\n' + css + '\n</style>\n' + body)
+    js = (ROOT / 'pages/one.js').read_text(encoding='utf-8')
+    tag = '<script src="../pages/one.js"></script>'
+    assert tag in html, tag
+    html = html.replace(tag, '<script>\n' + js + '\n</script>')
+    html = html.replace('href="../pages/one.html#', 'href="#')
 
     # 3. cat.png (ทั้งของเกมและของ footer หน้า pricing)
     b64 = base64.b64encode((ROOT / 'assets/cat.png').read_bytes()).decode()
