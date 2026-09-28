@@ -496,8 +496,8 @@ body.bridged #boltFlash,body.bridged #boltShape{animation:none;opacity:0}
 #biz .b-fine b{display:block;font-weight:500;margin-bottom:3px}
 #biz .b-fine .w2{grid-column:span 2}
 #biz .b-foot{padding-top:clamp(90px,14vh,160px);padding-bottom:30px}
-#biz .b-word{font-weight:400;font-size:clamp(90px,25vw,380px);line-height:.9;letter-spacing:-.06em;margin-left:-.04em;white-space:nowrap}
-#biz .b-word .b-ast{font-size:1em;vertical-align:-.22em;font-weight:500}
+#biz .b-word{width:min(100%,1180px);aspect-ratio:545/266;margin:0 0 10px -1.5%;cursor:pointer}
+#biz .b-word svg{width:100%;height:100%;overflow:visible;display:block}
 #biz .b-ground{position:relative;height:74px;margin:0 calc(var(--pad) * -1)}
 #biz .b-ground svg{position:absolute;left:0;right:0;bottom:0;width:100%;height:30px;display:block}
 #biz .b-ground img{position:absolute;left:9%;bottom:10px;height:52px}
@@ -691,7 +691,7 @@ body.bridged #boltFlash,body.bridged #boltShape{animation:none;opacity:0}
 </section>
 
 <footer class="b-foot b-wrap">
-  <div class="b-word b-rv">planc<span class="b-ast">*</span></div>
+  <div class="b-word b-rv" id="bLogo" role="img" aria-label="planc*"></div>
   <div class="b-ground" aria-hidden="true">
     <svg viewBox="0 0 1200 30" preserveAspectRatio="none">
       <path d="M0 21 Q12 18.6 24 21 T48 21.9 T72 20.9 T96 20.2 T120 20.4 T144 21.4 T168 21.9 T192 21.4 T216 20.4 T240 20.1 T264 20.9 T288 21.8 T312 21.7 T336 20.7 T360 20.1 T384 20.5 T408 21.5 T432 21.9 T456 21.2 T480 20.3 T504 20.1 T528 21.1 T552 21.9 T576 21.6 T600 20.6 T624 20.1 T648 20.6 T672 21.6 T696 21.9 T720 21.1 T744 20.2 T768 20.2 T792 21.2 T816 21.9 T840 21.5 T864 20.5 T888 20.1 T912 20.7 T936 21.7 T960 21.8 T984 20.9 T1008 20.2 T1032 20.3 T1056 21.3 T1080 21.9 T1104 21.4 T1128 20.4 T1152 20.1 T1176 20.8 T1200 21.8" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
@@ -762,6 +762,22 @@ body.bridged #boltFlash,body.bridged #boltShape{animation:none;opacity:0}
     rows.forEach(r => r.classList.toggle('act', r === best && bd < innerHeight * 0.5));
   }
   if (rows.length) { addEventListener('scroll', () => { if (!tick) { tick = true; requestAnimationFrame(active); } }, { passive: true }); active(); }
+
+  /* โลโก้ยักษ์ท้ายเว็บ: rig ตัวจริง หลับตาเป็นปกติ ลืมตามองตามเมาส์เมื่อชี้/แตะ
+     (ในไฟล์รวม planc-rig.js ถูกโหลดทีหลังสคริปต์นี้ จึงรอ load ก่อน) */
+  function bigLogo(){
+    const el = document.getElementById('bLogo');
+    if (!el || !window.PlanCRig) return;
+    const rig = PlanCRig.mount(el, { coat: 'currentColor' });
+    rig.el.setAttribute('viewBox', '40 150 545 266');
+    el.addEventListener('pointerenter', () => rig.open());
+    el.addEventListener('pointerleave', () => rig.sleep());
+    el.addEventListener('pointermove', e => {
+      const b = el.getBoundingClientRect();
+      rig.gaze((e.clientX - b.left) / b.width * 2 - 1, (e.clientY - b.top) / b.height * 2 - 1);
+    });
+  }
+  if (document.readyState === 'complete') bigLogo(); else addEventListener('load', bigLogo);
 
   /* ถามตอบ */
   document.querySelectorAll('.b-q').forEach(b => b.addEventListener('click', () => b.parentElement.classList.toggle('open')));
