@@ -54,22 +54,6 @@
   }
   if (rows.length) { addEventListener('scroll', () => { if (!tick) { tick = true; requestAnimationFrame(active); } }, { passive: true }); active(); }
 
-  /* โลโก้ยักษ์ท้ายเว็บ: rig ตัวจริง หลับตาเป็นปกติ ลืมตามองตามเมาส์เมื่อชี้/แตะ
-     (ในไฟล์รวม planc-rig.js ถูกโหลดทีหลังสคริปต์นี้ จึงรอ load ก่อน) */
-  function bigLogo(){
-    const el = document.getElementById('bLogo');
-    if (!el || !window.PlanCRig) return;
-    const rig = PlanCRig.mount(el, { coat: 'currentColor' });
-    rig.el.setAttribute('viewBox', '40 150 545 266');
-    el.addEventListener('pointerenter', () => rig.open());
-    el.addEventListener('pointerleave', () => rig.sleep());
-    el.addEventListener('pointermove', e => {
-      const b = el.getBoundingClientRect();
-      rig.gaze((e.clientX - b.left) / b.width * 2 - 1, (e.clientY - b.top) / b.height * 2 - 1);
-    });
-  }
-  if (document.readyState === 'complete') bigLogo(); else addEventListener('load', bigLogo);
-
   /* ถามตอบ */
   document.querySelectorAll('.b-q').forEach(b => b.addEventListener('click', () => b.parentElement.classList.toggle('open')));
 })();

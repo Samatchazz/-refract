@@ -4,154 +4,158 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>planc* — ที่ปรึกษาของคนทำคอนเทนต์</title>
-<meta name="description" content="ทำคอนเทนต์เป็นอาชีพมาสิบกว่าปี วันนี้รับเป็นที่ปรึกษาให้คนทำคอนเทนต์ · คุยครั้งแรกไม่คิดเงิน">
+<meta name="description" content="ทำคอนเทนต์มาสิบกว่าปี คนตามรวมราวสองล้าน วันนี้รับเป็นที่ปรึกษาให้คนทำคอนเทนต์ · คุยครั้งแรกไม่คิดเงิน">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;800&display=swap" rel="stylesheet">
 <style>
-/* ============ ส่วนธุรกิจ — โครง Bürocratik เส้นยึกยือทั้งแผ่น (Mat 29 ก.ย. 2026: ก2 + ข2) ============
-   รอบก่อนมั่วเพราะมีสามภาษาในแผ่นเดียว (เส้นตรง / การ์ดยึกยือ / ด่านแมว) ตัวอักษร 30 ขนาด ของยักษ์ 5 จุด
-   รอบนี้ล็อกกติกา:
-   · ภาษาเดียว = ยึกยือ: เส้นคั่นทุกเส้นวาดมือ การ์ดขอบเบี้ยว ขีดใต้ลิงก์วาดมือ
-   · ตัวอักษร 5 ขนาด + ยักษ์ 1: --xl(ยักษ์ ใช้ที่เดียว) --l --m --s --b --xs · น้ำหนัก 400 (เน้น = 500)
-   · แดงจุดเดียวต่อจอ: "ฟรี" กับเลข 5 เท่านั้น
-   · ปุ่มจองคุย 3 จุด: แถบเมนู การ์ดฟรี ท้ายแผ่น
+/* ============ ส่วนธุรกิจ ทิศ Bürocratik (Mat 28 ก.ย. 2026) ============
+   ถอดจาก burocratik.com: ตัวอักษรตระกูลเดียว น้ำหนัก 400 ตัวใหญ่มาก ช่องไฟแน่น · พื้นขาว หมึกดำ ·
+   เส้นคั่นบางเต็มความกว้าง · ป้ายซ้าย เนื้อหาขวา · แถวเลขข้อ (แถวที่อ่านอยู่ดำ ที่เหลือเทา) ·
+   ข้อความโผล่ทีละบรรทัด ช้า นุ่ม · แปลงเข้าโลกเรา: กระดาษ/หมึก แดงจุดเดียว ดอกจัน แมว พื้นด่าน
    (build-journey.py ฝังไฟล์นี้ลง #biz แล้ว scope CSS ให้ — คลาสขึ้นต้น b- กันชนกับ CSS ของเกม) */
-:root{ --paper:#fcfcfa; --ink:#111; --mute:#6f6f6a; --card:#efeee8; --red:#e5484d;
-  --pad:clamp(16px,2.2vw,34px); --ease:cubic-bezier(.19,1,.22,1);
-  --xl:clamp(92px,22vw,330px); --l:clamp(30px,4.7vw,68px); --m:clamp(22px,2.3vw,33px);
-  --s:clamp(17px,1.5vw,21px); --b:clamp(15.5px,1.2vw,17.5px); --xs:14px;
-  --wob:255px 18px 225px 18px/18px 225px 18px 255px; --wob2:18px 225px 18px 255px/255px 18px 225px 18px;
-  --line:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 8' preserveAspectRatio='none'%3E%3Cpath d='M0 4 Q50 1.8 100 4 T200 4.5 T300 3.4 T400 4.6 T500 3.6 T600 4.4 T700 3.5 T800 4.6 T900 3.7 T1000 4.4 T1100 3.6 T1200 4.2' fill='none' stroke='%23111' stroke-width='2.2' stroke-linecap='round' vector-effect='non-scaling-stroke'/%3E%3C/svg%3E") }
+:root{ --paper:#fcfcfa; --ink:#111; --mute:#9b9b97; --red:#e5484d; --hair:rgba(17,17,17,.9);
+  --pad:clamp(14px,1.3vw,20px); --ease:cubic-bezier(.19,1,.22,1) }
 *{margin:0;padding:0;box-sizing:border-box}
 body{background:var(--paper);color:var(--ink);font-family:'Prompt',system-ui,sans-serif;font-weight:400;
-  font-size:var(--b);line-height:1.55;letter-spacing:-.01em;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  font-size:17px;line-height:1.55;letter-spacing:-.01em;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 a{color:inherit}
-.b-wrap{padding-left:var(--pad);padding-right:var(--pad)}
-.b-sec{padding-top:clamp(84px,14vh,170px)}
-/* เส้นคั่นวาดมือ ลากจากซ้ายไปขวาตอนเลื่อนถึง */
-/* (เส้นอยู่ใน ::before — ถ้า clip ตัว element เอง IntersectionObserver จะมองว่ามันไม่อยู่ในจอ แล้วเส้นไม่ขึ้นเลย) */
-.b-hr{height:8px;position:relative}
-.b-hr::before{content:'';position:absolute;inset:0;background:var(--line) 0 0/100% 100% no-repeat;clip-path:inset(0 100% 0 0);transition:clip-path 1.5s var(--ease)}
-.b-hr.on::before{clip-path:inset(0 0 0 0)}
-.b-cap{font-size:var(--s);letter-spacing:-.025em;line-height:1.3;color:var(--mute)}
+.b-wrap{padding:0 var(--pad)}
+.b-hr{height:1px;background:var(--hair);transform:scaleX(0);transform-origin:0 50%;transition:transform 1.4s var(--ease)}
+.b-hr.on{transform:none}
 
-/* ---- 1 คำประกาศ ---- */
+/* ---- 1 คำประกาศ: ตัวใหญ่ บรรทัดแรกเยื้อง มีไอคอนแทรกในประโยค ---- */
 .b-state{padding-top:clamp(70px,11vh,130px)}
-.b-h1{font-weight:400;font-size:var(--l);line-height:1.26;letter-spacing:-.035em;text-indent:22vw;max-width:72rem}
+.b-h1{font-weight:400;font-size:clamp(33px,5.25vw,76px);line-height:1.24;letter-spacing:-.035em;text-indent:25vw}
 .b-ic{display:inline-block;height:.86em;width:auto;vertical-align:-.08em;margin:0 .06em}
 .b-ast{display:inline-block;color:var(--red);font-weight:600;font-size:1.1em;line-height:0;vertical-align:-.16em;margin:0 .02em}
+.b-sub{display:grid;grid-template-columns:1fr 1fr;gap:16px;padding:22px 0 0;font-size:clamp(17px,1.65vw,24px);letter-spacing:-.03em;line-height:1.3}
+.b-sub .r{display:flex;justify-content:space-between;gap:20px}
+.b-lk{text-decoration:none;border-bottom:1.5px solid currentColor;padding-bottom:1px;white-space:nowrap;align-self:flex-start}
 
-/* ---- 2 ตัวเลขยักษ์ (ที่เดียวทั้งแผ่น) + เราเป็นใคร ---- */
-.b-big{font-weight:400;font-size:var(--xl);line-height:1.22;letter-spacing:-.055em;margin:.04em 0 .02em -.03em;white-space:nowrap}
-.b-two{display:grid;grid-template-columns:1fr 1.25fr;gap:24px 48px;padding:34px 0 0}
-.b-two h2{font-weight:400;font-size:var(--m);line-height:1.2;letter-spacing:-.035em}
+/* ---- 2 ตัวเลขยักษ์ + เราเป็นใคร ---- */
+.b-num{padding-top:clamp(90px,16vh,190px)}
+.b-cap{font-size:clamp(17px,1.65vw,24px);letter-spacing:-.03em;line-height:1.3}
+.b-big{font-weight:400;font-size:clamp(96px,23vw,340px);line-height:1.22;letter-spacing:-.055em;margin:.08em 0 .04em -.03em;white-space:nowrap}
+.b-big.s{font-size:clamp(58px,14.6vw,216px)}   /* ข้อความยาวกว่า ต้องพอดีความกว้างจอ */
+.b-two{display:grid;grid-template-columns:2fr 1fr;gap:24px;padding:34px 0 46px}
+.b-two h2{font-weight:400;font-size:clamp(28px,2.65vw,38px);line-height:1.18;letter-spacing:-.04em}
+.b-two p{font-size:clamp(15.5px,1.22vw,17.6px);line-height:1.5;letter-spacing:-.02em}
 .b-two p+p{margin-top:.9em}
-.b-facts{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:30px}
-.b-facts b{display:block;font-weight:400;font-size:var(--m);letter-spacing:-.035em;line-height:1.15}
-.b-facts span{font-size:var(--xs);color:var(--mute);line-height:1.4;display:block;margin-top:2px}
+.b-badges{display:flex;flex-wrap:wrap;gap:8px;margin-top:26px}
+.b-badge{width:84px;border:1.5px solid var(--ink);font-size:10.5px;line-height:1.25;letter-spacing:0}
+.b-badge b{display:block;background:var(--ink);color:var(--paper);font-weight:500;padding:3px 6px}
+.b-badge span{display:block;padding:5px 6px 0;min-height:34px}
+.b-badge i{display:block;font-style:normal;font-weight:800;font-size:46px;line-height:.62;padding:12px 6px 0;height:40px;overflow:hidden}
 
-/* ---- 3 แถว: ใช้แบบเดียวกันทั้งหลักห้าข้อและถามตอบ ---- */
-.b-row{display:grid;grid-template-columns:clamp(54px,7vw,110px) 1.1fr 1fr;gap:10px 40px;align-items:baseline;padding:30px 0 28px;
-  color:var(--mute);transition:color .5s ease}
+/* ---- 3 แถวเลขข้อ: แถวที่อ่านอยู่ดำ ที่เหลือเทา ---- */
+.b-row{display:grid;grid-template-columns:2fr .5fr .5fr;gap:24px;padding:40px 0 34px;color:var(--mute);transition:color .5s ease}
 .b-row.act{color:var(--ink)}
-.b-row .n{font-size:var(--m);line-height:1.2;letter-spacing:-.03em;color:var(--ink)}
+.b-row .n{grid-column:2;font-size:clamp(40px,3.9vw,56px);line-height:1;letter-spacing:-.04em;color:var(--ink)}
 .b-row.key .n{color:var(--red)}
-.b-row h3{font-weight:400;font-size:var(--m);line-height:1.28;letter-spacing:-.035em;color:var(--ink)}
-.b-row p{max-width:32rem}
+.b-row p{grid-column:3;font-size:clamp(15.5px,1.22vw,17.6px);line-height:1.4;letter-spacing:-.02em}
+.b-row p b{font-weight:500;display:block;margin-bottom:.35em}
 
-/* ---- 4 ราคา: การ์ดสามใบ ใบฟรีอยู่กลาง ใหญ่สุด ---- */
-.b-head{font-weight:400;font-size:var(--l);line-height:1.22;letter-spacing:-.035em;margin-top:10px}
-.b-plans{display:grid;grid-template-columns:1fr 1.24fr 1fr;gap:18px;align-items:start;padding-top:70px}
-.b-plan:nth-child(2){order:1}.b-plan.dark{order:2}.b-plan:nth-child(3){order:3}   /* ใน DOM ใบฟรีมาก่อน มือถือจึงเห็นเป็นใบแรก */
-.b-plan{display:flex;flex-direction:column;position:relative;padding:30px 26px 26px;background:var(--card);border-radius:var(--wob);text-decoration:none}
-.b-plan:nth-child(even){border-radius:var(--wob2)}
-.b-plan.dark{background:var(--ink);color:var(--paper);margin-top:-36px;padding:58px 36px 34px}
-.b-plan .tag{position:absolute;top:20px;left:34px;font-size:var(--xs);font-weight:500;background:var(--paper);color:var(--ink);padding:.1rem .7rem;border-radius:var(--wob)}
-.b-plan .nm{font-weight:500;font-size:var(--s)}
-.b-plan .pr{font-weight:400;font-size:var(--l);line-height:1.2;letter-spacing:-.04em;margin:4px 0 6px}
-.b-plan .pr small{font-size:var(--b);letter-spacing:-.01em;margin-left:.35em;opacity:.7}
-.b-plan.dark .pr{color:var(--red);font-size:calc(var(--l) * 1.55);line-height:1.12}
-.b-plan.dark .pr small{color:var(--paper);font-size:var(--b)}
-.b-plan .ft{margin-bottom:18px;min-height:4.6em}
+/* ---- 4 ราคา: การ์ดสามใบแบบเดิม (Mat 28 ก.ย.) ใบฟรีขึ้นก่อนและเป็นใบดำ ---- */
+.b-sec{padding-top:clamp(90px,15vh,180px)}
+.b-plans{display:grid;grid-template-columns:1fr 1.24fr 1fr;gap:18px;align-items:start;padding-top:56px}
+/* ใบฟรีอยู่กลางและใหญ่สุด (Mat 28 ก.ย.) — ใน DOM ยังมาก่อน มือถือจึงเห็นใบฟรีเป็นใบแรก */
+.b-plan:nth-child(2){order:1}.b-plan.dark{order:2}.b-plan:nth-child(3){order:3}
+.b-plan{display:flex;flex-direction:column;position:relative;padding:30px 26px 26px;background:#efeee8;
+  border-radius:255px 18px 225px 18px/18px 225px 18px 255px;text-decoration:none}
+.b-plan:nth-child(even){border-radius:18px 225px 18px 255px/255px 18px 225px 18px}
+.b-plan.dark{background:var(--ink);color:var(--paper);margin-top:-36px;padding:58px 36px 34px;box-shadow:0 22px 50px rgba(17,17,17,.22)}
+.b-plan.dark .tag{top:20px;left:34px;font-size:.8rem}
+.b-plan.dark .nm{font-size:1.15rem}
+.b-plan.dark .ft,.b-plan.dark li{font-size:1.04rem}
+.b-plan.dark .bt{padding:.9rem 1rem;font-size:1.08rem}
+.b-plan .tag{position:absolute;top:14px;left:24px;font-size:.74rem;font-weight:500;background:var(--paper);color:var(--ink);
+  padding:.1rem .6rem;border-radius:255px 18px 225px 18px/18px 225px 18px 255px}
+.b-plan .nm{font-weight:500;font-size:1.02rem}
+.b-plan .pr{font-weight:500;font-size:clamp(44px,4.6vw,62px);line-height:1.15;letter-spacing:-.04em;margin:6px 0 4px;color:var(--red)}
+.b-plan .pr small{font-size:1rem;font-weight:400;letter-spacing:-.01em;color:var(--ink);margin-left:.3em}
+.b-plan.dark .pr{font-size:clamp(72px,8vw,116px);line-height:1.12}   /* ใบฟรีเด่นสุด */
+.b-plan.dark .pr small{color:var(--paper);font-size:1rem}
+.b-plan .ft{font-size:.95rem;line-height:1.5;margin-bottom:18px;min-height:4.5em}
 .b-plan ul{list-style:none;display:grid;gap:10px;margin-bottom:24px;flex:1}
-.b-plan li{display:grid;grid-template-columns:22px 1fr;gap:10px;line-height:1.5}
+.b-plan li{display:grid;grid-template-columns:22px 1fr;gap:10px;font-size:.95rem;line-height:1.5}
 .b-plan li svg{width:20px;height:20px;margin-top:2px}
-.b-plan .bt{display:block;text-align:center;font-weight:500;padding:.75rem 1rem;border:2px solid var(--ink);background:var(--paper);color:var(--ink);
-  border-radius:var(--wob2);transition:transform .3s var(--ease)}
-.b-plan.dark .bt{border-color:var(--paper);padding:.9rem 1rem;font-size:var(--s)}
+.b-plan .bt{display:block;text-align:center;font-weight:500;padding:.72rem 1rem;border:2px solid var(--ink);background:var(--paper);color:var(--ink);
+  border-radius:18px 225px 18px 255px/255px 18px 225px 18px;transition:transform .3s var(--ease)}
+.b-plan.dark .bt{border-color:var(--paper)}
 .b-plan:hover .bt{transform:translateY(-2px)}
-.b-plan .jk{font-size:var(--xs);line-height:1.45;margin-top:12px;text-align:center;opacity:.8}
-.b-note{padding:26px 0 0;font-size:var(--xs);color:var(--mute)}
+.b-plan .jk{font-size:.84rem;line-height:1.45;margin-top:12px;text-align:center}
+.b-note{padding:26px 0 0;font-size:14px;color:var(--mute);letter-spacing:-.01em}
 
-/* ---- 5 คุยจบได้อะไร ---- */
-.b-h2{font-weight:400;font-size:var(--l);line-height:1.28;letter-spacing:-.035em;max-width:70rem;margin-top:14px}
+/* ---- 5 คุยจบได้อะไร: ประโยคใหญ่ + ขั้นตอนเรียงแถว ---- */
+.b-h2{font-weight:400;font-size:clamp(27px,4vw,58px);line-height:1.26;letter-spacing:-.035em;max-width:68rem}
 .b-h2 .b-mu{color:var(--mute)}
-.b-three{display:grid;grid-template-columns:repeat(3,1fr);gap:24px 40px;padding:26px 0 0}
-.b-three b{display:block;font-weight:400;font-size:var(--m);letter-spacing:-.035em;line-height:1.2;margin-bottom:8px}
-.b-three p{max-width:24rem}
+.b-steps{display:grid;grid-template-columns:repeat(5,1fr);gap:24px;padding:26px 0 0}
+.b-step .n{font-size:clamp(30px,2.6vw,38px);line-height:1;letter-spacing:-.04em}
+.b-step b{display:block;font-weight:500;margin:14px 0 4px;letter-spacing:-.02em}
+.b-step p{font-size:15px;line-height:1.45;letter-spacing:-.015em;color:#55554f}
 
 /* ---- 6 ถามตอบ: แถวกดเปิด ---- */
 .b-q{border:0;background:none;font:inherit;color:inherit;width:100%;text-align:left;cursor:pointer;
-  display:grid;grid-template-columns:clamp(54px,7vw,110px) 1fr auto;gap:10px 40px;align-items:baseline;padding:24px 0 22px}
-.b-q .tg{font-size:var(--xs);color:var(--mute)}
-.b-q .k{font-size:var(--m);letter-spacing:-.035em;line-height:1.28}
-.b-q .pl{font-size:var(--m);line-height:1;font-weight:300;transition:transform .5s var(--ease)}
+  display:grid;grid-template-columns:2fr 1fr auto;gap:24px;align-items:baseline;padding:24px 0 22px}
+.b-q .k{font-size:clamp(20px,2.4vw,34px);letter-spacing:-.035em;line-height:1.25}
+.b-q .tg{font-size:14px;color:var(--mute)}
+.b-q .pl{font-size:28px;line-height:1;font-weight:300;transition:transform .5s var(--ease)}
 .b-qa.open .pl{transform:rotate(45deg)}
 .b-a{display:grid;grid-template-rows:0fr;transition:grid-template-rows .6s var(--ease)}
 .b-qa.open .b-a{grid-template-rows:1fr}
 .b-a>div{overflow:hidden}
-.b-a p{padding:0 0 26px;max-width:40rem;margin-left:calc(clamp(54px,7vw,110px) + 40px)}
+.b-a p{padding:0 0 26px;max-width:40rem;margin-left:auto;margin-right:calc(33.33% - 40rem/3);font-size:clamp(15.5px,1.22vw,17.6px);line-height:1.5;letter-spacing:-.02em}
 
-/* ---- 7 ติดต่อ: ลิงก์ใหญ่สองอัน ขีดใต้วาดมือ ---- */
-.b-cta{display:grid;grid-template-columns:1fr 1fr;gap:24px 48px;padding:22px 0 0}
+/* ---- 7 ติดต่อ: ลิงก์ยักษ์สองอัน ---- */
+.b-cta{display:grid;grid-template-columns:1fr 1fr;gap:24px;padding:30px 0 0}
 .b-cta a{text-decoration:none;display:block}
-.b-cta .t{font-size:var(--l);line-height:1.2;letter-spacing:-.04em;display:inline-block;padding-bottom:.12em;
-  background:var(--line) 0 100%/100% 8px no-repeat}
-.b-cta .ar{display:inline-block;margin-left:.3em;font-size:var(--m);transition:transform .5s var(--ease)}
-.b-cta a:hover .ar{transform:translateX(.3em)}
-.b-cta p{margin-top:14px;max-width:26rem}
-.b-td{display:inline-block;margin-top:10px;font-size:var(--xs);color:var(--mute);border:1.5px dashed var(--mute);padding:1px 10px;border-radius:var(--wob)}
-.b-fine{display:grid;grid-template-columns:2fr 1fr 1fr;gap:24px 40px;padding:24px 0 0;font-size:var(--xs);line-height:1.5}
+.b-cta .t{font-size:clamp(40px,5.9vw,88px);line-height:1.1;letter-spacing:-.05em;display:inline;border-bottom:.055em solid currentColor}
+.b-cta .ar{display:inline-block;margin-left:.25em;font-size:clamp(28px,3.6vw,54px);transition:transform .5s var(--ease)}
+.b-cta a:hover .ar{transform:translateX(.25em)}
+.b-cta p{margin-top:16px;max-width:26rem;font-size:clamp(15.5px,1.22vw,17.6px);line-height:1.45;letter-spacing:-.02em}
+.b-cta .td{display:inline-block;margin-top:10px;font-size:13px;color:var(--red);border:1.5px dashed var(--red);padding:2px 10px}
+.b-fine{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;padding:26px 0 0;font-size:14.5px;line-height:1.45;letter-spacing:-.015em}
 .b-fine b{display:block;font-weight:500;margin-bottom:3px}
+.b-fine .w2{grid-column:span 2}
 
-/* ---- ท้ายเว็บ: โลโก้ขนาดกลาง + พื้นด่านกับแมว ---- */
-.b-foot{padding-top:clamp(84px,13vh,150px);padding-bottom:30px}
-.b-word{width:clamp(150px,17vw,240px);aspect-ratio:545/266;cursor:pointer}
-.b-word svg{width:100%;height:100%;overflow:visible;display:block}
+/* ---- ท้ายเว็บ: พื้นด่าน + แมว ---- */
+.b-foot{padding-top:clamp(90px,14vh,160px);padding-bottom:30px}
+.b-word{font-weight:400;font-size:clamp(90px,25vw,380px);line-height:.9;letter-spacing:-.06em;margin-left:-.04em;white-space:nowrap}
+.b-word .b-ast{font-size:1em;vertical-align:-.22em;font-weight:500}
 .b-ground{position:relative;height:74px;margin:0 calc(var(--pad) * -1)}
 .b-ground svg{position:absolute;left:0;right:0;bottom:0;width:100%;height:30px;display:block}
-.b-ground img{position:absolute;right:12%;bottom:10px;height:52px}
-.b-last{display:flex;flex-wrap:wrap;gap:10px 24px;justify-content:space-between;padding-top:20px;font-size:var(--xs)}
+.b-ground img{position:absolute;left:9%;bottom:10px;height:52px}
+.b-last{display:flex;flex-wrap:wrap;gap:10px 24px;justify-content:space-between;padding-top:20px;font-size:14px;letter-spacing:-.01em}
 .b-last nav{display:flex;gap:22px}
 .b-last a{text-decoration:none}
 
-/* ---- motion: ข้อความโผล่ทีละบรรทัด ---- */
+/* ---- motion: ข้อความโผล่ทีละบรรทัด (คำในบรรทัดเดียวกันขึ้นพร้อมกัน) ---- */
 .b-w{display:inline-block;text-indent:0;opacity:0;transform:translateY(.55em);transition:opacity 1s var(--ease),transform 1.2s var(--ease);
   transition-delay:var(--dl,0s)}
 .b-on .b-w{opacity:1;transform:none}
 .b-rv{opacity:0;transform:translateY(24px);transition:opacity 1s var(--ease),transform 1.2s var(--ease);transition-delay:var(--d,0s)}
 .b-rv.b-on{opacity:1;transform:none}
-@media (prefers-reduced-motion:reduce){.b-w,.b-rv{opacity:1;transform:none;transition:none}.b-hr::before{clip-path:none;transition:none}}
+@media (prefers-reduced-motion:reduce){.b-w,.b-rv{opacity:1;transform:none;transition:none}.b-hr{transform:none;transition:none}}
 
 @media (max-width:820px){
-  .b-h1{text-indent:16vw}
-  .b-two{grid-template-columns:1fr;gap:16px;padding-top:24px}
-  .b-facts{gap:10px}
-  .b-row{grid-template-columns:44px 1fr;gap:6px 12px;padding:24px 0 22px}
-  .b-row p{grid-column:2}
-  .b-plans{grid-template-columns:1fr;gap:22px;max-width:460px;padding-top:34px}
+  body{font-size:16px}
+  .b-h1{text-indent:18vw}
+  .b-sub{grid-template-columns:1fr;gap:10px}
+  .b-two{grid-template-columns:1fr;gap:18px;padding:24px 0 36px}
+  .b-row{grid-template-columns:64px 1fr;gap:14px;padding:26px 0 24px}
+  .b-row .n{grid-column:1}.b-row p{grid-column:2}
+  .b-plans{grid-template-columns:1fr;gap:22px;max-width:460px}
   .b-plan.dark{margin-top:0;padding:50px 26px 28px}
-  .b-plan .tag{left:24px}
+  .b-plan.dark .tag{left:24px}
   .b-plan:nth-child(2),.b-plan.dark,.b-plan:nth-child(3){order:0}
   .b-plan .ft{min-height:0}
-  .b-three{grid-template-columns:1fr;gap:22px}
-  .b-q{grid-template-columns:1fr auto;gap:4px 12px}
-  .b-q .tg{grid-column:1/-1}
-  .b-a p{margin-left:0}
-  .b-cta{grid-template-columns:1fr;gap:40px}
-  .b-fine{grid-template-columns:1fr 1fr;gap:18px 16px}
-  .b-fine div:first-child{grid-column:1/-1}
+  .b-steps{grid-template-columns:1fr 1fr;gap:26px 16px}
+  .b-q{grid-template-columns:1fr auto;gap:12px}
+  .b-q .tg{display:none}
+  .b-a p{margin:0;max-width:none}
+  .b-cta{grid-template-columns:1fr;gap:44px}
+  .b-fine{grid-template-columns:1fr 1fr;gap:20px 16px}
 }
 
 /* เฉพาะไฟล์แยก: แถบนำทางแบบเดียวกับหน้าเกม */
@@ -173,49 +177,55 @@ a{color:inherit}
 
 <!-- 1 · คำประกาศ -->
 <section class="b-state b-wrap" id="about">
-  <h1 class="b-h1 b-split">เราทำคอนเทนต์เป็นอาชีพมาสิบกว่าปี <img class="b-ic" src="../assets/cat.png" alt=""> และเคยนั่งฝั่งที่จ่ายเงินจ้างมาหลายปี วันนี้เรารับเป็นที่ปรึกษา<span class="b-ast">*</span> ให้คนทำคอนเทนต์ที่กำลังติดอยู่ตรงไหนสักแห่ง</h1>
+  <h1 class="b-h1 b-split">เราทำคอนเทนต์มาสิบกว่าปี <img class="b-ic" src="../assets/cat.png" alt=""> มีคนตามรวมราวสองล้าน และเคยนั่งฝั่งที่จ่ายเงินจ้างมาหลายปี วันนี้เรารับเป็นที่ปรึกษา<span class="b-ast">*</span> ให้คนทำคอนเทนต์ที่กำลังติดอยู่ตรงไหนสักแห่ง</h1>
+  <div class="b-hr" style="margin-top:34px"></div>
+  <div class="b-sub b-rv">
+    <div>3,650 วัน โดยประมาณ</div>
+    <div class="r"><span>ป้ายทุกป้ายในด่านเมื่อกี้ เราเคยเดินผ่านมาแล้ว</span><a class="b-lk" href="#contact">จองคุยครั้งแรก</a></div>
+  </div>
 </section>
 
-<!-- 2 · ตัวเลขยักษ์ + เราเป็นใคร -->
-<section class="b-sec b-wrap">
+<!-- 2 · ตัวเลข + เราเป็นใคร -->
+<section class="b-num b-wrap">
   <div class="b-cap b-rv">คนตามรวม ทุกแพลตฟอร์ม</div>
   <div class="b-big b-rv" style="--d:.08s">~2 ล้าน</div>
   <div class="b-hr"></div>
   <div class="b-two">
-    <h2 class="b-split">เราเป็นใคร</h2>
+    <h2 class="b-split">เราเป็นใคร.</h2>
     <div class="b-rv">
       <p>planc* คือที่ปรึกษาของคนทำคอนเทนต์ เราไม่ได้หาดีลให้ ไม่ได้อยู่ตรงกลางระหว่างคุณกับแบรนด์ และไม่หักเปอร์เซ็นต์จากดีลของคุณสักบาท คุณจ่ายค่าคำแนะนำ แค่นั้นจบ</p>
       <p>เราเคยเห็นตอนกราฟขึ้น เคยเห็นตอนมันนิ่งจนไม่รู้จะทำอะไรต่อ เคยเห็นว่าแบรนด์เลือกคนกันยังไง แล้วก็เคยเห็นคนเก่ง ๆ หลุดไปโดยไม่มีใครบอกเขาว่าเพราะอะไร</p>
-      <p>เรายังไม่บอกชื่อ เพราะยังทำงานกับแบรนด์อยู่ ชื่อเราไม่ช่วยให้ยอดคุณขยับหรอก สิ่งที่เราเห็นมาต่างหากที่ช่วย</p>
-      <div class="b-facts">
-        <div><b>10+ ปี</b><span>ทำคอนเทนต์เป็นอาชีพ</span></div>
-        <div><b>0%</b><span>ค่าคอมที่หักจากดีลของคุณ</span></div>
-        <div><b>3 คน</b><span>ที่รับคุยครั้งแรกต่ออาทิตย์</span></div>
+      <p>เรายังไม่บอกชื่อ เพราะยังทำงานกับแบรนด์อยู่ (ชื่อเราไม่ช่วยให้ยอดคุณขยับหรอก สิ่งที่เราเห็นมาต่างหากที่ช่วย)</p>
+      <div class="b-badges">
+        <div class="b-badge"><b>10+ ปี</b><span>ทำคอนเทนต์<br>เป็นอาชีพ</span><i>*</i></div>
+        <div class="b-badge"><b>~2 ล้าน</b><span>คนตามรวม<br>ทุกแพลตฟอร์ม</span><i>*</i></div>
+        <div class="b-badge"><b>0%</b><span>ค่าคอมที่หัก<br>จากดีลของคุณ</span><i>*</i></div>
+        <div class="b-badge"><b>ฟรี</b><span>คุยครั้งแรก<br>30–45 นาที</span><i>*</i></div>
       </div>
     </div>
   </div>
-</section>
 
-<!-- 3 · หลักห้าข้อ -->
-<section class="b-sec b-wrap">
-  <div class="b-cap b-rv" style="margin-bottom:18px">หลักที่เราถือ ห้าข้อ</div>
-  <div class="b-hr"></div>
-  <div class="b-row"><div class="n">1</div><h3>เป็นตัวเอง สู้ในสนามของตัวเอง</h3><p>ถ้าคุณเหมือนคนอื่น แบรนด์ก็หาคนอื่นมาแทนได้ง่าย ๆ</p></div>
-  <div class="b-hr"></div>
-  <div class="b-row"><div class="n">2</div><h3>ตัวตนไม่ชัด ไม่ได้แปลว่าไม่น่าสนใจ</h3><p>แต่แปลว่าโดนกดราคาง่าย เพราะจ้างคุณแล้วเหมือนเสี่ยงดวง</p></div>
-  <div class="b-hr"></div>
-  <div class="b-row"><div class="n">3</div><h3>ครั้งแรกให้หมด ไม่กั๊กไว้ขายทีหลัง</h3><p>ที่เก็บเงิน คือตอนที่ต้องทำงานกันต่อเนื่อง</p></div>
-  <div class="b-hr"></div>
-  <div class="b-row"><div class="n">4</div><h3>จบงานแล้ว ขอฟีดแบ็กทุกครั้ง</h3><p>ถ้าไม่ถาม คุณจะไม่มีวันรู้ว่าทำไมเขาไม่จ้างต่อ</p></div>
-  <div class="b-hr"></div>
-  <div class="b-row key"><div class="n">5</div><h3>ถ้าคำตอบที่ถูกคือ &ldquo;เลิกเถอะ&rdquo; เราจะบอกคุณ</h3><p>คุณจะได้ยินคำตอบจริง ไม่ใช่คำตอบที่ฟังแล้วสบายใจ</p></div>
-  <div class="b-hr"></div>
+  <!-- 3 · หลักห้าข้อ -->
+  <div class="b-rows">
+    <div class="b-hr"></div>
+    <div class="b-row"><div class="n">1</div><p><b>เป็นตัวเอง สู้ในสนามของตัวเอง</b>ถ้าคุณเหมือนคนอื่น แบรนด์ก็หาคนอื่นมาแทนได้ง่าย ๆ</p></div>
+    <div class="b-hr"></div>
+    <div class="b-row"><div class="n">2</div><p><b>ตัวตนไม่ชัด ไม่ได้แปลว่าไม่น่าสนใจ</b>แต่แปลว่าโดนกดราคาง่าย เพราะจ้างคุณแล้วเหมือนเสี่ยงดวง</p></div>
+    <div class="b-hr"></div>
+    <div class="b-row"><div class="n">3</div><p><b>ครั้งแรกให้หมด ไม่กั๊กไว้ขายทีหลัง</b>ที่เก็บเงิน คือตอนที่ต้องทำงานกันต่อเนื่อง</p></div>
+    <div class="b-hr"></div>
+    <div class="b-row"><div class="n">4</div><p><b>จบงานแล้ว ขอฟีดแบ็กทุกครั้ง</b>ถ้าไม่ถาม คุณจะไม่มีวันรู้ว่าทำไมเขาไม่จ้างต่อ</p></div>
+    <div class="b-hr"></div>
+    <div class="b-row key"><div class="n">5</div><p><b>ถ้าคำตอบที่ถูกคือ &ldquo;เลิกเถอะ&rdquo; เราจะบอกคุณ</b>คุณจะได้ยินคำตอบจริง ไม่ใช่คำตอบที่ฟังแล้วสบายใจ</p></div>
+    <div class="b-hr"></div>
+  </div>
 </section>
 
 <!-- 4 · ราคา -->
 <section class="b-sec b-wrap" id="pricing">
-  <div class="b-cap b-rv">ราคา</div>
-  <h2 class="b-head b-split">มีสามแบบ เขียนไว้หมดแล้ว</h2>
+  <div class="b-cap b-rv">ราคา มีสามแบบ เขียนไว้หมดแล้ว</div>
+  <div class="b-big s b-rv" style="--d:.08s">ครั้งแรก ฟรี</div>
+  <div class="b-hr"></div>
   <div class="b-plans">
     <a class="b-plan dark b-rv" href="#contact">
       <span class="tag">เริ่มตรงนี้</span>
@@ -240,7 +250,7 @@ a{color:inherit}
         <li><svg viewBox="0 0 24 24"><path d="M3.5 12.8 Q6.6 15.4 9.4 19 Q13.8 10.4 20.8 4.6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>ดีลนี้ควรรับไหม</li>
         <li><svg viewBox="0 0 24 24"><path d="M3.5 12.8 Q6.6 15.4 9.4 19 Q13.8 10.4 20.8 4.6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>คิดราคาจากต้นทุนของคุณ ไม่ใช่จากงบของเขา</li>
       </ul>
-      <span class="bt">จองเซสชัน</span>
+      <span class="bt">จองคุย 30 นาที</span>
       <span class="jk">ตกนาทีละ 33 บาทกว่า ๆ คิดคำถามมาก่อนนะ จะได้คุ้ม</span>
     </a>
     <a class="b-plan b-rv" style="--d:.16s" href="#contact">
@@ -262,61 +272,63 @@ a{color:inherit}
 
 <!-- 5 · คุยจบได้อะไร -->
 <section class="b-sec b-wrap" id="get">
-  <div class="b-cap b-rv">คุยจบ คุณได้อะไร</div>
-  <h2 class="b-h2 b-split">คุณจะรู้ว่าช่องตัวเองอยู่ตรงไหน ในสายตาแบรนด์ <span class="b-mu">ไม่ใช่ในสายตาแฟน</span> รู้ว่าเก้าสิบวันข้างหน้าควรทำอะไร <span class="b-mu">และไม่ควรเสียเวลากับอะไร</span> แล้วก็ได้คำตอบตรง ๆ ว่าต้องใช้เราต่อไหม <span class="b-mu">หรือจริง ๆ ไม่ต้องใช้อะไรเลย</span></h2>
+  <div class="b-cap b-rv" style="margin-bottom:22px">คุยจบ คุณได้อะไร</div>
+  <h2 class="b-h2 b-split">คุณจะรู้ว่าช่องตัวเองอยู่ตรงไหน ในสายตาแบรนด์ <span class="b-mu">ไม่ใช่ในสายตาแฟน</span> รู้ว่าเก้าสิบวันข้างหน้าควรทำอะไร <span class="b-mu">และไม่ควรเสียเวลากับอะไร</span> ได้เข็มทิศหนึ่งหน้ากลับไป แล้วก็ได้คำตอบตรง ๆ ว่าต้องใช้เราต่อไหม <span class="b-mu">หรือจริง ๆ ไม่ต้องใช้อะไรเลย</span></h2>
   <div class="b-hr" style="margin-top:44px"></div>
-  <div class="b-three">
-    <div class="b-rv"><b>ก่อนคุย</b><p>เลือกเวลา แล้วส่งการบ้าน 5 ข้อ ใช้เวลา 5 นาที เรายืนยันนัดกลับไป [ร่าง: ภายในกี่ชั่วโมง ทางไหน]</p></div>
-    <div class="b-rv" style="--d:.08s"><b>วันคุย</b><p>30–45 นาที ไม่ต้องเล่าใหม่ตั้งแต่ต้น เพราะเราอ่านการบ้านมาแล้ว [ร่าง: คุยผ่านอะไร]</p></div>
-    <div class="b-rv" style="--d:.16s"><b>หลังคุย</b><p>ได้เข็มทิศ 1 หน้า สรุปสิ่งที่ควรทำต่อ ให้หมด ไม่กั๊ก</p></div>
+  <div class="b-steps">
+    <div class="b-step b-rv"><div class="n">1</div><b>เลือกเวลา</b><p>หรือทัก LINE มาบอกก็ได้</p></div>
+    <div class="b-step b-rv" style="--d:.06s"><div class="n">2</div><b>ส่งการบ้าน</b><p>คำถาม 5 ข้อ ใช้เวลา 5 นาที</p></div>
+    <div class="b-step b-rv" style="--d:.12s"><div class="n">3</div><b>เรายืนยันนัด</b><p>[ร่าง: ภายในกี่ชั่วโมง ทางไหน]</p></div>
+    <div class="b-step b-rv" style="--d:.18s"><div class="n">4</div><b>คุยกัน</b><p>30–45 นาที [ร่าง: ผ่านอะไร]</p></div>
+    <div class="b-step b-rv" style="--d:.24s"><div class="n">5</div><b>ได้เข็มทิศ 1 หน้า</b><p>สรุปสิ่งที่ควรทำต่อ ให้หมด ไม่กั๊ก</p></div>
   </div>
 </section>
 
 <!-- 6 · ถามตอบ -->
 <section class="b-sec b-wrap" id="faq">
-  <div class="b-cap b-rv" style="margin-bottom:18px">ถามตรง ตอบตรง</div>
+  <div class="b-cap b-rv" style="margin-bottom:22px">ถามตรง ตอบตรง</div>
   <div class="b-hr"></div>
-  <div class="b-qa"><button class="b-q"><span class="tg">ผลลัพธ์</span><span class="k">จ่ายแล้วจะได้งานไหม</span><span class="pl">+</span></button>
+  <div class="b-qa"><button class="b-q"><span class="k">จ่ายแล้วจะได้งานไหม</span><span class="tg">ไม่รับประกันผล</span><span class="pl">+</span></button>
     <div class="b-a"><div><p>ไม่ เราไม่รับประกันยอดฟอล ไม่รับประกันจำนวนดีล ไม่รับประกันว่าคุณจะได้งาน ใครมารับปากเรื่องพวกนี้ ระวังไว้</p></div></div></div>
   <div class="b-hr"></div>
-  <div class="b-qa"><button class="b-q"><span class="tg">เงิน</span><span class="k">แล้ว planc* ได้เงินจากไหน</span><span class="pl">+</span></button>
+  <div class="b-qa"><button class="b-q"><span class="k">แล้ว planc* ได้เงินจากไหน</span><span class="tg">ไม่ใช่ตัวกลาง</span><span class="pl">+</span></button>
     <div class="b-a"><div><p>ค่าคำแนะนำ แค่นั้น เราไม่หักเปอร์เซ็นต์จากดีลของคุณ ไม่รับเงินจากแบรนด์ และถ้าคำตอบที่ถูกคือ &ldquo;อย่ารับงานนี้&rdquo; เราก็ได้เท่าเดิม</p></div></div></div>
   <div class="b-hr"></div>
-  <div class="b-qa"><button class="b-q"><span class="tg">ตัวตน</span><span class="k">ไม่บอกชื่อ แล้วจะรู้ได้ไงว่าของจริง</span><span class="pl">+</span></button>
+  <div class="b-qa"><button class="b-q"><span class="k">ไม่บอกชื่อ แล้วจะรู้ได้ไงว่าของจริง</span><span class="tg">ไม่เปิดชื่อ (ตอนนี้)</span><span class="pl">+</span></button>
     <div class="b-a"><div><p>คุยครั้งแรกฟรี ไม่ต้องเชื่อเรา แค่ฟังว่าสิ่งที่เราพูดตรงกับที่คุณเจอมาหรือเปล่า</p></div></div></div>
   <div class="b-hr"></div>
-  <div class="b-qa"><button class="b-q"><span class="tg">ลำดับ</span><span class="k">ซื้อเซสชันเลยได้ไหม ไม่ต้องคุยฟรีก่อน</span><span class="pl">+</span></button>
+  <div class="b-qa"><button class="b-q"><span class="k">ซื้อเซสชันเลยได้ไหม ไม่ต้องคุยฟรีก่อน</span><span class="tg">ลำดับ</span><span class="pl">+</span></button>
     <div class="b-a"><div><p>ได้ แต่แนะนำให้คุยฟรีก่อน เพราะคุยจบเราจะบอกเองว่าคุณควรซื้ออะไร หรือไม่ควรซื้อเลย</p></div></div></div>
   <div class="b-hr"></div>
-  <div class="b-qa"><button class="b-q"><span class="tg">ความลับ</span><span class="k">ข้อมูลที่เล่าให้ฟัง เอาไปทำอะไรต่อ</span><span class="pl">+</span></button>
+  <div class="b-qa"><button class="b-q"><span class="k">ข้อมูลที่เล่าให้ฟัง เอาไปทำอะไรต่อ</span><span class="tg">ความลับ</span><span class="pl">+</span></button>
     <div class="b-a"><div><p>อยู่กับเรา เรท สัญญา ชื่อแบรนด์ ตัวเลขที่คุยกัน เราไม่ส่งต่อให้ใคร ทั้งแบรนด์ทั้งเอเจนซี และไม่เอาไปใช้เลือกว่าจะเสนอชื่อใคร</p></div></div></div>
   <div class="b-hr"></div>
-  <div class="b-qa"><button class="b-q"><span class="tg">นัด</span><span class="k">มีค่าอะไรงอกทีหลังไหม เลื่อนนัดได้ไหม</span><span class="pl">+</span></button>
+  <div class="b-qa"><button class="b-q"><span class="k">มีค่าอะไรงอกทีหลังไหม เลื่อนนัดได้ไหม</span><span class="tg">เงิน / นัด</span><span class="pl">+</span></button>
     <div class="b-a"><div><p>[ร่าง รอ Mat] ราคาบนหน้านี้คือทั้งหมด · VAT ใบเสร็จ ใบกำกับภาษี กติกาเลื่อนนัดและคืนเงิน ยังต้องเคาะ</p></div></div></div>
   <div class="b-hr"></div>
 </section>
 
 <!-- 7 · ติดต่อ -->
 <section class="b-sec b-wrap" id="contact">
-  <div class="b-cap b-rv">ถามก่อนก็ได้ จองคุยเลยก็ได้</div>
+  <div class="b-cap b-rv" style="margin-bottom:6px">ถามก่อนก็ได้ จองคุยเลยก็ได้</div>
   <div class="b-cta">
-    <a class="b-rv" href="#"><span class="t">ทัก LINE</span><span class="ar">→</span>
+    <a class="b-rv" href="#"><span class="t">ทัก LINE</span><span class="ar">☛</span>
       <p>ยังไม่แน่ใจว่าเหมาะไหม ทักมาถามได้เลย มีคนตอบจริง ไม่ใช่บอต ไม่ต้องจอง ไม่มีค่าใช้จ่าย</p>
-      <span class="b-td">ร่าง: รอลิงก์ LINE OA</span></a>
-    <a class="b-rv" style="--d:.08s" href="#"><span class="t">จองคุยครั้งแรก</span><span class="ar">→</span>
+      <span class="td">[ร่าง: รอลิงก์ LINE OA]</span></a>
+    <a class="b-rv" style="--d:.08s" href="#"><span class="t">จองคุยครั้งแรก</span><span class="ar">☛</span>
       <p>ฟรี 30–45 นาที คนละครั้ง อาทิตย์นึงรับ 3 คน เราไม่รับประกันว่าคุณจะได้งาน</p>
-      <span class="b-td">ร่าง: รอระบบจอง</span></a>
+      <span class="td">[ร่าง: รอระบบจอง]</span></a>
   </div>
   <div class="b-hr" style="margin-top:54px"></div>
   <div class="b-fine b-rv">
-    <div><b>ถ้าจองเซสชัน ฿999 มีอะไรอยู่ในมือเอามาด้วย</b>เรทการ์ด แชตจากแบรนด์ที่ยังไม่ได้ตอบ สัญญาหรือบรีฟที่อ่านแล้วไม่แน่ใจ ราคาที่คิดจะเสนอ</div>
+    <div class="w2"><b>ถ้าจองเซสชัน ฿999 มีอะไรอยู่ในมือเอามาด้วย</b>เรทการ์ด แชตจากแบรนด์ที่ยังไม่ได้ตอบ สัญญาหรือบรีฟที่อ่านแล้วไม่แน่ใจ ราคาที่คิดจะเสนอ</div>
     <div><b>แบรนด์ / สื่อ</b>อีเมล [ร่าง] · ลิสต์ครีเอเตอร์ยังไม่เปิด</div>
     <div><b>บริษัท</b>[ร่าง: ชื่อจดทะเบียน เลขนิติบุคคล ที่อยู่ เวลาตอบ]</div>
   </div>
 </section>
 
 <footer class="b-foot b-wrap">
-  <div class="b-word b-rv" id="bLogo" role="img" aria-label="planc*"></div>
+  <div class="b-word b-rv">planc<span class="b-ast">*</span></div>
   <div class="b-ground" aria-hidden="true">
     <svg viewBox="0 0 1200 30" preserveAspectRatio="none">
       <path d="M0 21 Q12 18.6 24 21 T48 21.9 T72 20.9 T96 20.2 T120 20.4 T144 21.4 T168 21.9 T192 21.4 T216 20.4 T240 20.1 T264 20.9 T288 21.8 T312 21.7 T336 20.7 T360 20.1 T384 20.5 T408 21.5 T432 21.9 T456 21.2 T480 20.3 T504 20.1 T528 21.1 T552 21.9 T576 21.6 T600 20.6 T624 20.1 T648 20.6 T672 21.6 T696 21.9 T720 21.1 T744 20.2 T768 20.2 T792 21.2 T816 21.9 T840 21.5 T864 20.5 T888 20.1 T912 20.7 T936 21.7 T960 21.8 T984 20.9 T1008 20.2 T1032 20.3 T1056 21.3 T1080 21.9 T1104 21.4 T1128 20.4 T1152 20.1 T1176 20.8 T1200 21.8" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
@@ -331,7 +343,6 @@ a{color:inherit}
 </footer>
 
 </main>
-<script src="../js/planc-rig.js"></script>
 <script src="one.js"></script>
 </body>
 </html>
