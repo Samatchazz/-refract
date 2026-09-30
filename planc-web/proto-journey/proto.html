@@ -136,10 +136,6 @@ body.inverted #story{color:var(--paper)}
   box-shadow:0 0 0 1.5px var(--ink);opacity:0;pointer-events:none;
   transition:opacity .45s}
 #idleHint .ar{margin-top:.15rem;animation:hintbob 1.4s ease-in-out infinite}
-#scrollHint{position:absolute;z-index:7;left:50%;bottom:calc(var(--ground-h) + 15dvh);
-  transform:translateX(-50%);padding:.55rem 1rem;background:var(--paper);
-  box-shadow:0 0 0 1px rgba(17,17,17,.16);font-size:.72rem;letter-spacing:.22em;
-  white-space:nowrap;animation:hintbob 1.4s ease-in-out infinite;transition:opacity .4s}
 /* scene-3 story block: the bites write their own story — scene 1's
    self-assembly replayed in red (Mat's third color exception family) */
 #story2{position:fixed;left:8vw;top:calc(var(--nav-h) + 7dvh);z-index:30;pointer-events:none;
@@ -157,9 +153,6 @@ body.inverted #story{color:var(--paper)}
 #catS #catRim{position:absolute;left:-1.4286%;top:-1.2966%;width:102.857%;opacity:0;pointer-events:none}
 body.inverted #catS #catRim{opacity:1}
 #catS #catImg{position:relative;z-index:1}   /* the rim is positioned, so the cat must be too — otherwise the rim paints over it */
-#gear{position:absolute;inset:0;pointer-events:none;opacity:0}
-#gear svg{position:absolute;color:var(--ink);transition:color .6s ease}
-body.inverted #gear svg{color:var(--paper)}
 #shadow{position:absolute;left:24vw;bottom:calc(var(--ground-h) - 10px);
   width:clamp(104px,18vw,150px);height:16px;z-index:4;pointer-events:none}
 #shadow i{display:block;width:62%;height:100%;margin:0 auto;border-radius:50%;
@@ -238,28 +231,17 @@ body.inverted #rain2{opacity:.24}
 @keyframes rainA{to{transform:translate3d(-260px,420px,0)}}
 @keyframes rainB{to{transform:translate3d(-300px,460px,0)}}
 #boltFlash{position:absolute;inset:0;background:var(--paper);opacity:0;pointer-events:none;z-index:7}
-/* scroll-keyed lightning (the strikes that hit the drone and the big sign) */
+/* scroll-keyed lightning (the strike at sign 3 and the one that kills the big sign) */
 #zap{position:absolute;inset:0;background:var(--paper);opacity:0;pointer-events:none;z-index:9}
 body.inverted #boltFlash{animation:thunder 5.6s linear infinite}
 @keyframes thunder{0%,100%{opacity:0}2%{opacity:.5}3.5%{opacity:.06}5%{opacity:.65}8%{opacity:0}54%{opacity:0}55.5%{opacity:.35}57.5%{opacity:0}}
 #boltShape{position:absolute;left:58%;top:6%;width:90px;height:auto;opacity:0;pointer-events:none;z-index:6;color:var(--paper)}
 body.inverted #boltShape{animation:boltpop 5.6s linear infinite}
 @keyframes boltpop{0%,100%{opacity:0}1.5%{opacity:1}4%{opacity:1}7%{opacity:0}}
-/* sky gimmicks: sun watches from the corner, drone tails the cat */
+/* sky: the sun watches from the corner */
 #sun{position:absolute;right:5vw;top:calc(var(--nav-h) + 1.5dvh);width:clamp(58px,10vw,84px);
   z-index:2;pointer-events:none;opacity:0;will-change:transform,opacity}
-#drone{position:absolute;left:0;top:0;width:clamp(54px,9vw,78px);z-index:6;
-  pointer-events:none;opacity:0;will-change:transform,opacity}
-#sun svg,#drone svg{width:100%;height:auto;overflow:visible}
-/* shark pipes: the wrapper clips only the emergence line — roomy on
-   top/sides so fins never get shaved off mid-lunge */
-.sharkClip{position:absolute;overflow:hidden;pointer-events:none;z-index:4}
-.sharkClip svg{position:absolute;bottom:0;left:50%;overflow:visible;
-  transform-origin:50% 96%;will-change:transform}
-.sharkClip use{transition:none}
-/* the classic damage flash: one red blink the instant the bite lands
-   (a sanctioned color moment, same family as the gold and the spikes) */
-#catS img.hurt{filter:invert(35%) sepia(85%) saturate(5200%) hue-rotate(342deg) brightness(1.02)}
+#sun svg{width:100%;height:auto;overflow:visible}
 /* the lit billboard — the one bright thing in the dark level, and it
    says the quiet part out loud (Mat's line) */
 .glow{position:absolute;bottom:var(--ground-h);width:clamp(230px,34vw,360px);opacity:0;
@@ -323,13 +305,6 @@ body.bridged #boltFlash,body.bridged #boltShape{animation:none;opacity:0}
 #pcloud{position:absolute;left:0;top:0;width:clamp(96px,15vw,150px);z-index:6;pointer-events:none;
   opacity:0;color:var(--paper);will-change:transform,opacity}
 #pcloud svg{width:100%;height:auto;overflow:visible;display:block}
-/* the flood — a translucent band over the ground that the cat wades in */
-#water{position:absolute;left:0;right:0;bottom:var(--ground-h);height:0;z-index:6;pointer-events:none;
-  background:rgba(252,252,250,.16);opacity:0;will-change:height,opacity}
-#water i{position:absolute;left:-10%;right:-10%;top:-6px;height:12px;display:block;
-  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='12' viewBox='0 0 120 12'%3E%3Cpath d='M0 6 Q15 1 30 6 T60 6 T90 6 T120 6' fill='none' stroke='%23fcfcfa' stroke-width='2.4' stroke-linecap='round'/%3E%3C/svg%3E") repeat-x;
-  background-size:120px 12px;will-change:transform}
-.splash{position:absolute;width:26px;height:14px;pointer-events:none;color:#fcfcfa;opacity:0;z-index:7}
 /* sign 2: the cat stops, looks at the phone, and the replies come in */
 #chat{position:absolute;left:0;top:0;z-index:8;pointer-events:none;display:flex;flex-direction:column;
   align-items:flex-start;gap:7px}
@@ -381,7 +356,6 @@ body.bridged #boltFlash,body.bridged #boltShape{animation:none;opacity:0}
   <div id="catW"><div id="catL"><div id="catS">
     <img id="catRim" src="../assets/cat-rim.png" alt="" aria-hidden="true">
     <img id="catImg" src="../assets/cat.png" alt="แมวดำ planc">
-    <div id="gear"></div>
   </div></div></div>
 
   <i class="rainL" id="rain2"></i>
@@ -393,13 +367,11 @@ body.bridged #boltFlash,body.bridged #boltShape{animation:none;opacity:0}
   </svg>
   <div id="boltFlash"></div>
   <div id="zap"></div>
-  <div id="water"><i></i></div>
   <div id="pcloud"></div>
   <div id="phoneGlow"></div>
   <div id="chat"></div>
   <svg id="fw" aria-hidden="true"></svg>
 
-  <div id="scrollHint" hidden>ไถลงสิ ↓</div>
   <div id="idleHint"><span>ไถ</span><span>ต่อ</span><span>สิ</span><span class="ar">↓</span></div>
 </main>
 
@@ -448,8 +420,8 @@ body.bridged #boltFlash,body.bridged #boltShape{animation:none;opacity:0}
 /* ================= scene map (progress 0..1) =================
    S1 grow   0.00–0.24  cat falls from the sky, then 3 boxes — the
                         story block fills in line by line, then fades
-   S2 life   0.29–0.46  gear piles on; dark editing zone 0.36–0.455
-   S3 hits   0.50–0.68  3 shark pipes ambush the jump, cat shrinks
+   S2 life   0.29–0.46  the dark editing zone 0.36–0.455
+   S3 hits   0.50–0.68  the storm's signs; the cat shrinks at each
    S4 chasm  0.72–0.93  impossible gap, one death, rainbow bridge
    S5 out    0.94–1.0   Aesthetically-you beat, then the closing panel  */
 const S = 12500;                   // scroll px mapped to 0..1 (slower)
@@ -468,8 +440,8 @@ const DARK = [.36, 1];             // the storm runs from here until the bridge 
 const P2 = .47, HOLD2 = .04;       // sign 2: the cat stops for this much scroll, phone out
 const WIDE = innerWidth >= 1100;                // desktop: the cliff locks earlier in progress, so the storm's back half is rescheduled —
                                                 // the cat must walk clear of the giant billboard BEFORE The Wall speaks (Mat 19 Sep)
-let P3 = .55, GUST = .555, DRONE_HIT = .58;   // (all of signs 3–5 are re-timed in layout(), backwards from the cliff)   // sign 3: wind, then the drone is struck
-let P4 = .62; const FLOOD = [.58, .66];             // sign 4: the flood rises, then drains
+let P3 = .55, GUST = .555, DRONE_HIT = .58;   // (all of signs 3–5 are re-timed in layout(), backwards from the cliff)   // sign 3: wind, then a lightning strike (DRONE_HIT keeps its old name: it used to hit the drone)
+let P4 = .62;                                   // sign 4: the stuck follower counter
                 
 let P5 = .70, STRIKE = .71, BLACK = .715, WALLP = .72;     // sign 5: lightning, lamp dies, city goes dark
 const POLE_P = .955, SLIDE = .03;  // the flagpole: grab here, slide for this long
@@ -477,10 +449,10 @@ const POLE_P = .955, SLIDE = .03;  // the flagpole: grab here, slide for this lo
 const world = document.getElementById('world');
 const stage = document.getElementById('stage');
 let travel = 0, catX = 0, layers = [], grounds = [], beats = [];
-let coins = [], slines = [], slots = [], piranhas = [], bullets = [], spikes = [], glowEl, bridgeSvg;
+let coins = [], slines = [], slots = [], spikes = [], glowEl, bridgeSvg;
 let poleEl, flagEl, poleTravel = 0, grabH = 0;
 let gW = 0;
-let signs = {}, bubs = [], splashes = [], hards = [];
+let signs = {}, bubs = [], hards = [];
 let kickEl, bodyEl, kick2, s2lines=[], s2slots=[];
 const story = document.getElementById('story');
 const story2 = document.getElementById('story2');
@@ -521,30 +493,6 @@ function sprite(id, cls){
   defs.appendChild(top);defs.appendChild(soil);svg.appendChild(defs);document.body.appendChild(svg);
 })();
 
-/* ---- tree-shark (the MJ set): each pipe gets its own shark drawing,
-   all of them share the zipped-shut frame for the snap. (The jaws were
-   never cropped in MJ — an over-eager border crop in the trace step
-   shaved them; the tracer now strips only the frame-line columns) */
-function makeShark(i){
-  const g=document.createElementNS(NS,'svg');
-  g.setAttribute('viewBox','0 0 470 640'); g.setAttribute('class','wd');
-  g.setAttribute('preserveAspectRatio','xMidYMax meet');
-  g.innerHTML=
-   '<use href="#shark-open'+(i%3+1)+'" width="470" height="640"/>'+
-   '<use href="#shark-closed1" width="470" height="640" opacity="0"/>';
-  return g;
-}
-
-/* ---- gear the cat carries in scene 2 (code placeholders) ---- */
-function buildGear(){
-  const gear=document.getElementById('gear');
-  gear.innerHTML='';return;   // Mat 19 Sep: the floating gadgets read as clutter — cut
-  gear.innerHTML=
-   '<svg id="g1" viewBox="0 0 60 80" style="width:42%;left:8%;top:-46%"><g fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round"><path d="M30 8 L12 72 M30 8 L48 72 M30 8 L30 66"/><path d="M18 46 L42 46"/></g></svg>'+
-   '<svg id="g2" viewBox="0 0 70 60" style="width:40%;left:42%;top:-64%"><g fill="none" stroke="currentColor" stroke-width="5"><rect x="8" y="8" width="54" height="38" rx="8"/><path d="M35 46 L35 58 M22 58 L48 58" stroke-linecap="round"/><circle cx="35" cy="27" r="9"/></g></svg>'+
-   '<svg id="g3" viewBox="0 0 60 60" style="width:34%;left:-14%;top:-30%"><g fill="none" stroke="currentColor" stroke-width="5" stroke-linejoin="round"><path d="M10 22 L50 22 L44 54 L16 54 Z"/><path d="M22 22 Q22 8 30 8 Q38 8 38 22" /></g></svg>';
-}
-
 /* ================= layout ================= */
 function catFracPx(){ return Math.min(150,Math.max(104,innerWidth*0.18))*0.5; }
 function layout(){
@@ -569,7 +517,7 @@ function layout(){
   layers.forEach(L=>L.el.style.width=(travel*L.f+innerWidth*2)+'px');
 
   world.replaceChildren();
-  grounds=[];coins=[];piranhas=[];bullets=[];beats=[];
+  grounds=[];coins=[];beats=[];
 
   // ground: solid until the chasm, then the far bank — each bank gets
   // a drawn cliff edge so the cut doesn't look broken
@@ -691,8 +639,7 @@ function layout(){
   story.appendChild(bodyEl);
   slines.forEach(l=>{const r=l.getBoundingClientRect();slots.push({x:r.left,y:r.top});});
 
-  // scene 2 props: gear built onto the cat + editing glow + moon handled by decor
-  buildGear();
+  // scene 2 props: the editing glow (moon handled by decor)
   glowEl=document.createElement('div');glowEl.className='glow';
   // a hand-drawn billboard: wobbly frame, two-line message, a post
   glowEl.innerHTML=
@@ -759,12 +706,6 @@ function layout(){
   const chat=document.getElementById('chat');chat.replaceChildren();bubs=[];
   ['เดี๋ยวโอนให้นะครับ','รอบัญชีอนุมัติก่อนนะคะ','ปลายเดือนนะ'].forEach(t=>{
     const b=document.createElement('div');b.className='bub';b.textContent=t;chat.appendChild(b);bubs.push(b);
-  });
-  splashes.forEach(s=>s.el.remove());splashes=[];
-  [[-0.22,0],[0.62,1]].forEach(cfg=>{
-    const s=document.createElementNS(NS,'svg');s.setAttribute('class','splash');s.setAttribute('viewBox','0 0 26 14');
-    s.innerHTML='<path d="M3 13 q4 -9 8 -12 M13 13 q1 -10 0 -12 M23 13 q-4 -9 -8 -12" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>';
-    stage.appendChild(s);splashes.push({el:s,dx:cfg[0]});
   });
 
   // scene 4: rainbow bridge across the gap
@@ -853,7 +794,7 @@ function decorate(){
 
 /* ---- sky gimmicks (MJ batch): paper planes, birds, a ufo easter egg,
    a camera drone that tails the cat, and a sun that watches it all ---- */
-const sky={planes:[],birds:[],ufo:null,sun:null,sunUses:null,drone:null};
+const sky={planes:[],birds:[],ufo:null,sun:null,sunUses:null};
 function buildSky(){
   const H=innerHeight;
   // paper planes glide through the bright opening (world layer)
@@ -893,7 +834,7 @@ function buildSky(){
     (0.31*travel+catX).toFixed(0)+'px;width:66px;height:50px;'+
     'opacity:.85;will-change:transform';
   world.appendChild(u);sky.ufo={el:u,uses:[...u.querySelectorAll('use')]};
-  // sun + drone live on the stage itself (fixed to the screen)
+  // the sun lives on the stage itself (fixed to the screen)
   if(!sky.sun){
     const s=document.createElement('div');s.id='sun';s.className='wd';
     s.innerHTML='<svg viewBox="0 0 640 533" preserveAspectRatio="xMidYMid meet">'+
@@ -901,20 +842,14 @@ function buildSky(){
       '<use href="#sun-shock" width="640" height="533" opacity="0"/></svg>';
     stage.appendChild(s);sky.sun=s;sky.sunUses=[...s.querySelectorAll('use')];
   }
-  if(!sky.drone){
-    const d=document.createElement('div');d.id='drone';d.className='wd';
-    d.innerHTML='<svg viewBox="0 0 640 349"><use href="#drone1" width="640" height="349"/></svg>';
-    stage.appendChild(d);sky.drone=d;
-  }
 }
 
 /* ================= per-frame state ================= */
 const catW=document.getElementById('catW'),catL=document.getElementById('catL'),
       catS=document.getElementById('catS'),catImg=document.getElementById('catImg'),
       shadow=document.getElementById('shadow'),
-      shadowI=shadow.firstElementChild,gear=document.getElementById('gear'),
+      shadowI=shadow.firstElementChild,
       flash=document.getElementById('flash'),help=document.getElementById('help'),
-      scrollHint=document.getElementById('scrollHint'),
       logo=document.getElementById('logoBtn');
 
 /* the ending (Mat 25–26 ก.ย.): the cat leaps and dies twice on a clock, comes back
@@ -1166,13 +1101,9 @@ function frame(now){
   // gait — the legs answer to the cat's WORLD speed, so the sprint
   // back after a knockback churns them properly instead of moonwalking
   const dW=d+(kbW-lastKbW)/travel; lastKbW=kbW;
-  // wading through the flood slows the stride
-  const lvlMax=innerHeight*0.16;
-  const lvl=0;   // the flood is cut (Mat 19 Sep: too hard to read) — sign 4's new event is pending his pick
-  const wade=lvl/lvlMax;
   // sign 5: the downpour — rain thickens, the cat drags its feet
   const heavy=(cur>DARK[0]&&!bridged)?smooth((cur-(P5-0.05))/0.03):0;
-  const spd=(onPole||holding)?0:Math.min(1,Math.abs(dW)/Math.max(dt,.0001)*1500)*(1-0.4*wade)*(1-0.5*heavy);
+  const spd=(onPole||holding)?0:Math.min(1,Math.abs(dW)/Math.max(dt,.0001)*1500)*(1-0.5*heavy);
   v+=(spd-v)*(1-Math.pow(1-0.18,dt));
   phase+=0.46*v*(dW>=0?1:-1)*dt;
   const step=Math.abs(Math.sin(phase));
@@ -1239,13 +1170,6 @@ function frame(now){
   if(spikes[0])spikes[0].style.transform='translateX('+swp.toFixed(1)+'px)';
   if(spikes[1])spikes[1].style.transform='translateX('+(-swp).toFixed(1)+'px)';
 
-  // scene 2: gear appears piece by piece
-  gear.style.opacity=clamp01((cur-0.265)/0.01)-clamp01((cur-0.475)/0.01);
-  ['g1','g2','g3'].forEach((id,i)=>{
-    const g=document.getElementById(id);
-    if(g)g.style.opacity=clamp01((cur-(0.275+i*0.032))/0.008);
-  });
-  scrollHint.style.opacity=cur<0.012?1:0;
   // the storm lasts until the bridge is called; once it is, the sky
   // clears as the cat steps onto the rainbow
   // (the rain itself stops at the tap — body.bridged — the sky clears a
@@ -1404,13 +1328,6 @@ function frame(now){
     signs.s3.stat.style.opacity=((cur*travel/23|0)%2)?0.35:1;
     signs.s3.views.textContent=Math.round(13-7*clamp01((cur-(P3-0.03))/0.055))+' VIEWS';   // 13 → 6 as the cat walks by
   }
-  // the drone gets struck at sign 3 and falls out of the sky
-  const fk=clamp01((cur-DRONE_HIT)/0.024);
-  // sign 4: the flood — a band over the ground the cat wades through
-  const water=document.getElementById('water');
-  water.style.height=lvl.toFixed(0)+'px';
-  water.style.opacity=(lvl>1&&storm)?1:0;
-  water.firstElementChild.style.transform='translateX('+(-(cur*travel*0.5)%120).toFixed(0)+'px)';
   // sign 4: the follower counter twitches +1, then drops right back — stuck
   if(signs.s4){
     const w=cur*travel, st=(w/55|0);                  // a new reading every ~55px of walking
@@ -1420,13 +1337,6 @@ function frame(now){
     signs.s4.arrow.textContent=dv>prev?'▲':'▼';
     signs.s4.arrow.style.color=dv>prev?'#111':'#e5484d';
   }
-  splashes.forEach(sp=>{
-    const o=wade*Math.max(0,1-step*3)*v;
-    sp.el.style.opacity=o.toFixed(2);
-    // the ground line sits at 78% of the screen (--ground-h is 22dvh)
-    sp.el.style.transform='translate3d('+(cw.left+cw.width*(0.3+sp.dx*0.4)).toFixed(0)+'px,'+
-      (innerHeight*0.78-lvl-14).toFixed(0)+'px,0)';
-  });
   // sign 5: lightning hits the billboard, the lamp dies, the text fades,
   // then the whole city goes dark behind it
   const lampK=smooth((cur-STRIKE)/0.004);
@@ -1463,14 +1373,6 @@ function frame(now){
       (Math.sin(cur*travel/120)*3).toFixed(1)+'deg)';
     const fr=((cur*travel)/90|0)%2;
     sky.ufo.uses.forEach((u,k)=>u.setAttribute('opacity',k===fr?1:0));
-  }
-  // drone: on the job from scene 2 deep into the storm — until the
-  // lightning at sign 3 knocks it out of the air
-  const dOp=0;   // the drone is cut with the rest of the gadgets (Mat 19 Sep)
-  sky.drone.style.opacity=dOp.toFixed(2);
-  if(dOp>0){
-    sky.drone.style.transform='translate3d('+(cw.right+innerWidth*0.02+Math.sin(cur*travel/90)*10+fk*40).toFixed(0)+
-      'px,'+(cw.top-innerHeight*0.10+Math.sin(now/800)*6+fk*fk*innerHeight*0.5).toFixed(0)+'px,0) rotate('+(fk*150).toFixed(0)+'deg)';
   }
   // sun: smiles through the good times, hides for the whole storm, and
   // comes back out once the bridge has been called

@@ -59,7 +59,7 @@ def scope_css(css, prefix='#pgPricing'):
 DEAD_SPRITES = ['brick1', 'brick2', 'brick3', 'brick4', 'brick5', 'bush1', 'bush2', 'bush3', 'bush4', 'castle',
                 'ground1', 'ground2', 'ground3', 'ground4', 'ground5', 'ground6', 'pebbles1', 'pebbles2', 'pebbles3',
                 'pipe-long1', 'pipe-long2', 'pipe-short1', 'pipe-short2',
-                'shark-open1', 'shark-open2', 'shark-open3', 'shark-closed1', 'ufo-card']
+                'shark-open1', 'shark-open2', 'shark-open3', 'shark-closed1', 'ufo-card', 'drone1']
 
 
 def prune_sprites(js):
