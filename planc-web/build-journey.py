@@ -53,12 +53,33 @@ def scope_css(css, prefix='#pgPricing'):
     return '\n'.join(out)
 
 
+# ภาพในชุด sprite ที่ฉากปัจจุบันไม่ได้วาดแล้ว (ฉลาม ท่อ อิฐ ปราสาท พุ่มไม้ พื้นดินแบบเก่า ฯลฯ) — วัดจากการเดินทั้งด่าน
+# ที่ 4 ขนาดจอ (30 ก.ย. 2026) · ตัดเฉพาะตระกูลที่ไม่ถูกใช้ทั้งตระกูล ตัวที่มีพี่น้องถูกใช้อยู่ (cloud-l3, qblock-used1,
+# pole2) เก็บไว้ เผื่อจอขนาดอื่นสุ่มไปโดน · จะเอาฉากเก่ากลับมา ให้ลบชื่อออกจากลิสต์นี้
+DEAD_SPRITES = ['brick1', 'brick2', 'brick3', 'brick4', 'brick5', 'bush1', 'bush2', 'bush3', 'bush4', 'castle',
+                'ground1', 'ground2', 'ground3', 'ground4', 'ground5', 'ground6', 'pebbles1', 'pebbles2', 'pebbles3',
+                'pipe-long1', 'pipe-long2', 'pipe-short1', 'pipe-short2',
+                'shark-open1', 'shark-open2', 'shark-open3', 'shark-closed1', 'ufo-card']
+
+
+def prune_sprites(js):
+    before = len(js)
+    for name in DEAD_SPRITES:
+        pat = r'<symbol id=\\?"' + re.escape(name) + r'\\?".*?</symbol>'
+        js, n = re.subn(pat, '', js, count=1, flags=re.S)
+        assert n == 1, 'sprite not found: ' + name
+    print(f'sprites: {before/1024:.0f} kB -> {len(js)/1024:.0f} kB')
+    return js
+
+
 def build():
     html = (ROOT / 'proto-journey/proto.html').read_text(encoding='utf-8')
 
     # 1. inline JS
     for src in ('../js/sprites.js', '../js/planc-rig.js'):
         js = (ROOT / src.replace('../', '')).read_text(encoding='utf-8')
+        if src.endswith('sprites.js'):
+            js = prune_sprites(js)
         tag = f'<script src="{src}"></script>'
         assert tag in html, tag
         html = html.replace(tag, '<script>\n' + js + '\n</script>')
@@ -80,6 +101,8 @@ def build():
     # 3. cat.png (ทั้งของเกมและของ footer หน้า pricing)
     b64 = base64.b64encode((ROOT / 'assets/cat.png').read_bytes()).decode()
     html = html.replace('../assets/cat.png', 'data:image/png;base64,' + b64)
+    rim = base64.b64encode((ROOT / 'assets/cat-rim.png').read_bytes()).decode()
+    html = html.replace('../assets/cat-rim.png', 'data:image/png;base64,' + rim)
 
     assert '../js/' not in html and '../assets/' not in html and '../pages/' not in html
     out = ROOT / 'proto-journey/planc-journey-proto.html'

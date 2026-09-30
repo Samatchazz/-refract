@@ -52,7 +52,12 @@
     for (const r of rows) { const b = r.getBoundingClientRect(); const d = Math.abs((b.top + b.bottom) / 2 - mid); if (d < bd) { bd = d; best = r; } }
     rows.forEach(r => r.classList.toggle('act', r === best && bd < innerHeight * 0.5));
   }
-  if (rows.length) { addEventListener('scroll', () => { if (!tick) { tick = true; requestAnimationFrame(active); } }, { passive: true }); active(); }
+  /* วัดตำแหน่งแถวเฉพาะตอนที่แถวอยู่ในจอ — ไม่งั้นทุกครั้งที่ไถในด่านแมวก็จะวัดแถวพวกนี้ไปด้วยเปล่า ๆ */
+  let rowsOn = false;
+  if (rows.length) {
+    new IntersectionObserver(es => { rowsOn = es[0].isIntersecting; if (rowsOn) active(); }, { rootMargin: '20% 0px' }).observe(rows[0].parentElement);
+    addEventListener('scroll', () => { if (rowsOn && !tick) { tick = true; requestAnimationFrame(active); } }, { passive: true });
+  }
 
   /* ถามตอบ */
   document.querySelectorAll('.b-q').forEach(b => b.addEventListener('click', () => b.parentElement.classList.toggle('open')));

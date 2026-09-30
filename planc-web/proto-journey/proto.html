@@ -3,7 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>planc* — journey proto</title>
+<title>planc* — ที่ปรึกษาของคนทำคอนเทนต์</title>
+<meta name="description" content="เราทำคอนเทนต์เป็นอาชีพมาสิบกว่าปี วันนี้รับเป็นที่ปรึกษาให้คนทำคอนเทนต์ที่กำลังติดอยู่ตรงไหนสักแห่ง · คุยครั้งแรกไม่คิดเงิน">
+<meta property="og:title" content="planc* — ที่ปรึกษาของคนทำคอนเทนต์">
+<meta property="og:description" content="คุยครั้งแรกไม่คิดเงิน · เราไม่หักเปอร์เซ็นต์จากดีลของคุณ">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#fcfcfa">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23111'/%3E%3Cpath d='M32 12v40M14.7 22l34.6 20M14.7 42l34.6-20' stroke='%23e5484d' stroke-width='9' stroke-linecap='round'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;800;900&family=Sarabun:wght@400;500;600&display=swap" rel="stylesheet">
@@ -143,10 +149,14 @@ body.inverted #story{color:var(--paper)}
 #catW{position:absolute;left:24vw;bottom:calc(var(--ground-h) - 6px);
   width:clamp(104px,18vw,150px);z-index:5;will-change:transform}
 #catL{transform-origin:50% 100%;will-change:transform}
-#catS{transform-origin:50% 100%;will-change:transform}
+#catS{transform-origin:50% 100%;will-change:transform;position:relative}
 #catS img{width:100%}
-body.inverted #catS img{filter:drop-shadow(2px 0 0 var(--paper)) drop-shadow(-2px 0 0 var(--paper))
-  drop-shadow(0 2px 0 var(--paper)) drop-shadow(0 -2px 0 var(--paper))}
+/* dark level: the cat stays black and gets a paper rim — baked into assets/cat-rim.png
+   (tools/make-cat-rim.mjs) and laid under the cat; it used to be 4 stacked drop-shadows,
+   the most expensive paint in the storm on phones */
+#catS #catRim{position:absolute;left:-1.4286%;top:-1.2966%;width:102.857%;opacity:0;pointer-events:none}
+body.inverted #catS #catRim{opacity:1}
+#catS #catImg{position:relative;z-index:1}   /* the rim is positioned, so the cat must be too — otherwise the rim paints over it */
 #gear{position:absolute;inset:0;pointer-events:none;opacity:0}
 #gear svg{position:absolute;color:var(--ink);transition:color .6s ease}
 body.inverted #gear svg{color:var(--paper)}
@@ -211,20 +221,22 @@ body.colored .wd:has(.fill){color:#111}
 /* rain + thunder — ambient weather for the dark stretch only.
    Time-based like the drifting clouds (same sanctioned category);
    it fades in/out with body.inverted, so scroll still rules. */
-.rainL{position:absolute;inset:-6%;pointer-events:none;opacity:0;transition:opacity .8s;z-index:6}
+.rainL{position:absolute;inset:-6%;pointer-events:none;opacity:0;transition:opacity .8s;z-index:6;will-change:transform}
 body.inverted #rain1{opacity:.5}
 body.inverted #rain2{opacity:.24}
 /* each drop is a short curved pen stroke, not a ruled line */
 /* big tiles with scattered, uneven drops so no grid ever shows */
 #rain1{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='260' height='420'%3E%3Cg fill='none' stroke='%23fcfcfa' stroke-linecap='round'%3E%3Cpath d='M40,26q-5,11-10,26' stroke-width='3'/%3E%3Cpath d='M158,70q-4,9-7,19' stroke-width='2.6'/%3E%3Cpath d='M232,148q-6,13-11,29' stroke-width='3.3'/%3E%3Cpath d='M92,240q-4,10-9,22' stroke-width='2.7'/%3E%3Cpath d='M196,342q-5,12-10,27' stroke-width='3'/%3E%3C/g%3E%3C/svg%3E");
-  background-size:260px 420px;animation:rainA .6s linear infinite}
+  background-size:260px 420px;inset:calc(-6% - 420px) calc(-6% - 260px) -6% -6%;animation:rainA .6s linear infinite}
 #rain2{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='460'%3E%3Cg fill='none' stroke='%23fcfcfa' stroke-linecap='round'%3E%3Cpath d='M78,44q-4,10-8,22' stroke-width='2.2'/%3E%3Cpath d='M244,132q-5,11-9,25' stroke-width='2'/%3E%3Cpath d='M30,268q-4,9-8,21' stroke-width='2.3'/%3E%3Cpath d='M170,376q-5,11-9,24' stroke-width='2'/%3E%3C/g%3E%3C/svg%3E");
-  background-size:300px 460px;animation:rainB 1s linear infinite}
+  background-size:300px 460px;inset:calc(-6% - 460px) calc(-6% - 300px) -6% -6%;animation:rainB 1s linear infinite}
 #rain3{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='300'%3E%3Cg fill='none' stroke='%23fcfcfa' stroke-linecap='round'%3E%3Cpath d='M30,10q-9,18-17,42' stroke-width='3.4'/%3E%3Cpath d='M112,52q-9,18-17,42' stroke-width='3'/%3E%3Cpath d='M160,140q-9,18-17,42' stroke-width='3.6'/%3E%3Cpath d='M66,170q-9,18-17,42' stroke-width='3'/%3E%3Cpath d='M128,236q-9,18-17,42' stroke-width='3.3'/%3E%3C/g%3E%3C/svg%3E");
-  background-size:180px 300px;animation:rainC .34s linear infinite;transition:none}
-@keyframes rainC{to{background-position:-108px 300px}}
-@keyframes rainA{to{background-position:-260px 420px}}
-@keyframes rainB{to{background-position:-300px 460px}}
+  background-size:180px 300px;inset:calc(-6% - 300px) calc(-6% - 108px) -6% -6%;animation:rainC .34s linear infinite;transition:none}
+/* (30 ก.ย.) each sheet is one tile larger up and to the right and slides by exactly one tile with
+   transform — the old background-position animation repainted the whole screen every frame */
+@keyframes rainC{to{transform:translate3d(-108px,300px,0)}}
+@keyframes rainA{to{transform:translate3d(-260px,420px,0)}}
+@keyframes rainB{to{transform:translate3d(-300px,460px,0)}}
 #boltFlash{position:absolute;inset:0;background:var(--paper);opacity:0;pointer-events:none;z-index:7}
 /* scroll-keyed lightning (the strikes that hit the drone and the big sign) */
 #zap{position:absolute;inset:0;background:var(--paper);opacity:0;pointer-events:none;z-index:9}
@@ -367,6 +379,7 @@ body.bridged #boltFlash,body.bridged #boltShape{animation:none;opacity:0}
 
   <div id="shadow"><i></i></div>
   <div id="catW"><div id="catL"><div id="catS">
+    <img id="catRim" src="../assets/cat-rim.png" alt="" aria-hidden="true">
     <img id="catImg" src="../assets/cat.png" alt="แมวดำ planc">
     <div id="gear"></div>
   </div></div></div>
@@ -802,6 +815,7 @@ function layout(){
   decorate();
   buildSky();
   buildFireworks();
+  measure();
 }
 
 /* ---- background decor: hills / skyline / clouds / moon ---- */
@@ -1052,6 +1066,18 @@ function fireworks(cur){
 }
 
 let bizTop=1e9;
+/* measured once in layout() so the frame loop never asks the browser for geometry
+   (getBoundingClientRect/offset* every frame forced a layout per frame — 573ms per 3s on a phone) */
+let catBase={left:0,top:0,width:0,height:0},catTX=0,catTY=0,worldTx=0,pcW=0,chatH=0,helpW=0,helpH=0;
+const pcEl=document.getElementById('pcloud'),chatEl=document.getElementById('chat'),pgEl=document.getElementById('phoneGlow'),
+      popEl=document.getElementById('pop'),rain3El=document.getElementById('rain3');
+function measure(){
+  const t=catW.style.transform; catW.style.transform='none';
+  const r=catW.getBoundingClientRect(); catBase={left:r.left,top:r.top,width:r.width,height:r.height};
+  catW.style.transform=t;
+  pcW=pcEl.offsetWidth; chatH=chatEl.offsetHeight; helpW=help.offsetWidth; helpH=help.offsetHeight;
+  [glowEl,signs.s2&&signs.s2.el,signs.s3&&signs.s3.el,signs.s4&&signs.s4.el,signs.s5&&signs.s5.el].forEach(el=>{ if(el){ el.__x=el.offsetLeft; el.__w=el.offsetWidth; } });
+}
 let cur=0,curS=0,last=0,prevT=performance.now(),phase=0,v=0,lastKbW=0;
 const jumps=JUMPS();
 /* the lock: the story will not move past the chasm until the logo is
@@ -1119,6 +1145,7 @@ function frame(now){
   if(flagEl) flagEl.style.transform='translateY('+(smooth(kDn)*poleTravel).toFixed(1)+'px)';
   for(const L of layers)
     L.el.style.transform='translate3d('+(-(wx*travel+camPx)*L.f).toFixed(2)+'px,'+imp.toFixed(2)+'px,0)';
+  worldTx=-(wx*travel+camPx);
   for(const b of beats){
     const h=Math.min(0.10,Math.max(0,cur-b.p));
     b.el.style.transform=h?'translate3d('+(h*travel).toFixed(1)+'px,0,0)':'';
@@ -1195,7 +1222,8 @@ function frame(now){
     lift=2*k*(1-k)*164;   // matches the bridge's quadratic arc exactly
   }
 
-  catW.style.transform='translate3d('+(fallX+kbX).toFixed(1)+'px,'+(jy+bob+fallY+kbY-lift+drop+bnc+poleY).toFixed(2)+'px,0)';
+  catTX=fallX+kbX; catTY=jy+bob+fallY+kbY-lift+drop+bnc+poleY;
+  catW.style.transform='translate3d('+catTX.toFixed(1)+'px,'+catTY.toFixed(2)+'px,0)';
   catL.style.transform='rotate('+(Math.sin(phase*2)*2.2*v+kbRot+look*7+heavy*6).toFixed(2)+'deg)';
   const sq=(air?1.06:1-(0.085*(1-step))*v)+((held&&frozen)?Math.sin(now/170)*0.025:0);   // panting at the edge while the phone asks
   catS.style.transform='scale('+(-size*(2-sq)*(1+lsq*0.7)).toFixed(3)+','+(size*sq*(1-lsq)).toFixed(3)+')';
@@ -1229,10 +1257,10 @@ function frame(now){
   document.body.classList.toggle('inverted',storm);
   document.body.classList.toggle('colored',colored);
   { const k=(cur-POLE_P)/0.004;   // one white pop as the colour lands
-    document.getElementById('pop').style.opacity=(colored&&k<1?Math.sin(k*Math.PI)*0.85:0).toFixed(2); }
+    popEl.style.opacity=(colored&&k<1?Math.sin(k*Math.PI)*0.85:0).toFixed(2); }
   fireworks(cur);
 
-  document.getElementById('rain3').style.opacity=(heavy*0.75).toFixed(2);
+  rain3El.style.opacity=(heavy*0.75).toFixed(2);
 
   // the story block sits at the old intro-beat spot; once everything
   // has landed it fades out and rides away — a clean breath before
@@ -1302,6 +1330,7 @@ function frame(now){
     const pk=clamp01((cur-t.p-0.002)/0.014);
     const line=slines[i];
     if(pk<=0){ line.style.opacity=0; line.style.transform='translate(0,14px) scale(.4)'; }
+    else if(pk>=1){ line.style.opacity=1; line.style.transform='translate(0px,0px) scale(1)'; }   // landed: nothing left to measure (this branch used to read a rect every frame for the rest of the level)
     else{
       const e=smooth(pk);
       const br=(c?c.box:catW).getBoundingClientRect();
@@ -1315,13 +1344,13 @@ function frame(now){
   });
 
   // ---- the storm, sign by sign (all pure fns of cur / curS) ----
-  const cw=catW.getBoundingClientRect();
+  const cw={left:catBase.left+catTX,top:catBase.top+catTY,width:catBase.width,height:catBase.height,right:catBase.left+catTX+catBase.width};
   // the personal raincloud tails the cat from sign 1 until the bridge
   const pcOp=clamp01((cur-0.40)/0.02)*(storm?1:0)*(bridged?0:1);   // the cloud lifts at the tap
-  const pc=document.getElementById('pcloud');
+  const pc=pcEl;
   pc.style.opacity=pcOp.toFixed(2);
   if(pcOp>0){
-    const pw=pc.offsetWidth;
+    const pw=pcW;
     pc.style.transform='translate3d('+(cw.left+cw.width*0.5-pw*0.5+Math.sin(cur*travel/110)*9).toFixed(0)+'px,'+
       (cw.top-pw*0.62-innerHeight*0.06+Math.sin(cur*travel/70)*5).toFixed(0)+'px,0)';
   }
@@ -1330,7 +1359,7 @@ function frame(now){
   let prevLit=0;
   [glowEl,signs.s2&&signs.s2.el,signs.s3&&signs.s3.el,signs.s4&&signs.s4.el,signs.s5&&signs.s5.el].forEach(el=>{
     if(!el)return;
-    const r=el.getBoundingClientRect();
+    const r={left:el.__x+worldTx,right:el.__x+worldTx+el.__w};   // world x + the camera, no layout read
     const ahead=r.left-cw.right;                       // px between the cat and the sign
     const near=smooth((innerWidth*0.40-ahead)/(innerWidth*0.18));
     const gone=WIDE?smooth((r.right-cw.left+innerWidth*0.02)/(innerWidth*0.06)):(r.right<cw.left-innerWidth*0.05?0:1);    // passed and left behind
@@ -1343,12 +1372,12 @@ function frame(now){
   // sign 2: swings on its chains (keeps swinging while the world holds)
   if(signs.s2)signs.s2.swing.style.transform='rotate('+(Math.sin(curS*travel/95)*7).toFixed(2)+'deg)';
   // sign 2: phone out, replies come in one by one, none of them money
-  const chat=document.getElementById('chat');
-  const pg=document.getElementById('phoneGlow');
+  const chat=chatEl;
+  const pg=pgEl;
   const chatOn=hold2k>0&&hold2k<1;
   if(chatOn){
     chat.style.transform='translate3d('+(cw.right-cw.width*0.18).toFixed(0)+'px,'+
-      (cw.top-chat.offsetHeight-6).toFixed(0)+'px,0)';
+      (cw.top-chatH-6).toFixed(0)+'px,0)';
   }
   bubs.forEach((b,i)=>{
     const k=clamp01((hold2k-(0.16+i*0.24))/0.09)*(hold2k<0.97?1:0);
@@ -1362,8 +1391,8 @@ function frame(now){
   const pgOp=Math.max(chatOn?Math.min(1,Math.min(hold2k,1-hold2k)*8)*0.85:0,bk*0.9,(held&&frozen)?0.95:0);
   // the question arrives on the phone: bubbles above the frozen cat, kept on screen
   if(held&&frozen){
-    const hx=Math.min(cw.right-cw.width*0.18,innerWidth-help.offsetWidth-10);
-    help.style.transform='translate3d('+hx.toFixed(0)+'px,'+(cw.top-help.offsetHeight-6).toFixed(0)+'px,0)';
+    const hx=Math.min(cw.right-cw.width*0.18,innerWidth-helpW-10);
+    help.style.transform='translate3d('+hx.toFixed(0)+'px,'+(cw.top-helpH-6).toFixed(0)+'px,0)';
   }
   pg.style.opacity=pgOp.toFixed(2);
   if(pgOp>0)pg.style.transform='translate3d('+(cw.right-cw.width*0.42-55).toFixed(0)+'px,'+
@@ -1470,6 +1499,7 @@ addEventListener('scroll',()=>{ if(asleep){ asleep=false; prevT=performance.now(
 
 layout();
 addEventListener('resize',layout);
+catImg.addEventListener('load',measure);   // the image decides catW's height
 if(document.fonts&&document.fonts.ready)document.fonts.ready.then(layout);  // re-measure story slots with the real font
 requestAnimationFrame(frame);
 setTimeout(()=>document.getElementById('preload').classList.add('gone'),PL_GONE);
