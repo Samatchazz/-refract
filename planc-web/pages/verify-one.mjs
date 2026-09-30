@@ -8,7 +8,7 @@ let browser;
 for (const opt of [{}, { channel: 'msedge' }, { channel: 'chrome' }]) {
   try { browser = await chromium.launch(opt); break; } catch (e) {}
 }
-const shot = (pg, n) => pg.screenshot({ path: path.join(here, `one-${n}.png`) });
+const shot = (pg, n) => pg.screenshot({ path: path.join(here, 'shots', `one-${n}.png`) });
 
 async function run(name, w, h) {
   const errs = [];
