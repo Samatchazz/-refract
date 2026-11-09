@@ -8,7 +8,9 @@
 //                          picker; the three chosen ones dive in (POW each),
 //                          the rest drop away
 //   1 ลับ! ทำได้! อร่อย!   a heavy pour — the cup squashes on impact, the
-//                          level rises, the chosen bits float up and bob
+//                          level rises, the chosen bits float up and bob;
+//                          then the toppings land: cream piped on in a
+//                          spiral, a dusting settles on it, a mochi drops in
 //   2 พาน้องสู่โลกกว้าง     lid + straw land, the cup spins to show off, then
 //                          copies itself into a crowd of cups
 //   3 อย่าปล่อยให้น้องแมส   the crowd scatters; the stage hands the cup to the
@@ -19,6 +21,7 @@ import * as THREE from 'three';
 import { RoundedBoxGeometry } from 'three/addons/geometries/RoundedBoxGeometry.js';
 import { bottleGeometry, heartGeometry } from '../candies.js';
 import { C, cup, solid, bearSkin } from './parts.js';
+import { loadToppings } from './toppings.js';
 
 const { smoothstep, lerp, clamp } = THREE.MathUtils;
 const backOut = (x, s = 1.7) => 1 + (s + 1) * Math.pow(x - 1, 3) + s * Math.pow(x - 1, 2);
@@ -68,11 +71,23 @@ function ingredients() {
     { m: honey, chosen: true, pow: '#FFD23F' },
   ];
 }
-// where each chosen bit settles inside the cup (x, y, z) — a loose pile
+// where each chosen bit settles inside the cup (x, y, z) — a loose ring
+// around the edge, poking out of the surface; the middle is kept for the
+// cream swirl that gets piped on after the pour
 const SLOTS = [
-  [-0.2, 0.95, 0.1], [0.22, 0.9, 0.15], [0.0, 1.22, -0.15], [-0.26, 1.28, -0.08],
-  [0.26, 1.3, -0.02], [0.05, 0.62, 0.2], [-0.06, 0.45, -0.2],
+  [-0.3, 0.98, 0.26], [0.34, 0.95, 0.2], [0.08, 1.02, -0.38], [-0.38, 1.0, -0.14],
+  [0.36, 1.04, -0.22], [0.1, 0.62, 0.2], [-0.06, 0.45, -0.2],
 ];
+// where the toppings sit: the cup wall is a dense translucent gummy, so
+// anything below the lip (y 1.86) is only a tint — the cream is piped as a
+// mound that rises well over the rim, the dust and the mochi ride on it
+const SURFACE = 1.5;
+// toppings: scale (height in cup units), rest position on the mound
+const TOP = {
+  cream: { s: 0.9, pos: [0, 0, 0] },
+  dust:  { s: 0.72, pos: [0.03, 0.66, 0.02], rot: [0.22, 0.6, -0.08] },
+  mochi: { s: 0.4, pos: [0.36, 0.28, 0.22], rot: [0, 0.4, 0] },
+};
 
 // ---- a cheap cup for the crowd (no transmission: 12 of them) ----
 function miniCup() {
@@ -113,13 +128,35 @@ export function buildCupRig(fx = {}) {
   const chosen = ING.filter((i) => i.chosen);
   const inCup = chosen.map((it, i) => {
     const m = it.m.clone();
-    m.scale.multiplyScalar(0.72);
+    m.scale.multiplyScalar(0.62);
     m.position.fromArray(SLOTS[i]);
     m.rotation.set(i * 0.7, i * 1.3, i * 0.4);
     m.userData.slotY = SLOTS[i][1];
     m.visible = false;
     c.add(m);
     return m;
+  });
+
+  // toppings (Blender .glb, pink jelly) — a group riding on the drink
+  // surface; the meshes arrive async and are driven by apply() once here
+  const toppings = new THREE.Group();
+  toppings.name = 'toppings';
+  toppings.position.y = SURFACE;
+  toppings.visible = false;
+  c.add(toppings);
+  let T = null;
+  loadToppings().then((t) => {
+    if (!t) return;
+    for (const k of Object.keys(TOP)) {
+      const m = t[k];
+      m.scale.setScalar(TOP[k].s);
+      m.position.fromArray(TOP[k].pos);
+      if (TOP[k].rot) m.rotation.fromArray(TOP[k].rot);
+      m.userData.rest = m.position.clone();
+      m.userData.restRot = m.rotation.clone();
+      toppings.add(m);
+    }
+    T = t;
   });
 
   // orbiting picker
@@ -279,6 +316,38 @@ export function buildCupRig(fx = {}) {
       m.rotation.y = i * 1.3 + (1 - level) * 0.6;
     });
     if (ch === 1 && crossed(ch, t, 0.62)) kick(0.9);
+
+    // the toppings, once the glass is full (chapter 1, after the pour)
+    const topT = ch < 1 ? 0 : ch > 1 ? 1 : seg(t, 0.64, 0.98);
+    toppings.visible = !!T && topT > 0.001;
+    if (T && toppings.visible) {
+      // cream: piped on — grows up from the surface while turning, like a
+      // nozzle laying the spiral down (the base stays put)
+      const pipe = seg(topT, 0, 0.42);
+      const pe = pipe < 1 ? 1 - Math.pow(1 - pipe, 2.2) : 1;
+      T.cream.scale.set(TOP.cream.s * Math.min(1, 0.55 + pe * 0.45), TOP.cream.s * Math.max(0.001, pe), TOP.cream.s * Math.min(1, 0.55 + pe * 0.45));
+      T.cream.rotation.y = (1 - pe) * Math.PI * 2.5 + Math.sin(time * 0.4) * 0.05;
+      T.cream.visible = pipe > 0.001;
+      if (crossed(ch, t, 0.64)) kick(-0.5);
+      // dust: the sheet floats down from above and settles on the swirl
+      const fall = seg(topT, 0.44, 0.7);
+      const fe = fall < 1 ? 1 - Math.pow(1 - fall, 3) : 1;
+      T.dust.visible = fall > 0.001;
+      T.dust.position.copy(T.dust.userData.rest).add(new THREE.Vector3(Math.sin(fall * 7) * 0.05 * (1 - fe), (1 - fe) * 1.3, 0));
+      T.dust.rotation.set(T.dust.userData.restRot.x + (1 - fe) * 0.6, T.dust.userData.restRot.y + (1 - fe) * 1.4, T.dust.userData.restRot.z + Math.sin(fall * 9) * 0.25 * (1 - fe));
+      T.dust.scale.setScalar(TOP.dust.s * Math.max(0.001, Math.min(1, fall * 4)));
+      // mochi: drops in and bounces on the surface (POW, the cup squashes)
+      const drop = seg(topT, 0.7, 1);
+      const de = drop < 1 ? bounceOut(drop) : 1;
+      T.mochi.visible = drop > 0.001;
+      T.mochi.position.copy(T.mochi.userData.rest).add(new THREE.Vector3(0, (1 - de) * 1.5, 0));
+      T.mochi.rotation.y = (1 - drop) * 1.2;
+      const squash = drop >= 1 ? 1 : 1 - 0.25 * bell(seg(drop, 0.3, 0.5));
+      T.mochi.scale.set(TOP.mochi.s * (2 - squash), TOP.mochi.s * squash, TOP.mochi.s * (2 - squash));
+      if (crossed(ch, t, 0.64 + 0.34 * 0.78)) { powAt('#FF5FA6', new THREE.Vector3(0.3, SURFACE + 0.4, 0.4)); kick(-1.1); }
+      // the full stack bobs with the surface like the bits do
+      toppings.position.y = SURFACE + (ch > 1 ? Math.sin(time * 1.6) * 0.02 : 0) + clamp(bounce.x, 0, 0.4) * 0.5;
+    }
 
     // ---------- 2: lid, straw, show-off spin, crowd ----------
     const l = ch < 2 ? 0 : ch > 2 ? 1 : seg(t, 0.02, 0.16);

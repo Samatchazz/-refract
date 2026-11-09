@@ -37,6 +37,20 @@ full-bleed cover → "เคสถัดไป" footer. Media are placeholder ca
 images exist. Each case declares `data-gl-candy`; the bear hugs that candy (`Stage.setHeld`),
 hops off-screen while you read, and comes back for the next-case footer.
 
+## Toppings (Blender → .glb)
+
+The secret-menu cup gets three Blender-made gummy toppings after the pour (chapter 2 of
+`case-secret-menu.html`): a cream swirl piped on in a spiral, a thin dusting sheet that
+settles on its tip, and a mochi ball that drops in with a POW. Files in
+`public/models/{matcha-cream,matcha-dust,mochi-topping}.glb` (geometry only: Y-up, origin at
+the bottom centre, ~1 unit tall, 5–16k tris); source scene `blender/toppings.blend`. They are
+loaded in `src/js/gl/art/toppings.js`, dressed in the site's dense pink jelly (`solid()`), and
+placed/animated in `build-cup.js` (`TOP`, `SURFACE`). The cup wall is a dense translucent gummy,
+so the mound sits well above the lip — anything below it is only a tint. To re-export after a
+shape tweak: open the .blend, select an object, glTF export with `use_selection`,
+`export_apply`, materials NONE, no UVs, +Y up. Check with
+`node scripts/_toppings-shots.mjs <out-dir> [portrait]` against the dev server.
+
 ## About page (scrollytelling)
 
 Five `[data-chapter]` sections; the bear never leaves. 0 grey + empty-handed → 1 color rises
