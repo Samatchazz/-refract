@@ -1,0 +1,99 @@
+{
+ "source": "probe/home_1440.json#typeScale",
+ "rootFontSizePx": 18,
+ "families": [
+  {
+   "value": "Inter",
+   "count": 27
+  },
+  {
+   "value": "Inter Tight",
+   "count": 5
+  },
+  {
+   "value": "Instrument Serif",
+   "count": 1
+  },
+  {
+   "value": "Host Grotesk Local",
+   "count": 1
+  }
+ ],
+ "weights": [
+  {
+   "value": "600",
+   "count": 17
+  },
+  {
+   "value": "400",
+   "count": 12
+  },
+  {
+   "value": "700",
+   "count": 5
+  }
+ ],
+ "rows": [
+  {
+   "px": 140,
+   "rem": 7.78,
+   "weight": "700",
+   "family": "Inter Tight",
+   "transform": "none",
+   "lineHeightRatio": "1",
+   "letterSpacingEm": -0.00714,
+   "count": 4
+  },
+  {
+   "px": 18,
+   "rem": 1,
+   "weight": "400",
+   "family": "Inter",
+   "transform": "none",
+   "lineHeightRatio": "1.45",
+   "letterSpacingEm": 0,
+   "count": 3
+  },
+  {
+   "px": 16,
+   "rem": 0.89,
+   "weight": "400",
+   "family": "Inter",
+   "transform": "none",
+   "lineHeightRatio": "1.6",
+   "letterSpacingEm": 0,
+   "count": 8
+  },
+  {
+   "px": 15,
+   "rem": 0.83,
+   "weight": "600",
+   "family": "Inter",
+   "transform": "uppercase",
+   "lineHeightRatio": "1.6",
+   "letterSpacingEm": 0,
+   "count": 8
+  },
+  {
+   "px": 15,
+   "rem": 0.83,
+   "weight": "600",
+   "family": "Inter",
+   "transform": "uppercase",
+   "lineHeightRatio": "1.85",
+   "letterSpacingEm": 0,
+   "count": 5
+  },
+  {
+   "px": 14,
+   "rem": 0.78,
+   "weight": "600",
+   "family": "Inter",
+   "transform": "uppercase",
+   "lineHeightRatio": "1.7",
+   "letterSpacingEm": 0,
+   "count": 3
+  }
+ ],
+ "droppedSingletons": 3
+}

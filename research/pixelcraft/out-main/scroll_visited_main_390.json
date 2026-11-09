@@ -1,0 +1,164 @@
+[
+  {
+    "step": 0,
+    "target": 0,
+    "actualY": 0,
+    "docH": 11246
+  },
+  {
+    "step": 1,
+    "target": 400,
+    "actualY": 400,
+    "docH": 11246
+  },
+  {
+    "step": 2,
+    "target": 800,
+    "actualY": 800,
+    "docH": 11246
+  },
+  {
+    "step": 3,
+    "target": 1200,
+    "actualY": 1200,
+    "docH": 11246
+  },
+  {
+    "step": 4,
+    "target": 1600,
+    "actualY": 1600,
+    "docH": 11246
+  },
+  {
+    "step": 5,
+    "target": 2000,
+    "actualY": 2000,
+    "docH": 11246
+  },
+  {
+    "step": 6,
+    "target": 2400,
+    "actualY": 2400,
+    "docH": 11246
+  },
+  {
+    "step": 7,
+    "target": 2801,
+    "actualY": 2801,
+    "docH": 11246
+  },
+  {
+    "step": 8,
+    "target": 3201,
+    "actualY": 3201,
+    "docH": 11246
+  },
+  {
+    "step": 9,
+    "target": 3601,
+    "actualY": 3601,
+    "docH": 11246
+  },
+  {
+    "step": 10,
+    "target": 4001,
+    "actualY": 4001,
+    "docH": 11246
+  },
+  {
+    "step": 11,
+    "target": 4401,
+    "actualY": 4401,
+    "docH": 11246
+  },
+  {
+    "step": 12,
+    "target": 4746,
+    "actualY": 4746,
+    "docH": 11126
+  },
+  {
+    "step": 13,
+    "target": 5141,
+    "actualY": 5141,
+    "docH": 11126
+  },
+  {
+    "step": 14,
+    "target": 5536,
+    "actualY": 5536,
+    "docH": 11126
+  },
+  {
+    "step": 15,
+    "target": 5932,
+    "actualY": 5932,
+    "docH": 11126
+  },
+  {
+    "step": 16,
+    "target": 6327,
+    "actualY": 6327,
+    "docH": 11126
+  },
+  {
+    "step": 17,
+    "target": 6723,
+    "actualY": 6723,
+    "docH": 11126
+  },
+  {
+    "step": 18,
+    "target": 7118,
+    "actualY": 7118,
+    "docH": 11126
+  },
+  {
+    "step": 19,
+    "target": 7514,
+    "actualY": 7514,
+    "docH": 11126
+  },
+  {
+    "step": 20,
+    "target": 7909,
+    "actualY": 7909,
+    "docH": 11126
+  },
+  {
+    "step": 21,
+    "target": 8301,
+    "actualY": 8301,
+    "docH": 11121
+  },
+  {
+    "step": 22,
+    "target": 8696,
+    "actualY": 8696,
+    "docH": 11121
+  },
+  {
+    "step": 23,
+    "target": 9091,
+    "actualY": 9091,
+    "docH": 11121
+  },
+  {
+    "step": 24,
+    "target": 9486,
+    "actualY": 9486,
+    "docH": 11121
+  },
+  {
+    "step": 25,
+    "target": 9882,
+    "actualY": 9882,
+    "docH": 11121
+  },
+  {
+    "step": 26,
+    "target": 10277,
+    "actualY": 10277,
+    "docH": 11121
+  }
+]

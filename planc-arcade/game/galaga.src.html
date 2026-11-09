@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>planc* — galaga proto</title>
+<style>
+__FONT_CSS__
+:root{ --ink:#f4f2ec; --paper:#0a0a0a; }
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:auto}
+body{background:var(--paper);color:var(--ink);font-family:'Prompt',system-ui,sans-serif}
+#scrollSpace{height:5600px}
+#stage{position:fixed;inset:0;overflow:hidden}
+#frame{position:absolute;left:50%;top:0;transform:translateX(-50%);width:100%;max-width:430px;height:100%}
+
+/* ดาว 3 ชั้นพารัลแลกซ์ — ตำแหน่งเป็นฟังก์ชันของ progress ล้วนๆ */
+.stars{position:absolute;inset:-20% 0;background-repeat:repeat;pointer-events:none}
+#st1{background-image:radial-gradient(1px 1px at 23px 41px, var(--ink) 50%, transparent 51%),
+                      radial-gradient(1px 1px at 131px 187px, var(--ink) 50%, transparent 51%),
+                      radial-gradient(1px 1px at 71px 253px, var(--ink) 50%, transparent 51%),
+                      radial-gradient(1px 1px at 197px 97px, var(--ink) 50%, transparent 51%);
+     background-size:240px 300px;opacity:.35}
+#st2{background-image:radial-gradient(1.6px 1.6px at 51px 31px, var(--ink) 50%, transparent 51%),
+                      radial-gradient(1.6px 1.6px at 163px 211px, var(--ink) 50%, transparent 51%),
+                      radial-gradient(1.6px 1.6px at 109px 127px, var(--ink) 50%, transparent 51%);
+     background-size:220px 260px;opacity:.55}
+#st3{background-image:radial-gradient(2.4px 2.4px at 83px 61px, var(--ink) 50%, transparent 51%),
+                      radial-gradient(2.4px 2.4px at 29px 191px, var(--ink) 50%, transparent 51%);
+     background-size:260px 240px;opacity:.9}
+
+#hud{position:absolute;top:0;left:0;right:0;display:flex;justify-content:space-between;
+     padding:14px 16px 0;font-weight:600;font-size:13px;letter-spacing:.14em;z-index:40}
+#hud .hi{opacity:.55}
+
+svg#world{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+
+/* แมวดำบนพื้นมืด — กติกา CLAUDE.md: ห้าม invert ใส่ rim 4 ทิศ */
+#catImg{filter:drop-shadow(1.4px 0 0 var(--ink)) drop-shadow(-1.4px 0 0 var(--ink))
+              drop-shadow(0 1.4px 0 var(--ink)) drop-shadow(0 -1.4px 0 var(--ink))}
+
+.beat{position:absolute;left:8%;right:8%;text-align:center;z-index:30;opacity:0}
+.beat h1{font-weight:800;font-size:44px;letter-spacing:.02em}
+.beat h2{font-weight:800;font-size:26px;line-height:1.35}
+.beat p{font-family:'Sarabun',system-ui,sans-serif;font-size:15px;line-height:1.7;opacity:.85;margin-top:10px}
+.beat .en{font-size:11px;letter-spacing:.32em;opacity:.5;margin-top:14px;font-weight:600}
+.cta{display:inline-block;margin-top:18px;padding:13px 30px;border:2px solid var(--ink);
+     font-weight:600;font-size:15px;letter-spacing:.06em}
+#hint{position:absolute;bottom:4%;left:0;right:0;text-align:center;font-size:12px;
+      letter-spacing:.28em;opacity:.6;z-index:30}
+</style>
+</head>
+<body>
+<div id="scrollSpace"></div>
+<div id="stage"><div id="frame">
+  <div class="stars" id="st1"></div>
+  <div class="stars" id="st2"></div>
+  <div class="stars" id="st3"></div>
+
+  <div id="hud"><span>SCORE <span id="score">000000</span></span><span class="hi">HI&nbsp;&nbsp;PLANC*</span></div>
+
+  <svg id="world" viewBox="0 0 390 844" preserveAspectRatio="xMidYMid slice">
+    <g id="enemies"></g>
+    <g id="fx"></g>
+    <g id="ship"></g>
+  </svg>
+
+  <div class="beat" id="b0" style="top:26%">
+    <h1>planc*</h1>
+    <p>บางสัปดาห์ ปัญหาไม่ได้มาทีละเรื่อง<br>มันบินมาเป็นฝูง</p>
+    <div class="en">SCROLL&nbsp;TO&nbsp;FLY</div>
+  </div>
+  <div class="beat" id="b1" style="top:45%">
+    <h2>ฝูงแรก: งานด่วน</h2>
+    <p>เลื่อนต่อ — เดี๋ยวจัดการให้ดู</p>
+  </div>
+  <div class="beat" id="b2" style="top:45%">
+    <h2>ยังมีอีก: เอกสาร ระบบ บัญชี</h2>
+    <p>ตัวเล็กแต่มาเยอะ</p>
+  </div>
+  <div class="beat" id="b3" style="top:45%">
+    <h2>ฝูงสุดท้ายของวันนี้</h2>
+    <p>อย่าหยุดเลื่อน</p>
+  </div>
+  <div class="beat" id="b4" style="top:24%">
+    <h2>เคลียร์ทุกฝูง<br>โดยที่คุณแค่เลื่อนดู</h2>
+    <p>planc* ทำงานแบบเดียวกันนี้กับปัญหาจริงของคุณ<br><span style="opacity:.55">(ตัวหนังสือทั้งหมดคือ placeholder — เนื้อจริงรอ CONTENT-MAP)</span></p>
+    <div class="cta">คุยกับ planc*</div>
+    <div class="en">PROTO&nbsp;ONLY&nbsp;·&nbsp;SCROLL&nbsp;BACK&nbsp;=&nbsp;REWIND</div>
+  </div>
+  <div id="hint">▼&nbsp;&nbsp;SCROLL</div>
+</div></div>
+
+<script>
+/* =========================================================
+   ไวยากรณ์เดียวกับเว็บหลักเป๊ะ: เว็บนี้ไม่มีเวลา มีแต่ตำแหน่ง
+   ทุกอย่างเป็นฟังก์ชันบริสุทธิ์ของ cur (0..1) — เลื่อนถอยได้เสมอ
+   ========================================================= */
+const SCROLL_LEN = 5600;
+const $ = id => document.getElementById(id);
+const clamp = (v,a,b)=>Math.max(a,Math.min(b,v));
+const sstep = (a,b,v)=>{ const t = clamp((v-a)/(b-a),0,1); return t*t*(3-2*t); };
+const lerp  = (a,b,t)=>a+(b-a)*t;
+const rnd   = i => ((i*2654435761 >>> 0) % 997) / 997;   // สุ่มแบบตายตัว ไม่ใช้ Math.random
+
+const W=390, H=844, SHIP_Y=660;
+
+/* ---------- ศัตรูสองสายพันธุ์ (ขาวบนดำ) ---------- */
+function foeClock(s){ // นาฬิกาปลุก = งานด่วน
+  return `<g transform="scale(${s})">
+    <circle r="13" fill="none" stroke="var(--ink)" stroke-width="2.4"/>
+    <circle cx="-10" cy="-11" r="4.4" fill="var(--ink)"/><circle cx="10" cy="-11" r="4.4" fill="var(--ink)"/>
+    <path d="M0 -6 L0 1 L6 4" stroke="var(--ink)" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+    <path class="wing" d="M-13 3 L-21 8 M13 3 L21 8" stroke="var(--ink)" stroke-width="2" stroke-linecap="round"/>
+  </g>`;
+}
+function foeDoc(s){ // ซองเอกสาร = งานจุกจิก
+  return `<g transform="scale(${s})">
+    <rect x="-12" y="-9" width="24" height="18" fill="none" stroke="var(--ink)" stroke-width="2.2"/>
+    <path d="M-12 -9 L0 2 L12 -9" fill="none" stroke="var(--ink)" stroke-width="2.2"/>
+    <path class="wing" d="M-12 5 L-19 10 M12 5 L19 10" stroke="var(--ink)" stroke-width="2" stroke-linecap="round"/>
+  </g>`;
+}
+
+/* ---------- นิยามเวฟ — ทุกตัวเลขคือ progress ---------- */
+/* enemy: slot(x,y ในฟอร์เมชัน) · in0..in1 ช่วงบินเข้า · pk จุดโดนยิง */
+const waves = [
+  { in0:.070, in1:.130, k0:.140, k1:.260, foe:foeClock, sc:1.0,
+    slots:[[75,150],[150,150],[240,150],[315,150],[112,215],[195,215],[278,215]] },
+  { in0:.330, in1:.395, k0:.405, k1:.545, foe:foeDoc, sc:.92,
+    slots:[[60,140],[130,175],[195,205],[260,175],[330,140],[100,255],[195,285],[290,255]] },
+  { in0:.600, in1:.665, k0:.675, k1:.840, foe:foeClock, sc:.8,
+    slots:[[62,130],[145,130],[245,130],[328,130],[62,205],[145,205],[245,205],[328,205],[104,280],[286,280]] },
+];
+
+const enemies = [];
+waves.forEach((w,wi)=>{
+  const order = w.slots.map((_,i)=>i).sort((a,b)=>rnd(wi*31+a)-rnd(wi*31+b));
+  w.slots.forEach((slot,i)=>{
+    const oi = order.indexOf(i);
+    enemies.push({
+      wi, slot, foe:w.foe, sc:w.sc, seed:wi*97+i,
+      in0:w.in0 + (i/w.slots.length)*.55*(w.in1-w.in0),
+      in1:w.in1,
+      pk: w.k0 + (oi+0.5)/w.slots.length*(w.k1-w.k0),
+      entrySide: (i%2? -1:1),
+    });
+  });
+});
+const KDELTA=.011, EXPL=.014;
+
+/* ---------- สร้าง DOM ครั้งเดียว ---------- */
+const eg=$('enemies'), fx=$('fx'), sg=$('ship');
+const NS='http://www.w3.org/2000/svg';
+const eEls = enemies.map(e=>{
+  const g=document.createElementNS(NS,'g'); g.innerHTML=e.foe(e.sc); eg.appendChild(g);
+  const ex=document.createElementNS(NS,'g'); // ระเบิด 8 แฉก + วงแหวน
+  let rays=''; for(let r=0;r<8;r++){ const a=r*Math.PI/4;
+    rays+=`<line x1="${Math.cos(a)*4}" y1="${Math.sin(a)*4}" x2="${Math.cos(a)*16}" y2="${Math.sin(a)*16}"
+           stroke="var(--ink)" stroke-width="2.4" stroke-linecap="round"/>`; }
+  ex.innerHTML=rays+`<circle r="9" fill="none" stroke="var(--ink)" stroke-width="1.6"/>`;
+  fx.appendChild(ex);
+  const bolt=document.createElementNS(NS,'line');
+  bolt.setAttribute('stroke','var(--ink)'); bolt.setAttribute('stroke-width','3');
+  bolt.setAttribute('stroke-linecap','round'); fx.appendChild(bolt);
+  return {g,ex,bolt};
+});
+
+/* ยาน: จรวดลายเส้น + แมว (รูปจริง) นั่งในค็อกพิท */
+sg.innerHTML = `<g id="shipG">
+  <path d="M0 -34 L13 -8 L15 14 L8 20 L-8 20 L-15 14 L-13 -8 Z"
+        fill="var(--paper)" stroke="var(--ink)" stroke-width="2.6"/>
+  <path d="M-15 8 L-27 24 L-13 19 M15 8 L27 24 L13 19" fill="var(--paper)"
+        stroke="var(--ink)" stroke-width="2.4" stroke-linejoin="round"/>
+  <clipPath id="ck"><circle cx="0" cy="-8" r="10.5"/></clipPath>
+  <circle cx="0" cy="-8" r="12" fill="var(--paper)" stroke="var(--ink)" stroke-width="2.2"/>
+  <image id="catImg" href="__CAT_B64__" x="-11" y="-19" width="22" height="26"
+         clip-path="url(#ck)" preserveAspectRatio="xMidYMin slice"/>
+  <g id="flame" stroke="var(--ink)" stroke-width="2.2" stroke-linecap="round" fill="none">
+    <path d="M-5 22 L-4 30 M0 22 L0 34 M5 22 L4 30"/>
+  </g>
+</g>`;
+const shipG=$('shipG'), flame=$('flame');
+
+/* ---------- เส้นทางยาน: วิ่งไปใต้เป้าที่กำลังจะยิง ---------- */
+const keys=[[0,W/2]];
+enemies.slice().sort((a,b)=>a.pk-b.pk).forEach(e=>keys.push([e.pk, clamp(e.slot[0],50,340)]));
+keys.push([1,W/2]);
+function shipX(c){
+  let i=0; while(i<keys.length-1 && keys[i+1][0]<c) i++;
+  if(i>=keys.length-1) return keys[keys.length-1][1];
+  const [p0,x0]=keys[i], [p1,x1]=keys[i+1];
+  return lerp(x0,x1,sstep(p0,p1,c));
+}
+
+/* ---------- ตำแหน่งศัตรู ณ progress ใดๆ ---------- */
+function enemyPos(e,c){
+  const sx=e.slot[0]+Math.sin(c*46+e.seed)*5, sy=e.slot[1]+Math.cos(c*33+e.seed*2)*4;
+  if(c>=e.in1) return [sx,sy];
+  const t=sstep(e.in0,e.in1,c);
+  const x0=W/2+e.entrySide*(W*.62), y0=-90;
+  const cx=W/2-e.entrySide*(W*.35), cy=e.slot[1]*.45;
+  const u=1-t;
+  return [u*u*x0+2*u*t*cx+t*t*sx, u*u*y0+2*u*t*cy+t*t*sy];
+}
+
+/* ---------- beats ---------- */
+const beats=[['b0',-.03,.075],['b1',.132,.20],['b2',.36,.45],['b3',.62,.70],['b4',.865,1.2]];
+
+/* ---------- ลูป rAF (ไวยากรณ์เดิม: lerp คูณ dt) ---------- */
+let cur=0, last=performance.now();
+function frame(now){
+  const dt=Math.min(50, now-last)/1000; last=now;
+  const target=clamp(scrollY/(SCROLL_LEN-innerHeight),0,1);
+  cur += (target-cur)*(1-Math.pow(1-0.14,dt*60));
+  if(Math.abs(target-cur)<.00004) cur=target;
+  draw(cur);
+  requestAnimationFrame(frame);
+}
+function draw(c){
+  $('st1').style.backgroundPosition=`0 ${c*300}px`;
+  $('st2').style.backgroundPosition=`0 ${c*700}px`;
+  $('st3').style.backgroundPosition=`0 ${c*1300}px`;
+
+  const sx=shipX(c);
+  const tilt=clamp((shipX(c+.004)-shipX(c-.004))*2.0,-16,16);
+  const bob=Math.sin(c*60)*3;
+  shipG.setAttribute('transform',`translate(${sx},${SHIP_Y+bob}) rotate(${tilt})`);
+  flame.setAttribute('opacity', .55+.45*Math.sin(c*300));
+
+  let kills=0;
+  enemies.forEach((e,i)=>{
+    const el=eEls[i], dead=c>=e.pk;
+    if(dead) kills++;
+    const vis = c>=e.in0 && c<e.pk;
+    el.g.setAttribute('opacity', vis?1:0);
+    if(vis){
+      const [x,y]=enemyPos(e,c);
+      const flap=Math.sin(c*120+e.seed)*14;
+      el.g.setAttribute('transform',`translate(${x},${y}) rotate(${flap*.25})`);
+    }
+    /* กระสุน: มีชีวิตอยู่แค่ในหน้าต่าง progress ของมันเอง */
+    const bu=(c-(e.pk-KDELTA))/KDELTA;
+    if(bu>0&&bu<1){
+      const [tx,ty]=enemyPos(e,c);
+      const bx=lerp(shipX(e.pk-KDELTA),tx,bu), by=lerp(SHIP_Y-36,ty,bu);
+      el.bolt.setAttribute('opacity',1);
+      el.bolt.setAttribute('x1',bx); el.bolt.setAttribute('y1',by+10);
+      el.bolt.setAttribute('x2',bx); el.bolt.setAttribute('y2',by-2);
+    } else el.bolt.setAttribute('opacity',0);
+    /* ระเบิด: บานแล้วจาง — ย้อนสกรอลก็หุบกลับ */
+    const xu=(c-e.pk)/EXPL;
+    if(xu>0&&xu<1){
+      const [x,y]=enemyPos(e,e.pk);
+      el.ex.setAttribute('opacity',1-xu);
+      el.ex.setAttribute('transform',`translate(${x},${y}) scale(${.4+xu*1.5}) rotate(${xu*40})`);
+    } else el.ex.setAttribute('opacity',0);
+  });
+
+  $('score').textContent=String(kills*150).padStart(6,'0');
+  beats.forEach(([id,a,b])=>{
+    const o=sstep(a,a+.02,c)*(1-sstep(b-.02,b,c));
+    const el=$(id); el.style.opacity=o; el.style.transform=`translateY(${(1-o)*14}px)`;
+  });
+  $('hint').style.opacity=.6*(1-sstep(.02,.05,c));
+}
+requestAnimationFrame(frame);
+</script>
+</body>
+</html>

@@ -1,0 +1,262 @@
+/* ============================================================
+   Base / reset / render architecture
+   ============================================================ */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html {
+  background: var(--c-bg);
+  color-scheme: light;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: var(--c-bg);
+  color: var(--c-text);
+  font-family: var(--f-body);
+  font-size: var(--fs-body);
+  font-weight: 400;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  min-height: calc(var(--vh, 1vh) * 100);
+}
+
+img, canvas, video, svg { display: block; max-width: 100%; }
+a { color: inherit; text-decoration: none; }
+button { font: inherit; color: inherit; background: none; border: 0; cursor: pointer; }
+ul, ol { list-style: none; }
+
+::selection { background: var(--c-accent); color: #fff; }
+
+/* ---- z-index map ----
+   canvas #gl        fixed z:0, pointer-events none
+   .site             relative z:1
+   header            fixed z:100
+   .transition-veil  fixed z:200
+   .loader           fixed z:300
+------------------------------------------------ */
+
+#gl {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  width: 100%;
+  height: calc(var(--vh, 1vh) * 100);
+  opacity: 0;
+  transition: opacity 1.2s var(--ease-out);
+}
+html.gl-ready #gl { opacity: 1; }
+html.no-webgl #gl,
+html.reduced-motion #gl { display: none; }
+
+/* Poster fallback: candy gradient until GL is ready, and permanently
+   when WebGL is unavailable or reduced-motion is on. */
+.poster {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(70% 60% at 78% 30%, rgba(255, 61, 143, .28) 0%, transparent 65%),
+    radial-gradient(60% 55% at 18% 72%, rgba(138, 92, 255, .22) 0%, transparent 62%),
+    radial-gradient(50% 45% at 60% 85%, rgba(166, 232, 92, .26) 0%, transparent 60%),
+    radial-gradient(45% 40% at 30% 20%, rgba(255, 138, 61, .22) 0%, transparent 60%),
+    var(--c-bg);
+  opacity: 1;
+  transition: opacity 1.2s var(--ease-out);
+}
+html.gl-ready .poster { opacity: 0; }
+html.no-webgl .poster,
+html.reduced-motion .poster { opacity: 1 !important; }
+
+.site { position: relative; z-index: 1; }
+
+/* ?noui=1 — style-reference capture: nothing but the canvas (and its
+   poster gradient beneath it). Every DOM layer goes, cursor too. */
+html[data-noui] .header,
+html[data-noui] .site,
+html[data-noui] .menu-overlay,
+html[data-noui] .read-overlay,
+html[data-noui] .transition-veil,
+html[data-noui] .loader { display: none !important; }
+html[data-noui], html[data-noui] body { overflow: hidden; cursor: none; }
+html[data-noui] body { min-height: 0; }
+
+.section-opaque { background: var(--c-bg); }
+.section-raised { background: var(--c-bg-raise); }
+
+/* ---- a11y ---- */
+.sr-only {
+  position: absolute;
+  width: 1px; height: 1px;
+  clip-path: inset(50%);
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+:focus-visible {
+  outline: 3px solid var(--c-accent);
+  outline-offset: 4px;
+  border-radius: 8px;
+}
+
+/* ---- utilities ---- */
+.label {
+  font-family: var(--f-ui);
+  font-size: var(--fs-label);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  color: var(--c-muted);
+}
+
+.container {
+  width: 100%;
+  max-width: 100rem;
+  margin-inline: auto;
+  padding-inline: clamp(1.25rem, 4vw, 4rem);
+}
+
+em, .it { font-style: normal; color: var(--c-accent); }
+
+/* pill button / link */
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  padding: .7rem 1.25rem;
+  border-radius: var(--radius-pill);
+  background: var(--c-text);
+  color: #fff;
+  font-family: var(--f-ui);
+  font-weight: 500;
+  font-size: .95rem;
+  letter-spacing: .01em;
+  transition: transform .45s var(--ease-bounce), background .3s;
+}
+.pill:hover { background: var(--c-accent); transform: translateY(-2px) scale(1.03); }
+.pill--ghost { background: transparent; color: var(--c-text); box-shadow: inset 0 0 0 2px var(--c-text); }
+.pill--ghost:hover { background: var(--c-text); color: #fff; }
+
+/* gummy pill: strawberry jelly, lit from above like the bear — glossy top
+   sheen, deeper belly, soft pink glow underneath */
+.pill--gummy {
+  position: relative;
+  overflow: hidden;
+  padding: .8rem 1.6rem .85rem;
+  font-size: 1.35rem;
+  font-weight: 700;
+  letter-spacing: .01em;
+  color: #fff;
+  text-shadow: 0 1px 0 rgba(120, 0, 50, .3), 0 0 12px rgba(255, 255, 255, .25);
+  background: linear-gradient(180deg, #FF8CC0 0%, #FF3D8F 48%, #E52C74 100%);
+  box-shadow:
+    0 14px 28px -10px rgba(255, 61, 143, .6),
+    0 2px 0 rgba(150, 10, 70, .35),
+    inset 0 -5px 10px rgba(120, 0, 50, .28),
+    inset 0 3px 6px rgba(255, 255, 255, .55);
+  transition: transform .45s var(--ease-bounce), box-shadow .3s, filter .3s;
+}
+.pill--gummy::before {
+  /* the highlight blob every gummy has */
+  content: '';
+  position: absolute;
+  left: 8%; top: 7%;
+  width: 50%; height: 30%;
+  border-radius: 999px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, .55), rgba(255, 255, 255, 0));
+  mix-blend-mode: soft-light;
+  pointer-events: none;
+}
+.pill--gummy:hover {
+  background: linear-gradient(180deg, #FF9DC9 0%, #FF4D9A 48%, #EE3A80 100%);
+  transform: translateY(-3px) scale(1.05);
+  filter: saturate(1.1);
+  box-shadow:
+    0 20px 34px -10px rgba(255, 61, 143, .7),
+    0 2px 0 rgba(150, 10, 70, .35),
+    inset 0 -5px 10px rgba(120, 0, 50, .28),
+    inset 0 3px 6px rgba(255, 255, 255, .6);
+}
+.pill--gummy:active { transform: translateY(1px) scale(.97); }
+/* the arrow is its own gummy bead that nudges forward on hover */
+.pill--gummy .arrow {
+  display: inline-block;
+  margin-left: .1em;
+  transition: transform .45s var(--ease-bounce);
+}
+.pill--gummy:hover .arrow { transform: translateX(.35em); }
+
+/* twinkle: a tiny sparkle that blinks now and then + a faint sheen sweep.
+   Deliberately subtle — long idle, short flash. */
+.pill--twinkle::after {
+  content: '✦';
+  position: absolute;
+  right: .55em; top: -.15em;
+  font-size: .8em;
+  line-height: 1;
+  color: #fff;
+  text-shadow: 0 0 6px rgba(255, 255, 255, .9);
+  opacity: 0;
+  transform: scale(.4) rotate(0deg);
+  animation: pill-twinkle 4.2s ease-in-out infinite;
+  pointer-events: none;
+}
+@keyframes pill-twinkle {
+  0%, 78%, 100% { opacity: 0; transform: scale(.4) rotate(0deg); }
+  84% { opacity: 1; transform: scale(1) rotate(25deg); }
+  90% { opacity: .5; transform: scale(.7) rotate(45deg); }
+  94% { opacity: 0; transform: scale(.4) rotate(60deg); }
+}
+.pill--twinkle .sheen {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(115deg, transparent 35%, rgba(255, 255, 255, .28) 50%, transparent 65%);
+  transform: translateX(-120%);
+  animation: pill-sheen 6s ease-in-out infinite;
+  pointer-events: none;
+}
+@keyframes pill-sheen {
+  0%, 70% { transform: translateX(-120%); }
+  88%, 100% { transform: translateX(120%); }
+}
+html.reduced-motion .pill--twinkle::after,
+html.reduced-motion .pill--twinkle .sheen { animation: none; opacity: 0; }
+
+/* gummy dot — small colored bead used in labels / logo */
+.dot {
+  display: inline-block;
+  width: .55em; height: .55em;
+  border-radius: 50%;
+  background: var(--c-accent);
+  vertical-align: middle;
+  box-shadow: inset -2px -2px 3px rgba(0,0,0,.18), inset 2px 2px 3px rgba(255,255,255,.7);
+}
+.dot--lime { background: var(--c-lime); }
+.dot--sky { background: var(--c-sky); }
+.dot--orange { background: var(--c-orange); }
+.dot--grape { background: var(--c-accent-2); }
+.dot--yellow { background: var(--c-yellow); }
+
+/* ---- in-view entrance: rise with a gummy overshoot ---- */
+.appear-fade-up {
+  opacity: 0;
+  transform: translateY(var(--tr-inview)) scale(.98);
+  transition:
+    opacity var(--dur-in) var(--ease-out),
+    transform var(--dur-in) var(--ease-bounce);
+  transition-delay: var(--iv-delay, 0s);
+}
+.appear-fade-up.in-view { opacity: 1; transform: none; }
+
+html.reduced-motion .appear-fade-up {
+  transition: opacity .3s linear;
+  transform: none;
+}
+
+/* typewriter reveal — labels only */
+.tw-char { opacity: 0; transition: opacity .18s linear; }
+.tw-char.on { opacity: 1; }
+html.reduced-motion .tw-char { opacity: 1; transition: none; }

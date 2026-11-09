@@ -1,14 +1,309 @@
 {
-  "startedAt": "2026-08-01T05:21:28.794Z",
+  "startedAt": "2026-08-01T08:43:51.777Z",
   "playwright": "1.62.1",
   "flags": [
-    "--headful"
+    "--url",
+    "https://pixel-craft.cmsmasters.studio/"
   ],
-  "captures": [],
+  "captures": [
+    {
+      "label": "home_1440",
+      "url": "https://pixel-craft.cmsmasters.studio/",
+      "viewport": "1440x900",
+      "deep": true,
+      "sections": 25,
+      "docHeight": 27773,
+      "consoleErrors": 0,
+      "settledMs": 20053
+    },
+    {
+      "label": "home_390",
+      "url": "https://pixel-craft.cmsmasters.studio/",
+      "viewport": "390x844",
+      "deep": true,
+      "sections": 24,
+      "docHeight": 34542,
+      "consoleErrors": 0,
+      "settledMs": 20013
+    },
+    {
+      "label": "page1_1440",
+      "url": "https://pixel-craft.cmsmasters.studio/main/",
+      "viewport": "1440x900",
+      "deep": false,
+      "sections": 4,
+      "docHeight": 10733,
+      "consoleErrors": 0,
+      "settledMs": 2465
+    },
+    {
+      "label": "page2_1440",
+      "url": "https://pixel-craft.cmsmasters.studio/main/home-two/",
+      "viewport": "1440x900",
+      "deep": false,
+      "sections": 4,
+      "docHeight": 13867,
+      "consoleErrors": 0,
+      "settledMs": 2368
+    },
+    {
+      "label": "page3_1440",
+      "url": "https://pixel-craft.cmsmasters.studio/main/home-three/",
+      "viewport": "1440x900",
+      "deep": false,
+      "sections": 4,
+      "docHeight": 12974,
+      "consoleErrors": 0,
+      "settledMs": 2904
+    }
+  ],
   "notCaptured": [],
   "warnings": [],
   "browserUsed": "installed Chrome",
   "chromium": "150.0.7871.187",
-  "fatalError": "Could not resolve the demo URL from the preview page (ThemeForest may be blocking headless).\n  See out/_preview_probe.json, then follow BRIEF §2.1a — do NOT guess a URL.",
-  "finishedAt": "2026-08-01T05:21:37.493Z"
+  "demoUrl": "https://pixel-craft.cmsmasters.studio/",
+  "finishedAt": "2026-08-01T08:51:07.482Z",
+  "themeHints": [
+    {
+      "kind": "css",
+      "name": "pixel-craft",
+      "ver": "1.0.0"
+    },
+    {
+      "kind": "css",
+      "name": "cmsmasters-elementor-addon",
+      "ver": "1.0.0"
+    },
+    {
+      "kind": "css",
+      "name": "elementor",
+      "ver": "4.2.0"
+    },
+    {
+      "kind": "css",
+      "name": "cmsmasters-elementor-addon",
+      "ver": "1.25.1"
+    },
+    {
+      "kind": "css",
+      "name": "cmsmasters-elementor-addon",
+      "ver": "1.25.1"
+    },
+    {
+      "kind": "css",
+      "name": "elementor",
+      "ver": "4.2.0"
+    },
+    {
+      "kind": "css",
+      "name": "cmsmasters-elementor-addon",
+      "ver": "1.25.1"
+    },
+    {
+      "kind": "css",
+      "name": "elementor",
+      "ver": "4.2.0"
+    },
+    {
+      "kind": "css",
+      "name": "cmsmasters-elementor-addon",
+      "ver": "1.25.1"
+    },
+    {
+      "kind": "css",
+      "name": "elementor",
+      "ver": "4.2.0"
+    },
+    {
+      "kind": "css",
+      "name": "cmsmasters-elementor-addon",
+      "ver": "1.25.1"
+    },
+    {
+      "kind": "css",
+      "name": "elementor",
+      "ver": "4.2.0"
+    },
+    {
+      "kind": "css",
+      "name": "elementor",
+      "ver": "4.2.0"
+    },
+    {
+      "kind": "css",
+      "name": "elementor",
+      "ver": "4.2.0"
+    },
+    {
+      "kind": "css",
+      "name": "elementor",
+      "ver": "4.2.0"
+    },
+    {
+      "kind": "css",
+      "name": "elementor",
+      "ver": "8.4.5"
+    },
+    {
+      "kind": "css",
+      "name": "elementor",
+      "ver": "4.2.0"
+    },
+    {
+      "kind": "css",
+      "name": "cmsmasters-elementor-addon",
+      "ver": "1.25.1"
+    },
+    {
+      "kind": "css",
+      "name": "cmsmasters-elementor-addon",
+      "ver": "1.25.1"
+    },
+    {
+      "kind": "css",
+      "name": "elementor",
+      "ver": "4.2.0"
+    },
+    {
+      "kind": "css",
+      "name": "elementor",
+      "ver": "4.2.0"
+    },
+    {
+      "kind": "css",
+      "name": "elementor",
+      "ver": "4.2.0"
+    },
+    {
+      "kind": "css",
+      "name": "elementor",
+      "ver": "4.2.0"
+    },
+    {
+      "kind": "css",
+      "name": "cmsmasters-elementor-addon",
+      "ver": "1.25.1"
+    },
+    {
+      "kind": "css",
+      "name": "pixel-craft",
+      "ver": "1.0.0"
+    },
+    {
+      "kind": "css",
+      "name": "elementor",
+      "ver": "5.53.0"
+    },
+    {
+      "kind": "css",
+      "name": "cmsmasters-elementor-addon",
+      "ver": "1.25.1"
+    },
+    {
+      "kind": "js",
+      "name": "elementor",
+      "ver": "4.2.0"
+    },
+    {
+      "kind": "js",
+      "name": "elementor",
+      "ver": "4.2.0"
+    },
+    {
+      "kind": "js",
+      "name": "elementor",
+      "ver": "4.2.0"
+    },
+    {
+      "kind": "js",
+      "name": "cmsmasters-elementor-addon",
+      "ver": "1.4.0"
+    },
+    {
+      "kind": "js",
+      "name": "cmsmasters-elementor-addon",
+      "ver": "2.0.11"
+    },
+    {
+      "kind": "js",
+      "name": "cmsmasters-elementor-addon",
+      "ver": "1.21.0"
+    },
+    {
+      "kind": "js",
+      "name": "cmsmasters-elementor-addon",
+      "ver": "2.4.7"
+    },
+    {
+      "kind": "js",
+      "name": "elementor",
+      "ver": "0.2.1"
+    },
+    {
+      "kind": "js",
+      "name": "elementor",
+      "ver": "8.4.5"
+    },
+    {
+      "kind": "js",
+      "name": "cmsmasters-elementor-addon",
+      "ver": "2.0.0"
+    },
+    {
+      "kind": "js",
+      "name": "pixel-craft",
+      "ver": "1.0.0"
+    },
+    {
+      "kind": "js",
+      "name": "cmsmasters-elementor-addon",
+      "ver": "1.25.1"
+    },
+    {
+      "kind": "js",
+      "name": "cmsmasters-elementor-addon",
+      "ver": "1.25.1"
+    },
+    {
+      "kind": "js",
+      "name": "cmsmasters-elementor-addon",
+      "ver": "3.0.3"
+    },
+    {
+      "kind": "js",
+      "name": "cmsmasters-elementor-addon",
+      "ver": "1.7.0"
+    },
+    {
+      "kind": "js",
+      "name": "cmsmasters-elementor-addon",
+      "ver": "3.2.1"
+    },
+    {
+      "kind": "js",
+      "name": "cmsmasters-elementor-addon",
+      "ver": "2.2.6"
+    },
+    {
+      "kind": "js",
+      "name": "cmsmasters-elementor-addon",
+      "ver": "0.12.0"
+    },
+    {
+      "kind": "js",
+      "name": "cmsmasters-elementor-addon",
+      "ver": "1.25.1"
+    },
+    {
+      "kind": "js",
+      "name": "elementor",
+      "ver": "4.9.3"
+    },
+    {
+      "kind": "js",
+      "name": "elementor",
+      "ver": "4.2.0"
+    }
+  ],
+  "outDir": "out"
 }

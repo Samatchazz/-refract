@@ -1,0 +1,149 @@
+{
+  "responses": 157,
+  "measuredBytes": 4994649,
+  "unmeasured": 0,
+  "byType": {
+    "other": {
+      "count": 2,
+      "bytes": 2465,
+      "unmeasured": 0
+    },
+    "stylesheet": {
+      "count": 56,
+      "bytes": 284687,
+      "unmeasured": 0
+    },
+    "image": {
+      "count": 33,
+      "bytes": 1403796,
+      "unmeasured": 0
+    },
+    "script": {
+      "count": 47,
+      "bytes": 379878,
+      "unmeasured": 0
+    },
+    "document": {
+      "count": 1,
+      "bytes": 54152,
+      "unmeasured": 0
+    },
+    "font": {
+      "count": 10,
+      "bytes": 218572,
+      "unmeasured": 0
+    },
+    "xhr": {
+      "count": 7,
+      "bytes": 8401,
+      "unmeasured": 0
+    },
+    "media": {
+      "count": 1,
+      "bytes": 2642698,
+      "unmeasured": 0
+    }
+  },
+  "heaviest": [
+    {
+      "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/uploads/sites/2/2026/01/79-home-video.mp4",
+      "type": "Media",
+      "kb": 2581
+    },
+    {
+      "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/uploads/sites/2/2025/12/79-project-6.webp",
+      "type": "Image",
+      "kb": 310
+    },
+    {
+      "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/uploads/sites/2/2025/12/79-project-2.webp",
+      "type": "Image",
+      "kb": 134
+    },
+    {
+      "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/uploads/sites/2/2025/12/79-home-background-1.webp",
+      "type": "Image",
+      "kb": 129
+    },
+    {
+      "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/uploads/sites/2/2025/12/79-project-3.webp",
+      "type": "Image",
+      "kb": 97
+    },
+    {
+      "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/uploads/sites/2/2026/01/79-home-video-back.webp",
+      "type": "Image",
+      "kb": 76
+    },
+    {
+      "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/themes/pixel-craft-child-demo/demos-config/images/main.jpg",
+      "type": "Image",
+      "kb": 67
+    },
+    {
+      "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/themes/pixel-craft-child-demo/demos-config/images/home-three.jpg",
+      "type": "Image",
+      "kb": 59
+    },
+    {
+      "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/uploads/sites/2/2025/12/79-profile-1-600x814.webp",
+      "type": "Image",
+      "kb": 56
+    },
+    {
+      "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/plugins/forminator/build/front/front.multi.min.js?ver=1.56.0",
+      "type": "Script",
+      "kb": 56
+    },
+    {
+      "url": "https://pixel-craft.cmsmasters.studio/main/",
+      "type": "Document",
+      "kb": 53
+    },
+    {
+      "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/uploads/sites/2/2025/12/79-project-1.webp",
+      "type": "Image",
+      "kb": 47
+    },
+    {
+      "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/themes/pixel-craft-child-demo/demos-config/images/home-two.jpg",
+      "type": "Image",
+      "kb": 46
+    },
+    {
+      "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/uploads/sites/2/2025/12/79-project-4.webp",
+      "type": "Image",
+      "kb": 43
+    },
+    {
+      "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/uploads/sites/2/2025/12/79-project-5.webp",
+      "type": "Image",
+      "kb": 42
+    },
+    {
+      "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/uploads/sites/2/2025/12/79-profile-5-600x814.webp",
+      "type": "Image",
+      "kb": 40
+    },
+    {
+      "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/plugins/elementor/assets/lib/swiper/v8/swiper.min.js?ver=8.4.5",
+      "type": "Script",
+      "kb": 39
+    },
+    {
+      "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/uploads/sites/2/2025/12/79-profile-3-600x814.webp",
+      "type": "Image",
+      "kb": 39
+    },
+    {
+      "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/uploads/sites/2/elementor/css/pixel-craft-wc-frontend.min.css?ver=1785226928&ver=1.0.0",
+      "type": "Stylesheet",
+      "kb": 34
+    },
+    {
+      "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/uploads/sites/2/2025/12/79-profile-2-600x814.webp",
+      "type": "Image",
+      "kb": 33
+    }
+  ]
+}

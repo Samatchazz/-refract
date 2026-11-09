@@ -1,0 +1,328 @@
+{
+ "ts": "2026-08-01T10:17:45.126Z",
+ "results": [
+  {
+   "id": "1-console",
+   "pass": true,
+   "detail": "0 console errors"
+  },
+  {
+   "id": "2-sections",
+   "pass": true,
+   "detail": "26 sections S00..S25 in order"
+  },
+  {
+   "id": "3-tokens",
+   "pass": true,
+   "detail": "ALL TOKEN CHECKS PASS"
+  },
+  {
+   "id": "4-heights",
+   "pass": true,
+   "note": true,
+   "detail": "23/25 within ±10%; 2 outside (not an automatic fail per §7.4 — explanations in skeleton/README.md)"
+  },
+  {
+   "id": "4-heights-table",
+   "pass": true,
+   "rows": [
+    {
+     "sid": "S01",
+     "expected": 1176,
+     "actual": 1176,
+     "diffPct": 0,
+     "within": true
+    },
+    {
+     "sid": "S02",
+     "expected": 2206,
+     "actual": 2206,
+     "diffPct": 0,
+     "within": true
+    },
+    {
+     "sid": "S03",
+     "expected": 2148,
+     "actual": 2148,
+     "diffPct": 0,
+     "within": true
+    },
+    {
+     "sid": "S04",
+     "expected": 583,
+     "actual": 583,
+     "diffPct": 0.1,
+     "within": true
+    },
+    {
+     "sid": "S05",
+     "expected": 671,
+     "actual": 671,
+     "diffPct": 0,
+     "within": true
+    },
+    {
+     "sid": "S06",
+     "expected": 520,
+     "actual": 520,
+     "diffPct": 0,
+     "within": true
+    },
+    {
+     "sid": "S07",
+     "expected": 1019,
+     "actual": 1019,
+     "diffPct": 0,
+     "within": true
+    },
+    {
+     "sid": "S08",
+     "expected": 905,
+     "actual": 965,
+     "diffPct": 6.7,
+     "within": true
+    },
+    {
+     "sid": "S09",
+     "expected": 403,
+     "actual": 436,
+     "diffPct": 8.1,
+     "within": true
+    },
+    {
+     "sid": "S10",
+     "expected": 610,
+     "actual": 659,
+     "diffPct": 8.1,
+     "within": true
+    },
+    {
+     "sid": "S11",
+     "expected": 1108,
+     "actual": 1634,
+     "diffPct": 47.4,
+     "within": false
+    },
+    {
+     "sid": "S12",
+     "expected": 812,
+     "actual": 820,
+     "diffPct": 1,
+     "within": true
+    },
+    {
+     "sid": "S13",
+     "expected": 486,
+     "actual": 527,
+     "diffPct": 8.5,
+     "within": true
+    },
+    {
+     "sid": "S14",
+     "expected": 584,
+     "actual": 606,
+     "diffPct": 3.7,
+     "within": true
+    },
+    {
+     "sid": "S15",
+     "expected": 857,
+     "actual": 1337,
+     "diffPct": 56,
+     "within": false
+    },
+    {
+     "sid": "S16",
+     "expected": 800,
+     "actual": 800,
+     "diffPct": 0,
+     "within": true
+    },
+    {
+     "sid": "S17",
+     "expected": 860,
+     "actual": 860,
+     "diffPct": 0,
+     "within": true
+    },
+    {
+     "sid": "S18",
+     "expected": 1886,
+     "actual": 1886,
+     "diffPct": 0,
+     "within": true
+    },
+    {
+     "sid": "S19",
+     "expected": 965,
+     "actual": 965,
+     "diffPct": 0,
+     "within": true
+    },
+    {
+     "sid": "S20",
+     "expected": 861,
+     "actual": 861,
+     "diffPct": 0,
+     "within": true
+    },
+    {
+     "sid": "S21",
+     "expected": 1905,
+     "actual": 1905,
+     "diffPct": 0,
+     "within": true
+    },
+    {
+     "sid": "S22",
+     "expected": 1071,
+     "actual": 1071,
+     "diffPct": 0,
+     "within": true
+    },
+    {
+     "sid": "S23",
+     "expected": 1149,
+     "actual": 1149,
+     "diffPct": 0,
+     "within": true
+    },
+    {
+     "sid": "S24",
+     "expected": 356,
+     "actual": 356,
+     "diffPct": 0.1,
+     "within": true
+    },
+    {
+     "sid": "S25",
+     "expected": 1007,
+     "actual": 1007,
+     "diffPct": 0,
+     "within": true
+    }
+   ]
+  },
+  {
+   "id": "5-external-urls",
+   "pass": true,
+   "detail": "no external URLs (licence texts + provenance strings + localhost whitelisted — nothing external is fetched)"
+  },
+  {
+   "id": "6-no-theme-code",
+   "pass": true,
+   "detail": "10 sampled selectors (.skip .center .hl-host .burger .marquee .show-meta .conveyor .acc .tgllist .priceitem) absent from out/css/"
+  },
+  {
+   "id": "7-motion",
+   "pass": true,
+   "detail": "all 18 effects respond (computed values, not screenshots)"
+  },
+  {
+   "id": "7-motion-table",
+   "pass": true,
+   "rows": [
+    {
+     "id": "E10",
+     "kind": "scroll",
+     "moved": true
+    },
+    {
+     "id": "E11",
+     "kind": "scroll",
+     "moved": true
+    },
+    {
+     "id": "E12",
+     "kind": "scroll",
+     "moved": true
+    },
+    {
+     "id": "E20",
+     "kind": "scroll",
+     "moved": true
+    },
+    {
+     "id": "E21",
+     "kind": "scroll",
+     "moved": true
+    },
+    {
+     "id": "E30",
+     "kind": "scroll",
+     "moved": true
+    },
+    {
+     "id": "E32",
+     "kind": "scroll",
+     "moved": true
+    },
+    {
+     "id": "E33",
+     "kind": "time",
+     "moved": true
+    },
+    {
+     "id": "E50",
+     "kind": "time",
+     "moved": true
+    },
+    {
+     "id": "E52",
+     "kind": "time",
+     "moved": true
+    },
+    {
+     "id": "E31",
+     "kind": "time",
+     "moved": true
+    },
+    {
+     "id": "E61",
+     "kind": "timer",
+     "moved": true
+    },
+    {
+     "id": "E22",
+     "kind": "hover",
+     "moved": true
+    },
+    {
+     "id": "E40",
+     "kind": "hover",
+     "moved": true
+    },
+    {
+     "id": "E41",
+     "kind": "hover",
+     "moved": true
+    },
+    {
+     "id": "E42",
+     "kind": "hover",
+     "moved": true
+    },
+    {
+     "id": "E51",
+     "kind": "click",
+     "moved": true
+    },
+    {
+     "id": "E62",
+     "kind": "click",
+     "moved": true
+    }
+   ]
+  },
+  {
+   "id": "8-overflow",
+   "pass": true,
+   "detail": "no horizontal overflow at 360/768/1440"
+  },
+  {
+   "id": "js-budget",
+   "pass": true,
+   "detail": "runtime JS 16.4 KB (< 25 KB)"
+  }
+ ]
+}

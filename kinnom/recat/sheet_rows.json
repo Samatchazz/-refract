@@ -1,0 +1,713 @@
+[
+ {
+  "k": "s000",
+  "store": "ยามาซากิ",
+  "spellings": "ยามาซากิ | Flavor Field | Yamazaki | แซงเอตัวล | ยามาซากิ สาขา One Bangkok | ยามาซากิ (Yamazaki) | yamazaki | Flavor field",
+  "posts": 60,
+  "suggest": "",
+  "why": "ชุดที่จัดถูก: ติด Cafe 8 / ไม่ติด 23 โพสต์",
+  "examples": "เฟรชมิลล์คุกกี้แซนด์ ซันมูลัน คุกกี้กรอบไส้ครีมบัต / เรดบีนบัตเตอร์โทสต์ ยามาซากิ ขนมปังคาราเมลโทสต์ไส้"
+ },
+ {
+  "k": "s001",
+  "store": "คัสตาร์ดนากามูระ",
+  "spellings": "คัสตาร์ดนากามูระ | คัสตาร์ด นากามูระ | คัสตาร์ดนากามูระ สาขา BTS พร้อมพงษ์",
+  "posts": 32,
+  "suggest": "not",
+  "why": "ชุดที่จัดถูก: ติด Cafe 1 / ไม่ติด 4 โพสต์",
+  "examples": "พุดดิ้งฟักทอง คัสตาร์ดนากามูระ เนื้อเด้งฟีลคัสตาร์ / สตรอว์เบอร์รี่ชอร์ทเค้ก คัสตาร์ดนากามูระ เค้กนุ่มฟ"
+ },
+ {
+  "k": "s002",
+  "store": "Café Amazon",
+  "spellings": "Café Amazon | คาเฟ่อเมซอน | คาเฟ่ อเมซอน | Cafe Amazon | Amazon",
+  "posts": 20,
+  "suggest": "cafe",
+  "why": "ชุดที่จัดถูก: ติด Cafe 20 / ไม่ติด 2 โพสต์ · ชื่อร้านมีคำแนวคาเฟ่/เบเกอรี่",
+  "examples": "มัทฉะโมจิเผือก Café Amazon คอมโบมัทฉะ โมจินุ่ม เผื / มัทฉะลาเต้เย็นครีมมัทฉะ Café Amazon เมนูใหม่ท็อปคร"
+ },
+ {
+  "k": "s003",
+  "store": "ซันมูลัน",
+  "spellings": "ซันมูลัน | ซันมูลัน (Sunmoulin)",
+  "posts": 19,
+  "suggest": "cafe",
+  "why": "ชุดที่จัดถูก: ติด Cafe 10 / ไม่ติด 2 โพสต์",
+  "examples": "มิลเฟย ซันมูลัน แป้งพายกรอบเป็นชั้น วิปครีม คัสตาร / วิปปิ้งคาสเทลล่า ซันมูลัน เมนูลับบีบวิปครีมสดชิ้นต"
+ },
+ {
+  "k": "s004",
+  "store": "พันธุ์ไทย",
+  "spellings": "พันธุ์ไทย",
+  "posts": 13,
+  "suggest": "cafe",
+  "why": "ชุดที่จัดถูก: ติด Cafe 12 / ไม่ติด 1 โพสต์ · ลิสต์ 800 ชื่อ (ส.ค.): cafe",
+  "examples": "ดับเบิ้ลมัทฉะไข่มุกบุก (พันธุ์ไทย) มัทฉะเข้มสะใจ ห / ช้างกระทืบงาน (พันธุ์ไทย x กระทิงแดง) เปรี้ยวหวานห"
+ },
+ {
+  "k": "s005",
+  "store": "ชาตรามือ",
+  "spellings": "ชาตรามือ | ชาตรามือ (บางสาขา) | ชาตรามือ สาขายิ่งเจริญสแควร์",
+  "posts": 13,
+  "suggest": "cafe",
+  "why": "ชุดที่จัดถูก: ติด Cafe 3 / ไม่ติด 1 โพสต์ · ชื่อร้านมีคำแนวคาเฟ่/เบเกอรี่",
+  "examples": "ชาตรามือฉลอง 80 ปี 3 เมนูพิเศษ ชาไทยน้ำตาลโตนวิปชี / ชาเคล ชาตรามือ (ChaTraMue) หอมชามะลิ สดชื่น เพื่อส"
+ },
+ {
+  "k": "s006",
+  "store": "Beard Papa’s",
+  "spellings": "Beard Papa’s | Beard Papa | Beardpapa | Beard papa’s | Beard papa’s สาขา พารากอน",
+  "posts": 12,
+  "suggest": "not",
+  "why": "ชุดที่จัดถูก: ติด Cafe 1 / ไม่ติด 4 โพสต์",
+  "examples": "Beard Papa&#8217;s ครีมพัฟบานอฟฟี่ หอมกล้วยไส้ทะลั / Eclair Cream Puff Blueberry Cheesecake Beard Papa&"
+ },
+ {
+  "k": "s007",
+  "store": "BreadTalk",
+  "spellings": "BreadTalk | Bread Talk | BreadTalk สาขา One Bangkok",
+  "posts": 10,
+  "suggest": "",
+  "why": "ชุดที่จัดถูก: ติด Cafe 1 / ไม่ติด 2 โพสต์",
+  "examples": "โมโมจิหมูหยอง BreadTalk 3 รส หมูหยองออริจินัล ไก่ห / เค้กกล้วยหอมโรฟช็อกโกแลต Bread Talk ก้อนใหญ่เห็นกล"
+ },
+ {
+  "k": "s008",
+  "store": "Starbucks",
+  "spellings": "Starbucks",
+  "posts": 9,
+  "suggest": "cafe",
+  "why": "ชุดที่จัดถูก: ติด Cafe 7 / ไม่ติด 1 โพสต์",
+  "examples": "เค้กช็อกโกแลตเรนเดียร์ Starbucks ครีมมูสเนื้อเค้กเ / ครัวซองค์ต้นคริสต์มาส Starbucks 2 รส ครีมนมสดกับชา"
+ },
+ {
+  "k": "s009",
+  "store": "Auntie Anne’s",
+  "spellings": "Auntie Anne’s | Auntie Anne’ s",
+  "posts": 9,
+  "suggest": "",
+  "why": "ชุดที่จัดถูก: ติด Cafe 4 / ไม่ติด 2 โพสต์",
+  "examples": "มะลิโทสต์เพรทเซล นมนุ่มคาราเมล Auntie Anne&#8217;s / ชิโอะแป้งเพรทเซล (Auntie Anne&#8217;s) เหนียวนุ่มห"
+ },
+ {
+  "k": "s010",
+  "store": "After You",
+  "spellings": "After You | After you",
+  "posts": 9,
+  "suggest": "",
+  "why": "ชุดที่จัดถูก: ติด Cafe 5 / ไม่ติด 3 โพสต์",
+  "examples": "เค้กมูสกระปุก เซน &#038; ริน (After You) นุ่มละมุน / เมนูทุเรียนใหม่ (After You) เนื้อแน่นหอมหมอนทอง จั"
+ },
+ {
+  "k": "s011",
+  "store": "IKEA",
+  "spellings": "IKEA | Ikea",
+  "posts": 8,
+  "suggest": "not",
+  "why": "ชุดที่จัดถูก: ติด Cafe 0 / ไม่ติด 1 โพสต์",
+  "examples": "เค้กโกโก้ช็อกโกแลต (KAFFEREP) เนื้อฟัดจ์เข้มข้น โร / บ้านขนมขิง DIY (IKEA) จิ๊กซอว์คุกกี้ 3D ตกแต่งเองส"
+ },
+ {
+  "k": "s012",
+  "store": "Dairy Queen",
+  "spellings": "Dairy Queen | แดรี่ควีน",
+  "posts": 8,
+  "suggest": "",
+  "why": "ชุดที่จัดถูก: ติด Cafe 2 / ไม่ติด 3 โพสต์",
+  "examples": "ชาองุ่น Dairy Queen ท็อปปิ้งเนื้อองุ่น บุก ครีมชีส / กล่องสุ่มน้องดี in Animal Land Dairy Queen แดรี่คว"
+ },
+ {
+  "k": "s013",
+  "store": "Bake a Wish",
+  "spellings": "Bake a Wish | Bake A Wish | Bake A Wish Pastry | bake a wish",
+  "posts": 8,
+  "suggest": "not",
+  "why": "ชุดที่จัดถูก: ติด Cafe 1 / ไม่ติด 4 โพสต์ · ชื่อร้านมีคำแนวคาเฟ่/เบเกอรี่",
+  "examples": "โอซาก้าครีมพัฟ ฉันจะกินชาเย็นทุกวัน (Bake A Wish P / ชูครีมมัทฉะ 3 ระดับ (Bake A Wish) ครีมนุ่มละมุน หอ"
+ },
+ {
+  "k": "s014",
+  "store": "Little Mermaid",
+  "spellings": "Little Mermaid | Little mermaid | Little Mermaid สาขา One Bangkok",
+  "posts": 7,
+  "suggest": "",
+  "why": "ชุดที่จัดถูก: ติด Cafe 1 / ไม่ติด 1 โพสต์",
+  "examples": "Panini Sweet Camembert แซนด์วิชพานินี่สไตล์ญี่ปุ่น / เดนิชครีมพัฟ Danish Cream Puffs (Little Mermaid) แ"
+ },
+ {
+  "k": "s015",
+  "store": "Mixue",
+  "spellings": "Mixue",
+  "posts": 6,
+  "suggest": "not",
+  "why": "ชุดที่จัดถูก: ติด Cafe 0 / ไม่ติด 1 โพสต์",
+  "examples": "มะนาวมิ้นต์โอรีโอ้ซันเดย์ Mixue มิ้นต์ไม่เป็นยาสีฟ / ไอศกรีมกุหลาบลิ้นจี่ (Mixue) หวานอมเปรี้ยว หอมกุหล"
+ },
+ {
+  "k": "s016",
+  "store": "Kaldi",
+  "spellings": "Kaldi | kaldi",
+  "posts": 6,
+  "suggest": "",
+  "why": "",
+  "examples": "Terry&#8217;s Chocolate Mint ช็อกโกแลตรูปส้มรสมิ้น / โมจิไส้ถั่วแดง Kaldi ต้องย่างก่อนกิน ถั่วแดงข้าวเห"
+ },
+ {
+  "k": "s017",
+  "store": "อเมซอน",
+  "spellings": "อเมซอน",
+  "posts": 5,
+  "suggest": "not",
+  "why": "ชุดที่จัดถูก: ติด Cafe 0 / ไม่ติด 2 โพสต์",
+  "examples": "นมสดสตรอว์เบอร์รี่ปั่น (Café Amazon) หอมนัว เปรี้ย / ขนมปังครีมนมสด (Café Amazon) ครีมฉ่ำแน่น แป้งนุ่มโ"
+ },
+ {
+  "k": "s018",
+  "store": "McDonald’s",
+  "spellings": "McDonald’s",
+  "posts": 5,
+  "suggest": "",
+  "why": "ชุดที่จัดถูก: ติด Cafe 1 / ไม่ติด 1 โพสต์",
+  "examples": "แฮปปี้มีล (แมคโดนัลด์) TMNT x เฮลโลคิตตี้ โมเดลสะส / แฮปปี้มีล (แมคโดนัลด์) TMNT x เฮลโลคิตตี้ โมเดลสะส"
+ },
+ {
+  "k": "s019",
+  "store": "Bowcake",
+  "spellings": "Bowcake | BowCake | Bow Cake",
+  "posts": 5,
+  "suggest": "",
+  "why": "ชุดที่จัดถูก: ติด Cafe 1 / ไม่ติด 2 โพสต์",
+  "examples": "เค้กครั้นชี่ช็อกบอมม์ Bow Cake หน้าครั้นชี่กรุบ เน / Ruby Heart Bowcake Bow Cake เค้กหัวใจสีแดง ไส้ซอสส"
+ },
+ {
+  "k": "s020",
+  "store": "BLENDIES",
+  "spellings": "BLENDIES | Blendies | Blendies สาขา One Bangkok | Blendies (Siam Square One) | Blendies (สยามสแควร์วัน ชั้น 1)",
+  "posts": 5,
+  "suggest": "cafe",
+  "why": "ชุดที่จัดถูก: ติด Cafe 1 / ไม่ติด 0 โพสต์",
+  "examples": "ไอติม Osaka Cream Puff Blendies เจลาโต้คัสตาร์ดวาน / Beyond Pistachio (Blendies) เจลาโต้พิสตาชิโอเข้มข้"
+ },
+ {
+  "k": "s021",
+  "store": "แซงเอตวล",
+  "spellings": "แซงเอตวล",
+  "posts": 4,
+  "suggest": "",
+  "why": "",
+  "examples": "ครีมฮอร์นทูโทน แซงเอตวล ไส้วิปครีมและช็อกโกแลตในชิ / คุกกี้ชูครีม แซงเอตวล ชูครีมชิ้นใหญ่โปะคุกกี้กรุบ "
+ },
+ {
+  "k": "s022",
+  "store": "Turtle",
+  "spellings": "Turtle | Turtle (บนสถานี BTS)",
+  "posts": 4,
+  "suggest": "not",
+  "why": "ชุดที่จัดถูก: ติด Cafe 0 / ไม่ติด 1 โพสต์",
+  "examples": "ควินอามาน (Turtle) กรอบนอกนุ่มใน หอมหวานชุ่มเนยคาร / ขนมคริสต์มาส Winter Wonderland (Turtle) บราวนี่ เค"
+ },
+ {
+  "k": "s023",
+  "store": "Nose Tea",
+  "spellings": "Nose Tea | NoseTea | Nose Tea สาขา One Bangkok",
+  "posts": 4,
+  "suggest": "not",
+  "why": "ลิสต์ 800 ชื่อ (ส.ค.): brand · ชื่อร้านมีคำแนวคาเฟ่/เบเกอรี่",
+  "examples": "Fever Signature ช็อกโกแลตเข้มข้น (Nosetea) หอมเข้ม / Sassy Cocao (Nose Tea x La Glace) เลเยอร์ช็อกโกแลต"
+ },
+ {
+  "k": "s024",
+  "store": "Guss Damn Good",
+  "spellings": "Guss Damn Good | Guss damn good",
+  "posts": 4,
+  "suggest": "cafe",
+  "why": "ชุดที่จัดถูก: ติด Cafe 1 / ไม่ติด 0 โพสต์",
+  "examples": "โฟรโย่โอวัลตินช็อกครันช์ (Guss Damn Good) โยเกิร์ต / ไอติมทาโร่ชีส x ปลาเส้นทาโร่ (Guss Damn Good) กรอบ"
+ },
+ {
+  "k": "s025",
+  "store": "Flavor Field (เครือยามาซากิ)",
+  "spellings": "Flavor Field (เครือยามาซากิ)",
+  "posts": 4,
+  "suggest": "",
+  "why": "",
+  "examples": "กิวฮิวาฟเฟิล ยามาซากิ (Yamazaki) ไส้โมจิยืดหนึบ กร / โรลเค้กกาแฟ (Flavor Field ยามาซากิ) หอมกาแฟเข้ม คร"
+ },
+ {
+  "k": "s026",
+  "store": "Chateraise",
+  "spellings": "Chateraise | chateraise สาขา CentralWorld (3rd Floor โซน Japan)",
+  "posts": 4,
+  "suggest": "",
+  "why": "ชุดที่จัดถูก: ติด Cafe 2 / ไม่ติด 1 โพสต์",
+  "examples": "ครีมชีสมิลล์เครปเค้ก Chateraise เบิร์นน้ำตาลหอม ขา / อุจิ มัทฉะ มิลล์ เครป เค้ก Chateraise CentralWorld"
+ },
+ {
+  "k": "s027",
+  "store": "แมคโดนัลด์",
+  "spellings": "แมคโดนัลด์",
+  "posts": 3,
+  "suggest": "",
+  "why": "",
+  "examples": "TinyTAN แฮปปี้มีล McDonald&#8217;s แมคโดนัลด์ 2 คอ / มั่งมีเบอร์เกอร์ x มายเมโลดี้ (McDonald&#8217;s x "
+ },
+ {
+  "k": "s028",
+  "store": "สตาบัคส์",
+  "spellings": "สตาบัคส์",
+  "posts": 3,
+  "suggest": "",
+  "why": "",
+  "examples": "ขนมฮาโลวีน Starbucks สตาบัคส์ เค้กโรลมัทฉะช็อก โมจ / เอแคลร์ชาเขียว (สตาบัคส์) ไส้เยิ้มชาเขียวเข้ม แป้ง"
+ },
+ {
+  "k": "s029",
+  "store": "ฟูจิซุปเปอร์มาร์เก็ต (UFM Fuji Supermarket)",
+  "spellings": "ฟูจิซุปเปอร์มาร์เก็ต (UFM Fuji Supermarket)",
+  "posts": 3,
+  "suggest": "",
+  "why": "",
+  "examples": "ชีสดิปปังกรอบ The Laughing Cow เนื้อชีสเข้มข้น เค็ / ชีสคิตตี้ (Sanrio Hello Kitty) หนึบเค็มมัน เพลินจน"
+ },
+ {
+  "k": "s030",
+  "store": "Shake Shack",
+  "spellings": "Shake Shack",
+  "posts": 3,
+  "suggest": "not",
+  "why": "ลิสต์ 800 ชื่อ (ส.ค.): brand",
+  "examples": "Shake Shack ดูไบช็อกโกแลตพิสตาชิโอเชค แคร็กแก้วก่อ / Chocolate Chip Red Velvet Shake (Shake Shack) เนื้"
+ },
+ {
+  "k": "s031",
+  "store": "Saint Etoile",
+  "spellings": "Saint Etoile",
+  "posts": 3,
+  "suggest": "",
+  "why": "",
+  "examples": "คัสตาร์ดเมล่อน Saint Etoile ปังเมล่อนกรอบนุ่มไส้คั / ดับเบิ้ลชีสแฮมบัน ยามาซากิ Saint Etoile ไส้แฮมชีสแ"
+ },
+ {
+  "k": "s032",
+  "store": "Muji",
+  "spellings": "Muji | Muji สาขา One Bangkok",
+  "posts": 3,
+  "suggest": "",
+  "why": "",
+  "examples": "Hokkaido Butter Caramel (Muji) ลูกอมคาราเมลเนย หอม / กาชาปองพวงกุญแจมูจิ (Muji) ไซส์จิ๋วน่ารัก คุณภาพดี"
+ },
+ {
+  "k": "s033",
+  "store": "Mos Burger",
+  "spellings": "Mos Burger",
+  "posts": 3,
+  "suggest": "cafe",
+  "why": "ชุดที่จัดถูก: ติด Cafe 2 / ไม่ติด 0 โพสต์",
+  "examples": "ไอติมกล้วยบานอฟฟี่ (มอสเบอร์เกอร์) หอมหวานเย็นฉ่ำ  / ซอฟต์เสิร์ฟพรีเมียมชาไทย (มอสเบอร์เกอร์) เข้มข้นหอ"
+ },
+ {
+  "k": "s034",
+  "store": "Mitsukoshi One Bangkok",
+  "spellings": "Mitsukoshi One Bangkok",
+  "posts": 3,
+  "suggest": "",
+  "why": "",
+  "examples": "คุกกี้แอนด์ครีมพร้อมช้อน arles ตู้แช่ Mitsukoshi O / ไอติมสับปะรดวากิริ (อิมุรายะ) เนื้อฉ่ำเหมือนจริง ห"
+ },
+ {
+  "k": "s035",
+  "store": "Koi Thé",
+  "spellings": "Koi Thé",
+  "posts": 3,
+  "suggest": "",
+  "why": "",
+  "examples": "สตรอว์เบอร์รี่ชีสพาย Snoopy (Koi The x Peanuts) หอ / ชานมงาดำไข่มุกถังหยวน (KOI Thé) หอมงาดำเข้มข้น หนุ"
+ },
+ {
+  "k": "s036",
+  "store": "Coffee Beans by Dao",
+  "spellings": "Coffee Beans by Dao",
+  "posts": 3,
+  "suggest": "cafe",
+  "why": "ชื่อร้านมีคำแนวคาเฟ่/เบเกอรี่",
+  "examples": "เค้กเมอแรงค์กาแฟ (Coffee Beans by Dao) หอมกาแฟเข้ม / เค้กมะพร้าวครีมนมสด (หมีเนย x Coffee Bean by Dao) "
+ },
+ {
+  "k": "s037",
+  "store": "เฟเวอร์ฟิลด์",
+  "spellings": "เฟเวอร์ฟิลด์",
+  "posts": 2,
+  "suggest": "not",
+  "why": "ชุดที่จัดถูก: ติด Cafe 0 / ไม่ติด 1 โพสต์",
+  "examples": "ชาร์โคลพิซซ่าชีสพ็อคเก็ต (ยามาซากิ เฟเวอร์ฟิลด์) แ / เบอร์เกอร์เค้ก (เฟเวอร์ฟิลด์ ยามาซากิ) นุ่มฟู ไส้ค"
+ },
+ {
+  "k": "s038",
+  "store": "เดอะมอลล์บางกะปิ ชั้น G",
+  "spellings": "เดอะมอลล์บางกะปิ ชั้น G",
+  "posts": 2,
+  "suggest": "",
+  "why": "",
+  "examples": "โดนัทไต้หวันรสนมฮอกไกโด (Over Proof) กรอบนอกนุ่มใน / โดนัทไต้หวันรสมัทฉะลาเต้ (Over Proof) กรอบนอกนุ่มใ"
+ },
+ {
+  "k": "s039",
+  "store": "สตาร์บัคส์",
+  "spellings": "สตาร์บัคส์",
+  "posts": 2,
+  "suggest": "cafe",
+  "why": "ชุดที่จัดถูก: ติด Cafe 1 / ไม่ติด 0 โพสต์",
+  "examples": "สตรอว์เบอร์รี่โมจิเพียวมัทฉะลาเต้ (Starbucks) หนึบ / ครัวซองค์มอคค่าคุกกี้ Starbucks แป้งเหนียวนุ่ม ไส้"
+ },
+ {
+  "k": "s040",
+  "store": "ยามาซากิ One Bangkok",
+  "spellings": "ยามาซากิ One Bangkok",
+  "posts": 2,
+  "suggest": "",
+  "why": "",
+  "examples": "ชาร์โคลชีสทอดไส้กรอกไก่ (ยามาซากิ) กรอบนอกเหนียวนุ / ขนมปังยักษ์ ยามาซากิ (Yamazaki) One Bangkok ชิ้นให"
+ },
+ {
+  "k": "s041",
+  "store": "พันธุ์ไทย ทุกสาขา",
+  "spellings": "พันธุ์ไทย ทุกสาขา",
+  "posts": 2,
+  "suggest": "cafe",
+  "why": "ชุดที่จัดถูก: ติด Cafe 1 / ไม่ติด 0 โพสต์",
+  "examples": "ชาไทยโตนด พันธุ์ไทย (Punthai) หอมน้ำตาลโตนด บุกหนึ / มัทฉะเฟรปเป้ซอสช็อกโกแลตบราวนี่ พันธุ์ไทย (Punthai"
+ },
+ {
+  "k": "s042",
+  "store": "ซันมูลัน CTW ชั้น3",
+  "spellings": "ซันมูลัน CTW ชั้น3 | ซันมูลัน CTW ชั้น 3",
+  "posts": 2,
+  "suggest": "",
+  "why": "",
+  "examples": "แฮมชีสโรล ซันมูลัน CTW ชิ้นใหญ่แฮมแผ่นใหญ่ชีสฉ่ำ ข / บานอฟฟี่เค้ก (ยามาซากิ ซันมูลัน) ครีมสดแน่น กล้วยห"
+ },
+ {
+  "k": "s043",
+  "store": "Yoguruto",
+  "spellings": "Yoguruto",
+  "posts": 2,
+  "suggest": "cafe",
+  "why": "ชุดที่จัดถูก: ติด Cafe 2 / ไม่ติด 0 โพสต์",
+  "examples": "The Ghost Berry Cocoa Yoguruto เมนูใหม่ฮาโลวีน แบล / โยเกิร์ตสไปรูลิน่าอโวคาโด้ Yoguruto สดชื่น เนื้อแน"
+ },
+ {
+  "k": "s044",
+  "store": "UFM fuji super",
+  "spellings": "UFM fuji super | UFM Fuji Super สาขาพร้อมพงษ์",
+  "posts": 2,
+  "suggest": "",
+  "why": "",
+  "examples": "อูด้งหมูทงคัตสึ (Fuji Super Market) เส้นแบนกลมกล่อ / เครปกล้วยหอม UFM ไส้ฉ่ำวิปครีม ซอสช็อกโกแลตเข้มข้น"
+ },
+ {
+  "k": "s045",
+  "store": "The Pastry & Co.",
+  "spellings": "The Pastry & Co.",
+  "posts": 2,
+  "suggest": "",
+  "why": "",
+  "examples": "มัทฉะชีสพาย The Pastry &#038; Co. เอ็มควอเทียร์ ชี / มัทฉะคุกกี้ The Pastry &#038; Co. คุกกี้หนาร่วน หอ"
+ },
+ {
+  "k": "s046",
+  "store": "The Baker",
+  "spellings": "The Baker",
+  "posts": 2,
+  "suggest": "cafe",
+  "why": "ชื่อร้านมีคำแนวคาเฟ่/เบเกอรี่",
+  "examples": "พาริเซียงแฟลน รสออริจินอล (The Baker) เนื้อแน่นนุ่ / Hershey&#8217;s Soft Chocolate Cake (The Baker) เค"
+ },
+ {
+  "k": "s047",
+  "store": "Super Matcha",
+  "spellings": "Super Matcha | Super Matcha สาขา Central Park",
+  "posts": 2,
+  "suggest": "cafe",
+  "why": "ชุดที่จัดถูก: ติด Cafe 2 / ไม่ติด 0 โพสต์",
+  "examples": "Super Matcha Crush มัทฉะปั่นเกรดพรีเมียมจากเกาหลี  / Super Matcha Central Park ไอศกรีมมัทฉะเข้มข้น 2 เม"
+ },
+ {
+  "k": "s048",
+  "store": "Sunmulin",
+  "spellings": "Sunmulin | Sunmulin (CentralWorld)",
+  "posts": 2,
+  "suggest": "",
+  "why": "",
+  "examples": "เฟรชสตรอเบอร์รี่ช็อตเค้ก Sunmulin ยามาซากิ แป้งเค้ / ขนมปังหมูหยองสไปซี่ (ยามาซากิ) ซันมูลัน หมูหยองแน่"
+ },
+ {
+  "k": "s049",
+  "store": "Potato Corner",
+  "spellings": "Potato Corner | Potato Corner (ดุสิตเซ็นทรัลพาร์ค)",
+  "posts": 2,
+  "suggest": "",
+  "why": "",
+  "examples": "รถด่วนทอด Potato Corner เมนูฮาโลวีน ทอดกรอบฟูโรยผง / Potato Corner Shake &#038; Fries ดุสิตเซ็นทรัลพาร์"
+ },
+ {
+  "k": "s050",
+  "store": "Peak Chocolate",
+  "spellings": "Peak Chocolate",
+  "posts": 2,
+  "suggest": "",
+  "why": "",
+  "examples": "ช็อกโกแลตขอนไม้ (Peak Chocolate) เคลือบเข้มข้น ไส้ / ช็อกโกแลตเลเยอร์เค้ก (Peak Chocolate) เข้มข้น หลาย"
+ },
+ {
+  "k": "s051",
+  "store": "Nalin Bakery (E-gets)",
+  "spellings": "Nalin Bakery (E-gets) | Nalin Bakery (E-Gets)",
+  "posts": 2,
+  "suggest": "cafe",
+  "why": "ชื่อร้านมีคำแนวคาเฟ่/เบเกอรี่",
+  "examples": "เค้กคลุกสาหร่ายไก่หยอง (Nalin Bakery) เนื้อนุ่มฟู  / โมจิพุดดิ้ง (Nalin Bakery) แป้งโมจินุ่มหนึบ ไส้พุด"
+ },
+ {
+  "k": "s052",
+  "store": "Naixue",
+  "spellings": "Naixue",
+  "posts": 2,
+  "suggest": "",
+  "why": "",
+  "examples": "เค้กไก่หยองสาหร่าย (Naixue) นุ่มฟู เค็มหวานกลมกล่อ / ทาร์ตไข่หน้าทีรามิสุ (Naixue) กรอบนอกนุ่มใน หอมโกโ"
+ },
+ {
+  "k": "s053",
+  "store": "Mother cows",
+  "spellings": "Mother cows | Mother Cows",
+  "posts": 2,
+  "suggest": "not",
+  "why": "ชุดที่จัดถูก: ติด Cafe 0 / ไม่ติด 1 โพสต์",
+  "examples": "สเลอปี้นมตุ๋นมัทฉะ (Mother Cows) นมเข้มข้น หอมมัทฉ / สเลอปี้นมตุ๋นช็อกโกแลตดูไบ (Mother Cows) ซอสพิสตาช"
+ },
+ {
+  "k": "s054",
+  "store": "Moo Yoo",
+  "spellings": "Moo Yoo",
+  "posts": 2,
+  "suggest": "not",
+  "why": "ลิสต์ 800 ชื่อ (ส.ค.): brand",
+  "examples": "มัทฉะแบล็คทาร์ต (มูยู) แป้งชาโคลบางกรอบ ไส้คัสตาร์ / มัทฉะแบล็คทาร์ต (มูยู) แป้งชาโคลบางกรอบ ไส้คัสตาร์"
+ },
+ {
+  "k": "s055",
+  "store": "Milch",
+  "spellings": "Milch",
+  "posts": 2,
+  "suggest": "cafe",
+  "why": "ชุดที่จัดถูก: ติด Cafe 1 / ไม่ติด 0 โพสต์",
+  "examples": "มัทฉะมาเธอร์ (มิลค์) อูจิมัทฉะ 4 เลเยอร์ พุดดิ้งนุ / มัทฉะมาเธอร์ (มิลค์) อูจิมัทฉะ 4 เลเยอร์ พุดดิ้งนุ"
+ },
+ {
+  "k": "s056",
+  "store": "Krispy Kreme",
+  "spellings": "Krispy Kreme",
+  "posts": 2,
+  "suggest": "not",
+  "why": "ชุดที่จัดถูก: ติด Cafe 1 / ไม่ติด 4 โพสต์",
+  "examples": "คริสปี้ ครีม The Perfect Festive Gift Snowy Tin Bo / Krispy Kreme x Peanuts Christmas Doughnuts โดนัทสน"
+ },
+ {
+  "k": "s057",
+  "store": "Kamu",
+  "spellings": "Kamu",
+  "posts": 2,
+  "suggest": "cafe",
+  "why": "ชุดที่จัดถูก: ติด Cafe 1 / ไม่ติด 0 โพสต์",
+  "examples": "สตรอว์เบอร์รี่มัทฉะ Kamu เจ้มจ้นมัทฉะพรีเมียม เปรี / Dark Cloud Kamu ครีมชีสชาร์โคลเข้มข้น เข้ากับชาไทย"
+ },
+ {
+  "k": "s058",
+  "store": "Kaldi Coffee Farm One Bangkok",
+  "spellings": "Kaldi Coffee Farm One Bangkok",
+  "posts": 2,
+  "suggest": "cafe",
+  "why": "ชื่อร้านมีคำแนวคาเฟ่/เบเกอรี่",
+  "examples": "ขนมปังไส้ครีมข้าวโพด (Kaldi) นุ่มนิ่ม หวานเค็มกลมก / ขนมปังซินนามอนโรล (Kaldi) กรุบกริบ หนุบหนึบ หอมน้ำ"
+ },
+ {
+  "k": "s059",
+  "store": "GAGA",
+  "spellings": "GAGA | Gaga",
+  "posts": 2,
+  "suggest": "cafe",
+  "why": "ชุดที่จัดถูก: ติด Cafe 2 / ไม่ติด 0 โพสต์",
+  "examples": "GAGA x Ovaltine เมนูฮาโลวีน Cocoa Malt’s Spell และ / มิ้นต์ช็อกโกแลตมิ้นต์มูส GAGA โกโก้เข้มข้นไซรัปมิ้"
+ },
+ {
+  "k": "s060",
+  "store": "Everydough",
+  "spellings": "Everydough",
+  "posts": 2,
+  "suggest": "",
+  "why": "",
+  "examples": "เค้กไก่หยอง everydough แป้งเค้กนุ่ม ไส้มาโยหวานเปร / หยองไข่เค็ม everydough ก้อนใหญ่ ขนมปังนุ่มฟู ท็อปไ"
+ },
+ {
+  "k": "s061",
+  "store": "Drop by Dough",
+  "spellings": "Drop by Dough | Drop By Dough",
+  "posts": 2,
+  "suggest": "",
+  "why": "",
+  "examples": "ทีรามิสุโดนัทป๊อป Drop by Dough โดนัทจิ้มจุ่มคลุกโ / โดนัทพิสตาชิโอดูไบช็อกโกแลต (Drop By Dough) ไส้คูน"
+ },
+ {
+  "k": "s062",
+  "store": "Cosie สาขา Central Park",
+  "spellings": "Cosie สาขา Central Park | Cosie",
+  "posts": 2,
+  "suggest": "cafe",
+  "why": "ชุดที่จัดถูก: ติด Cafe 1 / ไม่ติด 0 โพสต์",
+  "examples": "Chiffin Bun ขนมปังน้องหมา Cosie Central Park เนื้อ / แก้วคุกกี้ช็อกชิพ Cosie แก้วกินได้กรุบกรอบเคลือบช็"
+ },
+ {
+  "k": "s063",
+  "store": "Brassica Doughnut สาขา Emsphere",
+  "spellings": "Brassica Doughnut สาขา Emsphere | Brassica Doughnut (Emsphere)",
+  "posts": 2,
+  "suggest": "",
+  "why": "",
+  "examples": "โดนัทดูไบไส้ทะลัก (Brassica Doughnut) เหนียวนุ่ม ค / โดนัทชีสเค้กหน้าไหม้ (Brassica Doughnut) หอมเลม่อน"
+ },
+ {
+  "k": "s064",
+  "store": "Bearhouse",
+  "spellings": "Bearhouse",
+  "posts": 2,
+  "suggest": "cafe",
+  "why": "ชุดที่จัดถูก: ติด Cafe 1 / ไม่ติด 1 โพสต์ · ลิสต์ 800 ชื่อ (ส.ค.): cafe",
+  "examples": "เครปเค้กนุ่มโอวัลติน Bearhouse ซอสฉ่ำ ท็อปปิ้งเฟลค / มูสช็อกโกแลตมาร์ชเมลโลว์ (Bearhouse) เข้มข้น หนึบไ"
+ },
+ {
+  "k": "s065",
+  "store": "BearHouse ทุกสาขา",
+  "spellings": "BearHouse ทุกสาขา | Bearhouse ทุกสาขา",
+  "posts": 2,
+  "suggest": "",
+  "why": "",
+  "examples": "ชาองุ่นม่วงปั่นท็อปนุ่มชีส (BearHouse) เนื้อองุ่นฉ / ซอฟต์สตรอเบอร์รี่ชีสเค้ก (BearHouse) หวานละมุน ครั"
+ },
+ {
+  "k": "s066",
+  "store": "Bao Cafe",
+  "spellings": "Bao Cafe",
+  "posts": 2,
+  "suggest": "cafe",
+  "why": "ชื่อร้านมีคำแนวคาเฟ่/เบเกอรี่",
+  "examples": "โปร 1 แถม 1 (Bao Cafe) ทุกวันจันทร์กับพุธ หลายเมนู / อูจิมัทฉะ บาวคาเฟ่ (Bao Cafe) เข้มข้นแต่ดื่มง่าย ห"
+ },
+ {
+  "k": "s067",
+  "store": "Bake A Wish Baker (Central World)",
+  "spellings": "Bake A Wish Baker (Central World) | Bake a wish baker",
+  "posts": 2,
+  "suggest": "cafe",
+  "why": "ชุดที่จัดถูก: ติด Cafe 1 / ไม่ติด 1 โพสต์ · ชื่อร้านมีคำแนวคาเฟ่/เบเกอรี่",
+  "examples": "มัทฉะซอฟต์เสิร์ฟ (Bake A Wish) เข้มข้นหอมชาเขียวญี / ชิโอะปังแบล็คชีส (Bake a wish) ฐานกรอบชุ่มเนย ไส้ช"
+ },
+ {
+  "k": "s068",
+  "store": "อีเกีย",
+  "spellings": "อีเกีย",
+  "posts": 1,
+  "suggest": "not",
+  "why": "ชุดที่จัดถูก: ติด Cafe 0 / ไม่ติด 1 โพสต์",
+  "examples": "รวม 7 เมนูฮาโลวีน IKEA อีเกีย ไอติมโกสต์บอย บลูเบอ"
+ },
+ {
+  "k": "s069",
+  "store": "งานกาชาด",
+  "spellings": "งานกาชาด",
+  "posts": 1,
+  "suggest": "not",
+  "why": "ชุดที่จัดถูก: ติด Cafe 0 / ไม่ติด 2 โพสต์ · ชื่อร้านมีคำแนวคาเฟ่/เบเกอรี่",
+  "examples": "ไอติมซอฟท์เสิร์ฟ (โฟร์โมสต์) รสช็อกโกแลตช็อกพิ้งค์"
+ },
+ {
+  "k": "s070",
+  "store": "คริสปี้ครีม",
+  "spellings": "คริสปี้ครีม",
+  "posts": 1,
+  "suggest": "not",
+  "why": "ชุดที่จัดถูก: ติด Cafe 0 / ไม่ติด 1 โพสต์",
+  "examples": "โดนัทฮาโลวีน Krispy Kreme 4 หน้า The Candy Bag Jac"
+ },
+ {
+  "k": "s071",
+  "store": "Tp Tea (สาขาพารากอน, เมกาบางนา)",
+  "spellings": "Tp Tea (สาขาพารากอน, เมกาบางนา)",
+  "posts": 1,
+  "suggest": "cafe",
+  "why": "ชุดที่จัดถูก: ติด Cafe 3 / ไม่ติด 1 โพสต์ · ลิสต์ 800 ชื่อ (ส.ค.): brand · ชื่อร้านมีคำแนวคาเฟ่/เบเกอรี่",
+  "examples": "ไอติมชานมฮันนี่สตาร์ (Tp Tea) เนื้อเนียนนุ่ม หอมชา"
+ },
+ {
+  "k": "s072",
+  "store": "Molto",
+  "spellings": "Molto",
+  "posts": 1,
+  "suggest": "not",
+  "why": "ชุดที่จัดถูก: ติด Cafe 0 / ไม่ติด 1 โพสต์",
+  "examples": "เจลาโต้มัทฉะ Molto มัทฉะธรรมดาคู่มัทฉะดาร์กเข้มจนส"
+ },
+ {
+  "k": "s073",
+  "store": "Memorize Brownie",
+  "spellings": "Memorize Brownie",
+  "posts": 1,
+  "suggest": "not",
+  "why": "ลิสต์ 800 ชื่อ (ส.ค.): brand",
+  "examples": "บราวนี่ชอตปั่น (Memorize Brownie) เข้มข้นสะใจ ท็อป"
+ },
+ {
+  "k": "s074",
+  "store": "KFC",
+  "spellings": "KFC",
+  "posts": 1,
+  "suggest": "not",
+  "why": "ชุดที่จัดถูก: ติด Cafe 0 / ไม่ติด 1 โพสต์",
+  "examples": "จิงเกิลเจลลี่ KFC ไอติมซอฟต์เสิร์ฟแยมสตรอว์เบอร์รี"
+ },
+ {
+  "k": "s075",
+  "store": "Jo’s Cha",
+  "spellings": "Jo’s Cha",
+  "posts": 1,
+  "suggest": "not",
+  "why": "ลิสต์ 800 ชื่อ (ส.ค.): brand",
+  "examples": "Strawberry Series Drinks Jo&#8217;s Cha สมูทตี้สตร"
+ },
+ {
+  "k": "s076",
+  "store": "Fuku matcha",
+  "spellings": "Fuku matcha",
+  "posts": 1,
+  "suggest": "not",
+  "why": "ชุดที่จัดถูก: ติด Cafe 0 / ไม่ติด 2 โพสต์",
+  "examples": "โมจิทาโร่ซีรีส์ (Fuku Matcha) ชานม ชาไทย นมสดเผือก"
+ },
+ {
+  "k": "s077",
+  "store": "Christoph Chocolate สาขา Emsphere",
+  "spellings": "Christoph Chocolate สาขา Emsphere",
+  "posts": 1,
+  "suggest": "not",
+  "why": "ลิสต์ 800 ชื่อ (ส.ค.): brand",
+  "examples": "ทีรามิสุ (Christoph Chocolate) รสเข้มจัด เลดี้ฟิงเ"
+ },
+ {
+  "k": "s078",
+  "store": "Cheevit Cheeva",
+  "spellings": "Cheevit Cheeva",
+  "posts": 1,
+  "suggest": "not",
+  "why": "ลิสต์ 800 ชื่อ (ส.ค.): brand",
+  "examples": "บิงซูดูไบช็อกโกแลต (Cheevit Cheeva) องค์ประกอบแน่น"
+ }
+]

@@ -1,0 +1,16 @@
+{
+  "mode": "marquee",
+  "url": "https://pixel-craft.cmsmasters.studio/",
+  "selector": ".elementor-element-7e43dd8",
+  "capturedAt": "2026-08-01T09:19:39.321Z",
+  "measured": {
+    "pxPerSecond": 0,
+    "direction": "left-to-right",
+    "trackWidthPx": 1440,
+    "duplicatedCopies": 1,
+    "elementChildren": 1,
+    "secondsForOneCopy": null,
+    "cssAnimationDuration": "0s",
+    "rebuildHint": "translateX from 0 to -100%/copies over secondsForOneCopy, linear, infinite"
+  }
+}

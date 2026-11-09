@@ -1,0 +1,912 @@
+{
+  "legend": "slope = d(rect.top)/d(scrollY). -1.00 = static in flow. |s|<0.08 pinned (horizontal-scroll if xSlope>0.2). -0.92..-0.08 slower than scroll. <-1.08 faster than scroll. >+0.08 drifts down. `kinds` lists every band the element exhibited; `segments` gives the scroll range of each. `holdRange` is the longest pin/h-scroll segment — this is the number to quote for pin distance.",
+  "stepResolutionNote": "fromY/toY are only as precise as the scroll step (docHeight/26). Treat them as ±one step; if libprobe/*.json has scrollTriggers, prefer its exact start/end values.",
+  "trackedElements": 221,
+  "pinned": [
+    {
+      "i": 44,
+      "tag": "p",
+      "cls": "cky-title",
+      "docTop": 571,
+      "sec": null,
+      "kind": "pinned",
+      "kinds": [
+        "pinned"
+      ],
+      "samples": 26,
+      "medianSlope": 0,
+      "medianXSlope": 0,
+      "segments": [
+        {
+          "band": "pinned",
+          "fromY": 400,
+          "toY": 10277,
+          "steps": 26,
+          "distance": 9877
+        }
+      ],
+      "holdRange": {
+        "fromY": 400,
+        "toY": 10277,
+        "distance": 9877,
+        "steps": 26,
+        "band": "pinned"
+      }
+    },
+    {
+      "i": 51,
+      "tag": "div",
+      "cls": "elementor-element elementor-element-57e227ae elementor-widget__width-initial ele",
+      "docTop": 802,
+      "sec": 3,
+      "kind": "pinned",
+      "kinds": [
+        "pinned"
+      ],
+      "samples": 26,
+      "medianSlope": 0,
+      "medianXSlope": 0,
+      "segments": [
+        {
+          "band": "pinned",
+          "fromY": 400,
+          "toY": 10277,
+          "steps": 26,
+          "distance": 9877
+        }
+      ],
+      "holdRange": {
+        "fromY": 400,
+        "toY": 10277,
+        "distance": 9877,
+        "steps": 26,
+        "band": "pinned"
+      }
+    },
+    {
+      "i": 2,
+      "tag": "div",
+      "cls": "cmsmasters-demos-preview",
+      "docTop": 0,
+      "sec": 1,
+      "kind": "pinned",
+      "kinds": [
+        "pinned"
+      ],
+      "samples": 26,
+      "medianSlope": 0,
+      "medianXSlope": 0,
+      "segments": [
+        {
+          "band": "pinned",
+          "fromY": 400,
+          "toY": 10277,
+          "steps": 26,
+          "distance": 9877
+        }
+      ],
+      "holdRange": {
+        "fromY": 400,
+        "toY": 10277,
+        "distance": 9877,
+        "steps": 26,
+        "band": "pinned"
+      }
+    },
+    {
+      "i": 18,
+      "tag": "div",
+      "cls": "cmsmasters-demos-preview__heading-title",
+      "docTop": 137,
+      "sec": 1,
+      "kind": "pinned",
+      "kinds": [
+        "pinned"
+      ],
+      "samples": 26,
+      "medianSlope": 0,
+      "medianXSlope": 0,
+      "segments": [
+        {
+          "band": "pinned",
+          "fromY": 400,
+          "toY": 10277,
+          "steps": 26,
+          "distance": 9877
+        }
+      ],
+      "holdRange": {
+        "fromY": 400,
+        "toY": 10277,
+        "distance": 9877,
+        "steps": 26,
+        "band": "pinned"
+      }
+    },
+    {
+      "i": 29,
+      "tag": "div",
+      "cls": "cmsmasters-demos-preview__heading-subtitle",
+      "docTop": 213,
+      "sec": 1,
+      "kind": "pinned",
+      "kinds": [
+        "pinned"
+      ],
+      "samples": 26,
+      "medianSlope": 0,
+      "medianXSlope": 0,
+      "segments": [
+        {
+          "band": "pinned",
+          "fromY": 400,
+          "toY": 10277,
+          "steps": 26,
+          "distance": 9877
+        }
+      ],
+      "holdRange": {
+        "fromY": 400,
+        "toY": 10277,
+        "distance": 9877,
+        "steps": 26,
+        "band": "pinned"
+      }
+    },
+    {
+      "i": 36,
+      "tag": "img",
+      "cls": "",
+      "docTop": 277,
+      "sec": 1,
+      "kind": "pinned",
+      "kinds": [
+        "pinned"
+      ],
+      "samples": 26,
+      "medianSlope": 0,
+      "medianXSlope": 0,
+      "segments": [
+        {
+          "band": "pinned",
+          "fromY": 400,
+          "toY": 10277,
+          "steps": 26,
+          "distance": 9877
+        }
+      ],
+      "holdRange": {
+        "fromY": 400,
+        "toY": 10277,
+        "distance": 9877,
+        "steps": 26,
+        "band": "pinned"
+      }
+    },
+    {
+      "i": 40,
+      "tag": "span",
+      "cls": "cmsmasters-demos-preview__demo-title",
+      "docTop": 462,
+      "sec": 1,
+      "kind": "pinned",
+      "kinds": [
+        "pinned"
+      ],
+      "samples": 26,
+      "medianSlope": 0,
+      "medianXSlope": 0,
+      "segments": [
+        {
+          "band": "pinned",
+          "fromY": 400,
+          "toY": 10277,
+          "steps": 26,
+          "distance": 9877
+        }
+      ],
+      "holdRange": {
+        "fromY": 400,
+        "toY": 10277,
+        "distance": 9877,
+        "steps": 26,
+        "band": "pinned"
+      }
+    },
+    {
+      "i": 41,
+      "tag": "img",
+      "cls": "",
+      "docTop": 516,
+      "sec": 1,
+      "kind": "pinned",
+      "kinds": [
+        "pinned"
+      ],
+      "samples": 26,
+      "medianSlope": 0,
+      "medianXSlope": 0,
+      "segments": [
+        {
+          "band": "pinned",
+          "fromY": 400,
+          "toY": 10277,
+          "steps": 26,
+          "distance": 9877
+        }
+      ],
+      "holdRange": {
+        "fromY": 400,
+        "toY": 10277,
+        "distance": 9877,
+        "steps": 26,
+        "band": "pinned"
+      }
+    },
+    {
+      "i": 46,
+      "tag": "span",
+      "cls": "cmsmasters-demos-preview__demo-title",
+      "docTop": 701,
+      "sec": 1,
+      "kind": "pinned",
+      "kinds": [
+        "pinned"
+      ],
+      "samples": 26,
+      "medianSlope": 0,
+      "medianXSlope": 0,
+      "segments": [
+        {
+          "band": "pinned",
+          "fromY": 400,
+          "toY": 10277,
+          "steps": 26,
+          "distance": 9877
+        }
+      ],
+      "holdRange": {
+        "fromY": 400,
+        "toY": 10277,
+        "distance": 9877,
+        "steps": 26,
+        "band": "pinned"
+      }
+    },
+    {
+      "i": 47,
+      "tag": "img",
+      "cls": "",
+      "docTop": 755,
+      "sec": 1,
+      "kind": "pinned",
+      "kinds": [
+        "pinned"
+      ],
+      "samples": 26,
+      "medianSlope": 0,
+      "medianXSlope": 0,
+      "segments": [
+        {
+          "band": "pinned",
+          "fromY": 400,
+          "toY": 10277,
+          "steps": 26,
+          "distance": 9877
+        }
+      ],
+      "holdRange": {
+        "fromY": 400,
+        "toY": 10277,
+        "distance": 9877,
+        "steps": 26,
+        "band": "pinned"
+      }
+    },
+    {
+      "i": 63,
+      "tag": "span",
+      "cls": "cmsmasters-demos-preview__demo-title",
+      "docTop": 940,
+      "sec": 1,
+      "kind": "pinned",
+      "kinds": [
+        "pinned"
+      ],
+      "samples": 26,
+      "medianSlope": 0,
+      "medianXSlope": 0,
+      "segments": [
+        {
+          "band": "pinned",
+          "fromY": 400,
+          "toY": 10277,
+          "steps": 26,
+          "distance": 9877
+        }
+      ],
+      "holdRange": {
+        "fromY": 400,
+        "toY": 10277,
+        "distance": 9877,
+        "steps": 26,
+        "band": "pinned"
+      }
+    },
+    {
+      "i": 3,
+      "tag": "div",
+      "cls": "animated cmsmasters-elementor-popup cmsmasters-elementor-popup-152 cmsmasters-po",
+      "docTop": 0,
+      "sec": 2,
+      "kind": "pinned",
+      "kinds": [
+        "pinned"
+      ],
+      "samples": 26,
+      "medianSlope": 0,
+      "medianXSlope": 0,
+      "segments": [
+        {
+          "band": "pinned",
+          "fromY": 400,
+          "toY": 10277,
+          "steps": 26,
+          "distance": 9877
+        }
+      ],
+      "holdRange": {
+        "fromY": 400,
+        "toY": 10277,
+        "distance": 9877,
+        "steps": 26,
+        "band": "pinned"
+      }
+    },
+    {
+      "i": 9,
+      "tag": "section",
+      "cls": "elementor-element elementor-element-3309ffb8 e-con-full e-flex cmsmasters-block-",
+      "docTop": 84,
+      "sec": 2,
+      "kind": "pinned",
+      "kinds": [
+        "pinned"
+      ],
+      "samples": 26,
+      "medianSlope": 0,
+      "medianXSlope": 0,
+      "segments": [
+        {
+          "band": "pinned",
+          "fromY": 400,
+          "toY": 10277,
+          "steps": 26,
+          "distance": 9877
+        }
+      ],
+      "holdRange": {
+        "fromY": 400,
+        "toY": 10277,
+        "distance": 9877,
+        "steps": 26,
+        "band": "pinned"
+      }
+    },
+    {
+      "i": 19,
+      "tag": "div",
+      "cls": "elementor-element elementor-element-2f78a3ae cmsmasters-block-default cmsmasters",
+      "docTop": 164,
+      "sec": 2,
+      "kind": "pinned",
+      "kinds": [
+        "pinned"
+      ],
+      "samples": 26,
+      "medianSlope": 0,
+      "medianXSlope": 0,
+      "segments": [
+        {
+          "band": "pinned",
+          "fromY": 400,
+          "toY": 10277,
+          "steps": 26,
+          "distance": 9877
+        }
+      ],
+      "holdRange": {
+        "fromY": 400,
+        "toY": 10277,
+        "distance": 9877,
+        "steps": 26,
+        "band": "pinned"
+      }
+    },
+    {
+      "i": 20,
+      "tag": "h6",
+      "cls": "elementor-heading-title elementor-size-default",
+      "docTop": 164,
+      "sec": 2,
+      "kind": "pinned",
+      "kinds": [
+        "pinned"
+      ],
+      "samples": 26,
+      "medianSlope": 0,
+      "medianXSlope": 0,
+      "segments": [
+        {
+          "band": "pinned",
+          "fromY": 400,
+          "toY": 10277,
+          "steps": 26,
+          "distance": 9877
+        }
+      ],
+      "holdRange": {
+        "fromY": 400,
+        "toY": 10277,
+        "distance": 9877,
+        "steps": 26,
+        "band": "pinned"
+      }
+    },
+    {
+      "i": 27,
+      "tag": "div",
+      "cls": "elementor-element elementor-element-427f87f1 cmsmasters-highlight-title-alignmen",
+      "docTop": 205,
+      "sec": 2,
+      "kind": "pinned",
+      "kinds": [
+        "pinned"
+      ],
+      "samples": 26,
+      "medianSlope": 0,
+      "medianXSlope": 0,
+      "segments": [
+        {
+          "band": "pinned",
+          "fromY": 400,
+          "toY": 10277,
+          "steps": 26,
+          "distance": 9877
+        }
+      ],
+      "holdRange": {
+        "fromY": 400,
+        "toY": 10277,
+        "distance": 9877,
+        "steps": 26,
+        "band": "pinned"
+      }
+    },
+    {
+      "i": 28,
+      "tag": "h2",
+      "cls": "elementor-widget-cmsmasters-highlight-title__title",
+      "docTop": 205,
+      "sec": 2,
+      "kind": "pinned",
+      "kinds": [
+        "pinned"
+      ],
+      "samples": 26,
+      "medianSlope": 0,
+      "medianXSlope": 0,
+      "segments": [
+        {
+          "band": "pinned",
+          "fromY": 400,
+          "toY": 10277,
+          "steps": 26,
+          "distance": 9877
+        }
+      ],
+      "holdRange": {
+        "fromY": 400,
+        "toY": 10277,
+        "distance": 9877,
+        "steps": 26,
+        "band": "pinned"
+      }
+    },
+    {
+      "i": 24,
+      "tag": "span",
+      "cls": "elementor-widget-cmsmasters-highlight-title__item elementor-repeater-item-2e03ff",
+      "docTop": 204,
+      "sec": 2,
+      "kind": "pinned",
+      "kinds": [
+        "pinned"
+      ],
+      "samples": 26,
+      "medianSlope": 0,
+      "medianXSlope": 0,
+      "segments": [
+        {
+          "band": "pinned",
+          "fromY": 400,
+          "toY": 10277,
+          "steps": 26,
+          "distance": 9877
+        }
+      ],
+      "holdRange": {
+        "fromY": 400,
+        "toY": 10277,
+        "distance": 9877,
+        "steps": 26,
+        "band": "pinned"
+      }
+    },
+    {
+      "i": 25,
+      "tag": "span",
+      "cls": "elementor-widget-cmsmasters-highlight-title__text-wrap",
+      "docTop": 204,
+      "sec": 2,
+      "kind": "pinned",
+      "kinds": [
+        "pinned"
+      ],
+      "samples": 26,
+      "medianSlope": 0,
+      "medianXSlope": 0,
+      "segments": [
+        {
+          "band": "pinned",
+          "fromY": 400,
+          "toY": 10277,
+          "steps": 26,
+          "distance": 9877
+        }
+      ],
+      "holdRange": {
+        "fromY": 400,
+        "toY": 10277,
+        "distance": 9877,
+        "steps": 26,
+        "band": "pinned"
+      }
+    },
+    {
+      "i": 26,
+      "tag": "span",
+      "cls": "elementor-widget-cmsmasters-highlight-title__text",
+      "docTop": 204,
+      "sec": 2,
+      "kind": "pinned",
+      "kinds": [
+        "pinned"
+      ],
+      "samples": 26,
+      "medianSlope": 0,
+      "medianXSlope": 0,
+      "segments": [
+        {
+          "band": "pinned",
+          "fromY": 400,
+          "toY": 10277,
+          "steps": 26,
+          "distance": 9877
+        }
+      ],
+      "holdRange": {
+        "fromY": 400,
+        "toY": 10277,
+        "distance": 9877,
+        "steps": 26,
+        "band": "pinned"
+      }
+    },
+    {
+      "i": 21,
+      "tag": "span",
+      "cls": "elementor-widget-cmsmasters-highlight-title__item elementor-repeater-item-8520c0",
+      "docTop": 203,
+      "sec": 2,
+      "kind": "pinned",
+      "kinds": [
+        "pinned"
+      ],
+      "samples": 26,
+      "medianSlope": 0,
+      "medianXSlope": 0,
+      "segments": [
+        {
+          "band": "pinned",
+          "fromY": 400,
+          "toY": 10277,
+          "steps": 26,
+          "distance": 9877
+        }
+      ],
+      "holdRange": {
+        "fromY": 400,
+        "toY": 10277,
+        "distance": 9877,
+        "steps": 26,
+        "band": "pinned"
+      }
+    },
+    {
+      "i": 22,
+      "tag": "span",
+      "cls": "elementor-widget-cmsmasters-highlight-title__text-wrap",
+      "docTop": 203,
+      "sec": 2,
+      "kind": "pinned",
+      "kinds": [
+        "pinned"
+      ],
+      "samples": 26,
+      "medianSlope": 0,
+      "medianXSlope": 0,
+      "segments": [
+        {
+          "band": "pinned",
+          "fromY": 400,
+          "toY": 10277,
+          "steps": 26,
+          "distance": 9877
+        }
+      ],
+      "holdRange": {
+        "fromY": 400,
+        "toY": 10277,
+        "distance": 9877,
+        "steps": 26,
+        "band": "pinned"
+      }
+    },
+    {
+      "i": 23,
+      "tag": "span",
+      "cls": "elementor-widget-cmsmasters-highlight-title__text",
+      "docTop": 203,
+      "sec": 2,
+      "kind": "pinned",
+      "kinds": [
+        "pinned"
+      ],
+      "samples": 26,
+      "medianSlope": 0,
+      "medianXSlope": 0,
+      "segments": [
+        {
+          "band": "pinned",
+          "fromY": 400,
+          "toY": 10277,
+          "steps": 26,
+          "distance": 9877
+        }
+      ],
+      "holdRange": {
+        "fromY": 400,
+        "toY": 10277,
+        "distance": 9877,
+        "steps": 26,
+        "band": "pinned"
+      }
+    },
+    {
+      "i": 30,
+      "tag": "span",
+      "cls": "elementor-widget-cmsmasters-highlight-title__item elementor-repeater-item-bfc936",
+      "docTop": 237,
+      "sec": 2,
+      "kind": "pinned",
+      "kinds": [
+        "pinned"
+      ],
+      "samples": 26,
+      "medianSlope": 0,
+      "medianXSlope": 0,
+      "segments": [
+        {
+          "band": "pinned",
+          "fromY": 400,
+          "toY": 10277,
+          "steps": 26,
+          "distance": 9877
+        }
+      ],
+      "holdRange": {
+        "fromY": 400,
+        "toY": 10277,
+        "distance": 9877,
+        "steps": 26,
+        "band": "pinned"
+      }
+    },
+    {
+      "i": 31,
+      "tag": "span",
+      "cls": "elementor-widget-cmsmasters-highlight-title__text-wrap",
+      "docTop": 237,
+      "sec": 2,
+      "kind": "pinned",
+      "kinds": [
+        "pinned"
+      ],
+      "samples": 26,
+      "medianSlope": 0,
+      "medianXSlope": 0,
+      "segments": [
+        {
+          "band": "pinned",
+          "fromY": 400,
+          "toY": 10277,
+          "steps": 26,
+          "distance": 9877
+        }
+      ],
+      "holdRange": {
+        "fromY": 400,
+        "toY": 10277,
+        "distance": 9877,
+        "steps": 26,
+        "band": "pinned"
+      }
+    },
+    {
+      "i": 32,
+      "tag": "span",
+      "cls": "elementor-widget-cmsmasters-highlight-title__text",
+      "docTop": 237,
+      "sec": 2,
+      "kind": "pinned",
+      "kinds": [
+        "pinned"
+      ],
+      "samples": 26,
+      "medianSlope": 0,
+      "medianXSlope": 0,
+      "segments": [
+        {
+          "band": "pinned",
+          "fromY": 400,
+          "toY": 10277,
+          "steps": 26,
+          "distance": 9877
+        }
+      ],
+      "holdRange": {
+        "fromY": 400,
+        "toY": 10277,
+        "distance": 9877,
+        "steps": 26,
+        "band": "pinned"
+      }
+    },
+    {
+      "i": 33,
+      "tag": "span",
+      "cls": "elementor-widget-cmsmasters-highlight-title__item elementor-repeater-item-3dc8a8",
+      "docTop": 237,
+      "sec": 2,
+      "kind": "pinned",
+      "kinds": [
+        "pinned"
+      ],
+      "samples": 26,
+      "medianSlope": 0,
+      "medianXSlope": 0,
+      "segments": [
+        {
+          "band": "pinned",
+          "fromY": 400,
+          "toY": 10277,
+          "steps": 26,
+          "distance": 9877
+        }
+      ],
+      "holdRange": {
+        "fromY": 400,
+        "toY": 10277,
+        "distance": 9877,
+        "steps": 26,
+        "band": "pinned"
+      }
+    },
+    {
+      "i": 34,
+      "tag": "span",
+      "cls": "elementor-widget-cmsmasters-highlight-title__text-wrap",
+      "docTop": 237,
+      "sec": 2,
+      "kind": "pinned",
+      "kinds": [
+        "pinned"
+      ],
+      "samples": 26,
+      "medianSlope": 0,
+      "medianXSlope": 0,
+      "segments": [
+        {
+          "band": "pinned",
+          "fromY": 400,
+          "toY": 10277,
+          "steps": 26,
+          "distance": 9877
+        }
+      ],
+      "holdRange": {
+        "fromY": 400,
+        "toY": 10277,
+        "distance": 9877,
+        "steps": 26,
+        "band": "pinned"
+      }
+    },
+    {
+      "i": 35,
+      "tag": "span",
+      "cls": "elementor-widget-cmsmasters-highlight-title__text",
+      "docTop": 237,
+      "sec": 2,
+      "kind": "pinned",
+      "kinds": [
+        "pinned"
+      ],
+      "samples": 26,
+      "medianSlope": 0,
+      "medianXSlope": 0,
+      "segments": [
+        {
+          "band": "pinned",
+          "fromY": 400,
+          "toY": 10277,
+          "steps": 26,
+          "distance": 9877
+        }
+      ],
+      "holdRange": {
+        "fromY": 400,
+        "toY": 10277,
+        "distance": 9877,
+        "steps": 26,
+        "band": "pinned"
+      }
+    },
+    {
+      "i": 37,
+      "tag": "div",
+      "cls": "elementor-element elementor-element-54dce178 elementor-widget__width-inherit cms",
+      "docTop": 330,
+      "sec": 2,
+      "kind": "pinned",
+      "kinds": [
+        "pinned"
+      ],
+      "samples": 26,
+      "medianSlope": 0,
+      "medianXSlope": 0,
+      "segments": [
+        {
+          "band": "pinned",
+          "fromY": 400,
+          "toY": 10277,
+          "steps": 26,
+          "distance": 9877
+        }
+      ],
+      "holdRange": {
+        "fromY": 400,
+        "toY": 10277,
+        "distance": 9877,
+        "steps": 26,
+        "band": "pinned"
+      }
+    }
+  ],
+  "horizontalScroll": [],
+  "parallaxSlow": [],
+  "parallaxFast": [],
+  "parallaxReverse": [],
+  "opacityReveal": []
+}

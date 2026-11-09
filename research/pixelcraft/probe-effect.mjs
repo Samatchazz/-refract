@@ -267,6 +267,13 @@ try {
 
   // -----------------------------------------------------------------------
   if (MODE === 'marquee') {
+    // --scrollto <y>: bring an out-of-viewport marquee into view first — JS marquees
+    // typically only animate while visible, so sampling at scroll 0 reads 0 px/s.
+    const preY = num('--scrollto', 0);
+    if (preY) {
+      await page.evaluate((yy) => window.scrollTo(0, yy), preY);
+      await page.waitForTimeout(1200);
+    }
     const r = await page.evaluate(async (sel) => {
       const el = document.querySelector(sel); if (!el) return null;
       const read = () => { const m = new DOMMatrixReadOnly(getComputedStyle(el).transform === 'none' ? '' : getComputedStyle(el).transform); return { x: m.m41, t: performance.now() }; };

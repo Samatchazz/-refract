@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<title>planc* — playable galaga proto</title>
+<style>
+__FONT_CSS__
+html,body{margin:0;padding:0;background:#0a0a0a;height:100%;overflow:hidden;
+  font-family:'Prompt',system-ui,sans-serif}
+#game{width:100%;height:100%}
+</style>
+</head>
+<body>
+<div id="game"></div>
+<script>__PHASER__</script>
+<script>
+/* =========================================================
+   planc* playable proto — Phaser 3 (เกมจริง มีเวลา มี input)
+   คนละไวยากรณ์กับเว็บสกรอล: อันนี้ผู้เล่นคุมเอง
+   ========================================================= */
+const INK = 0xf4f2ec, PAPER = 0x0a0a0a;
+const W = 390, H = 844;
+const CAT_B64 = '__CAT_B64__';
+
+class Main extends Phaser.Scene {
+  constructor(){ super('main'); }
+
+  preload(){
+    this.load.image('cat', CAT_B64);
+  }
+
+  makeTextures(){
+    const g = this.make.graphics({add:false});
+    // ยาน
+    g.clear(); g.lineStyle(3, INK); g.fillStyle(PAPER);
+    g.beginPath(); g.moveTo(17,0); g.lineTo(30,26); g.lineTo(32,48); g.lineTo(25,54);
+    g.lineTo(9,54); g.lineTo(2,48); g.lineTo(4,26); g.closePath(); g.fillPath(); g.strokePath();
+    g.beginPath(); g.moveTo(2,40); g.lineTo(-10,56); g.lineTo(4,51); g.closePath(); g.fillPath(); g.strokePath();
+    g.beginPath(); g.moveTo(32,40); g.lineTo(44,56); g.lineTo(30,51); g.closePath(); g.fillPath(); g.strokePath();
+    g.generateTexture('ship', 46, 58);
+    // กระสุน
+    g.clear(); g.fillStyle(INK); g.fillRoundedRect(0,0,4,14,2); g.generateTexture('bolt',4,14);
+    // นาฬิกาปลุก
+    g.clear(); g.lineStyle(2.6, INK); g.fillStyle(INK);
+    g.fillCircle(7,6,4.6); g.fillCircle(29,6,4.6);
+    g.lineStyle(2.6, INK); g.strokeCircle(18,19,13);
+    g.lineStyle(2.4, INK); g.beginPath(); g.moveTo(18,12); g.lineTo(18,20); g.lineTo(24,23); g.strokePath();
+    g.generateTexture('foeA', 36, 36);
+    // ซองเอกสาร
+    g.clear(); g.lineStyle(2.4, INK);
+    g.strokeRect(2,5,32,22);
+    g.beginPath(); g.moveTo(2,5); g.lineTo(18,18); g.lineTo(34,5); g.strokePath();
+    g.generateTexture('foeB', 36, 32);
+    // เศษระเบิด
+    g.clear(); g.fillStyle(INK); g.fillRect(0,0,5,5); g.generateTexture('bit',5,5);
+    // ดาว
+    g.clear(); g.fillStyle(INK); g.fillRect(0,0,2,2); g.generateTexture('star',2,2);
+    g.destroy();
+  }
+
+  create(){
+    this.makeTextures();
+    this.score = 0; this.wave = 0; this.over = false;
+
+    // ดาวพื้นหลัง 2 ชั้น (อันนี้เกมจริง เลยปล่อยไหลตามเวลาได้)
+    this.stars = [];
+    for(let i=0;i<46;i++){
+      const s=this.add.image(Phaser.Math.Between(0,W), Phaser.Math.Between(0,H),'star')
+        .setAlpha(i%3?0.35:0.9).setScale(i%3?1:1.6);
+      s.spd = i%3? 28 : 70; this.stars.push(s);
+    }
+
+    // ยาน + แมวในค็อกพิท (rim ขาวรอบแมวดำ — กติกาเดิมจาก CLAUDE.md)
+    this.ship = this.physics.add.image(W/2, H-130, 'ship').setDepth(5);
+    this.ship.body.setAllowGravity(false);
+    this.cat = this.add.image(W/2, H-146, 'cat').setDisplaySize(21,25).setDepth(6);
+    const mg = this.make.graphics({add:false});
+    this.catMaskG = this.add.graphics().setVisible(false);
+    this.catMask = this.catMaskG.createGeometryMask();
+    this.cat.setMask(this.catMask);
+    this.cockpit = this.add.graphics().setDepth(7);
+    this.cat.preFX && this.cat.preFX.addGlow(0xf4f2ec, 2, 0, false);
+
+    this.bolts = this.physics.add.group({ defaultKey:'bolt', maxSize:40 });
+    this.foes  = this.physics.add.group();
+
+    this.physics.add.overlap(this.bolts, this.foes, (b,f)=>this.kill(b,f));
+    this.physics.add.overlap(this.ship, this.foes, (s,f)=>this.crash(f));
+
+    // HUD
+    const fs = {fontFamily:'Prompt', fontSize:'15px', color:'#f4f2ec', letterSpacing:2};
+    this.scoreT = this.add.text(16,14,'SCORE 000000',{...fs, fontStyle:'600'}).setDepth(20);
+    this.add.text(W-16,14,'HI  PLANC*',{...fs, fontStyle:'600'}).setOrigin(1,0).setAlpha(.55).setDepth(20);
+    this.msgT = this.add.text(W/2, H*0.34, '', {fontFamily:'Prompt', fontSize:'26px',
+      color:'#f4f2ec', fontStyle:'800', align:'center', wordWrap:{width:W*.84}})
+      .setOrigin(.5).setDepth(20);
+    this.subT = this.add.text(W/2, H*0.34+66, '', {fontFamily:'Sarabun', fontSize:'15px',
+      color:'#f4f2ec', align:'center', lineSpacing:6, wordWrap:{width:W*.84}})
+      .setOrigin(.5,0).setAlpha(.85).setDepth(20);
+
+    // คุมด้วยนิ้ว/เมาส์: ลากไปไหน ยานตามไป (นุ่มๆ)
+    this.targetX = W/2;
+    this.input.on('pointermove', p=>{ this.targetX = p.x; });
+    this.input.on('pointerdown', p=>{ this.targetX = p.x; });
+
+    // ยิงอัตโนมัติ — ผู้เล่นมีหน้าที่แค่บิน (planc* จัดการส่วนที่เหลือ)
+    this.time.addEvent({ delay:170, loop:true, callback:()=>{
+      if(this.over || this.foes.countActive(true)===0) return;
+      const b=this.bolts.get(this.ship.x, this.ship.y-38);
+      if(b){ b.setActive(true).setVisible(true); b.body.enable=true;
+             b.body.setAllowGravity(false); b.setVelocityY(-620); }
+    }});
+
+    this.intro();
+  }
+
+  intro(){
+    this.msgT.setText('planc*');
+    this.subT.setText('บางสัปดาห์ ปัญหาบินมาเป็นฝูง\nลากนิ้วเพื่อบิน — ที่เหลือเราจัดการ');
+    this.time.delayedCall(2300, ()=>{ this.msgT.setText(''); this.subT.setText(''); this.nextWave(); });
+  }
+
+  nextWave(){
+    this.wave++;
+    if(this.wave>3){ return this.win(); }
+    const labels=['ฝูงแรก: งานด่วน','ฝูงสอง: เอกสาร ระบบ บัญชี','ฝูงสุดท้ายของวันนี้'];
+    this.msgT.setText(labels[this.wave-1]);
+    this.time.delayedCall(1400, ()=>this.msgT.setText(''));
+
+    const key = this.wave===2 ? 'foeB' : 'foeA';
+    const rows = this.wave===3 ? 3 : 2, cols = this.wave===3 ? 4 : (this.wave===2?4:3);
+    let idx=0;
+    for(let r=0;r<rows;r++) for(let c=0;c<cols;c++){
+      const fx = W/2 + (c-(cols-1)/2)*82, fy = 140+r*72;
+      const f = this.foes.create((idx%2? -40:W+40), -60, key);
+      f.body.setAllowGravity(false); f.hp=1; f.slotX=fx; f.slotY=fy; f.seed=idx*1.7;
+      this.tweens.add({ targets:f, x:fx, y:fy, delay:idx*130, duration:900,
+        ease:'Cubic.easeOut', onComplete:()=>{ f.inSlot=true; } });
+      idx++;
+    }
+    // ตัวดำดิ่ง — หัวใจ Galaga: สุ่มหยิบศัตรูพุ่งลงหายาน แล้ววนกลับ
+    this.diveTimer = this.time.addEvent({ delay:2600, loop:true, callback:()=>{
+      const alive = this.foes.getChildren().filter(f=>f.active && f.inSlot && !f.diving);
+      if(!alive.length || this.over) return;
+      const f = Phaser.Utils.Array.GetRandom(alive); f.diving=true;
+      this.tweens.add({ targets:f, x:this.ship.x, y:H-160, duration:1100, ease:'Sine.easeIn',
+        onComplete:()=>{ if(!f.active) return;
+          this.tweens.add({ targets:f, x:f.slotX, y:f.slotY, duration:1000,
+            ease:'Sine.easeOut', onComplete:()=>{ f.diving=false; } }); } });
+    }});
+  }
+
+  kill(b,f){
+    b.disableBody(true,true);
+    f.disableBody(true,true);
+    this.tweens.killTweensOf(f);
+    this.score += 150; this.scoreT.setText('SCORE '+String(this.score).padStart(6,'0'));
+    const burst = this.add.particles(f.x, f.y, 'bit', {
+      speed:{min:60,max:190}, lifespan:420, quantity:14, scale:{start:1,end:0}, emitting:false });
+    burst.explode(14); this.time.delayedCall(500,()=>burst.destroy());
+    this.cameras.main.shake(60,.002);
+    if(this.foes.countActive(true)===0){
+      this.diveTimer && this.diveTimer.remove();
+      this.time.delayedCall(700, ()=>this.nextWave());
+    }
+  }
+
+  crash(f){
+    if(this.over || f.hit) return; f.hit=true;
+    this.cameras.main.shake(180,.008);
+    this.score = Math.max(0,this.score-100);
+    this.scoreT.setText('SCORE '+String(this.score).padStart(6,'0'));
+    this.time.delayedCall(400,()=>{ f.hit=false; });
+  }
+
+  win(){
+    this.over=true;
+    this.msgT.setText('เคลียร์ทุกฝูง');
+    this.subT.setText('planc* ทำแบบเดียวกันนี้กับปัญหาจริงของคุณ\n(ตัวหนังสือคือ placeholder รอ CONTENT-MAP)');
+    const btn=this.add.rectangle(W/2,H*0.60,210,54).setStrokeStyle(2,INK).setDepth(20)
+      .setInteractive({useHandCursor:true});
+    this.add.text(W/2,H*0.60,'คุยกับ planc*',{fontFamily:'Prompt',fontSize:'17px',
+      color:'#f4f2ec',fontStyle:'600'}).setOrigin(.5).setDepth(21);
+    btn.on('pointerdown',()=>this.scene.restart());
+  }
+
+  update(t,dtMs){
+    const dt=dtMs/1000;
+    // ยานตามนิ้วแบบหน่วง dt-correct (สูตรเดิมของโปรเจกต์)
+    this.ship.x += (Phaser.Math.Clamp(this.targetX,30,W-30)-this.ship.x)*(1-Math.pow(1-.16,dt*60));
+    this.ship.setRotation(Phaser.Math.Clamp((this.targetX-this.ship.x)*.004,-.3,.3));
+    this.cat.x=this.ship.x; this.cat.y=this.ship.y-15;
+    this.catMaskG.clear(); this.catMaskG.fillCircle(this.ship.x,this.ship.y-13,10);
+    this.cockpit.clear(); this.cockpit.lineStyle(2.4,INK); this.cockpit.strokeCircle(this.ship.x,this.ship.y-13,11.5);
+
+    this.stars.forEach(s=>{ s.y+=s.spd*dt; if(s.y>H+4){ s.y=-4; s.x=Phaser.Math.Between(0,W);} });
+    this.bolts.getChildren().forEach(b=>{ if(b.active&&b.y<-20) b.disableBody(true,true); });
+    // ฟอร์เมชันส่ายเบาๆ
+    this.foes.getChildren().forEach(f=>{
+      if(f.active&&f.inSlot&&!f.diving){ f.x=f.slotX+Math.sin(t/700+f.seed)*7; f.y=f.slotY+Math.cos(t/900+f.seed)*5; }
+    });
+  }
+}
+
+new Phaser.Game({
+  type: Phaser.CANVAS, parent:'game', width:W, height:H,
+  backgroundColor:'#0a0a0a',
+  scale:{ mode:Phaser.Scale.FIT, autoCenter:Phaser.Scale.CENTER_BOTH },
+  physics:{ default:'arcade' },
+  scene: Main,
+});
+</script>
+</body>
+</html>

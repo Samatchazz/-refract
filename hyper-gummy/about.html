@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>เรา — Hyper Gummy</title>
+  <meta name="description" content="เราคือคนที่อยู่ในห้องก่อนโปรดักต์จะมีชื่อ" />
+  <link rel="stylesheet" href="/src/styles/main.css" />
+  <script type="module" src="/src/js/app.js"></script>
+</head>
+<body data-barba="wrapper">
+
+  <!-- persistent GL layer (never destroyed on navigation) -->
+  <div class="poster" aria-hidden="true"></div>
+  <canvas id="gl" aria-hidden="true"></canvas>
+
+  <header class="header">
+    <a class="logo" href="/" data-nav><span class="dot"></span>Hyper <span class="it">Gummy</span></a>
+    <nav class="top-nav" aria-label="เมนูหลัก">
+      <a href="/work.html" data-nav>งาน</a>
+      <a href="/craft.html" data-nav>วิธีทำงาน</a>
+      <a href="/#about" data-nav class="is-current">เรา</a>
+      <a class="pill pill--ghost" href="/contact.html" data-nav>คุยกัน</a>
+    </nav>
+    <button class="burger" aria-label="เมนู" aria-expanded="false" data-menu-toggle>
+      <span></span><span></span>
+    </button>
+  </header>
+
+  <div class="site">
+    <main data-barba="container" data-barba-namespace="about" data-gl-page="about">
+
+      <!-- scrollytelling: the bear stays in the GL layer; each chapter is one
+           "small adjustment" — chapters are read by the stage via [data-chapter] -->
+      <section class="about-chapter about-chapter--first container" data-chapter="0" data-gl-window>
+        <div class="about-copy js-in-view">
+          <span class="label appear-fade-up" data-typewriter>Hyper Gummy เกิดขึ้นมาเพราะ?</span>
+          <h2 class="appear-fade-up appear-delay--1">โปรดักต์ส่วนใหญ่<br />มาแค่ส่วนผสมและต้นทุน</h2>
+          <p class="appear-fade-up appear-delay--2">ส่วนผสมใหม่ การผลิตใหม่ ฉลากใหม่ ซัพพลายเออร์ให้ราคาดี
+          ผ่านการอนุมัติมาแล้วทุกขั้น น้องจะเกิดละ <strong>แต่ยังไม่มีใครอยากเล่าถึงน้อง</strong>
+          รู้ตัวอีกที เรา "ทุกคน" ก็ต้องหาคอนเทนต์มาช่วยเหลือน้องเท่าที่ทำได้</p>
+        </div>
+      </section>
+
+      <section class="about-chapter container" data-chapter="1" data-gl-window style="--rise:0">
+        <div class="about-copy about-copy--wide js-in-view">
+          <!-- three equal lines; the strawberry fill rises through the text
+               exactly as it rises through the bear (--rise is set by the stage) -->
+          <h2 class="about-h2 about-h2--rise appear-fade-up">
+            <span class="ln">จะดีกว่าไหมถ้า</span>
+            <span class="ln">ให้น้องแมส</span>
+            <span class="ln">ตั้งแต่ยังไม่เกิด<span class="echo">ดดดด</span></span>
+          </h2>
+          <p class="appear-fade-up appear-delay--2">Hyper Gummy เกิดจากความเข้าใจโปรดักต์ที่ผ่านมือเราไปมากกว่า
+          10,000 ชิ้นตลอด 10 ปี เพราะการตัดสินใจที่ทำให้น้องขนมชิ้นหนึ่ง "เล่าง่าย" หรือ "เล่ายาก"
+          ไม่ได้อยู่แค่ที่แคปชันหรือการถ่ายรูป <strong>มันควรอยู่ตั้งแต่น้องเกิด</strong></p>
+        </div>
+      </section>
+
+      <section class="about-chapter container" data-chapter="2" data-gl-window style="--heart:0">
+        <div class="about-copy js-in-view">
+          <!-- turns sky-blue with the heart, then beats + twinkles once it is full -->
+          <h2 class="about-h2 about-h2--heart appear-fade-up">
+            <span class="ln">พวกเรามา</span>
+            <span class="ln">ใส่ใจให้น้อง</span>
+            <span class="ln">ก่อนใส่อะไรทั้งนั้น</span>
+          </h2>
+          <p class="appear-fade-up appear-delay--2">เราเรียกโปรดักต์ทุกตัวว่า <strong>"น้อง"</strong>
+          สิ่งแรกที่เราทำในทุกห้องประชุมจึงไม่ใช่เสนอไอเดีย
+          แต่ชวนทุกคน ทั้ง R&amp;D มาร์เก็ตติ้ง และเจ้าของโปรดักต์
+          มาใส่ใจทะนุถนอมวางแผนอนาคตของน้องร่วมกัน
+          <strong>ไม่ต่างกับการวางแผนลูกหลานสักคนให้ประสบความสำเร็จในชีวิต</strong></p>
+        </div>
+      </section>
+
+      <section class="about-chapter container" data-chapter="3" data-gl-window>
+        <div class="about-copy about-copy--wide js-in-view">
+          <!-- three equal lines, three counters: 10 ticks slowly, 10,000+ races
+               to 9,999 then creeps up forever, 4 ticks slowly -->
+          <h2 class="about-h2 about-h2--count appear-fade-up">
+            <span class="ln">ตลอด <b data-count="10" data-mode="slow">0</b> ปีที่ผ่านมา</span>
+            <span class="ln">เรากินน้องขนมไป <b data-count="10128" data-mode="creep" data-suffix="+">0</b> ชิ้น</span>
+            <span class="ln">หรือ <b data-count="4" data-mode="slow">0</b> โปรดักต์ต่อวัน <span class="grow">และเพิ่มขึ้นทุกวัน</span></span>
+          </h2>
+          <a class="pill pill--gummy pill--twinkle appear-fade-up appear-delay--3" href="https://www.facebook.com/KinNhom" target="_blank" rel="noopener">รู้จักกับทีมชิม Hyper Gummy <span class="arrow" aria-hidden="true">→</span><span class="sheen" aria-hidden="true"></span></a>
+        </div>
+      </section>
+
+      <section class="about-chapter about-chapter--long container" data-chapter="4" data-gl-window>
+        <div class="about-copy js-in-view">
+          <span class="label appear-fade-up" data-typewriter>ช่วยกันทำให้</span>
+          <h2 class="appear-fade-up appear-delay--1">น้องขายดี<br />ตั้งแต่เกิด</h2>
+          <p class="appear-fade-up appear-delay--2">เราไม่ได้ขอให้แบรนด์รื้อโปรดักต์ เราขอเข้าไปมีส่วนร่วมตอนที่ยังปรับได้
+          แล้วปรับแค่จุดเดียวที่ทำให้ทุกคนที่เข้าถึงน้องขนมของเรา <strong>อยากเล่าต่อ</strong></p>
+          <div class="about-steps appear-fade-up appear-delay--3">
+            <a class="about-step" href="/case-secret-menu.html" data-nav><span class="dot dot--lime"></span><span>ออกแบบ "เมนูลับ" ให้รอคนโพสต์คนแรก</span><span class="about-step-to">เชนกาแฟ →</span></a>
+            <a class="about-step" href="/case-diy-menu.html" data-nav><span class="dot dot--sky"></span><span>กำหนดของ 5 อย่างก่อนคลิป DIY</span><span class="about-step-to">ร้านสะดวกซื้อ →</span></a>
+            <a class="about-step" href="/case-story-not-trend.html" data-nav><span class="dot dot--grape"></span><span>ตั้งชื่อรสก่อนสั่งวัตถุดิบ</span><span class="about-step-to">ขนมอบ →</span></a>
+            <a class="about-step" href="/case-viral-ingredient.html" data-nav><span class="dot dot--orange"></span><span>ให้ของบนชั้นมีบทบาทในสูตร</span><span class="about-step-to">บิสกิต →</span></a>
+          </div>
+        </div>
+      </section>
+
+      <section class="about-chapter container" data-chapter="5" data-gl-window>
+        <div class="about-copy js-in-view">
+          <span class="label appear-fade-up" data-typewriter>ผลลัพธ์</span>
+          <h2 class="appear-fade-up appear-delay--1">น้องทุกตัวที่ผ่านมือเรา<br />มีเรื่องเล่าของตัวเอง</h2>
+          <p class="appear-fade-up appear-delay--2">ไม่มีสูตรสำเร็จ ไม่มีเทมเพลต มีแค่การเข้าไปให้ทันเวลา
+          แล้วหาจุดเล็กๆ ที่ทำให้น้องเป็นตัวของน้องเอง</p>
+          <a class="pill pill--ghost appear-fade-up appear-delay--3" href="/work.html" data-nav>ดูงานทั้งหมด →</a>
+        </div>
+      </section>
+
+      <!-- ================= CTA (every page except contact) ================= -->
+      <section class="cta-band container js-in-view">
+        <div class="cta-band-inner">
+          <span class="label appear-fade-up" data-typewriter>เริ่มยังไง</span>
+          <h2 class="cta-band-title appear-fade-up appear-delay--1">เอาร่างมาให้ดู<br /><span class="it">ยิ่งดิบยิ่งดี</span></h2>
+          <p class="cta-band-text appear-fade-up appear-delay--2">สเก็ตช์ รูปต้นแบบ หรือแค่ไอเดียในโน้ต ส่งมาได้เลย
+          เราตอบภายในสองวันทำการ พร้อมความเห็นตรงๆ ว่าช่วยได้ตรงไหน</p>
+          <div class="cta-band-actions appear-fade-up appear-delay--3">
+            <a class="pill" href="/contact.html" data-nav>เอาร่างมาคุยกัน →</a>
+            <a class="label link-u" href="mailto:hello@hypergummy.co">hello@hypergummy.co</a>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- ================= FOOTER (persistent) ================= -->
+    <footer class="footer">
+      <div class="container">
+        <a class="footer-email" href="mailto:hello@hypergummy.co">hello@<span class="it">hypergummy</span>.co</a>
+        <div class="footer-grid">
+          <div class="footer-col">
+            <span class="label" data-typewriter>เมนู</span>
+            <a href="/work.html" data-nav>งาน</a>
+            <a href="/craft.html" data-nav>วิธีทำงาน</a>
+            <a href="/#about" data-nav>เรา</a>
+            <a href="/contact.html" data-nav>คุยกัน</a>
+          </div>
+          <div class="footer-col">
+            <span class="label" data-typewriter>ที่อื่น</span>
+            <a href="#" rel="noopener">Instagram</a>
+            <a href="#" rel="noopener">TikTok</a>
+            <a href="#" rel="noopener">LinkedIn</a>
+          </div>
+          <div class="footer-col">
+            <span class="label" data-typewriter>Hyper Gummy</span>
+            <span style="color:var(--c-muted)">เอเจนซี่คอนเทนต์สำหรับแบรนด์ — กรุงเทพฯ</span>
+            <span style="color:var(--c-muted)">© 2026 Hyper Gummy</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- ================= MENU OVERLAY ================= -->
+  <div class="menu-overlay" role="dialog" aria-modal="true" aria-label="เมนู">
+    <button class="pill pill--ghost menu-close" data-menu-close>ปิดเมนู ✕</button>
+    <nav class="menu-nav">
+      <div class="menu-item"><a href="/work.html" data-nav><span class="menu-index">01</span>งาน</a></div>
+      <div class="menu-item"><a href="/craft.html" data-nav><span class="menu-index">02</span>วิธีทำงาน</a></div>
+      <div class="menu-item"><a href="/#about" data-nav><span class="menu-index">03</span>เรา</a></div>
+      <div class="menu-item"><a href="/contact.html" data-nav><span class="menu-index">04</span>คุยกัน</a></div>
+    </nav>
+    <div class="menu-meta">
+      <a class="label" href="mailto:hello@hypergummy.co">hello@hypergummy.co</a>
+      <a class="pill" href="/work.html" data-nav>ดูเคสทั้งหมด</a>
+    </div>
+  </div>
+
+  <!-- ================= CASE OVERLAY ================= -->
+  <div class="read-overlay" role="dialog" aria-modal="true" aria-label="เคสตัวอย่าง" data-lenis-prevent>
+    <button class="read-close pill" data-read-close>ปิด — esc</button>
+    <div class="read-inner" data-read-content></div>
+  </div>
+
+  <!-- transition veil + loader -->
+  <div class="transition-veil" aria-hidden="true"></div>
+  <div class="loader" aria-hidden="true">
+    <div class="loader-mark"><span class="dot"></span>Hyper <span class="it">Gummy</span></div>
+    <div class="loader-bar"><i></i></div>
+    <div class="loader-pct">0%</div>
+  </div>
+
+</body>
+</html>

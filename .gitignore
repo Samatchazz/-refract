@@ -5,3 +5,10 @@ research/pixelcraft/out*/shots/
 research/pixelcraft/out*/dom/
 research/pixelcraft/out*/css/
 research/pixelcraft/out*/js/
+
+# copyrighted ebooks: keep the analysis .md, never push the PDFs
+PDF/*.pdf
+# over GitHub's 100 MB hard limit
+research/xxix/assets/video/bd50c872a82fa0b27f62721b8db7a13e440b9f68.mp4
+# full-text extractions of the same ebooks
+PDF/txt/

@@ -1,0 +1,403 @@
+{
+ "sources": [
+  "track_home_1440_index.json",
+  "analysis_scroll_home_1440.json"
+ ],
+ "note": "sec in track index is a 0-based section array index; sid = S(sec+1). sec=null → element is fixed page chrome, not owned by a section.",
+ "rows": [
+  {
+   "kind": "pinned",
+   "i": 19,
+   "sid": "(fixed/global)",
+   "docTop": 823,
+   "cls": "elementor-element elementor-element-4bc0e327 elementor-widget__width-i",
+   "medianSlope": 0,
+   "samples": 26,
+   "holdRange": {
+    "fromY": 1034,
+    "toY": 30671,
+    "distance": 29637,
+    "steps": 26,
+    "band": "pinned"
+   },
+   "opacityReveal": null
+  },
+  {
+   "kind": "pinned",
+   "i": 18,
+   "sid": "(fixed/global)",
+   "docTop": 818,
+   "cls": "elementor-element elementor-element-3e9a7fe9 elementor-view-stacked el",
+   "medianSlope": 0,
+   "samples": 26,
+   "holdRange": {
+    "fromY": 1034,
+    "toY": 30671,
+    "distance": 29637,
+    "steps": 26,
+    "band": "pinned"
+   },
+   "opacityReveal": null
+  },
+  {
+   "kind": "pinned",
+   "i": 8,
+   "sid": "(fixed/global)",
+   "docTop": 743,
+   "cls": "elementor-element elementor-element-6aa6dc6d cmsmasters-featured-box__",
+   "medianSlope": 0,
+   "samples": 26,
+   "holdRange": {
+    "fromY": 1034,
+    "toY": 30671,
+    "distance": 29637,
+    "steps": 26,
+    "band": "pinned"
+   },
+   "opacityReveal": null
+  },
+  {
+   "kind": "pinned",
+   "i": 9,
+   "sid": "(fixed/global)",
+   "docTop": 764,
+   "cls": "elementor-widget-cmsmasters-featured-box__title elementor-widget-cmsma",
+   "medianSlope": 0,
+   "samples": 26,
+   "holdRange": {
+    "fromY": 1034,
+    "toY": 30671,
+    "distance": 29637,
+    "steps": 26,
+    "band": "pinned"
+   },
+   "opacityReveal": null
+  },
+  {
+   "kind": "parallaxSlow",
+   "i": 66,
+   "sid": "S11",
+   "docTop": 11279,
+   "cls": "elementor-element elementor-element-9619ddb cmsmasters-block-sticky cm",
+   "medianSlope": -0.61,
+   "samples": 4,
+   "holdRange": null,
+   "opacityReveal": null
+  },
+  {
+   "kind": "parallaxSlow",
+   "i": 67,
+   "sid": "S11",
+   "docTop": 11279,
+   "cls": "elementor-element elementor-element-14f9d48 cmsmasters-block-default c",
+   "medianSlope": -0.61,
+   "samples": 4,
+   "holdRange": null,
+   "opacityReveal": null
+  },
+  {
+   "kind": "parallaxSlow",
+   "i": 68,
+   "sid": "S11",
+   "docTop": 11282,
+   "cls": "elementor-heading-title elementor-size-default",
+   "medianSlope": -0.61,
+   "samples": 4,
+   "holdRange": null,
+   "opacityReveal": null
+  },
+  {
+   "kind": "parallaxSlow",
+   "i": 69,
+   "sid": "S11",
+   "docTop": 11282,
+   "cls": "elementor-element elementor-element-17f3f9f cmsmasters-block-default c",
+   "medianSlope": -0.61,
+   "samples": 4,
+   "holdRange": null,
+   "opacityReveal": null
+  },
+  {
+   "kind": "parallaxSlow",
+   "i": 70,
+   "sid": "S11",
+   "docTop": 11282,
+   "cls": "elementor-heading-title elementor-size-default",
+   "medianSlope": -0.61,
+   "samples": 4,
+   "holdRange": null,
+   "opacityReveal": null
+  },
+  {
+   "kind": "parallaxSlow",
+   "i": 71,
+   "sid": "S11",
+   "docTop": 11797,
+   "cls": "elementor-element elementor-element-5ae66f4 cmsmasters-widget-marker-v",
+   "medianSlope": -0.61,
+   "samples": 4,
+   "holdRange": null,
+   "opacityReveal": null
+  },
+  {
+   "kind": "parallaxSlow",
+   "i": 129,
+   "sid": "S15",
+   "docTop": 14879,
+   "cls": "elementor-element elementor-element-0bae188 cmsmasters-block-sticky cm",
+   "medianSlope": -0.638,
+   "samples": 4,
+   "holdRange": null,
+   "opacityReveal": null
+  },
+  {
+   "kind": "parallaxSlow",
+   "i": 136,
+   "sid": "S21",
+   "docTop": 21872,
+   "cls": "elementor-element elementor-element-fccdf25 cmsmasters-block-sticky cm",
+   "medianSlope": -0.727,
+   "samples": 4,
+   "holdRange": null,
+   "opacityReveal": null
+  },
+  {
+   "kind": "opacityReveal",
+   "i": 95,
+   "sid": "S12",
+   "docTop": 12861,
+   "cls": "elementor-widget-cmsmasters-image-accordion__overlay elementor-widget-",
+   "medianSlope": -1,
+   "samples": 3,
+   "holdRange": null,
+   "opacityReveal": [
+    1,
+    0.06,
+    0
+   ]
+  },
+  {
+   "kind": "opacityReveal",
+   "i": 96,
+   "sid": "S12",
+   "docTop": 12861,
+   "cls": "elementor-widget-cmsmasters-image-accordion__overlay elementor-widget-",
+   "medianSlope": -1,
+   "samples": 3,
+   "holdRange": null,
+   "opacityReveal": [
+    0,
+    0.94,
+    1
+   ]
+  },
+  {
+   "kind": "opacityReveal",
+   "i": 104,
+   "sid": "S12",
+   "docTop": 12990,
+   "cls": "elementor-widget-cmsmasters-image-accordion__content-inner",
+   "medianSlope": -1.001,
+   "samples": 3,
+   "holdRange": null,
+   "opacityReveal": [
+    0,
+    0.94,
+    1
+   ]
+  }
+ ],
+ "widgetPlacements": {
+  "cmsmasters-site-logo": [
+   "(header/global)"
+  ],
+  "cmsmasters-nav-menu": [
+   "(header/global)"
+  ],
+  "cmsmasters-swap-button": [
+   "(header/global)",
+   "S01",
+   "S02",
+   "S04",
+   "S25"
+  ],
+  "cmsmasters-offcanvas": [
+   "(header/global)"
+  ],
+  "icon": [
+   "(header/global)",
+   "S08",
+   "S09",
+   "S18",
+   "S24"
+  ],
+  "cmsmasters-time-popup": [
+   "(header/global)"
+  ],
+  "cmsmasters-featured-box": [
+   "(header/global)",
+   "S06",
+   "S10",
+   "S14",
+   "S25"
+  ],
+  "cmsmasters-fancy-text": [
+   "S01"
+  ],
+  "cmsmasters-advanced-title": [
+   "S01"
+  ],
+  "cmsmasters-marquee": [
+   "S01",
+   "S08"
+  ],
+  "menu-anchor": [
+   "S02",
+   "S15",
+   "S21"
+  ],
+  "cmsmasters-highlight-title": [
+   "S02",
+   "S03",
+   "S04",
+   "S05",
+   "S06",
+   "S10",
+   "S11",
+   "S12",
+   "S14",
+   "S15",
+   "S16",
+   "S17",
+   "S19",
+   "S20",
+   "S21",
+   "S22",
+   "S23",
+   "S25"
+  ],
+  "text-editor": [
+   "S02",
+   "S04",
+   "S05",
+   "S07",
+   "S08",
+   "S09",
+   "S12",
+   "S14",
+   "S16",
+   "S18",
+   "S19",
+   "S20",
+   "S22",
+   "S23"
+  ],
+  "heading": [
+   "S02",
+   "S03",
+   "S04",
+   "S05",
+   "S06",
+   "S07",
+   "S08",
+   "S09",
+   "S11",
+   "S13",
+   "S15",
+   "S16",
+   "S17",
+   "S18",
+   "S19",
+   "S20",
+   "S21",
+   "S22",
+   "S23",
+   "S24"
+  ],
+  "cmsmasters-button": [
+   "S02",
+   "S03"
+  ],
+  "cmsmasters-image-scroll": [
+   "S02"
+  ],
+  "image": [
+   "S02",
+   "S03",
+   "S04",
+   "S05",
+   "S08",
+   "S10",
+   "S11",
+   "S12",
+   "S15",
+   "S17",
+   "S18",
+   "S20",
+   "S21",
+   "S25"
+  ],
+  "icon-box": [
+   "S04"
+  ],
+  "cmsmasters-icon-list": [
+   "S05",
+   "S11",
+   "S13",
+   "S18",
+   "S25"
+  ],
+  "counter": [
+   "S05"
+  ],
+  "progress": [
+   "S05"
+  ],
+  "cmsmasters-media-carousel": [
+   "S07",
+   "S19"
+  ],
+  "cmsmasters-before-after": [
+   "S09"
+  ],
+  "spacer": [
+   "S10",
+   "S14",
+   "S18",
+   "S22"
+  ],
+  "cmsmasters-template": [
+   "S11",
+   "S15",
+   "S21"
+  ],
+  "cmsmasters-image-accordion": [
+   "S12"
+  ],
+  "image-box": [
+   "S23",
+   "S24"
+  ],
+  "cmsmasters-title": [
+   "S23"
+  ],
+  "block-sticky": [
+   "S11",
+   "S15",
+   "S21"
+  ],
+  "effect-type-scroll": [
+   "(header/global)",
+   "S05",
+   "S08",
+   "S17"
+  ],
+  "bg-effect-type-float": [
+   "(header/global)"
+  ],
+  "marquee-direction": [
+   "S01",
+   "S08"
+  ]
+ }
+}

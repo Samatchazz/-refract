@@ -1,0 +1,535 @@
+{
+ "ยามาซากิ (Yamazaki)": {
+  "group": "ยามาซากิ / Yamazaki",
+  "variants": [
+   "ยามาซากิ",
+   "Yamazaki",
+   "ยามาซากิ (ผ่าน ซันมูลัน)",
+   "Flavor Field",
+   "แซงเอตัวล (Saint Etoile)",
+   "ยามาซากิ (ผ่าน Flavor Field)",
+   "Yamazaki (Flavor Field)",
+   "ยามาซากิ (ผ่าน Flavorfield)",
+   "ยามาซากิ (ผ่าน เฟลเวอร์ฟิลด์)",
+   "แซงเอตัวล",
+   "flavor field",
+   "ยามาซากิ (x Donki collab)"
+  ],
+  "tag": "ยามาซากิ",
+  "slug": "yamazaki",
+  "decided": "2026-09-12 Mat",
+  "tag_note": "แท็ก Flavor Field / แซงเอตัวล / ซันมูลัน / Sunmoulin เป็นแท็กร้าน — ห้ามรวมเข้ายามาซากิ แค่เพิ่มแท็ก ยามาซากิ ให้โพสต์เหล่านั้น (D20)"
+ },
+ "EZY Sweet": {
+  "group": "Ezy Sweet",
+  "variants": [
+   "Ezy Sweet",
+   "EZY SWEET"
+  ],
+  "tag": "EZY Sweet",
+  "slug": "ezy-sweet",
+  "decided": "2026-09-12 Mat"
+ },
+ "EZYGO": {
+  "group": "EZYGO",
+  "variants": [
+   "EZY GO",
+   "EZYGO (อีซี่โก)",
+   "Ezy go"
+  ],
+  "tag": "EZYGO",
+  "slug": "ezygo",
+  "decided": "2026-09-12 Mat"
+ },
+ "EZY BAKE": {
+  "group": "EZY Bake",
+  "variants": [
+   "EZY Bake",
+   "EZY BAKE (อีซี่เบค)"
+  ],
+  "tag": "EZY BAKE",
+  "slug": "ezy-bake",
+  "decided": "2026-09-12 Mat"
+ },
+ "Ezy Taste": {
+  "group": "Ezy Taste",
+  "variants": [
+   "EZY TASTE",
+   "อีซี่เทส (Easy Taste)"
+  ],
+  "tag": "Ezy Taste",
+  "slug": "ezy-taste",
+  "decided": "2026-09-12 Mat"
+ },
+ "คัดสรร (Kudsan)": {
+  "group": "Kudsan / คัดสรร",
+  "variants": [
+   "Kudsan",
+   "คัดสรร (7-11)",
+   "Kudsan (คัดสรร)",
+   "KUDSAN"
+  ],
+  "tag": "คัดสรร",
+  "slug": "kudsan",
+  "decided": "2026-09-12 Mat"
+ },
+ "Bake A Wish": {
+  "group": "Bake a Wish",
+  "variants": [
+   "Bake a Wish",
+   "Bake a wish",
+   "Bake A Wish Pastry"
+  ],
+  "tag": "Bake A Wish",
+  "slug": "bake-a-wish",
+  "decided": "2026-09-12 Mat"
+ },
+ "BIGGA": {
+  "group": "BIGGA",
+  "variants": [
+   "Bigga"
+  ],
+  "tag": "BIGGA",
+  "slug": "bigga",
+  "decided": "2026-09-12 Mat"
+ },
+ "NSL Selection": {
+  "group": "NSL Selection",
+  "variants": [
+   "NSL SELECTION"
+  ],
+  "tag": "NSL Selection",
+  "slug": "nsl-selection",
+  "decided": "2026-09-12 Mat"
+ },
+ "ของโปรด เบเกอรี่": {
+  "group": "ของโปรด",
+  "variants": [
+   "ของโปรด"
+  ],
+  "tag": "ของโปรด เบเกอรี่",
+  "slug": "",
+  "decided": "2026-09-12 Mat"
+ },
+ "Bowcake": {
+  "group": "Bowcake",
+  "variants": [
+   "Bow Cake"
+  ],
+  "tag": "Bowcake",
+  "slug": "bowcake",
+  "decided": "2026-09-12 Mat"
+ },
+ "คัสตาร์ดนากามูระ (Custard Nakamura)": {
+  "group": "Custard Nakamura / คัสตาร์ดนากามูระ",
+  "variants": [
+   "คัสตาร์ดนากามูระ",
+   "Custard Nakamura",
+   "คัสตาร์ด นากามูระ (Custard Nakamura)",
+   "Nakamura (คัสตาร์ดนากามูระ)"
+  ],
+  "tag": "คัสตาร์ดนากามูระ",
+  "slug": "custard-nakamura",
+  "decided": "2026-09-12 Mat"
+ },
+ "Dairy Dough": {
+  "group": "Dairy Dough",
+  "variants": [
+   "DAIRY DOUGH",
+   "Dairydough"
+  ],
+  "tag": "Dairy Dough",
+  "slug": "dairy-dough",
+  "decided": "2026-09-12 Mat"
+ },
+ "Takachi": {
+  "group": "Takachi",
+  "variants": [
+   "TAKACHI"
+  ],
+  "tag": "Takachi",
+  "slug": "takachi",
+  "decided": "2026-09-12 Mat"
+ },
+ "Haribo": {
+  "group": "Haribo",
+  "variants": [
+   "HARIBO"
+  ],
+  "tag": "Haribo",
+  "slug": "haribo",
+  "decided": "2026-09-12 Mat"
+ },
+ "YUME Matcha": {
+  "group": "YUME Matcha",
+  "variants": [
+   "Yume Matcha"
+  ],
+  "tag": "YUME Matcha",
+  "slug": "yume-matcha",
+  "decided": "2026-09-12 Mat"
+ },
+ "Ban Thong Yord": {
+  "group": "Ban Thong Yord",
+  "variants": [
+   "BAN THONG YORD"
+  ],
+  "tag": "Ban Thong Yord",
+  "slug": "ban-thong-yord",
+  "decided": "2026-09-12 Mat"
+ },
+ "IORA": {
+  "group": "iora",
+  "variants": [
+   "iora"
+  ],
+  "tag": "IORA",
+  "slug": "iora",
+  "decided": "2026-09-12 Mat"
+ },
+ "Nichi": {
+  "group": "Nichi / Nichifuri",
+  "variants": [
+   "Nichifuri",
+   "NICHI"
+  ],
+  "tag": "Nichi",
+  "slug": "nichi",
+  "decided": "2026-09-12 Mat"
+ },
+ "Ete": {
+  "group": "Ete",
+  "variants": [
+   "ete"
+  ],
+  "tag": "Ete",
+  "slug": "ete",
+  "decided": "2026-09-12 Mat"
+ },
+ "Bake Bar": {
+  "group": "Bake Bar",
+  "variants": [
+   "BAKE BAR"
+  ],
+  "tag": "Bake Bar",
+  "slug": "bake-bar",
+  "decided": "2026-09-12 Mat"
+ },
+ "Meiji": {
+  "group": "Meiji",
+  "variants": [
+   "meiji"
+  ],
+  "tag": "Meiji",
+  "slug": "meiji",
+  "decided": "2026-09-12 Mat"
+ },
+ "อิมุรายะ (Imuraya)": {
+  "group": "Imuraya",
+  "variants": [
+   "imuraya",
+   "Imuraya"
+  ],
+  "tag": "อิมุรายะ",
+  "slug": "imuraya",
+  "decided": "2026-09-12 Mat"
+ },
+ "อินทนิล (Inthanin)": {
+  "group": "Inthanin / อินทนิล",
+  "variants": [
+   "Inthanin"
+  ],
+  "tag": "อินทนิล",
+  "slug": "inthanin",
+  "decided": "2026-09-12 Mat"
+ },
+ "Tokachi": {
+  "group": "Tokachi",
+  "variants": [
+   "tokachi",
+   "TOKACHI",
+   "Tokachi Sweets"
+  ],
+  "tag": "Tokachi",
+  "slug": "tokachi",
+  "decided": "2026-09-12 Mat"
+ },
+ "Srifa Bakery": {
+  "group": "Srifa",
+  "variants": [
+   "Srifa"
+  ],
+  "tag": "Srifa Bakery",
+  "slug": "srifa-bakery",
+  "decided": "2026-09-12 Mat"
+ },
+ "คาเฟ่อเมซอน (Café Amazon)": {
+  "group": "Café Amazon",
+  "variants": [
+   "Café Amazon",
+   "Cafe Amazon",
+   "อเมซอน (Amazon Cafe)",
+   "Amazon",
+   "คาเฟ่อเมซอน"
+  ],
+  "tag": "คาเฟ่อเมซอน",
+  "slug": "cafe-amazon",
+  "decided": "2026-09-12 Mat"
+ },
+ "ชาตรามือ (ChaTraMue)": {
+  "group": "ชาตรามือ",
+  "variants": [
+   "ชาตรามือ"
+  ],
+  "tag": "ชาตรามือ",
+  "slug": "chatramue",
+  "decided": "2026-09-12 Mat"
+ },
+ "พันธุ์ไทย (Punthai)": {
+  "group": "พันธุ์ไทย",
+  "variants": [
+   "พันธุ์ไทย",
+   "พันธุ์ไทย (Puntai)",
+   "PUNTHAI Coffee",
+   "พันธุ์ไทย (Panthai)"
+  ],
+  "tag": "พันธุ์ไทย",
+  "slug": "punthai",
+  "decided": "2026-09-12 Mat"
+ },
+ "Beard Papa's": {
+  "group": "Beard Papa's",
+  "variants": [
+   "Beard Papa"
+  ],
+  "tag": "Beard Papa's",
+  "slug": "beard-papas",
+  "decided": "2026-09-12 Mat"
+ },
+ "Big One Group": {
+  "group": "Big One",
+  "variants": [
+   "Big One"
+  ],
+  "tag": "Big One Group",
+  "slug": "big-one-group",
+  "decided": "2026-09-12 Mat"
+ },
+ "IKEA": {
+  "group": "IKEA",
+  "variants": [
+   "IKEA (อิเกีย)"
+  ],
+  "tag": "IKEA",
+  "slug": "ikea",
+  "decided": "2026-09-12 Mat"
+ },
+ "Oreo (โอริโอ้)": {
+  "group": "Oreo",
+  "variants": [
+   "Oreo"
+  ],
+  "tag": "Oreo",
+  "slug": "oreo",
+  "decided": "2026-09-12 Mat"
+ },
+ "Alfredo (อัลเฟรโด)": {
+  "group": "Alfredo",
+  "variants": [
+   "Alfredo"
+  ],
+  "tag": "Alfredo",
+  "slug": "alfredo",
+  "decided": "2026-09-12 Mat"
+ },
+ "Ritter Sport": {
+  "group": "Ritter Sport",
+  "variants": [
+   "Ritter (Ritter Sport)"
+  ],
+  "tag": "Ritter Sport",
+  "slug": "ritter-sport",
+  "decided": "2026-09-12 Mat"
+ },
+ "มอสเบอร์เกอร์ (Mos Burger)": {
+  "group": "Mos Burger",
+  "variants": [
+   "Mos Burger",
+   "MOS Burger"
+  ],
+  "tag": "มอสเบอร์เกอร์",
+  "slug": "mos-burger",
+  "decided": "2026-09-12 Mat"
+ },
+ "แดรี่ควีน (Dairy Queen)": {
+  "group": "Dairy Queen",
+  "variants": [
+   "Dairy Queen"
+  ],
+  "tag": "แดรี่ควีน",
+  "slug": "dairy-queen",
+  "decided": "2026-09-12 Mat"
+ },
+ "ซูชิโระ (Sushiro)": {
+  "group": "ซูชิโระ / Sushiro",
+  "variants": [
+   "ซูชิโระ"
+  ],
+  "tag": "ซูชิโระ",
+  "slug": "sushiro",
+  "decided": "2026-09-12 Mat"
+ },
+ "เฮาส์แบรนด์ดองกิ (Donki)": {
+  "group": "ดองกิ (เฮาส์แบรนด์)",
+  "variants": [
+   "เฮาส์แบรนด์ดองกิ",
+   "Donki",
+   "ดองกิ"
+  ],
+  "tag": "เฮาส์แบรนด์ดองกิ",
+  "slug": "donki",
+  "decided": "2026-09-12 Mat",
+  "tag_note": "แท็ก ดองกิ (×124) เป็นแท็กร้าน — ห้าม rename; สร้างแท็กใหม่ เฮาส์แบรนด์ดองกิ (slug donki) แล้วเพิ่มให้โพสต์เฮาส์แบรนด์ 26 โพสต์"
+ },
+ "aro (Makro house brand)": {
+  "group": "aro (Makro)",
+  "variants": [
+   "aro",
+   "Makro"
+  ],
+  "tag": "aro",
+  "slug": "aro",
+  "decided": "2026-09-12 Mat"
+ },
+ "All Café (7-11)": {
+  "group": "All Café",
+  "variants": [
+   "All Café",
+   "All Cafe"
+  ],
+  "tag": "All Café",
+  "slug": "all-cafe",
+  "decided": "2026-09-12 Mat"
+ },
+ "หมีเนย (Butter Bear)": {
+  "group": "หมีเนย (Butter Bear)",
+  "variants": [
+   "หมีเนย (Butter Bear) merch",
+   "Butter Bear Cafe"
+  ],
+  "tag": "หมีเนย",
+  "slug": "butter-bear",
+  "decided": "2026-09-12 Mat"
+ },
+ "Cadbury": {
+  "group": "Cadbury",
+  "variants": [
+   "Cadbury Dairy Milk"
+  ],
+  "tag": "Cadbury",
+  "slug": "cadbury",
+  "decided": "2026-09-12 Mat"
+ },
+ "GAGA": {
+  "group": "Gaga",
+  "variants": [
+   "Gaga"
+  ],
+  "tag": "GAGA",
+  "slug": "gaga",
+  "decided": "2026-09-12 Mat"
+ },
+ "One To Two": {
+  "group": "One To Two",
+  "variants": [
+   "OnetoTwo"
+  ],
+  "tag": "One To Two",
+  "slug": "one-to-two",
+  "decided": "2026-09-12 Mat"
+ },
+ "Auntie Anne's": {
+  "group": "Auntie Anne's",
+  "variants": [
+   "Auntie Annes",
+   "Auntie Anne’s"
+  ],
+  "tag": "Auntie Anne's",
+  "slug": "auntie-annes",
+  "decided": "2026-09-12 Mat"
+ },
+ "Hershey's": {
+  "group": "Hershey's",
+  "variants": [
+   "Hersheys"
+  ],
+  "tag": "Hershey's",
+  "slug": "hersheys",
+  "decided": "2026-09-12 Mat"
+ },
+ "Jiancha": {
+  "group": "Jiancha",
+  "variants": [
+   "Jian Cha"
+  ],
+  "tag": "Jiancha",
+  "slug": "jiancha",
+  "decided": "2026-09-12 Mat"
+ },
+ "7-11": {
+  "group": "ช่องแบรนด์ที่ใส่ชื่อร้าน \"7-11\"",
+  "variants": [],
+  "tag": "",
+  "slug": "",
+  "decided": "2026-09-12 Mat",
+  "note": "Mat เคาะปล่อยไว้ (12 ก.ย.) ไม่แตะแท็ก/ตาราง"
+ },
+ "ไม่ระบุ": {
+  "group": "ช่องแบรนด์ \"อ่านไม่ออกจากรูป\"",
+  "variants": [
+   "อ่านไม่ออกจากรูป"
+  ],
+  "tag": "",
+  "slug": "",
+  "decided": "2026-09-12 Mat"
+ },
+ "_meta": {
+  "decided": "2026-09-12 Mat via Brand Canon Sheet 5cd6cadf",
+  "format": "ไทย (English) สำหรับแบรนด์สองภาษา · อังกฤษล้วนสำหรับแบรนด์อังกฤษ · tag = ชื่อสั้นภาษาเดียว, slug อังกฤษ",
+  "separate": [
+   "Milky vs Milkybar",
+   "Nestlé sub-brands (Aero/Munchies/Toffee Crisp)"
+  ],
+  "usage": "mkfinal: map variant→canonical ก่อนเขียน final_brand · mkrows OPTS: ปุ่มจาก canonical เรียงตามความถี่ · classify prompt: ส่งรายชื่อ canonical เป็น reference · mkset: ทุกโพสต์ต้องมีแท็ก = canon.tag"
+ },
+ "ลอว์สัน (Lawson)": {
+  "group": "Lawson",
+  "variants": [],
+  "tag": "Lawson",
+  "slug": "lawson",
+  "decided": "2026-09-14 tag-mapping only (Mat answered ลอว์สัน (Lawson) in Dec 2024 Brand Sheet; site has 15 posts spelled Lawson + tag Lawson) — canonical spelling pending Mat",
+  "tag_note": "ชั่วคราว: ชี้แท็กไปที่ Lawson ที่มีอยู่ กัน build สร้างแท็กซ้ำ · ชื่อมาตรฐานรอ Mat เคาะ"
+ },
+ "Kaldi": {
+  "group": "Kaldi",
+  "variants": [
+   "Kaldi Coffee Farm",
+   "KALDI",
+   "Kaldi coffee farm"
+  ],
+  "tag": "Kaldi",
+  "slug": "kaldi",
+  "decided": "2026-09-15 spelling-merge only (site had 8 posts 'Kaldi' + tag Kaldi since 12 Sep; Nov 2024 classifier wrote 'Kaldi Coffee Farm') — flagged to Mat"
+ },
+ "Kamu": {
+  "group": "Kamu",
+  "variants": [
+   "Kamu Kamu",
+   "KAMU",
+   "คามุ"
+  ],
+  "tag": "Kamu",
+  "slug": "kamu",
+  "decided": "2026-09-15 spelling-merge only (Dec 2024 nr37 posted as 'Kamu') — flagged to Mat"
+ }
+}

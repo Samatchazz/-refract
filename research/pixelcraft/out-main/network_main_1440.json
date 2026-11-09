@@ -1,0 +1,1248 @@
+[
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/cdn-cgi/speculation",
+    "type": "Other",
+    "status": 200,
+    "mime": "application/speculationrules+json",
+    "encodedBytes": 616
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/themes/pixel-craft/theme-config/assets/css/default-vars.min.css?ver=1.0.0",
+    "type": "Stylesheet",
+    "status": 200,
+    "mime": "text/css",
+    "encodedBytes": 19055
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/uploads/sites/2/elementor/css/cmsmasters-custom-frontend.min.css?ver=1785226926",
+    "type": "Stylesheet",
+    "status": 200,
+    "mime": "text/css",
+    "encodedBytes": 15676
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/uploads/sites/2/elementor/css/cmsmasters-custom-widget-cmsmasters-icon-list.min.css?ver=1785226926",
+    "type": "Stylesheet",
+    "status": 200,
+    "mime": "text/css",
+    "encodedBytes": 3283
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/uploads/sites/2/elementor/css/cmsmasters-custom-widget-cmsmasters-nav-menu.min.css?ver=1785226926",
+    "type": "Stylesheet",
+    "status": 200,
+    "mime": "text/css",
+    "encodedBytes": 9367
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/uploads/sites/2/elementor/css/cmsmasters-custom-widget-cmsmasters-swap-button.min.css?ver=1785226926",
+    "type": "Stylesheet",
+    "status": 200,
+    "mime": "text/css",
+    "encodedBytes": 3144
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/uploads/sites/2/elementor/css/custom-frontend.min.css?ver=1785226926",
+    "type": "Stylesheet",
+    "status": 200,
+    "mime": "text/css",
+    "encodedBytes": 7868
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/uploads/sites/2/elementor/css/post-39.css?ver=1785226927",
+    "type": "Stylesheet",
+    "status": 200,
+    "mime": "text/css",
+    "encodedBytes": 2158
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/uploads/sites/2/elementor/css/cmsmasters-custom-widget-cmsmasters-button.min.css?ver=1785226926",
+    "type": "Stylesheet",
+    "status": 200,
+    "mime": "text/css",
+    "encodedBytes": 2288
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/plugins/cmsmasters-elementor-addon/assets/css/widget-cmsmasters-highlight-title.min.css?ver=1.25.1",
+    "type": "Stylesheet",
+    "status": 200,
+    "mime": "text/css",
+    "encodedBytes": 2694
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/plugins/elementor/assets/css/widget-image.min.css?ver=4.2.0",
+    "type": "Stylesheet",
+    "status": 200,
+    "mime": "text/css",
+    "encodedBytes": 719
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/uploads/sites/2/elementor/css/cmsmasters-custom-widget-cmsmasters-mailchimp.min.css?ver=1785226926",
+    "type": "Stylesheet",
+    "status": 200,
+    "mime": "text/css",
+    "encodedBytes": 3299
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/plugins/elementor/assets/css/widget-heading.min.css?ver=4.2.0",
+    "type": "Stylesheet",
+    "status": 200,
+    "mime": "text/css",
+    "encodedBytes": 746
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/plugins/elementor/assets/lib/swiper/v8/css/swiper.min.css?ver=8.4.5",
+    "type": "Stylesheet",
+    "status": 200,
+    "mime": "text/css",
+    "encodedBytes": 5170
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/plugins/cmsmasters-elementor-addon/assets/css/widget-cmsmasters-marquee.min.css?ver=1.25.1",
+    "type": "Stylesheet",
+    "status": 200,
+    "mime": "text/css",
+    "encodedBytes": 2077
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/plugins/cmsmasters-elementor-addon/assets/css/widget-cmsmasters-testimonials.min.css?ver=1.25.1",
+    "type": "Stylesheet",
+    "status": 200,
+    "mime": "text/css",
+    "encodedBytes": 4578
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/uploads/sites/2/elementor/css/cmsmasters-custom-widget-cmsmasters-blog.min.css?ver=1785226926",
+    "type": "Stylesheet",
+    "status": 200,
+    "mime": "text/css",
+    "encodedBytes": 5976
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/uploads/sites/2/elementor/css/cmsmasters-custom-widget-cmsmasters-contact-form.min.css?ver=1785226926",
+    "type": "Stylesheet",
+    "status": 200,
+    "mime": "text/css",
+    "encodedBytes": 9250
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/uploads/sites/2/elementor/css/post-82.css?ver=1785226928",
+    "type": "Stylesheet",
+    "status": 200,
+    "mime": "text/css",
+    "encodedBytes": 4739
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/plugins/elementor/assets/css/conditionals/e-swiper.min.css?ver=4.2.0",
+    "type": "Stylesheet",
+    "status": 200,
+    "mime": "text/css",
+    "encodedBytes": 1387
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/plugins/cmsmasters-elementor-addon/assets/lib/cmsicons/css/cmsmasters-icons.min.css?ver=1.0.0",
+    "type": "Stylesheet",
+    "status": 200,
+    "mime": "text/css",
+    "encodedBytes": 2040
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/uploads/sites/2/elementor/css/cmsmasters-custom-widget-cmsmasters-site-logo.min.css?ver=1785226926",
+    "type": "Stylesheet",
+    "status": 200,
+    "mime": "text/css",
+    "encodedBytes": 1460
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/plugins/woocommerce/assets/css/woocommerce-layout.css?ver=10.9.4",
+    "type": "Stylesheet",
+    "status": 200,
+    "mime": "text/css",
+    "encodedBytes": 4037
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/uploads/sites/2/elementor/css/pixel-craft-woocommerce.min.css?ver=1785226928&ver=1.0.0",
+    "type": "Stylesheet",
+    "status": 200,
+    "mime": "text/css",
+    "encodedBytes": 11429
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/themes/pixel-craft/style.css?ver=1.0.0",
+    "type": "Stylesheet",
+    "status": 200,
+    "mime": "text/css",
+    "encodedBytes": 1210
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/plugins/cmsmasters-elementor-addon/assets/css/widget-cmsmasters-advanced-title.min.css?ver=1.25.1",
+    "type": "Stylesheet",
+    "status": 200,
+    "mime": "text/css",
+    "encodedBytes": 2166
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/plugins/elementor/assets/lib/eicons/css/elementor-icons.min.css?ver=5.53.0",
+    "type": "Stylesheet",
+    "status": 200,
+    "mime": "text/css",
+    "encodedBytes": 5142
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/uploads/sites/2/elementor/css/pixel-craft-frontend.min.css?ver=1785226928&ver=screen",
+    "type": "Stylesheet",
+    "status": 200,
+    "mime": "text/css",
+    "encodedBytes": 31545
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/themes/pixel-craft-child-demo/assets/css/theme-style.min.css?ver=1.0.0",
+    "type": "Stylesheet",
+    "status": 200,
+    "mime": "text/css",
+    "encodedBytes": 3081
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/uploads/sites/2/elementor/css/pixel-craft-gutenberg-wp-frontend.min.css?ver=1785226928&ver=1.0.0",
+    "type": "Stylesheet",
+    "status": 200,
+    "mime": "text/css",
+    "encodedBytes": 10114
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/uploads/sites/2/elementor/css/pixel-craft-wc-frontend.min.css?ver=1785226928&ver=1.0.0",
+    "type": "Stylesheet",
+    "status": 200,
+    "mime": "text/css",
+    "encodedBytes": 34844
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/plugins/cmsmasters-elementor-addon/assets/lib/custom-cursor/custom-cursor.min.css?ver=1.25.1",
+    "type": "Stylesheet",
+    "status": 200,
+    "mime": "text/css",
+    "encodedBytes": 2338
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/uploads/sites/2/elementor/cmsmasters-local-icons/cmsmasters-demo-icons/style.css?ver=1.0.0",
+    "type": "Stylesheet",
+    "status": 200,
+    "mime": "text/css",
+    "encodedBytes": 1127
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/themes/pixel-craft-child-demo/style.css?ver=1.0.0",
+    "type": "Stylesheet",
+    "status": 200,
+    "mime": "text/css",
+    "encodedBytes": 742
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1",
+    "type": "Script",
+    "status": 200,
+    "mime": "text/javascript",
+    "encodedBytes": 5472
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/plugins/cookie-law-info/lite/frontend/js/script.min.js?ver=3.3.9.1",
+    "type": "Script",
+    "status": 200,
+    "mime": "text/javascript",
+    "encodedBytes": 7824
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/uploads/sites/2/2026/01/megamenu-1.webp",
+    "type": "Image",
+    "status": 200,
+    "mime": "image/webp",
+    "encodedBytes": 14545
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/uploads/sites/2/2026/01/megamenu-2-2.webp",
+    "type": "Image",
+    "status": 200,
+    "mime": "image/webp",
+    "encodedBytes": 12425
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-includes/js/jquery/jquery.min.js?ver=3.7.1",
+    "type": "Script",
+    "status": 200,
+    "mime": "text/javascript",
+    "encodedBytes": 30977
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/plugins/cmsmasters-elementor-addon/assets/css/widget-cmsmasters-image-accordion.min.css?ver=1.25.1",
+    "type": "Stylesheet",
+    "status": 200,
+    "mime": "text/css",
+    "encodedBytes": 3904
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/uploads/sites/2/elementor/css/post-53.css?ver=1785234131",
+    "type": "Stylesheet",
+    "status": 200,
+    "mime": "text/css",
+    "encodedBytes": 2584
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/uploads/sites/2/2026/01/megamenu-3.webp",
+    "type": "Image",
+    "status": 200,
+    "mime": "image/webp",
+    "encodedBytes": 13829
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/uploads/sites/2/elementor/css/post-50.css?ver=1785234131",
+    "type": "Stylesheet",
+    "status": 200,
+    "mime": "text/css",
+    "encodedBytes": 14390
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/uploads/sites/2/2026/01/logo-white.svg",
+    "type": "Image",
+    "status": 200,
+    "mime": "image/svg+xml",
+    "encodedBytes": 6942
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/",
+    "type": "Document",
+    "status": 200,
+    "mime": "text/html",
+    "encodedBytes": 54213
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js",
+    "type": "Script",
+    "status": 200,
+    "mime": "application/javascript",
+    "encodedBytes": 1113
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/plugins/woocommerce/assets/client/blocks/wc-blocks.css?ver=wc-10.9.4",
+    "type": "Stylesheet",
+    "status": 200,
+    "mime": "text/css",
+    "encodedBytes": 3201
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/uploads/sites/2/elementor/css/post-144.css?ver=1785234132",
+    "type": "Stylesheet",
+    "status": 200,
+    "mime": "text/css",
+    "encodedBytes": 2069
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/uploads/sites/2/elementor/css/cmsmasters-custom-widget-cmsmasters-featured-box.min.css?ver=1785226926",
+    "type": "Stylesheet",
+    "status": 200,
+    "mime": "text/css",
+    "encodedBytes": 4088
+  },
+  {
+    "url": "https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496",
+    "type": "Script",
+    "status": 200,
+    "mime": "text/javascript",
+    "encodedBytes": 11577
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/themes/pixel-craft/theme-config/images/logo.svg",
+    "type": "Image",
+    "status": 200,
+    "mime": "image/svg+xml",
+    "encodedBytes": 5496
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/uploads/sites/2/elementor/css/post-148.css?ver=1785234132",
+    "type": "Stylesheet",
+    "status": 200,
+    "mime": "text/css",
+    "encodedBytes": 3374
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/uploads/sites/2/elementor/css/post-132.css?ver=1785226928",
+    "type": "Stylesheet",
+    "status": 200,
+    "mime": "text/css",
+    "encodedBytes": 4961
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/plugins/elementor/assets/lib/animations/styles/slideInRight.min.css?ver=4.2.0",
+    "type": "Stylesheet",
+    "status": 200,
+    "mime": "text/css",
+    "encodedBytes": 712
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/uploads/sites/2/elementor/css/cmsmasters-custom-widget-cmsmasters-search.min.css?ver=1785226926",
+    "type": "Stylesheet",
+    "status": 200,
+    "mime": "text/css",
+    "encodedBytes": 3303
+  },
+  {
+    "url": "https://fonts.googleapis.com/css?family=Instrument+Serif:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic&display=swap",
+    "type": "Stylesheet",
+    "status": 200,
+    "mime": "text/css",
+    "encodedBytes": 910
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/plugins/forminator/assets/forminator-ui/css/src/forminator-utilities.min.css?ver=1.56.0",
+    "type": "Stylesheet",
+    "status": 200,
+    "mime": "text/css",
+    "encodedBytes": 932
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/plugins/forminator/assets/forminator-ui/css/forminator-icons.min.css?ver=1.56.0",
+    "type": "Stylesheet",
+    "status": 200,
+    "mime": "text/css",
+    "encodedBytes": 1528
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/plugins/forminator/assets/forminator-ui/css/src/form/forminator-form-default.base.min.css?ver=1.56.0",
+    "type": "Stylesheet",
+    "status": 200,
+    "mime": "text/css",
+    "encodedBytes": 6851
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-includes/css/buttons.min.css?ver=7.0.2",
+    "type": "Stylesheet",
+    "status": 200,
+    "mime": "text/css",
+    "encodedBytes": 2230
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/uploads/sites/2/forminator/58897_64144f873532cbe965ba5886f0548540/css/style-58897.css?ver=1766651197",
+    "type": "Stylesheet",
+    "status": 200,
+    "mime": "text/css",
+    "encodedBytes": 4443
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/plugins/cmsmasters-elementor-addon/assets/css/widget-cmsmasters-post-featured-image.min.css?ver=1.25.1",
+    "type": "Stylesheet",
+    "status": 200,
+    "mime": "text/css",
+    "encodedBytes": 1128
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/plugins/elementor/assets/lib/animations/styles/e-animation-grow-rotate.min.css?ver=4.2.0",
+    "type": "Stylesheet",
+    "status": 200,
+    "mime": "text/css",
+    "encodedBytes": 714
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/themes/pixel-craft-child-demo/demos-config/images/home-three.jpg",
+    "type": "Image",
+    "status": 200,
+    "mime": "image/jpeg",
+    "encodedBytes": 60667
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/themes/pixel-craft-child-demo/demos-config/images/main.jpg",
+    "type": "Image",
+    "status": 200,
+    "mime": "image/jpeg",
+    "encodedBytes": 68584
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/themes/pixel-craft-child-demo/demos-config/images/home-two.jpg",
+    "type": "Image",
+    "status": 200,
+    "mime": "image/jpeg",
+    "encodedBytes": 46749
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/plugins/woocommerce/assets/css/woocommerce-smallscreen.css?ver=10.9.4",
+    "type": "Stylesheet",
+    "status": 200,
+    "mime": "text/css",
+    "encodedBytes": 2005
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/plugins/elementor/assets/lib/animations/styles/fadeIn.min.css?ver=4.2.0",
+    "type": "Stylesheet",
+    "status": 200,
+    "mime": "text/css",
+    "encodedBytes": 665
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/uploads/sites/2/elementor/css/post-152.css?ver=1785234132",
+    "type": "Stylesheet",
+    "status": 200,
+    "mime": "text/css",
+    "encodedBytes": 2311
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/plugins/elementor/assets/js/frontend.min.js?ver=4.2.0",
+    "type": "Script",
+    "status": 200,
+    "mime": "text/javascript",
+    "encodedBytes": 11023
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-includes/js/imagesloaded.min.js?ver=5.0.0",
+    "type": "Script",
+    "status": 200,
+    "mime": "text/javascript",
+    "encodedBytes": 2409
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/plugins/woocommerce/assets/js/frontend/order-attribution.min.js?ver=10.9.4",
+    "type": "Script",
+    "status": 200,
+    "mime": "text/javascript",
+    "encodedBytes": 1749
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-includes/js/jquery/ui/core.min.js?ver=1.13.3",
+    "type": "Script",
+    "status": 200,
+    "mime": "text/javascript",
+    "encodedBytes": 7708
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/themes/pixel-craft/assets/js/frontend.min.js?ver=1.0.0",
+    "type": "Script",
+    "status": 200,
+    "mime": "text/javascript",
+    "encodedBytes": 6929
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/plugins/cmsmasters-elementor-addon/assets/lib/perfect-scrollbar/perfect-scrollbar.min.js?ver=1.4.0",
+    "type": "Script",
+    "status": 200,
+    "mime": "text/javascript",
+    "encodedBytes": 6021
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/plugins/cmsmasters-elementor-addon/assets/lib/basicScroll/basicScroll.min.js?ver=3.0.3",
+    "type": "Script",
+    "status": 200,
+    "mime": "text/javascript",
+    "encodedBytes": 3854
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/plugins/elementor/assets/lib/swiper/v8/swiper.min.js?ver=8.4.5",
+    "type": "Script",
+    "status": 200,
+    "mime": "text/javascript",
+    "encodedBytes": 40307
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/plugins/forminator/assets/js/library/jquery.validate.min.js?ver=1.56.0",
+    "type": "Script",
+    "status": 200,
+    "mime": "text/javascript",
+    "encodedBytes": 8615
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/plugins/elementor/assets/js/webpack.runtime.min.js?ver=4.2.0",
+    "type": "Script",
+    "status": 200,
+    "mime": "text/javascript",
+    "encodedBytes": 3142
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/plugins/cmsmasters-elementor-addon/assets/js/webpack.runtime.min.js?ver=1.25.1",
+    "type": "Script",
+    "status": 200,
+    "mime": "text/javascript",
+    "encodedBytes": 4090
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/plugins/woocommerce/assets/js/sourcebuster/sourcebuster.min.js?ver=10.9.4",
+    "type": "Script",
+    "status": 200,
+    "mime": "text/javascript",
+    "encodedBytes": 5408
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/themes/pixel-craft-child-demo/assets/js/script.min.js?ver=1.0.0",
+    "type": "Script",
+    "status": 200,
+    "mime": "text/javascript",
+    "encodedBytes": 1751
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/plugins/elementor/assets/js/frontend-modules.min.js?ver=4.2.0",
+    "type": "Script",
+    "status": 200,
+    "mime": "text/javascript",
+    "encodedBytes": 16577
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/plugins/cmsmasters-elementor-addon/assets/lib/vanilla-tilt/vanilla-tilt.min.js?ver=1.7.0",
+    "type": "Script",
+    "status": 200,
+    "mime": "text/javascript",
+    "encodedBytes": 3633
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/plugins/woocommerce/assets/js/js-cookie/js.cookie.min.js?ver=2.1.4-wc.10.9.4",
+    "type": "Script",
+    "status": 200,
+    "mime": "text/javascript",
+    "encodedBytes": 1433
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.min.js?ver=10.9.4",
+    "type": "Script",
+    "status": 200,
+    "mime": "text/javascript",
+    "encodedBytes": 2193
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-includes/js/jquery/ui/datepicker.min.js?ver=1.13.3",
+    "type": "Script",
+    "status": 200,
+    "mime": "text/javascript",
+    "encodedBytes": 11516
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/plugins/cmsmasters-elementor-addon/assets/lib/custom-cursor/custom-cursor.min.js?ver=1.25.1",
+    "type": "Script",
+    "status": 200,
+    "mime": "text/javascript",
+    "encodedBytes": 12654
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/plugins/forminator/assets/forminator-ui/js/forminator-form.min.js?ver=1.56.0",
+    "type": "Script",
+    "status": 200,
+    "mime": "text/javascript",
+    "encodedBytes": 6284
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/plugins/cmsmasters-elementor-addon/assets/lib/hc-sticky/hc-sticky.min.js?ver=2.2.6",
+    "type": "Script",
+    "status": 200,
+    "mime": "text/javascript",
+    "encodedBytes": 4890
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/plugins/cmsmasters-elementor-addon/assets/lib/headroom/headroom.min.js?ver=0.12.0",
+    "type": "Script",
+    "status": 200,
+    "mime": "text/javascript",
+    "encodedBytes": 2383
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/plugins/woocommerce/assets/js/frontend/add-to-cart.min.js?ver=10.9.4",
+    "type": "Script",
+    "status": 200,
+    "mime": "text/javascript",
+    "encodedBytes": 2041
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min.js?ver=2.7.0-wc.10.9.4",
+    "type": "Script",
+    "status": 200,
+    "mime": "text/javascript",
+    "encodedBytes": 4136
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/plugins/cmsmasters-elementor-addon/assets/lib/anime/anime.min.js?ver=3.2.1",
+    "type": "Script",
+    "status": 200,
+    "mime": "text/javascript",
+    "encodedBytes": 7669
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/plugins/cmsmasters-elementor-addon/assets/js/frontend.min.js?ver=1.25.1",
+    "type": "Script",
+    "status": 200,
+    "mime": "text/javascript",
+    "encodedBytes": 31511
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/plugins/forminator/build/front/front.multi.min.js?ver=1.56.0",
+    "type": "Script",
+    "status": 200,
+    "mime": "text/javascript",
+    "encodedBytes": 57183
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/cf-fonts/s/inter-tight/5.2.7/latin/600/normal.woff2",
+    "type": "Font",
+    "status": 200,
+    "mime": "font/woff2",
+    "encodedBytes": 23158
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/cf-fonts/s/inter-tight/5.2.7/latin/500/normal.woff2",
+    "type": "Font",
+    "status": 200,
+    "mime": "font/woff2",
+    "encodedBytes": 23120
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/uploads/sites/2/elementor/cmsmasters-local-icons/cmsmasters-demo-icons/fonts/cmsmasters-demo-icons.ttf?1ff6xp",
+    "type": "Font",
+    "status": 200,
+    "mime": "font/ttf",
+    "encodedBytes": 2588
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/cf-fonts/s/inter/5.2.8/latin/600/normal.woff2",
+    "type": "Font",
+    "status": 200,
+    "mime": "font/woff2",
+    "encodedBytes": 24958
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/cf-fonts/s/inter-tight/5.2.7/latin/700/normal.woff2",
+    "type": "Font",
+    "status": 200,
+    "mime": "font/woff2",
+    "encodedBytes": 23252
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/cf-fonts/s/inter/5.2.8/latin/400/normal.woff2",
+    "type": "Font",
+    "status": 200,
+    "mime": "font/woff2",
+    "encodedBytes": 24162
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/cf-fonts/s/inter/5.2.8/latin/500/normal.woff2",
+    "type": "Font",
+    "status": 200,
+    "mime": "font/woff2",
+    "encodedBytes": 24775
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/uploads/sites/2/2026/01/megamenu-4.webp",
+    "type": "Image",
+    "status": 200,
+    "mime": "image/webp",
+    "encodedBytes": 7896
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/uploads/sites/2/elementor/css/post-77.css?ver=1785234132",
+    "type": "Stylesheet",
+    "status": 200,
+    "mime": "text/css",
+    "encodedBytes": 2089
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/uploads/sites/2/elementor/css/post-74.css?ver=1785234132",
+    "type": "Stylesheet",
+    "status": 200,
+    "mime": "text/css",
+    "encodedBytes": 1492
+  },
+  {
+    "url": "https://fonts.gstatic.com/s/instrumentserif/v5/jizHRFtNs2ka5fXjeivQ4LroWlx-6zAjjH7M.woff2",
+    "type": "Font",
+    "status": 200,
+    "mime": "font/woff2",
+    "encodedBytes": 22157
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/uploads/sites/2/2026/01/79-background-footer.webp",
+    "type": "Image",
+    "status": 200,
+    "mime": "image/webp",
+    "encodedBytes": 21264
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/themes/pixel-craft-child-demo/assets/images/button-gradient.svg",
+    "type": "Image",
+    "status": 200,
+    "mime": "image/svg+xml",
+    "encodedBytes": 1098
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/uploads/sites/2/2026/01/79-home-video-back.webp",
+    "type": "Image",
+    "status": 200,
+    "mime": "image/webp",
+    "encodedBytes": 78156
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/cf-fonts/s/inter/5.2.8/latin/700/normal.woff2",
+    "type": "Font",
+    "status": 200,
+    "mime": "font/woff2",
+    "encodedBytes": 24867
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/uploads/sites/2/2025/12/79-home-1-150x100.webp",
+    "type": "Image",
+    "status": 200,
+    "mime": "image/webp",
+    "encodedBytes": 4390
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/plugins/cookie-law-info/lite/frontend/images/close.svg",
+    "type": "Image",
+    "status": 200,
+    "mime": "image/svg+xml",
+    "encodedBytes": 1262
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/cf-fonts/s/inter/5.2.8/latin/400/italic.woff2",
+    "type": "Font",
+    "status": 200,
+    "mime": "font/woff2",
+    "encodedBytes": 25539
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/cdn-cgi/challenge-platform/h/g/scripts/jsd/f70cb37711aa/main.js?",
+    "type": "Script",
+    "status": 200,
+    "mime": "application/javascript",
+    "encodedBytes": 10009
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/plugins/elementor/assets/js/shared-frontend-handlers.03caa53373b56d3bab67.bundle.min.js",
+    "type": "Script",
+    "status": 200,
+    "mime": "text/javascript",
+    "encodedBytes": 3248
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/cdn-cgi/rum?",
+    "type": "XHR",
+    "status": 204,
+    "mime": "text/plain",
+    "encodedBytes": 493
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/plugins/cmsmasters-elementor-addon/assets/js/highlight-title.1729faa7d3c5e43e9732.bundle.min.js",
+    "type": "Script",
+    "status": 200,
+    "mime": "text/javascript",
+    "encodedBytes": 3133
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/plugins/cmsmasters-elementor-addon/assets/js/nav-menu.049cc9c99b46eaa53e98.bundle.min.js",
+    "type": "Script",
+    "status": 200,
+    "mime": "text/javascript",
+    "encodedBytes": 4909
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/uploads/sites/2/2025/12/cropped-favicon-1-32x32.png",
+    "type": "Other",
+    "status": 200,
+    "mime": "image/png",
+    "encodedBytes": 1855
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/cdn-cgi/challenge-platform/h/g/jsd/oneshot/f70cb37711aa/0.12651457464461136:1785571229:5136RgYtYy5TcU8iNx9Ilh5ZgO3Xfyo72dZdzE4D6fg/a243af5adc83a9f9",
+    "type": "XHR",
+    "status": 200,
+    "mime": "text/plain",
+    "encodedBytes": 660
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-includes/js/wp-emoji-release.min.js?ver=7.0.2",
+    "type": "Script",
+    "status": 200,
+    "mime": "text/javascript",
+    "encodedBytes": 5986
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/plugins/cmsmasters-elementor-addon/assets/js/time-popup.70090ee0fc2a557dfb54.bundle.min.js",
+    "type": "Script",
+    "status": 200,
+    "mime": "text/javascript",
+    "encodedBytes": 1862
+  },
+  {
+    "url": "https://s.w.org/images/core/emoji/17.0.2/svg/1f3c6.svg",
+    "type": "Image",
+    "status": 200,
+    "mime": "image/svg+xml",
+    "encodedBytes": 1018
+  },
+  {
+    "url": "https://s.w.org/images/core/emoji/17.0.2/svg/2728.svg",
+    "type": "Image",
+    "status": 200,
+    "mime": "image/svg+xml",
+    "encodedBytes": 858
+  },
+  {
+    "url": "https://s.w.org/images/core/emoji/17.0.2/svg/1f4a5.svg",
+    "type": "Image",
+    "status": 200,
+    "mime": "image/svg+xml",
+    "encodedBytes": 840
+  },
+  {
+    "url": "https://s.w.org/images/core/emoji/17.0.2/svg/2615.svg",
+    "type": "Image",
+    "status": 200,
+    "mime": "image/svg+xml",
+    "encodedBytes": 981
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-admin/admin-ajax.php",
+    "type": "XHR",
+    "status": 200,
+    "mime": "application/json",
+    "encodedBytes": 773
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/uploads/sites/2/2026/01/79-home-video.mp4",
+    "type": "Media",
+    "status": 206,
+    "mime": "video/mp4",
+    "encodedBytes": 372136
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-admin/admin-ajax.php",
+    "type": "XHR",
+    "status": 200,
+    "mime": "application/json",
+    "encodedBytes": 747
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-admin/admin-ajax.php",
+    "type": "XHR",
+    "status": 200,
+    "mime": "application/json",
+    "encodedBytes": 750
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/uploads/sites/2/2026/01/79-home-video.mp4",
+    "type": "Media",
+    "status": 206,
+    "mime": "video/mp4",
+    "encodedBytes": 0
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/uploads/sites/2/2025/12/79-project-5.webp",
+    "type": "Image",
+    "status": 200,
+    "mime": "image/webp",
+    "encodedBytes": 43444
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/uploads/sites/2/2025/12/79-project-6.webp",
+    "type": "Image",
+    "status": 200,
+    "mime": "image/webp",
+    "encodedBytes": 317534
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/uploads/sites/2/2025/12/79-project-3.webp",
+    "type": "Image",
+    "status": 200,
+    "mime": "image/webp",
+    "encodedBytes": 98985
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/plugins/cmsmasters-elementor-addon/assets/js/image-accordion.a0181bccad83836be9e0.bundle.min.js",
+    "type": "Script",
+    "status": 200,
+    "mime": "text/javascript",
+    "encodedBytes": 2577
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/uploads/sites/2/2025/12/79-project-1.webp",
+    "type": "Image",
+    "status": 200,
+    "mime": "image/webp",
+    "encodedBytes": 48347
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/uploads/sites/2/2025/12/79-project-4.webp",
+    "type": "Image",
+    "status": 200,
+    "mime": "image/webp",
+    "encodedBytes": 44361
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/uploads/sites/2/2025/12/79-project-2.webp",
+    "type": "Image",
+    "status": 200,
+    "mime": "image/webp",
+    "encodedBytes": 136786
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/uploads/sites/2/2026/01/79-home-2-150x100.webp",
+    "type": "Image",
+    "status": 200,
+    "mime": "image/webp",
+    "encodedBytes": 3026
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/uploads/sites/2/2026/01/79-home-2-2-150x100.webp",
+    "type": "Image",
+    "status": 200,
+    "mime": "image/webp",
+    "encodedBytes": 1472
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/uploads/sites/2/2026/01/79-home-2-3-150x100.webp",
+    "type": "Image",
+    "status": 200,
+    "mime": "image/webp",
+    "encodedBytes": 4008
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/uploads/sites/2/2026/01/79-home-2-4-150x100.webp",
+    "type": "Image",
+    "status": 200,
+    "mime": "image/webp",
+    "encodedBytes": 3087
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/uploads/sites/2/2026/01/79-home-2-5-150x100.webp",
+    "type": "Image",
+    "status": 200,
+    "mime": "image/webp",
+    "encodedBytes": 3269
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/uploads/sites/2/2026/01/79-home-2-6-150x100.webp",
+    "type": "Image",
+    "status": 200,
+    "mime": "image/webp",
+    "encodedBytes": 3340
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/uploads/sites/2/2026/01/79-home-2-7-150x100.webp",
+    "type": "Image",
+    "status": 200,
+    "mime": "image/webp",
+    "encodedBytes": 3986
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/uploads/sites/2/2026/01/79-home-2-8-150x100.webp",
+    "type": "Image",
+    "status": 200,
+    "mime": "image/webp",
+    "encodedBytes": 3284
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/uploads/sites/2/2026/01/79-home-2-9-150x100.webp",
+    "type": "Image",
+    "status": 200,
+    "mime": "image/webp",
+    "encodedBytes": 4203
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/uploads/sites/2/2025/12/79-home-background-2-e1766985097887.webp",
+    "type": "Image",
+    "status": 200,
+    "mime": "image/webp",
+    "encodedBytes": 33029
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-admin/admin-ajax.php",
+    "type": "XHR",
+    "status": 200,
+    "mime": "application/json",
+    "encodedBytes": 2492
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/plugins/cmsmasters-elementor-addon/assets/js/6ab177f232a8ed87816f.bundle.min.js",
+    "type": "Script",
+    "status": 200,
+    "mime": "text/javascript",
+    "encodedBytes": 4678
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/uploads/sites/2/2025/12/79-profile-6-768x1041.webp",
+    "type": "Image",
+    "status": 200,
+    "mime": "image/webp",
+    "encodedBytes": 35541
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/uploads/sites/2/2025/12/79-profile-1-768x1041.webp",
+    "type": "Image",
+    "status": 200,
+    "mime": "image/webp",
+    "encodedBytes": 94187
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/uploads/sites/2/2025/12/79-profile-3-768x1041.webp",
+    "type": "Image",
+    "status": 200,
+    "mime": "image/webp",
+    "encodedBytes": 64378
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/plugins/cmsmasters-elementor-addon/assets/js/blog-slider.3d4265fa42e18821491d.bundle.min.js",
+    "type": "Script",
+    "status": 200,
+    "mime": "text/javascript",
+    "encodedBytes": 2906
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/uploads/sites/2/2025/12/79-profile-2-768x1041.webp",
+    "type": "Image",
+    "status": 200,
+    "mime": "image/webp",
+    "encodedBytes": 56422
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/uploads/sites/2/2025/12/79-profile-5-768x1041.webp",
+    "type": "Image",
+    "status": 200,
+    "mime": "image/webp",
+    "encodedBytes": 62419
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/uploads/sites/2/2025/12/79-profile-4-768x1041.webp",
+    "type": "Image",
+    "status": 200,
+    "mime": "image/webp",
+    "encodedBytes": 53639
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/plugins/cmsmasters-elementor-addon/assets/js/marquee.7addec98b225d2172607.bundle.min.js",
+    "type": "Script",
+    "status": 200,
+    "mime": "text/javascript",
+    "encodedBytes": 3160
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/uploads/sites/2/2025/12/79-quote-1.webp",
+    "type": "Image",
+    "status": 200,
+    "mime": "image/webp",
+    "encodedBytes": 1706
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/uploads/sites/2/2025/12/79-quote-3.webp",
+    "type": "Image",
+    "status": 200,
+    "mime": "image/webp",
+    "encodedBytes": 1744
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/uploads/sites/2/2025/12/79-quote-2.webp",
+    "type": "Image",
+    "status": 200,
+    "mime": "image/webp",
+    "encodedBytes": 1822
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/plugins/cmsmasters-elementor-addon/assets/js/cms-forminator.9108816abf33ac8e0657.bundle.min.js",
+    "type": "Script",
+    "status": 200,
+    "mime": "text/javascript",
+    "encodedBytes": 1892
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/uploads/sites/2/2026/01/79-popup.webp",
+    "type": "Image",
+    "status": 200,
+    "mime": "image/webp",
+    "encodedBytes": 63450
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/uploads/sites/2/2025/12/79-home-background-1.webp",
+    "type": "Image",
+    "status": 200,
+    "mime": "image/webp",
+    "encodedBytes": 131642
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-admin/admin-ajax.php",
+    "type": "XHR",
+    "status": 200,
+    "mime": "application/json",
+    "encodedBytes": 2477
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/plugins/cmsmasters-elementor-addon/assets/js/8adcaa1b4d01d92c67a9.bundle.min.js",
+    "type": "Script",
+    "status": 200,
+    "mime": "text/javascript",
+    "encodedBytes": 4839
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/plugins/cmsmasters-elementor-addon/assets/js/5a11253f23c0cfb0548d.bundle.min.js",
+    "type": "Script",
+    "status": 200,
+    "mime": "text/javascript",
+    "encodedBytes": 4750
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/plugins/cmsmasters-elementor-addon/assets/js/blog-grid.cb8e1e98a1bda4ee2dd8.bundle.min.js",
+    "type": "Script",
+    "status": 200,
+    "mime": "text/javascript",
+    "encodedBytes": 1924
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/plugins/cmsmasters-elementor-addon/assets/js/post-excerpt.50aa4d024ca3412745fe.bundle.min.js",
+    "type": "Script",
+    "status": 200,
+    "mime": "text/javascript",
+    "encodedBytes": 1306
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/uploads/sites/2/2025/12/79-blog-2-1024x707.webp",
+    "type": "Image",
+    "status": 200,
+    "mime": "image/webp",
+    "encodedBytes": 66960
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/uploads/sites/2/2025/12/79-blog-1-1024x707.webp",
+    "type": "Image",
+    "status": 200,
+    "mime": "image/webp",
+    "encodedBytes": 17426
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/uploads/sites/2/2025/12/79-home-4.webp",
+    "type": "Image",
+    "status": 200,
+    "mime": "image/webp",
+    "encodedBytes": 15161
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/uploads/sites/2/2025/12/79-home-5.webp",
+    "type": "Image",
+    "status": 200,
+    "mime": "image/webp",
+    "encodedBytes": 6108
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/uploads/sites/2/2025/12/79-home-3.webp",
+    "type": "Image",
+    "status": 200,
+    "mime": "image/webp",
+    "encodedBytes": 15230
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/plugins/cmsmasters-elementor-addon/assets/js/mailchimp.04730666110950ec183f.bundle.min.js",
+    "type": "Script",
+    "status": 200,
+    "mime": "text/javascript",
+    "encodedBytes": 3528
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/uploads/sites/2/2026/01/79-home-background-2-mobile.webp",
+    "type": "Image",
+    "status": 200,
+    "mime": "image/webp",
+    "encodedBytes": 9183
+  },
+  {
+    "url": "https://pixel-craft.cmsmasters.studio/main/wp-content/uploads/sites/2/2026/01/79-background-footer-mobile-scaled.webp",
+    "type": "Image",
+    "status": 200,
+    "mime": "image/webp",
+    "encodedBytes": 10051
+  }
+]

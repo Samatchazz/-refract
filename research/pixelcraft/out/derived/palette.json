@@ -1,0 +1,159 @@
+{
+ "sources": [
+  "probe/home_1440.json#color",
+  "probe/home_1440.json#rootVars",
+  "analysis_css.json#rootVars"
+ ],
+ "bg": [
+  {
+   "value": "rgba(255,255,255,0)",
+   "count": 13
+  },
+  {
+   "value": "rgba(255,255,255,0.54)",
+   "count": 10
+  },
+  {
+   "value": "rgb(245,245,245)",
+   "count": 6
+  },
+  {
+   "value": "rgb(151,252,85)",
+   "count": 5
+  },
+  {
+   "value": "rgb(17,16,16)",
+   "count": 4
+  },
+  {
+   "value": "rgb(0,0,0)",
+   "count": 3
+  },
+  {
+   "value": "rgba(22,22,22,0)",
+   "count": 1
+  }
+ ],
+ "text": [
+  {
+   "value": "rgb(255,255,255)",
+   "count": 15
+  },
+  {
+   "value": "rgb(17,16,16)",
+   "count": 12
+  },
+  {
+   "value": "rgb(84,84,84)",
+   "count": 4
+  },
+  {
+   "value": "rgb(151,252,85)",
+   "count": 2
+  },
+  {
+   "value": "rgb(221,220,217)",
+   "count": 1
+  }
+ ],
+ "border": [
+  {
+   "value": "rgb(255,255,255)",
+   "count": 6
+  },
+  {
+   "value": "rgba(255,255,255,0.26)",
+   "count": 1
+  }
+ ],
+ "gradients": [
+  {
+   "value": "linear-gradient(rgba(255, 255, 255, 0.54), rgba(255, 255, 255, 0.54))",
+   "count": 5
+  }
+ ],
+ "rootVarsColor": {
+  "--cmsmasters-colors-primary": "var(--e-global-color-primary,#000)",
+  "--cmsmasters-colors-secondary": "var(--e-global-color-secondary,#111010)",
+  "--cmsmasters-colors-accent": "var(--e-global-color-accent,#97fc55)",
+  "--cmsmasters-colors-tertiary": "var(--e-global-color-tertiary,#8b8a89)",
+  "--cmsmasters-link-colors-normal": "var(--cmsmasters-colors-primary)",
+  "--cmsmasters-link-colors-hover": "var(--cmsmasters-colors-tertiary)",
+  "--cmsmasters-colors-text": "var(--e-global-color-text,#545454)",
+  "--cmsmasters-colors-link": "var(--cmsmasters-link-colors-normal)",
+  "--cmsmasters-colors-hover": "var(--cmsmasters-link-colors-hover)",
+  "--cmsmasters-colors-heading": "var(--cmsmasters-colors-secondary)",
+  "--cmsmasters-colors-bg": "var(--e-global-color-background,#fff)",
+  "--cmsmasters-colors-alternate": "var(--e-global-color-alternate,#f5f5f5)",
+  "--cmsmasters-colors-bd": "var(--e-global-color-border,#dddcd9)",
+  "--cmsmasters-button-font-family": "var(--e-global-typography-button-font-family,\"Inter\"),var(--cmsmasters-default-font)",
+  "--cmsmasters-button-font-size": "var(--e-global-typography-button-font-size,15px)",
+  "--cmsmasters-button-line-height": "var(--e-global-typography-button-line-height,1.85em)",
+  "--cmsmasters-button-font-weight": "var(--e-global-typography-button-font-weight,600)",
+  "--cmsmasters-button-text-transform": "var(--e-global-typography-button-text-transform,uppercase)",
+  "--cmsmasters-button-font-style": "var(--e-global-typography-button-font-style,normal)",
+  "--cmsmasters-button-text-decoration": "var(--e-global-typography-button-text-decoration,none)",
+  "--cmsmasters-button-letter-spacing": "var(--e-global-typography-button-letter-spacing,0px)",
+  "--cmsmasters-button-word-spacing": "var(--e-global-typography-button-word-spacing,0px)",
+  "--cmsmasters-link-font-weight": "inherit",
+  "--cmsmasters-link-font-style": "inherit",
+  "--cmsmasters-link-letter-spacing": "inherit",
+  "--cmsmasters-link-word-spacing": "inherit",
+  "--cmsmasters-link-text-decoration-line": "inherit",
+  "--cmsmasters-link-text-decoration-colors-normal": "currentcolor",
+  "--cmsmasters-link-text-decoration-colors-hover": "currentcolor",
+  "--cmsmasters-link-text-decoration-style": "solid",
+  "--cmsmasters-link-text-decoration-thickness": "auto",
+  "--cmsmasters-link-text-underline-position": "auto",
+  "--cmsmasters-link-text-underline-offset": "auto",
+  "--cmsmasters-button-normal-colors-bg": "transparent",
+  "--cmsmasters-button-normal-colors-bg-image": "none",
+  "--cmsmasters-button-normal-colors-color": "var(--cmsmasters-colors-primary)",
+  "--cmsmasters-button-normal-colors-bd": "var(--cmsmasters-colors-primary)",
+  "--cmsmasters-button-normal-bd-radius": "30px",
+  "--cmsmasters-button-text-shadow": "none",
+  "--cmsmasters-button-normal-box-shadow": "none"
+ },
+ "cssRootVars": {
+  "--cmsmasters-colors-primary": "var(--e-global-color-primary,#000)",
+  "--cmsmasters-colors-secondary": "var(--e-global-color-secondary,#111010)",
+  "--cmsmasters-colors-accent": "var(--e-global-color-accent,#97fc55)",
+  "--cmsmasters-colors-tertiary": "var(--e-global-color-tertiary,#8b8a89)",
+  "--cmsmasters-link-colors-normal": "var(--cmsmasters-colors-primary)",
+  "--cmsmasters-link-colors-hover": "var(--cmsmasters-colors-tertiary)",
+  "--cmsmasters-colors-text": "var(--e-global-color-text,#545454)",
+  "--cmsmasters-colors-link": "var(--cmsmasters-link-colors-normal)",
+  "--cmsmasters-colors-hover": "var(--cmsmasters-link-colors-hover)",
+  "--cmsmasters-colors-heading": "var(--cmsmasters-colors-secondary)",
+  "--cmsmasters-colors-bg": "var(--e-global-color-background,#fff)",
+  "--cmsmasters-colors-alternate": "var(--e-global-color-alternate,#f5f5f5)",
+  "--cmsmasters-colors-bd": "var(--e-global-color-border,#dddcd9)",
+  "--cmsmasters-logo-title-colors-text": "var(--cmsmasters-colors-heading)",
+  "--cmsmasters-logo-title-colors-hover": "var(--cmsmasters-colors-link)",
+  "--cmsmasters-logo-subtitle-colors-text": "var(--cmsmasters-colors-heading)",
+  "--cmsmasters-logo-subtitle-colors-hover": "var(--cmsmasters-colors-link)",
+  "--cmsmasters-body-bg-color": "var(--cmsmasters-colors-bg)",
+  "--cmsmasters-link-text-decoration-colors-normal": "currentcolor",
+  "--cmsmasters-link-text-decoration-colors-hover": "currentcolor",
+  "--cmsmasters-blockquote-colors-text": "var(--cmsmasters-colors-heading)",
+  "--cmsmasters-blockquote-colors-link": "var(--cmsmasters-colors-link)",
+  "--cmsmasters-blockquote-colors-hover": "var(--cmsmasters-colors-hover)",
+  "--cmsmasters-blockquote-colors-bg": "var(--cmsmasters-colors-alternate)",
+  "--cmsmasters-blockquote-colors-bd": "var(--cmsmasters-colors-bd)",
+  "--cmsmasters-blockquote-cite-color": "var(--cmsmasters-colors-secondary)",
+  "--cmsmasters-blockquote-icon-color": "inherit",
+  "--cmsmasters-button-normal-colors-bg": "transparent",
+  "--cmsmasters-button-normal-colors-bg-image": "none",
+  "--cmsmasters-button-normal-colors-color": "var(--cmsmasters-colors-primary)",
+  "--cmsmasters-button-normal-colors-bd": "var(--cmsmasters-colors-primary)",
+  "--cmsmasters-button-hover-colors-bg": "var(--cmsmasters-colors-accent)",
+  "--cmsmasters-button-hover-colors-bg-image": "none",
+  "--cmsmasters-button-hover-colors-color": "var(--cmsmasters-colors-primary)",
+  "--cmsmasters-button-hover-colors-bd": "var(--cmsmasters-colors-accent)",
+  "--cmsmasters-caption-outside-colors-text": "var(--cmsmasters-colors-hover)",
+  "--cmsmasters-caption-outside-colors-link": "var(--cmsmasters-colors-link)",
+  "--cmsmasters-caption-outside-colors-hover": "var(--cmsmasters-colors-hover)",
+  "--cmsmasters-caption-outside-colors-bg": "transparent",
+  "--cmsmasters-caption-outside-colors-bd": "transparent"
+ }
+}

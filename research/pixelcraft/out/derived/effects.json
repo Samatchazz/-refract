@@ -1,0 +1,693 @@
+{
+ "version": 1,
+ "frozenAt": "2026-08-01T09:39:04.927Z",
+ "source": "P3 derivation — see RUN-LOG.md 2026-08-01",
+ "numbering": "E-decades per BRIEF §5.1; IDs permanent from this point",
+ "effects": [
+  {
+   "eid": "E01",
+   "name": "Page-load intro fade",
+   "group": "E01s global",
+   "mechanism": "CSS keyframe fade on load: header logo/menu/icon + hero widgets run cmsmasters-fade-in / cmsmasters-fade-in-up / fadeIn once, staggered by per-widget delay",
+   "usedIn": [
+    "S00-header",
+    "S01",
+    "S02"
+   ],
+   "params": {
+    "durationS": {
+     "value": 1.25,
+     "cite": "probe/home_1440.json#effects.animatedCSS.sample[0].duration"
+    },
+    "timing": {
+     "value": "ease",
+     "cite": "probe/home_1440.json#effects.animatedCSS.sample[0].timing"
+    },
+    "delaysMs": {
+     "value": [
+      500,
+      600,
+      700
+     ],
+     "cite": "derived/widget_settings.json#widgets.cmsmasters-swap-button (_animation_delay) + [\"cmsmasters-image-scroll.default\"][0]._animation_delay"
+    }
+   },
+   "note": "No preloader overlay exists on this page — shots/home_1440_preload_*.jpg show the page itself fading in. The theme CSS ships cmsmasters-page-preloader-* keyframes but they are unused here (analysis_css.json#keyframes).",
+   "buildIntent": "yes"
+  },
+  {
+   "eid": "E10",
+   "name": "Sticky content block",
+   "group": "E10s scroll",
+   "mechanism": "Native position:sticky on a text column inside a taller two-column section; no transform involved (probe found no animated channel, which confirms native sticky)",
+   "usedIn": [
+    "S11",
+    "S15",
+    "S21"
+   ],
+   "params": {
+    "offsetTopPx": {
+     "value": 40,
+     "cite": "derived/widget_settings.json#containers.block-sticky[0].settings.cms_sticky_offset_top"
+    },
+    "offsetBottomPxS21": {
+     "value": 130,
+     "cite": "derived/widget_settings.json#containers.block-sticky[2].settings.cms_sticky_offset_bottom"
+    },
+    "effectiveMedianSlope": {
+     "value": [
+      -0.61,
+      -0.638,
+      -0.727
+     ],
+     "cite": "derived/effect_section_map.json#rows (kind=parallaxSlow, i=66,129,136) — coarse sweep, ±1 step"
+    },
+    "transformProbe": {
+     "value": "no animated channel",
+     "cite": "effects/sticky_S11.json#fit"
+    }
+   },
+   "buildIntent": "yes"
+  },
+  {
+   "eid": "E11",
+   "name": "Scroll vertical parallax (element drift)",
+   "group": "E10s scroll",
+   "mechanism": "basicScroll-driven translateY mapped linearly to the element's traversal of the viewport; travel = cms_scroll_vertical_speed × 100px",
+   "usedIn": [
+    "S05",
+    "S08",
+    "S17"
+   ],
+   "params": {
+    "speedSettings": {
+     "value": {
+      "S05": [
+       1,
+       2
+      ],
+      "S08": [
+       1
+      ],
+      "S17": [
+       1,
+       2
+      ]
+     },
+     "cite": "derived/widget_settings.json#containers.effect-type-scroll (cms_scroll_vertical_speed per element)"
+    },
+    "measuredTravelPx_S05speed2": {
+     "value": -200,
+     "cite": "effects/parallax_S05_speed2.json#fit.totalTravel"
+    },
+    "perScrollPixel_S05speed2": {
+     "value": -0.0952,
+     "cite": "effects/parallax_S05_speed2.json#fit.perScrollPixel"
+    },
+    "fitRms_S05": {
+     "value": 0.05774,
+     "cite": "effects/parallax_S05_speed2.json#fit.cubicBezierRms — poor single-bezier fit because the probed range includes dwell outside the active viewport window; declared timing is linear (widget_settings cms_scroll_vertical_timing)"
+    },
+    "S17": {
+     "value": "not measured — both S17 elements showed no motion in two probe attempts each (effects/parallax_S17_speed1_retry.json, effects/parallax_S17_speed2b.json); settings still declare vertical speed 1–2",
+     "cite": "effects/parallax_S17_speed1_retry.json#fit"
+    }
+   },
+   "buildIntent": "yes"
+  },
+  {
+   "eid": "E12",
+   "name": "Scroll-linked appear of fixed action cluster",
+   "group": "E10s scroll",
+   "mechanism": "Fixed-position widget cluster (right edge, z-index 9998) translates up 40px and fades as the page scroll crosses 10–20% of document height; vertical speed 0.4, opacity channel on",
+   "usedIn": [
+    "(fixed/global)"
+   ],
+   "params": {
+    "travelPx": {
+     "value": -40,
+     "cite": "effects/fixedwidget_pagescroll.json#fit.totalTravel"
+    },
+    "cubicBezier": {
+     "value": "cubic-bezier(0.39, -0.06, 0.54, 1.17)",
+     "cite": "effects/fixedwidget_pagescroll.json#fit.cubicBezier"
+    },
+    "rms": {
+     "value": 0.01844,
+     "cite": "effects/fixedwidget_pagescroll.json#fit.cubicBezierRms"
+    },
+    "pageRangePct": {
+     "value": [
+      10,
+      20
+     ],
+     "cite": "derived/widget_settings.json#containers.effect-type-scroll[0].settings.cms_scroll_viewport.sizes"
+    },
+    "fixedPosition": {
+     "value": "fixed, z 9998",
+     "cite": "probe/home_1440.json#effects.stickyFixed.sample[0]"
+    }
+   },
+   "buildIntent": "yes"
+  },
+  {
+   "eid": "E20",
+   "name": "Scroll-entrance reveal (block)",
+   "group": "E20s reveal",
+   "mechanism": "IntersectionObserver-triggered one-shot CSS keyframe (cmsmasters-fade-in-up etc.) per block; element fades in and translates up",
+   "usedIn": [
+    "S01",
+    "S02",
+    "S03",
+    "S04",
+    "S05",
+    "S06",
+    "S10",
+    "S11",
+    "S12",
+    "S14",
+    "S25"
+   ],
+   "params": {
+    "durationS": {
+     "value": 1.25,
+     "cite": "probe/home_1440.json#effects.animatedCSS.sample[4].duration"
+    },
+    "timing": {
+     "value": "ease",
+     "cite": "probe/home_1440.json#effects.animatedCSS.sample[4].timing"
+    },
+    "distancePx": {
+     "value": 60,
+     "cite": "derived/widget_settings.json#widgets.cmsmasters-fancy-text[0].settings.animated_distance.size — declared on the one widget that serializes it; generic blocks: not measured (one-shot animation, fired before dense sampling can attach)"
+    }
+   },
+   "implementedNote": "partial-distance: duration+timing measured; 60px travel is the theme's serialized default on fancy-text, applied to all reveals as an honest approximation",
+   "buildIntent": "yes"
+  },
+  {
+   "eid": "E21",
+   "name": "Sequential stagger reveal",
+   "group": "E20s reveal",
+   "mechanism": "Same keyframes as E20 with data-animation-type=sequental and a fixed per-sibling delay",
+   "usedIn": [
+    "S06",
+    "S12"
+   ],
+   "params": {
+    "staggerMs": {
+     "value": 200,
+     "cite": "probe/home_1440.json#effects.scrollAttrs (data-animation-stagger=200)"
+    },
+    "perWidgetDelaysMs": {
+     "value": [
+      150,
+      300
+     ],
+     "cite": "derived/widget_settings.json#widgets.cmsmasters-featured-box (_animation_delay)"
+    }
+   },
+   "buildIntent": "yes"
+  },
+  {
+   "eid": "E22",
+   "name": "Image accordion (hover expand)",
+   "group": "E20s reveal",
+   "mechanism": "Row of image panels; hovering a panel expands it (flex-grow transition) while overlay opacity crossfades 0↔1; titles fade at the right edge via a linear-gradient mask",
+   "usedIn": [
+    "S12"
+   ],
+   "params": {
+    "action": {
+     "value": "hover",
+     "cite": "derived/widget_settings.json#widgets.cmsmasters-image-accordion[0].settings.accordion_action"
+    },
+    "defaultActiveItem": {
+     "value": 3,
+     "cite": "derived/widget_settings.json#widgets.cmsmasters-image-accordion[0].settings.active_item"
+    },
+    "overlayOpacitySwing": {
+     "value": [
+      [
+       1,
+       0.06,
+       0
+      ],
+      [
+       0,
+       0.94,
+       1
+      ]
+     ],
+     "cite": "derived/effect_section_map.json#rows (kind=opacityReveal, i=95,96)"
+    },
+    "titleMask": {
+     "value": "linear-gradient(90deg, #000 0, #000 calc(100% - 30px), transparent)",
+     "cite": "probe/home_1440.json#effects.maskImage.sample[0].value"
+    },
+    "growTransition": {
+     "value": "not measured — flex-grow transition duration is not exposed by the hover probe; theme-wide transition tally is 0.3–0.4s ease",
+     "cite": "probe/home_1440.json#effects.transitions[0]"
+    }
+   },
+   "buildIntent": "yes"
+  },
+  {
+   "eid": "E30",
+   "name": "Highlight-title reveal",
+   "group": "E30s text",
+   "mechanism": "Headline widget whose highlight span animates in on reveal (gradient shift / underline draw keyframes); rides the same reveal trigger as E20",
+   "usedIn": [
+    "S02",
+    "S03",
+    "S04",
+    "S05",
+    "S06",
+    "S10",
+    "S11",
+    "S12",
+    "S14",
+    "S16",
+    "S20",
+    "S25"
+   ],
+   "params": {
+    "keyframes": {
+     "value": [
+      "cmsmasters-highlight-title-animate-gradient",
+      "highlighted-line"
+     ],
+     "cite": "analysis_css.json#keyframes"
+    },
+    "duration": {
+     "value": "not measured — one-shot on reveal; not re-triggerable for dense sampling without a reload per instance",
+     "cite": null
+    }
+   },
+   "buildIntent": "yes"
+  },
+  {
+   "eid": "E31",
+   "name": "Typed text rotator",
+   "group": "E30s text",
+   "mechanism": "typed.js-style character type/delete loop inside the hero H1 (blinking caret keyframe typedjsBlink)",
+   "usedIn": [
+    "S01"
+   ],
+   "params": {
+    "delayOnChangeMs": {
+     "value": 2500,
+     "cite": "derived/widget_settings.json#widgets.cmsmasters-fancy-text[0].settings.fancy_text_delay_on_change"
+    },
+    "loop": {
+     "value": true,
+     "cite": "derived/widget_settings.json#widgets.cmsmasters-fancy-text[0].settings.fancy_text_loop"
+    },
+    "caretKeyframe": {
+     "value": "typedjsBlink",
+     "cite": "analysis_css.json#keyframes"
+    },
+    "typingSpeedMs": {
+     "value": "not measured — per-character cadence not serialized; visible cadence is the typed.js default band",
+     "cite": null
+    }
+   },
+   "thaiNote": "Per-character typing MUST use Intl.Segmenter(th, grapheme) — BRIEF §6.5; fall back to line-level if Thai detected without Segmenter support.",
+   "buildIntent": "yes"
+  },
+  {
+   "eid": "E32",
+   "name": "Counter count-up",
+   "group": "E30s text",
+   "mechanism": "jquery-numerator tween of textContent from data-from-value to data-to-value on first view",
+   "usedIn": [
+    "S05"
+   ],
+   "params": {
+    "durationMs": {
+     "value": 2000,
+     "cite": "derived/widget_settings.json#containers.counter-numbers[0].duration"
+    },
+    "exampleTarget": {
+     "value": 92,
+     "cite": "derived/widget_settings.json#containers.counter-numbers[0].toValue"
+    },
+    "delimiter": {
+     "value": ",",
+     "cite": "derived/widget_settings.json#containers.counter-numbers[0].delimiter"
+    }
+   },
+   "buildIntent": "yes"
+  },
+  {
+   "eid": "E33",
+   "name": "Image marquee",
+   "group": "E30s text",
+   "mechanism": "JS-driven translate3d loop on a duplicated track (2 copies), linear, leftward, pausing/behavior on hover disabled; px/s scales ≈ ×30 with the widget speed setting",
+   "usedIn": [
+    "S01",
+    "S08"
+   ],
+   "params": {
+    "pxPerSecond_S01": {
+     "value": -45.1,
+     "cite": "effects/marquee_S01_inner.json#measured.pxPerSecond"
+    },
+    "secondsPerCopy_S01": {
+     "value": 42.08,
+     "cite": "effects/marquee_S01_inner.json#measured.secondsForOneCopy"
+    },
+    "pxPerSecond_S08": {
+     "value": -75.2,
+     "cite": "effects/marquee_S08_visible.json#measured.pxPerSecond"
+    },
+    "secondsPerCopy_S08": {
+     "value": 22.98,
+     "cite": "effects/marquee_S08_visible.json#measured.secondsForOneCopy"
+    },
+    "speedSettings": {
+     "value": {
+      "S01": 1.5,
+      "S08": 2.5
+     },
+     "cite": "derived/widget_settings.json#widgets.cmsmasters-marquee (speed.size per instance)"
+    },
+    "gapPx": {
+     "value": {
+      "S01": 120,
+      "S08": 100
+     },
+     "cite": "derived/widget_settings.json#widgets.cmsmasters-marquee (marquee_item_gap.size)"
+    },
+    "copies": {
+     "value": 2,
+     "cite": "effects/marquee_S01_inner.json#measured.duplicatedCopies"
+    }
+   },
+   "buildIntent": "yes"
+  },
+  {
+   "eid": "E40",
+   "name": "Swap-button hover",
+   "group": "E40s hover",
+   "mechanism": "Button label/icon swap with a color/background crossfade on hover; no geometric movement of the button itself (lift 0, scale 1, magnetic false)",
+   "usedIn": [
+    "S00-header",
+    "S01",
+    "S02",
+    "S04",
+    "S25"
+   ],
+   "params": {
+    "liftPx": {
+     "value": 0,
+     "cite": "effects/hover_swapbutton.json#measured.liftPx"
+    },
+    "scale": {
+     "value": 1,
+     "cite": "effects/hover_swapbutton.json#measured.scaleOnHover"
+    },
+    "transition": {
+     "value": "background/border/box-shadow 0.3s, transform 0.4s, ease",
+     "cite": "probe/home_1440.json#effects.transitions[0].value"
+    }
+   },
+   "buildIntent": "yes"
+  },
+  {
+   "eid": "E41",
+   "name": "Image pan on hover",
+   "group": "E40s hover",
+   "mechanism": "Framed image pans vertically inside its clip box while hovered (scroll_type hover, direction vertical); frame itself does not move",
+   "usedIn": [
+    "S02"
+   ],
+   "params": {
+    "direction": {
+     "value": "vertical",
+     "cite": "derived/widget_settings.json#widgets.cmsmasters-image-scroll[0].settings.scroll_direction"
+    },
+    "trigger": {
+     "value": "hover",
+     "cite": "derived/widget_settings.json#widgets.cmsmasters-image-scroll[0].settings.scroll_type"
+    },
+    "panSpeed": {
+     "value": "not measured — pan animates the inner img, outside the hover probe's reach on the frame element (effects/hover_imagescroll.json shows the frame static)",
+     "cite": "effects/hover_imagescroll.json#measured"
+    }
+   },
+   "buildIntent": "yes"
+  },
+  {
+   "eid": "E42",
+   "name": "Featured-box hover state",
+   "group": "E40s hover",
+   "mechanism": "Card-style feature tiles swap text/background color on hover (0.3s transitions); no movement (probe: lift 0, no tilt, no magnet)",
+   "usedIn": [
+    "S06",
+    "S10",
+    "S14",
+    "S25"
+   ],
+   "params": {
+    "liftPx": {
+     "value": 0,
+     "cite": "effects/hover_featuredbox.json#measured.liftPx"
+    },
+    "changedOnHoverCount": {
+     "value": 6,
+     "cite": "hover_home_1440.json (6 of 43 probed elements changed state)"
+    }
+   },
+   "buildIntent": "yes"
+  },
+  {
+   "eid": "E43",
+   "name": "Global micro-transitions",
+   "group": "E40s hover",
+   "mechanism": "Theme-wide 0.3s/0.4s ease transitions on background, border, box-shadow, transform for links and buttons",
+   "usedIn": [
+    "(global)"
+   ],
+   "params": {
+    "dominant": {
+     "value": "background/border/box-shadow 0.3s + transform 0.4s ease (93 elements), + border-radius variant (27)",
+     "cite": "probe/home_1440.json#effects.transitions[0..1]"
+    }
+   },
+   "buildIntent": "yes"
+  },
+  {
+   "eid": "E50",
+   "name": "Continuous media carousel (Swiper)",
+   "group": "E50s media",
+   "mechanism": "Swiper carousel in continuous-conveyor mode: very long transition (slider_speed 10000ms) with a short autoplay delay (500ms) approximates constant linear motion; bullets navigation",
+   "usedIn": [
+    "S07",
+    "S19"
+   ],
+   "params": {
+    "transitionMs": {
+     "value": 10000,
+     "cite": "derived/widget_settings.json#widgets.cmsmasters-media-carousel[0].settings.slider_speed"
+    },
+    "autoplayDelayMs": {
+     "value": 500,
+     "cite": "derived/widget_settings.json#widgets.cmsmasters-media-carousel[0].settings.slider_autoplay_speed"
+    },
+    "gapPx": {
+     "value": 80,
+     "cite": "derived/widget_settings.json#widgets.cmsmasters-media-carousel[0].settings.slider_space_between.size"
+    },
+    "slides": {
+     "value": 5,
+     "cite": "derived/sections.json (S07 repeatedChildren swiper-slide×5)"
+    }
+   },
+   "buildIntent": "yes — as a hand-written conveyor track, not Swiper (rule 4)"
+  },
+  {
+   "eid": "E51",
+   "name": "Before/after comparison slider",
+   "group": "E50s media",
+   "mechanism": "Two stacked images with a draggable/clickable divider; horizontal, handle rendered, divider starts at 55%",
+   "usedIn": [
+    "S09"
+   ],
+   "params": {
+    "defaultOffsetPct": {
+     "value": 55,
+     "cite": "derived/widget_settings.json#widgets.cmsmasters-before-after[0].settings.default_offset.size"
+    },
+    "move": {
+     "value": "click",
+     "cite": "derived/widget_settings.json#widgets.cmsmasters-before-after[0].settings.move"
+    },
+    "orientation": {
+     "value": "horizontal",
+     "cite": "derived/widget_settings.json#widgets.cmsmasters-before-after[0].settings.orientation"
+    }
+   },
+   "buildIntent": "yes"
+  },
+  {
+   "eid": "E52",
+   "name": "Ambient background drift",
+   "group": "E50s media",
+   "mechanism": "Hero background layer drifts ±5% in X/Y with a slow scale pulse, looping (anime.js-driven); observed cycle ~16s vs declared 15",
+   "usedIn": [
+    "S01"
+   ],
+   "params": {
+    "translateRangePct": {
+     "value": [
+      -5,
+      5
+     ],
+     "cite": "derived/widget_settings.json#containers.bg-effect-float[0].settings.cms_bg_floating_translate_x.sizes"
+    },
+    "declaredDurationS": {
+     "value": 15,
+     "cite": "derived/widget_settings.json#containers.bg-effect-float[0].settings.cms_bg_floating_duration.size"
+    },
+    "observedDurationMs": {
+     "value": 16012.9,
+     "cite": "effects/bgfloat_S01.json#fit.observedDurationMs"
+    },
+    "fitNote": {
+     "value": "rms 0.042 — looping multi-channel drift, not a single tween; rebuild as sine-based x/y drift",
+     "cite": "effects/bgfloat_S01.json#fit.cubicBezierRms"
+    }
+   },
+   "buildIntent": "yes"
+  },
+  {
+   "eid": "E60",
+   "name": "Header (absolute, scrolls away)",
+   "group": "E60s nav",
+   "mechanism": "Header is position:absolute over the hero and simply scrolls out; headroom.js ships in the bundle with slide/flip keyframes but no headroom classes exist in the rendered DOM — inactive on this page",
+   "usedIn": [
+    "S00-header"
+   ],
+   "params": {
+    "position": {
+     "value": "absolute, top 0, z 99",
+     "cite": "probe/home_1440.json#nav"
+    },
+    "headroomPresence": {
+     "value": "bundle only — 23_headroom.min.js loaded; no .headroom-* class in dom/home_1440.html",
+     "cite": "analysis_js.json#files (23_headroom.min.js)"
+    }
+   },
+   "buildIntent": "yes — static absolute header; hide/show NOT built (inactive on source page)"
+  },
+  {
+   "eid": "E61",
+   "name": "Timed popup modal",
+   "group": "E60s nav",
+   "mechanism": "Full-viewport fixed overlay (z-index max) opened by a time trigger after load; dismissible via close button",
+   "usedIn": [
+    "(fixed/global)"
+   ],
+   "params": {
+    "startPopup": {
+     "value": 200,
+     "cite": "derived/widget_settings.json#widgets.cmsmasters-time-popup[0].settings.start_popup — units not serialized; observed to fire during the capture session"
+    },
+    "overlay": {
+     "value": "fixed 1440×900, z 2147483647",
+     "cite": "probe/home_1440.json#effects.stickyFixed.sample[2]"
+    },
+    "closeBehavior": {
+     "value": "close button (menu probe clicked .cmsmasters-popup-close and no navigation occurred)",
+     "cite": "menu_home_1440.json#cls"
+    }
+   },
+   "buildIntent": "yes"
+  },
+  {
+   "eid": "E62",
+   "name": "Offcanvas menu",
+   "group": "E60s nav",
+   "mechanism": "Hamburger toggle opens an offcanvas navigation panel (widget carries the nav menu); verified open state captured at 390",
+   "usedIn": [
+    "S00-header"
+   ],
+   "params": {
+    "contentType": {
+     "value": "navigation (nav_menu 7)",
+     "cite": "derived/widget_settings.json#widgets.cmsmasters-offcanvas[0].settings.content_block[0]"
+    },
+    "openShot": {
+     "value": "shots/home_390_menu_open.jpg exists",
+     "cite": "shots/home_390_menu_open.jpg"
+    }
+   },
+   "buildIntent": "yes"
+  }
+ ],
+ "absences": [
+  {
+   "what": "custom cursor",
+   "evidence": "cursorNone=false; no custom-cursor element in DOM; 16_custom-cursor.min.js ships but is not instantiated",
+   "cite": "probe/home_1440.json#effects.cursorNone"
+  },
+  {
+   "what": "tilt hover",
+   "evidence": "vanilla-tilt loaded, zero data-tilt attributes in DOM; all hover probes tilt=false",
+   "cite": "effects/hover_featuredbox.json#measured.tilt"
+  },
+  {
+   "what": "page preloader overlay",
+   "evidence": "preloader keyframes exist in theme CSS but no preloader element renders; preload shots show the page itself",
+   "cite": "analysis_css.json#keyframes"
+  },
+  {
+   "what": "smooth/virtual scroll",
+   "evidence": "no Lenis/Locomotive/ScrollSmoother; native scroll",
+   "cite": "probe/home_1440.json#libs"
+  },
+  {
+   "what": "horizontal-scroll section",
+   "evidence": "horizontalScroll=0 in the sweep",
+   "cite": "analysis_scroll_home_1440.json#horizontalScroll"
+  },
+  {
+   "what": "WebGL / canvas / video",
+   "evidence": "zero video, canvas elements",
+   "cite": "probe/home_1440.json#effects.videos"
+  },
+  {
+   "what": "split-text animation",
+   "evidence": "no split signatures",
+   "cite": "probe/home_1440.json#effects.splitSignature"
+  },
+  {
+   "what": "magnetic buttons",
+   "evidence": "0 magnetic across 43 hover probes and 4 precision hover probes",
+   "cite": "effects/hover_swapbutton.json#measured.magnetic"
+  },
+  {
+   "what": "grain/turbulence",
+   "evidence": "no feTurbulence captured",
+   "cite": "probe/home_1440.json#effects.turbulence"
+  },
+  {
+   "what": "GSAP/ScrollTrigger",
+   "evidence": "stack is Swiper + anime.js + basicScroll + headroom + jQuery; libprobe has no trigger data",
+   "cite": "probe/home_1440.json#libs"
+  }
+ ],
+ "counts": {
+  "effects": 21,
+  "byGroup": {
+   "E01s global": 1,
+   "E10s scroll": 3,
+   "E20s reveal": 3,
+   "E30s text": 4,
+   "E40s hover": 4,
+   "E50s media": 3,
+   "E60s nav": 3
+  }
+ }
+}

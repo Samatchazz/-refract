@@ -1,0 +1,122 @@
+{
+  "mode": "hover",
+  "url": "https://pixel-craft.cmsmasters.studio/",
+  "selector": ".elementor-widget-cmsmasters-image-scroll__inner",
+  "capturedAt": "2026-08-01T09:25:29.916Z",
+  "rest": {
+    "tx": 0,
+    "ty": 0,
+    "scale": 1
+  },
+  "grid": [
+    {
+      "fx": 0.15,
+      "fy": 0.15,
+      "tx": 0,
+      "ty": 0,
+      "scale": 1,
+      "rotate": 0,
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "filter": "none"
+    },
+    {
+      "fx": 0.5,
+      "fy": 0.15,
+      "tx": 0,
+      "ty": 0,
+      "scale": 1,
+      "rotate": 0,
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "filter": "none"
+    },
+    {
+      "fx": 0.85,
+      "fy": 0.15,
+      "tx": 0,
+      "ty": 0,
+      "scale": 1,
+      "rotate": 0,
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "filter": "none"
+    },
+    {
+      "fx": 0.15,
+      "fy": 0.5,
+      "tx": 0,
+      "ty": 0,
+      "scale": 1,
+      "rotate": 0,
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "filter": "none"
+    },
+    {
+      "fx": 0.5,
+      "fy": 0.5,
+      "tx": 0,
+      "ty": 0,
+      "scale": 1,
+      "rotate": 0,
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "filter": "none"
+    },
+    {
+      "fx": 0.85,
+      "fy": 0.5,
+      "tx": 0,
+      "ty": 0,
+      "scale": 1,
+      "rotate": 0,
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "filter": "none"
+    },
+    {
+      "fx": 0.15,
+      "fy": 0.85,
+      "tx": 0,
+      "ty": 0,
+      "scale": 1,
+      "rotate": 0,
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "filter": "none"
+    },
+    {
+      "fx": 0.5,
+      "fy": 0.85,
+      "tx": 0,
+      "ty": 0,
+      "scale": 1,
+      "rotate": 0,
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "filter": "none"
+    },
+    {
+      "fx": 0.85,
+      "fy": 0.85,
+      "tx": 0,
+      "ty": 0,
+      "scale": 1,
+      "rotate": 0,
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "filter": "none"
+    }
+  ],
+  "measured": {
+    "magnetic": false,
+    "magnetTravelPx": 0,
+    "magnetCoefficient": null,
+    "tilt": false,
+    "tiltRangeDeg": 0,
+    "liftPx": 0,
+    "scaleOnHover": 1,
+    "note": "magnetCoefficient = travel divided by the distance the cursor moved across the element"
+  }
+}

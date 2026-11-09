@@ -1,0 +1,36 @@
+{
+  "ts": "2026-08-01T09:04:13.997Z",
+  "label": "home",
+  "results": [
+    {
+      "gate": "G0",
+      "pass": true,
+      "detail": "url=https://pixel-craft.cmsmasters.studio/"
+    },
+    {
+      "gate": "G1",
+      "pass": true,
+      "detail": "home_1440.json: 25 sections, 0 with vhFraction>6"
+    },
+    {
+      "gate": "G2",
+      "pass": true,
+      "detail": "54 step shots, 54 byte-distinct (need >=18)"
+    },
+    {
+      "gate": "G3",
+      "pass": true,
+      "detail": "analysis_scroll_home_1440.json: total 15 (pinned=4, horizontalScroll=0, parallaxSlow=8, parallaxFast=0, parallaxReverse=0, opacityReveal=3)"
+    },
+    {
+      "gate": "G4",
+      "pass": true,
+      "detail": "0 console errors (limit 15)"
+    },
+    {
+      "gate": "G5",
+      "pass": true,
+      "detail": "notCaptured is empty"
+    }
+  ]
+}

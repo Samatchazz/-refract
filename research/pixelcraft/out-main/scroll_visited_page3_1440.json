@@ -1,0 +1,68 @@
+[
+  {
+    "step": 0,
+    "target": 0,
+    "actualY": 0,
+    "docH": 4295
+  },
+  {
+    "step": 1,
+    "target": 340,
+    "actualY": 340,
+    "docH": 4295
+  },
+  {
+    "step": 2,
+    "target": 679,
+    "actualY": 679,
+    "docH": 4295
+  },
+  {
+    "step": 3,
+    "target": 1019,
+    "actualY": 1019,
+    "docH": 4295
+  },
+  {
+    "step": 4,
+    "target": 1358,
+    "actualY": 1358,
+    "docH": 4295
+  },
+  {
+    "step": 5,
+    "target": 1698,
+    "actualY": 1698,
+    "docH": 4295
+  },
+  {
+    "step": 6,
+    "target": 2037,
+    "actualY": 2037,
+    "docH": 4295
+  },
+  {
+    "step": 7,
+    "target": 2377,
+    "actualY": 2377,
+    "docH": 4295
+  },
+  {
+    "step": 8,
+    "target": 2716,
+    "actualY": 2716,
+    "docH": 4295
+  },
+  {
+    "step": 9,
+    "target": 3056,
+    "actualY": 3056,
+    "docH": 4295
+  },
+  {
+    "step": 10,
+    "target": 3395,
+    "actualY": 3395,
+    "docH": 4295
+  }
+]

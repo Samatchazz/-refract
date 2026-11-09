@@ -1,0 +1,196 @@
+{
+ "source": "dom/home_1440.html (data-widget_type occurrences located against section offsets)",
+ "census": {
+  "cmsmasters-site-logo": {
+   "(header/global)": 1
+  },
+  "cmsmasters-nav-menu": {
+   "(header/global)": 1
+  },
+  "cmsmasters-swap-button": {
+   "(header/global)": 1,
+   "S01": 2,
+   "S02": 3,
+   "S04": 1,
+   "S25": 1
+  },
+  "cmsmasters-offcanvas": {
+   "(header/global)": 1
+  },
+  "icon": {
+   "(header/global)": 3,
+   "S08": 1,
+   "S09": 1,
+   "S18": 2,
+   "S24": 3
+  },
+  "cmsmasters-time-popup": {
+   "(header/global)": 1
+  },
+  "cmsmasters-featured-box": {
+   "(header/global)": 1,
+   "S06": 9,
+   "S10": 2,
+   "S14": 3,
+   "S25": 1
+  },
+  "cmsmasters-fancy-text": {
+   "S01": 2
+  },
+  "cmsmasters-advanced-title": {
+   "S01": 1
+  },
+  "cmsmasters-marquee": {
+   "S01": 1,
+   "S08": 1
+  },
+  "menu-anchor": {
+   "S02": 1,
+   "S15": 1,
+   "S21": 1
+  },
+  "cmsmasters-highlight-title": {
+   "S02": 1,
+   "S03": 1,
+   "S04": 1,
+   "S05": 1,
+   "S06": 1,
+   "S10": 1,
+   "S11": 1,
+   "S12": 1,
+   "S14": 1,
+   "S15": 1,
+   "S16": 1,
+   "S17": 1,
+   "S19": 1,
+   "S20": 1,
+   "S21": 1,
+   "S22": 1,
+   "S23": 1,
+   "S25": 1
+  },
+  "text-editor": {
+   "S02": 1,
+   "S04": 2,
+   "S05": 1,
+   "S07": 1,
+   "S08": 1,
+   "S09": 1,
+   "S12": 1,
+   "S14": 1,
+   "S16": 1,
+   "S18": 1,
+   "S19": 1,
+   "S20": 1,
+   "S22": 1,
+   "S23": 1
+  },
+  "heading": {
+   "S02": 3,
+   "S03": 21,
+   "S04": 1,
+   "S05": 1,
+   "S06": 1,
+   "S07": 1,
+   "S08": 1,
+   "S09": 2,
+   "S11": 13,
+   "S13": 4,
+   "S15": 9,
+   "S16": 1,
+   "S17": 3,
+   "S18": 4,
+   "S19": 1,
+   "S20": 1,
+   "S21": 7,
+   "S22": 1,
+   "S23": 1,
+   "S24": 4
+  },
+  "cmsmasters-button": {
+   "S02": 3,
+   "S03": 2
+  },
+  "cmsmasters-image-scroll": {
+   "S02": 3
+  },
+  "image": {
+   "S02": 4,
+   "S03": 13,
+   "S04": 1,
+   "S05": 3,
+   "S08": 1,
+   "S10": 2,
+   "S11": 5,
+   "S12": 3,
+   "S15": 4,
+   "S17": 4,
+   "S18": 3,
+   "S20": 1,
+   "S21": 3,
+   "S25": 2
+  },
+  "icon-box": {
+   "S04": 1
+  },
+  "cmsmasters-icon-list": {
+   "S05": 1,
+   "S11": 1,
+   "S13": 3,
+   "S18": 2,
+   "S25": 1
+  },
+  "counter": {
+   "S05": 1
+  },
+  "progress": {
+   "S05": 1
+  },
+  "cmsmasters-media-carousel": {
+   "S07": 1,
+   "S19": 1
+  },
+  "cmsmasters-before-after": {
+   "S09": 4
+  },
+  "spacer": {
+   "S10": 1,
+   "S14": 1,
+   "S18": 1,
+   "S22": 6
+  },
+  "cmsmasters-template": {
+   "S11": 1,
+   "S15": 1,
+   "S21": 1
+  },
+  "cmsmasters-image-accordion": {
+   "S12": 1
+  },
+  "image-box": {
+   "S23": 24,
+   "S24": 3
+  },
+  "cmsmasters-title": {
+   "S23": 2
+  },
+  "block-sticky": {
+   "S11": 1,
+   "S15": 1,
+   "S21": 1
+  },
+  "effect-type-scroll": {
+   "(header/global)": 1,
+   "S05": 2,
+   "S08": 1,
+   "S17": 2
+  },
+  "bg-effect-type-float": {
+   "(header/global)": 1
+  },
+  "marquee-direction": {
+   "S01": 1,
+   "S08": 1
+  }
+ }
+}

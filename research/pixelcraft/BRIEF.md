@@ -138,6 +138,7 @@ is supposed to contain them. The rules govern what reaches `skeleton/` and, late
 | 2026-07-31 | `skeleton/` is **written from scratch**, not copied and cleaned later | rules 2, 3 |
 | 2026-07-31 | **Not buying** the ThemeForest licence | measure only; never read or lift the theme's source |
 | 2026-07-31 | Fonts: **Kanit** (display) + **Anuphan** (text), both OFL 1.1, self-hosted | §6.5; files in `research/pixelcraft/fonts/` |
+| 2026-08-01 | Demo URL is `https://pixel-craft.cmsmasters.studio/` — owner obtained it manually; ThemeForest's preview page is behind a bot check that must not be defeated | §3.1a |
 | 2026-07-31 | `skeleton/` does **not** replace `griflan-mirror/` — separate sites | §0.1 |
 | 2026-07-31 | When measurement isn't enough: approximate or skip **per effect**, never halt the run | §0.2 |
 
@@ -161,6 +162,7 @@ leave stale IDs behind.
 | **GATE** | both documents shipped | post the "3 take / 3 drop" recommendation, then continue — do not wait for a reply (§6.1) |
 | **P6** Skeleton | `research/pixelcraft/skeleton/` | **every** captured section built; every hand-buildable effect built; builds and serves |
 | **P7** Self-check | `out/derived/selfcheck.json` | all checks PASS |
+| **P8** Content map | `research/pixelcraft/CONTENT-MAP.md` | every content block placed or flagged (§9) |
 
 After every phase, write `research/pixelcraft/_state.json`:
 
@@ -214,9 +216,29 @@ Expect 15–30 minutes. Do not use `--quick` for the real run — it skips the 3
 hover pass, and the script will stamp a warning into `_capture_meta.json` saying so. `--quick` and
 `--no-shots` are for debugging `pickSections()` only.
 
-### 3.1a If the demo URL cannot be resolved
+### 3.1a The demo URL — already resolved, use it directly
 
-ThemeForest may block headless browsers. Try each of these **once**, in order:
+**`https://pixel-craft.cmsmasters.studio/`**
+
+`resolveDemoUrl()` cannot reach it: the ThemeForest preview page sits behind a Cloudflare
+human-verification checkbox, which a scripted browser will never get past — and must not try to.
+The owner opened that page in his own browser on 2026-08-01, cleared the check himself, and read the
+demo URL out of the iframe. So skip resolution entirely:
+
+```bat
+node research\pixelcraft\scrape.mjs --url https://pixel-craft.cmsmasters.studio/
+```
+
+Before trusting it, confirm the page really is this theme — `probe.themeHints` should name a cmsmasters
+theme, and the page title should match Pixel Craft. If it doesn't, stop and say so.
+
+If that demo host also presents a bot check, **stop**. Do not try to defeat it, do not use `--headful`
+to click through it programmatically. Write `BLOCKED.md` and report — the fallback is screenshots
+supplied by the owner, which give structure and colour but no motion measurements.
+
+### 3.1b If a demo URL ever has to be found again
+
+Try each of these **once**, in order:
 
 1. `node research\pixelcraft\scrape.mjs --headful` — watch for a Cloudflare challenge.
 2. Read `out/_preview_probe.json`. It lists every iframe found with its rendered area. If a
@@ -238,7 +260,7 @@ Never invent a demo URL. Never edit `PREVIEW_URL`. Never disable TLS verificatio
 |---|---|
 | `npm i playwright` fails | retry once → still failing = **HALT**, write `BLOCKED.md` |
 | no browser launches | try `--browser chrome`, then `--browser msedge`. Only if both fail, and C: has >2 GB free, run `npx playwright install chromium`. Never run it on a near-full disk |
-| demo URL unresolvable | §3.1a ladder → HALT is allowed |
+| demo URL unresolvable | use the known URL in §3.1a; only if that host itself is blocked, **HALT** |
 | `goto` times out (120 s) | retry once → still failing = HALT |
 | full-page screenshot fails | **continue** — use `shots/*_s##.jpg`, record the caveat |
 | some `sections/*.jpg` missing | continue — those table rows read `(no image)` |
@@ -739,3 +761,33 @@ Finally, confirm the git state: `git status --short` must show no files under `o
 `out/css/` or `out/js/`. The evidence files (`out/probe/`, `out/libprobe/`, `out/analysis_*`,
 `out/network_*`, `out/track_*`, `out/derived/`, and downscaled `out/sections/*.jpg`) **should** be
 committed — every citation must still resolve on a fresh machine in three weeks.
+
+---
+
+## 9. Phase P8 — map the real content onto the skeleton
+
+The owner's copy is **already written**. Do not draft any. It lives at
+`plancbusiness-research/plan-c-website-copy.md` — twelve blocks, in reading order, with a traffic-light
+system: 🟢 usable now · 🟡 needs a real number first · 🔴 must not be used yet.
+
+Number those blocks **C01…C12** in the order they appear in that file and write
+`research/pixelcraft/CONTENT-MAP.md`:
+
+| # | Block | Status | Slots it needs | Skeleton section | Fit |
+|---|---|---|---|---|---|
+| C01 | HERO — "แบรนด์ไม่เคยบอกคุณว่าทำไมเขาไม่จ้างคุณต่อ" | 🟢 | H1 2 lines + sub 2 lines + 1 CTA | S01 | good |
+| C03 | ตัวเลขที่ไม่มีใครอยากบอก | 🟢 | 9-row table ×3 blocks + source notes | ? | needs a section that holds real tables, not cards |
+
+Then produce three lists, which are the actual output of this phase:
+
+1. **Sections with no content** — an `Snn` that no C-block maps to. Cross-check against the 🔴 list in
+   the copy file: it forbids testimonials, before/after tables, result percentages, member counts, and
+   client logos. An agency portfolio theme will have sections built for exactly those. Name them.
+2. **Content with no home** — a C-block that no section can hold. C03 is the likely one: it is dense
+   tabular data with sourcing notes, and card-based theme sections usually cannot carry it.
+3. **Blocks marked for other pages** — C06 and C07 are annotated in the copy file as belonging on
+   separate pages, not the homepage. Flag them; do not silently drop or inline them.
+
+Rules: **quote nothing from the theme, invent nothing new.** Where a block does not fit, describe what
+kind of section *would* hold it — that is a build instruction for later, not a licence to write copy.
+The owner decides every placement; you are producing the table he decides from.

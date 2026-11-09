@@ -1,0 +1,619 @@
+{
+  "legend": "slope = d(rect.top)/d(scrollY). -1.00 = static in flow. |s|<0.08 pinned (horizontal-scroll if xSlope>0.2). -0.92..-0.08 slower than scroll. <-1.08 faster than scroll. >+0.08 drifts down. `kinds` lists every band the element exhibited; `segments` gives the scroll range of each. `holdRange` is the longest pin/h-scroll segment — this is the number to quote for pin distance.",
+  "stepResolutionNote": "fromY/toY are only as precise as the scroll step (docHeight/26). Treat them as ±one step; if libprobe/*.json has scrollTriggers, prefer its exact start/end values.",
+  "trackedElements": 240,
+  "pinned": [
+    {
+      "i": 35,
+      "tag": "p",
+      "cls": "cky-title",
+      "docTop": 799,
+      "sec": null,
+      "kind": "pinned",
+      "kinds": [
+        "pinned"
+      ],
+      "samples": 26,
+      "medianSlope": 0,
+      "medianXSlope": 0,
+      "segments": [
+        {
+          "band": "pinned",
+          "fromY": 378,
+          "toY": 9678,
+          "steps": 26,
+          "distance": 9300
+        }
+      ],
+      "holdRange": {
+        "fromY": 378,
+        "toY": 9678,
+        "distance": 9300,
+        "steps": 26,
+        "band": "pinned"
+      }
+    },
+    {
+      "i": 37,
+      "tag": "div",
+      "cls": "elementor-element elementor-element-57e227ae elementor-widget__width-initial ele",
+      "docTop": 836,
+      "sec": 3,
+      "kind": "pinned",
+      "kinds": [
+        "pinned"
+      ],
+      "samples": 26,
+      "medianSlope": 0,
+      "medianXSlope": 0,
+      "segments": [
+        {
+          "band": "pinned",
+          "fromY": 378,
+          "toY": 9678,
+          "steps": 26,
+          "distance": 9300
+        }
+      ],
+      "holdRange": {
+        "fromY": 378,
+        "toY": 9678,
+        "distance": 9300,
+        "steps": 26,
+        "band": "pinned"
+      }
+    },
+    {
+      "i": 3,
+      "tag": "div",
+      "cls": "cmsmasters-demos-preview",
+      "docTop": 0,
+      "sec": 2,
+      "kind": "pinned",
+      "kinds": [
+        "pinned"
+      ],
+      "samples": 26,
+      "medianSlope": 0,
+      "medianXSlope": 0,
+      "segments": [
+        {
+          "band": "pinned",
+          "fromY": 378,
+          "toY": 9678,
+          "steps": 26,
+          "distance": 9300
+        }
+      ],
+      "holdRange": {
+        "fromY": 378,
+        "toY": 9678,
+        "distance": 9300,
+        "steps": 26,
+        "band": "pinned"
+      }
+    },
+    {
+      "i": 10,
+      "tag": "div",
+      "cls": "cmsmasters-demos-preview__heading-title",
+      "docTop": 138,
+      "sec": 2,
+      "kind": "pinned",
+      "kinds": [
+        "pinned"
+      ],
+      "samples": 26,
+      "medianSlope": 0,
+      "medianXSlope": 0,
+      "segments": [
+        {
+          "band": "pinned",
+          "fromY": 378,
+          "toY": 9678,
+          "steps": 26,
+          "distance": 9300
+        }
+      ],
+      "holdRange": {
+        "fromY": 378,
+        "toY": 9678,
+        "distance": 9300,
+        "steps": 26,
+        "band": "pinned"
+      }
+    },
+    {
+      "i": 23,
+      "tag": "div",
+      "cls": "cmsmasters-demos-preview__heading-subtitle",
+      "docTop": 214,
+      "sec": 2,
+      "kind": "pinned",
+      "kinds": [
+        "pinned"
+      ],
+      "samples": 26,
+      "medianSlope": 0,
+      "medianXSlope": 0,
+      "segments": [
+        {
+          "band": "pinned",
+          "fromY": 378,
+          "toY": 9678,
+          "steps": 26,
+          "distance": 9300
+        }
+      ],
+      "holdRange": {
+        "fromY": 378,
+        "toY": 9678,
+        "distance": 9300,
+        "steps": 26,
+        "band": "pinned"
+      }
+    },
+    {
+      "i": 24,
+      "tag": "img",
+      "cls": "",
+      "docTop": 278,
+      "sec": 2,
+      "kind": "pinned",
+      "kinds": [
+        "pinned"
+      ],
+      "samples": 26,
+      "medianSlope": 0,
+      "medianXSlope": 0,
+      "segments": [
+        {
+          "band": "pinned",
+          "fromY": 378,
+          "toY": 9678,
+          "steps": 26,
+          "distance": 9300
+        }
+      ],
+      "holdRange": {
+        "fromY": 378,
+        "toY": 9678,
+        "distance": 9300,
+        "steps": 26,
+        "band": "pinned"
+      }
+    },
+    {
+      "i": 25,
+      "tag": "span",
+      "cls": "cmsmasters-demos-preview__demo-title",
+      "docTop": 463,
+      "sec": 2,
+      "kind": "pinned",
+      "kinds": [
+        "pinned"
+      ],
+      "samples": 26,
+      "medianSlope": 0,
+      "medianXSlope": 0,
+      "segments": [
+        {
+          "band": "pinned",
+          "fromY": 378,
+          "toY": 9678,
+          "steps": 26,
+          "distance": 9300
+        }
+      ],
+      "holdRange": {
+        "fromY": 378,
+        "toY": 9678,
+        "distance": 9300,
+        "steps": 26,
+        "band": "pinned"
+      }
+    },
+    {
+      "i": 28,
+      "tag": "img",
+      "cls": "",
+      "docTop": 517,
+      "sec": 2,
+      "kind": "pinned",
+      "kinds": [
+        "pinned"
+      ],
+      "samples": 26,
+      "medianSlope": 0,
+      "medianXSlope": 0,
+      "segments": [
+        {
+          "band": "pinned",
+          "fromY": 378,
+          "toY": 9678,
+          "steps": 26,
+          "distance": 9300
+        }
+      ],
+      "holdRange": {
+        "fromY": 378,
+        "toY": 9678,
+        "distance": 9300,
+        "steps": 26,
+        "band": "pinned"
+      }
+    },
+    {
+      "i": 31,
+      "tag": "span",
+      "cls": "cmsmasters-demos-preview__demo-title",
+      "docTop": 702,
+      "sec": 2,
+      "kind": "pinned",
+      "kinds": [
+        "pinned"
+      ],
+      "samples": 26,
+      "medianSlope": 0,
+      "medianXSlope": 0,
+      "segments": [
+        {
+          "band": "pinned",
+          "fromY": 378,
+          "toY": 9678,
+          "steps": 26,
+          "distance": 9300
+        }
+      ],
+      "holdRange": {
+        "fromY": 378,
+        "toY": 9678,
+        "distance": 9300,
+        "steps": 26,
+        "band": "pinned"
+      }
+    },
+    {
+      "i": 34,
+      "tag": "img",
+      "cls": "",
+      "docTop": 756,
+      "sec": 2,
+      "kind": "pinned",
+      "kinds": [
+        "pinned"
+      ],
+      "samples": 26,
+      "medianSlope": 0,
+      "medianXSlope": 0,
+      "segments": [
+        {
+          "band": "pinned",
+          "fromY": 378,
+          "toY": 9678,
+          "steps": 26,
+          "distance": 9300
+        }
+      ],
+      "holdRange": {
+        "fromY": 378,
+        "toY": 9678,
+        "distance": 9300,
+        "steps": 26,
+        "band": "pinned"
+      }
+    },
+    {
+      "i": 38,
+      "tag": "span",
+      "cls": "cmsmasters-demos-preview__demo-title",
+      "docTop": 941,
+      "sec": 2,
+      "kind": "pinned",
+      "kinds": [
+        "pinned"
+      ],
+      "samples": 26,
+      "medianSlope": 0,
+      "medianXSlope": 0,
+      "segments": [
+        {
+          "band": "pinned",
+          "fromY": 378,
+          "toY": 9678,
+          "steps": 26,
+          "distance": 9300
+        }
+      ],
+      "holdRange": {
+        "fromY": 378,
+        "toY": 9678,
+        "distance": 9300,
+        "steps": 26,
+        "band": "pinned"
+      }
+    }
+  ],
+  "horizontalScroll": [],
+  "parallaxSlow": [],
+  "parallaxFast": [
+    {
+      "i": 207,
+      "tag": "div",
+      "cls": "elementor-element elementor-element-dff96af cmsmasters-testimonial-author-avatar",
+      "docTop": 7419,
+      "sec": 1,
+      "kind": "parallax-fast",
+      "kinds": [
+        "parallax-fast"
+      ],
+      "samples": 8,
+      "medianSlope": -1.005,
+      "medianXSlope": 0.011,
+      "segments": [
+        {
+          "band": "parallax-fast",
+          "fromY": 6700,
+          "toY": 7817,
+          "steps": 4,
+          "distance": 1117
+        }
+      ]
+    },
+    {
+      "i": 212,
+      "tag": "img",
+      "cls": "attachment-thumbnail size-thumbnail wp-image-58660",
+      "docTop": 7848,
+      "sec": 1,
+      "kind": "parallax-fast",
+      "kinds": [
+        "parallax-fast"
+      ],
+      "samples": 7,
+      "medianSlope": -1.182,
+      "medianXSlope": -0.008,
+      "segments": [
+        {
+          "band": "parallax-fast",
+          "fromY": 6700,
+          "toY": 7817,
+          "steps": 4,
+          "distance": 1117
+        }
+      ]
+    },
+    {
+      "i": 213,
+      "tag": "span",
+      "cls": "cmsmasters-testimonial__author-subtitle",
+      "docTop": 7860,
+      "sec": 1,
+      "kind": "parallax-fast",
+      "kinds": [
+        "parallax-fast"
+      ],
+      "samples": 7,
+      "medianSlope": -1.172,
+      "medianXSlope": -0.009,
+      "segments": [
+        {
+          "band": "parallax-fast",
+          "fromY": 6700,
+          "toY": 7817,
+          "steps": 4,
+          "distance": 1117
+        }
+      ]
+    },
+    {
+      "i": 206,
+      "tag": "div",
+      "cls": "elementor-element elementor-element-627840b cmsmasters-testimonial-author-avatar",
+      "docTop": 7320,
+      "sec": 1,
+      "kind": "parallax-fast",
+      "kinds": [
+        "parallax-fast"
+      ],
+      "samples": 8,
+      "medianSlope": -1.018,
+      "medianXSlope": 0.025,
+      "segments": [
+        {
+          "band": "parallax-fast",
+          "fromY": 6700,
+          "toY": 7445,
+          "steps": 3,
+          "distance": 745
+        }
+      ]
+    },
+    {
+      "i": 211,
+      "tag": "img",
+      "cls": "attachment-thumbnail size-thumbnail wp-image-58661",
+      "docTop": 7794,
+      "sec": 1,
+      "kind": "parallax-fast",
+      "kinds": [
+        "parallax-fast"
+      ],
+      "samples": 7,
+      "medianSlope": -1.097,
+      "medianXSlope": -0.015,
+      "segments": [
+        {
+          "band": "parallax-fast",
+          "fromY": 6700,
+          "toY": 7817,
+          "steps": 4,
+          "distance": 1117
+        }
+      ]
+    },
+    {
+      "i": 210,
+      "tag": "span",
+      "cls": "cmsmasters-testimonial__author-subtitle",
+      "docTop": 7775,
+      "sec": 1,
+      "kind": "parallax-fast",
+      "kinds": [
+        "parallax-fast"
+      ],
+      "samples": 7,
+      "medianSlope": -1.077,
+      "medianXSlope": -0.018,
+      "segments": [
+        {
+          "band": "parallax-fast",
+          "fromY": 6700,
+          "toY": 7445,
+          "steps": 3,
+          "distance": 745
+        }
+      ]
+    },
+    {
+      "i": 226,
+      "tag": "div",
+      "cls": "elementor-element elementor-element-cdcecd6 elementor-widget__width-initial cmsm",
+      "docTop": 9372,
+      "sec": 1,
+      "kind": "parallax-fast",
+      "kinds": [
+        "parallax-fast"
+      ],
+      "samples": 7,
+      "medianSlope": -1.055,
+      "medianXSlope": 0,
+      "segments": [
+        {
+          "band": "parallax-fast",
+          "fromY": 8561,
+          "toY": 9306,
+          "steps": 3,
+          "distance": 745
+        }
+      ]
+    },
+    {
+      "i": 227,
+      "tag": "img",
+      "cls": "attachment-medium size-medium wp-image-58515",
+      "docTop": 9372,
+      "sec": 1,
+      "kind": "parallax-fast",
+      "kinds": [
+        "parallax-fast"
+      ],
+      "samples": 7,
+      "medianSlope": -1.055,
+      "medianXSlope": 0,
+      "segments": [
+        {
+          "band": "parallax-fast",
+          "fromY": 8561,
+          "toY": 9306,
+          "steps": 3,
+          "distance": 745
+        }
+      ]
+    },
+    {
+      "i": 234,
+      "tag": "div",
+      "cls": "elementor-element elementor-element-eead8d3 elementor-widget__width-initial elem",
+      "docTop": 9482,
+      "sec": 1,
+      "kind": "parallax-fast",
+      "kinds": [
+        "parallax-fast"
+      ],
+      "samples": 6,
+      "medianSlope": -1.033,
+      "medianXSlope": 0,
+      "segments": [
+        {
+          "band": "parallax-fast",
+          "fromY": 8934,
+          "toY": 9306,
+          "steps": 2,
+          "distance": 372
+        }
+      ]
+    },
+    {
+      "i": 235,
+      "tag": "img",
+      "cls": "attachment-medium size-medium wp-image-58516",
+      "docTop": 9482,
+      "sec": 1,
+      "kind": "parallax-fast",
+      "kinds": [
+        "parallax-fast"
+      ],
+      "samples": 6,
+      "medianSlope": -1.033,
+      "medianXSlope": 0,
+      "segments": [
+        {
+          "band": "parallax-fast",
+          "fromY": 8934,
+          "toY": 9306,
+          "steps": 2,
+          "distance": 372
+        }
+      ]
+    },
+    {
+      "i": 236,
+      "tag": "div",
+      "cls": "elementor-element elementor-element-51e969f elementor-widget__width-initial elem",
+      "docTop": 9820,
+      "sec": 1,
+      "kind": "parallax-fast",
+      "kinds": [
+        "parallax-fast"
+      ],
+      "samples": 5,
+      "medianSlope": -1.117,
+      "medianXSlope": 0,
+      "segments": [
+        {
+          "band": "parallax-fast",
+          "fromY": 8934,
+          "toY": 9678,
+          "steps": 3,
+          "distance": 744
+        }
+      ]
+    },
+    {
+      "i": 237,
+      "tag": "img",
+      "cls": "attachment-medium size-medium wp-image-58514",
+      "docTop": 9820,
+      "sec": 1,
+      "kind": "parallax-fast",
+      "kinds": [
+        "parallax-fast"
+      ],
+      "samples": 5,
+      "medianSlope": -1.117,
+      "medianXSlope": 0,
+      "segments": [
+        {
+          "band": "parallax-fast",
+          "fromY": 8934,
+          "toY": 9678,
+          "steps": 3,
+          "distance": 744
+        }
+      ]
+    }
+  ],
+  "parallaxReverse": [],
+  "opacityReveal": []
+}

@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>คุยกัน — Hyper Gummy</title>
+  <meta name="description" content="เอาร่างมาให้ดู ยิ่งดิบยิ่งดี — ตอบภายในสองวันทำการ" />
+  <link rel="stylesheet" href="/src/styles/main.css" />
+  <script type="module" src="/src/js/app.js"></script>
+</head>
+<body data-barba="wrapper">
+
+  <!-- persistent GL layer (never destroyed on navigation) -->
+  <div class="poster" aria-hidden="true"></div>
+  <canvas id="gl" aria-hidden="true"></canvas>
+
+  <header class="header">
+    <a class="logo" href="/" data-nav><span class="dot"></span>Hyper <span class="it">Gummy</span></a>
+    <nav class="top-nav" aria-label="เมนูหลัก">
+      <a href="/work.html" data-nav>งาน</a>
+      <a href="/craft.html" data-nav>วิธีทำงาน</a>
+      <a href="/#about" data-nav>เรา</a>
+      <a class="pill pill--ghost is-current" href="/contact.html" data-nav>คุยกัน</a>
+    </nav>
+    <button class="burger" aria-label="เมนู" aria-expanded="false" data-menu-toggle>
+      <span></span><span></span>
+    </button>
+  </header>
+
+  <div class="site">
+    <main data-barba="container" data-barba-namespace="contact" data-gl-page="contact">
+
+      <section class="page-head container" data-gl-window>
+        <span class="label js-in-view" data-typewriter>คุยกัน — ยิ่งดิบยิ่งดี</span>
+        <h1 class="page-title">เอาร่างมาให้ดู<br /><span class="it">ยิ่งดิบยิ่งดี</span></h1>
+      </section>
+
+      <section class="page-body container">
+        <div class="prose js-in-view appear-fade-up">
+          <p><strong>อีเมลเดียวก็เริ่มได้</strong> เล่าว่ากำลังทำอะไรอยู่ อยู่ขั้นไหน
+          และเปิดตัวเมื่อไหร่ แนบสเก็ตช์หรือรูปต้นแบบมาได้เลย ไม่ต้องสวย
+          เราตอบภายในสองวันทำการ พร้อมความเห็นตรงๆ ว่าเราช่วยได้ตรงไหน</p>
+          <p>ยังไม่อยากเปิดชื่อแบรนด์? ได้ เราเซ็น NDA ก่อนดูของจริงเสมอ</p>
+        </div>
+        <div class="contact-block">
+          <a class="footer-email js-in-view appear-fade-up" style="--iv-delay:.1s" href="mailto:hello@hypergummy.co">hello@<span class="it">hypergummy</span>.co</a>
+          <span class="label js-in-view" data-typewriter>ตอบภายในสองวันทำการ — NDA ก่อน ชื่อแบรนด์ทีหลัง</span>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- ================= FOOTER (persistent) ================= -->
+    <footer class="footer">
+      <div class="container">
+        <a class="footer-email" href="mailto:hello@hypergummy.co">hello@<span class="it">hypergummy</span>.co</a>
+        <div class="footer-grid">
+          <div class="footer-col">
+            <span class="label" data-typewriter>เมนู</span>
+            <a href="/work.html" data-nav>งาน</a>
+            <a href="/craft.html" data-nav>วิธีทำงาน</a>
+            <a href="/#about" data-nav>เรา</a>
+            <a href="/contact.html" data-nav>คุยกัน</a>
+          </div>
+          <div class="footer-col">
+            <span class="label" data-typewriter>ที่อื่น</span>
+            <a href="#" rel="noopener">Instagram</a>
+            <a href="#" rel="noopener">TikTok</a>
+            <a href="#" rel="noopener">LinkedIn</a>
+          </div>
+          <div class="footer-col">
+            <span class="label" data-typewriter>Hyper Gummy</span>
+            <span style="color:var(--c-muted)">เอเจนซี่คอนเทนต์สำหรับแบรนด์ — กรุงเทพฯ</span>
+            <span style="color:var(--c-muted)">© 2026 Hyper Gummy</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- ================= MENU OVERLAY ================= -->
+  <div class="menu-overlay" role="dialog" aria-modal="true" aria-label="เมนู">
+    <button class="pill pill--ghost menu-close" data-menu-close>ปิดเมนู ✕</button>
+    <nav class="menu-nav">
+      <div class="menu-item"><a href="/work.html" data-nav><span class="menu-index">01</span>งาน</a></div>
+      <div class="menu-item"><a href="/craft.html" data-nav><span class="menu-index">02</span>วิธีทำงาน</a></div>
+      <div class="menu-item"><a href="/#about" data-nav><span class="menu-index">03</span>เรา</a></div>
+      <div class="menu-item"><a href="/contact.html" data-nav><span class="menu-index">04</span>คุยกัน</a></div>
+    </nav>
+    <div class="menu-meta">
+      <a class="label" href="mailto:hello@hypergummy.co">hello@hypergummy.co</a>
+      <a class="pill" href="/work.html" data-nav>ดูเคสทั้งหมด</a>
+    </div>
+  </div>
+
+  <!-- ================= CASE OVERLAY ================= -->
+  <div class="read-overlay" role="dialog" aria-modal="true" aria-label="เคสตัวอย่าง" data-lenis-prevent>
+    <button class="read-close pill" data-read-close>ปิด — esc</button>
+    <div class="read-inner" data-read-content></div>
+  </div>
+
+  <!-- transition veil + loader -->
+  <div class="transition-veil" aria-hidden="true"></div>
+  <div class="loader" aria-hidden="true">
+    <div class="loader-mark"><span class="dot"></span>Hyper <span class="it">Gummy</span></div>
+    <div class="loader-bar"><i></i></div>
+    <div class="loader-pct">0%</div>
+  </div>
+
+</body>
+</html>

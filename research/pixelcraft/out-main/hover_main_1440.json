@@ -1,0 +1,842 @@
+[
+  {
+    "i": 0,
+    "sec": 0,
+    "tag": "a",
+    "cls": "elementor-widget-cmsmasters-site-logo__link",
+    "text": "",
+    "center": {
+      "x": 104,
+      "y": 58
+    },
+    "corner": {
+      "x": 156,
+      "y": 69
+    },
+    "before": {
+      "transform": "none",
+      "opacity": "1",
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "filter": "none",
+      "letterSpacing": "normal"
+    },
+    "after": {
+      "transform": "none",
+      "opacity": "1",
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "filter": "none",
+      "letterSpacing": "normal",
+      "cursorEls": [
+        {
+          "cls": "home wp-singular page-template-default page page-id-50 wp-em",
+          "w": 1440,
+          "h": 10578,
+          "transform": "none",
+          "mixBlendMode": "normal",
+          "bg": "rgb(255, 255, 255)",
+          "text": "We value your privacy  We use "
+        },
+        {
+          "cls": "cmsmasters-cursor cmsmasters-cursor-dot",
+          "w": 12,
+          "h": 12,
+          "transform": "matrix(1, 0, 0, 1, 104, 58)",
+          "mixBlendMode": "normal",
+          "bg": "rgb(255, 255, 255)",
+          "text": ""
+        }
+      ]
+    },
+    "atCorner": {
+      "transform": "none"
+    },
+    "changed": false,
+    "magnetic": false
+  },
+  {
+    "i": 1,
+    "sec": 0,
+    "tag": "li",
+    "cls": "menu-item menu-item-type-post_type menu-item-object-page menu-item-hom",
+    "text": "Home Home One Creative StudioCreative St",
+    "center": {
+      "x": 388,
+      "y": 58
+    },
+    "corner": {
+      "x": 410,
+      "y": 67
+    },
+    "before": {
+      "transform": "none",
+      "opacity": "1",
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(84, 84, 84)",
+      "filter": "none",
+      "letterSpacing": "normal"
+    },
+    "after": {
+      "transform": "none",
+      "opacity": "1",
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(84, 84, 84)",
+      "filter": "none",
+      "letterSpacing": "normal",
+      "cursorEls": [
+        {
+          "cls": "home wp-singular page-template-default page page-id-50 wp-em",
+          "w": 1440,
+          "h": 10578,
+          "transform": "none",
+          "mixBlendMode": "normal",
+          "bg": "rgb(255, 255, 255)",
+          "text": "We value your privacy  We use "
+        },
+        {
+          "cls": "cmsmasters-cursor cmsmasters-cursor-dot",
+          "w": 12,
+          "h": 12,
+          "transform": "matrix(1, 0, 0, 1, 388, 58)",
+          "mixBlendMode": "normal",
+          "bg": "rgb(255, 255, 255)",
+          "text": ""
+        }
+      ]
+    },
+    "atCorner": {
+      "transform": "none"
+    },
+    "changed": false,
+    "magnetic": false
+  },
+  {
+    "i": 2,
+    "sec": 0,
+    "tag": "a",
+    "cls": "elementor-widget-cmsmasters-nav-menu__dropdown-item elementor-widget-c",
+    "text": "Home",
+    "center": {
+      "x": 388,
+      "y": 58
+    },
+    "corner": {
+      "x": 410,
+      "y": 67
+    },
+    "before": {
+      "transform": "none",
+      "opacity": "1",
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(139, 138, 137)",
+      "filter": "none",
+      "letterSpacing": "normal"
+    },
+    "after": {
+      "transform": "none",
+      "opacity": "1",
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(139, 138, 137)",
+      "filter": "none",
+      "letterSpacing": "normal",
+      "cursorEls": [
+        {
+          "cls": "home wp-singular page-template-default page page-id-50 wp-em",
+          "w": 1440,
+          "h": 10578,
+          "transform": "none",
+          "mixBlendMode": "normal",
+          "bg": "rgb(255, 255, 255)",
+          "text": "We value your privacy  We use "
+        },
+        {
+          "cls": "cmsmasters-cursor cmsmasters-cursor-dot",
+          "w": 12,
+          "h": 12,
+          "transform": "matrix(1, 0, 0, 1, 388, 58)",
+          "mixBlendMode": "normal",
+          "bg": "rgb(255, 255, 255)",
+          "text": ""
+        }
+      ]
+    },
+    "atCorner": {
+      "transform": "none"
+    },
+    "changed": false,
+    "magnetic": false
+  },
+  {
+    "i": 3,
+    "sec": 0,
+    "tag": "span",
+    "cls": "elementor-widget-cmsmasters-nav-menu__item-text-wrap",
+    "text": "Home",
+    "center": {
+      "x": 388,
+      "y": 58
+    },
+    "corner": {
+      "x": 410,
+      "y": 67
+    },
+    "before": {
+      "transform": "none",
+      "opacity": "1",
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(139, 138, 137)",
+      "filter": "none",
+      "letterSpacing": "normal"
+    },
+    "after": {
+      "transform": "none",
+      "opacity": "1",
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(139, 138, 137)",
+      "filter": "none",
+      "letterSpacing": "normal",
+      "cursorEls": [
+        {
+          "cls": "home wp-singular page-template-default page page-id-50 wp-em",
+          "w": 1440,
+          "h": 10578,
+          "transform": "none",
+          "mixBlendMode": "normal",
+          "bg": "rgb(255, 255, 255)",
+          "text": "We value your privacy  We use "
+        },
+        {
+          "cls": "cmsmasters-cursor cmsmasters-cursor-dot",
+          "w": 12,
+          "h": 12,
+          "transform": "matrix(1, 0, 0, 1, 388, 58)",
+          "mixBlendMode": "normal",
+          "bg": "rgb(255, 255, 255)",
+          "text": ""
+        }
+      ]
+    },
+    "atCorner": {
+      "transform": "none"
+    },
+    "changed": false,
+    "magnetic": false
+  },
+  {
+    "i": 0,
+    "sec": 1,
+    "tag": "span",
+    "cls": "elementor-widget-cmsmasters-highlight-title__item elementor-repeater-i",
+    "text": "Crafting ideas into",
+    "center": {
+      "x": 155,
+      "y": 197
+    },
+    "corner": {
+      "x": 208,
+      "y": 218
+    },
+    "before": {
+      "transform": "none",
+      "opacity": "1",
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(255, 255, 255)",
+      "filter": "none",
+      "letterSpacing": "normal"
+    },
+    "after": {
+      "transform": "none",
+      "opacity": "1",
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(255, 255, 255)",
+      "filter": "none",
+      "letterSpacing": "normal",
+      "cursorEls": [
+        {
+          "cls": "home wp-singular page-template-default page page-id-50 wp-em",
+          "w": 1440,
+          "h": 10578,
+          "transform": "none",
+          "mixBlendMode": "normal",
+          "bg": "rgb(255, 255, 255)",
+          "text": "We value your privacy  We use "
+        },
+        {
+          "cls": "cmsmasters-cursor cmsmasters-cursor-dot",
+          "w": 12,
+          "h": 12,
+          "transform": "matrix(1, 0, 0, 1, 155, 197)",
+          "mixBlendMode": "normal",
+          "bg": "rgb(255, 255, 255)",
+          "text": ""
+        }
+      ]
+    },
+    "atCorner": {
+      "transform": "none"
+    },
+    "changed": false,
+    "magnetic": false
+  },
+  {
+    "i": 1,
+    "sec": 1,
+    "tag": "span",
+    "cls": "elementor-widget-cmsmasters-highlight-title__item elementor-repeater-i",
+    "text": "visual magic.",
+    "center": {
+      "x": 184,
+      "y": 213
+    },
+    "corner": {
+      "x": 225,
+      "y": 224
+    },
+    "before": {
+      "transform": "none",
+      "opacity": "1",
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(255, 255, 255)",
+      "filter": "none",
+      "letterSpacing": "normal"
+    },
+    "after": {
+      "transform": "none",
+      "opacity": "1",
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(255, 255, 255)",
+      "filter": "none",
+      "letterSpacing": "normal",
+      "cursorEls": [
+        {
+          "cls": "home wp-singular page-template-default page page-id-50 wp-em",
+          "w": 1440,
+          "h": 10578,
+          "transform": "none",
+          "mixBlendMode": "normal",
+          "bg": "rgb(255, 255, 255)",
+          "text": "We value your privacy  We use "
+        },
+        {
+          "cls": "cmsmasters-cursor cmsmasters-cursor-dot",
+          "w": 12,
+          "h": 12,
+          "transform": "matrix(1, 0, 0, 1, 184, 213)",
+          "mixBlendMode": "normal",
+          "bg": "rgb(255, 255, 255)",
+          "text": ""
+        }
+      ]
+    },
+    "atCorner": {
+      "transform": "none"
+    },
+    "changed": false,
+    "magnetic": false
+  },
+  {
+    "i": 2,
+    "sec": 1,
+    "tag": "a",
+    "cls": "cmsmasters-button-link elementor-widget-cmsmasters-button__button cmsm",
+    "text": "Instagram",
+    "center": {
+      "x": 1154,
+      "y": 698
+    },
+    "corner": {
+      "x": 1194,
+      "y": 709
+    },
+    "before": {
+      "transform": "none",
+      "opacity": "1",
+      "background": "rgba(2, 1, 1, 0)",
+      "color": "rgb(255, 255, 255)",
+      "filter": "none",
+      "letterSpacing": "normal"
+    },
+    "after": {
+      "transform": "none",
+      "opacity": "1",
+      "background": "rgba(2, 1, 1, 0)",
+      "color": "rgb(255, 255, 255)",
+      "filter": "none",
+      "letterSpacing": "normal",
+      "cursorEls": [
+        {
+          "cls": "home wp-singular page-template-default page page-id-50 wp-em",
+          "w": 1440,
+          "h": 10578,
+          "transform": "none",
+          "mixBlendMode": "normal",
+          "bg": "rgb(255, 255, 255)",
+          "text": "We value your privacy  We use "
+        },
+        {
+          "cls": "cmsmasters-cursor cmsmasters-cursor-dot",
+          "w": 18,
+          "h": 18,
+          "transform": "matrix(1, 0, 0, 1, 1154, 698)",
+          "mixBlendMode": "normal",
+          "bg": "rgb(255, 255, 255)",
+          "text": ""
+        }
+      ]
+    },
+    "atCorner": {
+      "transform": "none"
+    },
+    "changed": false,
+    "magnetic": false
+  },
+  {
+    "i": 3,
+    "sec": 1,
+    "tag": "a",
+    "cls": "cmsmasters-button-link elementor-widget-cmsmasters-button__button cmsm",
+    "text": "Behance",
+    "center": {
+      "x": 1288,
+      "y": 698
+    },
+    "corner": {
+      "x": 1321,
+      "y": 709
+    },
+    "before": {
+      "transform": "none",
+      "opacity": "1",
+      "background": "rgba(2, 1, 1, 0)",
+      "color": "rgb(255, 255, 255)",
+      "filter": "none",
+      "letterSpacing": "normal"
+    },
+    "after": {
+      "transform": "none",
+      "opacity": "1",
+      "background": "rgba(2, 1, 1, 0)",
+      "color": "rgb(255, 255, 255)",
+      "filter": "none",
+      "letterSpacing": "normal",
+      "cursorEls": [
+        {
+          "cls": "home wp-singular page-template-default page page-id-50 wp-em",
+          "w": 1440,
+          "h": 10578,
+          "transform": "none",
+          "mixBlendMode": "normal",
+          "bg": "rgb(255, 255, 255)",
+          "text": "We value your privacy  We use "
+        },
+        {
+          "cls": "cmsmasters-cursor cmsmasters-cursor-dot",
+          "w": 12,
+          "h": 12,
+          "transform": "matrix(1, 0, 0, 1, 1288, 698)",
+          "mixBlendMode": "normal",
+          "bg": "rgb(255, 255, 255)",
+          "text": ""
+        }
+      ]
+    },
+    "atCorner": {
+      "transform": "none"
+    },
+    "changed": false,
+    "magnetic": false
+  },
+  {
+    "i": 0,
+    "sec": 2,
+    "tag": "a",
+    "cls": "cmsmasters-demos-preview__buy-link",
+    "text": "Buy Now",
+    "center": {
+      "x": 1400,
+      "y": 323
+    },
+    "corner": {
+      "x": 1428,
+      "y": 351
+    },
+    "before": {
+      "transform": "none",
+      "opacity": "1",
+      "background": "rgb(7, 202, 108)",
+      "color": "rgb(255, 255, 255)",
+      "filter": "none",
+      "letterSpacing": "normal"
+    },
+    "after": {
+      "transform": "none",
+      "opacity": "1",
+      "background": "rgb(7, 202, 108)",
+      "color": "rgb(255, 255, 255)",
+      "filter": "none",
+      "letterSpacing": "normal",
+      "cursorEls": [
+        {
+          "cls": "home wp-singular page-template-default page page-id-50 wp-em",
+          "w": 1440,
+          "h": 10578,
+          "transform": "none",
+          "mixBlendMode": "normal",
+          "bg": "rgb(255, 255, 255)",
+          "text": "We value your privacy  We use "
+        },
+        {
+          "cls": "cmsmasters-cursor cmsmasters-cursor-dot",
+          "w": 12,
+          "h": 12,
+          "transform": "matrix(1, 0, 0, 1, 1400, 323)",
+          "mixBlendMode": "normal",
+          "bg": "rgb(255, 255, 255)",
+          "text": ""
+        }
+      ]
+    },
+    "atCorner": {
+      "transform": "none"
+    },
+    "changed": false,
+    "magnetic": false
+  },
+  {
+    "i": 1,
+    "sec": 2,
+    "tag": "a",
+    "cls": "",
+    "text": "",
+    "center": {
+      "x": 1630,
+      "y": 363
+    },
+    "corner": {
+      "x": 1739,
+      "y": 423
+    },
+    "before": {
+      "transform": "none",
+      "opacity": "1",
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "filter": "none",
+      "letterSpacing": "normal"
+    },
+    "after": {
+      "transform": "none",
+      "opacity": "1",
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "filter": "none",
+      "letterSpacing": "normal",
+      "cursorEls": [
+        {
+          "cls": "home wp-singular page-template-default page page-id-50 wp-em",
+          "w": 1440,
+          "h": 10578,
+          "transform": "none",
+          "mixBlendMode": "normal",
+          "bg": "rgb(255, 255, 255)",
+          "text": "We value your privacy  We use "
+        },
+        {
+          "cls": "cmsmasters-cursor cmsmasters-cursor-dot",
+          "w": 12,
+          "h": 12,
+          "transform": "matrix(1, 0, 0, 1, 1428, 351)",
+          "mixBlendMode": "normal",
+          "bg": "rgb(255, 255, 255)",
+          "text": ""
+        }
+      ]
+    },
+    "atCorner": {
+      "transform": "none"
+    },
+    "changed": false,
+    "magnetic": false
+  },
+  {
+    "i": 2,
+    "sec": 2,
+    "tag": "a",
+    "cls": "",
+    "text": "",
+    "center": {
+      "x": 1630,
+      "y": 602
+    },
+    "corner": {
+      "x": 1739,
+      "y": 662
+    },
+    "before": {
+      "transform": "none",
+      "opacity": "1",
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "filter": "none",
+      "letterSpacing": "normal"
+    },
+    "after": {
+      "transform": "none",
+      "opacity": "1",
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "filter": "none",
+      "letterSpacing": "normal",
+      "cursorEls": [
+        {
+          "cls": "home wp-singular page-template-default page page-id-50 wp-em",
+          "w": 1440,
+          "h": 10578,
+          "transform": "none",
+          "mixBlendMode": "normal",
+          "bg": "rgb(255, 255, 255)",
+          "text": "We value your privacy  We use "
+        },
+        {
+          "cls": "cmsmasters-cursor cmsmasters-cursor-dot",
+          "w": 12,
+          "h": 12,
+          "transform": "matrix(1, 0, 0, 1, 1428, 351)",
+          "mixBlendMode": "normal",
+          "bg": "rgb(255, 255, 255)",
+          "text": ""
+        }
+      ]
+    },
+    "atCorner": {
+      "transform": "none"
+    },
+    "changed": false,
+    "magnetic": false
+  },
+  {
+    "i": 0,
+    "sec": 3,
+    "tag": "span",
+    "cls": "elementor-widget-cmsmasters-highlight-title__item elementor-repeater-i",
+    "text": "Let’s craft something",
+    "center": {
+      "x": 809,
+      "y": 288
+    },
+    "corner": {
+      "x": 891,
+      "y": 299
+    },
+    "before": {
+      "transform": "none",
+      "opacity": "1",
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(255, 255, 255)",
+      "filter": "none",
+      "letterSpacing": "normal"
+    },
+    "after": {
+      "transform": "none",
+      "opacity": "1",
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(255, 255, 255)",
+      "filter": "none",
+      "letterSpacing": "normal",
+      "cursorEls": [
+        {
+          "cls": "home wp-singular page-template-default page page-id-50 wp-em",
+          "w": 1440,
+          "h": 10578,
+          "transform": "none",
+          "mixBlendMode": "normal",
+          "bg": "rgb(255, 255, 255)",
+          "text": "We value your privacy  We use "
+        },
+        {
+          "cls": "cmsmasters-cursor cmsmasters-cursor-dot",
+          "w": 12,
+          "h": 12,
+          "transform": "matrix(1, 0, 0, 1, 809, 288)",
+          "mixBlendMode": "normal",
+          "bg": "rgb(255, 255, 255)",
+          "text": ""
+        }
+      ]
+    },
+    "atCorner": {
+      "transform": "none"
+    },
+    "changed": false,
+    "magnetic": false
+  },
+  {
+    "i": 1,
+    "sec": 3,
+    "tag": "span",
+    "cls": "elementor-widget-cmsmasters-highlight-title__item elementor-repeater-i",
+    "text": "together.",
+    "center": {
+      "x": 742,
+      "y": 321
+    },
+    "corner": {
+      "x": 776,
+      "y": 331
+    },
+    "before": {
+      "transform": "none",
+      "opacity": "1",
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(255, 255, 255)",
+      "filter": "none",
+      "letterSpacing": "normal"
+    },
+    "after": {
+      "transform": "none",
+      "opacity": "1",
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(255, 255, 255)",
+      "filter": "none",
+      "letterSpacing": "normal",
+      "cursorEls": [
+        {
+          "cls": "home wp-singular page-template-default page page-id-50 wp-em",
+          "w": 1440,
+          "h": 10578,
+          "transform": "none",
+          "mixBlendMode": "normal",
+          "bg": "rgb(255, 255, 255)",
+          "text": "We value your privacy  We use "
+        },
+        {
+          "cls": "cmsmasters-cursor cmsmasters-cursor-dot",
+          "w": 12,
+          "h": 12,
+          "transform": "matrix(1, 0, 0, 1, 742, 321)",
+          "mixBlendMode": "normal",
+          "bg": "rgb(255, 255, 255)",
+          "text": ""
+        }
+      ]
+    },
+    "atCorner": {
+      "transform": "none"
+    },
+    "changed": false,
+    "magnetic": false
+  },
+  {
+    "i": 2,
+    "sec": 3,
+    "tag": "ul",
+    "cls": "cmsmasters-widget-icon-list-items",
+    "text": "+47 345 234 789 pixel-craft@example.com",
+    "center": {
+      "x": 855,
+      "y": 413
+    },
+    "corner": {
+      "x": 969,
+      "y": 443
+    },
+    "before": {
+      "transform": "none",
+      "opacity": "1",
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(84, 84, 84)",
+      "filter": "none",
+      "letterSpacing": "normal"
+    },
+    "after": {
+      "transform": "none",
+      "opacity": "1",
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(84, 84, 84)",
+      "filter": "none",
+      "letterSpacing": "normal",
+      "cursorEls": [
+        {
+          "cls": "home wp-singular page-template-default page page-id-50 wp-em",
+          "w": 1440,
+          "h": 10578,
+          "transform": "none",
+          "mixBlendMode": "normal",
+          "bg": "rgb(255, 255, 255)",
+          "text": "We value your privacy  We use "
+        },
+        {
+          "cls": "cmsmasters-cursor cmsmasters-cursor-dot",
+          "w": 12,
+          "h": 12,
+          "transform": "matrix(1, 0, 0, 1, 855, 413)",
+          "mixBlendMode": "normal",
+          "bg": "rgb(255, 255, 255)",
+          "text": ""
+        }
+      ]
+    },
+    "atCorner": {
+      "transform": "none"
+    },
+    "changed": false,
+    "magnetic": false
+  },
+  {
+    "i": 3,
+    "sec": 3,
+    "tag": "li",
+    "cls": "cmsmasters-widget-icon-list-item",
+    "text": "+47 345 234 789",
+    "center": {
+      "x": 855,
+      "y": 392
+    },
+    "corner": {
+      "x": 969,
+      "y": 407
+    },
+    "before": {
+      "transform": "none",
+      "opacity": "1",
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(84, 84, 84)",
+      "filter": "none",
+      "letterSpacing": "normal"
+    },
+    "after": {
+      "transform": "none",
+      "opacity": "1",
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(84, 84, 84)",
+      "filter": "none",
+      "letterSpacing": "normal",
+      "cursorEls": [
+        {
+          "cls": "home wp-singular page-template-default page page-id-50 wp-em",
+          "w": 1440,
+          "h": 10578,
+          "transform": "none",
+          "mixBlendMode": "normal",
+          "bg": "rgb(255, 255, 255)",
+          "text": "We value your privacy  We use "
+        },
+        {
+          "cls": "cmsmasters-cursor cmsmasters-cursor-dot",
+          "w": 12,
+          "h": 12,
+          "transform": "matrix(1, 0, 0, 1, 855, 392)",
+          "mixBlendMode": "normal",
+          "bg": "rgb(255, 255, 255)",
+          "text": ""
+        }
+      ]
+    },
+    "atCorner": {
+      "transform": "none"
+    },
+    "changed": false,
+    "magnetic": false
+  }
+]

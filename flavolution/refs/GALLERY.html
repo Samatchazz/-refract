@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Flavolution — เว็บตัวอย่าง</title>
+<style>
+  :root { --bg:#f6f6f4; --card:#fff; --ink:#1d1d1f; --mute:#6e6e73; --line:#e3e3e0; --pick:#1d1d1f; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink); font:15px/1.55 -apple-system, "Segoe UI", "Noto Sans Thai", "Leelawadee UI", Tahoma, sans-serif; padding-bottom:90px; }
+  header { max-width:1280px; margin:0 auto; padding:32px 16px 8px; }
+  h1 { font-size:24px; margin:0 0 6px; font-weight:600; }
+  header p { margin:0; color:var(--mute); max-width:760px; }
+  nav.jump { display:flex; gap:8px; margin-top:14px; flex-wrap:wrap; }
+  nav.jump a { font-size:14px; color:var(--ink); border:1px solid var(--line); background:#fff; padding:6px 12px; border-radius:99px; text-decoration:none; }
+  section { max-width:1280px; margin:0 auto; padding:24px 16px 8px; }
+  h2 { font-size:19px; font-weight:600; margin:0 0 4px; }
+  section > p { color:var(--mute); margin:0 0 16px; font-size:14px; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(min(100%, 560px), 1fr)); gap:18px; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:12px; overflow:hidden; display:flex; flex-direction:column; transition:border-color .15s, box-shadow .15s; }
+  .card.on { border-color:var(--pick); box-shadow:0 0 0 2px var(--pick); }
+  .shots { display:grid; grid-template-columns:1fr 26%; gap:8px; padding:10px 10px 0; background:#fafaf9; cursor:zoom-in; }
+  .shots img { width:100%; display:block; border-radius:6px; border:1px solid var(--line); background:#eee; }
+  .shots .d { aspect-ratio:1440/900; object-fit:cover; object-position:top; }
+  .shots .m { aspect-ratio:390/844; object-fit:cover; object-position:top; }
+  .hint { font-size:12px; color:var(--mute); padding:4px 10px 8px; background:#fafaf9; }
+  .body { padding:12px 14px 14px; display:flex; flex-direction:column; gap:8px; }
+  .top { display:flex; align-items:baseline; justify-content:space-between; gap:10px; }
+  .name { font-weight:600; font-size:16px; }
+  .num { color:var(--mute); font-size:13px; margin-right:6px; }
+  .top a { font-size:13px; color:var(--mute); white-space:nowrap; }
+  .note { margin:0; color:#3a3a3c; font-size:14px; }
+  .tags { display:flex; gap:6px; flex-wrap:wrap; }
+  .tag { font-size:12px; color:var(--mute); border:1px solid var(--line); border-radius:99px; padding:1px 8px; }
+  .act { display:flex; gap:8px; align-items:center; }
+  .like { flex:none; border:1px solid var(--ink); background:#fff; color:var(--ink); border-radius:99px; padding:7px 16px; font:inherit; font-size:14px; cursor:pointer; }
+  .card.on .like { background:var(--ink); color:#fff; }
+  .act input { flex:1; min-width:0; border:1px solid var(--line); border-radius:8px; padding:8px 10px; font:inherit; font-size:14px; }
+  .bar { position:fixed; left:0; right:0; bottom:0; background:rgba(255,255,255,.96); backdrop-filter:blur(8px); border-top:1px solid var(--line); padding:12px 16px; display:flex; gap:12px; align-items:center; justify-content:center; z-index:5; flex-wrap:wrap; }
+  .bar b { font-size:15px; }
+  .bar button { border:0; background:var(--ink); color:#fff; border-radius:99px; padding:10px 18px; font:inherit; font-size:14px; cursor:pointer; }
+  .bar button.ghost { background:#fff; color:var(--ink); border:1px solid var(--line); }
+  .toast { font-size:13px; color:#1a7f37; }
+  .lb { position:fixed; inset:0; background:rgba(20,20,20,.92); z-index:10; display:none; flex-direction:column; }
+  .lb.open { display:flex; }
+  .lb .lbh { display:flex; justify-content:space-between; align-items:center; color:#fff; padding:10px 16px; gap:10px; }
+  .lb .lbh button { background:#fff; color:#111; border:0; border-radius:99px; padding:6px 14px; font:inherit; cursor:pointer; }
+  .lb .tabs { display:flex; gap:6px; }
+  .lb .tabs button { background:transparent; color:#fff; border:1px solid #666; }
+  .lb .tabs button.cur { background:#fff; color:#111; }
+  .lb .scroll { overflow:auto; flex:1; padding:0 16px 24px; text-align:center; }
+  .lb img { max-width:min(1200px, 100%); height:auto; border-radius:6px; }
+  .lb img.mob { max-width:min(420px, 100%); }
+  @media (max-width:600px) { h1{font-size:20px} .shots{grid-template-columns:1fr 30%} }
+</style>
+</head>
+<body>
+<header>
+  <h1>เว็บจริงที่สวย — เลือกหน้าตาให้ Flavolution</h1>
+  <p>รวมเว็บจริงระดับหัวแถว 2 กลุ่ม กด “ชอบ” ตัวที่ถูกใจ แล้วพิมพ์สั้นๆ ว่าชอบตรงไหน (สี ตัวอักษร ภาพวาด การขยับ ฯลฯ) จากนั้นกดปุ่ม “คัดลอกรายการที่เลือก” ด้านล่าง แล้ววางกลับในแชท · คลิกที่รูปเพื่อดูทั้งหน้า</p>
+  <nav class="jump"><a href="#quiz">ควิซ/MBTI สวยๆ</a><a href="#brand">เอเจนซี่และแบรนด์อาหารสวยๆ</a></nav>
+</header>
+
+<section id="quiz">
+  <h2>1 · ควิซ/MBTI สวยๆ</h2>
+  <p>แบบทดสอบบุคลิกและหน้าผลที่ออกแบบดี — ดูเรื่องภาพประกอบ ตัวละคร สี และหน้าผลลัพธ์</p>
+  <div class="grid" data-group="A"></div>
+</section>
+
+<section id="brand">
+  <h2>2 · เอเจนซี่และแบรนด์อาหารสวยๆ</h2>
+  <p>สตูดิโอออกแบบแบรนด์อาหาร/ร้านอาหาร และเว็บแบรนด์อาหารที่ได้รางวัล — ดูเรื่องตัวอักษร การจัดหน้า ภาพถ่าย และอารมณ์</p>
+  <div class="grid" data-group="B"></div>
+</section>
+
+<div class="bar">
+  <b id="count">เลือกแล้ว 0 เว็บ</b>
+  <button id="copy">คัดลอกรายการที่เลือก</button>
+  <button id="clear" class="ghost">ล้างทั้งหมด</button>
+  <span class="toast" id="toast"></span>
+</div>
+
+<div class="lb" id="lb">
+  <div class="lbh">
+    <span id="lbt"></span>
+    <div class="tabs"><button data-v="full" class="cur">ทั้งหน้า</button><button data-v="desk">จอคอม</button><button data-v="mob">มือถือ</button></div>
+    <button id="lbx">ปิด ✕</button>
+  </div>
+  <div class="scroll"><img id="lbi" alt=""></div>
+</div>
+
+<script>
+const SITES = [
+  // ---- A: quiz ----
+  {g:'A', slug:'16p-home', name:'16Personalities', url:'https://www.16personalities.com/', tags:['ภาพประกอบ','หน้าแรก'], note:'มาตรฐานโลกของควิซบุคลิก — ภาพวาดตัวละครโลว์โพลีสีพาสเทลนุ่มๆ ดูอบอุ่น พื้นที่ว่างเยอะ อ่านง่าย'},
+  {g:'A', slug:'16p-type', name:'16Personalities — หน้าผล (INFJ)', url:'https://www.16personalities.com/infj-personality', tags:['หน้าผล'], note:'หน้าผลลัพธ์ต้นแบบ: ตัวละคร + ชื่อเล่น + โค้ด 4 ตัว + เมนูแยกหมวด อ่านยาวแต่ไม่เหนื่อย'},
+  {g:'A', slug:'16p-types', name:'16Personalities — รวม 16 แบบ', url:'https://www.16personalities.com/personality-types', tags:['ภาพประกอบ','ระบบสี'], note:'หน้ารวมทุกแบบ แบ่ง 4 กลุ่ม 4 สี ตัวละครคนละท่าทาง — แบบที่ 10 archetype ร้านอาหารเอามาใช้ได้ตรงๆ'},
+  {g:'A', slug:'klook-bestyou', name:'The Best You by Klook', url:'https://www.experiencethebestyou.com/en/', tags:['การขยับ','3D','รางวัล'], note:'Awwwards Site of the Day 2025 — ควิซเที่ยวสไตล์พาสปอร์ต 3D ไล่สีจัด ตัวหนังสือใหญ่เต็มจอ'},
+  {g:'A', slug:'year-of-love', name:'Year of Love (Wix × Syndrome)', url:'https://year-of-love.exploresyndrome.com/', tags:['ภาพประกอบ','สีสด'], note:'ท้องฟ้า ดอกไม้ ยิ้ม สไตล์ Y2K สดใส ฟอนต์หัวเรื่องหรู — ควิซหาคู่ที่ดูเหมือนโปสเตอร์'},
+  {g:'A', slug:'bbc-japan', name:'BBC — Japan’s Infinite Personalities', url:'https://www.bbc.com/storyworks/specials/japan-islands-of-worlds/', tags:['ภาพวาดมือ','เล่าเรื่อง'], note:'ควิซ 10 ภูมิภาค (10 แบบ เหมือนเรา!) ภาพวาดสีน้ำญี่ปุ่นละเอียด เลื่อนลงแล้วเรื่องค่อยๆ เปิด'},
+  {g:'A', slug:'ktestone', name:'KTestOne (เกาหลี)', url:'https://ktestone.com/', tags:['มือถือ','ภาพประกอบ'], note:'แหล่งเทสต์เกาหลีสายไวรัล — แต่ละเทสต์มีภาพปกวาดเองน่ารัก ทำมาเพื่อมือถือและแชร์ลงโซเชียล'},
+  {g:'A', slug:'poomang-home', name:'Poomang (เกาหลี)', url:'https://poomang.com/', tags:['มือถือ','การ์ตูน'], note:'แพลตฟอร์มเทสต์เกาหลี ภาพปกสไตล์การ์ตูน/สติกเกอร์ สีจัด ดูเหมือนแอปเกม'},
+  {g:'A', slug:'archetype-th', name:'Archetype Thailand — 16 Characters', url:'https://archetypethailand.com/', tags:['ภาษาไทย'], note:'ควิซ 16 แบบภาษาไทยของเอเจนซี่ไทย — ดูว่าตัวหนังสือไทยบนพื้นเข้มสีม่วงออกมาเป็นยังไง'},
+  {g:'A', slug:'pudding-music', name:'The Pudding — How Bad Is Your Streaming Music?', url:'https://pudding.cool/2021/10/judge-my-music/', tags:['เล่าเรื่อง','ตัวอักษร'], note:'“ควิซ” ที่คุยกับเราเหมือนคนจริงแซวรสนิยม — เรียบ หรู ตัวพิมพ์ดีด มุกเยอะ หน้าผลแชร์ง่าย'},
+  {g:'A', slug:'thematter-krungsri', name:'The MATTER × Krungsri — แบบทดสอบ “ความง่าย”', url:'https://thematter.co/brandedcontent/krungsri_personalitytest/234413', tags:['ภาษาไทย','ภาพประกอบ'], note:'ตัวอย่างไทย: ภาพประกอบคนไทยสีเหลืองสด ตัวหนังสือไทยหนาๆ มีคาแรกเตอร์ แบรนด์ใหญ่ทำควิซผ่าน LINE'},
+  {g:'A', slug:'smrj-shindan', name:'中小機構 — 志士タイプ診断', url:'https://kikou.smrj.go.jp/shindan/', tags:['ญี่ปุ่น','B2B'], note:'ควิซ “นักธุรกิจแบบไหน” ของหน่วยงานญี่ปุ่น — ธีมซามูไรยุคเมจิ เหลือง-ดำจัดจ้าน ขนาดงานราชการยังสนุก'},
+  {g:'A', slug:'diag-result', name:'Sales Animal Finder (営業タイプ診断)', url:'https://diagnostic-result-project.web.app/', tags:['ญี่ปุ่น','พิกเซล'], note:'ควิซสายงานขายแบบญี่ปุ่น ตัวละครพิกเซลอาร์ตสไตล์เกม RPG — ใกล้โทนเกมที่เราเคยคุย'},
+  {g:'A', slug:'aww-shoe', name:'The Shoe Personality Quiz (Awwwards)', url:'https://www.awwwards.com/sites/the-shoe-personality-quiz', tags:['ระบบสี','ภาพประกอบ'], note:'แถบสีพาสเทลเป็นคอลัมน์ + ไอคอนรองเท้าวาดเอง เว็บจริงปิดไปแล้ว ดูจากหน้า Awwwards แทน'},
+  {g:'A', slug:'aww-chekhov', name:'Chekhov Is Alive (Awwwards)', url:'https://www.awwwards.com/sites/chekhov-is-alive', tags:['ตัวละคร','รางวัล'], note:'Site of the Day ของ Google — “คุณเป็นตัวละครไหน” หน้าผลเป็นภาพพอร์ตเทรตกราฟิกสีสด (เว็บจริงปิดแล้ว)'},
+  {g:'A', slug:'prose-quiz', name:'Prose — Hair Consultation', url:'https://prose.com/consultation/hair', tags:['หรูเรียบ','แบรนด์'], note:'ควิซของแบรนด์ความงามสายพรีเมียม — ภาพสินค้าจัดวางสวย ฟอนต์เซอริฟบาง โทนครีม ดูแพงและน่าเชื่อถือ'},
+  // ---- B: agencies & F&B brands ----
+  {g:'B', slug:'robot-food', name:'Robot Food', url:'https://www.robot-food.com/', tags:['เอเจนซี่ F&B','สีสด'], note:'เอเจนซี่แบรนด์อาหารจากอังกฤษ — กราฟิกเต็มจอ ตัวอักษรใหญ่หนา สีเหลืองจัด กล้าและสนุก'},
+  {g:'B', slug:'koto2', name:'Koto', url:'https://koto.com/', tags:['เอเจนซี่','วิดีโอ'], note:'สตูดิโอแบรนด์ระดับโลก — เปิดด้วยวิดีโอเต็มจอ ตัวหนังสือน้อยนิด มั่นใจมาก'},
+  {g:'B', slug:'crown-creative', name:'Crown Creative', url:'https://crowncreative.com/', tags:['เอเจนซี่ร้านอาหาร','ภาพถ่าย'], note:'เอเจนซี่แบรนด์โรงแรม/ร้านอาหาร — ภาพถ่ายอาหาร-เครื่องดื่มระยะใกล้ ฟอนต์เซอริฟเอียง หรูแบบอบอุ่น'},
+  {g:'B', slug:'brand-bureau', name:'Brand Bureau', url:'https://www.brandbureau.com/', tags:['เอเจนซี่ร้านอาหาร','ตัวอักษร'], note:'เอเจนซี่พัฒนาร้าน/ฮอสพิทาลิตี้ — หัวเรื่องตัวหนาแน่นแบบนิตยสาร ภาพร้านจริงเรียงเป็นแถบ ตรงไปตรงมา'},
+  {g:'B', slug:'little-troop', name:'Little Troop', url:'https://littletroop.com/', tags:['สตูดิโอ F&B','การขยับ'], note:'สตูดิโอนิวยอร์กที่ทำแบรนด์ร้านอาหารเยอะ — ลูกเล่นภาพวงกลมหมุน ขี้เล่น มีความเป็นงานคราฟต์'},
+  {g:'B', slug:'mucho', name:'Mucho', url:'https://wearemucho.com/', tags:['เอเจนซี่','3D'], note:'เอเจนซี่แบรนด์ บาร์เซโลนา/SF — ภาพ 3D กับพื้นน้ำเงินเข้ม ผลงานโชว์เหมือนนิทรรศการ'},
+  {g:'B', slug:'farmgroup', name:'Farmgroup (ไทย)', url:'https://farmgroup.co.th/', tags:['เอเจนซี่ไทย','ภาพถ่าย'], note:'สตูดิโอออกแบบไทยระดับโลก — ภาพผลงานเต็มจอ เมนูแค่ 2 คำ เรียบสุดแต่ดูแพง'},
+  {g:'B', slug:'dishoom', name:'Dishoom', url:'https://www.dishoom.com/', tags:['ร้านอาหาร','เล่าเรื่อง'], note:'ร้านอินเดียในลอนดอนที่เล่าเรื่องเก่งที่สุด — วิดีโอขาวดำ คำพูดตัวเซอริฟ อารมณ์เหมือนหนัง'},
+  {g:'B', slug:'ponpon', name:'Ponpon Mania', url:'https://ponpon-mania.com/', tags:['ภาพประกอบ','การขยับ','รางวัล'], note:'คอมิกอินเทอร์แอคทีฟ — ภาพวาดตัวละครสีสดจัด ขยับตามเมาส์ ความสนุกระดับ Awwwards'},
+  {g:'B', slug:'senbei', name:'Tokyo Senbei', url:'https://senbei.tokyo/', tags:['ญี่ปุ่น','ลวดลาย'], note:'แบรนด์ข้าวเกรียบญี่ปุ่นยุคใหม่ — ลวดลายกราฟิกดั้งเดิม + ตัวอักษรใหญ่ขาดขอบจอ ผสมเก่ากับใหม่'},
+  {g:'B', slug:'hakubaku', name:'はくばく 雑っていいこと', url:'https://hakubaku-zatsu.jp/', tags:['ญี่ปุ่น','การจัดหน้า'], note:'เว็บธัญพืชญี่ปุ่น — การ์ดมุมมน ป้ายวงกลม ตัวอักษรญี่ปุ่นใหญ่ๆ อบอุ่นแบบบ้านๆ แต่ประณีต'},
+  {g:'B', slug:'yokanka', name:'YO KAN KA', url:'https://yokanka.com/', tags:['ญี่ปุ่น','มินิมอล'], note:'ขนมโยกังชิ้นเดียวกลางจอขาว ตัวหนังสือแนวตั้งบางๆ — ความเงียบที่ทำให้ของดูมีค่า'},
+  {g:'B', slug:'otsuka-zeroz', name:'/zeroz (Otsuka)', url:'https://otsuka-air.jp/', tags:['ญี่ปุ่น','ตัวอักษร','รางวัล'], note:'Site of the Day เครื่องดื่มญี่ปุ่น — โลโก้ตัวใหญ่เต็มจอ ดำ-ขาว-เขียว คมชัดแบบแบรนด์กีฬา'},
+  {g:'B', slug:'brew-place', name:'Brew (日本酒)', url:'https://brew.place/', tags:['ญี่ปุ่น','บรรยากาศ'], note:'แพลตฟอร์มสาเก — ภาพภูเขาหมอกเต็มจอ ตัวหนังสือแนวตั้งเล็กๆ บรรยากาศลึกเหมือนภาพยนตร์'},
+  {g:'B', slug:'death-co', name:'Death & Co', url:'https://www.deathandcompany.com/', tags:['บาร์','วิดีโอ'], note:'บาร์ค็อกเทลชื่อดัง — วิดีโอมืดๆ โลโก้ลายมือสีทอง หรูลึกลับ'},
+  {g:'B', slug:'omsom', name:'Omsom', url:'https://omsom.com/', tags:['แบรนด์อาหารเอเชีย','สีสด'], note:'ซอสเอเชียจากอเมริกา — ภาพอาหารสีจัด สติกเกอร์ป้ายตัวหนา ชมพู-แดง-เหลือง “ภูมิใจและเสียงดัง”'},
+  {g:'B', slug:'burrito-madre', name:'Burrito Madre', url:'https://burritomadre.rs/en/', tags:['ร้านอาหาร','รางวัล'], note:'ร้านบูร์ริโต้ (Awwwards) — อาหารลอยเด่นกลางจอ ตัวหนังสือหนาใหญ่ ดูอร่อยและสนุก'},
+  {g:'B', slug:'meatopia', name:'Meatopia', url:'https://visitmeatopia.com/', tags:['ภาพประกอบ','เกม'], note:'เทศกาลบาร์บีคิว — แผนที่โลกวาดมือแบบเกม โลโก้สไตล์โปสเตอร์หนัง เหมือนเปิดเกมผจญภัย'}
+];
+
+const KEY = 'flavolution-gallery-picks-v1';
+let picks = {};
+try { picks = JSON.parse(localStorage.getItem(KEY) || '{}') || {}; } catch (e) { picks = {}; }
+function save() { try { localStorage.setItem(KEY, JSON.stringify(picks)); } catch (e) {} }
+const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+
+const counters = {A:0, B:0};
+SITES.forEach(s => {
+  const n = (s.g === 'A' ? 'A' : 'B') + (++counters[s.g]);
+  s.code = n;
+  const p = picks[s.slug] || {};
+  const el = document.createElement('article');
+  el.className = 'card' + (p.on ? ' on' : '');
+  el.innerHTML = `
+    <div class="shots" title="คลิกเพื่อดูทั้งหน้า">
+      <img class="d" loading="lazy" src="shots/${s.slug}-desk.jpg" alt="${esc(s.name)} จอคอม">
+      <img class="m" loading="lazy" src="shots/${s.slug}-mob.jpg" alt="${esc(s.name)} มือถือ">
+    </div>
+    <div class="hint">ซ้าย: จอคอม · ขวา: มือถือ · คลิกเพื่อดูทั้งหน้า</div>
+    <div class="body">
+      <div class="top"><div class="name"><span class="num">${n}</span>${esc(s.name)}</div><a href="${s.url}" target="_blank" rel="noopener">เปิดเว็บจริง ↗</a></div>
+      <p class="note">${esc(s.note)}</p>
+      <div class="tags">${s.tags.map(t => `<span class="tag">${esc(t)}</span>`).join('')}</div>
+      <div class="act">
+        <button class="like" type="button">${p.on ? '✓ ชอบ' : 'ชอบ'}</button>
+        <input type="text" placeholder="ชอบตรงไหน? (ไม่ต้องก็ได้)" value="${esc(p.note || '')}">
+      </div>
+    </div>`;
+  const btn = el.querySelector('.like'), inp = el.querySelector('input');
+  btn.onclick = () => {
+    const cur = picks[s.slug] || {};
+    cur.on = !cur.on; picks[s.slug] = cur; save();
+    el.classList.toggle('on', cur.on); btn.textContent = cur.on ? '✓ ชอบ' : 'ชอบ'; update();
+  };
+  inp.oninput = () => {
+    const cur = picks[s.slug] || {};
+    cur.note = inp.value;
+    if (inp.value.trim() && !cur.on) { cur.on = true; el.classList.add('on'); btn.textContent = '✓ ชอบ'; }
+    picks[s.slug] = cur; save(); update();
+  };
+  el.querySelector('.shots').onclick = () => openLB(s);
+  document.querySelector(`.grid[data-group="${s.g}"]`).appendChild(el);
+});
+
+function chosen() { return SITES.filter(s => picks[s.slug] && picks[s.slug].on); }
+function update() { document.getElementById('count').textContent = `เลือกแล้ว ${chosen().length} เว็บ`; }
+update();
+
+function toast(t) { const e = document.getElementById('toast'); e.textContent = t; setTimeout(() => e.textContent = '', 2500); }
+document.getElementById('copy').onclick = async () => {
+  const list = chosen();
+  if (!list.length) { toast('ยังไม่ได้เลือกเลย'); return; }
+  const lines = ['เว็บที่ชอบ (Flavolution):'];
+  list.forEach(s => {
+    const note = (picks[s.slug].note || '').trim();
+    lines.push(`- ${s.code} ${s.name} — ${s.url}${note ? '\n  ชอบ: ' + note : ''}`);
+  });
+  const text = lines.join('\n');
+  try { await navigator.clipboard.writeText(text); toast('คัดลอกแล้ว วางในแชทได้เลย'); }
+  catch (e) {
+    const ta = document.createElement('textarea'); ta.value = text; document.body.appendChild(ta); ta.select();
+    try { document.execCommand('copy'); toast('คัดลอกแล้ว วางในแชทได้เลย'); } catch (e2) { prompt('คัดลอกข้อความนี้:', text); }
+    ta.remove();
+  }
+};
+document.getElementById('clear').onclick = () => {
+  if (!confirm('ล้างรายการที่เลือกทั้งหมด?')) return;
+  picks = {}; save();
+  document.querySelectorAll('.card').forEach(c => { c.classList.remove('on'); c.querySelector('.like').textContent = 'ชอบ'; c.querySelector('input').value = ''; });
+  update();
+};
+
+// lightbox
+const lb = document.getElementById('lb'), lbi = document.getElementById('lbi');
+let lbSite = null;
+function show(v) {
+  lbi.src = `shots/${lbSite.slug}-${v}.jpg`; lbi.className = v === 'mob' ? 'mob' : '';
+  lb.querySelectorAll('.tabs button').forEach(b => b.classList.toggle('cur', b.dataset.v === v));
+  lb.querySelector('.scroll').scrollTop = 0;
+}
+function openLB(s) { lbSite = s; document.getElementById('lbt').textContent = s.code + ' ' + s.name; show('full'); lb.classList.add('open'); document.body.style.overflow = 'hidden'; }
+function closeLB() { lb.classList.remove('open'); document.body.style.overflow = ''; }
+lb.querySelectorAll('.tabs button').forEach(b => b.onclick = () => show(b.dataset.v));
+document.getElementById('lbx').onclick = closeLB;
+lb.onclick = e => { if (e.target === lb || e.target.classList.contains('scroll')) closeLB(); };
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLB(); });
+</script>
+</body>
+</html>

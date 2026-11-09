@@ -1,0 +1,128 @@
+<title>Kinnom Cafe Sheet</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anuphan:wght@400;500;600;700&display=swap">
+<style>
+  :root {
+    --ground: #fbf6f7; --card: #ffffff; --ink: #2a1d22; --muted: #7c6870; --line: #eadde2;
+    --accent: #e0577b; --cafe: #8a5a3c; --cafe-bg: #f6ece4; --not: #44627a; --not-bg: #e8eff4; --skip: #8b7f84; --skip-bg: #efeaec;
+  }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+    --ground: #1c1518; --card: #261c20; --ink: #f3e8ec; --muted: #ad99a1; --line: #3a2b31;
+    --accent: #ee7697; --cafe: #d9a57f; --cafe-bg: #3a2a20; --not: #93b6d1; --not-bg: #22313d; --skip: #a89aa0; --skip-bg: #322830; } }
+  :root[data-theme="dark"] {
+    --ground: #1c1518; --card: #261c20; --ink: #f3e8ec; --muted: #ad99a1; --line: #3a2b31;
+    --accent: #ee7697; --cafe: #d9a57f; --cafe-bg: #3a2a20; --not: #93b6d1; --not-bg: #22313d; --skip: #a89aa0; --skip-bg: #322830; }
+  * { box-sizing: border-box; }
+  body { background: var(--ground); color: var(--ink); font: 16px/1.55 "Anuphan", "Leelawadee UI", "Noto Sans Thai", system-ui, sans-serif; padding-inline: 16px; padding-block: 0 48px; }
+  .wrap { max-width: 720px; margin-inline: auto; display: flex; flex-direction: column; gap: 14px; }
+  header.top { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--ground); padding-block: 14px 10px; border-bottom: 1px solid var(--line); display: flex; flex-direction: column; gap: 8px; }
+  h1 { font-size: 20px; font-weight: 700; margin: 0; text-wrap: balance; }
+  .lede { margin: 0; color: var(--muted); font-size: 14px; }
+  .meter { display: flex; align-items: center; gap: 10px; font-variant-numeric: tabular-nums; font-size: 14px; }
+  .bar { flex: 1; height: 8px; border-radius: 99px; background: var(--line); overflow: hidden; }
+  .bar > i { display: block; height: 100%; width: 0; background: var(--accent); transition: width .25s; }
+  .chips { display: flex; gap: 8px; flex-wrap: wrap; }
+  .chip { font: inherit; font-size: 14px; font-weight: 600; padding: 6px 12px; border-radius: 99px; border: 1px solid var(--line); background: var(--card); color: var(--muted); cursor: pointer; }
+  .chip[aria-pressed="true"] { background: var(--ink); color: var(--ground); border-color: var(--ink); }
+  .note { font-size: 14px; color: var(--muted); padding: 10px 12px; border: 1px dashed var(--line); border-radius: 10px; }
+  .note.err { color: var(--accent); border-color: var(--accent); }
+  ul.rows { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; }
+  li.row { padding-block: 16px; border-bottom: 1px solid var(--line); display: flex; flex-direction: column; gap: 8px; }
+  .head { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+  .store { font-size: 18px; font-weight: 700; }
+  .n { font-size: 13px; font-weight: 600; color: var(--muted); font-variant-numeric: tabular-nums; }
+  .state { margin-left: auto; font-size: 13px; font-weight: 700; padding: 2px 10px; border-radius: 99px; }
+  .state.cafe { color: var(--cafe); background: var(--cafe-bg); } .state.not { color: var(--not); background: var(--not-bg); } .state.skip { color: var(--skip); background: var(--skip-bg); }
+  .sp, .why, .ex { margin: 0; font-size: 14px; color: var(--muted); overflow-wrap: anywhere; }
+  .why b { color: var(--ink); font-weight: 600; }
+  .sug { font-weight: 600; color: var(--ink); }
+  .btns { display: grid; grid-template-columns: 1fr 1fr auto; gap: 8px; }
+  .btns button { font: inherit; font-weight: 700; font-size: 16px; min-height: 48px; border-radius: 12px; border: 2px solid transparent; cursor: pointer; padding-inline: 12px; }
+  .b-cafe { color: var(--cafe); background: var(--cafe-bg); } .b-not { color: var(--not); background: var(--not-bg); } .b-skip { color: var(--skip); background: var(--skip-bg); font-weight: 600; font-size: 14px; }
+  .btns button[aria-pressed="true"] { border-color: currentColor; }
+  .btns button:focus-visible, .chip:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+  .btns button:disabled { opacity: .5; cursor: default; }
+  @media (prefers-reduced-motion: reduce) { .bar > i { transition: none; } }
+</style>
+
+<div class="wrap">
+  <header class="top">
+    <h1>ร้านไหนคือคาเฟ่?</h1>
+    <p class="lede">กดต่อร้าน: <b>คาเฟ่</b> = โพสต์ของร้านนี้เก็บหมวด Cafe ไว้ · <b>ไม่ใช่</b> = ถอด Cafe ออก เหลือหมวดสินค้า (Snack / Food / Drinks) · ร้านที่ยังไม่กด = เก็บ Cafe ไว้ก่อน</p>
+    <div class="meter"><span id="count">0 / 0 ร้าน</span><div class="bar"><i id="fill"></i></div><span id="posts">0 โพสต์</span></div>
+    <div class="chips" role="group" aria-label="ตัวกรอง">
+      <button class="chip" id="f-todo" aria-pressed="true">ยังไม่ตอบ</button>
+      <button class="chip" id="f-all" aria-pressed="false">ทั้งหมด</button>
+      <button class="chip" id="f-done" aria-pressed="false">ตอบแล้ว</button>
+    </div>
+  </header>
+  <div class="note" id="note">กำลังเชื่อมต่อที่เก็บคำตอบ…</div>
+  <ul class="rows" id="rows"></ul>
+</div>
+
+<script>
+(function () {
+  var ROWS = /*ROWS*/[];
+  var ans = {};            // k -> 'cafe' | 'not' | 'skip'
+  var filter = 'todo';
+  var db = null, busy = {};
+  var LABEL = { cafe: 'คาเฟ่', not: 'ไม่ใช่คาเฟ่', skip: 'ไม่แน่ใจ' };
+  var $ = function (id) { return document.getElementById(id); };
+  function el(tag, cls, text) { var e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; }
+
+  function render() {
+    var ul = $('rows'); ul.textContent = '';
+    var done = 0, donePosts = 0, totalPosts = 0;
+    ROWS.forEach(function (r) { totalPosts += r.posts; if (ans[r.k]) { done++; donePosts += r.posts; } });
+    $('count').textContent = done + ' / ' + ROWS.length + ' ร้าน';
+    $('posts').textContent = donePosts + ' / ' + totalPosts + ' โพสต์';
+    $('fill').style.width = (ROWS.length ? 100 * done / ROWS.length : 0) + '%';
+    ROWS.forEach(function (r) {
+      var a = ans[r.k];
+      if (filter === 'todo' && a) return; if (filter === 'done' && !a) return;
+      var li = el('li', 'row');
+      var head = el('div', 'head'); head.appendChild(el('span', 'store', r.store)); head.appendChild(el('span', 'n', r.posts + ' โพสต์'));
+      if (a) head.appendChild(el('span', 'state ' + a, LABEL[a]));
+      li.appendChild(head);
+      if (r.spellings && r.spellings !== r.store) li.appendChild(el('p', 'sp', 'สะกดในโพสต์: ' + r.spellings));
+      var why = el('p', 'why');
+      if (r.suggest) { why.appendChild(el('span', 'sug', 'AI เสนอ: ' + (r.suggest === 'cafe' ? 'คาเฟ่' : 'ไม่ใช่คาเฟ่'))); why.appendChild(document.createTextNode(' — ')); }
+      why.appendChild(document.createTextNode(r.why || 'ไม่มีหลักฐานเดิม'));
+      li.appendChild(why);
+      if (r.examples) li.appendChild(el('p', 'ex', 'ตัวอย่าง: ' + r.examples));
+      var btns = el('div', 'btns');
+      [['cafe', 'b-cafe', '☕ คาเฟ่'], ['not', 'b-not', 'ไม่ใช่'], ['skip', 'b-skip', 'ไม่แน่ใจ']].forEach(function (b) {
+        var bt = el('button', b[1], b[2]); bt.id = 'b-' + r.k + '-' + b[0]; bt.type = 'button';
+        bt.setAttribute('aria-pressed', a === b[0] ? 'true' : 'false'); bt.disabled = !db || !!busy[r.k];
+        bt.addEventListener('click', function () { choose(r, b[0]); });
+        btns.appendChild(bt);
+      });
+      li.appendChild(btns); ul.appendChild(li);
+    });
+    if (!ul.children.length) ul.appendChild(el('li', 'row', filter === 'todo' ? 'ตอบครบทุกร้านแล้ว 🎉 บอก Claude ได้เลยว่า "ตอบชีตแล้ว"' : 'ไม่มีรายการ'));
+  }
+
+  function choose(r, v) {
+    if (!db || busy[r.k]) return;
+    busy[r.k] = true; var prev = ans[r.k]; ans[r.k] = v; render();
+    db.doc('cafe/' + r.k).set({ k: r.k, store: r.store, answer: v, by: 'mat', at: new Date().toISOString() })
+      .then(function () { busy[r.k] = false; render(); })
+      .catch(function (e) { busy[r.k] = false; if (prev) ans[r.k] = prev; else delete ans[r.k]; note('บันทึกไม่สำเร็จ (' + (e && e.code || 'error') + ') ลองกดใหม่อีกครั้ง', true); render(); });
+  }
+  function note(t, err) { var n = $('note'); n.hidden = !t; n.textContent = t || ''; n.className = 'note' + (err ? ' err' : ''); }
+
+  [['f-todo', 'todo'], ['f-all', 'all'], ['f-done', 'done']].forEach(function (f) {
+    $(f[0]).addEventListener('click', function () { filter = f[1]; ['f-todo', 'f-all', 'f-done'].forEach(function (id) { $(id).setAttribute('aria-pressed', id === f[0] ? 'true' : 'false'); }); render(); });
+  });
+  render();
+
+  (window.claude && window.claude.use ? window.claude.use('db') : Promise.resolve(null)).then(function (d) {
+    if (!d) { note('เปิดหน้านี้ผ่าน claude.ai เพื่อบันทึกคำตอบ (ตอนนี้ดูได้อย่างเดียว)', true); return; }
+    db = d; note('');
+    d.collection('cafe').onSnapshot(function (snap) {
+      snap.docs.forEach(function (doc) { var x = doc.data(); if (x && x.answer && !busy[doc.id]) ans[doc.id] = x.answer; });
+      render();
+    }, function (e) { note('อ่านคำตอบไม่ได้ (' + (e && e.code) + ')', true); });
+    render();
+  });
+})();
+</script>

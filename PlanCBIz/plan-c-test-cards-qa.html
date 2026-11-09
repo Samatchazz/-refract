@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Plan C — การทดลอง 7 อย่าง (ถาม-ตอบทีละข้อ)</title>
+<style>
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { font-family:'Sarabun','Noto Sans Thai','Segoe UI',sans-serif; background:#12100E; color:#F2EDE0; line-height:1.7; }
+  .top { position:sticky; top:0; background:#181510; border-bottom:1px solid #2E2822; padding:12px 18px; z-index:10; display:flex; align-items:center; gap:12px; flex-wrap:wrap; }
+  .top .t { font-weight:700; font-size:15px; color:#E8A33D; }
+  .top .p { font-size:13px; color:#B8B2A4; }
+  #toc { display:flex; gap:6px; flex-wrap:wrap; }
+  .dot { width:26px; height:26px; border-radius:50%; background:#26211B; border:1px solid #3A342C; color:#8A8478; font-size:12px; display:flex; align-items:center; justify-content:center; cursor:pointer; }
+  .dot.done { background:#E8A33D; color:#12100E; border-color:#E8A33D; font-weight:700; }
+  .dot.cur { border-color:#F2EDE0; color:#F2EDE0; }
+  .wrap { max-width:820px; margin:0 auto; padding:28px 18px 80px; }
+  .kicker { color:#E8A33D; font-size:13px; letter-spacing:2px; font-weight:700; margin-bottom:6px; }
+  h1 { font-size:22px; margin-bottom:10px; }
+  h2 { font-size:19px; margin-bottom:12px; color:#F2EDE0; }
+  .box { background:#1E1A16; border:1px solid #2E2822; border-radius:12px; padding:18px 20px; margin-bottom:16px; }
+  .box .h { font-size:13px; font-weight:700; letter-spacing:1px; margin-bottom:8px; }
+  .box.simple .h { color:#8FBF7F; }
+  .box.why .h { color:#E8A33D; }
+  .box.what .h { color:#D9705E; }
+  .box p { font-size:15px; color:#D8D2C4; margin-bottom:8px; }
+  .box p:last-child { margin-bottom:0; }
+  .box b { color:#F2EDE0; }
+  .tag { display:inline-block; font-size:11px; padding:2px 8px; border-radius:10px; margin-left:6px; vertical-align:middle; }
+  .tag.own { background:#2C3A28; color:#8FBF7F; }
+  .tag.prop { background:#3A2F1E; color:#E8A33D; }
+  .opt { background:#1E1A16; border:1px solid #2E2822; border-radius:12px; padding:14px 16px; margin-bottom:10px; cursor:pointer; display:flex; gap:12px; align-items:flex-start; }
+  .opt:hover { border-color:#5A5248; }
+  .opt.sel { border-color:#E8A33D; background:#26211B; }
+  .opt .radio { width:18px; height:18px; border-radius:50%; border:2px solid #5A5248; flex-shrink:0; margin-top:4px; position:relative; }
+  .opt.sel .radio { border-color:#E8A33D; }
+  .opt.sel .radio::after { content:''; position:absolute; inset:3px; border-radius:50%; background:#E8A33D; }
+  .opt .lab { font-size:15px; font-weight:600; color:#F2EDE0; }
+  .opt .sub { font-size:13px; color:#9A9488; margin-top:2px; }
+  textarea { width:100%; background:#1E1A16; border:1px solid #2E2822; border-radius:10px; color:#F2EDE0; font-family:inherit; font-size:14px; padding:10px 12px; margin-top:6px; min-height:64px; }
+  .navrow { display:flex; gap:10px; margin-top:22px; }
+  button { font-family:inherit; font-size:15px; font-weight:700; border:none; border-radius:10px; padding:12px 22px; cursor:pointer; }
+  .btn-main { background:#E8A33D; color:#12100E; }
+  .btn-ghost { background:#26211B; color:#B8B2A4; border:1px solid #3A342C; }
+  .qlabel { font-size:13px; color:#8A8478; margin:18px 0 8px; font-weight:700; letter-spacing:1px; }
+  .sum-item { background:#1E1A16; border:1px solid #2E2822; border-radius:12px; padding:14px 16px; margin-bottom:10px; }
+  .sum-item .q { font-size:13px; color:#8A8478; margin-bottom:4px; }
+  .sum-item .a { font-size:15px; color:#F2EDE0; font-weight:600; }
+  .sum-item .a.none { color:#D9705E; }
+  .sum-item .n { font-size:13px; color:#B8B2A4; margin-top:4px; }
+  #mdout { display:none; min-height:220px; margin-top:14px; }
+</style>
+</head>
+<body>
+<div class="top">
+  <span class="t">PLAN C — การทดลอง</span>
+  <span class="p" id="prog">ตอบแล้ว 0/8</span>
+  <div id="toc"></div>
+</div>
+<div class="wrap" id="stage"></div>
+
+<script>
+const Q = [
+{
+  kicker:"ข้อ 1 จาก 8 · การทดลองแรก",
+  title:"จะเริ่มยิงนัดแรกเมื่อไหร่?",
+  simple:"การทดลองแรกคือของที่คุณเคาะไว้เองแล้ว: ไปตอบคอมเมนต์คนที่บ่นเรื่องเงิน/สัญญาในกลุ่ม FB 3 อัน ภายใน 2 สัปดาห์ แล้วนับว่ามีใคร DM มาไหม ใช้เงิน 0 บาท",
+  why:"อันนี้คือข้อที่ 'ถ้าผิดแล้วตายทันที' — ถ้าไม่มีใครทักมาเลย แปลว่าช่องทางพัง ต้องรื้อก่อนทำอย่างอื่นทั้งหมด เพราะงั้นยิ่งรู้เร็วยิ่งดี",
+  what:"คำตอบข้อนี้แค่กำหนดวันเริ่ม ไม่มีผิดถูก — แต่ทุกการทดลองที่เหลือรอข้อนี้อยู่",
+  tagtype:"own", tagtext:"วิธีทดสอบคุณเคาะไว้แล้ว — ถามแค่วันเริ่ม",
+  opts:[
+    ["เริ่มภายในสัปดาห์นี้เลย","บัญชี Plan C พร้อมแล้ว โพสต์ในกลุ่มมีให้ตอบทุกวันอยู่แล้ว"],
+    ["เริ่มหลังเตรียมเพจ/โปรไฟล์ให้ดูน่าเชื่อก่อน","กันคนกด DM มาแล้วเจอเพจว่างเปล่า"],
+    ["ยังไม่กำหนดตอนนี้","เดี๋ยวกลับมาเคาะทีหลัง"]
+  ]
+},
+{
+  kicker:"ข้อ 2 จาก 8 · คนยอมคุยกับคนไม่เปิดชื่อไหม",
+  title:"กี่คนที่ยอมเล่าตัวเลขจริง ถึงจะถือว่า \"นิรนามไปรอด\"?",
+  simple:"สมมติมีคน DM มา 6 คน — บางคนแค่ถามเฉยๆ แล้วหาย บางคนยอมคุยลึกถึงขั้นเล่าเรทจริง ยอดจริง ดีลจริงของตัวเอง คำถามคือ ต้องมีคนแบบหลังกี่คน เราถึงมั่นใจว่าโมเดล \"ไม่เปิดชื่อ\" ไปต่อได้",
+  why:"ธุรกิจนี้ตั้งอยู่บนเงื่อนไขว่าคุณไม่เปิดตัวตน ถ้าคนหายหมดตอนรู้ว่าคุยกับคนนิรนาม ต้องหาวิธีสร้างความเชื่อแบบไม่เปิดหน้า (ให้ผลงานพูดแทนชื่อ) ก่อนค่อยเดินต่อ",
+  what:"เลือกเกณฑ์ = ตั้งเส้นไว้ก่อนยิง จะได้ไม่เถียงกับตัวเองทีหลังว่า \"แบบนี้เรียกผ่านยัง?\"",
+  tagtype:"prop", tagtext:"ผมเสนอ 1 ใน 3 — คุณเคาะ",
+  opts:[
+    ["1 ใน 3 ของคนที่ทักมา ยอมคุยลึก","แปลว่าทัก 6 ต้องคุยลึกได้ 2 — เกณฑ์กลางๆ ที่ผมเสนอ"],
+    ["แค่มีสัก 1 คนยอมคุยลึกก็พอ","รอบแรกขอแค่พิสูจน์ว่า \"มีคนแบบนี้อยู่จริง\" ยังไม่ต้องวัดสัดส่วน"],
+    ["เข้มกว่านั้น — เกินครึ่งต้องยอมคุยลึก","ถ้าน้อยกว่านี้ถือว่าโมเดลนิรนามมีปัญหา ต้องแก้ก่อน"],
+    ["ยังไม่เคาะ ขอดู DM จริงก่อน","เก็บข้อมูลรอบแรกมาดูหน้างานแล้วค่อยตั้งเกณฑ์"]
+  ]
+},
+{
+  kicker:"ข้อ 3 จาก 8 · เช็คว่าเอเจนซีคัดคนยังไง",
+  title:"จะถามกี่คน ถึงจะเชื่อคำตอบได้?",
+  simple:"อันนี้คือการนัดคุยกับคนในวงการที่คุณสนิท (อจซ./ลูกค้าเก่า) ถาม 4 ข้อที่เตรียมไว้แล้ว เช่น เขาใช้เครื่องมืออะไรหาคน ลิสต์เหลือกี่ชื่อ ใครเคาะ คำว่า \"ตัวตนชัด\" เขาดูจากอะไร",
+  why:"คุณตอบจากประสบการณ์ตัวเองแล้วว่าเครื่องมือคัดมีจริง — แต่ถ้าถามแค่คนเดียว คำตอบอาจเป็นความเห็นเฉพาะคน ถามหลายคนจากหลายที่ คำตอบถึงใช้เป็นแกนเซสชันได้",
+  what:"ตัวเลขนี้กำหนดว่าต้องนัดคุยกี่นัดก่อนปิดข้อนี้ได้ — มากไปเสียเวลา น้อยไปเสี่ยงเชื่อผิด",
+  tagtype:"prop", tagtext:"ผมเสนอ 3 คน จาก 2 เอเจนซีขึ้นไป — คุณเคาะ",
+  opts:[
+    ["3 คน จากอย่างน้อย 2 เอเจนซี","ตามที่เสนอ — พอกันคำตอบเป็นความเห็นคนเดียว"],
+    ["2 คนสนิทพอ","ความลึกสำคัญกว่าจำนวน คนสนิทตอบตรงกว่า"],
+    ["5 คนขึ้นไป","เรื่องนี้เป็นแกนเซสชัน อยากได้ภาพที่แน่นจริงๆ"],
+    ["ยังไม่เคาะ","ดูก่อนว่านัดใครได้บ้าง"]
+  ]
+},
+{
+  kicker:"ข้อ 4 จาก 8 · ทดสอบราคา",
+  title:"จะเปิดราคา 599 เป็นตัวทดสอบก่อน 999 ไหม?",
+  simple:"ตอนนี้แผนคือ: เซสชันฟรี → เสนอ 999 → วัดว่าใครซื้อครั้งที่สอง (เป้า 2 ใน 10 ที่คุณตั้งไว้) แต่ใน BMC มีข้อค้างเก่าอยู่ข้อหนึ่ง: จะเปิดราคา 599 เป็นขั้นกลางไหม เพราะมันคือการทดสอบราคาที่ถูกที่สุดที่มี",
+  why:"อย่าลืมว่าไม่มีใครในโลกเคยวัดว่าครีเอเตอร์ไทยยอมจ่ายเท่าไหร่กับบริการแบบนี้ — 999 เป็นตัวเลขที่ยังไม่เคยเจอเงินจริง การมีขั้น 599 ช่วยให้รู้ว่า \"ถ้า 999 ไม่มีคนซื้อ ปัญหาคือราคาหรือคือของ\"",
+  what:"ถ้าเปิด 599: ได้ข้อมูลราคาเพิ่ม แต่เสี่ยงคนมองว่าของถูก + คนที่จ่าย 599 อาจไม่ยอมขยับขึ้น 999 · ถ้าไม่เปิด: ชัดเจนกว่า แต่ถ้า 999 เงียบจะไม่รู้ว่าเพราะอะไร",
+  tagtype:"own", tagtext:"ข้อค้างเดิมของคุณใน BMC — ยกมาถามให้จบ",
+  opts:[
+    ["ไม่เปิด — ยืน 999 ไปเลย","ราคาเดียว ชัดเจน ไม่ทำให้ของดูถูก"],
+    ["เปิด 599 เฉพาะรุ่นก่อตั้ง แล้วปิดถาวร","ได้ทั้งข้อมูลราคา ได้ทั้งเหตุผลว่าทำไมคนแรกๆ ถูกกว่า"],
+    ["เก็บ 599 ไว้เป็นไพ่สำรอง","ยังไม่เปิด — จะเปิดก็ต่อเมื่อ 999 เงียบเกิน X คนแรก"],
+    ["ยังไม่เคาะ","ค่อยตัดสินหลังเซสชันฟรีรุ่นแรกจบ"]
+  ]
+},
+{
+  kicker:"ข้อ 5 จาก 8 · เช็คอินระหว่างเดือน",
+  title:"สมาชิกรุ่นแรก จะมีเช็คอินสั้นๆ ระหว่างเดือนไหม?",
+  simple:"งานวิจัยธุรกิจสมาชิกบอกว่า คนที่รู้สึกว่ามีคน \"ตามดูอยู่\" เลิกน้อยกว่าคนที่ถูกปล่อยเงียบเกือบครึ่ง (เลิก 6.06% ต่อเดือน เทียบกับ 10.46%) เช็คอินคือการทักสั้นๆ กลางเดือน ~15 นาทีต่อคน เช่น ถามว่าที่คุยกันไปได้ลองยัง ติดตรงไหน",
+  why:"จุดตายของธุรกิจสมาชิกคือเดือนที่ 1–3 — คนเลิกช่วงนี้เยอะสุด ถ้ารอด 3 เดือนแรกมักอยู่ยาว เช็คอินคืออาวุธที่ถูกที่สุดที่งานวิจัยยืนยันว่าช่วยจริง",
+  what:"ต้นทุนคือเวลาคุณ ~15 นาที/คน/เดือน · ถ้าสมาชิก 19 คนเต็มเพดาน = ~5 ชม./เดือน",
+  tagtype:"prop", tagtext:"ผมเสนอให้มีทุกคน — คุณเคาะ",
+  opts:[
+    ["มีเช็คอินทุกคน","จ่ายเวลา 5 ชม./เดือนเพื่อลดการเลิก — คุ้มตามงานวิจัย"],
+    ["แบ่งครึ่ง: ครึ่งมี ครึ่งไม่มี","อยากรู้ด้วยข้อมูลตัวเองว่าเช็คอินช่วยจริงไหม (ต้องมีสมาชิกพอสมควรถึงเทียบได้)"],
+    ["ไม่มี — เซสชันตามแพ็กเกจพอ","เวลาคุณมีจำกัด เก็บไว้ทำเซสชันให้ดีที่สุด"],
+    ["ยังไม่เคาะ","รอเห็นจำนวนสมาชิกจริงก่อน"]
+  ]
+},
+{
+  kicker:"ข้อ 6 จาก 8 · เส้นวัดว่าสมาชิกอยู่หรือหนี",
+  title:"ต่ออายุเดือนที่ 2 กี่ % ถึงเรียกว่า \"โอเค\"?",
+  simple:"สมมติเดือนแรกมีสมาชิก 10 คน พอถึงรอบจ่ายเดือนที่ 2 มีคนจ่ายต่อกี่คน? งานวิจัยตลาดบอกค่าเฉลี่ยอยู่ราวๆ 6 ใน 10 — นี่คือการตั้งเส้นว่าของเราต้องได้เท่าไหร่",
+  why:"ถ้าไม่ตั้งเส้นไว้ก่อน พอผลออกมา 4 ใน 10 เราจะหลอกตัวเองว่า \"ก็ไม่แย่นะ\" ทั้งที่จริงๆ มันคือสัญญาณว่ารูปแบบเซสชันมีปัญหา ต้องรื้อไม่ใช่แค่ปรับ",
+  what:"เส้นนี้คือตัวตัดสินว่าเมื่อไหร่ \"ปรับ\" เมื่อไหร่ \"รื้อ\" — ควรเคาะก่อนรับสมาชิกคนแรก",
+  tagtype:"prop", tagtext:"ผมเสนอ ≥60% โอเค · <40% รื้อ — คุณเคาะ",
+  opts:[
+    ["60% ขึ้นไป = โอเค · ต่ำกว่า 40% = รื้อ","ตามค่าเฉลี่ยตลาด — ที่ผมเสนอ"],
+    ["เข้มกว่า: 70% ขึ้นไปถึงเรียกโอเค","ของเราเป็น 1:1 ราคาสูงกว่าคอร์สทั่วไป ควรอยู่ได้นานกว่าค่าเฉลี่ย"],
+    ["หลวมกว่า: 50% ก็รับได้ในรุ่นแรก","รุ่นแรกคือช่วงลองผิดลองถูก อย่าเพิ่งตัดสินแรง"],
+    ["ยังไม่เคาะ","ขอเห็นสมาชิกจริงก่อนค่อยตั้งเส้น"]
+  ]
+},
+{
+  kicker:"ข้อ 7 จาก 8 · การบ้านก่อนเซสชัน",
+  title:"คนหายตอนเจอการบ้านกี่ % ถึงต้องคิดใหม่?",
+  simple:"ตอนนี้กติกาคือ ใครอยากได้เซสชันฟรีต้องส่งการบ้านก่อน (เจตนา: กรองคนจริงจัง) คำถามคือ ถ้าคน 10 คนบอกสนใจ แต่พอส่งการบ้านให้แล้วหายไป 8 คน — แบบนี้เรียกว่ากรองได้ดี หรือกรองแรงเกิน?",
+  why:"การบ้านแรงไป = เสียคนที่ของดีแต่ขี้เกียจกรอกฟอร์ม · เบาไป = เจอคนไม่จริงจังเต็มตาราง (เวลาคุณคือของแพงสุดในธุรกิจนี้) ต้องมีเส้นบอกว่าเมื่อไหร่ควรปรับ",
+  what:"ทางแก้ถ้ากรองแรงไป มีเตรียมไว้แล้วใน BMC: แยกการบ้านเป็น 2 ระดับ (ของกึ่งสาธารณะถามก่อน · ตัวเลขอ่อนไหวถามในห้อง)",
+  tagtype:"prop", tagtext:"ผมเสนอเพดาน 70% — คุณเคาะ",
+  opts:[
+    ["หายเกิน 70% = ทบทวนแยกการบ้าน 2 ระดับ","ตามที่เสนอ"],
+    ["หายเกิน 50% ก็ทบทวนแล้ว","อย่าปล่อยให้เสียคนดีๆ เยอะก่อนค่อยขยับ"],
+    ["ไม่ต้องมีเพดาน — การบ้านคือตัวกรอง ใครหายคือไม่ใช่ลูกค้า","ยืนกติกาเดิมเต็มๆ"],
+    ["ยังไม่เคาะ","เก็บตัวเลขจริงมาดูก่อน"]
+  ]
+},
+{
+  kicker:"ข้อ 8 จาก 8 · เฟส 3 (แบรนด์จ่าย)",
+  title:"สะสมข้อมูลดีลจริงกี่ดีล ถึงค่อยเริ่มคิดเรื่องขายฝั่งแบรนด์?",
+  simple:"เฟส 3 คืออนาคต: แบรนด์จ่ายเงินเพื่อเข้าถึงครีเอเตอร์ที่ผ่านการคัด + ข้อมูลเรทจริงที่แบรนด์เองก็ไม่มี แต่ของแบบนี้ขายได้ก็ต่อเมื่อข้อมูลเรามากพอที่จะมีความหมาย — คำถามคือ \"มากพอ\" คือกี่ดีล",
+  why:"กันตัวเองไม่ให้เปิดเฟส 3 เร็วเกินไปตอนข้อมูลยังบาง (ขายไม่ได้ แถมเสียเครดิต) และกันไม่ให้ลืมมันไปเลย — พอถึงเลขนี้ = สัญญาณว่าได้เวลากลับมาคิด",
+  what:"ทุกดีลของสมาชิกที่มี debrief คือข้อมูลสะสมเข้ากองนี้อัตโนมัติ — ตัวเลขนี้แค่บอกว่าเมื่อไหร่กองมันโตพอ",
+  tagtype:"prop", tagtext:"ผมเสนอ 30 ดีล — คุณเคาะ",
+  opts:[
+    ["30 ดีล","ตามที่เสนอ — พอเห็นแพทเทิร์นเรทต่อหมวด/ต่อขนาดฟอล"],
+    ["15 ดีลก็เริ่มคิดได้แล้ว","เริ่มคุยกับแบรนด์ที่สนิทก่อนได้ ไม่ต้องรอข้อมูลสมบูรณ์"],
+    ["50 ดีลขึ้นไป","เรื่องขายข้อมูลต้องแน่นจริงเท่านั้น เครดิตมีครั้งเดียว"],
+    ["ยังไม่คิดเรื่องเฟส 3 เลยตอนนี้","โฟกัสเฟส 1–2 อย่างเดียว"]
+  ]
+}
+];
+
+let cur = 0;
+const answers = Q.map(()=>({choice:null, note:""}));
+
+function esc(s){ return s.replace(/&/g,"&amp;").replace(/</g,"&lt;"); }
+
+function render(){
+  const stage = document.getElementById('stage');
+  if (cur < Q.length) {
+    const q = Q[cur], a = answers[cur];
+    stage.innerHTML = `
+      <div class="kicker">${q.kicker}</div>
+      <h2>${q.title} <span class="tag ${q.tagtype}">${q.tagtext}</span></h2>
+      <div class="box simple"><div class="h">พูดง่ายๆ คือ</div><p>${q.simple}</p></div>
+      <div class="box why"><div class="h">ทำไมต้องตอบข้อนี้</div><p>${q.why}</p></div>
+      <div class="box what"><div class="h">ตอบแล้วเกิดอะไร</div><p>${q.what}</p></div>
+      <div class="qlabel">เลือกคำตอบ</div>
+      ${q.opts.map((o,i)=>`
+        <div class="opt ${a.choice===i?'sel':''}" data-choose="${i}">
+          <div class="radio"></div>
+          <div><div class="lab">${o[0]}</div><div class="sub">${o[1]}</div></div>
+        </div>`).join('')}
+      <div class="qlabel">โน้ตเพิ่ม (ไม่บังคับ)</div>
+      <textarea id="note" placeholder="เช่น อยากปรับตัวเลข / เงื่อนไขเพิ่ม / คำถามกลับ">${esc(a.note)}</textarea>
+      <div class="navrow">
+        ${cur>0?'<button class="btn-ghost" data-nav="-1">← ก่อนหน้า</button>':''}
+        <button class="btn-main" data-nav="1">${cur===Q.length-1?'ดูสรุป →':'ข้อถัดไป →'}</button>
+      </div>`;
+  } else {
+    stage.innerHTML = `
+      <div class="kicker">สรุป</div>
+      <h2>คำตอบทั้งหมด</h2>
+      ${Q.map((q,i)=>{
+        const a = answers[i];
+        return `<div class="sum-item">
+          <div class="q">${q.kicker.replace(/·.*$/,'')} — ${q.title}</div>
+          <div class="a ${a.choice===null?'none':''}">${a.choice===null?'ยังไม่ได้ตอบ':q.opts[a.choice][0]}</div>
+          ${a.note?`<div class="n">โน้ต: ${esc(a.note)}</div>`:''}
+        </div>`;
+      }).join('')}
+      <div class="navrow">
+        <button class="btn-ghost" data-nav="-1">← กลับไปแก้</button>
+        <button class="btn-main" data-act="export">ดาวน์โหลดคำตอบ (.md)</button>
+      </div>
+      <textarea id="mdout" readonly></textarea>`;
+  }
+  updateTop();
+  window.scrollTo({top:0});
+}
+
+function updateTop(){
+  const done = answers.filter(a=>a.choice!==null).length;
+  document.getElementById('prog').textContent = `ตอบแล้ว ${done}/${Q.length}`;
+  document.getElementById('toc').innerHTML = Q.map((q,i)=>
+    `<div class="dot ${answers[i].choice!==null?'done':''} ${i===cur?'cur':''}" data-jump="${i}">${i+1}</div>`).join('');
+}
+
+function choose(i){
+  answers[cur].choice = i;
+  document.querySelectorAll('#stage [data-choose]').forEach(el=>{
+    el.classList.toggle('sel', Number(el.dataset.choose)===i);
+  });
+  updateTop();
+}
+
+function saveNote(){
+  const n = document.getElementById('note');
+  if (n) answers[cur].note = n.value;
+}
+
+function buildMd(){
+  let md = `# Plan C — คำตอบชุดการทดลอง (Test Cards)\n\n`;
+  Q.forEach((q,i)=>{
+    const a = answers[i];
+    md += `## ${i+1}. ${q.title}\n`;
+    md += `- คำตอบ: ${a.choice===null?'(ยังไม่ได้ตอบ)':q.opts[a.choice][0]}\n`;
+    if (a.note) md += `- โน้ต: ${a.note}\n`;
+    md += `\n`;
+  });
+  return md;
+}
+
+document.getElementById('stage').addEventListener('click', e=>{
+  const c = e.target.closest('[data-choose]');
+  if (c) { choose(Number(c.dataset.choose)); return; }
+  const n = e.target.closest('[data-nav]');
+  if (n) { saveNote(); cur = Math.min(Q.length, Math.max(0, cur + Number(n.dataset.nav))); render(); return; }
+  const x = e.target.closest('[data-act="export"]');
+  if (x) {
+    const md = buildMd();
+    try {
+      const blob = new Blob([md], {type:'text/markdown'});
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = 'planc-testcards-answers.md';
+      a.click();
+    } catch(err){}
+    const out = document.getElementById('mdout');
+    out.style.display = 'block';
+    out.value = md;
+    return;
+  }
+});
+
+document.querySelector('.top').addEventListener('click', e=>{
+  const d = e.target.closest('[data-jump]');
+  if (d) { saveNote(); cur = Number(d.dataset.jump); render(); }
+});
+
+render();
+</script>
+</body>
+</html>

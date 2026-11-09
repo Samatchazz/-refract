@@ -1,0 +1,357 @@
+[
+ {
+  "g": "A",
+  "slug": "16p-home",
+  "name": "16Personalities",
+  "url": "https://www.16personalities.com/"
+ },
+ {
+  "g": "A",
+  "slug": "16p-type",
+  "name": "16Personalities — หน้าผล INFJ",
+  "url": "https://www.16personalities.com/infj-personality"
+ },
+ {
+  "g": "A",
+  "slug": "ktestone",
+  "name": "KTestOne (เกาหลี)",
+  "url": "https://ktestone.com/"
+ },
+ {
+  "g": "A",
+  "slug": "poomang",
+  "name": "Poomang (เกาหลี)",
+  "url": "https://poomang.com/en"
+ },
+ {
+  "g": "A",
+  "slug": "klook-bestyou",
+  "name": "The Best You by Klook",
+  "url": "https://www.experiencethebestyou.com/en/"
+ },
+ {
+  "g": "A",
+  "slug": "year-of-love",
+  "name": "Year of Love (Syndrome)",
+  "url": "https://year-of-love.exploresyndrome.com/"
+ },
+ {
+  "g": "A",
+  "slug": "shibuya16",
+  "name": "渋谷系16タイプ診断",
+  "url": "https://social-innovation-week-shibuya.jp/shibuyakei16type/"
+ },
+ {
+  "g": "A",
+  "slug": "mercari-isekai",
+  "name": "Mercari 異世界職業診断",
+  "url": "https://jp-news.mercari.com/isekaisyokugyoshindan/"
+ },
+ {
+  "g": "A",
+  "slug": "archetype-th",
+  "name": "Archetype Thailand",
+  "url": "https://archetypethailand.com/"
+ },
+ {
+  "g": "A",
+  "slug": "lyst-dna",
+  "name": "Lyst Fashion DNA",
+  "url": "https://www.lyst.co.uk/fashion-dna/"
+ },
+ {
+  "g": "A",
+  "slug": "randstad-quiz",
+  "name": "Randstad Quiz",
+  "url": "https://quiz.randstad.pl/"
+ },
+ {
+  "g": "A",
+  "slug": "boks-quiz",
+  "name": "BOKS Quiz",
+  "url": "https://boksquiz.org/"
+ },
+ {
+  "g": "A",
+  "slug": "acura-energy",
+  "name": "Acura — Unlock Your Energy",
+  "url": "https://acuraunlockyourenergy.com/"
+ },
+ {
+  "g": "A",
+  "slug": "mutant-power",
+  "name": "What's Your Hidden Mutant Power?",
+  "url": "https://whatsyourmutantpower.com/quiz"
+ },
+ {
+  "g": "A",
+  "slug": "bbc-japan",
+  "name": "BBC StoryWorks — Japan's Infinite Personalities",
+  "url": "https://www.bbc.com/storyworks/specials/japan-islands-of-worlds/"
+ },
+ {
+  "g": "A",
+  "slug": "diag-result",
+  "name": "Diagnostic Result Project (JP)",
+  "url": "https://diagnostic-result-project.web.app/"
+ },
+ {
+  "g": "A",
+  "slug": "smrj-shindan",
+  "name": "中小機構 経営診断",
+  "url": "https://kikou.smrj.go.jp/shindan/"
+ },
+ {
+  "g": "A",
+  "slug": "pickles-freee",
+  "name": "freee 診断 (PICKLES case)",
+  "url": "https://pickles.tv/works/freee/"
+ },
+ {
+  "g": "A",
+  "slug": "chekhov",
+  "name": "Chekhov Is Alive (Google)",
+  "url": "https://chekhov.withgoogle.com/alive"
+ },
+ {
+  "g": "A",
+  "slug": "gucci-offgrid",
+  "name": "Gucci Off The Grid",
+  "url": "https://offthegrid.gucci.com/"
+ },
+ {
+  "g": "B",
+  "slug": "robot-food",
+  "name": "Robot Food",
+  "url": "https://www.robot-food.com/"
+ },
+ {
+  "g": "B",
+  "slug": "koto",
+  "name": "Koto Studio",
+  "url": "https://www.koto.studio/"
+ },
+ {
+  "g": "B",
+  "slug": "hey-studio",
+  "name": "Hey Studio",
+  "url": "https://www.heystudio.es/"
+ },
+ {
+  "g": "B",
+  "slug": "hello-monday",
+  "name": "Hello Monday",
+  "url": "https://www.hellomonday.com/"
+ },
+ {
+  "g": "B",
+  "slug": "crown-creative",
+  "name": "Crown Creative",
+  "url": "https://www.crowncreative.com/"
+ },
+ {
+  "g": "B",
+  "slug": "allgood",
+  "name": "All Good NYC",
+  "url": "https://www.allgoodnyc.com/"
+ },
+ {
+  "g": "B",
+  "slug": "brand-bureau",
+  "name": "Brand Bureau",
+  "url": "https://www.brandbureau.com/"
+ },
+ {
+  "g": "B",
+  "slug": "little-troop",
+  "name": "Little Troop",
+  "url": "https://www.littletroop.com/"
+ },
+ {
+  "g": "B",
+  "slug": "mucho",
+  "name": "Mucho",
+  "url": "https://wearemucho.com/"
+ },
+ {
+  "g": "B",
+  "slug": "farmgroup",
+  "name": "Farmgroup (ไทย)",
+  "url": "https://www.farmgroup.co.th/",
+  "wait": 7000
+ },
+ {
+  "g": "B",
+  "slug": "dishoom",
+  "name": "Dishoom",
+  "url": "https://www.dishoom.com/"
+ },
+ {
+  "g": "B",
+  "slug": "ponpon",
+  "name": "Ponpon Mania",
+  "url": "https://ponpon-mania.com/"
+ },
+ {
+  "g": "B",
+  "slug": "senbei",
+  "name": "Senbei Tokyo",
+  "url": "https://senbei.tokyo/"
+ },
+ {
+  "g": "B",
+  "slug": "hakubaku",
+  "name": "はくばく 雑穀",
+  "url": "https://hakubaku-zatsu.jp/"
+ },
+ {
+  "g": "B",
+  "slug": "yokanka",
+  "name": "羊羹家 Yokanka",
+  "url": "https://yokanka.com/"
+ },
+ {
+  "g": "B",
+  "slug": "otsuka-zeroz",
+  "name": "/zeroz (Otsuka)",
+  "url": "https://otsuka-air.jp/"
+ },
+ {
+  "g": "B",
+  "slug": "noma",
+  "name": "noma",
+  "url": "https://noma.dk/"
+ },
+ {
+  "g": "B",
+  "slug": "momofuku",
+  "name": "Momofuku",
+  "url": "https://www.momofuku.com/"
+ },
+ {
+  "g": "B",
+  "slug": "death-co",
+  "name": "Death & Co",
+  "url": "https://www.deathandcompany.com/"
+ },
+ {
+  "g": "B",
+  "slug": "fishwife",
+  "name": "Fishwife",
+  "url": "https://eatfishwife.com/"
+ },
+ {
+  "g": "B",
+  "slug": "omsom",
+  "name": "Omsom",
+  "url": "https://omsom.com/"
+ },
+ {
+  "g": "B",
+  "slug": "graza",
+  "name": "Graza",
+  "url": "https://www.graza.co/"
+ },
+ {
+  "g": "B",
+  "slug": "oatly",
+  "name": "Oatly",
+  "url": "https://www.oatly.com/"
+ },
+ {
+  "g": "B",
+  "slug": "burrito-madre",
+  "name": "Burrito Madre",
+  "url": "https://burritomadre.rs/en/"
+ },
+ {
+  "g": "B",
+  "slug": "brew-place",
+  "name": "Brew Place",
+  "url": "https://brew.place/"
+ },
+ {
+  "g": "B",
+  "slug": "guilty",
+  "name": "Who Is Guilty",
+  "url": "https://whoisguilty.com/"
+ },
+ {
+  "g": "B",
+  "slug": "qissa",
+  "name": "Qissa",
+  "url": "https://www.qissa.co.uk/"
+ },
+ {
+  "g": "B",
+  "slug": "meatopia",
+  "name": "Meatopia",
+  "url": "https://visitmeatopia.com/"
+ },
+ {
+  "g": "B",
+  "slug": "best-bean",
+  "name": "Best Bean Best Cup",
+  "url": "https://bestbeanbestcup.com.au/"
+ },
+ {
+  "g": "A",
+  "slug": "poomang-home",
+  "name": "Poomang (เกาหลี)",
+  "url": "https://poomang.com/"
+ },
+ {
+  "g": "A",
+  "slug": "16p-types",
+  "name": "16Personalities — หน้ารวม 16 แบบ",
+  "url": "https://www.16personalities.com/personality-types"
+ },
+ {
+  "g": "A",
+  "slug": "trade-quiz",
+  "name": "Trade Coffee Quiz",
+  "url": "https://www.drinktrade.com/coffee-quiz"
+ },
+ {
+  "g": "A",
+  "slug": "pudding-music",
+  "name": "The Pudding — Judge My Music",
+  "url": "https://pudding.cool/2021/10/judge-my-music/"
+ },
+ {
+  "g": "A",
+  "slug": "thematter-krungsri",
+  "name": "The MATTER x Krungsri Personality Test",
+  "url": "https://thematter.co/brandedcontent/krungsri_personalitytest/234413"
+ },
+ {
+  "g": "A",
+  "slug": "aww-chekhov",
+  "name": "Chekhov Is Alive (Awwwards)",
+  "url": "https://www.awwwards.com/sites/chekhov-is-alive"
+ },
+ {
+  "g": "A",
+  "slug": "aww-shoe",
+  "name": "The Shoe Personality Quiz (Awwwards)",
+  "url": "https://www.awwwards.com/sites/the-shoe-personality-quiz"
+ },
+ {
+  "g": "A",
+  "slug": "prose-quiz",
+  "name": "Prose Hair Consultation",
+  "url": "https://prose.com/consultation/hair"
+ },
+ {
+  "g": "B",
+  "slug": "hey-studio2",
+  "name": "Hey Studio",
+  "url": "https://heystudio.es/"
+ },
+ {
+  "g": "B",
+  "slug": "koto2",
+  "name": "Koto Studio",
+  "url": "https://koto.studio/"
+ }
+]

@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Flavolution — ทาง A · Kitchen Sketchbook</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anuphan:wght@400;500&family=Mitr:wght@600&family=Sriracha&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F6EFE3;
+  --ink:#1F1B18;
+  --tomato:#D6452B;
+  --olive:#6F7A3C;
+  --yolk:#F2B134;
+  --cream:#EADFCB;
+  --pen:#2F4A7A;
+  --line:#1F1B18;
+  --rule:rgba(31,27,24,.22);
+  --ease:cubic-bezier(.25,.1,.25,1);
+  --dur:.55s;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:"Anuphan",system-ui,sans-serif;
+  font-weight:400;
+  font-size:17px;
+  line-height:1.7;
+  /* faint paper grain */
+  background-image:
+    radial-gradient(rgba(31,27,24,.035) 1px, transparent 1px),
+    radial-gradient(rgba(214,69,43,.03) 1px, transparent 1px);
+  background-size:9px 9px, 23px 23px;
+  background-position:0 0, 4px 7px;
+}
+h1,h2,h3,.display{font-family:"Mitr",sans-serif;font-weight:600;line-height:1.35;letter-spacing:-.005em}
+.hand{font-family:"Sriracha",cursive;font-weight:400}
+.mono{font-variant-numeric:tabular-nums}
+.label{
+  font-family:"Anuphan",sans-serif;font-weight:500;font-size:12px;letter-spacing:.14em;
+  text-transform:uppercase;color:rgba(31,27,24,.6)
+}
+.wrap{width:100%;max-width:1120px;margin:0 auto;padding:0 20px}
+@media(min-width:900px){.wrap{padding:0 40px}}
+section{padding:56px 0}
+section + section{border-top:1.5px solid var(--ink)}
+@media(min-width:900px){section{padding:88px 0}}
+
+/* ---------- ink drawing base ---------- */
+.ink{stroke:var(--line);stroke-width:1.75;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.ink-thin{stroke:var(--line);stroke-width:1.5;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.fill-t{fill:var(--tomato);opacity:.82}
+.fill-y{fill:var(--yolk);opacity:.85}
+.fill-o{fill:var(--olive);opacity:.75}
+svg{display:block;overflow:visible}
+
+/* "line draws itself" */
+.draw .ink,.draw .ink-thin{
+  stroke-dasharray:var(--len,600);
+  stroke-dashoffset:var(--len,600);
+  animation:draw 2.6s var(--ease) forwards;
+  animation-delay:var(--d,0s);
+}
+.draw .fill-t,.draw .fill-y,.draw .fill-o{
+  opacity:0;
+  animation:fillin 1.4s var(--ease) forwards;
+  animation-delay:calc(var(--d,0s) + 1.6s);
+}
+[data-draw]:not(.draw) .ink,[data-draw]:not(.draw) .ink-thin,
+[data-draw]:not(.draw) .fill-t,[data-draw]:not(.draw) .fill-y,[data-draw]:not(.draw) .fill-o{opacity:0}
+@keyframes draw{to{stroke-dashoffset:0}}
+@keyframes fillin{to{opacity:.82}}
+@media(prefers-reduced-motion:reduce){
+  .draw .ink,.draw .ink-thin{animation:none;stroke-dashoffset:0}
+  .draw .fill-t,.draw .fill-y,.draw .fill-o{animation:none;opacity:.82}
+  *{transition:none!important}
+}
+
+/* ---------- buttons ---------- */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  font-family:"Mitr",sans-serif;font-weight:600;font-size:18px;line-height:1.3;
+  padding:15px 26px;border-radius:999px;border:1.75px solid var(--ink);
+  color:var(--paper);background:var(--tomato);
+  text-decoration:none;cursor:pointer;
+  box-shadow:3px 3px 0 var(--ink);
+  transition:transform var(--dur) var(--ease),box-shadow var(--dur) var(--ease),background var(--dur) var(--ease);
+  width:100%;
+}
+@media(min-width:600px){.btn{width:auto}}
+.btn:hover{transform:translate(1px,1px);box-shadow:2px 2px 0 var(--ink)}
+.btn:active{transform:translate(3px,3px);box-shadow:0 0 0 var(--ink)}
+.btn.line{background:#06C755;color:#fff}
+
+/* ================= HERO ================= */
+.hero{padding-top:20px}
+.topbar{display:flex;align-items:center;justify-content:space-between;padding:6px 0 40px}
+.brand{font-family:"Mitr",sans-serif;font-weight:600;font-size:17px;letter-spacing:.01em;display:flex;align-items:center;gap:9px;text-decoration:none;color:var(--ink)}
+.brand i{width:9px;height:9px;border-radius:50%;background:var(--tomato);border:1.5px solid var(--ink);display:inline-block}
+.topbar .label{display:none}
+@media(min-width:600px){.topbar .label{display:block}}
+.hero-grid{display:grid;gap:36px}
+@media(min-width:900px){.hero-grid{grid-template-columns:1.15fr .85fr;align-items:center;gap:56px}}
+.hero h1{font-size:clamp(30px,5.4vw,58px);max-width:15ch;margin-bottom:22px}
+.hero h1 .mark{
+  position:relative;display:inline-block;white-space:nowrap;
+}
+.hero h1 .mark::after{
+  content:"";position:absolute;left:-2px;right:-4px;bottom:.08em;height:.42em;
+  background:var(--yolk);opacity:.75;z-index:-1;transform:rotate(-1deg);
+  border-radius:3px 6px 4px 7px;
+}
+.hero p.sub{font-size:18px;max-width:38ch;margin-bottom:30px;color:rgba(31,27,24,.86)}
+@media(min-width:900px){.hero p.sub{font-size:19px}}
+.hero .cta-row{display:flex;flex-direction:column;gap:12px;align-items:flex-start}
+.hero .fine{font-size:14px;color:rgba(31,27,24,.62)}
+.hero .fine .hand{color:var(--pen);font-size:16px;margin-left:6px}
+.hero-art{position:relative}
+.hero-art svg{width:100%;max-width:520px;margin:0 auto}
+.hero-art .note{
+  position:absolute;right:4%;bottom:-6px;
+  font-size:15px;color:var(--pen);transform:rotate(-3deg);
+}
+
+/* ================= CHAPTER ================= */
+.chapter{background:var(--cream)}
+.chapter .wrap{display:grid;gap:28px}
+@media(min-width:900px){.chapter .wrap{grid-template-columns:1fr 1fr;align-items:center;gap:56px}}
+.chap-head{display:flex;align-items:baseline;gap:14px;margin-bottom:10px}
+.chap-num{font-family:"Mitr";font-weight:600;font-size:13px;letter-spacing:.12em;color:var(--tomato)}
+.chapter h2{font-size:clamp(28px,4.6vw,44px);margin-bottom:12px}
+.chapter h2 .t{color:var(--tomato)}
+.chapter .scene{font-size:18px;max-width:34ch;color:rgba(31,27,24,.86)}
+.chap-art svg{width:100%;max-width:460px;margin:0 auto}
+
+/* timeline / clock */
+.timeline{margin-top:30px;max-width:520px}
+.timeline .row{display:flex;justify-content:space-between;font-size:12px;letter-spacing:.06em;color:rgba(31,27,24,.6);margin-bottom:8px}
+.timeline .track{position:relative;height:22px}
+.timeline .track::before{
+  content:"";position:absolute;left:0;right:0;top:11px;height:1.5px;background:var(--ink);opacity:.9
+}
+.timeline .ticks{position:absolute;inset:0;display:flex;justify-content:space-between}
+.timeline .ticks span{width:1.5px;height:8px;background:var(--ink);margin-top:7px;opacity:.55}
+.timeline .sun{
+  position:absolute;top:-3px;left:calc(var(--p) * 100%);
+  width:28px;height:28px;margin-left:-14px;
+  transition:left 1.2s var(--ease);
+}
+.timeline .sun svg{width:28px;height:28px}
+.timeline .now{
+  margin-top:8px;display:flex;gap:10px;align-items:center;font-size:13px;color:rgba(31,27,24,.7)
+}
+.timeline .now b{font-family:"Mitr";font-weight:600;font-size:15px;color:var(--ink)}
+
+/* ================= QUIZ ================= */
+.quiz .wrap{display:grid;gap:30px}
+@media(min-width:900px){.quiz .wrap{grid-template-columns:minmax(0,1fr) 300px;gap:56px;align-items:start}}
+.q-meta{display:flex;align-items:center;gap:14px;margin-bottom:18px;flex-wrap:wrap}
+.q-meta .pill{
+  display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:500;
+  border:1.5px solid var(--ink);border-radius:999px;padding:4px 12px;background:var(--paper)
+}
+.q-meta .pill .dot{width:8px;height:8px;border-radius:50%;background:var(--olive);border:1px solid var(--ink)}
+.q-meta .hand{color:var(--pen);font-size:16px}
+.quiz h2{font-size:clamp(24px,3.8vw,36px);max-width:22ch;margin-bottom:24px}
+.choices{display:grid;gap:12px;counter-reset:c}
+@media(min-width:600px){.choices{grid-template-columns:1fr 1fr}}
+.choice{
+  position:relative;display:flex;gap:14px;align-items:flex-start;
+  background:var(--paper);border:1.75px solid var(--ink);border-radius:14px;
+  padding:16px 18px 16px 16px;cursor:pointer;text-align:left;font:inherit;color:inherit;
+  box-shadow:2px 2px 0 rgba(31,27,24,.9);
+  transition:transform var(--dur) var(--ease),box-shadow var(--dur) var(--ease),background var(--dur) var(--ease),border-color var(--dur) var(--ease);
+  line-height:1.6;font-size:16px;
+}
+.choice .k{
+  flex:none;width:30px;height:30px;border-radius:50%;
+  border:1.75px solid var(--ink);display:grid;place-items:center;
+  font-family:"Mitr";font-weight:600;font-size:14px;margin-top:2px;
+  background:var(--cream);
+  transition:background var(--dur) var(--ease),color var(--dur) var(--ease);
+}
+.choice .txt{display:block;transition:transform var(--dur) var(--ease)}
+.choice:hover{transform:translate(-1px,-1px);box-shadow:3px 3px 0 rgba(31,27,24,.9)}
+.choice:hover .txt{animation:wiggle 1.8s var(--ease) infinite alternate}
+@keyframes wiggle{0%{transform:rotate(0) translateY(0)}100%{transform:rotate(-.35deg) translateY(-.5px)}}
+@media(prefers-reduced-motion:reduce){.choice:hover .txt{animation:none}}
+.choice[aria-pressed="true"]{
+  background:#FBE9B4;border-color:var(--ink);
+  box-shadow:3px 3px 0 var(--ink);transform:translate(-1px,-1px);
+}
+.choice[aria-pressed="true"] .k{background:var(--tomato);color:var(--paper)}
+.choice[aria-pressed="true"]::after{
+  content:"";position:absolute;right:12px;top:12px;width:14px;height:14px;
+  border-right:2px solid var(--ink);border-bottom:2px solid var(--ink);transform:rotate(45deg) translate(-2px,-4px);
+}
+.q-foot{margin-top:18px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;font-size:14px;color:rgba(31,27,24,.6)}
+.q-foot .next{
+  font-family:"Mitr";font-weight:600;font-size:15px;color:var(--pen);text-decoration:none;
+  border-bottom:1.5px solid currentColor;padding-bottom:1px;
+}
+
+/* HUD */
+.hud{
+  border:1.75px solid var(--ink);border-radius:16px;background:var(--cream);
+  padding:18px 18px 16px;box-shadow:3px 3px 0 var(--ink);
+  position:relative;
+}
+.hud::before{
+  content:"";position:absolute;left:14px;right:14px;top:-7px;height:14px;
+  background:var(--yolk);opacity:.8;transform:rotate(-1.2deg);border:1px solid rgba(31,27,24,.35);
+  width:56px;left:calc(50% - 28px);
+}
+.hud .hud-title{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:12px}
+.hud .hud-title .label{color:var(--ink)}
+.hud .hud-title .hand{font-size:15px;color:var(--pen)}
+.meter{display:grid;grid-template-columns:1fr auto;gap:4px 10px;align-items:center;padding:9px 0;border-top:1.5px dashed rgba(31,27,24,.35)}
+.meter:last-child{padding-bottom:0}
+.meter .name{font-weight:500;font-size:15px}
+.meter .val{font-family:"Mitr";font-weight:600;font-size:15px;color:var(--ink)}
+.meter .bar{grid-column:1/-1;height:10px;border:1.5px solid var(--ink);border-radius:999px;background:var(--paper);overflow:hidden;position:relative}
+.meter .bar i{
+  display:block;height:100%;border-radius:999px;
+  width:var(--v);background:var(--fill);
+  transition:width 1.2s var(--ease);
+}
+.hud-note{margin-top:14px;font-size:13px;color:rgba(31,27,24,.62);line-height:1.5}
+
+/* ================= RESULT ================= */
+.result{background:var(--paper)}
+.result .report{
+  border:1.75px solid var(--ink);background:#FBF7EF;
+  box-shadow:4px 4px 0 var(--ink);
+}
+.rp-head{
+  display:grid;grid-template-columns:1fr;gap:6px;
+  padding:16px 20px;border-bottom:1.75px solid var(--ink);
+  font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:rgba(31,27,24,.65);font-weight:500
+}
+@media(min-width:600px){.rp-head{grid-template-columns:1fr auto auto;gap:28px}}
+.rp-head b{color:var(--ink)}
+.rp-arch{display:grid;gap:0}
+@media(min-width:900px){.rp-arch{grid-template-columns:1.2fr .8fr}}
+.rp-arch .id{padding:26px 20px 24px;border-bottom:1.75px solid var(--ink)}
+@media(min-width:900px){.rp-arch .id{border-bottom:none;border-right:1.75px solid var(--ink);padding:36px 32px}}
+.rp-arch .label{margin-bottom:8px}
+.rp-arch h2{font-size:clamp(32px,5vw,52px);line-height:1.15;margin-bottom:8px}
+.rp-arch h2 small{display:block;font-family:"Anuphan";font-weight:500;font-size:14px;letter-spacing:.08em;color:var(--tomato);margin-bottom:6px}
+.rp-arch .essence{font-size:19px;color:rgba(31,27,24,.85);max-width:30ch}
+.rp-arch .essence .hand{color:var(--pen)}
+.rp-arch .stats{padding:22px 20px;border-bottom:1.75px solid var(--ink)}
+@media(min-width:900px){.rp-arch .stats{padding:32px;border-bottom:none}}
+.stat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1.5px solid var(--ink)}
+.stat{padding:12px 10px;border-right:1.5px solid var(--ink)}
+.stat:last-child{border-right:none}
+.stat .n{font-family:"Mitr";font-weight:600;font-size:26px;line-height:1.1}
+.stat .n sup{font-size:12px;font-weight:500;font-family:"Anuphan";margin-left:2px;vertical-align:top;top:.3em;position:relative}
+.stat .l{font-size:12px;color:rgba(31,27,24,.65);margin-top:3px;letter-spacing:.02em}
+.axes{margin-top:18px;display:grid;gap:8px}
+.axis{display:grid;grid-template-columns:78px 1fr 78px;align-items:center;gap:8px;font-size:12px;color:rgba(31,27,24,.7)}
+.axis .bar{height:7px;border:1.5px solid var(--ink);position:relative;background:var(--paper)}
+.axis .bar i{position:absolute;top:-4px;width:12px;height:12px;border-radius:50%;background:var(--tomato);border:1.5px solid var(--ink);left:var(--x);margin-left:-6px}
+.axis .bar::after{content:"";position:absolute;left:50%;top:-3px;bottom:-3px;width:1px;background:rgba(31,27,24,.4)}
+.axis .r{text-align:right}
+.axes-note{margin-top:8px;font-size:12px;color:rgba(31,27,24,.55)}
+
+.rp-body{border-top:1.75px solid var(--ink)}
+.rp-body .sec-title{
+  display:flex;align-items:baseline;gap:14px;padding:16px 20px;border-bottom:1.5px solid var(--ink);
+  background:var(--cream);
+}
+@media(min-width:900px){.rp-body .sec-title{padding:18px 32px}}
+.rp-body .sec-title h3{font-size:clamp(20px,2.6vw,26px)}
+.rp-body .sec-title .idx{font-family:"Mitr";font-weight:600;font-size:13px;letter-spacing:.12em;color:var(--tomato)}
+.finding{display:grid;grid-template-columns:44px 1fr;border-bottom:1.5px solid var(--ink)}
+@media(min-width:900px){.finding{grid-template-columns:72px 1.1fr .9fr}}
+.finding .no{
+  border-right:1.5px solid var(--ink);display:flex;align-items:flex-start;justify-content:center;
+  padding-top:22px;font-family:"Mitr";font-weight:600;font-size:18px;
+}
+.finding .main{padding:20px 18px 18px}
+@media(min-width:900px){.finding .main{padding:30px 28px}}
+.finding .main h4{font-family:"Mitr";font-weight:600;font-size:22px;margin-bottom:8px;line-height:1.3}
+.finding .main p{font-size:16px;color:rgba(31,27,24,.86);max-width:38ch}
+.finding .side{grid-column:2;border-top:1.5px dashed rgba(31,27,24,.35);padding:0 18px}
+@media(min-width:900px){.finding .side{grid-column:auto;border-top:none;border-left:1.5px solid var(--ink);padding:14px 28px}}
+.mini{display:grid;grid-template-columns:auto 1fr;gap:12px;padding:14px 0;align-items:start;border-bottom:1.5px dashed rgba(31,27,24,.35)}
+.mini:last-child{border-bottom:none}
+.mini .tag{
+  font-size:12px;font-weight:500;letter-spacing:.06em;white-space:nowrap;
+  padding:3px 9px;border:1.5px solid var(--ink);border-radius:4px;margin-top:2px
+}
+.mini .tag.diy{background:var(--paper)}
+.mini .tag.us{background:var(--olive);color:var(--paper)}
+.mini .body{font-size:15px;line-height:1.55}
+.mini .body .hand{color:var(--pen);font-size:16px}
+.placeholder{
+  padding:16px 18px;font-size:13px;color:rgba(31,27,24,.5);display:flex;gap:16px;
+  border-bottom:1.5px solid var(--ink);align-items:center;
+}
+@media(min-width:900px){.placeholder{padding:16px 32px}}
+.placeholder span{font-family:"Mitr";font-weight:600;font-size:14px;color:rgba(31,27,24,.4)}
+.placeholder .dash{flex:1;border-top:1.5px dashed rgba(31,27,24,.3)}
+.rp-foot{padding:24px 20px;display:grid;gap:18px}
+@media(min-width:900px){.rp-foot{grid-template-columns:1fr auto;align-items:center;padding:30px 32px;gap:40px}}
+.rp-foot .talk{font-size:15px;color:rgba(31,27,24,.75);max-width:44ch}
+.rp-foot .talk b{font-weight:500;color:var(--ink)}
+.rp-foot .fine{display:block;font-size:13px;color:rgba(31,27,24,.55);margin-top:8px}
+.rp-foot .btn{width:100%}
+@media(min-width:900px){.rp-foot .btn{width:auto}}
+
+footer{padding:36px 0 60px;font-size:13px;color:rgba(31,27,24,.5);border-top:1.5px solid var(--ink)}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+</style>
+</head>
+<body>
+
+<!-- ================= 1. HERO ================= -->
+<section class="hero">
+  <div class="wrap">
+    <div class="topbar">
+      <a class="brand" href="#"><i></i>Flavolution</a>
+      <span class="label">เอเจนซี่สำหรับร้านอาหารและคาเฟ่</span>
+    </div>
+
+    <div class="hero-grid">
+      <div>
+        <h1>ร้านคุณอาจดังเพราะสิ่งที่คุณคิดว่าเป็นแค่<span class="mark">เครื่องปรุง</span></h1>
+        <p class="sub">1 ใน 3 ของร้านที่ดัง ดังเพราะน้ำจิ้ม น้ำซุป หรือของแถมที่เจ้าของไม่เคยคิดจะเล่า ลองใช้เวลา 7 นาที ผ่านหนึ่งวันในร้านของคุณ แล้วดูว่าคุณมองข้ามอะไรอยู่</p>
+        <div class="cta-row">
+          <a class="btn" href="#quiz">เริ่มหนึ่งวันในร้านของฉัน
+            <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><path d="M3 10h13M11 5l5 5-5 5" stroke="currentColor" stroke-width="1.75" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <div class="fine">25 ข้อ · 7 นาที · ไม่ต้องกรอกอีเมล</div>
+        </div>
+      </div>
+
+      <div class="hero-art draw" aria-hidden="true">
+        <!-- market stall awning + pot on counter, mono-line ink with offset flat fills -->
+        <svg viewBox="0 0 520 360">
+          <!-- offset fills (not inside outlines) -->
+          <g transform="translate(6,5)">
+            <!-- awning stripes: tomato -->
+            <path class="fill-t" style="--d:.1s" d="M96 96 L154 96 L146 132 L88 132 Z"/>
+            <path class="fill-t" style="--d:.1s" d="M212 96 L270 96 L262 132 L204 132 Z"/>
+            <path class="fill-t" style="--d:.1s" d="M328 96 L386 96 L378 132 L320 132 Z"/>
+            <!-- counter cloth: yolk -->
+            <path class="fill-y" style="--d:.2s" d="M92 228 L428 228 L428 262 L92 262 Z"/>
+            <!-- pot: olive -->
+            <path class="fill-o" style="--d:.3s" d="M232 170 L300 170 L296 224 L236 224 Z"/>
+          </g>
+          <!-- awning outline -->
+          <path class="ink" style="--len:1200;--d:0s" d="M60 92 L440 92 Q452 92 452 104 L452 128 Q452 136 444 136 L60 136 Q52 136 52 128 L52 104 Q52 92 60 92 Z"/>
+          <path class="ink" style="--len:900;--d:.2s" d="M52 136 Q78 158 104 136 Q130 158 156 136 Q182 158 208 136 Q234 158 260 136 Q286 158 312 136 Q338 158 364 136 Q390 158 416 136 Q436 154 452 136"/>
+          <!-- awning stripes lines -->
+          <path class="ink-thin" style="--len:400;--d:.4s" d="M96 92 L88 136 M154 92 L146 136 M212 92 L204 136 M270 92 L262 136 M328 92 L320 136 M386 92 L378 136"/>
+          <!-- posts -->
+          <path class="ink" style="--len:400;--d:.5s" d="M76 136 L76 226 M428 136 L428 226"/>
+          <!-- counter -->
+          <path class="ink" style="--len:900;--d:.6s" d="M58 226 L444 226 L444 268 L58 268 Z"/>
+          <path class="ink-thin" style="--len:600;--d:.8s" d="M70 252 Q100 246 130 252 Q160 258 190 252 Q220 246 250 252 Q280 258 310 252 Q340 246 370 252 Q400 258 430 252"/>
+          <!-- pot on counter -->
+          <path class="ink" style="--len:500;--d:.9s" d="M226 172 L306 172 L300 226 L232 226 Z"/>
+          <path class="ink" style="--len:300;--d:1s" d="M218 172 L314 172"/>
+          <path class="ink-thin" style="--len:300;--d:1.1s" d="M226 184 Q214 184 214 194 M306 184 Q318 184 318 194"/>
+          <!-- lid + knob -->
+          <path class="ink" style="--len:300;--d:1.1s" d="M226 172 Q266 154 306 172 M262 158 Q266 148 270 158"/>
+          <!-- steam -->
+          <path class="ink-thin" style="--len:200;--d:1.5s" d="M252 140 Q246 128 254 118 Q262 108 254 96 M280 140 Q274 128 282 118 Q290 108 282 96"/>
+          <!-- little sign hanging -->
+          <path class="ink-thin" style="--len:300;--d:1.3s" d="M352 148 L352 166 M400 148 L400 166 M340 166 L412 166 L412 196 L340 196 Z"/>
+          <path class="ink-thin" style="--len:120;--d:1.6s" d="M352 181 L400 181"/>
+          <!-- ground -->
+          <path class="ink-thin" style="--len:500;--d:1.4s" d="M36 292 Q120 288 200 292 Q300 296 380 292 Q440 290 484 292"/>
+          <!-- bowls under counter -->
+          <path class="ink-thin" style="--len:300;--d:1.7s" d="M100 200 Q120 214 140 200 M160 208 Q180 222 200 208"/>
+        </svg>
+        <div class="note hand">เช้านี้เริ่มตรงนี้ →</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 2. CHAPTER TITLE CARD ================= -->
+<section class="chapter">
+  <div class="wrap">
+    <div>
+      <div class="chap-head">
+        <span class="chap-num">บทที่ 1 / 7</span>
+        <span class="label">เปิดร้าน</span>
+      </div>
+      <h2><span class="t mono">05:30</span> ตลาดยังไม่สว่าง</h2>
+      <p class="scene">ถนนยังมืด ไฟตลาดสว่างเป็นหย่อม คุณถือถุงเดินเข้าไป</p>
+
+      <div class="timeline" style="--p:0" id="timeline" aria-label="ความคืบหน้าของวัน 06:00 ถึง 23:00">
+        <div class="row mono">
+          <span>06:00</span><span>10:00</span><span>14:00</span><span>18:00</span><span>23:00</span>
+        </div>
+        <div class="track">
+          <div class="ticks"><span></span><span></span><span></span><span></span><span></span></div>
+          <div class="sun" id="sun">
+            <svg viewBox="0 0 28 28" aria-hidden="true">
+              <circle cx="14" cy="14" r="6" fill="var(--yolk)" stroke="var(--ink)" stroke-width="1.5"/>
+              <path d="M14 2v4M14 22v4M2 14h4M22 14h4M5.5 5.5l2.8 2.8M19.7 19.7l2.8 2.8M22.5 5.5l-2.8 2.8M8.3 19.7l-2.8 2.8" stroke="var(--ink)" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+        </div>
+        <div class="now"><span>ตอนนี้</span><b class="mono" id="nowtime">06:00</b><span>· วันของคุณเพิ่งเริ่ม</span></div>
+      </div>
+    </div>
+
+    <div class="chap-art draw" aria-hidden="true">
+      <!-- shopping bag + wall clock, line draws itself -->
+      <svg viewBox="0 0 460 340">
+        <!-- offset fills -->
+        <g transform="translate(7,6)">
+          <path class="fill-t" style="--d:.4s" d="M120 150 L248 150 L262 292 L106 292 Z"/>
+          <path class="fill-y" style="--d:.6s" d="M338 60 a52 52 0 1 0 .1 0 Z"/>
+          <path class="fill-o" style="--d:.9s" d="M150 118 Q160 96 184 100 Q196 88 212 104 Q232 100 236 122 L150 122 Z"/>
+        </g>
+        <!-- bag body -->
+        <path class="ink" style="--len:800;--d:0s" d="M114 150 L254 150 L268 292 Q268 298 262 298 L106 298 Q100 298 100 292 Z"/>
+        <!-- bag handles -->
+        <path class="ink" style="--len:400;--d:.4s" d="M150 150 Q150 108 184 108 Q218 108 218 150 M158 150 Q158 116 184 116 Q210 116 210 150"/>
+        <!-- fold line -->
+        <path class="ink-thin" style="--len:300;--d:.7s" d="M114 176 L254 176"/>
+        <!-- greens poking out -->
+        <path class="ink-thin" style="--len:500;--d:.9s" d="M124 150 Q118 128 132 118 Q140 100 156 110 Q166 94 178 106 M124 150 Q130 132 144 128 M132 118 Q146 118 148 132"/>
+        <!-- baguette-ish / lemongrass sticks -->
+        <path class="ink-thin" style="--len:300;--d:1.1s" d="M232 150 L246 96 M240 150 L256 100 M246 96 Q250 92 256 100"/>
+        <!-- wall clock -->
+        <circle class="ink" style="--len:340;--d:.6s" cx="332" cy="60" r="52"/>
+        <circle class="ink-thin" style="--len:290;--d:.9s" cx="332" cy="60" r="45"/>
+        <path class="ink-thin" style="--len:200;--d:1.2s" d="M332 20 L332 26 M332 94 L332 100 M292 60 L298 60 M366 60 L372 60 M304 32 L307 36 M357 84 L360 88 M360 32 L357 36 M307 84 L304 88"/>
+        <!-- hands: 05:30 -->
+        <path class="ink" style="--len:120;--d:1.6s" d="M332 60 L306 74"/>
+        <path class="ink" style="--len:120;--d:1.7s" d="M332 60 L332 96"/>
+        <circle cx="332" cy="60" r="3" fill="var(--ink)"/>
+        <!-- clock nail + string -->
+        <path class="ink-thin" style="--len:80;--d:1.4s" d="M332 8 L332 0 M328 4 Q332 0 336 4"/>
+        <!-- ground / stall shadow line -->
+        <path class="ink-thin" style="--len:500;--d:1.5s" d="M60 316 Q160 310 260 316 Q340 320 420 316"/>
+        <!-- small lamp glow spots (market lights) -->
+        <path class="ink-thin" style="--len:200;--d:1.9s" d="M40 40 L40 66 M32 66 L48 66 M28 74 Q40 88 52 74"/>
+        <path class="ink-thin" style="--len:200;--d:2.1s" d="M420 150 L420 176 M412 176 L428 176 M408 184 Q420 198 432 184"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 3. QUIZ QUESTION ================= -->
+<section class="quiz" id="quiz">
+  <div class="wrap">
+    <div>
+      <div class="q-meta">
+        <span class="pill"><span class="dot"></span><span class="mono">ข้อ 1 / 25</span></span>
+        <span class="label">05:30 · ที่ตลาด</span>
+        <span class="hand">เลือกที่ตรงกับคุณที่สุด</span>
+      </div>
+      <h2>เช้านี้จะซื้อของเข้าร้านเท่าไร คุณรู้ได้ยังไง</h2>
+
+      <div class="choices" role="group" aria-label="ตัวเลือก">
+        <button class="choice" type="button" aria-pressed="false">
+          <span class="k">ก</span>
+          <span class="txt">ดูของหน้าแผงแล้วค่อยตัดสินใจ อยู่มานานพอที่จะรู้</span>
+        </button>
+        <button class="choice" type="button" aria-pressed="false">
+          <span class="k">ข</span>
+          <span class="txt">มีกระดาษแผ่นเดียวที่จดไว้ทุกคืนว่าพรุ่งนี้ต้องซื้ออะไร ตามยอดที่คาดไว้</span>
+        </button>
+        <button class="choice" type="button" aria-pressed="false">
+          <span class="k">ค</span>
+          <span class="txt">ซื้อเผื่อไว้ก่อน ของหมดกลางวันน่าอายกว่าของเหลือ</span>
+        </button>
+        <button class="choice" type="button" aria-pressed="false">
+          <span class="k">ง</span>
+          <span class="txt">ลูกน้องหรือซัพพลายเออร์จัดมาให้ ผมเช็กบิลทีหลัง</span>
+        </button>
+      </div>
+
+      <div class="q-foot">
+        <span>ไม่มีคำตอบถูกหรือผิด · เปลี่ยนใจได้ก่อนกดต่อ</span>
+        <a class="next" href="#result">ข้อถัดไป →</a>
+      </div>
+    </div>
+
+    <aside class="hud" aria-label="สถานะร้าน">
+      <div class="hud-title">
+        <span class="label">สถานะร้านวันนี้</span>
+        <span class="hand">06:00</span>
+      </div>
+      <div class="meter" style="--v:34%;--fill:var(--tomato)">
+        <span class="name">ยอดขาย</span><span class="val mono">34</span>
+        <span class="bar"><i></i></span>
+      </div>
+      <div class="meter" style="--v:88%;--fill:var(--yolk)">
+        <span class="name">พลังงานเจ้าของ</span><span class="val mono">88</span>
+        <span class="bar"><i></i></span>
+      </div>
+      <div class="meter" style="--v:61%;--fill:var(--olive)">
+        <span class="name">รีวิว</span><span class="val mono">61</span>
+        <span class="bar"><i></i></span>
+      </div>
+      <p class="hud-note">ยอดขาย · พลังงานเจ้าของ · รีวิว — ขยับตามคำตอบของคุณตลอดทั้งวัน</p>
+    </aside>
+  </div>
+</section>
+
+<!-- ================= 4. RESULT TEASER ================= -->
+<section class="result" id="result">
+  <div class="wrap">
+    <article class="report" aria-label="รายงานผลลัพธ์">
+      <div class="rp-head">
+        <span>รายงานวิเคราะห์ร้าน · <b>ตัวอย่างผลลัพธ์</b></span>
+        <span class="mono">25/25 ข้อ</span>
+        <span class="mono">เวลาที่ใช้ 6:48</span>
+      </div>
+
+      <div class="rp-arch">
+        <div class="id">
+          <div class="label">บุคลิกร้านของคุณ</div>
+          <h2><small>ARCHETYPE 03 / 06</small>เชฟหัวดื้อ</h2>
+          <p class="essence">รสชาติคือทุกอย่าง โลกต้องมาหาฉัน</p>
+        </div>
+        <div class="stats">
+          <div class="stat-grid">
+            <div class="stat"><div class="n">92<sup>/100</sup></div><div class="l">รสชาติ · ฝีมือ</div></div>
+            <div class="stat"><div class="n">41<sup>/100</sup></div><div class="l">ระบบหลังบ้าน</div></div>
+            <div class="stat"><div class="n">28<sup>/100</sup></div><div class="l">การเล่าเรื่อง</div></div>
+          </div>
+          <div class="axes" aria-label="แกนวิเคราะห์">
+            <div class="axis"><span>ทำเองทุกอย่าง</span><span class="bar"><i style="--x:12%"></i></span><span class="r">มีทีมรับช่วง</span></div>
+            <div class="axis"><span>สูตรในหัว</span><span class="bar"><i style="--x:18%"></i></span><span class="r">สูตรบนกระดาษ</span></div>
+            <div class="axis"><span>รอลูกค้ามาเอง</span><span class="bar"><i style="--x:30%"></i></span><span class="r">ออกไปเล่าเอง</span></div>
+          </div>
+          <div class="axes-note">จุดกลางคือค่าเฉลี่ยของร้านที่ทำแบบทดสอบ</div>
+        </div>
+      </div>
+
+      <div class="rp-body">
+        <div class="sec-title">
+          <span class="idx">ส่วนที่ 2</span>
+          <h3>3 อย่างที่ร้านคุณทำอยู่โดยไม่รู้ตัว</h3>
+        </div>
+
+        <div class="finding">
+          <div class="no mono">01</div>
+          <div class="main">
+            <h4>สูตรอยู่ในหัวคุณ</h4>
+            <p>นั่นแปลว่าร้านเปิดได้เท่าที่คุณยืนไหว วันที่คุณป่วยคือวันที่ร้านปิด</p>
+          </div>
+          <div class="side">
+            <div class="mini">
+              <span class="tag diy">ทำเองได้</span>
+              <span class="body">เขียนสูตรจานที่ขายดีที่สุดลงกระดาษ 1 แผ่นคืนนี้</span>
+            </div>
+            <div class="mini">
+              <span class="tag us">เราช่วยได้</span>
+              <span class="body">ระบบหลังบ้าน SOP</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="placeholder"><span class="mono">02</span><span class="dash"></span><span>ปลดล็อกเมื่อทำครบ 25 ข้อ</span></div>
+        <div class="placeholder"><span class="mono">03</span><span class="dash"></span><span>ปลดล็อกเมื่อทำครบ 25 ข้อ</span></div>
+      </div>
+
+      <div class="rp-foot">
+        <div>
+          <p class="talk"><b>อยากคุยรายงานนี้ทีละข้อไหม</b> เราอ่านผลของคุณก่อน แล้วค่อยคุยว่าอะไรควรแก้ก่อน-หลัง</p>
+          <span class="fine">ไม่มีค่าใช้จ่าย · ไม่ต้องเตรียมอะไรมา</span>
+        </div>
+        <a class="btn line" href="#">
+          <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 3C5.6 3 2 5.9 2 9.4c0 3.1 2.8 5.7 6.5 6.3.3.1.7.2.8.5.1.2 0 .6 0 .8l-.1.8c0 .2-.2.9.8.5s5.2-3.1 7.1-5.3c1.3-1.4 1.9-2.9 1.9-4.6C18 5.9 14.4 3 10 3z" fill="currentColor"/></svg>
+          ทัก LINE คุยฟรี 30 นาที
+        </a>
+      </div>
+    </article>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>Flavolution · mock ทาง A — Kitchen Sketchbook</span>
+    <span>ร่างสำหรับตัดสินใจทิศทางภาพเท่านั้น</span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  // choice highlight (single select)
+  var choices = document.querySelectorAll('.choice');
+  choices.forEach(function(c){
+    c.addEventListener('click', function(){
+      choices.forEach(function(o){ o.setAttribute('aria-pressed','false'); });
+      c.setAttribute('aria-pressed','true');
+    });
+  });
+
+  // clock/sun: sit at 06:00 on a 06:00 -> 23:00 track (17h span)
+  var tl = document.getElementById('timeline');
+  var now = 6; // hours
+  var p = (now - 6) / 17;
+  tl.style.setProperty('--p', p);
+  document.getElementById('nowtime').textContent = (now < 10 ? '0' : '') + now + ':00';
+
+  // restart the "line draws itself" animation when the chapter drawing scrolls into view
+  if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    var arts = document.querySelectorAll('.draw');
+    arts.forEach(function(a){ a.classList.remove('draw'); a.dataset.draw = '1'; });
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if (e.isIntersecting) { e.target.classList.add('draw'); io.unobserve(e.target); }
+      });
+    }, {threshold:.25});
+    arts.forEach(function(a){ io.observe(a); });
+  }
+})();
+</script>
+</body>
+</html>

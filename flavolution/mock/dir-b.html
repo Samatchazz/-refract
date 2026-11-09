@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Flavolution — ทาง B</title>
+<meta name="description" content="Mock ทิศทางภาพ B — Backstage Editorial: ฮีโร่ · การ์ดบท · หน้าคำถาม · ตัวอย่างผลลัพธ์">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500&family=Pridi:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bone:#F2ECE2;
+    --char:#232323;
+    --clay:#B8532E;
+    --forest:#2E4A3A;
+    --steel:#9A9A94;
+    --cream:#E4DACA;
+    --line:#ffffff;
+    --display:'Pridi',serif;
+    --body:'IBM Plex Sans Thai',system-ui,sans-serif;
+    --gutter:20px;
+    --max:1180px;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0;background:var(--bone);color:var(--char);
+    font-family:var(--body);font-weight:400;font-size:17px;line-height:1.7;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{font-family:var(--display);font-weight:600;margin:0;line-height:1.35}
+  p{margin:0}
+  a{color:inherit}
+  button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:pointer}
+  svg{display:block}
+
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 var(--gutter)}
+  section{border-top:1px solid var(--char)}
+  section + section{margin-top:0}
+
+  /* meta / labels */
+  .meta{
+    font-family:var(--body);font-weight:500;font-size:11.5px;letter-spacing:.14em;
+    text-transform:uppercase;color:var(--steel);line-height:1.5;
+  }
+  .meta b{color:var(--char);font-weight:500}
+  .num{font-family:var(--body);font-variant-numeric:tabular-nums;font-feature-settings:"tnum"}
+  .rule{height:1px;background:var(--char);border:0;margin:0}
+  .rule.thin{background:var(--steel);opacity:.55}
+
+  /* reveal */
+  .rv{opacity:0;transform:translateY(14px);transition:opacity .7s cubic-bezier(.2,.6,.2,1),transform .7s cubic-bezier(.2,.6,.2,1);transition-delay:calc(var(--i,0)*90ms)}
+  .rv.in{opacity:1;transform:none}
+  @media (prefers-reduced-motion:reduce){
+    .rv{opacity:1;transform:none;transition:none}
+    *{transition-duration:0s!important;animation:none!important}
+  }
+
+  /* placeholder photo */
+  .ph{position:relative;overflow:hidden;background:
+      radial-gradient(120% 80% at 20% 15%, rgba(242,236,226,.22), transparent 55%),
+      radial-gradient(90% 60% at 85% 90%, rgba(184,83,46,.28), transparent 60%),
+      linear-gradient(160deg,#2E4A3A 0%,#232323 100%)}
+  .ph::after{content:"";position:absolute;inset:0;background:
+      repeating-linear-gradient(0deg,rgba(242,236,226,.035) 0 1px,transparent 1px 3px);mix-blend-mode:overlay;pointer-events:none}
+  .ph.warm{background:
+      radial-gradient(100% 70% at 80% 20%, rgba(242,236,226,.18), transparent 60%),
+      linear-gradient(200deg,#B8532E 0%,#232323 100%)}
+  .ph.grey{background:
+      radial-gradient(80% 60% at 30% 30%, rgba(242,236,226,.3), transparent 60%),
+      linear-gradient(180deg,#9A9A94 0%,#232323 100%)}
+  .ph .pict{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:38%;max-width:150px;color:var(--bone);opacity:.85}
+  .ph .pict svg{width:100%;height:auto;stroke:currentColor;fill:none;stroke-width:1.2;stroke-linecap:round;stroke-linejoin:round}
+  .cap{display:flex;justify-content:space-between;gap:12px;padding-top:8px;border-top:1px solid var(--steel);font-size:12.5px;color:var(--steel);line-height:1.5}
+  .cap span:last-child{white-space:nowrap}
+  figure{margin:0}
+
+  /* masthead */
+  .mast{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:18px 0 14px;border-bottom:1px solid var(--char)}
+  .mast .meta{text-align:right;white-space:nowrap}
+  .brand{font-family:var(--display);font-weight:600;font-size:20px;letter-spacing:.02em}
+  .brand small{font-family:var(--body);font-weight:500;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--steel);margin-left:10px}
+
+  /* ---------- HERO ---------- */
+  .hero{border-top:0}
+  .hero .grid{display:grid;grid-template-columns:1fr;gap:34px;padding:34px 0 56px}
+  .hero h1{font-size:clamp(34px,8.6vw,72px);line-height:1.22;letter-spacing:-.005em;text-wrap:balance}
+  .hero .lead{font-size:18px;line-height:1.8;max-width:34em;margin-top:22px;color:#3a3a3a}
+  .hero .cta-row{margin-top:28px}
+  .btn{
+    display:inline-flex;align-items:center;gap:14px;
+    background:var(--clay);color:var(--bone);
+    font-weight:500;font-size:17px;line-height:1;
+    padding:18px 24px;border-radius:2px;
+    transition:background .25s ease,transform .25s ease;
+  }
+  .btn:hover{background:#a3482a}
+  .btn:active{transform:translateY(1px)}
+  .btn svg{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+  .btn.line{background:#06C755;color:#fff}
+  .btn.line:hover{background:#05b14c}
+  .cta-note{margin-top:14px;font-size:13.5px;color:var(--steel)}
+  .hero .ph{aspect-ratio:4/5}
+  .hero .fig-side{display:grid;gap:14px}
+  .hero .facts{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--char);border-bottom:1px solid var(--char);margin-top:34px}
+  .hero .facts div{padding:16px 0}
+  .hero .facts div + div{border-left:1px solid var(--steel);padding-left:16px}
+  .hero .facts .big{font-family:var(--body);font-weight:500;font-size:28px;line-height:1.1;letter-spacing:-.01em}
+  .hero .facts .meta{margin-top:6px}
+
+  /* ---------- CHAPTER ---------- */
+  .chap{background:var(--cream)}
+  .chap .inner{padding:36px 0 44px}
+  .chap .top{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap}
+  .chap .clock{font-family:var(--body);font-weight:500;font-size:clamp(56px,16vw,120px);line-height:1;letter-spacing:-.03em;margin-top:18px}
+  .chap h2{font-size:clamp(26px,6vw,46px);margin-top:8px;line-height:1.3}
+  .chap .scene{font-size:18px;line-height:1.8;color:#3a3a3a;margin-top:18px;max-width:30em}
+  .chap .grid{display:grid;grid-template-columns:1fr;gap:28px}
+  .chap .ph{aspect-ratio:16/10}
+
+  .tl{margin-top:34px}
+  .tl .lbls{display:flex;justify-content:space-between;align-items:baseline}
+  .tl .lbls .cur{color:var(--char);font-weight:500}
+  .tl .track{position:relative;height:28px;margin-top:6px}
+  .tl .track::before{content:"";position:absolute;left:0;right:0;top:14px;height:1px;background:var(--char)}
+  .tl .ticks{position:absolute;left:0;right:0;top:0;height:28px;display:flex;justify-content:space-between}
+  .tl .ticks i{display:block;width:1px;height:8px;margin-top:10px;background:var(--char);opacity:.55}
+  .tl .ticks i.h{height:14px;margin-top:7px;opacity:1}
+  .tl .fill{position:absolute;left:0;top:13px;height:3px;background:var(--clay);width:0%;transition:width 1.2s cubic-bezier(.2,.6,.2,1) .2s}
+  .tl.in .fill{width:var(--pct)}
+  .tl .dot{position:absolute;top:9px;width:11px;height:11px;border-radius:50%;background:var(--clay);left:var(--pct);transform:translateX(-50%);box-shadow:0 0 0 3px var(--cream)}
+  .tl .stops{display:flex;justify-content:space-between;margin-top:4px}
+
+  /* ---------- QUIZ ---------- */
+  .quiz .inner{padding:34px 0 56px}
+  .hud{display:grid;grid-template-columns:1fr;gap:12px;border-bottom:1px solid var(--char);padding-bottom:18px}
+  .hud .qno{display:flex;justify-content:space-between;align-items:baseline}
+  .hud .qno .num{font-size:15px;font-weight:500}
+  .meters{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+  .meter .meta{display:flex;justify-content:space-between;gap:6px}
+  .meter .bar{position:relative;height:4px;background:rgba(35,35,35,.14);margin-top:8px;overflow:hidden}
+  .meter .bar i{position:absolute;left:0;top:0;bottom:0;background:var(--forest);width:0;transition:width 1s cubic-bezier(.2,.6,.2,1) .3s}
+  .meter.acc .bar i{background:var(--clay)}
+  .hud.in .meter .bar i{width:var(--v)}
+
+  .q{display:grid;grid-template-columns:1fr;gap:28px;margin-top:34px}
+  .q .stem{font-size:clamp(28px,6.6vw,48px);line-height:1.32;text-wrap:balance}
+  .q .stem-side{font-size:14.5px;color:#4a4a4a;margin-top:16px;max-width:26em;line-height:1.75}
+  .q .stem-side .ph{aspect-ratio:5/3;margin-top:18px}
+  .choices{list-style:none;margin:0;padding:0;border-top:1px solid var(--char)}
+  .choice{
+    display:grid;grid-template-columns:44px 1fr 22px;gap:12px;align-items:start;width:100%;text-align:left;
+    padding:20px 0 20px;border-bottom:1px solid var(--char);
+    font-size:18px;line-height:1.6;position:relative;
+    transition:padding-left .3s cubic-bezier(.2,.6,.2,1),background .3s ease;
+  }
+  .choice .k{font-family:var(--display);font-weight:500;font-size:20px;line-height:1.35;color:var(--steel);transition:color .3s ease}
+  .choice .ck{width:22px;height:22px;margin-top:3px;border:1px solid var(--steel);border-radius:50%;position:relative;transition:border-color .3s ease,background .3s ease}
+  .choice .ck::after{content:"";position:absolute;inset:5px;border-radius:50%;background:var(--bone);opacity:0;transition:opacity .3s ease}
+  .choice:hover{background:rgba(35,35,35,.03)}
+  .choice:hover .k{color:var(--clay)}
+  .choice[aria-pressed="true"]{padding-left:12px;background:var(--cream)}
+  .choice[aria-pressed="true"] .k{color:var(--clay)}
+  .choice[aria-pressed="true"] .ck{border-color:var(--clay);background:var(--clay)}
+  .choice[aria-pressed="true"] .ck::after{opacity:1}
+  .choice[aria-pressed="true"]::before{content:"";position:absolute;left:0;top:-1px;bottom:-1px;width:3px;background:var(--clay)}
+  .choice:focus-visible{outline:2px solid var(--forest);outline-offset:-2px}
+  .q-foot{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-top:22px}
+  .q-foot .next{display:inline-flex;align-items:center;gap:10px;font-weight:500;color:var(--steel);transition:color .3s ease}
+  .q-foot .next.on{color:var(--char)}
+  .q-foot .next svg{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+
+  /* ---------- RESULT ---------- */
+  .res{background:var(--cream)}
+  .res .inner{padding:36px 0 64px}
+  .report{background:var(--bone);border:1px solid var(--char)}
+  .report .head{padding:22px var(--gutter) 24px;border-bottom:1px solid var(--char);display:grid;gap:8px}
+  .report .head .top{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+  .report .arch{font-size:clamp(36px,10vw,84px);line-height:1.15;letter-spacing:-.01em;margin-top:10px}
+  .report .ess{font-family:var(--display);font-weight:500;font-size:clamp(19px,4.6vw,26px);line-height:1.5;color:var(--forest);margin-top:8px}
+  .report .body{display:grid;grid-template-columns:1fr;gap:0}
+  .report .col{padding:24px var(--gutter) 28px}
+  .report .col + .col{border-top:1px solid var(--char)}
+  .report h3{font-size:clamp(22px,5.4vw,30px);line-height:1.35;margin-top:8px}
+  .item{margin-top:22px;border-top:1px solid var(--char);padding-top:18px}
+  .item .t{display:grid;grid-template-columns:36px 1fr;gap:12px;align-items:baseline}
+  .item .t .n{font-family:var(--body);font-weight:500;font-size:22px;color:var(--clay)}
+  .item .t h4{font-family:var(--display);font-weight:600;font-size:22px;line-height:1.4;margin:0}
+  .item .b{margin-top:10px;padding-left:48px;line-height:1.75;color:#3a3a3a}
+  .mini{margin-top:20px;padding-left:48px;display:grid;gap:0}
+  .mini .row{display:grid;grid-template-columns:78px 1fr;gap:12px;padding:12px 0;border-top:1px solid var(--steel);font-size:15.5px;line-height:1.65}
+  .mini .row:last-child{border-bottom:1px solid var(--steel)}
+  .mini .row .lab{font-weight:500;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--forest);padding-top:4px}
+  .mini .row.us .lab{color:var(--clay)}
+  .mini .row .tag{display:inline-block;border:1px solid var(--char);padding:2px 9px;font-size:13.5px;margin-left:6px;line-height:1.5}
+  .res .cta{margin-top:26px;padding-left:48px}
+  .res .ph{aspect-ratio:4/3}
+  .res .side .meta{margin-bottom:12px}
+  .res .picts{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:22px}
+  .res .picts div{border-top:1px solid var(--steel);padding-top:10px;color:var(--char)}
+  .res .picts svg{width:44px;height:44px;stroke:currentColor;fill:none;stroke-width:1.1;stroke-linecap:round;stroke-linejoin:round}
+  .res .picts .meta{margin-top:8px;margin-bottom:0}
+
+  .foot{border-top:1px solid var(--char);padding:18px var(--gutter);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+
+  /* ---------- desktop ---------- */
+  @media (min-width:860px){
+    :root{--gutter:40px}
+    body{font-size:18px}
+    .hero .grid{grid-template-columns:7fr 5fr;gap:56px;padding:56px 0 72px;align-items:start}
+    .hero h1{font-size:clamp(56px,5.6vw,80px)}
+    .hero .lead{font-size:19px}
+    .hero .facts{margin-top:52px}
+    .chap .inner{padding:52px 0 60px}
+    .chap .grid{grid-template-columns:6fr 6fr;gap:56px;align-items:end}
+    .chap .clock{font-size:clamp(96px,10vw,150px)}
+    .quiz .inner{padding:40px 0 80px}
+    .hud{grid-template-columns:1fr 1fr;align-items:end}
+    .q{grid-template-columns:5fr 7fr;gap:64px;margin-top:48px}
+    .q .stem{font-size:clamp(34px,3.4vw,46px)}
+    .choice{grid-template-columns:56px 1fr 22px;padding:24px 0;font-size:19px}
+    .choice[aria-pressed="true"]{padding-left:16px}
+    .res .inner{padding:56px 0 88px}
+    .report .head{padding:30px 36px 32px}
+    .report .body{grid-template-columns:7fr 5fr}
+    .report .col{padding:32px 36px 40px}
+    .report .col + .col{border-top:0;border-left:1px solid var(--char)}
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ 1. HERO ============ -->
+<header class="wrap mast">
+  <div class="brand">Flavolution <small>ครัวหลังบ้าน · ฉบับที่ 01</small></div>
+  <div class="meta">2569 · เอเจนซี่ร้านอาหาร</div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="grid">
+      <div>
+        <p class="meta rv" style="--i:0">บทนำ · <b>หนึ่งวันในร้านของคุณ</b></p>
+        <h1 class="rv" style="--i:1;margin-top:18px">ร้านคุณอาจดังเพราะสิ่งที่คุณคิดว่าเป็นแค่เครื่องปรุง</h1>
+        <p class="lead rv" style="--i:2">1 ใน 3 ของร้านที่ดัง ดังเพราะน้ำจิ้ม น้ำซุป หรือของแถมที่เจ้าของไม่เคยคิดจะเล่า ลองใช้เวลา 7 นาที ผ่านหนึ่งวันในร้านของคุณ แล้วดูว่าคุณมองข้ามอะไรอยู่</p>
+        <div class="cta-row rv" style="--i:3">
+          <a class="btn" href="#q">เริ่มหนึ่งวันในร้านของฉัน
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg>
+          </a>
+          <p class="cta-note num">25 ข้อ · 7 นาที · ไม่ต้องกรอกอีเมล</p>
+        </div>
+        <div class="facts rv" style="--i:4">
+          <div><div class="big num">25</div><div class="meta">ข้อ</div></div>
+          <div><div class="big num">7</div><div class="meta">นาที</div></div>
+          <div><div class="big num">06–23</div><div class="meta">น.</div></div>
+        </div>
+      </div>
+      <div class="fig-side">
+        <figure class="rv" style="--i:2">
+          <div class="ph" aria-hidden="true">
+            <div class="pict">
+              <!-- steel table -->
+              <svg viewBox="0 0 120 120"><path d="M8 44h104M14 44v52M106 44v52M14 96h92M20 44V36h80v8M30 70h60"/><path d="M40 30c0-6 4-9 9-9s9 3 9 9M70 30c0-6 4-9 9-9s9 3 9 9"/></svg>
+            </div>
+          </div>
+          <figcaption class="cap"><span>ภาพ: โต๊ะสแตนเลสก่อนเปิดร้าน</span><span class="num">01 / 07</span></figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 2. CHAPTER TITLE CARD ============ -->
+<section class="chap">
+  <div class="wrap inner">
+    <div class="top rv" style="--i:0">
+      <p class="meta">บทที่ <b class="num">1</b> จาก <b class="num">7</b> · ก่อนเปิดร้าน</p>
+      <p class="meta num">ข้อ 1–4</p>
+    </div>
+    <div class="grid">
+      <div>
+        <div class="clock num rv" style="--i:1">05:30</div>
+        <h2 class="rv" style="--i:2">ตลาดยังไม่สว่าง</h2>
+        <p class="scene rv" style="--i:3">ถนนยังมืด ไฟตลาดสว่างเป็นหย่อม คุณถือถุงเดินเข้าไป</p>
+      </div>
+      <figure class="rv" style="--i:2">
+        <div class="ph grey" aria-hidden="true">
+          <div class="pict">
+            <!-- scale -->
+            <svg viewBox="0 0 120 120"><path d="M60 22v10M28 40h64M60 32l-24 8M60 32l24 8M36 40l-12 30h24l-12-30M84 40l-12 30h24l-12-30"/><path d="M24 70c0 6 5 10 12 10s12-4 12-10M72 70c0 6 5 10 12 10s12-4 12-10M60 40v58M44 98h32"/></svg>
+          </div>
+        </div>
+        <figcaption class="cap"><span>ภาพ: แผงผักตอนตี 5 ครึ่ง</span><span class="num">02 / 07</span></figcaption>
+      </figure>
+    </div>
+
+    <div class="tl rv" style="--i:4;--pct:0%" data-tl>
+      <div class="lbls meta">
+        <span>เปิดร้าน</span>
+        <span class="cur num">ตอนนี้ 06:00</span>
+        <span>ปิดร้าน</span>
+      </div>
+      <div class="track" aria-hidden="true">
+        <div class="ticks">
+          <i class="h"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="h"></i>
+        </div>
+        <div class="fill"></div>
+        <div class="dot"></div>
+      </div>
+      <div class="stops meta num">
+        <span>06:00</span><span>23:00</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 3. QUIZ QUESTION ============ -->
+<section class="quiz" id="q">
+  <div class="wrap inner">
+    <div class="hud rv" style="--i:0" data-hud>
+      <div class="qno">
+        <p class="meta">คำถาม <b class="num">1</b> / <b class="num">25</b> · <b class="num">06:00</b></p>
+        <p class="meta">ตลาด</p>
+      </div>
+      <div class="meters">
+        <div class="meter" style="--v:36%"><div class="meta"><span>ยอดขาย</span><span class="num">36</span></div><div class="bar"><i></i></div></div>
+        <div class="meter acc" style="--v:82%"><div class="meta"><span>พลังงานเจ้าของ</span><span class="num">82</span></div><div class="bar"><i></i></div></div>
+        <div class="meter" style="--v:50%"><div class="meta"><span>รีวิว</span><span class="num">4.0</span></div><div class="bar"><i></i></div></div>
+      </div>
+    </div>
+
+    <div class="q">
+      <div>
+        <h2 class="stem rv" style="--i:1">เช้านี้จะซื้อของเข้าร้านเท่าไร คุณรู้ได้ยังไง</h2>
+        <div class="stem-side rv" style="--i:2">
+          <p class="meta">เลือก 1 ข้อที่ใกล้ตัวที่สุด</p>
+          <figure>
+            <div class="ph warm" aria-hidden="true">
+              <div class="pict">
+                <!-- order ticket spike -->
+                <svg viewBox="0 0 120 120"><path d="M60 100V24M42 100h36M46 100v6h28v-6"/><path d="M36 40h48l-4 10H40zM38 54h44l-3 9H41zM40 68h40l-3 8H43z"/><path d="M60 24l-4-8h8z"/></svg>
+              </div>
+            </div>
+            <figcaption class="cap"><span>ภาพ: บิลเมื่อคืนยังเสียบอยู่</span><span class="num">03 / 07</span></figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <div>
+        <ul class="choices" role="group" aria-label="ตัวเลือก">
+          <li class="rv" style="--i:2"><button class="choice" type="button" aria-pressed="false"><span class="k">ก</span><span>ดูของหน้าแผงแล้วค่อยตัดสินใจ อยู่มานานพอที่จะรู้</span><span class="ck" aria-hidden="true"></span></button></li>
+          <li class="rv" style="--i:3"><button class="choice" type="button" aria-pressed="false"><span class="k">ข</span><span>มีกระดาษแผ่นเดียวที่จดไว้ทุกคืนว่าพรุ่งนี้ต้องซื้ออะไร ตามยอดที่คาดไว้</span><span class="ck" aria-hidden="true"></span></button></li>
+          <li class="rv" style="--i:4"><button class="choice" type="button" aria-pressed="false"><span class="k">ค</span><span>ซื้อเผื่อไว้ก่อน ของหมดกลางวันน่าอายกว่าของเหลือ</span><span class="ck" aria-hidden="true"></span></button></li>
+          <li class="rv" style="--i:5"><button class="choice" type="button" aria-pressed="false"><span class="k">ง</span><span>ลูกน้องหรือซัพพลายเออร์จัดมาให้ ผมเช็กบิลทีหลัง</span><span class="ck" aria-hidden="true"></span></button></li>
+        </ul>
+        <div class="q-foot rv" style="--i:6">
+          <p class="meta num">ถัดไป · 06:40 ครัวเริ่มร้อน</p>
+          <span class="next" data-next>ต่อไป <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 4. RESULT TEASER ============ -->
+<section class="res">
+  <div class="wrap inner">
+    <p class="meta rv" style="--i:0;margin-bottom:18px">ตัวอย่างหน้าผลลัพธ์ · รายงานร้านของคุณ</p>
+    <div class="report">
+      <div class="head">
+        <div class="top rv" style="--i:0">
+          <p class="meta">บุคลิกร้าน · <b>1 ใน 6</b></p>
+          <p class="meta num">ตอบครบ 25 / 25 · 23:00</p>
+        </div>
+        <h2 class="arch rv" style="--i:1">เชฟหัวดื้อ</h2>
+        <p class="ess rv" style="--i:2">รสชาติคือทุกอย่าง โลกต้องมาหาฉัน</p>
+      </div>
+      <div class="body">
+        <div class="col">
+          <p class="meta rv" style="--i:0">ส่วนที่ <b class="num">2</b></p>
+          <h3 class="rv" style="--i:1">3 อย่างที่ร้านคุณทำอยู่โดยไม่รู้ตัว</h3>
+
+          <div class="item rv" style="--i:2">
+            <div class="t"><span class="n num">01</span><h4>สูตรอยู่ในหัวคุณ</h4></div>
+            <p class="b">นั่นแปลว่าร้านเปิดได้เท่าที่คุณยืนไหว วันที่คุณป่วยคือวันที่ร้านปิด</p>
+            <div class="mini">
+              <div class="row"><span class="lab">ทำเองได้</span><span>เขียนสูตรจานที่ขายดีที่สุดลงกระดาษ 1 แผ่นคืนนี้</span></div>
+              <div class="row us"><span class="lab">เราช่วยได้</span><span>ระบบหลังบ้าน <span class="tag">SOP</span></span></div>
+            </div>
+          </div>
+
+          <div class="cta rv" style="--i:3">
+            <a class="btn line" href="#">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12a8 8 0 1 1 3.5 6.6L4 20l1-3.6A8 8 0 0 1 4 12z"/></svg>
+              ทัก LINE คุยฟรี 30 นาที
+            </a>
+          </div>
+        </div>
+
+        <div class="col side">
+          <p class="meta rv" style="--i:1">ภาพประกอบรายงาน</p>
+          <figure class="rv" style="--i:2">
+            <div class="ph" aria-hidden="true">
+              <div class="pict">
+                <svg viewBox="0 0 120 120"><path d="M8 44h104M14 44v52M106 44v52M14 96h92M20 44V36h80v8M30 70h60"/><path d="M40 30c0-6 4-9 9-9s9 3 9 9M70 30c0-6 4-9 9-9s9 3 9 9"/></svg>
+              </div>
+            </div>
+            <figcaption class="cap"><span>ภาพ: หลังครัวตอนตี 5</span><span class="num">07 / 07</span></figcaption>
+          </figure>
+          <div class="picts rv" style="--i:3" aria-hidden="true">
+            <div>
+              <svg viewBox="0 0 120 120"><path d="M60 22v10M28 40h64M60 32l-24 8M60 32l24 8M36 40l-12 30h24l-12-30M84 40l-12 30h24l-12-30"/><path d="M24 70c0 6 5 10 12 10s12-4 12-10M72 70c0 6 5 10 12 10s12-4 12-10M60 40v58M44 98h32"/></svg>
+              <p class="meta">ตาชั่ง</p>
+            </div>
+            <div>
+              <svg viewBox="0 0 120 120"><path d="M60 100V24M42 100h36M46 100v6h28v-6"/><path d="M36 40h48l-4 10H40zM38 54h44l-3 9H41zM40 68h40l-3 8H43z"/><path d="M60 24l-4-8h8z"/></svg>
+              <p class="meta">บิลออเดอร์</p>
+            </div>
+            <div>
+              <svg viewBox="0 0 120 120"><path d="M8 44h104M14 44v52M106 44v52M14 96h92M20 44V36h80v8M30 70h60"/><path d="M40 30c0-6 4-9 9-9s9 3 9 9M70 30c0-6 4-9 9-9s9 3 9 9"/></svg>
+              <p class="meta">โต๊ะสแตนเลส</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="wrap foot">
+  <span class="meta">Flavolution · mock ทาง B · Backstage Editorial</span>
+  <span class="meta num">390 → 1280</span>
+</footer>
+
+<script>
+(function(){
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var els = document.querySelectorAll('.rv, [data-tl], [data-hud]');
+  if (reduce || !('IntersectionObserver' in window)) {
+    els.forEach(function(e){ e.classList.add('in'); });
+  } else {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); }
+      });
+    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.1 });
+    els.forEach(function(e){ io.observe(e); });
+  }
+
+  // timeline: 06:00 on 06:00→23:00 (17 h). 06:00 = 0%; nudge to 1.5% so the dot reads as "started".
+  var tl = document.querySelector('[data-tl]');
+  if (tl) tl.style.setProperty('--pct', '1.5%');
+
+  // quiz: single-select highlight
+  var choices = document.querySelectorAll('.choice');
+  var next = document.querySelector('[data-next]');
+  choices.forEach(function(btn){
+    btn.addEventListener('click', function(){
+      choices.forEach(function(b){ b.setAttribute('aria-pressed', b === btn ? 'true' : 'false'); });
+      if (next) next.classList.add('on');
+    });
+  });
+})();
+</script>
+</body>
+</html>

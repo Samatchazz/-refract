@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Plan C — ฟอร์มเคาะเนื้อหาเว็บ</title>
+<style>
+  :root{
+    --bg:#12121a; --card:#1c1c28; --card2:#232334; --line:#34344a;
+    --txt:#e8e8f0; --dim:#9a9ab0; --acc:#ffd23f; --ok:#4ade80; --no:#f87171; --mid:#60a5fa;
+  }
+  *{box-sizing:border-box; -webkit-tap-highlight-color:transparent;}
+  body{margin:0; background:var(--bg); color:var(--txt);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans Thai",Tahoma,sans-serif;
+    font-size:16px; line-height:1.55; padding-bottom:90px;}
+  .wrap{max-width:640px; margin:0 auto; padding:16px;}
+  header{padding:24px 16px 8px; text-align:center;}
+  header h1{font-size:22px; margin:0 0 4px; color:var(--acc);}
+  header p{color:var(--dim); font-size:13px; margin:0;}
+  .warn{background:#2a2214; border:1px solid #5a4a1a; color:#ffd23f; border-radius:10px;
+    padding:10px 14px; font-size:13px; margin:14px 0;}
+  h2.sec{font-size:17px; margin:34px 0 4px; color:var(--acc); border-bottom:2px solid var(--line); padding-bottom:6px;}
+  .secnote{color:var(--dim); font-size:13px; margin:0 0 14px;}
+  .q{background:var(--card); border:1px solid var(--line); border-radius:14px; padding:14px 16px; margin:12px 0;}
+  .q.answered{border-color:#2e5a3e;}
+  .q h3{font-size:15px; margin:0 0 2px;}
+  .q .note{font-size:12.5px; color:var(--dim); margin:0 0 10px;}
+  .opt{display:flex; align-items:flex-start; gap:10px; padding:9px 10px; border:1px solid var(--line);
+    border-radius:10px; margin:6px 0; cursor:pointer; background:var(--card2); font-size:14px;}
+  .opt:active{transform:scale(.99);}
+  .opt input{margin-top:3px; accent-color:var(--acc); flex:none;}
+  .opt.sel{border-color:var(--acc); background:#2b2b18;}
+  input[type=text], textarea{width:100%; background:#15151f; color:var(--txt); border:1px solid var(--line);
+    border-radius:8px; padding:9px 10px; font-size:14px; font-family:inherit; margin-top:6px;}
+  textarea{min-height:60px; resize:vertical;}
+  .tag{display:inline-block; font-size:11px; padding:1px 8px; border-radius:20px; border:1px solid var(--line);
+    color:var(--dim); margin-left:6px; vertical-align:middle;}
+  .tag.s{color:var(--ok); border-color:var(--ok);}
+  .tag.m{color:var(--acc); border-color:var(--acc);}
+  .tag.l{color:var(--no); border-color:var(--no);}
+  /* layout cards */
+  .lay .desc{font-size:13.5px; color:var(--dim); margin:4px 0 10px;}
+  .tri{display:flex; gap:6px;}
+  .tri button{flex:1; padding:9px 4px; border-radius:9px; border:1px solid var(--line); background:var(--card2);
+    color:var(--dim); font-size:13px; cursor:pointer; font-family:inherit;}
+  .tri button.on-main{background:#173322; border-color:var(--ok); color:var(--ok); font-weight:700;}
+  .tri button.on-keep{background:#16233a; border-color:var(--mid); color:var(--mid); font-weight:700;}
+  .tri button.on-cut{background:#331717; border-color:var(--no); color:var(--no); font-weight:700; text-decoration:line-through;}
+  /* beats */
+  .beat{display:flex; gap:10px; align-items:flex-start; background:var(--card); border:1px solid var(--line);
+    border-radius:12px; padding:10px 12px; margin:8px 0;}
+  .beat .num{flex:none; width:30px; height:30px; border-radius:8px; background:var(--card2); border:1px solid var(--line);
+    display:flex; align-items:center; justify-content:center; font-size:12px; color:var(--acc); font-weight:700;}
+  .beat .body{flex:1; min-width:0;}
+  .beat .zone{font-size:11px; color:var(--dim);}
+  .beat .copy{font-size:13.5px; white-space:pre-line;}
+  .beat .lbl{font-size:11px; color:var(--mid); font-style:italic;}
+  .beat.cut{opacity:.45;}
+  .beat.cut .copy{text-decoration:line-through;}
+  .beat.edit{border-color:var(--acc);}
+  .bt3{display:flex; flex-direction:column; gap:4px; flex:none;}
+  .bt3 button{width:44px; padding:5px 0; border-radius:7px; border:1px solid var(--line); background:var(--card2);
+    color:var(--dim); font-size:11px; cursor:pointer; font-family:inherit;}
+  .bt3 button.on-keep{background:#173322; border-color:var(--ok); color:var(--ok);}
+  .bt3 button.on-cut{background:#331717; border-color:var(--no); color:var(--no);}
+  .bt3 button.on-edit{background:#332b12; border-color:var(--acc); color:var(--acc);}
+  .addbtn{width:100%; padding:12px; border-radius:12px; border:1px dashed var(--line); background:transparent;
+    color:var(--dim); font-size:14px; cursor:pointer; font-family:inherit; margin-top:6px;}
+  /* footer bar */
+  .bar{position:fixed; bottom:0; left:0; right:0; background:#0d0d14ee; backdrop-filter:blur(6px);
+    border-top:1px solid var(--line); padding:10px 14px;}
+  .bar .in{max-width:640px; margin:0 auto; display:flex; gap:10px; align-items:center;}
+  .bar .prog{flex:1; font-size:12.5px; color:var(--dim);}
+  .bar button{padding:11px 18px; border-radius:10px; border:none; background:var(--acc); color:#1a1a10;
+    font-weight:800; font-size:14px; cursor:pointer; font-family:inherit;}
+  /* output */
+  #outbox{display:none; margin-top:14px;}
+  #outbox textarea{min-height:260px; font-size:12px;}
+  .rowbtn{display:flex; gap:8px; margin-top:8px;}
+  .rowbtn button{flex:1; padding:11px; border-radius:10px; border:1px solid var(--line); background:var(--card2);
+    color:var(--txt); font-size:14px; cursor:pointer; font-family:inherit;}
+  .pill{font-size:11px; background:var(--card2); border:1px solid var(--line); border-radius:20px; padding:1px 8px; color:var(--dim);}
+</style>
+</head>
+<body>
+<header>
+  <h1>🐈‍⬛ Plan C — ฟอร์มเคาะเนื้อหาเว็บ</h1>
+  <p>ทุกข้อมี "อื่นๆ / พิมพ์เอง" · ข้ามข้อไหนก็ได้ เดี๋ยวขึ้นเป็น "ยังไม่เคาะ" ในสรุป</p>
+</header>
+<div class="wrap">
+  <div class="warn">⚠️ ฟอร์มนี้ไม่บันทึกอัตโนมัติ — ตอบเสร็จกด <b>"สรุปคำตอบ"</b> ด้านล่าง แล้วคัดลอก/ดาวน์โหลดก่อนปิดหน้า</div>
+
+  <h2 class="sec">ส่วนที่ 1 — คำถามที่ต้องเคาะ (13 ข้อ)</h2>
+  <p class="secnote">มาจากหมวด 5 ของ CONTENT-MAP — ของที่ BMC ตอบไม่ได้ ต้องรอ Mat</p>
+  <div id="questions"></div>
+
+  <h2 class="sec">ส่วนที่ 2 — เมนูเลย์เอาต์ (A–H)</h2>
+  <p class="secnote">แต่ละใบกดได้ 3 แบบ: <span class="pill">⭐ ตัวหลัก</span> เลือกได้ใบเดียว · <span class="pill">💭 เก็บไว้คิด</span> · <span class="pill">🗑 ตัดทิ้ง</span></p>
+  <div id="layouts"></div>
+
+  <h2 class="sec">ส่วนที่ 3 — บีทสคริปต์ 30 บีท (ลด/เพิ่ม/แก้ได้)</h2>
+  <p class="secnote">ค่าเริ่มต้น = เก็บทุกบีท · กด ✏️ แล้วพิมพ์ทับได้เลย · เพิ่มบีทใหม่ได้ท้ายลิสต์</p>
+  <div id="beats"></div>
+  <button class="addbtn" onclick="addBeat()">＋ เพิ่มบีทใหม่</button>
+
+  <h2 class="sec">ส่วนที่ 4 — คอมเมนต์รวม</h2>
+  <div class="q"><textarea id="freeNote" placeholder="อะไรที่ฟอร์มนี้ไม่ได้ถาม แต่อยากบอก… (เช่น อันไหนดูไม่เข้าท่า เพราะอะไร)"></textarea></div>
+
+  <div id="outbox" class="q">
+    <h3>📋 สรุปคำตอบ (วางกลับมาในแชตได้เลย)</h3>
+    <textarea id="outText" readonly></textarea>
+    <div class="rowbtn">
+      <button onclick="copyOut()">คัดลอก</button>
+      <button onclick="dlOut()">ดาวน์โหลด .md</button>
+    </div>
+  </div>
+</div>
+
+<div class="bar"><div class="in">
+  <div class="prog" id="prog">ตอบแล้ว 0/13 ข้อ</div>
+  <button onclick="buildOut()">สรุปคำตอบ ➜</button>
+</div></div>
+
+<script>
+/* ================= DATA ================= */
+const QUESTIONS = [
+ {id:'Q1', t:'ปุ่ม CTA กดแล้วไปไหน?', n:'BMC บอกแค่ "มี LINE OA รองรับ" — ตอนจบของด่านสร้างไม่ได้จนกว่าจะรู้',
+  opts:['LINE OA (แปะลิงก์/QR)','ฟอร์มจองคิว (เช่น Google Form)','อีเมล / DM เพจ'], other:true,
+  extra:'ลิงก์จริง / วิธีส่งการบ้าน 5 ข้อ:'},
+ {id:'Q2', t:'จ่ายเงินยังไง?', n:'ไม่มีในเอกสารสักไฟล์ — กระทบขั้นตอนหลังกดปุ่ม',
+  opts:['โอน / PromptPay','เพย์เมนต์เกตเวย์ (บัตร ฯลฯ)','คุยก่อน ค่อยบอกวิธีจ่ายในห้อง'], other:true},
+ {id:'Q3', t:'เลข 1,500 ขึ้นเว็บได้ไหม?', n:'เอกสารขัดกันเอง: บล็อกก๊อปปี้ 🟢 มีเลขเต็ม แต่กติกา BMC+brief ห้ามโพสต์สาธารณะ',
+  opts:['ไม่โชว์เลข — โชว์แค่วิธีคิด (ตาม brief · ร่างปัจจุบันใช้แบบนี้)','โชว์เลขเต็ม "1,500 คือพื้น"','บอกอ้อมๆ ว่า "มีตัวเลขพื้น — ให้เป็นรายคนในห้อง"'], other:true},
+ {id:'Q4', t:'ประกาศ trigger ขึ้นราคาบนเว็บไหม?', n:'"ครบ 10 คน → เดี่ยว 1,500 · สมาชิกใหม่ 3,500 · 10 คนแรกล็อกตลอดชีพ" — ค้างตัดสินใจใน BMC',
+  opts:['ประกาศครบ — trigger + ราคาใหม่ + ล็อกตลอดชีพ','ประกาศแค่ "10 คนแรกล็อกราคาตลอดชีพ" ไม่บอกราคาใหม่','ไม่ประกาศอะไรเลย (ราคาปัจจุบันล้วน)'], other:true},
+ {id:'Q5', t:'แพ็ก ~฿599 โชว์บนเว็บไหม?', n:'ยังไม่เปิดขาย (ค้างตัดสินใจข้อ 1 ของ BMC)',
+  opts:['โชว์เป็นบล็อกล็อก "เร็วๆ นี้"','ไม่โชว์เลย จนกว่าจะเปิดขายจริง','เปิดขายเลย (ต้องทำของก่อน — งานเพิ่ม)'], other:true},
+ {id:'Q6', t:'เนื้อหาฝั่งแบรนด์ (สองตะกร้า) เอาไง?', n:'BMC บอก "ควรอยู่บนหน้าเว็บ" แต่ 8 เซกชันไม่มีที่ให้ และทุกอย่างฝั่งแบรนด์ต้องพูดแบบ "กำลังสร้าง"',
+  opts:['ไม่ขึ้นเฟสนี้ (รอมีของจริง)','เป็น 1 ป้ายเล็กในด่านหลัก','แยกเส้นทาง/หน้าฝั่งแบรนด์ (Layout E)','รอเป็น World 1-3 ทีหลัง (Layout G)'], other:true},
+ {id:'Q7', t:'คำมั่น 6 ข้อ เอาน้ำหนักระดับไหน?', n:'brief สั่ง "หน้าเต็ม ไม่ใช่ footer"',
+  opts:['ป้ายย่อในด่าน + ลิงก์ไปหน้าเต็มแยก (ครบตาม brief)','ป้ายรั้ว 6 ต้นในด่านอย่างเดียว','หน้าแยกอย่างเดียว ในด่านไม่มี'], other:true},
+ {id:'Q8', t:'สรรพนามบนเว็บ?', n:'ก๊อปปี้ต้นทางใช้ปนกัน — บนเว็บสั้นๆ ความไม่คงเส้นจะเด่น',
+  opts:['"เรา" เป็นหลัก · "ผม" เฉพาะป้าย "คุณเป็นใคร" (ตามต้นทาง)','"ผม" ทั้งเว็บ (เสียงคนเดียว ตรงกับยังไม่เปิดตัวตน)','"เรา" ทั้งเว็บ'], other:true},
+ {id:'Q9', t:'แอสเซ็ตภาพ มีอะไรอยู่แล้วบ้าง?', n:'ติ๊กได้หลายข้อ — เริ่มวาดไม่ได้จนกว่าจะรู้', multi:true,
+  opts:['มีโลโก้ Plan C แล้ว','มีสไปรต์/ภาพแมวดำแล้ว','มีโทนสี/ฟอนต์ที่อยากใช้แล้ว','ยังไม่มีอะไรเลย เริ่มจากศูนย์'], other:true,
+  extra:'รายละเอียด (ไฟล์อยู่ไหน / โทนสีอะไร):'},
+ {id:'Q10', t:'ชื่อ + โดเมน', n:'"planc*" ตัวเต็มสะกดยังไงบนหน้าเว็บ + URL',
+  opts:[], other:false, text:true, ph:'เช่น ชื่อโชว์: planc* · โดเมน: plancstar.com'},
+ {id:'Q11', t:'บิลบอร์ดข้อมูลในโซนมืด เอากี่ป้าย?', n:'ของพร้อมใช้มี 4 บล็อก — ร่างปัจจุบันคัด 3',
+  opts:['3 ป้าย: 36% อาเซียน · เพดาน <2% · ไม่มีใครถามคนเลิก (ร่างปัจจุบัน)','ครบ 4 ป้าย (เพิ่ม "รายได้ต่อวิวไม่เท่ากัน" — โซนมืดยาวขึ้น ~2 จอ)','2 ป้ายพอ: 36% + ไม่มีใครถามคนเลิก'], other:true},
+ {id:'Q12', t:'"สัปดาห์ละ 3 คน" ใต้ปุ่มจอง ยังจริงไหม?', n:'มาจากตารางคืนพฤหัสใน BMC แต่ตารางสัปดาห์ยังเป็นของค้างตัดสินใจ',
+  opts:['ยังจริง ใช้ได้','เปลี่ยนตัวเลข (พิมพ์ข้างล่าง)','ตัดข้อความนี้ออก ไม่ระบุจำนวน'], other:true},
+ {id:'Q13', t:'ป้าย DEADLINE ในโจทย์เดิม เอาไง?', n:'BMC ไม่มีความเจ็บเรื่องเส้นตาย — ความเจ็บใกล้สุด "แก้ไม่จบ" ใช้บล็อกหนามไปแล้ว',
+  opts:['ตัดทิ้ง (ตามที่ CONTENT-MAP เสนอ)','เก็บไว้ แต่ให้แทนความเจ็บอื่น (พิมพ์ข้างล่าง)'], other:true},
+];
+
+const LAYOUTS = [
+ {id:'A', name:'ด่านเดียว 8 โซน', tag:'S', d:'ทุกอย่างในด่านเดียว 30 บีท · nav = shortcut โดดในด่าน · ตรง cap ของ brief เป๊ะ เสร็จเร็วสุด · จุดอ่อน: คำมั่น 6 ข้อได้แค่น้ำหนักป้าย'},
+ {id:'B', name:'ด่านเดียว + หน้าธรรมดาแยก', tag:'S+', d:'ด่าน = อารมณ์ · หน้าแยก = คำมั่น 6 ข้อเต็มหน้า / ราคา / วิธีจอง · ทางเดียวที่ทำตาม brief ครบ · หน้าแยกใช้แปะตอบคอมเมนต์ FB ได้'},
+ {id:'C', name:'3 ด่านตามโครงเรื่อง + ปราสาท', tag:'M', d:'1-1 ปัญหา → 1-2 ใต้ดิน (ข้อมูล/วิกฤต) → 1-3 ทางออก+บริการ → ปราสาท CTA · อารมณ์แรงสุด · จุดอ่อน: เกิน 8 เซกชัน ขัด brief + คนตี 1 อาจไม่รอด 3 ด่าน'},
+ {id:'D', name:'ด่านตามกลุ่มบริการ + จอเลือกด่าน', tag:'M–L', d:'ฟรี / อาชีพจริง / กติกา แยกด่าน · จุดอ่อนหนัก: ชนกลไกขายที่พิสูจน์แล้ว ("ได้แต่ A → ไม่ซื้อ") + บริการน้อยไป แยกแล้วโหรงเหรง'},
+ {id:'E', name:'เส้นทางแยกตามกลุ่มลูกค้า', tag:'L', d:'ทางแยกต้นด่าน: มีดีลแล้ว / ยังไม่มีดีล / ฝั่งแบรนด์ · ตรงโครง "คนจ่ายคัดตัวเอง" · จุดอ่อน: ทางแบรนด์ต้องพูด "กำลังสร้าง" ทั้งเส้น + ทางยังไม่มีดีลไม่มีสินค้าให้ชน'},
+ {id:'F', name:'ด่านสั้น + Warp Zone', tag:'S+', d:'ท่อวาร์ป "รีบ? ข้ามไปเลย" ต้นด่าน → ตกที่ราคา+FAQ ก่อนปุ่ม · ตรงพฤติกรรมคนจิ้มจาก FB ตอนตี 1 · ต้นทุนเกือบศูนย์ ใช้คู่กับ A/B ได้'},
+ {id:'G', name:'ปล่อยเป็นภาค (episodic)', tag:'S→M', d:'ส่ง World 1-1 วันนี้ · 1-2 "ของจริงจากสมาชิก" เปิดเมื่อมี testimonial จริง · 1-3 ฝั่งแบรนด์เปิดเมื่อลิสต์มีเคส · ตรง "ship it small" เป๊ะ'},
+ {id:'H', name:'ด่านเดียว + ห้องลับใต้ดิน', tag:'S+', d:'ท่อลับใกล้บิลบอร์ด → ห้อง "ที่มา+ข้อจำกัดฉบับเต็ม" · รางวัลคนช่างเช็ก (= โปรไฟล์คนจ่าย) · หลักฐานหลักยังอยู่ทางหลักเสมอ'},
+];
+
+const BEATS = [
+ [1,'① HERO','แบรนด์ไม่เคยบอกคุณ\nว่าทำไมเขาไม่จ้างคุณต่อ','The information gap'],
+ [2,'① HERO','คุณจะได้ยินแค่ "ปีนี้แบรนด์ปรับ direction ครับ"','The polite excuse'],
+ [3,'① HERO','[GUESS] เลื่อนลง — เดินไปดูห้องนั้นกัน','Scroll to walk'],
+ [4,'② อุปสรรค · หลุม','ยอดตก และไม่มีใครบอกว่าทำไม','The drop'],
+ [5,'② อุปสรรค · ป้ายราคาเลือน','"งานนี้คิดเรทเท่าไหร่ดี" — เดาเอาทุกครั้ง','Rate roulette'],
+ [6,'② อุปสรรค · กองกระดาษ','สัญญาที่เซ็นไป โดยไม่เคยอ่านจบ','The contract pile'],
+ [7,'② อุปสรรค · บล็อกหนาม','แก้ไม่จบ ทั้งที่ตกลงกันไว้แล้ว','Revision #8'],
+ [8,'② อุปสรรค · ฉากเงียบ','ส่งงานแล้ว… เงียบ\nเงินก็ยังไม่มา','Ghosted after delivery'],
+ [9,'③ โซนมืด · ประตูล็อก','เหตุผลจริงถูกพูดในห้องนี้\nและคุณไม่เคยได้เข้า','The room you\'re not in'],
+ [10,'③ โซนมืด','ชื่อคุณอยู่ในตาราง เทียบกับอีก 5–8 คน','The comparison table'],
+ [11,'③ โซนมืด','ช่องที่ทำให้ชื่อถูกขีดออกบ่อยที่สุด:\n"เคยมีปัญหาอะไรไหม"','The column that kills'],
+ [12,'③ โซนมืด · บิลบอร์ด 1','ครีเอเตอร์ไทยที่หาได้เกินค่าแรงขั้นต่ำ: 36%\nอันดับสุดท้ายในอาเซียน*','Thailand ranks last'],
+ [13,'③ โซนมืด · บิลบอร์ด 2','ทั่วโลก ไม่ถึง 2% ของคนเปิดช่อง\nไปถึงรายได้ ~$15,000/ปี*','The ceiling'],
+ [14,'③→④ ปากอุโมงค์ · บิลบอร์ด 3','ไม่มีงานวิจัยไหนเคยถามคนที่เลิก ว่าเลิกเพราะอะไร\nนั่นคือสิ่งที่เรากำลังทำ','The question nobody asked'],
+ [15,'④ ทางออก · ป้ายพลิกเรื่อง','ตัวตนไม่ชัด ไม่ใช่ปัญหาความน่าสนใจ\nมันคือปัญหาราคา','A pricing problem'],
+ [16,'④ ? บล็อก 1','คุยครั้งแรก ฟรี 30–45 นาที · ครั้งเดียวต่อคน\nให้หมด ไม่เก็บไว้ขายทีหลัง','Free first session'],
+ [17,'④ ? บล็อก 2','เซสชันเดี่ยว ฿999 / 30 นาที\nซื้อเมื่อไหร่ก็ได้','Single session'],
+ [18,'④ ? บล็อก 3','สมาชิกรายเดือน ฿2,000\nข่าววงในจากฝั่งแบรนด์ ทุกสัปดาห์','Monthly membership'],
+ [19,'④ ไอเทม 4 ชิ้น','feed วงใน · เช็กลิสต์สัญญา\nประเมินรายไตรมาส · คุยกัน 45 นาที × 2','What\'s inside'],
+ [20,'④ บล็อกล็อก (รอเคาะ Q5)','[MISSING — แพ็ก ~฿599]','Locked block'],
+ [21,'⑤ ป้ายรั้ว 6 ต้น','เส้นที่เราไม่ข้าม (6 ข้อ ทีละป้าย)','Six lines we don\'t cross'],
+ [22,'⑤ ป้ายใหญ่','เอเจนซีได้เงินเมื่อคุณรับงาน\nเราได้เท่าเดิม แม้คุณปฏิเสธ','Why you can trust the advice'],
+ [23,'⑤ ป้ายความเชื่อ 1','ทุกดีลต้องมี debrief —\nไม่รู้ผล = ไม่มีวันรู้ว่าทำไมไม่ได้ต่อ','Every deal gets a debrief'],
+ [24,'⑤ ป้ายความเชื่อ 2','คิดราคาจากต้นทุนของคุณ\nไม่ใช่จากงบของเขา','Price from your cost'],
+ [25,'⑤ ป้าย "คุณเป็นใคร"','ผมนั่งฝั่งที่จ่ายเงินมาสิบปี ยังไม่เปิดชื่อ\nอ่านที่ผมเขียน แล้วตัดสินเองว่าผมเคยอยู่ในห้องนั้นจริงไหม','Who\'s behind this'],
+ [26,'⑥ ป้ายราคา','ครั้งแรก ฟรี · เดี่ยว ฿999 · สมาชิก ฿2,000\nไม่มีนับถอยหลัง ไม่มีเร่งให้รีบ','Pricing, no tricks'],
+ [27,'⑦ FAQ ป้าย 1','"เข้ามาแล้วได้งานไหม?" — เราไม่รับประกัน\nและเราไม่รับเงินจากทั้งสองฝั่งในการแนะนำใคร','No guarantees'],
+ [28,'⑦ FAQ ป้าย 2','"ถ้าผมไม่เหมาะกับอาชีพนี้ล่ะ?" — เราจะบอกคุณ\nและนั่นคือเซสชันที่สำเร็จ ไม่ใช่ล้มเหลว','An honest answer counts'],
+ [29,'⑧ ตอนจบ · ตึกไฟดวงเดียว','เราไม่ได้ขายความหวัง\nเราขายความชัดเจน','Clarity, not hope'],
+ [30,'⑧ CTA · ปุ่ม+ประตู','จองคุยครั้งแรก — ไม่มีค่าใช้จ่าย\nสัปดาห์ละ 3 คน · มีการบ้าน 5 นาทีก่อนคุย','Book the first talk'],
+];
+
+/* ================= STATE ================= */
+const S = { q:{}, lay:{}, beats:{}, added:[] };
+
+/* ================= RENDER: QUESTIONS ================= */
+const qWrap = document.getElementById('questions');
+QUESTIONS.forEach(q=>{
+  const div = document.createElement('div');
+  div.className='q'; div.id='card-'+q.id;
+  let h = `<h3>${q.id} — ${q.t}</h3><p class="note">${q.n}</p>`;
+  const type = q.multi ? 'checkbox' : 'radio';
+  q.opts.forEach((o,i)=>{
+    h += `<label class="opt"><input type="${type}" name="${q.id}" value="${i}" onchange="pick('${q.id}')"><span>${o}</span></label>`;
+  });
+  if(q.other) h += `<label class="opt"><input type="${type}" name="${q.id}" value="other" onchange="pick('${q.id}')"><span>อื่นๆ:</span></label>
+    <input type="text" id="${q.id}-other" placeholder="พิมพ์เอง…" oninput="pick('${q.id}')">`;
+  if(q.text) h += `<input type="text" id="${q.id}-text" placeholder="${q.ph||''}" oninput="pick('${q.id}')">`;
+  if(q.extra) h += `<input type="text" id="${q.id}-extra" placeholder="${q.extra}" oninput="pick('${q.id}')">`;
+  div.innerHTML = h; qWrap.appendChild(div);
+});
+
+function pick(id){
+  const q = QUESTIONS.find(x=>x.id===id);
+  const card = document.getElementById('card-'+id);
+  const checked = [...card.querySelectorAll('input[name="'+id+'"]:checked')];
+  card.querySelectorAll('.opt').forEach(o=>o.classList.toggle('sel', o.querySelector('input')?.checked));
+  const otherTxt = (document.getElementById(id+'-other')||{}).value||'';
+  const freeTxt  = (document.getElementById(id+'-text')||{}).value||'';
+  const extraTxt = (document.getElementById(id+'-extra')||{}).value||'';
+  const vals = checked.map(c => c.value==='other' ? ('อื่นๆ: '+(otherTxt||'(ยังไม่พิมพ์)')) : q.opts[+c.value]);
+  if(q.text && freeTxt) vals.push(freeTxt);
+  S.q[id] = { answers:vals, extra:extraTxt };
+  card.classList.toggle('answered', vals.length>0);
+  updateProg();
+}
+function updateProg(){
+  const n = QUESTIONS.filter(q=>S.q[q.id]&&S.q[q.id].answers.length).length;
+  document.getElementById('prog').textContent = `ตอบแล้ว ${n}/${QUESTIONS.length} ข้อ`;
+}
+
+/* ================= RENDER: LAYOUTS ================= */
+const lWrap = document.getElementById('layouts');
+LAYOUTS.forEach(L=>{
+  const cls = L.tag.startsWith('S')?'s':(L.tag.startsWith('M')?'m':'l');
+  const div = document.createElement('div');
+  div.className='q lay'; div.id='lay-'+L.id;
+  div.innerHTML = `<h3>${L.id}. ${L.name} <span class="tag ${cls}">ราคา ${L.tag}</span></h3>
+    <p class="desc">${L.d}</p>
+    <div class="tri">
+      <button onclick="setLay('${L.id}','main')" id="b-${L.id}-main">⭐ ตัวหลัก</button>
+      <button onclick="setLay('${L.id}','keep')" id="b-${L.id}-keep">💭 เก็บไว้คิด</button>
+      <button onclick="setLay('${L.id}','cut')"  id="b-${L.id}-cut">🗑 ตัดทิ้ง</button>
+    </div>
+    <input type="text" id="lay-${L.id}-note" placeholder="โน้ตถึงเลย์เอาต์นี้ (ไม่บังคับ)…">`;
+  lWrap.appendChild(div);
+});
+function setLay(id, v){
+  if(v==='main'){ // only one main
+    for(const k in S.lay) if(S.lay[k]==='main'){ S.lay[k]='keep'; paintLay(k); }
+  }
+  S.lay[id] = (S.lay[id]===v) ? null : v;
+  paintLay(id);
+}
+function paintLay(id){
+  ['main','keep','cut'].forEach(v=>{
+    document.getElementById(`b-${id}-${v}`).className = (S.lay[id]===v) ? 'on-'+v : '';
+  });
+}
+
+/* ================= RENDER: BEATS ================= */
+const bWrap = document.getElementById('beats');
+BEATS.forEach(b=>{
+  const [num, zone, copy, lbl] = b;
+  S.beats[num] = {status:'keep', text:copy};
+  const div = document.createElement('div');
+  div.className='beat'; div.id='beat-'+num;
+  div.innerHTML = `<div class="num">${num}</div>
+    <div class="body">
+      <div class="zone">${zone}</div>
+      <div class="copy" id="copy-${num}">${copy}</div>
+      <div class="lbl">${lbl}</div>
+      <textarea id="edit-${num}" style="display:none" oninput="S.beats[${num}].text=this.value">${copy}</textarea>
+    </div>
+    <div class="bt3">
+      <button onclick="setBeat(${num},'keep')" id="bb-${num}-keep" class="on-keep">✓</button>
+      <button onclick="setBeat(${num},'edit')" id="bb-${num}-edit">✏️</button>
+      <button onclick="setBeat(${num},'cut')"  id="bb-${num}-cut">✕</button>
+    </div>`;
+  bWrap.appendChild(div);
+});
+function setBeat(n, v){
+  S.beats[n].status = v;
+  const el = document.getElementById('beat-'+n);
+  el.classList.toggle('cut', v==='cut');
+  el.classList.toggle('edit', v==='edit');
+  document.getElementById('edit-'+n).style.display = v==='edit' ? 'block':'none';
+  document.getElementById('copy-'+n).style.display = v==='edit' ? 'none':'block';
+  ['keep','edit','cut'].forEach(x=>{
+    document.getElementById(`bb-${n}-${x}`).className = (v===x)?'on-'+x:'';
+  });
+}
+let addN = 0;
+function addBeat(){
+  addN++;
+  const id = 'new'+addN;
+  const div = document.createElement('div');
+  div.className='beat edit';
+  div.innerHTML = `<div class="num">＋</div>
+    <div class="body">
+      <input type="text" placeholder="วางไว้หลังบีทที่เท่าไหร่ / โซนไหน" oninput="upAdd('${id}','pos',this.value)">
+      <textarea placeholder="ก๊อปปี้ไทย (≤2 บรรทัด)…" oninput="upAdd('${id}','text',this.value)"></textarea>
+      <input type="text" placeholder="English label (ไม่บังคับ)" oninput="upAdd('${id}','lbl',this.value)">
+    </div>`;
+  bWrap.appendChild(div);
+  S.added.push({id, pos:'', text:'', lbl:''});
+}
+function upAdd(id, k, v){ const a=S.added.find(x=>x.id===id); if(a) a[k]=v; }
+
+/* ================= OUTPUT ================= */
+function buildOut(){
+  let md = `# Plan C — คำตอบจากฟอร์มเคาะเนื้อหาเว็บ\n\n## ส่วนที่ 1 — คำถาม 13 ข้อ\n\n`;
+  QUESTIONS.forEach(q=>{
+    const a = S.q[q.id];
+    md += `**${q.id} — ${q.t}**\n`;
+    if(a && a.answers.length){
+      a.answers.forEach(x=> md += `- ✅ ${x}\n`);
+      if(a.extra) md += `- 📝 ${a.extra}\n`;
+    } else md += `- ⏳ ยังไม่เคาะ\n`;
+    md += `\n`;
+  });
+  md += `## ส่วนที่ 2 — เลย์เอาต์\n\n`;
+  LAYOUTS.forEach(L=>{
+    const v = S.lay[L.id];
+    const note = (document.getElementById(`lay-${L.id}-note`)||{}).value||'';
+    const label = v==='main'?'⭐ ตัวหลัก': v==='keep'?'💭 เก็บไว้คิด': v==='cut'?'🗑 ตัดทิ้ง':'⏳ ยังไม่เคาะ';
+    md += `- **${L.id}. ${L.name}** → ${label}${note? ' — '+note:''}\n`;
+  });
+  md += `\n## ส่วนที่ 3 — บีทสคริปต์\n\n`;
+  const cut=[], edited=[];
+  BEATS.forEach(b=>{
+    const st = S.beats[b[0]];
+    if(st.status==='cut') cut.push(b[0]);
+    if(st.status==='edit' && st.text.trim()!==b[2].trim()) edited.push([b[0], st.text]);
+  });
+  md += cut.length ? `ตัดบีท: ${cut.join(', ')}\n` : `ไม่ตัดบีทไหน\n`;
+  if(edited.length){ md += `\nแก้ก๊อปปี้:\n`; edited.forEach(([n,t])=> md += `- บีท ${n} → "${t.replace(/\n/g,' / ')}"\n`); }
+  else md += `ไม่แก้ก๊อปปี้บีทไหน\n`;
+  const adds = S.added.filter(a=>a.text.trim());
+  if(adds.length){ md += `\nบีทเพิ่มใหม่:\n`; adds.forEach(a=> md += `- [${a.pos||'ไม่ระบุตำแหน่ง'}] "${a.text.replace(/\n/g,' / ')}"${a.lbl? ' ('+a.lbl+')':''}\n`); }
+  const fn = document.getElementById('freeNote').value.trim();
+  md += `\n## ส่วนที่ 4 — คอมเมนต์รวม\n\n${fn||'—'}\n`;
+  document.getElementById('outText').value = md;
+  document.getElementById('outbox').style.display='block';
+  document.getElementById('outbox').scrollIntoView({behavior:'smooth'});
+}
+function copyOut(){
+  const t = document.getElementById('outText');
+  t.select(); t.setSelectionRange(0,999999);
+  try{ navigator.clipboard.writeText(t.value); }catch(e){ document.execCommand('copy'); }
+  alert('คัดลอกแล้ว — วางกลับมาในแชตได้เลย');
+}
+function dlOut(){
+  const blob = new Blob([document.getElementById('outText').value], {type:'text/markdown'});
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob); a.download = 'PLAN-C-DECISIONS.md'; a.click();
+}
+</script>
+</body>
+</html>

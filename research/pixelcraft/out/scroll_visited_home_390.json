@@ -1,0 +1,164 @@
+[
+  {
+    "step": 0,
+    "target": 0,
+    "actualY": 0,
+    "docH": 34542
+  },
+  {
+    "step": 1,
+    "target": 1296,
+    "actualY": 1296,
+    "docH": 34542
+  },
+  {
+    "step": 2,
+    "target": 2592,
+    "actualY": 2592,
+    "docH": 34542
+  },
+  {
+    "step": 3,
+    "target": 3888,
+    "actualY": 3888,
+    "docH": 34542
+  },
+  {
+    "step": 4,
+    "target": 5184,
+    "actualY": 5184,
+    "docH": 34542
+  },
+  {
+    "step": 5,
+    "target": 6480,
+    "actualY": 6480,
+    "docH": 34542
+  },
+  {
+    "step": 6,
+    "target": 7776,
+    "actualY": 7776,
+    "docH": 34542
+  },
+  {
+    "step": 7,
+    "target": 9073,
+    "actualY": 9073,
+    "docH": 34542
+  },
+  {
+    "step": 8,
+    "target": 10369,
+    "actualY": 10369,
+    "docH": 34542
+  },
+  {
+    "step": 9,
+    "target": 11739,
+    "actualY": 11739,
+    "docH": 34757
+  },
+  {
+    "step": 10,
+    "target": 13232,
+    "actualY": 13232,
+    "docH": 35246
+  },
+  {
+    "step": 11,
+    "target": 14555,
+    "actualY": 14555,
+    "docH": 35246
+  },
+  {
+    "step": 12,
+    "target": 16069,
+    "actualY": 16069,
+    "docH": 35660
+  },
+  {
+    "step": 13,
+    "target": 17600,
+    "actualY": 17600,
+    "docH": 36044
+  },
+  {
+    "step": 14,
+    "target": 19064,
+    "actualY": 19064,
+    "docH": 36248
+  },
+  {
+    "step": 15,
+    "target": 20773,
+    "actualY": 20773,
+    "docH": 36850
+  },
+  {
+    "step": 16,
+    "target": 22525,
+    "actualY": 22525,
+    "docH": 37447
+  },
+  {
+    "step": 17,
+    "target": 23933,
+    "actualY": 23933,
+    "docH": 37447
+  },
+  {
+    "step": 18,
+    "target": 25341,
+    "actualY": 25341,
+    "docH": 37447
+  },
+  {
+    "step": 19,
+    "target": 26892,
+    "actualY": 26892,
+    "docH": 37644
+  },
+  {
+    "step": 20,
+    "target": 28713,
+    "actualY": 28713,
+    "docH": 38171
+  },
+  {
+    "step": 21,
+    "target": 30149,
+    "actualY": 30149,
+    "docH": 38171
+  },
+  {
+    "step": 22,
+    "target": 31584,
+    "actualY": 31584,
+    "docH": 38171
+  },
+  {
+    "step": 23,
+    "target": 33020,
+    "actualY": 33020,
+    "docH": 38171
+  },
+  {
+    "step": 24,
+    "target": 34456,
+    "actualY": 34456,
+    "docH": 38171
+  },
+  {
+    "step": 25,
+    "target": 35891,
+    "actualY": 35891,
+    "docH": 38171
+  },
+  {
+    "step": 26,
+    "target": 37327,
+    "actualY": 37327,
+    "docH": 38171
+  }
+]

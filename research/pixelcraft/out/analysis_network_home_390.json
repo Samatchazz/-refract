@@ -1,0 +1,144 @@
+{
+  "responses": 222,
+  "measuredBytes": 2720435,
+  "unmeasured": 0,
+  "byType": {
+    "other": {
+      "count": 2,
+      "bytes": 11430,
+      "unmeasured": 0
+    },
+    "stylesheet": {
+      "count": 52,
+      "bytes": 180990,
+      "unmeasured": 0
+    },
+    "image": {
+      "count": 112,
+      "bytes": 2032853,
+      "unmeasured": 0
+    },
+    "script": {
+      "count": 45,
+      "bytes": 299666,
+      "unmeasured": 0
+    },
+    "document": {
+      "count": 1,
+      "bytes": 47968,
+      "unmeasured": 0
+    },
+    "font": {
+      "count": 7,
+      "bytes": 145579,
+      "unmeasured": 0
+    },
+    "xhr": {
+      "count": 3,
+      "bytes": 1949,
+      "unmeasured": 0
+    }
+  },
+  "heaviest": [
+    {
+      "url": "https://pixel-craft.cmsmasters.studio/wp-content/uploads/2026/01/landing-49.webp",
+      "type": "Image",
+      "kb": 247
+    },
+    {
+      "url": "https://pixel-craft.cmsmasters.studio/wp-content/uploads/2026/01/landing-22-1-1.webp",
+      "type": "Image",
+      "kb": 79
+    },
+    {
+      "url": "https://pixel-craft.cmsmasters.studio/wp-content/uploads/2026/01/landing-23-1-1.webp",
+      "type": "Image",
+      "kb": 72
+    },
+    {
+      "url": "https://pixel-craft.cmsmasters.studio/wp-content/uploads/2026/01/landing-background-1.webp",
+      "type": "Image",
+      "kb": 69
+    },
+    {
+      "url": "https://pixel-craft.cmsmasters.studio/wp-content/uploads/2026/01/landing-home-1-420x1536.webp",
+      "type": "Image",
+      "kb": 50
+    },
+    {
+      "url": "https://pixel-craft.cmsmasters.studio/",
+      "type": "Document",
+      "kb": 47
+    },
+    {
+      "url": "https://pixel-craft.cmsmasters.studio/wp-content/uploads/2026/01/landing-17.webp",
+      "type": "Image",
+      "kb": 46
+    },
+    {
+      "url": "https://pixel-craft.cmsmasters.studio/wp-content/uploads/2026/01/landing-home-2-420x1536.webp",
+      "type": "Image",
+      "kb": 44
+    },
+    {
+      "url": "https://pixel-craft.cmsmasters.studio/wp-content/uploads/2026/01/landing-42.webp",
+      "type": "Image",
+      "kb": 44
+    },
+    {
+      "url": "https://pixel-craft.cmsmasters.studio/wp-content/uploads/2026/01/landing-40.webp",
+      "type": "Image",
+      "kb": 42
+    },
+    {
+      "url": "https://pixel-craft.cmsmasters.studio/wp-content/uploads/2026/01/landing-18.webp",
+      "type": "Image",
+      "kb": 41
+    },
+    {
+      "url": "https://pixel-craft.cmsmasters.studio/wp-content/uploads/2026/01/landing-19.webp",
+      "type": "Image",
+      "kb": 40
+    },
+    {
+      "url": "https://pixel-craft.cmsmasters.studio/wp-content/uploads/2026/01/landing-home-3-420x1536.webp",
+      "type": "Image",
+      "kb": 40
+    },
+    {
+      "url": "https://pixel-craft.cmsmasters.studio/wp-content/uploads/2026/01/landing-11.webp",
+      "type": "Image",
+      "kb": 39
+    },
+    {
+      "url": "https://pixel-craft.cmsmasters.studio/wp-content/plugins/elementor/assets/lib/swiper/v8/swiper.min.js?ver=8.4.5",
+      "type": "Script",
+      "kb": 37
+    },
+    {
+      "url": "https://pixel-craft.cmsmasters.studio/wp-content/uploads/2026/01/landing-41.webp",
+      "type": "Image",
+      "kb": 37
+    },
+    {
+      "url": "https://pixel-craft.cmsmasters.studio/wp-content/uploads/2026/01/landing-39.webp",
+      "type": "Image",
+      "kb": 34
+    },
+    {
+      "url": "https://pixel-craft.cmsmasters.studio/wp-content/uploads/2026/01/landing-1.webp",
+      "type": "Image",
+      "kb": 34
+    },
+    {
+      "url": "https://pixel-craft.cmsmasters.studio/wp-content/uploads/2026/01/landing-16.webp",
+      "type": "Image",
+      "kb": 34
+    },
+    {
+      "url": "https://pixel-craft.cmsmasters.studio/wp-content/uploads/2026/01/landing-38.webp",
+      "type": "Image",
+      "kb": 32
+    }
+  ]
+}

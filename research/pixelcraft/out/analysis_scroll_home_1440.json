@@ -1,0 +1,297 @@
+{
+  "legend": "slope = d(rect.top)/d(scrollY). -1.00 = static in flow. |s|<0.08 pinned (horizontal-scroll if xSlope>0.2). -0.92..-0.08 slower than scroll. <-1.08 faster than scroll. >+0.08 drifts down. `kinds` lists every band the element exhibited; `segments` gives the scroll range of each. `holdRange` is the longest pin/h-scroll segment — this is the number to quote for pin distance.",
+  "stepResolutionNote": "fromY/toY are only as precise as the scroll step (docHeight/26). Treat them as ±one step; if libprobe/*.json has scrollTriggers, prefer its exact start/end values.",
+  "trackedElements": 142,
+  "pinned": [
+    {
+      "i": 19,
+      "tag": "div",
+      "cls": "elementor-element elementor-element-4bc0e327 elementor-widget__width-initial ele",
+      "docTop": 823,
+      "sec": null,
+      "kind": "pinned",
+      "kinds": [
+        "pinned"
+      ],
+      "samples": 26,
+      "medianSlope": 0,
+      "medianXSlope": 0,
+      "segments": [
+        {
+          "band": "pinned",
+          "fromY": 1034,
+          "toY": 30671,
+          "steps": 26,
+          "distance": 29637
+        }
+      ],
+      "holdRange": {
+        "fromY": 1034,
+        "toY": 30671,
+        "distance": 29637,
+        "steps": 26,
+        "band": "pinned"
+      }
+    },
+    {
+      "i": 18,
+      "tag": "div",
+      "cls": "elementor-element elementor-element-3e9a7fe9 elementor-view-stacked elementor-wi",
+      "docTop": 818,
+      "sec": null,
+      "kind": "pinned",
+      "kinds": [
+        "pinned"
+      ],
+      "samples": 26,
+      "medianSlope": 0,
+      "medianXSlope": 0,
+      "segments": [
+        {
+          "band": "pinned",
+          "fromY": 1034,
+          "toY": 30671,
+          "steps": 26,
+          "distance": 29637
+        }
+      ],
+      "holdRange": {
+        "fromY": 1034,
+        "toY": 30671,
+        "distance": 29637,
+        "steps": 26,
+        "band": "pinned"
+      }
+    },
+    {
+      "i": 8,
+      "tag": "div",
+      "cls": "elementor-element elementor-element-6aa6dc6d cmsmasters-featured-box__link-butto",
+      "docTop": 743,
+      "sec": null,
+      "kind": "pinned",
+      "kinds": [
+        "pinned"
+      ],
+      "samples": 26,
+      "medianSlope": 0,
+      "medianXSlope": 0,
+      "segments": [
+        {
+          "band": "pinned",
+          "fromY": 1034,
+          "toY": 30671,
+          "steps": 26,
+          "distance": 29637
+        }
+      ],
+      "holdRange": {
+        "fromY": 1034,
+        "toY": 30671,
+        "distance": 29637,
+        "steps": 26,
+        "band": "pinned"
+      }
+    },
+    {
+      "i": 9,
+      "tag": "div",
+      "cls": "elementor-widget-cmsmasters-featured-box__title elementor-widget-cmsmasters-feat",
+      "docTop": 764,
+      "sec": null,
+      "kind": "pinned",
+      "kinds": [
+        "pinned"
+      ],
+      "samples": 26,
+      "medianSlope": 0,
+      "medianXSlope": 0,
+      "segments": [
+        {
+          "band": "pinned",
+          "fromY": 1034,
+          "toY": 30671,
+          "steps": 26,
+          "distance": 29637
+        }
+      ],
+      "holdRange": {
+        "fromY": 1034,
+        "toY": 30671,
+        "distance": 29637,
+        "steps": 26,
+        "band": "pinned"
+      }
+    }
+  ],
+  "horizontalScroll": [],
+  "parallaxSlow": [
+    {
+      "i": 66,
+      "tag": "div",
+      "cls": "elementor-element elementor-element-9619ddb cmsmasters-block-sticky cmsmasters-s",
+      "docTop": 11279,
+      "sec": 10,
+      "kind": "parallax-slow",
+      "kinds": [
+        "parallax-slow"
+      ],
+      "samples": 4,
+      "medianSlope": -0.61,
+      "medianXSlope": 0
+    },
+    {
+      "i": 67,
+      "tag": "div",
+      "cls": "elementor-element elementor-element-14f9d48 cmsmasters-block-default cmsmasters-",
+      "docTop": 11279,
+      "sec": 10,
+      "kind": "parallax-slow",
+      "kinds": [
+        "parallax-slow"
+      ],
+      "samples": 4,
+      "medianSlope": -0.61,
+      "medianXSlope": 0
+    },
+    {
+      "i": 68,
+      "tag": "h6",
+      "cls": "elementor-heading-title elementor-size-default",
+      "docTop": 11282,
+      "sec": 10,
+      "kind": "parallax-slow",
+      "kinds": [
+        "parallax-slow"
+      ],
+      "samples": 4,
+      "medianSlope": -0.61,
+      "medianXSlope": 0
+    },
+    {
+      "i": 69,
+      "tag": "div",
+      "cls": "elementor-element elementor-element-17f3f9f cmsmasters-block-default cmsmasters-",
+      "docTop": 11282,
+      "sec": 10,
+      "kind": "parallax-slow",
+      "kinds": [
+        "parallax-slow"
+      ],
+      "samples": 4,
+      "medianSlope": -0.61,
+      "medianXSlope": 0
+    },
+    {
+      "i": 70,
+      "tag": "h6",
+      "cls": "elementor-heading-title elementor-size-default",
+      "docTop": 11282,
+      "sec": 10,
+      "kind": "parallax-slow",
+      "kinds": [
+        "parallax-slow"
+      ],
+      "samples": 4,
+      "medianSlope": -0.61,
+      "medianXSlope": 0
+    },
+    {
+      "i": 71,
+      "tag": "div",
+      "cls": "elementor-element elementor-element-5ae66f4 cmsmasters-widget-marker-view-stacke",
+      "docTop": 11797,
+      "sec": 10,
+      "kind": "parallax-slow",
+      "kinds": [
+        "parallax-slow"
+      ],
+      "samples": 4,
+      "medianSlope": -0.61,
+      "medianXSlope": 0
+    },
+    {
+      "i": 129,
+      "tag": "div",
+      "cls": "elementor-element elementor-element-0bae188 cmsmasters-block-sticky cmsmasters-s",
+      "docTop": 14879,
+      "sec": 14,
+      "kind": "parallax-slow",
+      "kinds": [
+        "parallax-slow"
+      ],
+      "samples": 4,
+      "medianSlope": -0.638,
+      "medianXSlope": 0
+    },
+    {
+      "i": 136,
+      "tag": "div",
+      "cls": "elementor-element elementor-element-fccdf25 cmsmasters-block-sticky cmsmasters-s",
+      "docTop": 21872,
+      "sec": 20,
+      "kind": "parallax-slow",
+      "kinds": [
+        "parallax-slow"
+      ],
+      "samples": 4,
+      "medianSlope": -0.727,
+      "medianXSlope": 0
+    }
+  ],
+  "parallaxFast": [],
+  "parallaxReverse": [],
+  "opacityReveal": [
+    {
+      "i": 95,
+      "tag": "span",
+      "cls": "elementor-widget-cmsmasters-image-accordion__overlay elementor-widget-cmsmasters",
+      "docTop": 12861,
+      "sec": 11,
+      "kind": "static",
+      "kinds": [],
+      "samples": 3,
+      "medianSlope": -1,
+      "medianXSlope": -0.024,
+      "opacityReveal": [
+        1,
+        0.06,
+        0
+      ]
+    },
+    {
+      "i": 96,
+      "tag": "span",
+      "cls": "elementor-widget-cmsmasters-image-accordion__overlay elementor-widget-cmsmasters",
+      "docTop": 12861,
+      "sec": 11,
+      "kind": "static",
+      "kinds": [],
+      "samples": 3,
+      "medianSlope": -1,
+      "medianXSlope": -0.024,
+      "opacityReveal": [
+        0,
+        0.94,
+        1
+      ]
+    },
+    {
+      "i": 104,
+      "tag": "div",
+      "cls": "elementor-widget-cmsmasters-image-accordion__content-inner",
+      "docTop": 12990,
+      "sec": 11,
+      "kind": "static",
+      "kinds": [],
+      "samples": 3,
+      "medianSlope": -1.001,
+      "medianXSlope": -0.024,
+      "opacityReveal": [
+        0,
+        0.94,
+        1
+      ]
+    }
+  ]
+}

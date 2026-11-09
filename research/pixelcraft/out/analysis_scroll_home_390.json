@@ -1,0 +1,87 @@
+{
+  "legend": "slope = d(rect.top)/d(scrollY). -1.00 = static in flow. |s|<0.08 pinned (horizontal-scroll if xSlope>0.2). -0.92..-0.08 slower than scroll. <-1.08 faster than scroll. >+0.08 drifts down. `kinds` lists every band the element exhibited; `segments` gives the scroll range of each. `holdRange` is the longest pin/h-scroll segment — this is the number to quote for pin distance.",
+  "stepResolutionNote": "fromY/toY are only as precise as the scroll step (docHeight/26). Treat them as ±one step; if libprobe/*.json has scrollTriggers, prefer its exact start/end values.",
+  "trackedElements": 88,
+  "pinned": [
+    {
+      "i": 48,
+      "tag": "div",
+      "cls": "elementor-element elementor-element-4bc0e327 elementor-widget__width-initial ele",
+      "docTop": 788,
+      "sec": null,
+      "kind": "pinned",
+      "kinds": [
+        "pinned"
+      ],
+      "samples": 26,
+      "medianSlope": 0,
+      "medianXSlope": 0,
+      "segments": [
+        {
+          "band": "pinned",
+          "fromY": 1296,
+          "toY": 37327,
+          "steps": 26,
+          "distance": 36031
+        }
+      ],
+      "holdRange": {
+        "fromY": 1296,
+        "toY": 37327,
+        "distance": 36031,
+        "steps": 26,
+        "band": "pinned"
+      }
+    },
+    {
+      "i": 35,
+      "tag": "div",
+      "cls": "elementor-element elementor-element-6dd4f5b0 elementor-view-stacked elementor-wi",
+      "docTop": 763,
+      "sec": null,
+      "kind": "pinned",
+      "kinds": [
+        "pinned"
+      ],
+      "samples": 26,
+      "medianSlope": 0,
+      "medianXSlope": 0,
+      "segments": [
+        {
+          "band": "pinned",
+          "fromY": 1296,
+          "toY": 37327,
+          "steps": 26,
+          "distance": 36031
+        }
+      ],
+      "holdRange": {
+        "fromY": 1296,
+        "toY": 37327,
+        "distance": 36031,
+        "steps": 26,
+        "band": "pinned"
+      }
+    }
+  ],
+  "horizontalScroll": [],
+  "parallaxSlow": [
+    {
+      "i": 57,
+      "tag": "div",
+      "cls": "elementor-element elementor-element-8ac8fe4 e-con-full e-flex cmsmasters-block-d",
+      "docTop": 11540,
+      "sec": 7,
+      "kind": "parallax-slow",
+      "kinds": [
+        "parallax-slow"
+      ],
+      "samples": 2,
+      "medianSlope": -0.834,
+      "medianXSlope": 0
+    }
+  ],
+  "parallaxFast": [],
+  "parallaxReverse": [],
+  "opacityReveal": []
+}

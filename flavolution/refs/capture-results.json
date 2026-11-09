@@ -1,0 +1,394 @@
+{
+  "poomang": {
+    "ok": true,
+    "status": 404,
+    "finalUrl": "https://poomang.com/en",
+    "title": "푸망 - 심리테스트",
+    "fullH": 900
+  },
+  "16p-home": {
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://www.16personalities.com/",
+    "title": "Free personality test, type descriptions, relationship and career advice | 16Personalities",
+    "fullH": 3600
+  },
+  "16p-type": {
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://www.16personalities.com/infj-personality",
+    "title": "INFJ Personality (Advocate) | 16Personalities",
+    "fullH": 3600
+  },
+  "shibuya16": {
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://social-innovation-week-shibuya.jp/shibuyakei16type/",
+    "title": "渋谷﻿系16タイプ診断 by SIW2024",
+    "fullH": 900
+  },
+  "ktestone": {
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://ktestone.com/",
+    "title": "케이테스트",
+    "fullH": 3600
+  },
+  "year-of-love": {
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://year-of-love.exploresyndrome.com/",
+    "title": "Year Of Love | Find your Wix match",
+    "fullH": 1014
+  },
+  "klook-bestyou": {
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://www.experiencethebestyou.com/en/",
+    "title": "What does The Best You look like?",
+    "fullH": 900
+  },
+  "randstad-quiz": {
+    "ok": false,
+    "error": "page.goto: net::ERR_NAME_NOT_RESOLVED at https://quiz.randstad.pl/"
+  },
+  "boks-quiz": {
+    "ok": false,
+    "error": "page.goto: net::ERR_NAME_NOT_RESOLVED at https://boksquiz.org/"
+  },
+  "acura-energy": {
+    "ok": false,
+    "error": "page.goto: net::ERR_NAME_NOT_RESOLVED at https://acuraunlockyourenergy.com/"
+  },
+  "mutant-power": {
+    "ok": false,
+    "error": "page.goto: net::ERR_CONNECTION_CLOSED at https://whatsyourmutantpower.com/quiz"
+  },
+  "archetype-th": {
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://archetypethailand.com/",
+    "title": "แบบทดสอบบุคลิกภาพ 16 Characters",
+    "fullH": 1604
+  },
+  "bbc-japan": {
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://www.bbc.com/storyworks/specials/japan-islands-of-worlds/",
+    "title": "Japan’s Infinite Personalities: A Ten-Region Guide",
+    "fullH": 3600
+  },
+  "mercari-isekai": {
+    "ok": true,
+    "status": 404,
+    "finalUrl": "https://jp-news.mercari.com/isekaisyokugyoshindan",
+    "title": "404: ページが見つかりませんでした | メルカリびより【公式サイト】",
+    "fullH": 1369
+  },
+  "lyst-dna": {
+    "ok": true,
+    "status": 403,
+    "finalUrl": "https://www.lyst.com/?__cf_chl_rt_tk=gFIn97VMOZHb.fYwtzETDYesDpATzVuvyzbNk2L6IyY-1790504950-1.0.1.1-bwb0VJzFRlTXAF8UH037ZOw990eGmN40sC0Nx87Sd4Q",
+    "title": "Just a moment...",
+    "fullH": 900
+  },
+  "diag-result": {
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://diagnostic-result-project.web.app/",
+    "title": "営業タイプ診断 - あなたの営業タイプを発見",
+    "fullH": 3600
+  },
+  "gucci-offgrid": {
+    "ok": false,
+    "error": "page.goto: net::ERR_NAME_NOT_RESOLVED at https://offthegrid.gucci.com/"
+  },
+  "pickles-freee": {
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://pickles.tv/works/freee/",
+    "title": "freee株式会社 事例 | リスクチャートで一目瞭然。 財務・経理課題「見える化」診断 | Webマーケティング | 株式会社ピクルス",
+    "fullH": 3600
+  },
+  "koto": {
+    "ok": false,
+    "error": "page.goto: net::ERR_CONNECTION_CLOSED at https://www.koto.studio/"
+  },
+  "chekhov": {
+    "ok": true,
+    "status": 404,
+    "finalUrl": "https://chekhov.withgoogle.com/alive",
+    "title": "404 Page not found",
+    "fullH": 900
+  },
+  "smrj-shindan": {
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://kikou.smrj.go.jp/shindan/",
+    "title": "志士タイプ診断｜中小機構に聞こう！",
+    "fullH": 1194
+  },
+  "robot-food": {
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://www.robot-food.com/",
+    "title": "Branding Agency | Creative Agency | Robot Food",
+    "fullH": 3600
+  },
+  "hello-monday": {
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://www.hellomonday.com/",
+    "title": "Hello Monday",
+    "fullH": 2944
+  },
+  "hey-studio": {
+    "ok": false,
+    "error": "page.goto: net::ERR_CONNECTION_TIMED_OUT at https://www.heystudio.es/"
+  },
+  "brand-bureau": {
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://www.brandbureau.com/",
+    "title": "Strategy, Branding & Hospitality Development: Brand Bureau",
+    "fullH": 3600
+  },
+  "allgood": {
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://allgoodnyc.com/",
+    "title": "All Good NYC — Hospitality Branding & Content Creation",
+    "fullH": 3600
+  },
+  "little-troop": {
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://littletroop.com/",
+    "title": "Little Troop",
+    "fullH": 3600
+  },
+  "mucho": {
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://wearemucho.com/",
+    "title": "Design & Branding Agency Redefining Creativity | Mucho",
+    "fullH": 3600
+  },
+  "farmgroup": {
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://farmgroup.co.th/",
+    "title": "FARMGROUP — Creative & Design Consultancy based in Bangkok",
+    "fullH": 1223
+  },
+  "crown-creative": {
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://crowncreative.com/",
+    "title": "Crown Creative | Hospitality Branding, Strategy & Interiors",
+    "fullH": 3600
+  },
+  "dishoom": {
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://www.dishoom.com/",
+    "title": "Dishoom | Indian Restaurants | From Bombay with Love",
+    "fullH": 3600
+  },
+  "ponpon": {
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://ponpon-mania.com/",
+    "title": "Ponpon Mania - Interactive Comic",
+    "fullH": 900
+  },
+  "senbei": {
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://senbei.tokyo/",
+    "title": "トーキョー煎餅(せんべい) | ギフトや手土産におすすめの新米菓ブランド",
+    "fullH": 3600
+  },
+  "noma": {
+    "ok": true,
+    "status": 403,
+    "finalUrl": "https://noma.dk/",
+    "title": "Checking your browser...",
+    "fullH": 900
+  },
+  "yokanka": {
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://yokanka.com/",
+    "title": "YO KAN KA（ヨウカンカ）",
+    "fullH": 3600
+  },
+  "hakubaku": {
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://hakubaku-zatsu.jp/",
+    "title": "雑っていいこと | はくばく",
+    "fullH": 3600
+  },
+  "momofuku": {
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://www.momofuku.com/",
+    "title": "Momofuku | Homepage",
+    "fullH": 3600
+  },
+  "death-co": {
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://www.deathandcompany.com/",
+    "title": "Death & Co",
+    "fullH": 3600
+  },
+  "otsuka-zeroz": {
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://otsuka-air.jp/",
+    "title": "/zeroz（ゼロズ）公式サイト | 大塚製薬",
+    "fullH": 3600
+  },
+  "omsom": {
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://omsom.com/",
+    "title": "Omsom",
+    "fullH": 900
+  },
+  "fishwife": {
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://eatfishwife.com/",
+    "title": "Fishwife Tinned Seafood Co.",
+    "fullH": 3600
+  },
+  "burrito-madre": {
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://burritomadre.rs/en/",
+    "title": "Welcome to Burrito Madre | Roll with the real",
+    "fullH": 3600
+  },
+  "graza": {
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://www.graza.co/",
+    "title": "GRAZA | High Quality Olive Oil | Graza",
+    "fullH": 3600
+  },
+  "oatly": {
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://www.oatly.com/",
+    "title": "the Original Oat Drink Company | Oatly",
+    "fullH": 900
+  },
+  "brew-place": {
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://brew.place/",
+    "title": "Brew (ブリュー) | 日本酒の試飲/品質評価プラットフォーム | お酒を探す旅へ。",
+    "fullH": 3600
+  },
+  "guilty": {
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://whoisguilty.com/",
+    "title": "Guide: How to not screw up the website",
+    "fullH": 900
+  },
+  "qissa": {
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://www.qissa.co.uk/",
+    "title": "Indian Restaurant in Sevenoaks, Kent | Qissa",
+    "fullH": 3600
+  },
+  "best-bean": {
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://bestbeanbestcup.com.au/",
+    "title": "Vietnamese Coffee Roasters Australia | Best Bean Best Cup",
+    "fullH": 3600
+  },
+  "meatopia": {
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://visitmeatopia.com/",
+    "title": "Meatopia",
+    "fullH": 918
+  },
+  "16p-types": {
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://www.16personalities.com/personality-types",
+    "title": "Personality Types | 16Personalities",
+    "fullH": 3600
+  },
+  "pudding-music": {
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://pudding.cool/2021/10/judge-my-music/",
+    "title": "How Bad Is Your Streaming Music?",
+    "fullH": 900
+  },
+  "poomang-home": {
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://poomang.com/",
+    "title": "푸망 - 심리테스트",
+    "fullH": 3600
+  },
+  "thematter-krungsri": {
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://thematter.co/brandedcontent/krungsri_personalitytest/234413",
+    "title": "รู้จักตัวเองว่าคุณเป็นคนง่ายๆ แบบไหน? กรุงศรีชวนทำแบบทดสอบ “ความง่าย” ผ่าน Line Chatbot",
+    "fullH": 3600
+  },
+  "aww-chekhov": {
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://www.awwwards.com/sites/chekhov-is-alive",
+    "title": "Chekhov Is Alive - Awwwards SOTD",
+    "fullH": 3600
+  },
+  "aww-shoe": {
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://www.awwwards.com/sites/the-shoe-personality-quiz",
+    "title": "The Shoe Personality Quiz - Awwwards Nominee",
+    "fullH": 3373
+  },
+  "trade-quiz": {
+    "ok": true,
+    "status": 404,
+    "finalUrl": "https://www.drinktrade.com/coffee-quiz",
+    "title": "404 Not Found | Trade Coffee",
+    "fullH": 1549
+  },
+  "koto2": {
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://koto.com/",
+    "title": "Koto, an international creative agency building impactful brands",
+    "fullH": 3600
+  },
+  "prose-quiz": {
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://prose.com/consultation/hair",
+    "title": "Truly Custom Haircare and Skincare | Prose",
+    "fullH": 900
+  },
+  "hey-studio2": {
+    "ok": true,
+    "status": 200,
+    "finalUrl": "https://heystudio.es/",
+    "title": "Hey",
+    "fullH": 900
+  }
+}

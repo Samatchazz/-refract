@@ -1,0 +1,194 @@
+[
+  {
+    "href": "https://pixel-craft.cmsmasters.studio/main/wp-content/plugins/cookie-law-info/lite/frontend/js/script.min.js?ver=3.3.9.1",
+    "status": 200,
+    "bytes": 22631,
+    "file": "js\\00_script.min.js"
+  },
+  {
+    "href": "https://pixel-craft.cmsmasters.studio/main/wp-includes/js/jquery/jquery.min.js?ver=3.7.1",
+    "status": 200,
+    "bytes": 87553,
+    "file": "js\\01_jquery.min.js"
+  },
+  {
+    "href": "https://pixel-craft.cmsmasters.studio/main/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1",
+    "status": 200,
+    "bytes": 13577,
+    "file": "js\\02_jquery-migrate.min.js"
+  },
+  {
+    "href": "https://pixel-craft.cmsmasters.studio/main/wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min.js?ver=2.7.0-wc.10.9.4",
+    "status": 200,
+    "bytes": 9636,
+    "file": "js\\03_jquery.blockUI.min.js"
+  },
+  {
+    "href": "https://pixel-craft.cmsmasters.studio/main/wp-content/plugins/woocommerce/assets/js/frontend/add-to-cart.min.js?ver=10.9.4",
+    "status": 200,
+    "bytes": 4350,
+    "file": "js\\04_add-to-cart.min.js"
+  },
+  {
+    "href": "https://pixel-craft.cmsmasters.studio/main/wp-content/plugins/woocommerce/assets/js/js-cookie/js.cookie.min.js?ver=2.1.4-wc.10.9.4",
+    "status": 200,
+    "bytes": 1720,
+    "file": "js\\05_js.cookie.min.js"
+  },
+  {
+    "href": "https://pixel-craft.cmsmasters.studio/main/wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.min.js?ver=10.9.4",
+    "status": 200,
+    "bytes": 4270,
+    "file": "js\\06_woocommerce.min.js"
+  },
+  {
+    "href": "https://pixel-craft.cmsmasters.studio/main/wp-includes/js/wp-emoji-release.min.js?ver=7.0.2",
+    "status": 200,
+    "bytes": 22752,
+    "file": "js\\07_wp-emoji-release.min.js"
+  },
+  {
+    "href": "https://pixel-craft.cmsmasters.studio/main/wp-content/plugins/elementor/assets/js/webpack.runtime.min.js?ver=4.2.0",
+    "status": 200,
+    "bytes": 5819,
+    "file": "js\\08_webpack.runtime.min.js"
+  },
+  {
+    "href": "https://pixel-craft.cmsmasters.studio/main/wp-content/plugins/elementor/assets/js/frontend-modules.min.js?ver=4.2.0",
+    "status": 200,
+    "bytes": 50601,
+    "file": "js\\09_frontend-modules.min.js"
+  },
+  {
+    "href": "https://pixel-craft.cmsmasters.studio/main/wp-includes/js/jquery/ui/core.min.js?ver=1.13.3",
+    "status": 200,
+    "bytes": 21462,
+    "file": "js\\10_core.min.js"
+  },
+  {
+    "href": "https://pixel-craft.cmsmasters.studio/main/wp-content/plugins/elementor/assets/js/frontend.min.js?ver=4.2.0",
+    "status": 200,
+    "bytes": 32098,
+    "file": "js\\11_frontend.min.js"
+  },
+  {
+    "href": "https://pixel-craft.cmsmasters.studio/main/wp-content/plugins/elementor/assets/lib/swiper/v8/swiper.min.js?ver=8.4.5",
+    "status": 200,
+    "bytes": 143709,
+    "file": "js\\12_swiper.min.js"
+  },
+  {
+    "href": "https://pixel-craft.cmsmasters.studio/main/wp-content/plugins/cmsmasters-elementor-addon/assets/lib/perfect-scrollbar/perfect-scrollbar.min.js?ver=1.4.0",
+    "status": 200,
+    "bytes": 18296,
+    "file": "js\\13_perfect-scrollbar.min.js"
+  },
+  {
+    "href": "https://pixel-craft.cmsmasters.studio/main/wp-includes/js/imagesloaded.min.js?ver=5.0.0",
+    "status": 200,
+    "bytes": 5520,
+    "file": "js\\14_imagesloaded.min.js"
+  },
+  {
+    "href": "https://pixel-craft.cmsmasters.studio/main/wp-content/themes/pixel-craft/assets/js/frontend.min.js?ver=1.0.0",
+    "status": 200,
+    "bytes": 21197,
+    "file": "js\\15_frontend.min.js"
+  },
+  {
+    "href": "https://pixel-craft.cmsmasters.studio/main/wp-content/plugins/woocommerce/assets/js/sourcebuster/sourcebuster.min.js?ver=10.9.4",
+    "status": 200,
+    "bytes": 15315,
+    "file": "js\\16_sourcebuster.min.js"
+  },
+  {
+    "href": "https://pixel-craft.cmsmasters.studio/main/wp-content/plugins/woocommerce/assets/js/frontend/order-attribution.min.js?ver=10.9.4",
+    "status": 200,
+    "bytes": 2439,
+    "file": "js\\17_order-attribution.min.js"
+  },
+  {
+    "href": "https://pixel-craft.cmsmasters.studio/main/wp-content/themes/pixel-craft-child-demo/assets/js/script.min.js?ver=1.0.0",
+    "status": 200,
+    "bytes": 5477,
+    "file": "js\\18_script.min.js"
+  },
+  {
+    "href": "https://pixel-craft.cmsmasters.studio/main/wp-content/plugins/cmsmasters-elementor-addon/assets/lib/custom-cursor/custom-cursor.min.js?ver=1.25.1",
+    "status": 200,
+    "bytes": 42365,
+    "file": "js\\19_custom-cursor.min.js"
+  },
+  {
+    "href": "https://pixel-craft.cmsmasters.studio/main/wp-includes/js/jquery/ui/datepicker.min.js?ver=1.13.3",
+    "status": 200,
+    "bytes": 36748,
+    "file": "js\\20_datepicker.min.js"
+  },
+  {
+    "href": "https://pixel-craft.cmsmasters.studio/main/wp-content/plugins/forminator/assets/js/library/jquery.validate.min.js?ver=1.56.0",
+    "status": 200,
+    "bytes": 25094,
+    "file": "js\\21_jquery.validate.min.js"
+  },
+  {
+    "href": "https://pixel-craft.cmsmasters.studio/main/wp-content/plugins/forminator/assets/forminator-ui/js/forminator-form.min.js?ver=1.56.0",
+    "status": 200,
+    "bytes": 21434,
+    "file": "js\\22_forminator-form.min.js"
+  },
+  {
+    "href": "https://pixel-craft.cmsmasters.studio/main/wp-content/plugins/forminator/build/front/front.multi.min.js?ver=1.56.0",
+    "status": 200,
+    "bytes": 241243,
+    "file": "js\\23_front.multi.min.js"
+  },
+  {
+    "href": "https://pixel-craft.cmsmasters.studio/main/wp-content/plugins/cmsmasters-elementor-addon/assets/js/webpack.runtime.min.js?ver=1.25.1",
+    "status": 200,
+    "bytes": 7759,
+    "file": "js\\24_webpack.runtime.min.js"
+  },
+  {
+    "href": "https://pixel-craft.cmsmasters.studio/main/wp-content/plugins/cmsmasters-elementor-addon/assets/lib/basicScroll/basicScroll.min.js?ver=3.0.3",
+    "status": 200,
+    "bytes": 10315,
+    "file": "js\\25_basicScroll.min.js"
+  },
+  {
+    "href": "https://pixel-craft.cmsmasters.studio/main/wp-content/plugins/cmsmasters-elementor-addon/assets/lib/vanilla-tilt/vanilla-tilt.min.js?ver=1.7.0",
+    "status": 200,
+    "bytes": 11676,
+    "file": "js\\26_vanilla-tilt.min.js"
+  },
+  {
+    "href": "https://pixel-craft.cmsmasters.studio/main/wp-content/plugins/cmsmasters-elementor-addon/assets/lib/anime/anime.min.js?ver=3.2.1",
+    "status": 200,
+    "bytes": 17493,
+    "file": "js\\27_anime.min.js"
+  },
+  {
+    "href": "https://pixel-craft.cmsmasters.studio/main/wp-content/plugins/cmsmasters-elementor-addon/assets/lib/hc-sticky/hc-sticky.min.js?ver=2.2.6",
+    "status": 200,
+    "bytes": 11408,
+    "file": "js\\28_hc-sticky.min.js"
+  },
+  {
+    "href": "https://pixel-craft.cmsmasters.studio/main/wp-content/plugins/cmsmasters-elementor-addon/assets/lib/headroom/headroom.min.js?ver=0.12.0",
+    "status": 200,
+    "bytes": 5183,
+    "file": "js\\29_headroom.min.js"
+  },
+  {
+    "href": "https://pixel-craft.cmsmasters.studio/main/wp-content/plugins/cmsmasters-elementor-addon/assets/js/frontend.min.js?ver=1.25.1",
+    "status": 200,
+    "bytes": 114022,
+    "file": "js\\30_frontend.min.js"
+  },
+  {
+    "href": "https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496",
+    "status": 200,
+    "bytes": 31612,
+    "file": "js\\31_v4513226cdae34746b4dedf0b4dfa099e1781791509496"
+  }
+]

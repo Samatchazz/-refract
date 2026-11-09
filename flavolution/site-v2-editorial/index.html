@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Flavolution — หนึ่งวันในร้านของคุณ</title>
+<meta name="description" content="ควิซ 7 นาทีสำหรับเจ้าของร้านอาหารและคาเฟ่ ผ่านหนึ่งวันในร้าน แล้วดูว่าคุณมองข้ามอะไรอยู่">
+<meta name="theme-color" content="#15120F">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@125,600&family=IBM+Plex+Mono:wght@400&family=IBM+Plex+Sans+Thai:wght@400;500;600&family=Noto+Serif+Thai:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="skip" href="#main">ข้ามไปเนื้อหา</a>
+<nav class="nav" aria-label="เมนูหลัก"><div class="wrap">
+  <a class="wordmark" href="index.html">Flavolution</a>
+  <div class="nav__links">
+    <a href="index.html" aria-current="page">หน้าแรก</a>
+    <a href="services.html">บริการ</a>
+    <a href="about.html">เกี่ยวกับเรา</a>
+    <a href="contact.html">ติดต่อ</a>
+    <a class="nav__cta" href="quiz.html">ทำควิซ</a>
+  </div>
+</div></nav>
+<main id="main">
+<section class="hero on-ink">
+  <div class="wrap">
+    <div class="hero__grid">
+      <div>
+        <p class="eyebrow">Restaurant quiz · 7 min</p>
+        <h1><span class="ln">ร้านคุณอาจดัง</span> <span class="ln">เพราะสิ่งที่คุณคิดว่า</span> <span class="ln">เป็นแค่<span class="accent">เครื่องปรุง</span></span></h1>
+        <p class="lead">จาก 100 ร้านที่เราศึกษา 1 ใน 3 ดังเพราะน้ำจิ้ม น้ำซุป หรือของกินเล่นที่เจ้าของไม่เคยคิดจะเล่า ใช้เวลา 7 นาที ผ่านหนึ่งวันในร้านของคุณ แล้วดูว่าคุณมองข้ามอะไรอยู่</p>
+        <div class="hero__actions">
+          <a class="btn btn--cream" href="quiz.html">เริ่มหนึ่งวันในร้านของฉัน <span class="btn__arrow" aria-hidden="true">→</span></a>
+          <a class="link" href="services.html">เราทำอะไร</a>
+        </div>
+        <p class="hero__note">25 ข้อ · 7 นาที · ไม่ต้องกรอกอีเมล</p>
+      </div>
+      <div class="ticket-float" aria-hidden="true">
+        <div class="ticket">
+          <div class="ticket__head"><span>Order #0530</span><span>บทที่ 1/7</span></div>
+          <div class="ticket__time">05:30</div>
+          <div class="ticket__sub">ตลาดยังไม่สว่าง</div>
+          <div class="ticket__perf"></div>
+          <p class="ticket__q">เช้านี้ต้องซื้อของเข้าร้านเท่าไร คุณรู้ได้ยังไง</p>
+          <div class="ticket__opt"><span>01</span>เดินดูของหน้าแผงแล้วค่อยกะเอา ทำมานานจนรู้เอง</div>
+          <div class="ticket__opt"><span>02</span>มีโพยที่จดไว้ตั้งแต่เมื่อคืน ดูจากยอดที่น่าจะขายได้</div>
+          <div class="ticket__opt"><span>03</span>ซื้อเผื่อไว้ก่อน ของหมดตอนเที่ยงน่าอายกว่าของเหลือ</div>
+          <div class="ticket__bar"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        </div>
+      </div>
+    </div>
+    <span class="hero__mark wordmark" aria-hidden="true">Flavolution</span>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <p class="eyebrow eyebrow--th">ควิซนี้ทำงานยังไง</p>
+    <p class="statement" style="margin-top:18px">เราไม่ถามว่าคุณเป็นคนแบบไหน <span class="muted">เราถามว่าวันนี้คุณทำอะไร ตั้งแต่ตี 5 ครึ่งที่ตลาด จนนับเงินตอน 4 ทุ่ม คำตอบที่ฟังดูปกติที่สุด มักบอกเราได้มากที่สุด</span></p>
+    <div class="day" id="day-strip"></div>
+  </div>
+</section>
+
+<section class="sec sec--paper">
+  <div class="wrap">
+    <div class="sec__head"><p class="eyebrow eyebrow--th">สิ่งที่เราเจอ</p><h2>ร้านส่วนใหญ่ไม่ได้ปิด<br>เพราะไม่อร่อย</h2></div>
+    <div class="grid grid--3">
+      <div class="stat"><div class="num">60%</div><h3>ของร้านใหม่ในไทยปิดในปีแรก</h3><p class="src">LINE MAN Wongnai, 2567 (จาก 50% ในปี 2566)</p></div>
+      <div class="stat"><div class="num">1 ใน 3</div><h3>ของร้านที่ดัง ดังเพราะน้ำจิ้ม น้ำซุป หรือจานรอง</h3><p class="src">33 จาก 100 ร้านดีที่เราศึกษา</p></div>
+      <div class="stat"><div class="num">40+</div><h3>ปัญหาที่เจ้าของร้านมองไม่เห็นว่าเป็นปัญหา</h3><p class="src">จาก 82 ปัญหา ที่รวบรวมจากไทย ญี่ปุ่น เกาหลี และอเมริกา</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="sec__head"><p class="eyebrow eyebrow--th">10 บุคลิกร้าน</p><h2>ร้านคุณคือแบบไหน</h2>
+      <p class="lead">ไม่มีแบบไหนดีกว่าแบบไหน ทุกแบบมีของดี และพลาดกันคนละที่</p></div>
+    <div class="shelf" id="shelf"></div>
+    <div class="shelf-board" aria-hidden="true"></div>
+    <p style="margin-top:48px"><a class="btn" href="quiz.html">ดูว่าร้านฉันเป็นแบบไหน <span class="btn__arrow" aria-hidden="true">→</span></a></p>
+  </div>
+</section>
+
+<section class="sec sec--ink on-ink">
+  <div class="wrap">
+    <div class="sec__head"><p class="eyebrow">What we do</p><h2>เรามองเห็นสิ่งที่คุณมองข้าม<br>แล้วทำให้คนอื่นเห็นด้วย</h2></div>
+    <div class="rows">
+      <a class="row" href="services.html#hero"><span class="row__no">01</span><span class="row__name">หาเมนูตัวชูโรง</span><span class="row__arrow">→</span><span class="row__desc">หาจานเดียวที่คนเรียกชื่อร้านคุณ</span></a>
+      <a class="row" href="services.html#gem"><span class="row__no">02</span><span class="row__name">ดึงจุดขายที่มองข้าม</span><span class="row__arrow">→</span><span class="row__desc">บอกคุณว่าลูกค้ากลับมาเพราะอะไรจริงๆ</span></a>
+      <a class="row" href="services.html#story"><span class="row__no">03</span><span class="row__name">เล่าเรื่องร้าน</span><span class="row__arrow">→</span><span class="row__desc">เปลี่ยนเพจที่มีแต่รูปกับราคา ให้เป็นเรื่องที่คนอยากตาม</span></a>
+      <a class="row" href="services.html#sop"><span class="row__no">04</span><span class="row__name">ระบบหลังบ้าน</span><span class="row__arrow">→</span><span class="row__desc">ให้ร้านเดินได้ แม้วันที่คุณไม่อยู่</span></a>
+    </div>
+    <p style="margin-top:44px"><a class="link" href="services.html">ดูบริการทั้งหมด</a></p>
+  </div>
+</section>
+</main>
+<footer class="foot on-ink"><div class="wrap">
+  <div class="foot__top">
+    <p style="max-width:30em">เอเจนซี่สำหรับร้านอาหารและคาเฟ่ เราช่วยหาเมนูตัวชูโรง ดึงจุดขายที่คุณมองข้าม เล่าเรื่องร้าน และวางระบบหลังบ้าน</p>
+    <div class="foot__links"><a href="quiz.html">ทำควิซ</a><a href="services.html">บริการ</a><a href="about.html">เกี่ยวกับเรา</a><a href="contact.html">ติดต่อ</a></div>
+  </div>
+  <span class="foot__mark wordmark" aria-hidden="true">Flavolution</span>
+  <small>© 2026 Flavolution (ชื่อชั่วคราว)</small>
+</div></footer>
+<script src="js/data.js"></script>
+<script src="js/pages.js"></script>
+</body>
+</html>

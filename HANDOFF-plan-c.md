@@ -123,3 +123,21 @@
 - ถ้าเดาพิกัดไม่ได้ ให้ **ทำเครื่องมือให้ผู้ใช้เลือกเอง** (เช่น `logo-lab/pivot-picker.html`,
   `logo-lab/cut-preview.html` ที่มีสไลเดอร์ จุดตัด/มุมเอียง/ความยาว + พรีวิวสด)
 - บอกตรงๆ เมื่อชนเพดานเทคนิค อย่าดันทุรัง
+
+## 7. 🆕 pixelcraft teardown + skeleton (2026-08-01) — **คนละเว็บกับ griflan-mirror**
+
+- **คืออะไร:** teardown เชิงโครงสร้างของธีม Pixel Craft (ThemeForest 61661179 — **ไม่ได้ซื้อ วัดอย่างเดียว**)
+  แล้วสร้าง skeleton เปล่าของ Plan C จากตัวเลขที่วัดเอง — **แยกเว็บกับ `griflan-mirror/` เด็ดขาด
+  ไม่แทนที่กัน ไม่แชร์ไฟล์กัน** (มติ 2026-07-31) หนี้ third-party ใน §5 ข้างบนยังเปิดอยู่เหมือนเดิม
+- **อยู่ไหน:** `research/pixelcraft/` — BRIEF.md (สเปค) · SECTIONS.md (25 section + 21 effect พร้อม citation 200 จุด)
+  · FINDINGS.md (สแต็ค/type/สี/motion) · CONTENT-MAP.md (คู่เนื้อหาจริง C01–C12 ↔ section) · REPORT.md (สรุปรัน)
+  · RUN-LOG.md (ลำดับเหตุการณ์) · **skeleton/** = ตัวเว็บเปล่า: `node research/pixelcraft/skeleton/serve.cjs` → :8123
+  (`?debug` สไลเดอร์จูนค่า · `?fill=th` ตัวเติมไทย · ปุ่ม D/T/?)
+- **สถานะ:** P1–P8 จบครบ selfcheck ผ่านหมด (25+1 section, effect 21/21, token 287 ช่อง, JS 16.4KB ไลบรารี 0)
+  ฟอนต์ Kanit+Anuphan (OFL, self-host) ฝังแล้ว · พาเลตต์ Plan C (`#0f1613/#F2EFDE/#F0B32E`)
+- **ข้อเท็จจริงสำคัญ:** หน้าที่วัดคือหน้า landing ขายธีมของ CMSMasters (มติเจ้าของงาน 2026-08-01:
+  "เอาตามเดิมมาก่อน") — เดโมเอเจนซี่จริงจับสำรองไว้ที่ `research/pixelcraft/out-main/`
+- **เจ้าของงานยังไม่ได้ตัดสิน:** คอลัมน์ "เนื้อหา Plan C" ใน SECTIONS.md Table A (ว่างทุกช่องตามสเปค) ·
+  ตาราง "Needs a decision" ใน REPORT.md §4 (ค่า 4 ตัวที่วัดไม่ได้ + S17) · จะ trim section/effect ไหนหลังเดินดูของจริง
+  (คำแนะนำ 3 เอา/3 ตัด อยู่ท้าย SECTIONS.md — เป็นความเห็น ไม่ได้ตัดอะไรจริง) ·
+  เนื้อหาที่ไม่มีบ้าน: C03 (ตาราง 9 แถว) กับ C11 (FAQ) ต้องการ section ใหม่ 2 แบบ (สเปคใน CONTENT-MAP ลิสต์ 2)

@@ -1,0 +1,133 @@
+{
+  "files": [
+    {
+      "file": "00_jquery.min.js",
+      "bytes": 87553,
+      "hits": {
+        "requestAnimationFrame": 1
+      }
+    },
+    {
+      "file": "04_frontend-modules.min.js",
+      "bytes": 50601,
+      "hits": {
+        "intersectionObserver": 1
+      }
+    },
+    {
+      "file": "12_jquery-numerator.min.js",
+      "bytes": 1801,
+      "hits": {
+        "duration": 1
+      }
+    },
+    {
+      "file": "13_swiper.min.js",
+      "bytes": 143709,
+      "hits": {
+        "requestAnimationFrame": 7
+      }
+    },
+    {
+      "file": "15_frontend.min.js",
+      "bytes": 21197,
+      "hits": {
+        "swiperNew": 1
+      }
+    },
+    {
+      "file": "16_custom-cursor.min.js",
+      "bytes": 42365,
+      "hits": {
+        "requestAnimationFrame": 8
+      }
+    },
+    {
+      "file": "19_basicScroll.min.js",
+      "bytes": 10315,
+      "hits": {
+        "requestAnimationFrame": 1
+      }
+    },
+    {
+      "file": "20_vanilla-tilt.min.js",
+      "bytes": 11676,
+      "hits": {
+        "requestAnimationFrame": 3
+      }
+    },
+    {
+      "file": "21_anime.min.js",
+      "bytes": 17493,
+      "hits": {
+        "duration": 2,
+        "requestAnimationFrame": 2
+      }
+    },
+    {
+      "file": "23_headroom.min.js",
+      "bytes": 5183,
+      "hits": {
+        "pin": 3,
+        "requestAnimationFrame": 1
+      }
+    },
+    {
+      "file": "24_frontend.min.js",
+      "bytes": 114022,
+      "hits": {
+        "stagger": 1,
+        "requestAnimationFrame": 2,
+        "intersectionObserver": 2
+      }
+    },
+    {
+      "file": "25_v4513226cdae34746b4dedf0b4dfa099e1781791509496",
+      "bytes": 31612,
+      "hits": {
+        "duration": 1,
+        "requestAnimationFrame": 2
+      }
+    }
+  ],
+  "hits": {
+    "requestAnimationFrame": {
+      "total": 27,
+      "values": {
+        "requestAnimationFrame(": 27
+      }
+    },
+    "intersectionObserver": {
+      "total": 3,
+      "values": {
+        "new IntersectionObserver(": 3
+      }
+    },
+    "duration": {
+      "total": 4,
+      "values": {
+        "duration:500": 1,
+        "duration:1": 1,
+        "duration:0": 2
+      }
+    },
+    "swiperNew": {
+      "total": 1,
+      "values": {
+        "new Swiper(": 1
+      }
+    },
+    "pin": {
+      "total": 3,
+      "values": {
+        "pin:function": 3
+      }
+    },
+    "stagger": {
+      "total": 1,
+      "values": {
+        "stagger:t.data": 1
+      }
+    }
+  }
+}

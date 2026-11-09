@@ -1,0 +1,94 @@
+/* Quiz page: the agency site's header and footer (What Matters style),
+   written with their own class names and literal colours so nothing here
+   touches style.css, which still styles the quiz itself. */
+
+.qtop {
+  position: sticky; top: 0; z-index: 40;
+  display: flex; align-items: center; gap: 6px;
+  padding: 12px clamp(16px, 1.6vw, 24px);
+  background: #fff; border-bottom: 1.5px solid #050505;
+  font-family: "Inter Tight", "Anuphan", Arial, sans-serif;
+}
+.qtop__logo {
+  margin-right: auto;
+  font-weight: 700; font-size: 20px; letter-spacing: -.04em; text-transform: uppercase;
+  color: #050505; text-decoration: none; line-height: 1;
+}
+.qtop__nav { display: flex; gap: 4px; }
+.qpill {
+  display: inline-flex; align-items: center;
+  background: #fff; color: #050505;
+  border: 1.5px solid #050505; border-radius: 800px;
+  box-shadow: 0 3px 0 #050505;
+  padding: 6px 16px;
+  font-family: "Inter Tight", "Anuphan", Arial, sans-serif;
+  font-size: 14px; font-weight: 500; line-height: 1.5;
+  text-decoration: none; white-space: nowrap;
+  transition: transform .2s, box-shadow .2s;
+}
+.qpill:hover { transform: translateY(2px); box-shadow: 0 1px 0 #050505; }
+.qpill--y { background: #FEF073; margin-left: 26px; }
+.qpill:focus-visible { outline: 3px solid #5A92E7; outline-offset: 4px; }
+@media (max-width: 720px) {
+  .qtop__nav { display: none; }
+  .qpill--y { margin-left: 0; }
+}
+
+.qfoot {
+  background: #FEF073; color: #050505;
+  padding: clamp(40px, 5vw, 64px) clamp(16px, 1.6vw, 24px) 24px;
+  display: grid; grid-template-columns: 1.1fr .5fr .5fr; gap: 28px;
+  font-family: "Inter Tight", "Anuphan", Arial, sans-serif;
+}
+.qfoot__mark { font-weight: 600; text-transform: uppercase; letter-spacing: -.035em; line-height: .84; font-size: clamp(40px, 5vw, 72px); }
+.qfoot__mark small { font-size: 16px; letter-spacing: -.01em; font-weight: 500; vertical-align: top; }
+.qfoot__nav a { display: block; font-size: clamp(20px, 1.9vw, 28px); font-weight: 600; line-height: 1.3; letter-spacing: -.02em; text-decoration: none; color: #050505; }
+.qfoot__nav a:hover { text-decoration: underline; }
+.qfoot__small { font-size: 13px; font-weight: 600; margin-top: 12px; }
+@media (max-width: 800px) { .qfoot { grid-template-columns: 1fr 1fr; } .qfoot > :first-child { grid-column: 1 / -1; } }
+
+/* ---------- overlay mode (quiz.html?embed=1 inside the agency pages) ----------
+   Only the quiz cards show; everything around them is transparent so the
+   site behind stays visible through the blurred backdrop. */
+html.embed, .embed body { background: transparent; }
+.embed .qtop, .embed .qfoot, .embed .skip { display: none; }
+.embed .app { min-height: 100vh; padding: 64px 0 40px; justify-content: center; }
+.embed .quiz, .embed .result, .embed .chapter { background: transparent; padding: 12px 0; }
+.embed .result::before, .embed .chapter::before { display: none; }
+.embed .chapter--screen { min-height: 0; }
+
+/* the progress bar floats as a pill above the card */
+.embed .app-top { background: transparent; border: 0; padding: 0 0 6px; }
+.embed .app-top .wrap {
+  max-width: 860px; background: var(--paper);
+  border: 3px solid var(--ink); border-radius: 999px;
+  box-shadow: 4px 4px 0 var(--ink); padding: 8px 10px;
+}
+
+/* question / segment screens and chapter screens become cards like the result card */
+.embed .quiz > .wrap, .embed .chapter > .wrap {
+  max-width: 860px; border: 3px solid var(--ink); border-radius: 22px;
+  box-shadow: 8px 8px 0 var(--ink); padding: 26px 24px 28px;
+}
+.embed .quiz > .wrap { background: var(--cream); }
+.embed .chapter > .wrap { background: var(--ink); color: var(--cream); }
+.embed .result > .wrap { max-width: 860px; }
+@media (max-width: 700px) {
+  .embed .app { padding: 58px 0 24px; }
+  .embed .quiz > .wrap, .embed .chapter > .wrap { width: calc(100% - 20px); padding: 18px 14px 20px; box-shadow: 5px 5px 0 var(--ink); }
+  .embed .app-top .wrap { width: calc(100% - 20px); border-radius: 20px; }
+  .embed .result > .wrap { padding: 0 10px; }
+}
+.embed .chapter { border-top: 0; }
+.embed .chapter > .wrap { box-shadow: 8px 8px 0 var(--neon); }
+@media (max-width: 700px) { .embed .chapter > .wrap { box-shadow: 5px 5px 0 var(--neon); } }
+
+/* quiz.html opened on its own: same floating card, over a blurred food photo */
+.qclose { display: none; }
+html.standalone { background: #140c08 url(../img/hero.jpg) center / cover no-repeat fixed; }
+.standalone body::before { content: ""; position: fixed; inset: 0; z-index: -1; background: rgba(5, 5, 5, .38); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
+.standalone .qclose {
+  display: inline-flex; position: fixed; top: 14px; right: clamp(16px, 1.6vw, 24px); z-index: 60;
+  background: #fff; color: #050505; border: 1.5px solid #050505; border-radius: 800px; box-shadow: 0 4px 0 #050505;
+  padding: 12px 26px; font: 500 15px/1.5 "Inter Tight", "Anuphan", Arial, sans-serif; text-decoration: none;
+}

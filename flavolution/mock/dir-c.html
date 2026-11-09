@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Flavolution — ทาง C: Service Counter Bold</title>
+<meta name="description" content="Mock ทิศทางภาพ C (ป้ายเมนูตัวหนา) — hero, ฉากเปิดบท, หน้าคำถาม, ตัวอย่างผลลัพธ์">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@700;800&family=Bai+Jamjuree:wght@400;500&family=Chakra+Petch:wght@600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#FFF4E0;
+    --ink:#141414;
+    --chili:#FF5A1F;
+    --basil:#1E7A4E;
+    --neon:#FFC531;
+    --ice:#F27BA9;
+    --line:#06C755;
+    --paper:#FFFBF2;
+    --spring:cubic-bezier(.34,1.56,.64,1);
+    --snap:cubic-bezier(.2,.9,.3,1);
+    --shadow:6px 6px 0 var(--ink);
+    --shadow-sm:4px 4px 0 var(--ink);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    background:var(--cream);
+    color:var(--ink);
+    font-family:"Bai Jamjuree",system-ui,sans-serif;
+    font-weight:400;
+    font-size:17px;
+    line-height:1.7;
+    overflow-x:hidden;
+  }
+  h1,h2,h3,.display{
+    font-family:"Kanit",system-ui,sans-serif;
+    font-weight:800;
+    line-height:1.4;
+    letter-spacing:-.01em;
+  }
+  .label{
+    font-family:"Chakra Petch",monospace;
+    font-weight:600;
+    letter-spacing:.06em;
+    text-transform:uppercase;
+  }
+  button{font:inherit;color:inherit;cursor:pointer;border:0;background:none}
+  svg{display:block}
+
+  .wrap{width:100%;max-width:1120px;margin:0 auto;padding:0 16px}
+  section{position:relative}
+
+  /* ---------- badges / stickers ---------- */
+  .badge{
+    display:inline-flex;align-items:center;gap:6px;
+    padding:5px 12px;border:3px solid var(--ink);border-radius:999px;
+    background:var(--paper);font-size:13px;line-height:1.3;
+    box-shadow:3px 3px 0 var(--ink);
+  }
+  .badge--chili{background:var(--chili);color:#fff}
+  .badge--neon{background:var(--neon)}
+  .badge--basil{background:var(--basil);color:#fff}
+  .badge--ink{background:var(--ink);color:var(--cream)}
+  .sticker{
+    display:inline-block;
+    transition:transform .35s var(--spring);
+    will-change:transform;
+  }
+  .sticker:hover{transform:rotate(-6deg) scale(1.06)}
+  .stamp{
+    position:absolute;
+    font-family:"Chakra Petch",monospace;font-weight:600;
+    border:3px solid currentColor;border-radius:999px;
+    padding:6px 12px;font-size:12px;letter-spacing:.1em;
+    transform:rotate(-10deg);
+  }
+
+  /* ---------- HERO ---------- */
+  .hero{
+    background:var(--cream);
+    padding-bottom:56px;
+  }
+  .marquee{
+    background:var(--ink);color:var(--neon);
+    border-bottom:3px solid var(--ink);
+    overflow:hidden;white-space:nowrap;
+    font-family:"Chakra Petch",monospace;font-weight:600;
+    font-size:14px;letter-spacing:.1em;
+    padding:10px 0;
+  }
+  .marquee__track{display:inline-flex;gap:0;animation:marquee 28s linear infinite}
+  .marquee__track span{padding:0 22px}
+  .marquee__track span::after{content:"◆";color:var(--chili);margin-left:44px}
+  @keyframes marquee{to{transform:translateX(-50%)}}
+
+  .hero__top{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:18px 0 8px;gap:12px;
+  }
+  .wordmark{
+    display:inline-block;
+    font-family:"Kanit",sans-serif;font-weight:800;font-size:26px;line-height:1.35;
+    background:var(--chili);color:#fff;
+    padding:6px 16px;border:3px solid var(--ink);border-radius:14px;
+    box-shadow:var(--shadow-sm);
+    transform:rotate(-2.5deg);
+    letter-spacing:-.02em;
+  }
+  .hero__grid{
+    display:grid;gap:28px;align-items:center;
+    padding-top:20px;
+  }
+  .hero__art{
+    position:relative;
+    display:flex;justify-content:center;
+  }
+  .hero__art svg{width:min(100%,360px);height:auto}
+  .hero__art .stamp{right:6%;top:2%;color:var(--basil);background:var(--paper)}
+  .hero__copy h1{
+    font-size:clamp(30px,8.4vw,60px);
+    line-height:1.38;
+    margin:14px 0 18px;
+  }
+  .hero__copy h1 mark{
+    background:var(--neon);color:var(--ink);
+    padding:0 .12em;border-radius:8px;
+    box-decoration-break:clone;-webkit-box-decoration-break:clone;
+  }
+  .hero__sub{font-size:17px;max-width:38em;color:#2a2a2a;font-weight:500}
+  .cta{
+    margin-top:26px;
+    display:inline-flex;align-items:center;gap:12px;
+    font-family:"Kanit",sans-serif;font-weight:800;font-size:20px;line-height:1.35;
+    background:var(--chili);color:#fff;
+    padding:16px 24px;border:3px solid var(--ink);border-radius:16px;
+    box-shadow:var(--shadow);
+    transition:transform .25s var(--spring),box-shadow .25s var(--spring);
+  }
+  .cta:hover{transform:translate(-2px,-2px);box-shadow:8px 8px 0 var(--ink)}
+  .cta:active{transform:translate(4px,4px) scale(.97);box-shadow:2px 2px 0 var(--ink)}
+  .cta__arrow{
+    width:30px;height:30px;border-radius:50%;
+    background:var(--neon);color:var(--ink);
+    display:grid;place-items:center;font-size:16px;flex:none;
+  }
+  .cta-note{
+    margin-top:12px;font-size:13px;letter-spacing:.08em;color:#444;
+  }
+
+  /* ---------- CHAPTER CARD ---------- */
+  .chapter{
+    background:var(--ink);color:var(--cream);
+    padding:56px 0 60px;
+    border-top:4px solid var(--ink);
+    overflow:hidden;
+  }
+  .chapter::before{
+    content:"";position:absolute;inset:0;
+    background:
+      radial-gradient(circle at 12% 30%, rgba(255,197,49,.14), transparent 28%),
+      radial-gradient(circle at 88% 70%, rgba(255,90,31,.16), transparent 30%);
+    pointer-events:none;
+  }
+  .chapter .wrap{position:relative}
+  .chapter__head{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+  .chapter__time{
+    font-family:"Chakra Petch",monospace;font-weight:600;
+    font-size:clamp(46px,14vw,96px);line-height:1;
+    color:var(--neon);letter-spacing:-.02em;
+  }
+  .chapter h2{
+    font-size:clamp(28px,7.5vw,54px);
+    color:var(--cream);
+    margin:8px 0 10px;
+    line-height:1.38;
+  }
+  .chapter__scene{
+    font-size:18px;color:#e8dcc5;max-width:34em;
+  }
+  .chapter__grid{display:grid;gap:28px;align-items:center;margin-top:8px}
+  .chapter__art svg{width:min(100%,300px);height:auto;margin:0 auto}
+
+  .board{
+    margin-top:36px;
+    background:var(--paper);color:var(--ink);
+    border:3px solid var(--ink);border-radius:18px;
+    box-shadow:6px 6px 0 var(--chili);
+    padding:16px 16px 18px;
+  }
+  .board__row{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:12px}
+  .board__title{font-family:"Kanit",sans-serif;font-weight:700;font-size:15px;line-height:1.4}
+  .track{
+    position:relative;height:22px;
+    background:repeating-linear-gradient(90deg,#efe2c6 0 6px,#e5d5b5 6px 12px);
+    border:3px solid var(--ink);border-radius:999px;overflow:visible;
+  }
+  .track__fill{
+    position:absolute;left:0;top:0;bottom:0;
+    width:var(--p,4%);
+    background:var(--chili);border-radius:999px;
+    transition:width 1.2s var(--snap);
+  }
+  .track__pin{
+    position:absolute;top:50%;left:var(--p,4%);
+    transform:translate(-50%,-50%);
+    background:var(--neon);color:var(--ink);
+    border:3px solid var(--ink);border-radius:999px;
+    padding:3px 10px;font-size:13px;white-space:nowrap;
+    box-shadow:3px 3px 0 var(--ink);
+    transition:left 1.2s var(--snap);
+  }
+  .ticks{
+    display:flex;justify-content:space-between;
+    margin-top:10px;font-family:"Chakra Petch",monospace;font-weight:600;
+    font-size:12px;color:#555;letter-spacing:.04em;
+  }
+  .ticks span:first-child{color:var(--chili)}
+
+  /* ---------- QUIZ ---------- */
+  .quiz{padding:56px 0 64px;background:var(--cream)}
+  .quiz__bar{
+    display:flex;justify-content:space-between;align-items:center;gap:10px;
+    flex-wrap:wrap;margin-bottom:22px;
+  }
+  .quiz__count{font-size:14px}
+  .quiz__grid{display:grid;gap:28px}
+  .quiz h2{
+    font-size:clamp(26px,6.8vw,44px);
+    line-height:1.4;margin:0 0 22px;
+  }
+  .quiz h2 .q-no{
+    display:inline-block;background:var(--chili);color:#fff;
+    font-family:"Chakra Petch",monospace;font-weight:600;font-size:.5em;
+    padding:2px 12px;border-radius:999px;border:3px solid var(--ink);
+    vertical-align:middle;margin-right:10px;transform:rotate(-3deg);
+  }
+
+  .tickets{display:grid;gap:14px;list-style:none}
+  .ticket{
+    position:relative;
+    width:100%;text-align:left;
+    background:var(--paper);
+    border:3px solid var(--ink);border-radius:14px;
+    padding:16px 18px 16px 62px;
+    box-shadow:var(--shadow-sm);
+    display:flex;align-items:center;gap:12px;
+    font-size:16.5px;line-height:1.6;font-weight:500;
+    transition:transform .3s var(--spring),box-shadow .3s var(--spring),background .2s;
+    transform-origin:50% 60%;
+  }
+  /* perforated ticket stub on the left */
+  .ticket::before{
+    content:"";position:absolute;left:46px;top:8px;bottom:8px;
+    border-left:3px dashed var(--ink);opacity:.55;
+  }
+  .ticket::after{
+    content:"";position:absolute;left:38px;
+    top:-9px;width:16px;height:16px;border-radius:50%;
+    background:var(--cream);border:3px solid var(--ink);
+    box-shadow:0 calc(100% + 54px) 0 -3px var(--cream);
+  }
+  .ticket__stub{
+    position:absolute;left:0;top:0;bottom:0;width:46px;
+    display:grid;place-items:center;
+    font-family:"Chakra Petch",monospace;font-weight:600;font-size:18px;
+    color:var(--ink);
+  }
+  .ticket:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--ink)}
+  .ticket:active{transform:scale(.97)}
+  .ticket:focus-visible{outline:3px solid var(--basil);outline-offset:4px}
+  .ticket.is-selected{
+    background:var(--neon);
+    animation:squash .45s var(--spring);
+  }
+  .ticket.is-selected .ticket__stub{
+    color:#fff;
+  }
+  .ticket.is-selected .ticket__stub span{
+    background:var(--chili);border-radius:50%;width:30px;height:30px;
+    display:grid;place-items:center;border:3px solid var(--ink);
+  }
+  .ticket .ticket__check{
+    margin-left:auto;flex:none;width:26px;height:26px;border-radius:50%;
+    border:3px solid var(--ink);background:var(--paper);
+    display:grid;place-items:center;
+    transform:scale(0);opacity:0;
+    transition:transform .3s var(--spring),opacity .15s;
+  }
+  .ticket.is-selected .ticket__check{transform:scale(1);opacity:1;background:var(--basil);color:#fff}
+  @keyframes squash{
+    0%{transform:scale(1,1)}
+    30%{transform:scale(1.04,.9)}
+    60%{transform:scale(.98,1.05)}
+    100%{transform:scale(1,1)}
+  }
+
+  .hud{
+    background:var(--paper);
+    border:3px solid var(--ink);border-radius:18px;
+    padding:18px 18px 20px;
+    box-shadow:6px 6px 0 var(--basil);
+  }
+  .hud__head{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:14px}
+  .hud__title{font-family:"Kanit",sans-serif;font-weight:800;font-size:18px;line-height:1.4}
+  .meter{margin-top:12px}
+  .meter__row{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px}
+  .meter__name{font-weight:500;font-size:15px}
+  .meter__val{font-family:"Chakra Petch",monospace;font-weight:600;font-size:15px}
+  .meter__bar{
+    height:16px;border:3px solid var(--ink);border-radius:999px;overflow:hidden;
+    background:repeating-linear-gradient(90deg,transparent 0 9%,rgba(20,20,20,.14) 9% 10%);
+  }
+  .meter__fill{
+    height:100%;width:var(--v);border-radius:999px;
+    background:var(--fill,var(--chili));
+    transition:width 1s var(--snap);
+  }
+  .meter--sales .meter__fill{--fill:var(--chili)}
+  .meter--energy .meter__fill{--fill:var(--neon)}
+  .meter--review .meter__fill{--fill:var(--basil)}
+  .hud__foot{margin-top:16px;font-size:13px;color:#555}
+  .hud__pot{display:flex;justify-content:center;margin-top:8px}
+  .hud__pot svg{width:120px;height:auto}
+
+  /* ---------- RESULT ---------- */
+  .result{
+    background:var(--basil);color:var(--cream);
+    padding:56px 0 72px;
+    overflow:hidden;
+  }
+  .result::before{
+    content:"";position:absolute;inset:0;
+    background:radial-gradient(circle at 90% 10%, rgba(255,197,49,.22), transparent 32%);
+    pointer-events:none;
+  }
+  .result .wrap{position:relative}
+  .result__lead{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:18px}
+  .card{
+    background:var(--paper);color:var(--ink);
+    border:3px solid var(--ink);border-radius:22px;
+    box-shadow:8px 8px 0 var(--ink);
+    padding:22px 20px 24px;
+    position:relative;
+  }
+  .card__type{font-size:13px;color:var(--basil)}
+  .card h2{font-size:clamp(34px,9vw,56px);line-height:1.38;margin:4px 0 4px}
+  .card__essence{
+    font-family:"Kanit",sans-serif;font-weight:700;font-size:19px;line-height:1.45;
+    color:var(--chili);
+  }
+  .card .stamp{right:14px;top:14px;color:var(--chili);background:var(--paper);transform:rotate(8deg)}
+  .card__art{display:flex;justify-content:center;margin:14px 0 6px}
+  .card__art svg{width:150px;height:auto}
+  .card__divider{border:0;border-top:3px dashed var(--ink);opacity:.35;margin:20px 0}
+  .card h3{font-size:22px;line-height:1.4;margin-bottom:12px}
+  .finding{
+    border:3px solid var(--ink);border-radius:16px;
+    background:var(--cream);padding:16px 16px 18px;
+    display:grid;gap:12px;
+  }
+  .finding__head{display:flex;align-items:center;gap:10px}
+  .finding__num{
+    font-family:"Chakra Petch",monospace;font-weight:600;font-size:14px;
+    background:var(--neon);border:3px solid var(--ink);border-radius:999px;
+    padding:2px 10px;flex:none;
+  }
+  .finding__title{font-family:"Kanit",sans-serif;font-weight:800;font-size:22px;line-height:1.4}
+  .finding__body{font-size:16px;color:#2a2a2a}
+  .mini{
+    display:grid;grid-template-columns:auto 1fr;gap:10px;align-items:start;
+    background:var(--paper);border:3px solid var(--ink);border-radius:12px;padding:10px 12px;
+    font-size:15px;line-height:1.55;
+  }
+  .mini__tag{
+    font-family:"Chakra Petch",monospace;font-weight:600;font-size:12px;
+    padding:3px 8px;border-radius:999px;border:3px solid var(--ink);white-space:nowrap;margin-top:2px;
+  }
+  .mini--self .mini__tag{background:var(--neon)}
+  .mini--us .mini__tag{background:var(--chili);color:#fff}
+  .btn-line{
+    margin-top:22px;width:100%;
+    display:flex;align-items:center;justify-content:center;gap:12px;
+    background:var(--line);color:#fff;
+    font-family:"Kanit",sans-serif;font-weight:800;font-size:20px;line-height:1.35;
+    padding:16px 22px;border:3px solid var(--ink);border-radius:16px;
+    box-shadow:var(--shadow);
+    transition:transform .25s var(--spring),box-shadow .25s var(--spring);
+  }
+  .btn-line:hover{transform:translate(-2px,-2px);box-shadow:8px 8px 0 var(--ink)}
+  .btn-line:active{transform:translate(4px,4px) scale(.97);box-shadow:2px 2px 0 var(--ink)}
+  .btn-line__icon{
+    width:32px;height:32px;border-radius:9px;background:#fff;color:var(--line);
+    display:grid;place-items:center;font-family:"Chakra Petch",monospace;font-weight:600;font-size:11px;flex:none;
+  }
+
+  /* ---------- desktop ---------- */
+  @media (min-width:900px){
+    body{font-size:18px}
+    .hero__grid{grid-template-columns:1.15fr .85fr;gap:48px;padding-top:36px}
+    .hero__art{order:2}
+    .hero__art svg{width:min(100%,440px)}
+    .wordmark{font-size:32px}
+    .chapter__grid{grid-template-columns:1fr auto;gap:56px}
+    .chapter__art svg{width:320px}
+    .quiz__grid{grid-template-columns:1.25fr .75fr;gap:40px;align-items:start}
+    .hud{position:sticky;top:24px}
+    .card{padding:34px 36px 36px}
+    .result__inner{display:grid;grid-template-columns:1fr;max-width:860px;margin:0 auto}
+    .card__art{position:absolute;right:36px;top:64px;margin:0}
+    .card__art svg{width:170px}
+    .card__headwrap{padding-right:200px}
+    .btn-line{width:auto;min-width:360px}
+  }
+
+  /* ---------- reduced motion ---------- */
+  @media (prefers-reduced-motion:reduce){
+    *,*::before,*::after{animation:none !important;transition:none !important}
+    .marquee__track{animation:none}
+    .sticker:hover{transform:none}
+  }
+</style>
+</head>
+<body>
+
+<!-- ================= 1. HERO ================= -->
+<section class="hero" aria-label="เปิดหน้า">
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      <span>หนึ่งวันในร้านของคุณ</span><span>25 ข้อ</span><span>7 นาที</span><span>ไม่ต้องกรอกอีเมล</span><span>ตั้งแต่ตลาดยันปิดร้าน</span>
+      <span>หนึ่งวันในร้านของคุณ</span><span>25 ข้อ</span><span>7 นาที</span><span>ไม่ต้องกรอกอีเมล</span><span>ตั้งแต่ตลาดยันปิดร้าน</span>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <header class="hero__top">
+      <a class="wordmark sticker" href="#" aria-label="Flavolution">Flavolution</a>
+      <span class="badge badge--neon label">ควิซร้านอาหาร</span>
+    </header>
+
+    <div class="hero__grid">
+      <div class="hero__copy">
+        <span class="badge badge--basil label">เรื่องจริงจากหน้าเคาน์เตอร์</span>
+        <h1>ร้านคุณอาจดังเพราะสิ่งที่คุณคิดว่าเป็นแค่<mark>เครื่องปรุง</mark></h1>
+        <p class="hero__sub">1 ใน 3 ของร้านที่ดัง ดังเพราะน้ำจิ้ม น้ำซุป หรือของแถมที่เจ้าของไม่เคยคิดจะเล่า ลองใช้เวลา 7 นาที ผ่านหนึ่งวันในร้านของคุณ แล้วดูว่าคุณมองข้ามอะไรอยู่</p>
+        <button class="cta" type="button">
+          เริ่มหนึ่งวันในร้านของฉัน
+          <span class="cta__arrow" aria-hidden="true">→</span>
+        </button>
+        <p class="cta-note label">25 ข้อ · 7 นาที · ไม่ต้องกรอกอีเมล</p>
+      </div>
+
+      <div class="hero__art" aria-hidden="true">
+        <span class="stamp sticker">เปิดแล้ว</span>
+        <!-- market awning + bag mascot -->
+        <svg viewBox="0 0 360 320" role="img" aria-label="ภาพประกอบ: กันสาดตลาดและถุงของ">
+          <!-- awning frame -->
+          <rect x="34" y="60" width="292" height="26" rx="10" fill="#141414"/>
+          <!-- scallops -->
+          <g>
+            <path d="M40 86 h40 v0 a20 20 0 0 1 -40 0 z" fill="#FF5A1F"/>
+            <path d="M80 86 h40 a20 20 0 0 1 -40 0 z" fill="#FFF4E0"/>
+            <path d="M120 86 h40 a20 20 0 0 1 -40 0 z" fill="#FF5A1F"/>
+            <path d="M160 86 h40 a20 20 0 0 1 -40 0 z" fill="#FFF4E0"/>
+            <path d="M200 86 h40 a20 20 0 0 1 -40 0 z" fill="#FF5A1F"/>
+            <path d="M240 86 h40 a20 20 0 0 1 -40 0 z" fill="#FFF4E0"/>
+            <path d="M280 86 h40 a20 20 0 0 1 -40 0 z" fill="#FF5A1F"/>
+            <path d="M40 86 h280" stroke="#141414" stroke-width="6" stroke-linecap="round"/>
+            <g fill="none" stroke="#141414" stroke-width="6" stroke-linecap="round">
+              <path d="M80 86 a20 20 0 0 1 -40 0"/><path d="M120 86 a20 20 0 0 1 -40 0"/><path d="M160 86 a20 20 0 0 1 -40 0"/>
+              <path d="M200 86 a20 20 0 0 1 -40 0"/><path d="M240 86 a20 20 0 0 1 -40 0"/><path d="M280 86 a20 20 0 0 1 -40 0"/><path d="M320 86 a20 20 0 0 1 -40 0"/>
+            </g>
+          </g>
+          <!-- awning top stripes -->
+          <path d="M34 60 L60 26 H300 L326 60 Z" fill="#FFC531" stroke="#141414" stroke-width="6" stroke-linejoin="round"/>
+          <path d="M100 26 L86 60 M170 26 L166 60 M240 26 L248 60" stroke="#141414" stroke-width="6" stroke-linecap="round"/>
+          <!-- poles -->
+          <rect x="46" y="86" width="14" height="150" rx="7" fill="#141414"/>
+          <rect x="300" y="86" width="14" height="150" rx="7" fill="#141414"/>
+          <!-- hanging bulb -->
+          <path d="M180 86 v26" stroke="#141414" stroke-width="6" stroke-linecap="round"/>
+          <circle cx="180" cy="126" r="16" fill="#FFC531" stroke="#141414" stroke-width="6"/>
+          <!-- counter -->
+          <rect x="30" y="228" width="300" height="34" rx="12" fill="#1E7A4E" stroke="#141414" stroke-width="6"/>
+          <!-- bag mascot -->
+          <g transform="translate(120 130)">
+            <path d="M22 40 C22 12 98 12 98 40 L104 100 a14 14 0 0 1 -14 14 H30 a14 14 0 0 1 -14 -14 Z" fill="#FF5A1F" stroke="#141414" stroke-width="6" stroke-linejoin="round"/>
+            <path d="M40 40 C40 6 80 6 80 40" fill="none" stroke="#141414" stroke-width="6" stroke-linecap="round"/>
+            <path d="M22 44 H98" stroke="#141414" stroke-width="6" stroke-linecap="round"/>
+            <!-- face -->
+            <circle cx="46" cy="70" r="5" fill="#141414"/>
+            <circle cx="74" cy="70" r="5" fill="#141414"/>
+            <path d="M48 86 Q60 96 72 86" fill="none" stroke="#141414" stroke-width="6" stroke-linecap="round"/>
+            <circle cx="36" cy="84" r="5" fill="#F27BA9" opacity=".9"/>
+            <circle cx="84" cy="84" r="5" fill="#F27BA9" opacity=".9"/>
+            <!-- herbs poking out -->
+            <path d="M68 24 C74 6 96 2 100 16 C90 20 80 26 72 34" fill="#1E7A4E" stroke="#141414" stroke-width="6" stroke-linejoin="round"/>
+          </g>
+          <!-- chili sticker -->
+          <g transform="translate(262 150) rotate(14)">
+            <path d="M8 40 C4 18 26 6 40 8 C44 30 30 48 8 40 Z" fill="#FF5A1F" stroke="#141414" stroke-width="6" stroke-linejoin="round"/>
+            <path d="M40 8 C46 2 50 4 54 0" fill="none" stroke="#1E7A4E" stroke-width="6" stroke-linecap="round"/>
+          </g>
+          <!-- ground -->
+          <path d="M20 292 H340" stroke="#141414" stroke-width="6" stroke-linecap="round" stroke-dasharray="2 18"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 2. CHAPTER TITLE CARD ================= -->
+<section class="chapter" aria-label="เปิดบท">
+  <div class="wrap">
+    <div class="chapter__head">
+      <span class="badge badge--chili label">บทที่ 1</span>
+      <span class="badge badge--neon label">ก่อนเปิดร้าน</span>
+    </div>
+
+    <div class="chapter__grid">
+      <div>
+        <div class="chapter__time">05:30</div>
+        <h2>ตลาดยังไม่สว่าง</h2>
+        <p class="chapter__scene">ถนนยังมืด ไฟตลาดสว่างเป็นหย่อม คุณถือถุงเดินเข้าไป</p>
+      </div>
+
+      <div class="chapter__art" aria-hidden="true">
+        <!-- clock mascot -->
+        <svg viewBox="0 0 240 240" role="img" aria-label="ภาพประกอบ: นาฬิกา">
+          <circle cx="120" cy="124" r="96" fill="#FFC531" stroke="#141414" stroke-width="8"/>
+          <circle cx="120" cy="124" r="72" fill="#FFF4E0" stroke="#141414" stroke-width="8"/>
+          <!-- bells -->
+          <path d="M40 60 a26 26 0 0 1 44 -22" fill="none" stroke="#141414" stroke-width="8" stroke-linecap="round"/>
+          <path d="M200 60 a26 26 0 0 0 -44 -22" fill="none" stroke="#141414" stroke-width="8" stroke-linecap="round"/>
+          <circle cx="44" cy="52" r="12" fill="#FF5A1F" stroke="#141414" stroke-width="8"/>
+          <circle cx="196" cy="52" r="12" fill="#FF5A1F" stroke="#141414" stroke-width="8"/>
+          <!-- ticks -->
+          <g stroke="#141414" stroke-width="8" stroke-linecap="round">
+            <path d="M120 64 v10"/><path d="M120 174 v10"/><path d="M60 124 h10"/><path d="M170 124 h10"/>
+          </g>
+          <!-- hands: 05:30 -->
+          <path d="M120 124 L120 78" stroke="#141414" stroke-width="10" stroke-linecap="round" transform="rotate(180 120 124)"/>
+          <path d="M120 124 L120 92" stroke="#FF5A1F" stroke-width="10" stroke-linecap="round" transform="rotate(165 120 124)"/>
+          <circle cx="120" cy="124" r="9" fill="#141414"/>
+          <!-- feet -->
+          <path d="M84 216 l-10 14 M156 216 l10 14" stroke="#141414" stroke-width="8" stroke-linecap="round"/>
+        </svg>
+      </div>
+    </div>
+
+    <!-- menu-board progress strip -->
+    <div class="board" role="group" aria-label="ความคืบหน้าของวัน 06:00 ถึง 23:00">
+      <div class="board__row">
+        <span class="board__title">ป้ายเวลาของร้านคุณ</span>
+        <span class="badge badge--ink label" style="box-shadow:none">06:00 → 23:00</span>
+      </div>
+      <div class="track" style="--p:4%">
+        <div class="track__fill"></div>
+        <div class="track__pin label">ตอนนี้ 06:00</div>
+      </div>
+      <div class="ticks" aria-hidden="true">
+        <span>06:00</span><span>09:00</span><span>12:00</span><span>15:00</span><span>18:00</span><span>21:00</span><span>23:00</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 3. QUIZ QUESTION ================= -->
+<section class="quiz" aria-label="คำถาม">
+  <div class="wrap">
+    <div class="quiz__bar">
+      <span class="badge badge--ink label quiz__count">ข้อ 1 / 25</span>
+      <span class="badge label">06:00 · ตลาดเช้า</span>
+    </div>
+
+    <div class="quiz__grid">
+      <div>
+        <h2><span class="q-no">Q1</span>เช้านี้จะซื้อของเข้าร้านเท่าไร คุณรู้ได้ยังไง</h2>
+
+        <ul class="tickets" role="list">
+          <li>
+            <button class="ticket" type="button" data-choice="1">
+              <span class="ticket__stub" aria-hidden="true"><span>1</span></span>
+              <span>ดูของหน้าแผงแล้วค่อยตัดสินใจ อยู่มานานพอที่จะรู้</span>
+              <span class="ticket__check" aria-hidden="true">✓</span>
+            </button>
+          </li>
+          <li>
+            <button class="ticket" type="button" data-choice="2">
+              <span class="ticket__stub" aria-hidden="true"><span>2</span></span>
+              <span>มีกระดาษแผ่นเดียวที่จดไว้ทุกคืนว่าพรุ่งนี้ต้องซื้ออะไร ตามยอดที่คาดไว้</span>
+              <span class="ticket__check" aria-hidden="true">✓</span>
+            </button>
+          </li>
+          <li>
+            <button class="ticket" type="button" data-choice="3">
+              <span class="ticket__stub" aria-hidden="true"><span>3</span></span>
+              <span>ซื้อเผื่อไว้ก่อน ของหมดกลางวันน่าอายกว่าของเหลือ</span>
+              <span class="ticket__check" aria-hidden="true">✓</span>
+            </button>
+          </li>
+          <li>
+            <button class="ticket" type="button" data-choice="4">
+              <span class="ticket__stub" aria-hidden="true"><span>4</span></span>
+              <span>ลูกน้องหรือซัพพลายเออร์จัดมาให้ ผมเช็กบิลทีหลัง</span>
+              <span class="ticket__check" aria-hidden="true">✓</span>
+            </button>
+          </li>
+        </ul>
+      </div>
+
+      <aside class="hud" aria-label="มิเตอร์ความวุ่นวาย">
+        <div class="hud__head">
+          <span class="hud__title">มิเตอร์ความวุ่นวาย</span>
+          <span class="badge badge--chili label" style="box-shadow:none;font-size:11px">LIVE</span>
+        </div>
+
+        <div class="meter meter--sales">
+          <div class="meter__row"><span class="meter__name">ยอดขาย</span><span class="meter__val">40</span></div>
+          <div class="meter__bar"><div class="meter__fill" style="--v:40%"></div></div>
+        </div>
+        <div class="meter meter--energy">
+          <div class="meter__row"><span class="meter__name">พลังงานเจ้าของ</span><span class="meter__val">85</span></div>
+          <div class="meter__bar"><div class="meter__fill" style="--v:85%"></div></div>
+        </div>
+        <div class="meter meter--review">
+          <div class="meter__row"><span class="meter__name">รีวิว</span><span class="meter__val">60</span></div>
+          <div class="meter__bar"><div class="meter__fill" style="--v:60%"></div></div>
+        </div>
+
+        <div class="hud__pot" aria-hidden="true">
+          <!-- pot mascot -->
+          <svg viewBox="0 0 160 130" role="img" aria-label="ภาพประกอบ: หม้อ">
+            <path d="M40 22 c10 -14 20 -14 30 0 M90 22 c10 -14 20 -14 30 0" fill="none" stroke="#141414" stroke-width="6" stroke-linecap="round" opacity=".5"/>
+            <rect x="14" y="44" width="132" height="14" rx="7" fill="#141414"/>
+            <path d="M24 58 H136 V96 a22 22 0 0 1 -22 22 H46 a22 22 0 0 1 -22 -22 Z" fill="#FF5A1F" stroke="#141414" stroke-width="6" stroke-linejoin="round"/>
+            <path d="M8 70 h16 M136 70 h16" stroke="#141414" stroke-width="8" stroke-linecap="round"/>
+            <circle cx="62" cy="80" r="4.5" fill="#141414"/>
+            <circle cx="98" cy="80" r="4.5" fill="#141414"/>
+            <path d="M68 94 Q80 102 92 94" fill="none" stroke="#141414" stroke-width="6" stroke-linecap="round"/>
+            <circle cx="80" cy="30" r="10" fill="#FFF4E0" stroke="#141414" stroke-width="6"/>
+          </svg>
+        </div>
+        <p class="hud__foot">ทุกคำตอบขยับมิเตอร์ ดูตอนจบว่าวันของคุณจบยังไง</p>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 4. RESULT TEASER ================= -->
+<section class="result" aria-label="ตัวอย่างผลลัพธ์">
+  <div class="wrap">
+    <div class="result__inner">
+      <div class="result__lead">
+        <span class="badge badge--neon label">ผลของคุณ</span>
+        <span class="badge label" style="background:var(--paper)">23:00 · ปิดร้าน</span>
+      </div>
+
+      <article class="card">
+        <span class="stamp sticker" aria-hidden="true">บุคลิกร้าน</span>
+        <div class="card__headwrap">
+          <p class="card__type label">ร้านของคุณคือ</p>
+          <h2>เชฟหัวดื้อ</h2>
+          <p class="card__essence">รสชาติคือทุกอย่าง โลกต้องมาหาฉัน</p>
+        </div>
+
+        <div class="card__art" aria-hidden="true">
+          <!-- chef-hat pot sticker -->
+          <svg viewBox="0 0 170 170" role="img" aria-label="ภาพประกอบ: หม้อสวมหมวกเชฟ">
+            <circle cx="85" cy="85" r="80" fill="#FFC531" stroke="#141414" stroke-width="6"/>
+            <path d="M52 62 c-14 -30 34 -42 42 -18 c14 -18 46 -2 32 22 v20 H52 Z" fill="#FFF4E0" stroke="#141414" stroke-width="6" stroke-linejoin="round"/>
+            <rect x="48" y="84" width="76" height="12" rx="6" fill="#141414"/>
+            <path d="M54 96 H118 V122 a16 16 0 0 1 -16 16 H70 a16 16 0 0 1 -16 -16 Z" fill="#FF5A1F" stroke="#141414" stroke-width="6" stroke-linejoin="round"/>
+            <path d="M40 106 h14 M118 106 h14" stroke="#141414" stroke-width="8" stroke-linecap="round"/>
+            <path d="M76 112 l6 -5 M96 112 l-6 -5" stroke="#141414" stroke-width="5" stroke-linecap="round"/>
+            <path d="M80 124 h12" stroke="#141414" stroke-width="5" stroke-linecap="round"/>
+          </svg>
+        </div>
+
+        <hr class="card__divider">
+
+        <h3>3 อย่างที่ร้านคุณทำอยู่โดยไม่รู้ตัว</h3>
+        <div class="finding">
+          <div class="finding__head">
+            <span class="finding__num">01</span>
+            <span class="finding__title">สูตรอยู่ในหัวคุณ</span>
+          </div>
+          <p class="finding__body">นั่นแปลว่าร้านเปิดได้เท่าที่คุณยืนไหว วันที่คุณป่วยคือวันที่ร้านปิด</p>
+          <div class="mini mini--self">
+            <span class="mini__tag">ทำเองได้</span>
+            <span>เขียนสูตรจานที่ขายดีที่สุดลงกระดาษ 1 แผ่นคืนนี้</span>
+          </div>
+          <div class="mini mini--us">
+            <span class="mini__tag">เราช่วยได้</span>
+            <span>ระบบหลังบ้าน SOP</span>
+          </div>
+        </div>
+
+        <button class="btn-line" type="button">
+          <span class="btn-line__icon" aria-hidden="true">LINE</span>
+          ทัก LINE คุยฟรี 30 นาที
+        </button>
+      </article>
+    </div>
+  </div>
+</section>
+
+<script>
+  // choice tickets: single-select with a quick squash/spring
+  (function(){
+    var tickets = document.querySelectorAll('.ticket');
+    tickets.forEach(function(t){
+      t.setAttribute('aria-pressed','false');
+      t.addEventListener('click', function(){
+        tickets.forEach(function(o){
+          o.classList.remove('is-selected');
+          o.setAttribute('aria-pressed','false');
+        });
+        // restart the squash keyframe even when re-clicking the same card
+        void t.offsetWidth;
+        t.classList.add('is-selected');
+        t.setAttribute('aria-pressed','true');
+      });
+    });
+  })();
+</script>
+</body>
+</html>

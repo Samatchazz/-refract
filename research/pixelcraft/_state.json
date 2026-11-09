@@ -1,0 +1,27 @@
+{
+  "phase": "P8",
+  "done": ["P1", "P2", "P3", "P4", "P5", "P6", "P7", "P8"],
+  "demoUrl": "https://pixel-craft.cmsmasters.studio/",
+  "outDir": "out",
+  "sections": 25,
+  "effects": 21,
+  "decisions": [
+    "Used owner-supplied demo URL from BRIEF §3.1a directly; no resolveDemoUrl attempt",
+    "Skipped `npm i -D playwright` — package already present (1.62.1)",
+    ".gitignore already contained the four out*/ exclusion lines; nothing appended",
+    "Theme identity verified per §3.1a: title 'Pixel Craft', themeHints pixel-craft 1.0.0 + cmsmasters-elementor-addon",
+    "OWNER (2026-08-01): root landing page stays primary — 'เอาตามเดิมมาก่อน ค่อยมาขยับเพิ่มลดกันทีหลัง'. out-main/ (/main/ agency demo) is secondary, comparison paragraph only",
+    "S-numbering frozen: S01–S25 from probe/home_1440.json; header referenced as S00-header",
+    "E-numbering frozen: E01–E62 (21 distinct effects) in out/derived/effects.json, with 10 recorded absences",
+    "Added --scrollto flag to probe-effect.mjs marquee mode (JS marquees only animate in-viewport); logged in RUN-LOG",
+    "Theme mechanism discovered: cms_scroll_vertical_speed × 100 = travel px (verified twice: speed 2→−200px, speed 0.4→−40px); marquee px/s ≈ speed × 30 (1.5→45.1, 2.5→75.2)"
+  ],
+  "openProblems": [
+    "S17 parallax elements (861222b speed1, 50f9064 speed2) showed no motion in two probe attempts each — recorded not-measured per rule 6; mechanism itself measured at S05",
+    "E20 reveal travel distance approximated at 60px (serialized on fancy-text only); duration/timing measured",
+    "E30 highlight-title and E31 typing cadence durations not measurable by sweep (one-shot); marked not measured",
+    "home_390 probe found 24 sections vs 25 — derived/sections.json matches by index and flags the tail",
+    "stale out/_preview_probe.json from the earlier blocked ThemeForest attempt still on disk (harmless)"
+  ],
+  "ts": "2026-08-01T09:55:00Z"
+}
